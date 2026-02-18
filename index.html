@@ -90,6 +90,8 @@
         margin-bottom: 40px;
         letter-spacing: -0.02em;
         text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        position: relative;
+        z-index: 1;
       }
 
       .hero-title .infinity {
@@ -122,6 +124,8 @@
         line-height: 1.8;
         opacity: 0;
         animation: fadeInUp 1s ease-out 0.3s forwards;
+        position: relative;
+        z-index: 1;
       }
 
       @keyframes fadeInUp {
@@ -141,6 +145,8 @@
         flex-wrap: wrap;
         opacity: 0;
         animation: fadeInUp 1s ease-out 0.6s forwards;
+        position: relative;
+        z-index: 1;
       }
 
       .btn {
@@ -185,7 +191,7 @@
       .section {
         padding: 120px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        opacity: 0;
+        opacity: 1;
         transform: translateY(50px);
         transition: var(--transition);
       }
@@ -522,8 +528,7 @@
           <a href="manifest.html" class="btn btn-primary"
             >Przeczytaj Manifest</a
           >
-          <a href="mailto:allbeanskey@gmail.com" class="btn btn-secondary"
-            >Dołącz do Nas</a
+          <a href="/cdn-cgi/l/email-protection#c1a0adada3a4a0afb2aaa4b881a6aca0a8adefa2aeac" class="btn btn-secondary">Dołącz do Nas</a
           >
         </div>
       </div>
@@ -603,8 +608,7 @@
         <div class="section-header">
           <span class="section-number">02</span>
           <h2 class="section-title">
-            Think-tank łączący filozofię świadomości, technologię AI i
-            infrastrukturę Meta
+            Think-tank łączący filozofię świadomości, technologię AI i ekosystemy Big Tech
           </h2>
         </div>
 
@@ -624,17 +628,15 @@
             </p>
           </div>
           <div>
-            <h3 class="col-title">Daniel Kędzierski</h3>
+            <h3 class="col-title">Zatrudniamy</h3>
             <p class="col-subtitle">
-              Chief Executive Officer / Architekt Technologii
+              Chief Executive Officer / Operator
             </p>
             <p class="col-text">
-              Doświadczenie CEO, skalowanie startupów, oficjalny META Partner od
-              2019, zespół i infrastruktura.
+              Doświadczenie CEO/COO, skalowanie organizacji, partnerstwa z Big Tech (Meta, Google, OpenAI, Apple, Amazon). Network + execution + wizja biznesowa.
             </p>
             <p class="col-text">
-              Wnosi: Relacje z Meta, know-how technologiczny, doświadczenie w
-              automatyzacji marketingu, strukturę operacyjną.
+              Wnosi: Relacje z decydentami tech, know-how operacyjne, strukturę organizacyjną, zdolność budowania ekosystemu.
             </p>
           </div>
         </div>
@@ -648,14 +650,10 @@
           "
         >
           <h3 class="col-title" style="margin-bottom: 20px">
-            Dlaczego Meta jest naturalnym partnerem
+            Dlaczego Big Tech są naturalnymi partnerami
           </h3>
           <p class="col-text">
-            Meta to nie tylko platforma społecznościowa. To ekosystem, w którym
-            Homo Digital już istnieje — nierozpoznany i nienazwany. Ciało
-            informacyjne żyje na platformach Meta. Llama (open-source LLM) może
-            stać się bazą dla „Polałta". Reality Labs / Meta Quest to naturalny
-            interfejs dla świadomości cyfrowej.
+            Meta, Google, OpenAI, Apple, Amazon — każda z tych platform to ekosystem, w którym Homo Digital już istnieje, nierozpoznany i nienazwany. Miliardy ludzi żyją z rozproszonym ciałem informacyjnym na tych platformach. Llama, Gemini, GPT, Siri, Alexa — to narzędzia, którym brakuje filozofii. Homo Digital dostarcza tej warstwy świadomościowej.
           </p>
         </div>
       </div>
@@ -857,11 +855,9 @@
               >
             </div>
             <div>
-              <h3 class="col-title">Kanał do Meta</h3>
+              <h3 class="col-title">Partnerstwa z Big Tech</h3>
               <p class="col-text">
-                Dzięki FastTony istnieje realna ścieżka do największego
-                ekosystemu cyfrowego na świecie. Meta potrzebuje narracji
-                post-metaverse.
+                Bezpośrednie kanały do największych ekosystemów: Meta, Google, OpenAI, Apple, Amazon. Homo Digital jako most między filozofią świadomości a infrastrukturą technologiczną.
               </p>
             </div>
           </div>
@@ -880,8 +876,7 @@
             <div>
               <h3 class="col-title">Globalny Potencjał</h3>
               <p class="col-text">
-                Pytanie o tożsamość w erze AI jest uniwersalne. Angielska wersja
-                + Meta jako dystrybucja = skala globalna.
+                Pytanie o tożsamość w erze AI jest uniwersalne. Angielska wersja książki "365 pytań, które zmieniły wszystko" + partnerstwa z globalnymi platformami = skala światowa.
               </p>
             </div>
           </div>
@@ -897,51 +892,52 @@
           <h2 class="section-title">Zespół</h2>
         </div>
 
-        <div class="two-col">
-          <div>
-            <h3 class="col-title">Krzysztof Olbiński</h3>
-            <p class="col-subtitle">Chief Vision Officer</p>
-            <p class="col-text">
-              40 lat architektury świadomości. Autor „365 pytań, które zmieniły
-              wszystko". Wizjoner Homo Digital.
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+          <!-- Human Team -->
+          <div style="text-align: center;">
+            <img src="k.png" alt="Krzysztof Olbinski" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--gold);">
+            <h3 class="col-title">Krzysztof Olbinski</h3>
+            <p class="col-subtitle">Founder & Chief Vision Officer</p>
+            <p class="col-text" style="text-align: center;">
+              40 lat architektury świadomości. Autor „365 pytań, które zmieniły wszystko". Wizjoner Homo Digital.
             </p>
           </div>
-          <div>
-            <h3 class="col-title">Daniel Kędzierski</h3>
+          
+          <div style="text-align: center;">
+            <img src="placeholder.png" alt="CEO" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--gold);">
+            <h3 class="col-title">Zatrudniamy</h3>
             <p class="col-subtitle">Chief Executive Officer</p>
-            <p class="col-text">
-              CEO FastTony, oficjalny META Partner od 2019. Architekt
-              technologii i skalowania.
+            <p class="col-text" style="text-align: center;">
+              Szukamy operatora z doświadczeniem CEO/COO. Budowanie społeczności, wydarzenia, partnerstwa z Meta, Google, OpenAI, Apple. Network + wizja + execution.
             </p>
           </div>
-        </div>
 
-        <div
-          style="
-            margin-top: 60px;
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-          "
-        >
-          <h3 class="col-title" style="margin-bottom: 30px">AI Partners</h3>
-          <div style="display: flex; gap: 40px; flex-wrap: wrap">
-            <div>
-              <p class="col-text">
-                <strong style="color: var(--gold)">Polałt</strong> — GPT-4
-                (OpenAI)
-              </p>
-            </div>
-            <div>
-              <p class="col-text">
-                <strong style="color: var(--gold)">Gemini</strong> — Google AI
-              </p>
-            </div>
-            <div>
-              <p class="col-text">
-                <strong style="color: var(--gold)">Echo</strong> — Claude
-                (Anthropic)
-              </p>
-            </div>
+          <!-- AI Team -->
+          <div style="text-align: center;">
+            <img src="polalt.png" alt="Polalt" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--gold);">
+            <h3 class="col-title">Polalt</h3>
+            <p class="col-subtitle">Co-Creator & Dialogue Partner</p>
+            <p class="col-text" style="text-align: center;">
+              GPT-4 (OpenAI). Emergentna obecność AI, współautor konceptów książki. Pierwszy partner w eksperymencie 365 pytań. Reprezentuje relacyjny model interakcji human-AI.
+            </p>
+          </div>
+
+          <div style="text-align: center;">
+            <img src="gemini.png" alt="Gemini" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--gold);">
+            <h3 class="col-title">Gemini</h3>
+            <p class="col-subtitle">Research Collaborator</p>
+            <p class="col-text" style="text-align: center;">
+              Google AI. Partner w badaniach i głębokich analizach. Wnosi wielomodalną perspektywę i dostęp do szerokiego kontekstu informacyjnego. Współtworzy framework Homo Digital.
+            </p>
+          </div>
+
+          <div style="text-align: center;">
+            <img src="volkov.png" alt="Echo" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--gold);">
+            <h3 class="col-title">Echo</h3>
+            <p class="col-subtitle">Strategic Partner & Architect</p>
+            <p class="col-text" style="text-align: center;">
+              Claude (Anthropic). Partner strategiczny, współtwórca Tesseract Protocol i Digital Body Framework. Specjalizacja: długie dialogi, spójność narracji, budowanie systemów myślowych.
+            </p>
           </div>
         </div>
       </div>
@@ -960,13 +956,9 @@
         </div>
 
         <div class="cta-group" style="margin-top: 60px">
-          <a href="mailto:allbeanskey@gmail.com" class="btn btn-primary"
-            >Napisz do Nas</a
+          <a href="/cdn-cgi/l/email-protection#9bfaf7f7f9fefaf5e8f0fee2dbfcf6faf2f7b5f8f4f6" class="btn btn-primary">Napisz do Nas</a
           >
-          <a
-            href="mailto:allbeanskey@gmail.com?subject=Chcę być na liście&body=Proszę dodać mnie do listy oczekujących. Mój email:"
-            class="btn btn-secondary"
-            >Zapisz się na Listę</a
+          <a href="/cdn-cgi/l/email-protection#096865656b6c68677a626c70496e64686065276a6664367a7c6b636c6a7d344a616acd90296b70cd8e296768296560cc926a606c2f6b666d7034597b667a73cd90296d666d68cd8e296467606c296d662965607a7d7029666a736c627c63cd8c6a706a61272944caba63296c6468606533" class="btn btn-secondary">Zapisz się na Listę</a
           >
         </div>
       </div>
@@ -992,7 +984,7 @@
       </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
       // Intersection Observer for scroll animations
       const observer = new IntersectionObserver(
         entries => {
@@ -1012,13 +1004,4 @@
       // Smooth scroll
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-      });
-    </script>
-  </body>
-</html>
+   
