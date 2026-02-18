@@ -31,27 +31,12 @@
         overflow-x: hidden;
       }
 
-      /* Geometric background pattern */
-      body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background:
-          radial-gradient(
-            circle at 20% 50%,
-            rgba(212, 175, 55, 0.03) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            circle at 80% 80%,
-            rgba(212, 175, 55, 0.02) 0%,
-            transparent 50%
-          );
-        pointer-events: none;
-        z-index: 0;
+      .bg {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: url(bg.png) no-repeat center top / cover;
+        opacity: 30%;
       }
 
       /* Container */
@@ -89,6 +74,14 @@
         padding: 120px 0;
       }
 
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(10, 10, 10, 0.3);
+        z-index: 0;
+      }
+
       .hero-title {
         font-family: 'Crimson Pro', serif;
         font-size: clamp(3rem, 8vw, 7rem);
@@ -96,6 +89,7 @@
         line-height: 1.1;
         margin-bottom: 40px;
         letter-spacing: -0.02em;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
       }
 
       .hero-title .infinity {
@@ -505,6 +499,7 @@
     </style>
   </head>
   <body>
+    <div class="bg"></div>
     <!-- Header -->
     <header>
       <div class="container">
