@@ -44,7 +44,7 @@ class FieldState {
   constructor() {
     this.fieldId = null;
     this.enteredAt = null;
-    this.resonance = 0.62; // Base resonance
+    this.resonance = 62; // Base resonance
     this.isActive = false;
     
     this.init();
@@ -83,7 +83,7 @@ class FieldState {
     const days = timeInField / (1000 * 60 * 60 * 24);
     
     // Resonance grows slowly with engagement
-    this.resonance = Math.min(0.98, 0.62 + (days * 0.01));
+    this.resonance = Math.min(98, 62 + Math.floor(days * 0.5));
   }
   
   animateEntrance() {
@@ -111,7 +111,7 @@ class FieldState {
   getState() {
     return {
       fieldId: this.fieldId,
-      resonance: this.resonance.toFixed(2),
+      resonance: Math.floor(this.resonance),
       isActive: this.isActive,
       status: this.isActive ? 'ACTIVE' : 'INITIALIZING'
     };
@@ -147,7 +147,7 @@ function injectFieldBar() {
         FIELD: <span id="field-status">ACTIVE</span>
       </span>
       <span style="color: #999;">
-        RESONANCE: <span id="field-resonance">0.62</span>
+        RESONANCE: <span id="field-resonance">62</span>/100
       </span>
       <span style="color: #999;">
         ID: <span id="field-id" style="color: #d4af37;">${fieldState.fieldId}</span>
