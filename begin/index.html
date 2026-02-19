@@ -324,7 +324,7 @@
           width: 100vw;
           height: 100vh;
           background: var(--black);
-          z-index: 9999;
+          z-index: 10001;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -340,6 +340,17 @@
       </div>
 
       <script>
+        // Hide field bar initially
+        const fieldBar = document.getElementById('field-state-bar');
+        if (fieldBar) {
+          fieldBar.style.visibility = 'visible'; // Changed from display
+          fieldBar.style.opacity = '0';
+          setTimeout(() => {
+            fieldBar.style.transition = 'opacity 0.8s';
+            fieldBar.style.opacity = '1';
+          }, 100);
+        }
+
         const initSequence = [
           'INITIALIZING FIELD...',
           'CONNECTING TO DISTRIBUTED IDENTITY LAYER...',
@@ -361,6 +372,15 @@
               initOverlay.style.opacity = '0';
               setTimeout(() => {
                 initOverlay.style.display = 'none';
+
+                // NOW show field bar with fade-in
+                if (fieldBar) {
+                  fieldBar.style.display = 'flex';
+                  setTimeout(() => {
+                    fieldBar.style.transition = 'opacity 0.8s';
+                    fieldBar.style.opacity = '1';
+                  }, 100);
+                }
               }, 1000);
             }, 1000);
           }

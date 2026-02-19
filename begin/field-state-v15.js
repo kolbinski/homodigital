@@ -99,7 +99,7 @@ class FieldState {
   showFieldBar() {
     const bar = document.getElementById('field-state-bar');
     if (bar) {
-      bar.style.display = 'flex';
+      bar.style.visibility = 'visible';
       bar.style.opacity = '0';
       setTimeout(() => {
         bar.style.transition = 'opacity 0.8s';
@@ -138,7 +138,8 @@ function injectFieldBar() {
       font-family: 'Space Mono', monospace;
       font-size: 0.75rem;
       border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-      display: ${fieldState.isActive ? 'flex' : 'none'};
+      display: flex;
+      visibility: ${fieldState.isActive ? 'visible' : 'hidden'};
       align-items: center;
       gap: 40px;
       letter-spacing: 0.1em;
@@ -220,26 +221,28 @@ if (document.readyState === 'loading') {
 }
 
 function initFieldState() {
-  // Initialize field state
-  fieldState = new FieldState();
-  
-  // Inject UI
-  injectFieldBar();
-  updateFieldBarValues();
-  
-  // Attach handlers
-  attachEnterHandler();
-  
-  // Update resonance every 10 seconds
-  if (fieldState.isActive) {
-    setInterval(() => {
-      fieldState.updateResonance();
-      updateFieldBarValues();
-    }, 10000);
-  }
-  
-  // Log state (for debugging)
-  console.log('Field State initialized:', fieldState.getState());
+  setTimeout(function() {
+    // Initialize field state
+    fieldState = new FieldState();
+    
+    // Inject UI
+    injectFieldBar();
+    updateFieldBarValues();
+    
+    // Attach handlers
+    attachEnterHandler();
+    
+    // Update resonance every 10 seconds
+    if (fieldState.isActive) {
+      setInterval(() => {
+        fieldState.updateResonance();
+        updateFieldBarValues();
+      }, 10000);
+    }
+    
+    // Log state (for debugging)
+    console.log('Field State initialized:', fieldState.getState());
+  }, 10000);
 }
 
 // ============================================================================
