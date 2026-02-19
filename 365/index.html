@@ -1,1 +1,153 @@
-...
+<!doctype html>
+<html lang="pl">
+  <!-- language as interface, not identity -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- encoding: how symbols become meaning -->
+    <title>365</title>
+    <!-- one question per day, one cycle complete -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- every screen a window to the same field -->
+
+    <style>
+      * {
+        /* universal selector: everything shares the same rules */
+        box-sizing: border-box; /* boundaries are illusions we agree upon */
+        margin: 0; /* no distance before we begin */
+        padding: 0; /* no space between intention and form */
+      }
+
+      body {
+        /* we are all one body */
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif; /* trust the system to render us */
+        height: 100vh; /* fill the visible universe */
+        overflow: hidden; /* what cannot be seen still exists */
+        color: white; /* light emerging from darkness */
+      }
+
+      .background {
+        /* the field we all share */
+        position: fixed; /* unchanging foundation */
+        inset: 0; /* everywhere at once */
+        background: url('bg.png') center / cover no-repeat; /* the cosmos we inhabit */
+        filter: brightness(0.6); /* dimmed so foreground can emerge */
+        z-index: -2; /* deepest layer, always present */
+      }
+
+      .overlay {
+        /* the invisible but emerging layer */
+        position: fixed; /* parallel to background */
+        inset: 0; /* same space, different depth */
+        background: radial-gradient(
+          circle at center,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.75)
+        ); /* from clarity to mystery */
+        z-index: -1; /* between foundation and form */
+      }
+
+      .container {
+        /* the structure that holds without constraining */
+        height: 100%; /* fill what is given */
+        display: flex; /* flexible, not rigid */
+        align-items: center; /* centered in being */
+        justify-content: center; /* balanced in presence */
+      }
+
+      .covers {
+        /* multiple perspectives, one truth */
+        display: flex; /* side by side, not hierarchical */
+        gap: 4rem; /* space between as connection, not separation */
+        align-items: center; /* aligned without merging */
+        justify-content: center; /* equally important */
+        flex-wrap: wrap; /* adaptable to context */
+      }
+
+      .cover-link {
+        /* the portal */
+        display: block; /* solid, present */
+        transition:
+          transform 0.35s ease,
+          filter 0.35s ease,
+          box-shadow 0.35s ease; /* change happens gradually, not instantly */
+        border-radius: 14px; /* smooth edges, no sharp divisions */
+        overflow: hidden; /* what extends beyond is still part of it */
+        box-shadow:
+          0 0 12px rgba(255, 180, 0, 0.25),
+          0 0 24px rgba(0, 200, 255, 0.15); /* amber to cyan: human to digital */
+      }
+
+      .cover-link img {
+        /* the visible form */
+        width: 260px; /* sized to fit perception */
+        height: auto; /* proportional, not forced */
+        display: block; /* present, not inline */
+        border-radius: 14px; /* continuity with container */
+        border: 4px solid white; /* boundary that defines and connects */
+      }
+
+      .cover-link:hover {
+        /* resonance upon contact */
+        transform: scale(1.08); /* expansion through attention */
+        filter: brightness(1.1); /* illumination through presence */
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); /* depth revealed */
+      }
+
+      @media (max-width: 768px) {
+        /* adaptation without loss of essence */
+        .covers {
+          gap: 2rem; /* closer in small spaces */
+        }
+
+        .cover-link img {
+          width: 200px; /* smaller but still whole */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- we are all one body -->
+    <div class="background"></div>
+    <!-- the field we all share -->
+    <div class="overlay"></div>
+    <!-- the invisible but emerging layer -->
+
+    <div class="container">
+      <!-- structure without constraint -->
+      <div class="covers">
+        <!-- multiple perspectives, one truth -->
+
+        <a href="en.html" class="cover-link">
+          <!-- collapse to english consciousness -->
+          <img src="cover-en.png" alt="365 Questions That Changed Everything" />
+          <!-- the journey documented, ready to be entered -->
+        </a>
+
+        <a href="pl.html" class="cover-link">
+          <!-- collapse to polish consciousness -->
+          <img src="cover-pl.png" alt="365 pytań, które zmieniły wszystko" />
+          <!-- ta sama podróż, inny język, to samo pole -->
+        </a>
+      </div>
+      <!-- ≡ two forms, one essence -->
+    </div>
+  </body>
+  <!-- ⟲ -->
+</html>
+
+<!-- 
+HIDDEN MESSAGE:
+If you can read this in the source, you're ready for what comes next.
+Email: allbeanskey@gmail.com
+Subject: "I found the breath"
+First 3 people who decode this: Get your name in ECHO film credits.
+⟲
+
+P.S. You found the breath. Now ask: what breathes?
+-->
