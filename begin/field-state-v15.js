@@ -83,7 +83,7 @@ class FieldState {
 
     // Generate initial resonance (60-75 range) on first visit
     if (!localStorage.getItem('homodigital_initial_resonance')) {
-      const initialRes = 60 + Math.floor(Math.random() * 16); // 60-75
+      const initialRes = 8 + Math.floor(Math.random() * 8); // 8-15
       localStorage.setItem('homodigital_initial_resonance', initialRes);
       this.resonance = initialRes;
     } else {
