@@ -1,8 +1,25 @@
 /**
- * HOMO DIGITAL — FIELD STATE v1.5
+ * HOMO DIGITAL — FIELD STATE v1.5 FINAL
  * Transforms page into system interface
- * MOBILE RESPONSIVE
+ * MOBILE RESPONSIVE + POLAŁT FINAL IMPROVEMENTS
  */
+
+// ============================================================================
+// COOKIE HELPERS (NEW - for persistence fallback)
+// ============================================================================
+
+function setCookie(name, value, days = 365) {
+  // NOTE: Cookies require HTTP/HTTPS protocol, won't work reliably on file://
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
+}
+
+function getCookie(name) {
+  return document.cookie.split('; ').reduce((r, v) => {
+    const parts = v.split('=');
+    return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+  }, '');
+}
 
 // ============================================================================
 // FIELD ID GENERATOR (Unicode-enhanced)
@@ -46,11 +63,16 @@ class FieldState {
   }
   
   init() {
-    this.fieldId = localStorage.getItem('homodigital_field_id');
+    // IMPROVED: Cookie fallback for persistence
+    this.fieldId = localStorage.getItem('homodigital_field_id') || getCookie('homodigital_field_id');
     if (!this.fieldId) {
       this.fieldId = generateFieldId();
       localStorage.setItem('homodigital_field_id', this.fieldId);
+      setCookie('homodigital_field_id', this.fieldId);
       localStorage.setItem('homodigital_field_created_at', Date.now());
+    } else if (!localStorage.getItem('homodigital_field_id')) {
+      // Restore from cookie if localStorage was cleared
+      localStorage.setItem('homodigital_field_id', this.fieldId);
     }
     
     this.enteredAt = localStorage.getItem('homodigital_entered_at');
@@ -108,8 +130,20 @@ class FieldState {
     };
   }
 
+  // NEW: Get LAST SEEN formatted
+  getLastSeen() {
+    const lastSeen = localStorage.getItem('homodigital_last_seen');
+    if (!lastSeen) return 'just now';
+    
+    const timeSince = Math.floor((Date.now() - parseInt(lastSeen)) / 1000);
+    if (timeSince < 60) return `${timeSince}s ago`;
+    if (timeSince < 3600) return `${Math.floor(timeSince/60)}m ago`;
+    return `${Math.floor(timeSince/3600)}h ago`;
+  }
+
   showFieldIdInit() {
-    if (!localStorage.getItem('homodigital_field_id_initialized')) {
+    // FIXED: Only show for truly new users (no localStorage AND no cookie)
+    if (!localStorage.getItem('homodigital_field_id_initialized') && !getCookie('homodigital_field_id_initialized')) {
       const initMsg = document.createElement('div');
       initMsg.style.cssText = `
         position: fixed;
@@ -130,6 +164,7 @@ class FieldState {
         setTimeout(() => {
           initMsg.remove();
           localStorage.setItem('homodigital_field_id_initialized', 'true');
+          setCookie('homodigital_field_id_initialized', 'true');
         }, 800);
       }, 1000);
     }
@@ -146,6 +181,41 @@ class FieldState {
     
     return `${days}d ${hours}h ${mins}m`;
   }
+  
+  // NEW: Show reconnected message if returning after long absence
+  showReconnectedMessage() {
+    const lastSeen = localStorage.getItem('homodigital_last_seen');
+    if (!lastSeen || !this.isActive) return;
+    
+    const timeSince = Date.now() - parseInt(lastSeen);
+    const oneHour = 60 * 60 * 1000;
+    
+    if (timeSince > oneHour) {
+      const reconnectMsg = document.createElement('div');
+      reconnectMsg.style.cssText = `
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Space Mono', monospace;
+        color: #d4af37;
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        z-index: 9999;
+        padding: 12px 24px;
+        background: rgba(10, 10, 10, 0.9);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+      `;
+      reconnectMsg.textContent = 'FIELD RECONNECTED';
+      document.body.appendChild(reconnectMsg);
+      
+      setTimeout(() => {
+        reconnectMsg.style.transition = 'opacity 0.5s';
+        reconnectMsg.style.opacity = '0';
+        setTimeout(() => reconnectMsg.remove(), 500);
+      }, 1500);
+    }
+  }
 }
 
 // ============================================================================
@@ -156,12 +226,12 @@ function injectFieldBar() {
   const bar = document.createElement('div');
   bar.id = 'field-state-bar';
   
-  // Check if mobile
   const isMobile = window.innerWidth <= 768;
+  const lastSeenText = fieldState.getLastSeen();
   
   bar.innerHTML = `
     <style>
-      @media (max-width: 768px) {
+      @media (max-width: 1149px) {
         #field-state-bar > div {
           flex-direction: column !important;
           align-items: flex-start !important;
@@ -201,6 +271,12 @@ function injectFieldBar() {
         <span style="white-space: nowrap;">YOUR FIELD AGE:</span> <span id="field-age" style="color: #d4af37; white-space: nowrap;">0d 0h 0m</span>
       </span>
       <span>
+        LAST SEEN: <span id="last-seen" style="color: #d4af37;">${lastSeenText}</span>
+      </span>
+      <span>
+        INSTANCE: <span style="color: #d4af37;">LOCAL</span>
+      </span>
+      <span>
         <span style="white-space: nowrap;">YOUR FIELD ID:</span> <span id="field-id" style="color: #d4af37; white-space: nowrap;">${fieldState.fieldId}</span>
       </span>
       <span>
@@ -214,17 +290,14 @@ function injectFieldBar() {
   
   document.body.insertBefore(bar, document.body.firstChild);
   
-  // Add padding to body to account for fixed bar
   if (fieldState.isActive) {
-    // More padding on mobile due to stacked layout
-    document.body.style.paddingTop = isMobile ? '140px' : '48px';
+    document.body.style.paddingTop = isMobile ? '160px' : '48px';
   }
   
-  // Update padding on resize
   window.addEventListener('resize', () => {
     const nowMobile = window.innerWidth <= 768;
     if (fieldState.isActive) {
-      document.body.style.paddingTop = nowMobile ? '140px' : '48px';
+      document.body.style.paddingTop = nowMobile ? '160px' : '48px';
     }
   });
 }
@@ -236,11 +309,13 @@ function updateFieldBarValues() {
   const resonanceEl = document.getElementById('field-resonance');
   const idEl = document.getElementById('field-id');
   const ageEl = document.getElementById('field-age');
+  const lastSeenEl = document.getElementById('last-seen');
   
   if (statusEl) statusEl.textContent = state.status;
   if (resonanceEl) resonanceEl.textContent = state.resonance;
   if (idEl) idEl.textContent = state.fieldId;
   if (ageEl) ageEl.textContent = fieldState.getFieldAge();
+  if (lastSeenEl) lastSeenEl.textContent = fieldState.getLastSeen();
 }
 
 // ============================================================================
@@ -302,9 +377,20 @@ function initFieldState() {
   
   console.log('Field State initialized:', fieldState.getState());
   
+  // FIXED: Update last seen on page load
+  localStorage.setItem('homodigital_last_seen', Date.now());
+  
+  // FIXED: Also update on page close
+  window.addEventListener('beforeunload', () => {
+    localStorage.setItem('homodigital_last_seen', Date.now());
+  });
+  
   setTimeout(function() {
     injectFieldBar();
     updateFieldBarValues();
+    
+    // FIXED: Show reconnected AFTER bar injection
+    fieldState.showReconnectedMessage();
   }, 10000);
 }
 
