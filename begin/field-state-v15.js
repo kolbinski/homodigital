@@ -2,6 +2,7 @@
  * HOMO DIGITAL — FIELD STATE v1.5 FINAL
  * Transforms page into system interface
  * MOBILE RESPONSIVE + POLAŁT FINAL IMPROVEMENTS
+ * ALL BUGS FIXED
  */
 
 // ============================================================================
@@ -58,11 +59,17 @@ class FieldState {
     this.enteredAt = null;
     this.resonance = 62;
     this.isActive = false;
+    this.shouldShowInit = false;
     
     this.init();
   }
   
   init() {
+    // FIXED: Check if should show init BEFORE creating Field ID
+    if (!localStorage.getItem('homodigital_field_id_initialized')) {
+      this.shouldShowInit = true;
+    }
+    
     // IMPROVED: Cookie fallback for persistence
     this.fieldId = localStorage.getItem('homodigital_field_id') || getCookie('homodigital_field_id');
     if (!this.fieldId) {
@@ -141,9 +148,9 @@ class FieldState {
     return `${Math.floor(timeSince/3600)}h ago`;
   }
 
+  // FIXED: Show init animation if needed
   showFieldIdInit() {
-    // FIXED: Only show for truly new users (no localStorage AND no cookie)
-    if (!localStorage.getItem('homodigital_field_id_initialized') && !getCookie('homodigital_field_id_initialized')) {
+    if (this.shouldShowInit) {
       const initMsg = document.createElement('div');
       initMsg.style.cssText = `
         position: fixed;
@@ -182,39 +189,42 @@ class FieldState {
     return `${days}d ${hours}h ${mins}m`;
   }
   
-  // NEW: Show reconnected message if returning after long absence
-  showReconnectedMessage() {
+  // NEW: Check if should show reconnected (before updating timestamp)
+  checkIfShouldReconnect() {
     const lastSeen = localStorage.getItem('homodigital_last_seen');
-    if (!lastSeen || !this.isActive) return;
+    if (!lastSeen || !this.isActive) return false;
     
     const timeSince = Date.now() - parseInt(lastSeen);
     const oneHour = 60 * 60 * 1000;
     
-    if (timeSince > oneHour) {
-      const reconnectMsg = document.createElement('div');
-      reconnectMsg.style.cssText = `
-        position: fixed;
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: 'Space Mono', monospace;
-        color: #d4af37;
-        font-size: 0.8rem;
-        letter-spacing: 0.2em;
-        z-index: 9999;
-        padding: 12px 24px;
-        background: rgba(10, 10, 10, 0.9);
-        border: 1px solid rgba(212, 175, 55, 0.3);
-      `;
-      reconnectMsg.textContent = 'FIELD RECONNECTED';
-      document.body.appendChild(reconnectMsg);
-      
-      setTimeout(() => {
-        reconnectMsg.style.transition = 'opacity 0.5s';
-        reconnectMsg.style.opacity = '0';
-        setTimeout(() => reconnectMsg.remove(), 500);
-      }, 1500);
-    }
+    return timeSince > oneHour;
+  }
+  
+  // NEW: Show reconnected message
+  showReconnectedMessage() {
+    const reconnectMsg = document.createElement('div');
+    reconnectMsg.style.cssText = `
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Space Mono', monospace;
+      color: #d4af37;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      z-index: 9999;
+      padding: 12px 24px;
+      background: rgba(10, 10, 10, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    `;
+    reconnectMsg.textContent = 'FIELD RECONNECTED';
+    document.body.appendChild(reconnectMsg);
+    
+    setTimeout(() => {
+      reconnectMsg.style.transition = 'opacity 0.5s';
+      reconnectMsg.style.opacity = '0';
+      setTimeout(() => reconnectMsg.remove(), 500);
+    }, 1500);
   }
 }
 
@@ -357,7 +367,12 @@ if (document.readyState === 'loading') {
 
 function initFieldState() {
   fieldState = new FieldState();
+  
+  // Show init animation if needed (for new users)
   fieldState.showFieldIdInit();
+  
+  // FIXED: Check if should reconnect BEFORE updating timestamp
+  const shouldShowReconnected = fieldState.checkIfShouldReconnect();
   
   // AUTO-ACTIVATE if on /begin page
   if (window.location.pathname.includes('begin') && !fieldState.isActive) {
@@ -377,20 +392,23 @@ function initFieldState() {
   
   console.log('Field State initialized:', fieldState.getState());
   
-  // FIXED: Update last seen on page load
+  // Update last seen on page load
   localStorage.setItem('homodigital_last_seen', Date.now());
   
-  // FIXED: Also update on page close
+  // Also update on page close
   window.addEventListener('beforeunload', () => {
     localStorage.setItem('homodigital_last_seen', Date.now());
   });
   
+  // Inject bar after 10s (for init overlay on /begin)
   setTimeout(function() {
     injectFieldBar();
     updateFieldBarValues();
     
-    // FIXED: Show reconnected AFTER bar injection
-    fieldState.showReconnectedMessage();
+    // FIXED: Show reconnected AFTER bar exists, and only if needed
+    if (shouldShowReconnected) {
+      fieldState.showReconnectedMessage();
+    }
   }, 10000);
 }
 
