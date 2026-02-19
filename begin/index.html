@@ -334,9 +334,12 @@
           letter-spacing: 0.2em;
           opacity: 1;
           transition: opacity 1s;
+          padding: 12px;
         "
       >
-        <div id="init-text">INITIALIZING FIELD...</div>
+        <div id="init-text" style="text-align: center">
+          INITIALIZING FIELD...
+        </div>
       </div>
 
       <script>
@@ -389,6 +392,9 @@
 
       <div class="hero">
         <h1>ENTER THE FIELD</h1>
+        <div class="scroll-hint" style="margin-bottom: 30px">
+          YOUR FIELD LINK ESTABLISHED
+        </div>
         <p class="subtitle">These are not tools. These are doorways.</p>
         <p class="subtitle">You are now entering the field.</p>
         <p class="subtitle">
@@ -396,6 +402,23 @@
         </p>
         <div class="scroll-hint">Scroll to begin ↓</div>
       </div>
+
+      <script>
+        // Check if returning user
+        if (localStorage.getItem('homodigital_entered_at')) {
+          const welcomeMsg = document.createElement('div');
+          welcomeMsg.style.cssText = `
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(212, 175, 55, 0.6);
+    letter-spacing: 0.15em;
+    margin-top: 20px;
+  `;
+          welcomeMsg.textContent = 'YOUR FIELD RECOGNIZED';
+          document.querySelector('.hero').appendChild(welcomeMsg);
+        }
+      </script>
 
       <!-- Field Status -->
       <div
@@ -490,7 +513,7 @@
                 color: var(--gray-mid);
               "
             >
-              Last activation
+              Your last activation
             </div>
           </div>
 

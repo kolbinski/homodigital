@@ -389,6 +389,9 @@
 
       <div class="hero">
         <h1>WEJDŹ W POLE</h1>
+        <div class="scroll-hint" style="margin-bottom: 30px">
+          TWOJE POŁĄCZENIE Z POLEM USTANOWIONE
+        </div>
         <p class="subtitle">To nie są narzędzia. To są przejścia.</p>
         <p class="subtitle">Wchodzisz teraz w pole.</p>
         <p class="subtitle">
@@ -397,6 +400,23 @@
         </p>
         <div class="scroll-hint">Przewiń w dół, aby zacząć ↓</div>
       </div>
+
+      <script>
+        // Check if returning user
+        if (localStorage.getItem('homodigital_entered_at')) {
+          const welcomeMsg = document.createElement('div');
+          welcomeMsg.style.cssText = `
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(212, 175, 55, 0.6);
+    letter-spacing: 0.15em;
+    margin-top: 20px;
+  `;
+          welcomeMsg.textContent = 'TWOJE POLE ROZPOZNANE';
+          document.querySelector('.hero').appendChild(welcomeMsg);
+        }
+      </script>
 
       <div
         style="
@@ -490,7 +510,7 @@
                 color: var(--gray-mid);
               "
             >
-              Ostatnia aktywacja
+              Twoja ostatnia aktywacja
             </div>
           </div>
 
