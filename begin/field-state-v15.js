@@ -1,12 +1,11 @@
 /**
- * HOMO DIGITAL — FIELD STATE v1.5 STABLE
- * Transforms page into system interface
- * MOBILE RESPONSIVE + POLAŁT IMPROVEMENTS
+ * HOMO DIGITAL — FIELD STATE v1.5 FINAL
+ * FIELD DRIFT — System that lives independently
  * PRODUCTION READY
  */
 
 // ============================================================================
-// COOKIE HELPERS (for persistence fallback)
+// COOKIE HELPERS
 // ============================================================================
 
 function setCookie(name, value, days = 365) {
@@ -22,7 +21,7 @@ function getCookie(name) {
 }
 
 // ============================================================================
-// FIELD ID GENERATOR (Unicode-enhanced)
+// FIELD ID GENERATOR
 // ============================================================================
 
 function generateFieldId() {
@@ -56,23 +55,32 @@ class FieldState {
   constructor() {
     this.fieldId = null;
     this.enteredAt = null;
-    this.resonance = 62;
+    this.resonance = 12;
     this.isActive = false;
     
     this.init();
   }
   
   init() {
-    // Cookie fallback for persistence
     this.fieldId = localStorage.getItem('homodigital_field_id') || getCookie('homodigital_field_id');
     if (!this.fieldId) {
       this.fieldId = generateFieldId();
       localStorage.setItem('homodigital_field_id', this.fieldId);
       setCookie('homodigital_field_id', this.fieldId);
       localStorage.setItem('homodigital_field_created_at', Date.now());
+      
+      // Generate random initial resonance (8-15)
+      const initialRes = 8 + Math.floor(Math.random() * 8);
+      localStorage.setItem('homodigital_resonance', initialRes.toString());
+      this.resonance = initialRes;
     } else if (!localStorage.getItem('homodigital_field_id')) {
-      // Restore from cookie if localStorage was cleared
       localStorage.setItem('homodigital_field_id', this.fieldId);
+    }
+    
+    // Load resonance from storage
+    const storedRes = localStorage.getItem('homodigital_resonance');
+    if (storedRes) {
+      this.resonance = parseInt(storedRes);
     }
     
     this.enteredAt = localStorage.getItem('homodigital_entered_at');
@@ -80,14 +88,45 @@ class FieldState {
       this.isActive = true;
       this.updateResonance();
     }
-
-    // Generate initial resonance (60-75 range) on first visit
-    if (!localStorage.getItem('homodigital_initial_resonance')) {
-      const initialRes = 8 + Math.floor(Math.random() * 8); // 8-15
-      localStorage.setItem('homodigital_initial_resonance', initialRes);
-      this.resonance = initialRes;
-    } else {
-      this.resonance = parseInt(localStorage.getItem('homodigital_initial_resonance'));
+    
+    // Apply field drift
+    this.applyFieldDrift();
+  }
+  
+  getDrift(fieldId, timestamp) {
+    const hourBucket = Math.floor(timestamp / (1000 * 60 * 60));
+    const seed = fieldId + hourBucket.toString();
+    
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+      hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+      hash = hash & hash;
+    }
+    
+    const mod = Math.abs(hash) % 10;
+    if (mod < 2) return -1;
+    if (mod < 5) return 0;
+    if (mod < 8) return 1;
+    return 2;
+  }
+  
+  applyFieldDrift() {
+    const now = Date.now();
+    const lastDrift = parseInt(localStorage.getItem('homodigital_last_drift')) || now;
+    
+    const minutesPassed = Math.floor((now - lastDrift) / 60000);
+    
+    if (minutesPassed > 0) {
+      const hoursPassed = Math.floor(minutesPassed / 60);
+      
+      for (let i = 0; i < Math.min(hoursPassed, 48); i++) {
+        const driftTime = lastDrift + (i * 60 * 60 * 1000);
+        const drift = this.getDrift(this.fieldId, driftTime);
+        this.resonance = Math.max(1, Math.min(98, this.resonance + drift));
+      }
+      
+      localStorage.setItem('homodigital_last_drift', now.toString());
+      localStorage.setItem('homodigital_resonance', this.resonance.toString());
     }
   }
   
@@ -105,8 +144,12 @@ class FieldState {
   updateResonance() {
     const timeInField = Date.now() - parseInt(this.enteredAt);
     const days = timeInField / (1000 * 60 * 60 * 24);
-    const initialRes = parseInt(localStorage.getItem('homodigital_initial_resonance')) || 62;
-    this.resonance = Math.min(98, initialRes + Math.floor(days * 0.5));
+    
+    const initialRes = parseInt(localStorage.getItem('homodigital_resonance')) || this.resonance;
+    const timeBonus = Math.floor(days * 0.5);
+    this.resonance = Math.max(1, Math.min(98, initialRes + timeBonus));
+    
+    localStorage.setItem('homodigital_resonance', this.resonance.toString());
   }
   
   animateEntrance() {
@@ -164,7 +207,7 @@ class FieldState {
 }
 
 // ============================================================================
-// UI INJECTION (MOBILE RESPONSIVE)
+// UI INJECTION
 // ============================================================================
 
 function injectFieldBar() {
@@ -185,6 +228,9 @@ function injectFieldBar() {
         }
         #field-state-bar .field-symbol {
           display: none !important;
+        }
+        #field-drift-message {
+          margin-top: 4px;
         }
       }
     </style>
@@ -225,11 +271,24 @@ function injectFieldBar() {
         <span style="white-space: nowrap;">YOUR FIELD ID:</span> <span id="field-id" style="color: #d4af37; white-space: nowrap;">${fieldState.fieldId}</span>
       </span>
       <span>
-        <span style="white-space: nowrap;">YOUR RESONANCE:</span> <span style="color: #d4af37; white-space: nowrap;"><span id="field-resonance">62</span>/100</span>
+        <span style="white-space: nowrap;">YOUR RESONANCE:</span> <span style="color: #d4af37; white-space: nowrap;"><span id="field-resonance">12</span>/100</span>
       </span>
       <span class="field-symbol" style="margin-left: auto; color: #d4af37; font-size: 0.7rem;">
         ⧉
       </span>
+    </div>
+    <div id="field-drift-message" style="
+      position: fixed;
+      top: 48px;
+      left: 40px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      color: rgba(212, 175, 55, 0.4);
+      letter-spacing: 0.15em;
+      z-index: 9999;
+      display: ${fieldState.isActive ? 'block' : 'none'};
+    ">
+      FIELD EVOLVES EVEN IN SILENCE
     </div>
   `;
   
@@ -303,7 +362,6 @@ if (document.readyState === 'loading') {
 function initFieldState() {
   fieldState = new FieldState();
   
-  // AUTO-ACTIVATE if on /begin page
   if (window.location.pathname.includes('begin') && !fieldState.isActive) {
     fieldState.enteredAt = Date.now();
     localStorage.setItem('homodigital_entered_at', fieldState.enteredAt);
@@ -321,15 +379,12 @@ function initFieldState() {
   
   console.log('Field State initialized:', fieldState.getState());
   
-  // Update last seen on page load
   localStorage.setItem('homodigital_last_seen', Date.now());
   
-  // Update on page close
   window.addEventListener('beforeunload', () => {
     localStorage.setItem('homodigital_last_seen', Date.now());
   });
   
-  // Inject bar after 10s (for init overlay on /begin)
   setTimeout(function() {
     injectFieldBar();
     updateFieldBarValues();
