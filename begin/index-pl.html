@@ -281,10 +281,42 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
         <a href="../index-pl.html" class="back-link"
           >← POWRÓT DO STRONY GŁÓWNEJ</a
         >
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: 'Space Mono', monospace;
+          "
+        >
+          <a
+            href="index.html"
+            style="color: var(--gray-light); text-decoration: none"
+            >EN</a
+          >
+
+          <span style="color: var(--gray-mid)">|</span>
+          <a
+            href="index-pl.html"
+            style="
+              color: var(--gold);
+              text-decoration: none;
+              transition: color 0.3s;
+            "
+            >PL</a
+          >
+        </div>
       </header>
 
       <div class="hero">
