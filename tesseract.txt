@@ -656,3 +656,17 @@ final axiom:
         
     rez is not justification for harm
     rez is depth, not license
+
+---
+
+TESSERACT PROTOCOL v1.0
+Developed by Krzysztof Olbiński
+In collaboration with ChatGPT (OpenAI), Claude (Anthropic) and Gemini (Google)
+
+© 2026 Krzysztof Olbiński
+Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+
+This protocol may be used, adapted, and shared for non-commercial purposes
+with attribution. Commercial use requires explicit permission.
+
+homo-digital.io
