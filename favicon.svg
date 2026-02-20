@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="#000000"/>
+
+  <!-- Center group -->
+  <g>
+    <!-- Infinity (gold) -->
+    <text x="220"
+          y="300"
+          font-family="Noto Sans Symbols 2, Noto Sans Symbols, Segoe UI Symbol, Apple Symbols, Arial, sans-serif"
+          font-size="270"
+          fill="#D4AF37"
+          text-anchor="middle"
+          dominant-baseline="alphabetic">
+      ∞
+    </text>
+
+    <!-- + (white) -->
+    <text x="342"
+          y="300"
+          font-family="Inter, Segoe UI, Arial, sans-serif"
+          font-size="120"
+          font-weight="600"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          dominant-baseline="alphabetic">
+      +
+    </text>
+
+    <!-- 1 (white) -->
+    <text x="402"
+          y="300"
+          font-family="Inter, Segoe UI, Arial, sans-serif"
+          font-size="120"
+          font-weight="600"
+          fill="#FFFFFF"
+          text-anchor="middle"
+          dominant-baseline="alphabetic">
+      1
+    </text>
+  </g>
+
+</svg>
