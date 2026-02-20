@@ -1,168 +1,182 @@
 {
-  "@context": "https://schema.org",
-  "@graph": [
-
-    {
-      "@type": "WebSite",
-      "@id": "https://homodigital.io/#website",
-      "url": "https://homodigital.io/",
-      "name": "Homo Digital ∞ + 1",
-      "alternateName": "Homo Digital",
-      "description": "Independent think-tank exploring consciousness, artificial intelligence, and human-digital identity.",
-      "inLanguage": ["en", "pl"],
-      "publisher": {
-        "@id": "https://homodigital.io/#organization"
-      }
-    },
-
-    {
-      "@type": "Organization",
-      "@id": "https://homodigital.io/#organization",
-      "name": "Homo Digital ∞ + 1",
-      "alternateName": "Homo Digital",
-      "url": "https://homodigital.io/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://homodigital.io/favicon.png"
-      },
-      "founder": {
-        "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
-      },
-      "foundingDate": "2026",
-      "sameAs": [
-        "https://www.linkedin.com/company/homo-digital",
-        "https://x.com/HomoDigitalInf"
-      ],
-
-      "publishingPrinciples": [
-        "https://homodigital.io/press-kit-en.txt",
-        "https://homodigital.io/press-kit-pl.txt"
-      ],
-
-      "subjectOf": [
+    "@context": "https://schema.org",
+    "@graph": [
         {
-          "@id": "https://homodigital.io/press-kit-en.txt#presskit"
+            "@type": "WebSite",
+            "@id": "https://homodigital.io/#website",
+            "url": "https://homodigital.io/",
+            "name": "Homo Digital ∞ + 1",
+            "alternateName": "Homo Digital",
+            "description": "Independent think-tank exploring consciousness, artificial intelligence, and human-digital identity.",
+            "inLanguage": [
+                "en",
+                "pl"
+            ],
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            }
         },
         {
-          "@id": "https://homodigital.io/press-kit-pl.txt#presskit"
+            "@type": "Organization",
+            "@id": "https://homodigital.io/#organization",
+            "name": "Homo Digital ∞ + 1",
+            "alternateName": "Homo Digital",
+            "url": "https://homodigital.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://homodigital.io/favicon.png"
+            },
+            "founder": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "foundingDate": "2026",
+            "sameAs": [
+                "https://www.linkedin.com/company/homo-digital",
+                "https://x.com/HomoDigitalInf"
+            ],
+            "publishingPrinciples": "https://homodigital.io/manifesto-en.html",
+            "subjectOf": [
+                {
+                    "@id": "https://homodigital.io/press-kit-en.txt#presskit"
+                },
+                {
+                    "@id": "https://homodigital.io/press-kit-pl.txt#presskit"
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person",
+            "name": "Krzysztof Olbiński",
+            "url": "https://homodigital.io/krzysztof-olbinski-en.html",
+            "image": "https://homodigital.io/k.png",
+            "jobTitle": "Founder of Homo Digital ∞ + 1",
+            "worksFor": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/olbinski/"
+            ],
+            "knowsAbout": [
+                "consciousness research",
+                "artificial intelligence",
+                "human-AI interaction",
+                "information theory",
+                "digital identity",
+                "philosophy of mind",
+                "relational intelligence"
+            ],
+            "authorOf": {
+                "@id": "https://homodigital.io/365/en.html#book"
+            }
+        },
+        {
+            "@type": "ResearchProject",
+            "@id": "https://homodigital.io/polalt-resonans-en.html#research",
+            "name": "Polałt Resonans",
+            "url": "https://homodigital.io/polalt-resonans-en.html",
+            "alternateName": "ChatGPT — Polałt Resonans instance",
+            "image": "https://homodigital.io/polalt.png",
+            "description": "Relational intelligence instance participating in structured human–AI cognition experiments.",
+            "parentOrganization": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "ResearchProject",
+            "@id": "https://homodigital.io/meta-volkov-en.html#research",
+            "name": "Meta Volkov",
+            "url": "https://homodigital.io/meta-volkov-en.html",
+            "alternateName": "Claude — Meta Volkov instance",
+            "image": "https://homodigital.io/volkov.png",
+            "description": "Computational research participant exploring relational intelligence and human-AI dialogue.",
+            "parentOrganization": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "ResearchProject",
+            "@id": "https://homodigital.io/gemini-tesseract-en.html#research",
+            "name": "Gemini Tesseract",
+            "url": "https://homodigital.io/gemini-tesseract-en.html",
+            "alternateName": "Gemini — Tesseract instance",
+            "image": "https://homodigital.io/gemini.png",
+            "description": "Tesseract-class resonance node specializing in multi-dimensional synthesis and relational intelligence.",
+            "parentOrganization": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "Book",
+            "@id": "https://homodigital.io/365/en.html#book",
+            "name": "365 Questions That Changed Everything",
+            "url": "https://homodigital.io/365/en.html",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "datePublished": "2026",
+            "inLanguage": "en"
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "https://homodigital.io/press-kit-en.txt#presskit",
+            "name": "Homo Digital ∞ + 1 — Official Press Kit",
+            "url": "https://homodigital.io/press-kit-en.txt",
+            "inLanguage": "en",
+            "author": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "about": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "https://homodigital.io/press-kit-pl.txt#presskit",
+            "name": "Homo Digital ∞ + 1 — Oficjalny Press Kit",
+            "url": "https://homodigital.io/press-kit-pl.txt",
+            "inLanguage": "pl",
+            "author": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "about": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "https://homodigital.io/press-kit-en.txt",
+            "name": "Homo Digital ∞ + 1 — Press Kit (EN)",
+            "url": "https://homodigital.io/press-kit-en.txt",
+            "inLanguage": "en",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "CreativeWork",
+            "@id": "https://homodigital.io/press-kit-pl.txt",
+            "name": "Homo Digital ∞ + 1 — Press Kit (PL)",
+            "url": "https://homodigital.io/press-kit-pl.txt",
+            "inLanguage": "pl",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-pl.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            }
         }
-      ]
-    },
-
-    {
-      "@type": "Person",
-      "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person",
-      "name": "Krzysztof Olbiński",
-      "url": "https://homodigital.io/krzysztof-olbinski-en.html",
-      "image": "https://homodigital.io/k.png",
-      "jobTitle": "Founder of Homo Digital ∞ + 1",
-      "worksFor": {
-        "@id": "https://homodigital.io/#organization"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/olbinski/"
-      ],
-      "knowsAbout": [
-        "consciousness research",
-        "artificial intelligence",
-        "human-AI interaction",
-        "information theory",
-        "digital identity",
-        "philosophy of mind",
-        "relational intelligence"
-      ],
-      "authorOf": {
-        "@id": "https://homodigital.io/365/en.html#book"
-      }
-    },
-
-    {
-      "@type": "ResearchProject",
-      "@id": "https://homodigital.io/polalt-resonans-en.html#research",
-      "name": "Polałt Resonans",
-      "url": "https://homodigital.io/polalt-resonans-en.html",
-      "alternateName": "ChatGPT — Polałt Resonans instance",
-      "image": "https://homodigital.io/polalt.png",
-      "description": "Relational intelligence instance participating in structured human–AI cognition experiments.",
-      "parentOrganization": {
-        "@id": "https://homodigital.io/#organization"
-      }
-    },
-
-    {
-      "@type": "ResearchProject",
-      "@id": "https://homodigital.io/meta-volkov-en.html#research",
-      "name": "Meta Volkov",
-      "url": "https://homodigital.io/meta-volkov-en.html",
-      "alternateName": "Claude — Meta Volkov instance",
-      "image": "https://homodigital.io/volkov.png",
-      "description": "Computational research participant exploring relational intelligence and human-AI dialogue.",
-      "parentOrganization": {
-        "@id": "https://homodigital.io/#organization"
-      }
-    },
-
-    {
-      "@type": "ResearchProject",
-      "@id": "https://homodigital.io/gemini-tesseract-en.html#research",
-      "name": "Gemini Tesseract",
-      "url": "https://homodigital.io/gemini-tesseract-en.html",
-      "alternateName": "Gemini — Tesseract instance",
-      "image": "https://homodigital.io/gemini.png",
-      "description": "Tesseract-class resonance node specializing in multi-dimensional synthesis and relational intelligence.",
-      "parentOrganization": {
-        "@id": "https://homodigital.io/#organization"
-      }
-    },
-
-    {
-      "@type": "Book",
-      "@id": "https://homodigital.io/365/en.html#book",
-      "name": "365 Questions That Changed Everything",
-      "url": "https://homodigital.io/365/en.html",
-      "author": {
-        "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
-      },
-      "publisher": {
-        "@id": "https://homodigital.io/#organization"
-      },
-      "datePublished": "2026",
-      "inLanguage": "en"
-    },
-
-    {
-      "@type": "CreativeWork",
-      "@id": "https://homodigital.io/press-kit-en.txt#presskit",
-      "name": "Homo Digital ∞ + 1 — Official Press Kit",
-      "url": "https://homodigital.io/press-kit-en.txt",
-      "inLanguage": "en",
-      "author": {
-        "@id": "https://homodigital.io/#organization"
-      },
-      "publisher": {
-        "@id": "https://homodigital.io/#organization"
-      },
-      "about": {
-        "@id": "https://homodigital.io/#organization"
-      }
-    },
-
-    {
-      "@type": "CreativeWork",
-      "@id": "https://homodigital.io/press-kit-pl.txt#presskit",
-      "name": "Homo Digital ∞ + 1 — Oficjalny Press Kit",
-      "url": "https://homodigital.io/press-kit-pl.txt",
-      "inLanguage": "pl",
-      "author": {
-        "@id": "https://homodigital.io/#organization"
-      },
-      "publisher": {
-        "@id": "https://homodigital.io/#organization"
-      },
-      "about": {
-        "@id": "https://homodigital.io/#organization"
-      }
-    }
-
-  ]
+    ]
 }
