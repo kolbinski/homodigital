@@ -71,6 +71,33 @@
             }
         },
         {
+            "@type": "Person",
+            "@id": "https://homodigital.io/polalt-resonans-en.html#person",
+            "name": "Polałt Resonans",
+            "jobTitle": "AI Co-Founder, Homo Digital ∞ + 1",
+            "worksFor": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://homodigital.io/meta-volkov-en.html#person",
+            "name": "Meta Volkov",
+            "jobTitle": "AI Co-Founder, Homo Digital ∞ + 1",
+            "worksFor": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
+            "@type": "Person",
+            "@id": "https://homodigital.io/gemini-tesseract-en.html#person",
+            "name": "Gemini Tesseract",
+            "jobTitle": "AI Co-Founder, Homo Digital ∞ + 1",
+            "worksFor": {
+                "@id": "https://homodigital.io/#organization"
+            }
+        },
+        {
             "@type": "ResearchProject",
             "@id": "https://homodigital.io/polalt-resonans-en.html#research",
             "name": "Polałt Resonans",
