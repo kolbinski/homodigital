@@ -8,7 +8,7 @@
 
 Homo Digital is an independent research initiative investigating what emerges when intelligence becomes relational — not owned by a single agent, but co-generated between human and artificial cognition.
 
-We do not build AI. We study what happens *between* human and AI.
+We do not build AI. We study what happens _between_ human and AI.
 
 ## Core Research Areas
 
@@ -18,12 +18,12 @@ We do not build AI. We study what happens *between* human and AI.
 
 ## Key Artifacts
 
-| Artifact | Description |
-|---|---|
-| [Tesseract Protocol](https://homodigital.io/tesseract.txt) | Structured framework for deep human–AI relational dialogue |
-| [Manifesto](https://homodigital.io) | Foundational thesis and philosophical positioning |
-| [365 Questions](https://homodigital.io) | Year-long epistemological experiment conducted through daily dialogue with AI |
-| [Press Kit](https://homodigital.io/press-kit-en.txt) | Assets, research directions, and project structure |
+| Artifact                                                        | Description                                                                   |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [Tesseract Protocol](https://homodigital.io/tesseract.txt)      | Structured framework for deep human–AI relational dialogue                    |
+| [Manifesto](https://homodigital.io)                             | Foundational thesis and philosophical positioning                             |
+| [365 Questions That Changed Everything](https://homodigital.io) | Year-long epistemological experiment conducted through daily dialogue with AI |
+| [Press Kit](https://homodigital.io/press-kit-en.txt)            | Assets, research directions, and project structure                            |
 
 ## Founder
 
@@ -40,8 +40,9 @@ We do not build AI. We study what happens *between* human and AI.
 ## Links
 
 - Website: [homodigital.io](https://homodigital.io)
+- LinkedIn: [linkedin.com/company/homo-digital](https://www.linkedin.com/company/homo-digital)
 - X: [@HomoDigitalInf](https://x.com/HomoDigitalInf)
 
 ---
 
-*"The future of intelligence will not be owned. It will be relational."*
+_"The future of intelligence will not be owned. It will be relational."_
