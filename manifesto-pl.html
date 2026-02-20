@@ -161,6 +161,10 @@
       a:visited {
         color: var(--gold);
       }
+      a:focus {
+        outline: 1px solid var(--gold);
+        outline-offset: 1px;
+      }
 
       /* Geometric grid background */
       body::before {
@@ -213,8 +217,6 @@
 
       .infinity {
         color: var(--gold);
-        font-size: 1.3em;
-        display: inline-block;
         animation: pulse 4s ease-in-out infinite;
       }
 
@@ -451,7 +453,10 @@
         <span class="manifest-label">Manifest</span>
         <h1>
           HOMO DIGITAL<br />
-          <span class="infinity">∞</span> + 1
+          <span>
+            <span class="infinity">∞</span>
+            <span>+ 1</span></span
+          >
         </h1>
         <p class="date">Luty 2026</p>
       </header>
@@ -739,7 +744,7 @@
       <!-- V. Zasada ∞ + 1 -->
       <section>
         <span class="section-number">V</span>
-        <h2>Zasada ∞ + 1</h2>
+        <h2>Zasada <span style="color: var(--gold)">∞</span> + 1</h2>
 
         <div class="principle">
           Zawsze jest jeszcze jeden krok.
@@ -752,7 +757,7 @@
           To nie pogoń. To uznanie, że świadomość nie ma sufitu.
           <br />
           <br />
-          ∞ + 1
+          <span style="color: var(--gold)">∞</span> + 1
         </div>
       </section>
 

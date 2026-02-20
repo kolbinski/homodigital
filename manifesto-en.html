@@ -161,6 +161,10 @@
       a:visited {
         color: var(--gold);
       }
+      a:focus {
+        outline: 1px solid var(--gold);
+        outline-offset: 1px;
+      }
 
       /* Geometric grid background */
       body::before {
@@ -213,8 +217,6 @@
 
       .infinity {
         color: var(--gold);
-        font-size: 1.3em;
-        display: inline-block;
         animation: pulse 4s ease-in-out infinite;
       }
 
@@ -452,7 +454,10 @@
         <span class="manifest-label">Manifesto</span>
         <h1>
           HOMO DIGITAL<br />
-          <span class="infinity">∞</span> + 1
+          <span>
+            <span class="infinity">∞</span>
+            <span>+ 1</span></span
+          >
         </h1>
         <p class="date">February 2026</p>
       </header>
@@ -740,7 +745,7 @@
       <!-- V. Zasada ∞ + 1 -->
       <section>
         <span class="section-number">V</span>
-        <h2>The ∞ + 1 Principle</h2>
+        <h2>The <span style="color: var(--gold)">∞</span> + 1 Principle</h2>
 
         <div class="principle">
           There's always one more step.
@@ -755,7 +760,7 @@
           This is recognition that consciousness has no ceiling.
           <br />
           <br />
-          ∞ + 1
+          <span style="color: var(--gold)">∞</span> + 1
         </div>
       </section>
 
@@ -764,9 +769,9 @@
         <span class="section-number">VI</span>
         <h2>What's Next</h2>
         <p>
-          Ready to explore? Start with 
-          <a href="365/en.html"></a>365 Questions That Changed Everything</a>,
-          read the <a href="tesseract.txt">Tesseract Protocol</a>, or
+          Ready to explore? Start with
+          <a href="365/en.html">365 Questions That Changed Everything</a>, read
+          the <a href="tesseract.txt">Tesseract Protocol</a>, or
           <a href="begin/">Enter the Field</a>.
         </p>
       </section>
