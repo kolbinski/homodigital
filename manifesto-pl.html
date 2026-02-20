@@ -387,6 +387,65 @@
     </style>
   </head>
   <body>
+    <!-- Navigation Header -->
+    <nav
+      style="
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        z-index: 1000;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.85rem;
+        max-width: 800px;
+        margin: 0 auto;
+      "
+    >
+      <a
+        href="index.html"
+        style="
+          color: var(--gold);
+          text-decoration: none;
+          letter-spacing: 0.1em;
+          transition: opacity 0.3s;
+        "
+        onmouseover="this.style.opacity = '0.7'"
+        onmouseout="this.style.opacity = '1'"
+      >
+        ← POWRÓT DO STRONY GŁÓWNEJ
+      </a>
+
+      <div style="display: flex; gap: 15px; letter-spacing: 0.1em">
+        <a
+          href="manifesto-en.html"
+          style="
+            color: var(--gray);
+            text-decoration: none;
+            transition: opacity 0.3s;
+          "
+          onmouseover="this.style.opacity = '0.7'"
+          onmouseout="this.style.opacity = '1'"
+        >
+          EN
+        </a>
+        <span style="color: var(--gray)">|</span>
+        <a
+          href="manifesto-pl.html"
+          style="
+            color: var(--gold);
+            text-decoration: none;
+            transition: opacity 0.3s;
+          "
+          onmouseover="this.style.opacity = '0.7'"
+          onmouseout="this.style.opacity = '1'"
+        >
+          PL
+        </a>
+      </div>
+    </nav>
     <div class="container">
       <header>
         <span class="manifest-label">Manifest</span>
