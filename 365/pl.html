@@ -68,7 +68,7 @@
       /* ===== LEWA ===== */
       .left {
         width: 500px;
-        padding: 3rem 1rem;
+        padding: 1rem;
         backdrop-filter: blur(6px);
         background: rgba(0, 0, 0, 0.35);
 
@@ -330,6 +330,82 @@
 
     <div class="wrapper">
       <div class="left">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+          "
+        >
+          <a
+            href="../"
+            style="
+              font-family: 'Space Mono', monospace;
+              font-size: 0.8rem;
+              letter-spacing: 0.12em;
+              color: #d4af37;
+              text-decoration: none;
+              padding: 10px 20px;
+              border: 1px solid rgba(212, 175, 55, 0.4);
+              border-radius: 8px;
+              background: rgba(0, 0, 0, 0.4);
+              backdrop-filter: blur(4px);
+              transition: all 0.3s ease;
+            "
+            onmouseover="
+              this.style.background = 'rgba(212, 175, 55, 0.15)';
+              this.style.borderColor = 'rgba(212, 175, 55, 0.8)';
+              this.style.boxShadow = '0 0 15px rgba(212, 175, 55, 0.3)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(0, 0, 0, 0.4)';
+              this.style.borderColor = 'rgba(212, 175, 55, 0.4)';
+              this.style.boxShadow = 'none';
+            "
+          >
+            ← HOMO DIGITAL
+          </a>
+
+          <div
+            style="
+              display: flex;
+              gap: 10px;
+              font-family: 'Space Mono', monospace;
+              font-size: 0.8rem;
+              letter-spacing: 0.12em;
+            "
+          >
+            <a
+              href="en.html"
+              style="
+                color: white;
+                opacity: 0.7;
+                text-decoration: none;
+                transition: opacity 0.3s;
+              "
+              onmouseover="this.style.opacity = '0.7'"
+              onmouseout="this.style.opacity = '1'"
+            >
+              EN
+            </a>
+            <span style="color: #666">|</span>
+            <a
+              href="pl.html"
+              style="
+                color: #d4af37;
+                opacity: 0.7;
+                text-decoration: none;
+                transition: opacity 0.3s;
+              "
+              onmouseover="this.style.opacity = '0.7'"
+              onmouseout="this.style.opacity = '1'"
+            >
+              PL
+            </a>
+          </div>
+        </div>
         <h1>365 pytań, które zmieniły wszystko</h1>
         <h2>
           Jedna myśl dziennie.<br />Jedna rozmowa, która może zacząć się w
