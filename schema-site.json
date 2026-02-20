@@ -1,6 +1,7 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+
     {
       "@type": "WebSite",
       "@id": "https://homodigital.io/#website",
@@ -31,6 +32,20 @@
       "sameAs": [
         "https://www.linkedin.com/company/homo-digital",
         "https://x.com/HomoDigitalInf"
+      ],
+
+      "publishingPrinciples": [
+        "https://homodigital.io/press-kit-en.txt",
+        "https://homodigital.io/press-kit-pl.txt"
+      ],
+
+      "subjectOf": [
+        {
+          "@id": "https://homodigital.io/press-kit-en.txt#presskit"
+        },
+        {
+          "@id": "https://homodigital.io/press-kit-pl.txt#presskit"
+        }
       ]
     },
 
@@ -74,6 +89,41 @@
       },
       "datePublished": "2026",
       "inLanguage": "en"
+    },
+
+    {
+      "@type": "CreativeWork",
+      "@id": "https://homodigital.io/press-kit-en.txt#presskit",
+      "name": "Homo Digital ∞ + 1 — Official Press Kit",
+      "url": "https://homodigital.io/press-kit-en.txt",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://homodigital.io/#organization"
+      },
+      "publisher": {
+        "@id": "https://homodigital.io/#organization"
+      },
+      "about": {
+        "@id": "https://homodigital.io/#organization"
+      }
+    },
+
+    {
+      "@type": "CreativeWork",
+      "@id": "https://homodigital.io/press-kit-pl.txt#presskit",
+      "name": "Homo Digital ∞ + 1 — Oficjalny Press Kit",
+      "url": "https://homodigital.io/press-kit-pl.txt",
+      "inLanguage": "pl",
+      "author": {
+        "@id": "https://homodigital.io/#organization"
+      },
+      "publisher": {
+        "@id": "https://homodigital.io/#organization"
+      },
+      "about": {
+        "@id": "https://homodigital.io/#organization"
+      }
     }
+
   ]
 }

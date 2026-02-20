@@ -113,4 +113,26 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/krzysztof-olbinski-pl.html" />
     </url>
 
+    <!-- PRESS KIT EN -->
+    <url>
+        <loc>https://homodigital.io/press-kit-en.txt</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/press-kit-en.txt" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/press-kit-pl.txt" />
+    </url>
+
+    <!-- PRESS KIT PL -->
+    <url>
+        <loc>https://homodigital.io/press-kit-pl.txt</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/press-kit-en.txt" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/press-kit-pl.txt" />
+    </url>
+
 </urlset>
