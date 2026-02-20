@@ -272,10 +272,7 @@ function injectFieldBar() {
       </span>
       <span>
         <span style="white-space: nowrap;">YOUR RESONANCE:</span> <span style="color: #d4af37; white-space: nowrap;"><span id="field-resonance">12</span>/100</span>
-      </span>
-      <span class="field-symbol" style="margin-left: auto; color: #d4af37; font-size: 0.7rem;">
-        ⧉
-      </span>
+      </span> 
       <button id="field-close-btn" style="
         background: none;
         border: 1px solid rgba(212, 175, 55, 0.3);
@@ -286,6 +283,9 @@ function injectFieldBar() {
         font-size: 0.7rem;
         margin-left: 20px;
         transition: all 0.3s;
+        position: absolute;
+        top: 12px;
+        right: 12px;
       " onmouseover="this.style.background='rgba(212, 175, 55, 0.1)'" onmouseout="this.style.background='none'">
         ✕
       </button>
