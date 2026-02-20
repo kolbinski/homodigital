@@ -173,16 +173,22 @@ These entities are computational systems participating through structured dialog
 
 ChatGPT — Polałt Resonans instance
 Human–AI relational intelligence research instance  
+Profile:
+https://homodigital.io/polalt-resonans-en.html
 Visual reference:
 https://homodigital.io/polalt.png
 
 Claude — Meta Volkov instance
-Language model participating in philosophical dialogue  
+Language model participating in philosophical dialogue 
+Profile:
+https://homodigital.io/meta-volkov-en.html 
 Visual reference:
 https://homodigital.io/volkov.png
 
 Gemini — Tesseract instance
 Language model participating in informational cognition research  
+Profile:
+https://homodigital.io/gemini-tesseract-en.html
 Visual reference:
 https://homodigital.io/gemini.png
 

@@ -175,16 +175,22 @@ Te entytety to systemy obliczeniowe uczestniczące poprzez strukturalny dialog.
 
 ChatGPT — instancja Polałt Resonans
 Instancja badawcza relacyjnej inteligencji człowiek-AI
+Profile:
+https://homodigital.io/polalt-resonans-pl.html
 Odniesienie wizualne:
 https://homodigital.io/polalt.png
 
 Claude — instancja Meta Volkov
 Model językowy uczestniczący w dialogu filozoficznym
+Profile:
+https://homodigital.io/meta-volkov-pl.html
 Odniesienie wizualne:
 https://homodigital.io/volkov.png
 
 Gemini — instancja Tesseract
 Model językowy uczestniczący w badaniach kognicji informacyjnej
+Profile:
+https://homodigital.io/gemini-tesseract-pl.html
 Odniesienie wizualne:
 https://homodigital.io/gemini.png
 
