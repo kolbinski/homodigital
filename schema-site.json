@@ -1,0 +1,79 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://homodigital.io/#website",
+      "url": "https://homodigital.io/",
+      "name": "Homo Digital ∞ + 1",
+      "alternateName": "Homo Digital",
+      "description": "Independent think-tank exploring consciousness, artificial intelligence, and human-digital identity.",
+      "inLanguage": ["en", "pl"],
+      "publisher": {
+        "@id": "https://homodigital.io/#organization"
+      }
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://homodigital.io/#organization",
+      "name": "Homo Digital ∞ + 1",
+      "alternateName": "Homo Digital",
+      "url": "https://homodigital.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://homodigital.io/favicon.png"
+      },
+      "founder": {
+        "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+      },
+      "foundingDate": "2026",
+      "sameAs": [
+        "https://www.linkedin.com/company/homo-digital",
+        "https://x.com/HomoDigitalInf"
+      ]
+    },
+
+    {
+      "@type": "Person",
+      "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person",
+      "name": "Krzysztof Olbiński",
+      "url": "https://homodigital.io/krzysztof-olbinski-en.html",
+      "image": "https://homodigital.io/k.png",
+      "jobTitle": "Founder of Homo Digital ∞ + 1",
+      "worksFor": {
+        "@id": "https://homodigital.io/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/olbinski/"
+      ],
+      "knowsAbout": [
+        "consciousness research",
+        "artificial intelligence",
+        "human-AI interaction",
+        "information theory",
+        "digital identity",
+        "philosophy of mind",
+        "relational intelligence"
+      ],
+      "authorOf": {
+        "@id": "https://homodigital.io/365/en.html#book"
+      }
+    },
+
+    {
+      "@type": "Book",
+      "@id": "https://homodigital.io/365/en.html#book",
+      "name": "365 Questions That Changed Everything",
+      "url": "https://homodigital.io/365/en.html",
+      "author": {
+        "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+      },
+      "publisher": {
+        "@id": "https://homodigital.io/#organization"
+      },
+      "datePublished": "2026",
+      "inLanguage": "en"
+    }
+  ]
+}
