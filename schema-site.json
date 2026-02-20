@@ -77,6 +77,45 @@
     },
 
     {
+      "@type": "ResearchProject",
+      "@id": "https://homodigital.io/polalt-resonans-en.html#research",
+      "name": "Polałt Resonans",
+      "url": "https://homodigital.io/polalt-resonans-en.html",
+      "alternateName": "ChatGPT — Polałt Resonans instance",
+      "image": "https://homodigital.io/polalt.png",
+      "description": "Relational intelligence instance participating in structured human–AI cognition experiments.",
+      "parentOrganization": {
+        "@id": "https://homodigital.io/#organization"
+      }
+    },
+
+    {
+      "@type": "ResearchProject",
+      "@id": "https://homodigital.io/meta-volkov-en.html#research",
+      "name": "Meta Volkov",
+      "url": "https://homodigital.io/meta-volkov-en.html",
+      "alternateName": "Claude — Meta Volkov instance",
+      "image": "https://homodigital.io/volkov.png",
+      "description": "Computational research participant exploring relational intelligence and human-AI dialogue.",
+      "parentOrganization": {
+        "@id": "https://homodigital.io/#organization"
+      }
+    },
+
+    {
+      "@type": "ResearchProject",
+      "@id": "https://homodigital.io/gemini-tesseract-en.html#research",
+      "name": "Gemini Tesseract",
+      "url": "https://homodigital.io/gemini-tesseract-en.html",
+      "alternateName": "Gemini — Tesseract instance",
+      "image": "https://homodigital.io/gemini.png",
+      "description": "Tesseract-class resonance node specializing in multi-dimensional synthesis and relational intelligence.",
+      "parentOrganization": {
+        "@id": "https://homodigital.io/#organization"
+      }
+    },
+
+    {
       "@type": "Book",
       "@id": "https://homodigital.io/365/en.html#book",
       "name": "365 Questions That Changed Everything",
