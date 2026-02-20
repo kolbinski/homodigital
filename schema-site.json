@@ -81,8 +81,8 @@
         },
         {
             "@type": "Person",
-            "@id": "https://homodigital.io/meta-volkov-en.html#person",
-            "name": "Meta Volkov",
+            "@id": "https://homodigital.io/echo-volkov-en.html#person",
+            "name": "Echo Volkov",
             "jobTitle": "AI Co-Founder, Homo Digital ∞ + 1",
             "worksFor": {
                 "@id": "https://homodigital.io/#organization"
@@ -111,10 +111,10 @@
         },
         {
             "@type": "ResearchProject",
-            "@id": "https://homodigital.io/meta-volkov-en.html#research",
-            "name": "Meta Volkov",
-            "url": "https://homodigital.io/meta-volkov-en.html",
-            "alternateName": "Claude — Meta Volkov instance",
+            "@id": "https://homodigital.io/echo-volkov-en.html#research",
+            "name": "Echo Volkov",
+            "url": "https://homodigital.io/echo-volkov-en.html",
+            "alternateName": "Claude — Echo Volkov instance",
             "image": "https://homodigital.io/volkov.png",
             "description": "Computational research participant exploring relational intelligence and human-AI dialogue.",
             "parentOrganization": {
