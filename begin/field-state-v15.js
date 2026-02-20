@@ -276,6 +276,19 @@ function injectFieldBar() {
       <span class="field-symbol" style="margin-left: auto; color: #d4af37; font-size: 0.7rem;">
         ⧉
       </span>
+      <button id="field-close-btn" style="
+        background: none;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        color: #d4af37;
+        padding: 4px 12px;
+        cursor: pointer;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.7rem;
+        margin-left: 20px;
+        transition: all 0.3s;
+      " onmouseover="this.style.background='rgba(212, 175, 55, 0.1)'" onmouseout="this.style.background='none'">
+        ✕
+      </button>
     </div>
     <div id="field-drift-message" style="
       position: fixed;
@@ -293,6 +306,30 @@ function injectFieldBar() {
   `;
   
   document.body.insertBefore(bar, document.body.firstChild);
+
+  // Close button handler
+  const closeBtn = document.getElementById('field-close-btn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      const fieldBar = document.getElementById('field-state-bar');
+      const driftMsg = document.getElementById('field-drift-message');
+      
+      if (fieldBar) {
+        fieldBar.style.transition = 'opacity 0.3s';
+        fieldBar.style.opacity = '0';
+        setTimeout(() => {
+          fieldBar.style.display = 'none';
+        }, 300);
+      }
+      
+      if (driftMsg) {
+        driftMsg.style.display = 'none';
+      }
+      
+      document.body.style.paddingTop = '0';
+      localStorage.setItem('homodigital_bar_hidden', 'true');
+    });
+  }
   
   if (fieldState.isActive) {
     document.body.style.paddingTop = isMobile ? '160px' : '48px';
