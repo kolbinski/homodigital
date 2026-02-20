@@ -1,39 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- HOME EN -->
     <url>
         <loc>https://homodigital.io/</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/index-pl.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://homodigital.io/" />
     </url>
+
+    <!-- HOME PL -->
     <url>
         <loc>https://homodigital.io/index-pl.html</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/index-pl.html" />
     </url>
+
+    <!-- BEGIN EN -->
     <url>
         <loc>https://homodigital.io/begin/</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/begin/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/begin/index-pl.html" />
     </url>
+
+    <!-- BEGIN PL -->
     <url>
         <loc>https://homodigital.io/begin/index-pl.html</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/begin/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/begin/index-pl.html" />
     </url>
+
+    <!-- MANIFESTO EN -->
     <url>
         <loc>https://homodigital.io/manifesto-en.html</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/manifesto-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/manifesto-pl.html" />
     </url>
+
+    <!-- MANIFESTO PL -->
     <url>
         <loc>https://homodigital.io/manifesto-pl.html</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/manifesto-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/manifesto-pl.html" />
     </url>
-    <url>
-        <loc>https://homodigital.io/365/</loc>
-        <priority>0.9</priority>
-    </url>
+
+    <!-- 365 EN -->
     <url>
         <loc>https://homodigital.io/365/en.html</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/365/en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/365/pl.html" />
     </url>
+
+    <!-- 365 PL -->
     <url>
         <loc>https://homodigital.io/365/pl.html</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/365/en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/365/pl.html" />
     </url>
+
 </urlset>
