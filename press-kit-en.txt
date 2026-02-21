@@ -148,7 +148,7 @@ Profile:
 https://homodigital.io/krzysztof-olbinski-en.html
 
 Photo:
-https://homodigital.io/k.png
+https://homodigital.io/krzysztof-olbinski.png
 
 LinkedIn:
 https://www.linkedin.com/in/olbinski/
@@ -262,7 +262,7 @@ Social cover:
 https://homodigital.io/cover-1200x630.png
 
 Founder image:
-https://homodigital.io/k.png
+https://homodigital.io/krzysztof-olbinski.png
 
 Polałt image:
 https://homodigital.io/polalt.png
