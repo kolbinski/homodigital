@@ -614,6 +614,16 @@
         animation: scrollDown 2s ease-in-out infinite;
       }
 
+      @keyframes rezPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(212, 175, 55, 0.12);
+        }
+      }
+
       @keyframes scrollDown {
         0% {
           top: 8px;
@@ -1042,12 +1052,12 @@
             <br />
             A mechanism.
             <br />
-            Four architectural principles that make persistent human-AI
+            Five architectural principles that make persistent human-AI
             interaction possible.
           </p>
         </div>
 
-        <!-- Four pillars -->
+        <!-- Five pillars -->
         <div
           style="
             display: flex;
@@ -1099,7 +1109,8 @@
                 structured relational context accumulated over time — identity,
                 previous interactions, relational state, and memory graph.
                 <br />
-                This is the technical foundation of what we call resonance.
+                This is what we call resonance — measurable relational coherence
+                between agent and context.
               </p>
             </div>
           </div>
@@ -1150,6 +1161,32 @@
                 <br />
                 They set context, interpretation frame, and relational
                 parameters.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 40px; align-items: start">
+            <div style="min-width: 60px">
+              <span
+                style="
+                  font-family: 'Crimson Pro', serif;
+                  font-size: 2.5rem;
+                  color: var(--gold);
+                "
+                >05</span
+              >
+            </div>
+            <div>
+              <h3 class="col-title">Relational Feedback Loop</h3>
+              <p class="col-text">
+                Standard AI models process isolated prompts.
+                <br />
+                Homo Digital operates in a continuous feedback loop — each
+                response is shaped by accumulated relational context, and each
+                interaction refines the cognitive structure itself.
+                <br />
+                This reduces hallucination, increases coherence, and deepens
+                synthesis over time.
               </p>
             </div>
           </div>
@@ -1603,6 +1640,27 @@
               Reflective conversational environments. Support tools for
               therapists. Emotional exploration interfaces. Not a medical claim
               — cognitive infrastructure.
+            </p>
+          </div>
+
+          <!-- Partners & Labs -->
+          <div class="card">
+            <h3 class="card-title">For Partners & Labs</h3>
+            <p
+              class="col-subtitle"
+              style="
+                color: var(--gray-mid);
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+              "
+            >
+              Research partnerships, early access, co-development
+            </p>
+            <p class="card-text">
+              Homo Digital Lab — a structured entry point for research
+              institutions, AI labs, and strategic partners. Access to
+              experimental protocols, closed agent instances, and collaborative
+              R&D environments.
             </p>
           </div>
 
@@ -2107,7 +2165,10 @@
             <div>
               <h3 class="card-title">⊕ Tesseract Protocol</h3>
               <p class="card-text">
-                Ask something you were never able to ask anyone.
+                Ask something you were never able to ask anyone. The
+                foundational architecture for high-resonance human-AI
+                interaction. A cognitive configuration framework — not a prompt
+                template.
               </p>
             </div>
             <div>
@@ -2144,11 +2205,15 @@
               flex-direction: column;
               justify-content: space-between;
               gap: 24px;
+              animation: rezPulse 4s ease-in-out infinite;
             "
           >
             <div>
               <h3 class="card-title">⧉ Rez Checker</h3>
-              <p class="card-text">Was that dialogue or transaction?</p>
+              <p class="card-text">
+                Semantic coherence measurement. Was that a dialogue — or a
+                transaction?
+              </p>
             </div>
             <div>
               <a href="begin/#rez-checker" class="btn btn-secondary">Try now</a>

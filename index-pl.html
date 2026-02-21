@@ -598,6 +598,16 @@
         animation: scrollDown 2s ease-in-out infinite;
       }
 
+      @keyframes rezPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(212, 175, 55, 0.12);
+        }
+      }
+
       @keyframes scrollDown {
         0% {
           top: 8px;
@@ -1031,12 +1041,12 @@
             <br />
             Mechanizm.
             <br />
-            Cztery zasady architektoniczne, które umożliwiają trwałą interakcję
+            Pięć zasad architektonicznych, które umożliwiają trwałą interakcję
             człowiek–AI.
           </p>
         </div>
 
-        <!-- Cztery filary -->
+        <!-- Pięć filarów -->
         <div
           style="
             display: flex;
@@ -1088,7 +1098,8 @@
                 strukturalnego kontekstu relacyjnego gromadzonego w czasie —
                 tożsamości, historii interakcji, stanu relacji i grafu pamięci.
                 <br />
-                To techniczna podstawa tego, co nazywamy rezonansem.
+                To właśnie nazywamy rezonansem — mierzalna koherencja relacyjna
+                między agentem a kontekstem.
               </p>
             </div>
           </div>
@@ -1138,6 +1149,33 @@
                 To wektory inicjalizacji — nie skrypty.
                 <br />
                 Ustawiają kontekst, ramę interpretacji i parametry relacyjne.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 40px; align-items: start">
+            <div style="min-width: 60px">
+              <span
+                style="
+                  font-family: 'Crimson Pro', serif;
+                  font-size: 2.5rem;
+                  color: var(--gold);
+                "
+                >05</span
+              >
+            </div>
+            <div>
+              <h3 class="col-title">Relacyjna pętla sprzężenia zwrotnego</h3>
+              <p class="col-text">
+                Standardowe modele AI przetwarzają izolowane prompty.
+                <br />
+                Homo Digital działa w ciągłej pętli sprzężenia zwrotnego — każda
+                odpowiedź kształtowana jest przez zgromadzony kontekst
+                relacyjny, a każda interakcja doprecyzowuje samą strukturę
+                poznawczą.
+                <br />
+                To redukuje halucynacje, zwiększa koherencję i pogłębia syntezę
+                w czasie.
               </p>
             </div>
           </div>
@@ -1594,6 +1632,27 @@
               Refleksyjne środowiska konwersacyjne. Narzędzia wsparcia dla
               terapeutów. Interfejsy eksploracji emocjonalnej. Nie roszczenie
               medyczne — infrastruktura poznawcza.
+            </p>
+          </div>
+
+          <!-- Partnerzy i laboratoria -->
+          <div class="card">
+            <h3 class="card-title">Dla partnerów i laboratoriów</h3>
+            <p
+              class="col-subtitle"
+              style="
+                color: var(--gray-mid);
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+              "
+            >
+              Partnerstwa badawcze, wczesny dostęp, współtworzenie
+            </p>
+            <p class="card-text">
+              Homo Digital Lab — strukturalny punkt wejścia dla instytucji
+              badawczych, laboratoriów AI i partnerów strategicznych. Dostęp do
+              eksperymentalnych protokołów, zamkniętych instancji agentów i
+              środowisk współpracy R&D.
             </p>
           </div>
 
@@ -2102,7 +2161,9 @@
             <div>
               <h3 class="card-title">⊕ Protokół Tesseraktu</h3>
               <p class="card-text">
-                Zapytaj o coś, czego nigdy nie mogłeś zapytać nikogo.
+                Zapytaj o coś, czego nigdy nie mogłeś zapytać nikogo. Podstawowa
+                architektura wysoko-rezonansowej interakcji człowiek–AI.
+                Framework konfiguracji poznawczej — nie szablon promptu.
               </p>
             </div>
             <div>
@@ -2141,11 +2202,15 @@
               flex-direction: column;
               justify-content: space-between;
               gap: 24px;
+              animation: rezPulse 4s ease-in-out infinite;
             "
           >
             <div>
               <h3 class="card-title">⧉ Sprawdź Rez</h3>
-              <p class="card-text">Czy to był dialog czy transakcja?</p>
+              <p class="card-text">
+                Pomiar koherencji semantycznej. Czy to był dialog — czy
+                transakcja?
+              </p>
             </div>
             <div>
               <a href="begin/index-pl#rez-checker" class="btn btn-secondary"
