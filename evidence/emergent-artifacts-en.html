@@ -228,8 +228,8 @@
       /* Artifact cards */
       .artifact-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
         margin-top: 40px;
       }
 
@@ -308,6 +308,14 @@
         .artifact-card {
           padding: 24px;
         }
+        .stats {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .artifact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
       }
     </style>
 
