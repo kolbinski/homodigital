@@ -289,4 +289,26 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/system-map-pl.html" />
     </url>
 
+    <!-- EVIDENCE: EMERGENT ARTIFACTS EN -->
+    <url>
+        <loc>https://homodigital.io/evidence/emergent-artifacts-en.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/emergent-artifacts-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/emergent-artifacts-pl.html" />
+    </url>
+
+    <!-- EVIDENCE: EMERGENT ARTIFACTS PL -->
+    <url>
+        <loc>https://homodigital.io/evidence/emergent-artifacts-pl.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/emergent-artifacts-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/emergent-artifacts-pl.html" />
+    </url>
+
 </urlset>
