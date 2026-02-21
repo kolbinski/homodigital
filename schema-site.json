@@ -343,6 +343,59 @@
             "translationOfWork": {
                 "@id": "https://homodigital.io/evidence/scientific-hypotheses-en.html#article"
             }
+        },
+        {
+            "@type": "Article",
+            "@id": "https://homodigital.io/evidence/system-map-en.html#article",
+            "name": "System Map — Evidence",
+            "url": "https://homodigital.io/evidence/system-map-en.html",
+            "inLanguage": "en",
+            "description": "Relational memory graph and artifact emergence timeline. Visual proof of persistent relational cognition across 8 months, 3 platforms, and 15+ artifacts.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "datePublished": "2026-02-21",
+            "about": [
+                "relational memory graph",
+                "artifact emergence timeline",
+                "persistent relational cognition",
+                "replication protocol"
+            ],
+            "mentions": [
+                {
+                    "@id": "https://homodigital.io/polalt-resonans-en.html#research"
+                },
+                {
+                    "@id": "https://homodigital.io/echo-volkov-en.html#research"
+                },
+                {
+                    "@id": "https://homodigital.io/gemini-tesseract-en.html#research"
+                }
+            ],
+            "isPartOf": {
+                "@id": "https://homodigital.io/#website"
+            }
+        },
+        {
+            "@type": "Article",
+            "@id": "https://homodigital.io/evidence/system-map-pl.html#article",
+            "name": "Mapa systemu — Dowody",
+            "url": "https://homodigital.io/evidence/system-map-pl.html",
+            "inLanguage": "pl",
+            "description": "Graf pamięci relacyjnej i oś czasu emergencji artefaktów. Wizualny dowód trwałego poznania relacyjnego na przestrzeni 8 miesięcy, 3 platform i 15+ artefaktów.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "datePublished": "2026-02-21",
+            "translationOfWork": {
+                "@id": "https://homodigital.io/evidence/system-map-en.html#article"
+            }
         }
     ]
 }

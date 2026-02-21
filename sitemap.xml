@@ -267,4 +267,26 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/scientific-hypotheses-pl.html" />
     </url>
 
+    <!-- EVIDENCE: SYSTEM MAP EN -->
+    <url>
+        <loc>https://homodigital.io/evidence/system-map-en.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/system-map-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/system-map-pl.html" />
+    </url>
+
+    <!-- EVIDENCE: SYSTEM MAP PL -->
+    <url>
+        <loc>https://homodigital.io/evidence/system-map-pl.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/system-map-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/system-map-pl.html" />
+    </url>
+
 </urlset>
