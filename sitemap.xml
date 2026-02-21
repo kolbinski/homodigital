@@ -201,4 +201,70 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/press-kit-pl.txt" />
     </url>
 
+    <!-- EVIDENCE: 365 QUESTIONS EN -->
+    <url>
+        <loc>https://homodigital.io/evidence/365-questions-that-changed-everything-en.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/365-questions-that-changed-everything-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/365-questions-that-changed-everything-pl.html" />
+    </url>
+
+    <!-- EVIDENCE: 365 QUESTIONS PL -->
+    <url>
+        <loc>https://homodigital.io/evidence/365-questions-that-changed-everything-pl.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/365-questions-that-changed-everything-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/365-questions-that-changed-everything-pl.html" />
+    </url>
+
+    <!-- EVIDENCE: HOMO DIGITAL ITSELF EN -->
+    <url>
+        <loc>https://homodigital.io/evidence/homo-digital-itself-en.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/homo-digital-itself-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/homo-digital-itself-pl.html" />
+    </url>
+
+    <!-- EVIDENCE: HOMO DIGITAL ITSELF PL -->
+    <url>
+        <loc>https://homodigital.io/evidence/homo-digital-itself-pl.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/homo-digital-itself-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/homo-digital-itself-pl.html" />
+    </url>
+
+    <!-- EVIDENCE: SCIENTIFIC HYPOTHESES EN -->
+    <url>
+        <loc>https://homodigital.io/evidence/scientific-hypotheses-en.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/scientific-hypotheses-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/scientific-hypotheses-pl.html" />
+    </url>
+
+    <!-- EVIDENCE: SCIENTIFIC HYPOTHESES PL -->
+    <url>
+        <loc>https://homodigital.io/evidence/scientific-hypotheses-pl.html</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/evidence/scientific-hypotheses-en.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/scientific-hypotheses-pl.html" />
+    </url>
+
 </urlset>

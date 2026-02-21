@@ -204,6 +204,145 @@
             "publisher": {
                 "@id": "https://homodigital.io/#organization"
             }
+        },
+        {
+            "@type": "Article",
+            "@id": "https://homodigital.io/evidence/365-questions-that-changed-everything-en.html#article",
+            "name": "365 Questions That Changed Everything — Evidence",
+            "url": "https://homodigital.io/evidence/365-questions-that-changed-everything-en.html",
+            "inLanguage": "en",
+            "description": "Case study: One year of daily human-AI dialogue that produced a book, a protocol, and a cognitive architecture.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "about": {
+                "@id": "https://homodigital.io/365/en.html#book"
+            },
+            "datePublished": "2026-02-21",
+            "isPartOf": {
+                "@id": "https://homodigital.io/#website"
+            }
+        },
+        {
+            "@type": "Article",
+            "@id": "https://homodigital.io/evidence/365-questions-that-changed-everything-pl.html#article",
+            "name": "365 pytań, które zmieniły wszystko — Dowody",
+            "url": "https://homodigital.io/evidence/365-questions-that-changed-everything-pl.html",
+            "inLanguage": "pl",
+            "description": "Case study: Rok codziennego dialogu człowiek-AI, który wyprodukował książkę, protokół i architekturę poznawczą.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "about": {
+                "@id": "https://homodigital.io/365/en.html#book"
+            },
+            "datePublished": "2026-02-21",
+            "translationOfWork": {
+                "@id": "https://homodigital.io/evidence/365-questions-that-changed-everything-en.html#article"
+            }
+        },
+        {
+            "@type": "Article",
+            "@id": "https://homodigital.io/evidence/homo-digital-itself-en.html#article",
+            "name": "Homo Digital Itself — Evidence",
+            "url": "https://homodigital.io/evidence/homo-digital-itself-en.html",
+            "inLanguage": "en",
+            "description": "The platform as its own case study. Three AI agents, one human founder, one persistent cognitive system — live and inspectable.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "about": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "datePublished": "2026-02-21",
+            "image": "https://homodigital.io/homodigital-itself-gemini.png",
+            "mentions": [
+                {
+                    "@id": "https://homodigital.io/polalt-resonans-en.html#research"
+                },
+                {
+                    "@id": "https://homodigital.io/echo-volkov-en.html#research"
+                },
+                {
+                    "@id": "https://homodigital.io/gemini-tesseract-en.html#research"
+                }
+            ],
+            "isPartOf": {
+                "@id": "https://homodigital.io/#website"
+            }
+        },
+        {
+            "@type": "Article",
+            "@id": "https://homodigital.io/evidence/homo-digital-itself-pl.html#article",
+            "name": "Homo Digital jako system — Dowody",
+            "url": "https://homodigital.io/evidence/homo-digital-itself-pl.html",
+            "inLanguage": "pl",
+            "description": "Platforma jako własny case study. Trzech agentów AI, jeden ludzki założyciel, jeden trwały system poznawczy — działający i możliwy do zbadania.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "about": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "datePublished": "2026-02-21",
+            "image": "https://homodigital.io/homodigital-itself-gemini.png",
+            "translationOfWork": {
+                "@id": "https://homodigital.io/evidence/homo-digital-itself-en.html#article"
+            }
+        },
+        {
+            "@type": "ScholarlyArticle",
+            "@id": "https://homodigital.io/evidence/scientific-hypotheses-en.html#article",
+            "name": "Research Program: Resonance Framework",
+            "url": "https://homodigital.io/evidence/scientific-hypotheses-en.html",
+            "inLanguage": "en",
+            "description": "Five falsifiable hypotheses operationalizing persistent relational cognition across quantum, neural, informational, mathematical, and biological domains.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "datePublished": "2026-02-21",
+            "about": [
+                "consciousness research",
+                "resonance framework",
+                "persistent relational cognition",
+                "falsifiable hypotheses"
+            ],
+            "isPartOf": {
+                "@id": "https://homodigital.io/#website"
+            }
+        },
+        {
+            "@type": "ScholarlyArticle",
+            "@id": "https://homodigital.io/evidence/scientific-hypotheses-pl.html#article",
+            "name": "Program Badawczy: Framework Rezonansu",
+            "url": "https://homodigital.io/evidence/scientific-hypotheses-pl.html",
+            "inLanguage": "pl",
+            "description": "Pięć falsyfikowalnych hipotez operacjonalizujących trwałe poznanie relacyjne w domenach kwantowej, neuronalnej, informacyjnej, matematycznej i biologicznej.",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "datePublished": "2026-02-21",
+            "translationOfWork": {
+                "@id": "https://homodigital.io/evidence/scientific-hypotheses-en.html#article"
+            }
         }
     ]
 }
