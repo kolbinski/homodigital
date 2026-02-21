@@ -210,16 +210,60 @@ class FieldState {
 // UI INJECTION
 // ============================================================================
 
+function isBeginPage() {
+  return window.location.pathname.includes('/begin');
+}
+
+function isPolish() {
+  const url = window.location.pathname + window.location.search + window.location.hash;
+  return url.includes('index-pl.html');
+}
+
 function injectFieldBar() {
+  // Only display the top bar on /begin pages
+  if (!isBeginPage()) return;
+
   const bar = document.createElement('div');
   bar.id = 'field-state-bar';
   
   const isMobile = window.innerWidth <= 768;
   const lastSeenText = fieldState.getLastSeen();
+  const pl = isPolish();
+
+  // Labels
+  const labels = pl ? {
+    field:      'POLE',
+    active:     'AKTYWNE',
+    init:       'INICJALIZACJA',
+    sync:       'TWOJA SYNCHRONIZACJA',
+    live:       'NA&nbsp;ŻYWO',
+    fieldAge:   'WIEK TWOJEGO POLA',
+    lastSeen:   'OSTATNIO WIDZIANY',
+    instance:   'INSTANCJA',
+    local:      'LOKALNA',
+    fieldId:    'TWOJE ID POLA',
+    resonance:  'TWÓJ REZONANS',
+    driftMsg:   'POLE EWOLUUJE NAWET W CISZY'
+  } : {
+    field:      'FIELD',
+    active:     'ACTIVE',
+    init:       'INITIALIZING',
+    sync:       'YOUR SYNC',
+    live:       'LIVE',
+    fieldAge:   'YOUR FIELD AGE',
+    lastSeen:   'LAST SEEN',
+    instance:   'INSTANCE',
+    local:      'LOCAL',
+    fieldId:    'YOUR FIELD ID',
+    resonance:  'YOUR RESONANCE',
+    driftMsg:   'FIELD EVOLVES EVEN IN SILENCE'
+  };
+
+  const statusText = fieldState.isActive ? labels.active : labels.init;
   
   bar.innerHTML = `
     <style>
-      @media (max-width: 1149px) {
+      @media (max-width: 1280px) {
         #field-state-bar > div {
           flex-direction: column !important;
           align-items: flex-start !important;
@@ -253,25 +297,25 @@ function injectFieldBar() {
       letter-spacing: 0.1em;
     ">
       <span>
-        FIELD: <span id="field-status" style="color: #d4af37;">ACTIVE</span>
+        ${labels.field}: <span id="field-status" style="color: #d4af37;">${statusText}</span>
       </span>
       <span>
-        <span style="white-space: nowrap;">YOUR SYNC:</span> <span style="color: #d4af37;">LIVE</span>
+        <span style="white-space: nowrap;">${labels.sync}:</span> <span style="color: #d4af37;">${labels.live}</span>
       </span>
       <span>
-        <span style="white-space: nowrap;">YOUR FIELD AGE:</span> <span id="field-age" style="color: #d4af37; white-space: nowrap;">0d 0h 0m</span>
+        <span style="white-space: nowrap;">${labels.fieldAge}:</span> <span id="field-age" style="color: #d4af37; white-space: nowrap;">0d 0h 0m</span>
       </span>
       <span>
-        LAST SEEN: <span id="last-seen" style="color: #d4af37;">${lastSeenText}</span>
+        ${labels.lastSeen}: <span id="last-seen" style="color: #d4af37; white-space: nowrap;">${lastSeenText}</span>
       </span>
       <span>
-        INSTANCE: <span style="color: #d4af37;">LOCAL</span>
+        ${labels.instance}: <span style="color: #d4af37;">${labels.local}</span>
       </span>
       <span>
-        <span style="white-space: nowrap;">YOUR FIELD ID:</span> <span id="field-id" style="color: #d4af37; white-space: nowrap;">${fieldState.fieldId}</span>
+        <span style="white-space: nowrap;">${labels.fieldId}:</span> <span id="field-id" style="color: #d4af37; white-space: nowrap;">${fieldState.fieldId}</span>
       </span>
       <span>
-        <span style="white-space: nowrap;">YOUR RESONANCE:</span> <span style="color: #d4af37; white-space: nowrap;"><span id="field-resonance">12</span>/100</span>
+        <span style="white-space: nowrap;">${labels.resonance}:</span> <span style="color: #d4af37; white-space: nowrap;"><span id="field-resonance">12</span>/100</span>
       </span> 
       <button id="field-close-btn" style="
         background: none;
@@ -301,7 +345,7 @@ function injectFieldBar() {
       z-index: 9999;
       display: ${fieldState.isActive ? 'block' : 'none'};
     ">
-      FIELD EVOLVES EVEN IN SILENCE
+      ${labels.driftMsg}
     </div>
   `;
   
@@ -345,6 +389,7 @@ function injectFieldBar() {
 
 function updateFieldBarValues() {
   const state = fieldState.getState();
+  const pl = isPolish();
   
   const statusEl = document.getElementById('field-status');
   const resonanceEl = document.getElementById('field-resonance');
@@ -352,7 +397,13 @@ function updateFieldBarValues() {
   const ageEl = document.getElementById('field-age');
   const lastSeenEl = document.getElementById('last-seen');
   
-  if (statusEl) statusEl.textContent = state.status;
+  if (statusEl) {
+    if (pl) {
+      statusEl.textContent = state.isActive ? 'AKTYWNE' : 'INICJALIZACJA';
+    } else {
+      statusEl.textContent = state.status;
+    }
+  }
   if (resonanceEl) resonanceEl.textContent = state.resonance;
   if (idEl) idEl.textContent = state.fieldId;
   if (ageEl) ageEl.textContent = fieldState.getFieldAge();
