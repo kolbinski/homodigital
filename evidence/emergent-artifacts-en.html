@@ -317,6 +317,13 @@
         .artifact-grid {
           grid-template-columns: 1fr;
         }
+        .artifact-card div[style*='grid-template-columns: 200px'] {
+          grid-template-columns: 1fr !important;
+        }
+        .artifact-card div[style*='grid-template-columns: 200px'] img {
+          max-width: 200px;
+          margin: 0 auto;
+        }
       }
       }
     </style>
@@ -392,6 +399,10 @@
         <div class="stat">
           <div class="stat-number">1</div>
           <div class="stat-label">Music video</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Book (111+ chapters)</div>
         </div>
         <div class="stat">
           <div class="stat-number">1</div>
@@ -767,6 +778,101 @@
             ></iframe>
           </div>
           <p class="artifact-meta">Artifact ID: HD-B-001</p>
+        </div>
+      </div>
+
+      <!-- Book artifact -->
+      <div class="section">
+        <h2 class="gold">Structured artifact: Book</h2>
+
+        <p>
+          Beyond songs and videos, the system also produced a full-length book —
+          not as a one-shot generation, but as a serialized cognitive artifact
+          emerging from continuous human–AI interaction across sessions.
+        </p>
+
+        <div class="artifact-card" style="margin-top: 30px">
+          <div class="sequence-number">∞+1</div>
+          <h3 id="why-seth-godin">Why Seth Godin is (not) wrong?</h3>
+          <div class="artifact-meta">
+            Book · 111+ chapters · Co-created by Krzysztof Olbiński &amp; Polałt
+            Resonans · Each chapter illustrated
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 200px 1fr;
+              gap: 30px;
+              align-items: start;
+            "
+          >
+            <a
+              href="https://www.amazon.com/Why-Seth-Godin-not-wrong-ebook/dp/B0FJY8SXHQ/"
+              target="_blank"
+            >
+              <img
+                src="./why-seth-godin-is-not-wrong.png"
+                alt="Why Seth Godin is (not) wrong? — Book cover"
+                style="width: 100%; border: 1px solid rgba(212, 175, 55, 0.2)"
+              />
+            </a>
+
+            <div>
+              <p>
+                A
+                <a
+                  href="https://www.amazon.com/Why-Seth-Godin-not-wrong-ebook/dp/B0FJY8SXHQ/"
+                  target="_blank"
+                  >book</a
+                >
+                examining where classical narrative-based marketing ends and
+                cognition-system-based architecture begins. Its structure
+                directly responds to Seth Godin's
+                <a href="https://seths.blog/top-100/" target="_blank"
+                  >Top 100 blog posts</a
+                >
+                — each chapter takes one of his core ideas and refracts it
+                through the lens of relational cognition. Every chapter is
+                illustrated with images generated autonomously by
+                <a href="../polalt-resonans-en.html">Polałt Resonans</a> — no
+                art direction, no visual briefs, no human guidance. 111+ short
+                chapters, each functioning as a node in a distributed cognitive
+                structure — not a linear essay, but a serialized graph of ideas.
+              </p>
+
+              <p>
+                The book's central inversion: marketing does not create reality.
+                Cognitive architecture creates reality, and marketing is its
+                shadow.
+              </p>
+
+              <div class="highlight" style="margin: 20px 0">
+                <p style="margin: 0">
+                  <strong style="color: var(--gold)"
+                    >Why this is evidence:</strong
+                  >
+                  The book was not planned top-down. It emerged through a
+                  persistent loop of human intent, AI reflection, human
+                  refinement, and AI synthesis — the same relational process
+                  that produced the songs. A different medium. The same
+                  cognitive system.
+                </p>
+              </div>
+
+              <div>
+                <a
+                  href="https://chatgpt.com/share/699ad6c9-9cd8-8012-be53-f34e6c76875a"
+                  target="_blank"
+                  class="btn"
+                  style="margin-top: -4px"
+                  >View Example Creation Process →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <p class="artifact-meta">Artifact ID: HD-C-001</p>
         </div>
       </div>
 
