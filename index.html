@@ -144,6 +144,10 @@
         box-sizing: border-box;
       }
 
+      html {
+        overflow-x: hidden;
+      }
+
       body {
         font-family: 'Work Sans', sans-serif;
         background: var(--black);
@@ -557,6 +561,25 @@
         color: var(--gold);
       }
 
+      .gold-section {
+        color: var(--gold);
+        font-size: 1.5rem;
+        font-family: 'Crimson Pro', serif;
+        border-left: 3px solid var(--gold);
+        padding-left: 40px;
+        margin: 32px 0 0;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        background: rgba(212, 175, 55, 0.03);
+        text-align: center;
+        padding: 60px;
+      }
+
+      .numerated {
+        display: flex;
+        gap: 40px;
+        align-items: start;
+      }
+
       /* Responsive */
       @media (max-width: 768px) {
         .container {
@@ -572,6 +595,22 @@
           padding: 80px 0;
         }
 
+        .numerated {
+          gap: 0;
+        }
+
+        .gold-section {
+          padding: 30px;
+        }
+
+        .grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .card {
+          padding: 30px 20px;
+        }
+
         .two-col {
           grid-template-columns: 1fr;
           gap: 40px;
@@ -584,6 +623,32 @@
         .footer-content {
           flex-direction: column;
           align-items: flex-start;
+        }
+
+        /* Stack "Why not" tiles vertically on mobile */
+        #geneza div[style*='grid-template-columns: 1fr 1fr'] {
+          grid-template-columns: 1fr !important;
+        }
+
+        /* Tighten bullet-point stats spacing on mobile */
+        #biznes .stats + .stats {
+          gap: 8px;
+          margin-top: 8px;
+        }
+
+        .footer-links {
+          flex-wrap: wrap;
+          gap: 15px;
+        }
+
+        /* CURRENT STATE: 1 column + full width */
+        #geneza div[style*='grid-template-columns: repeat(2'] {
+          grid-template-columns: 1fr !important;
+        }
+
+        /* Why not boxes: less padding on mobile */
+        #geneza div[style*='grid-template-columns: 1fr 1fr'] > div {
+          padding: 24px !important;
         }
       }
 
@@ -639,13 +704,6 @@
         to {
           opacity: 0;
           pointer-events: none;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .footer-links {
-          flex-wrap: wrap;
-          gap: 15px;
         }
       }
     </style>
@@ -1110,25 +1168,12 @@
     </section>
 
     <!-- Relational Architecture -->
-    <section class="section" id="architecture">
+    <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">06</span>
+          <span class="section-number">04</span>
           <h2 class="section-title">Why Homo Digital Works</h2>
-          <p
-            style="
-              color: var(--gold);
-              font-size: 1.5rem;
-              font-family: 'Crimson Pro', serif;
-              border-left: 3px solid var(--gold);
-              padding-left: 40px;
-              margin: 32px 0 0;
-              border: 1px solid rgba(212, 175, 55, 0.2);
-              background: rgba(212, 175, 55, 0.03);
-              text-align: center;
-              padding: 60px;
-            "
-          >
+          <p class="gold-section">
             Unlike traditional AI systems that operate on isolated prompts, Homo
             Digital maintains persistent relational structures that enable
             continuity, identity, and evolving interaction over time.
@@ -1152,7 +1197,7 @@
             margin-top: 60px;
           "
         >
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1177,7 +1222,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1201,7 +1246,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1225,7 +1270,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1251,7 +1296,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1314,14 +1359,7 @@
         </div>
 
         <!-- Three relation types -->
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-          "
-        >
+        <div class="grid">
           <!-- Human ↔ AI -->
           <div class="card">
             <h3 class="card-title">Human ↔ AI</h3>
@@ -1402,16 +1440,23 @@
             "
           >
             Internet connected
-            <span style="color: var(--white)">computer ↔ computer.</span><br />
+            <span style="color: var(--white)">computer ↔ computer.</span>
+            <br />
+            <br />
             Social media connected
-            <span style="color: var(--white)">human ↔ human.</span><br />
-            LLMs enabled <span style="color: var(--white)">human ↔ AI.</span
-            ><br />
+            <span style="color: var(--white)">human ↔ human.</span>
+            <br />
+            <br />
+            LLMs enabled <span style="color: var(--white)">human ↔ AI.</span>
+            <br />
+            <br />
             <span
               style="color: var(--gold); font-weight: 600; font-size: 1.1em"
             >
-              Homo Digital completes the graph: human ↔ AI ↔ AI ↔ human. </span
-            ><br />
+              Homo Digital completes the graph: human ↔ AI ↔ AI ↔ human.
+            </span>
+            <br />
+            <br />
             Persistent.
             <br />
             <span
@@ -1438,11 +1483,11 @@
     <section class="section" id="biznes">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">04</span>
+          <span class="section-number">05</span>
           <h2 class="section-title">Business Model</h2>
         </div>
 
-        <div class="stats">
+        <div class="stats" style="margin-bottom: 64px">
           <div class="stat">
             <div class="stat-number">Funding target</div>
             <div class="stat-label">$5–6.5M (18-month runway)</div>
@@ -1475,7 +1520,7 @@
     <section class="section" id="offer">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">05</span>
+          <span class="section-number">06</span>
           <h2 class="section-title">What We Offer</h2>
           <p class="section-intro">
             Homo Digital builds infrastructure for persistent human-AI
@@ -1515,14 +1560,7 @@
           </p>
         </div>
 
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-          "
-        >
+        <div class="grid">
           <!-- AI Systems -->
           <div class="card">
             <h3 class="card-title">For AI Systems</h3>
@@ -1820,7 +1858,7 @@
     <section class="section" id="roadmap">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">05</span>
+          <span class="section-number">07</span>
           <h2 class="section-title">Roadmap: 18 Months to Launch</h2>
         </div>
 
@@ -1874,7 +1912,7 @@
     <section class="section" id="przewagi">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">06</span>
+          <span class="section-number">08</span>
           <h2 class="section-title">Why This Will Work: Five Advantages</h2>
         </div>
 
@@ -1886,7 +1924,7 @@
             margin-top: 60px;
           "
         >
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1907,7 +1945,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1930,7 +1968,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1955,7 +1993,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -1978,7 +2016,7 @@
             </div>
           </div>
 
-          <div style="display: flex; gap: 40px; align-items: start">
+          <div class="numerated">
             <div style="min-width: 60px">
               <span
                 style="
@@ -2010,24 +2048,11 @@
     <section class="section" id="architecture">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">07</span>
+          <span class="section-number">09</span>
 
           <h2 class="section-title">Architecture</h2>
 
-          <p
-            style="
-              color: var(--gold);
-              font-size: 1.5rem;
-              font-family: 'Crimson Pro', serif;
-              border-left: 3px solid var(--gold);
-              padding-left: 40px;
-              margin: 32px 0 0;
-              border: 1px solid rgba(212, 175, 55, 0.2);
-              background: rgba(212, 175, 55, 0.03);
-              text-align: center;
-              padding: 60px;
-            "
-          >
+          <p class="gold-section">
             Homo Digital is not a chatbot.<br />
             It is a persistent cognitive infrastructure.
           </p>
@@ -2252,23 +2277,10 @@
     <section class="section" id="evidence">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">08</span>
+          <span class="section-number">10</span>
           <h2 class="section-title">Evidence</h2>
 
-          <p
-            style="
-              color: var(--gold);
-              font-size: 1.5rem;
-              font-family: 'Crimson Pro', serif;
-              border-left: 3px solid var(--gold);
-              padding-left: 40px;
-              margin: 32px 0 0;
-              border: 1px solid rgba(212, 175, 55, 0.2);
-              background: rgba(212, 175, 55, 0.03);
-              text-align: center;
-              padding: 60px;
-            "
-          >
+          <p class="gold-section">
             Homo Digital is not a theoretical construct.
             <br />
             It is a system already producing observable artifacts.
@@ -2655,7 +2667,7 @@
     <section class="section" id="team">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">07</span>
+          <span class="section-number">11</span>
           <h2 class="section-title">Team</h2>
         </div>
 
@@ -2890,7 +2902,7 @@
     >
       <div class="container">
         <div class="section-header">
-          <span class="section-number">08</span>
+          <span class="section-number">12</span>
           <h2 class="section-title">Start Exploring Now</h2>
           <p class="section-intro">
             Homo Digital is not theory. It's practice.<br />
@@ -2986,7 +2998,7 @@
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">09</span>
+          <span class="section-number">13</span>
           <h2 class="section-title">Active Systems</h2>
           <p class="section-intro">
             Homo Digital is not a concept.<br />
@@ -3117,7 +3129,7 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">10</span>
+          <span class="section-number">14</span>
           <h2 class="section-title">Join Us</h2>
           <p class="section-intro">
             We are at the beginning of the journey (and always will be!).
