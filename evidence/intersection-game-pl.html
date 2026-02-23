@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRZECIĘCIE — Gra Tesseract</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --gold: #d4af37;
+        --gold-dim: rgba(212, 175, 55, 0.3);
+        --gold-glow: rgba(212, 175, 55, 0.15);
+        --bg: #0a0a0c;
+        --bg2: #111114;
+        --text: #e8e4dc;
+        --text-dim: rgba(232, 228, 220, 0.5);
+        --correct: #4ade80;
+        --wrong: #f87171;
+        --phase-aa: #d4af37;
+        --phase-cc: #6366f1;
+        --phase-ca: #22d3ee;
+        --phase-ac: #f472b6;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="200" height="200" filter="url(%23n)" opacity="0.03"/></svg>');
+        pointer-events: none;
+        z-index: 9999;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 24px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .logo {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        color: var(--gold-dim);
+        margin-bottom: 16px;
+      }
+
+      .title {
+        font-size: 3.2rem;
+        font-weight: 300;
+        letter-spacing: 0.08em;
+        color: var(--text);
+        line-height: 1.1;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--text-dim);
+        margin-top: 12px;
+      }
+
+      .score-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-top: 1px solid var(--gold-dim);
+        border-bottom: 1px solid var(--gold-dim);
+        margin-bottom: 40px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+      }
+
+      .score-bar .value {
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      .phase-grid {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .phase-node {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        cursor: default;
+      }
+
+      .phase-node.locked {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.15);
+        background: transparent;
+      }
+
+      .phase-node.revealed {
+        border: 2px solid;
+        color: white;
+        animation: phaseReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .phase-node:nth-child(1).revealed {
+        border-color: var(--phase-aa);
+        background: rgba(212, 175, 55, 0.15);
+        color: var(--phase-aa);
+      }
+      .phase-node:nth-child(2).revealed {
+        border-color: var(--phase-cc);
+        background: rgba(99, 102, 241, 0.15);
+        color: var(--phase-cc);
+      }
+      .phase-node:nth-child(3).revealed {
+        border-color: var(--phase-ca);
+        background: rgba(34, 211, 238, 0.15);
+        color: var(--phase-ca);
+      }
+      .phase-node:nth-child(4).revealed {
+        border-color: var(--phase-ac);
+        background: rgba(244, 114, 182, 0.15);
+        color: var(--phase-ac);
+      }
+
+      @keyframes phaseReveal {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.15);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .clues-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .clue-card {
+        background: var(--bg2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        opacity: 0;
+        transform: translateY(16px);
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .clue-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .clue-domain {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        min-width: 80px;
+        flex-shrink: 0;
+      }
+
+      .clue-card:nth-child(1) .clue-domain {
+        color: var(--phase-aa);
+      }
+      .clue-card:nth-child(2) .clue-domain {
+        color: var(--phase-cc);
+      }
+      .clue-card:nth-child(3) .clue-domain {
+        color: var(--phase-ca);
+      }
+      .clue-card:nth-child(4) .clue-domain {
+        color: var(--phase-ac);
+      }
+
+      .clue-text {
+        font-size: 1.3rem;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.4;
+      }
+
+      .input-area {
+        margin-bottom: 24px;
+      }
+
+      .guess-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid var(--gold-dim);
+        padding: 16px 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: var(--text);
+        text-align: center;
+        letter-spacing: 0.05em;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      .guess-input::placeholder {
+        color: var(--text-dim);
+        font-style: italic;
+      }
+
+      .guess-input:focus {
+        border-bottom-color: var(--gold);
+      }
+
+      .btn-row {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 32px;
+      }
+
+      .btn {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding: 14px 32px;
+        border: 1px solid var(--gold-dim);
+        background: transparent;
+        color: var(--gold);
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background: var(--gold-glow);
+        border-color: var(--gold);
+      }
+
+      .btn.primary {
+        background: var(--gold);
+        color: var(--bg);
+        border-color: var(--gold);
+      }
+
+      .btn.primary:hover {
+        background: #c9a432;
+      }
+      .btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      .answer-reveal {
+        text-align: center;
+        padding: 32px;
+        animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .answer-word {
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+      }
+
+      .answer-word.correct {
+        color: var(--correct);
+      }
+      .answer-word.wrong {
+        color: var(--gold);
+      }
+
+      .answer-sub {
+        font-size: 1rem;
+        font-style: italic;
+        color: var(--text-dim);
+        margin-bottom: 16px;
+      }
+
+      .answer-points {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+      }
+
+      .answer-points.positive {
+        color: var(--correct);
+      }
+      .answer-points.zero {
+        color: var(--wrong);
+      }
+
+      .intro {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+      }
+
+      .intro-text {
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.8;
+        color: var(--text-dim);
+        max-width: 480px;
+      }
+
+      .intro-text em {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      .how-to {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .how-step {
+        text-align: center;
+      }
+
+      .how-step .num {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+      }
+
+      .how-step:nth-child(1) .num {
+        border: 1px solid var(--phase-aa);
+        color: var(--phase-aa);
+      }
+      .how-step:nth-child(2) .num {
+        border: 1px solid var(--phase-cc);
+        color: var(--phase-cc);
+      }
+      .how-step:nth-child(3) .num {
+        border: 1px solid var(--phase-ca);
+        color: var(--phase-ca);
+      }
+      .how-step:nth-child(4) .num {
+        border: 1px solid var(--phase-ac);
+        color: var(--phase-ac);
+      }
+
+      .how-step .label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.55rem;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        text-transform: uppercase;
+      }
+
+      .game-over {
+        text-align: center;
+      }
+
+      .final-score {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      .final-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        color: var(--text-dim);
+        margin-bottom: 32px;
+      }
+
+      .uneligence-rank {
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--text);
+        margin-bottom: 32px;
+      }
+
+      .footer {
+        text-align: center;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: auto;
+      }
+
+      .footer a {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        color: var(--gold-dim);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer a:hover {
+        color: var(--gold);
+      }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-8px);
+        }
+        40% {
+          transform: translateX(8px);
+        }
+        60% {
+          transform: translateX(-4px);
+        }
+        80% {
+          transform: translateX(4px);
+        }
+      }
+      .shake {
+        animation: shake 0.4s ease-out;
+      }
+
+      @media (max-width: 600px) {
+        .title {
+          font-size: 2.2rem;
+        }
+        .clue-card {
+          padding: 16px;
+          gap: 12px;
+        }
+        .clue-domain {
+          min-width: 60px;
+          font-size: 0.5rem;
+        }
+        .clue-text {
+          font-size: 1.1rem;
+        }
+        .guess-input {
+          font-size: 1.4rem;
+        }
+        .how-to {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="app"></div>
+
+    <script>
+      const PUZZLES = [
+        {
+          answer: 'REZONANS',
+          alt: ['resonance', 'rezonansem'],
+          clues: [
+            {
+              domain: 'Fizyka',
+              text: 'Gdy dwie cz\u0119stotliwo\u015Bci si\u0119 zestraj\u0105 i wzajemnie wzmacniaj\u0105',
+            },
+            {
+              domain: 'Muzyka',
+              text: 'Jako\u015B\u0107, kt\u00F3ra sprawia, \u017Ce sala koncertowa o\u017Cywa',
+            },
+            {
+              domain: 'Psychologia',
+              text: 'Ten moment, kiedy kto\u015B m\u00F3wi dok\u0142adnie to, o czym w\u0142a\u015Bnie my\u015Bla\u0142e\u015B',
+            },
+            {
+              domain: 'In\u017Cynieria',
+              text: 'Most mo\u017Ce si\u0119 zawali\u0107, je\u015Bli \u017Co\u0142nierze maszeruj\u0105 po nim w takt',
+            },
+          ],
+        },
+        {
+          answer: 'CISZA',
+          alt: ['silence', 'milczenie'],
+          clues: [
+            {
+              domain: 'Muzyka',
+              text: 'John Cage skomponowa\u0142 4\u203233\u2033 z\u0142o\u017Cone wy\u0142\u0105cznie z tego',
+            },
+            {
+              domain: 'Terapia',
+              text: 'Czasem najsilniejsza odpowied\u017A, jak\u0105 mo\u017Ce da\u0107 terapeuta',
+            },
+            {
+              domain: 'Fizyka',
+              text: 'W kosmosie nikt nie us\u0142yszy Twojego krzyku',
+            },
+            {
+              domain: 'Szachy',
+              text: 'Cichy ruch, kt\u00F3ry grozi wszystkim bez agresji',
+            },
+          ],
+        },
+        {
+          answer: 'LUSTRO',
+          alt: ['mirror', 'zwierciad\u0142o'],
+          clues: [
+            {
+              domain: 'Neuro',
+              text: 'Neurony, kt\u00F3re odpalaj\u0105 si\u0119 zar\u00F3wno gdy dzia\u0142asz, jak i gdy obserwujesz dzia\u0142anie',
+            },
+            {
+              domain: 'Literatura',
+              text: 'W ba\u015Bniach zawsze m\u00F3wi prawd\u0119, kt\u00F3rej nie chcesz us\u0142ysze\u0107',
+            },
+            {
+              domain: 'Fizyka',
+              text: '\u015Awiat\u0142o napotyka granic\u0119 i wraca po przewidywalnej \u015Bcie\u017Cce',
+            },
+            {
+              domain: 'Psychologia',
+              text: 'Tw\u00F3j partner cz\u0119sto odbija Twoje w\u0142asne nierozwi\u0105zane problemy',
+            },
+          ],
+        },
+        {
+          answer: 'GRAWITACJA',
+          alt: ['gravity', 'ci\u0119\u017Cko\u015B\u0107'],
+          clues: [
+            {
+              domain: 'Fizyka',
+              text: 'Einstein wyobrazi\u0142 j\u0105 sobie nie jako si\u0142\u0119, lecz jako krzywizn\u0119 czasoprzestrzeni',
+            },
+            {
+              domain: 'Przyw\u00F3dztwo',
+              text: 'Niekt\u00F3rzy ludzie wchodz\u0105 do pokoju i wszystko przesuwa si\u0119 w ich stron\u0119',
+            },
+            {
+              domain: 'Kino',
+              text: 'Bullock, Clooney i przera\u017Caj\u0105ce pi\u0119kno orbitalnych szcz\u0105tk\u00F3w',
+            },
+            {
+              domain: 'J\u0119zyk',
+              text: 'Z \u0142aci\u0144skiego \u201Egravis\u201D \u2014 czyli ci\u0119\u017Cki, powa\u017Cny, donios\u0142y',
+            },
+          ],
+        },
+        {
+          answer: 'POLE',
+          alt: ['field'],
+          clues: [
+            {
+              domain: 'Fizyka',
+              text: 'Niewidzialna struktura przenikaj\u0105ca przestrze\u0144, kt\u00F3ra przenosi si\u0142\u0119',
+            },
+            {
+              domain: 'Rolnictwo',
+              text: 'Tam, gdzie sadzi si\u0119 nasiona, a wzrost zale\u017Cy od warunk\u00F3w',
+            },
+            {
+              domain: 'Psychologia',
+              text: 'Lewin m\u00F3wi\u0142, \u017Ce zachowanie jest funkcj\u0105 osoby i tego w\u0142a\u015Bnie',
+            },
+            {
+              domain: 'Sport',
+              text: 'Ograniczona przestrze\u0144, w kt\u00F3rej faktycznie toczy si\u0119 gra',
+            },
+          ],
+        },
+        {
+          answer: 'FALA',
+          alt: ['wave'],
+          clues: [
+            {
+              domain: 'Kwanty',
+              text: 'Ka\u017Cda cz\u0105stka jest r\u00F3wnie\u017C tym \u2014 zale\u017Cy, jak patrzysz',
+            },
+            {
+              domain: 'Socjologia',
+              text: 'Toffler opisa\u0142 histori\u0119 jako poruszaj\u0105c\u0105 si\u0119 w tych, nie w liniach',
+            },
+            {
+              domain: 'Ocean',
+              text: 'Energia podr\u00F3\u017Cuj\u0105ca przez wod\u0119, cho\u0107 sama woda si\u0119 nie przemieszcza',
+            },
+            {
+              domain: 'Gest',
+              text: 'Najprostszy ludzki gest powitania na odleg\u0142o\u015B\u0107',
+            },
+          ],
+        },
+        {
+          answer: 'PAMI\u0118\u0106',
+          alt: ['memory', 'pamiec', 'wspomnienie'],
+          clues: [
+            {
+              domain: 'Komputer',
+              text: 'RAM \u2014 ulotna pami\u0119\u0107, kt\u00F3ra znika gdy zabraknie pr\u0105du',
+            },
+            {
+              domain: 'Neuro',
+              text: 'Nie nagranie, lecz rekonstrukcja sk\u0142adana od nowa za ka\u017Cdym razem',
+            },
+            {
+              domain: 'Kultura',
+              text: 'Pomniki buduje si\u0119, \u017Ceby zbiorowe do\u015Bwiadczenie prze\u017Cy\u0142o pokolenia',
+            },
+            {
+              domain: 'AI',
+              text: 'Fundamentalne ograniczenie, przez kt\u00F3re ka\u017Cda rozmowa zaczyna si\u0119 od zera',
+            },
+          ],
+        },
+        {
+          answer: 'EMERGENCJA',
+          alt: ['emergence', 'wy\u0142anianie'],
+          clues: [
+            {
+              domain: 'Biologia',
+              text: 'Pojedyncza mr\u00F3wka jest prosta; kolonia wykazuje z\u0142o\u017Con\u0105 inteligencj\u0119',
+            },
+            {
+              domain: 'Filozofia',
+              text: 'Ca\u0142o\u015B\u0107 posiadaj\u0105ca w\u0142a\u015Bciwo\u015Bci, kt\u00F3rych nie ma \u017Cadna z jej cz\u0119\u015Bci z osobna',
+            },
+            {
+              domain: 'Muzyka',
+              text: 'Pojedyncze nuty to d\u017Awi\u0119ki; razem staj\u0105 si\u0119 symfoni\u0105',
+            },
+            {
+              domain: 'AI',
+              text: 'Zdolno\u015Bci pojawiaj\u0105ce si\u0119 w du\u017Cych modelach, kt\u00F3re nie zosta\u0142y wprost zaprogramowane',
+            },
+          ],
+        },
+        {
+          answer: 'CIE\u0143',
+          alt: ['shadow', 'cien'],
+          clues: [
+            {
+              domain: 'Jung',
+              text: 'Nie\u015Bwiadoma cz\u0119\u015B\u0107 osobowo\u015Bci, z kt\u00F3r\u0105 ego odmawia identyfikacji',
+            },
+            {
+              domain: 'Fizyka',
+              text: 'Powstaje, gdy obiekt blokuje \u015Bwiat\u0142o, ujawniaj\u0105c kszta\u0142t przez nieobecno\u015B\u0107',
+            },
+            {
+              domain: 'Finanse',
+              text: 'Bankowo\u015B\u0107 poza regulacjami \u2014 niewidoczna, ale systemowo istotna',
+            },
+            {
+              domain: 'Platon',
+              text: 'W jaskini wi\u0119\u017Aniowie bior\u0105 te projekcje za rzeczywisto\u015B\u0107',
+            },
+          ],
+        },
+        {
+          answer: 'PR\u00D3G',
+          alt: ['threshold', 'prog'],
+          clues: [
+            {
+              domain: 'Architektura',
+              text: 'Pas pod\u0142ogi mi\u0119dzy jednym pokojem a kolejnym',
+            },
+            {
+              domain: 'Psychologia',
+              text: 'Minimalna intensywno\u015B\u0107 bod\u017Aca potrzebna do \u015Bwiadomego postrzegania',
+            },
+            {
+              domain: 'Mitologia',
+              text: 'Ka\u017Cda podr\u00F3\u017C bohatera zaczyna si\u0119 od jego przekroczenia',
+            },
+            {
+              domain: 'Fizyka',
+              text: 'Poni\u017Cej tej warto\u015Bci krytycznej nic si\u0119 nie dzieje; powy\u017Cej \u2014 zmienia si\u0119 wszystko',
+            },
+          ],
+        },
+        {
+          answer: 'SPEKTRUM',
+          alt: ['spectrum', 'widmo'],
+          clues: [
+            {
+              domain: 'Optyka',
+              text: 'Bia\u0142e \u015Bwiat\u0142o rozdzielone przez pryzmat ujawnia ukryt\u0105 wielorakos\u0107',
+            },
+            {
+              domain: 'Psychologia',
+              text: 'Wsp\u00F3\u0142czesne rozumienie widzi autyzm nie jako binarno\u015B\u0107, lecz jako to',
+            },
+            {
+              domain: 'Polityka',
+              text: 'Lewo i prawo to kra\u0144ce; wi\u0119kszo\u015B\u0107 ludzi istnieje gdzie\u015B pomi\u0119dzy',
+            },
+            {
+              domain: 'Radio',
+              text: 'Niewidzialne cz\u0119stotliwo\u015Bci przenosz\u0105ce g\u0142os, dane i muzyk\u0119 przez powietrze',
+            },
+          ],
+        },
+        {
+          answer: 'WZ\u00D3R',
+          alt: ['pattern', 'wzorzec', 'wzor'],
+          clues: [
+            {
+              domain: 'Matematyka',
+              text: 'Fibonacci znalaz\u0142 go w kr\u00F3likach, s\u0142onecznikach i galaktykach',
+            },
+            {
+              domain: 'Psychologia',
+              text: 'Przymus powtarzania \u2014 nie\u015Bwiadomie odtwarzamy znane dynamiki',
+            },
+            {
+              domain: 'Tkanina',
+              text: 'Powtarzaj\u0105cy si\u0119 motyw, kt\u00F3ry zamienia zwyk\u0142\u0105 tkanin\u0119 w co\u015B znacz\u0105cego',
+            },
+            {
+              domain: 'AI',
+              text: 'To, do czego rozpoznawania sieci neuronowe s\u0105 fundamentalnie trenowane',
+            },
+          ],
+        },
+        {
+          answer: 'ENTROPIA',
+          alt: ['entropy'],
+          clues: [
+            {
+              domain: 'Fizyka',
+              text: 'Tendencja wszech\u015Bwiata ku nieporz\u0105dkowi i r\u00F3wnowadze',
+            },
+            {
+              domain: 'Informacja',
+              text: 'Shannon mierzy\u0142 zaskoczenie \u2014 to, co nieoczekiwane, niesie najwi\u0119cej',
+            },
+            {
+              domain: 'Relacje',
+              text: 'Bez \u015Bwiadomej energii ka\u017Cde po\u0142\u0105czenie w ko\u0144cu stygnie',
+            },
+            {
+              domain: 'Kod',
+              text: 'Oprogramowanie bez konserwacji powoli degraduje si\u0119 do niezrozumia\u0142o\u015Bci',
+            },
+          ],
+        },
+        {
+          answer: 'MOST',
+          alt: ['bridge'],
+          clues: [
+            {
+              domain: 'In\u017Cynieria',
+              text: 'Struktura, kt\u00F3ra istnieje wy\u0142\u0105cznie po to, by po\u0142\u0105czy\u0107 dwie rozdzielone rzeczy',
+            },
+            {
+              domain: 'Muzyka',
+              text: 'Sekcja mi\u0119dzy zwrotk\u0105 a refrenem, kt\u00F3ra zmienia wszystko',
+            },
+            {
+              domain: 'Stomatologia',
+              text: 'Proteza zakotwiczona w s\u0105siadach, wype\u0142niaj\u0105ca luk\u0119 po tym, co utracone',
+            },
+            {
+              domain: 'Dyplomacja',
+              text: 'To, co ka\u017Cdy mediator pr\u00F3buje zbudowa\u0107 mi\u0119dzy stronami konfliktu',
+            },
+          ],
+        },
+        {
+          answer: 'P\u0118TLA',
+          alt: ['loop', 'petla'],
+          clues: [
+            {
+              domain: 'Kod',
+              text: 'Blok kodu, kt\u00F3ry powtarza si\u0119 a\u017C spe\u0142niony zostanie warunek',
+            },
+            {
+              domain: 'Psychologia',
+              text: 'Ruminacja \u2014 umys\u0142 kr\u0105\u017C\u0105cy w k\u00F3\u0142ko przez te same my\u015Bli',
+            },
+            {
+              domain: 'Muzyka',
+              text: 'Kr\u00F3tki fragment grany wielokrotnie jako fundament utworu',
+            },
+            {
+              domain: 'Fizyka',
+              text: 'W grawitacji kwantowej sama przestrze\u0144 mo\u017Ce by\u0107 utkana z malutkich takich',
+            },
+          ],
+        },
+      ];
+
+      function shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      const TOTAL_ROUNDS = 10;
+      let puzzles = shuffle(PUZZLES).slice(0, TOTAL_ROUNDS);
+      let currentRound = 0;
+      let cluesRevealed = 0;
+      let score = 0;
+      let streak = 0;
+      let gameState = 'intro';
+      let guessedWrong = false;
+
+      const app = document.getElementById('app');
+
+      function render() {
+        if (gameState === 'intro') renderIntro();
+        else if (gameState === 'gameover') renderGameOver();
+        else renderGame();
+      }
+
+      function renderIntro() {
+        app.innerHTML = `
+    <div class="header">
+      <div class="logo">\u221E + 1</div>
+      <h1 class="title">PRZECI\u0118CIE</h1>
+      <p class="subtitle">znajd\u017A poj\u0119cie, kt\u00F3re \u0142\u0105czy cztery perspektywy</p>
+    </div>
+    <div class="intro">
+      <div class="how-to">
+        <div class="how-step"><div class="num">1</div><div class="label">Przeczytaj</div></div>
+        <div class="how-step"><div class="num">2</div><div class="label">Zatrzymaj</div></div>
+        <div class="how-step"><div class="num">3</div><div class="label">Dodaj wi\u0119cej</div></div>
+        <div class="how-step"><div class="num">4</div><div class="label">Znajd\u017A<br>przeci\u0119cie</div></div>
+      </div>
+      <p class="intro-text">
+        Cztery wskaz\u00F3wki. Cztery domeny. Jedno ukryte poj\u0119cie.<br><br>
+        Zgadnij przy <em>mniejszej liczbie wskaz\u00F3wek</em>, by zdoby\u0107 wi\u0119cej punkt\u00F3w.<br>
+        Pierwsza wskaz\u00F3wka to 4\u00D7. Ostatnia \u2014 tylko 1\u00D7.<br><br>
+        To nie jest gra o wiedz\u0119.<br>
+        To gra o <em>trzymanie wielu ram jednocze\u015Bnie</em>.
+      </p>
+      <button class="btn primary" onclick="startGame()">ZACZNIJ</button>
+    </div>
+    <div class="footer"><a href="https://homodigital.io">homodigital.io</a></div>
+  `;
+      }
+
+      function renderGame() {
+        const puzzle = puzzles[currentRound];
+        const phases = ['AA', 'CC', 'CA', 'AC'];
+
+        const phaseNodes = phases
+          .map(
+            (p, i) =>
+              `<div class="phase-node ${i < cluesRevealed ? 'revealed' : 'locked'}">${i < cluesRevealed ? p : '\u2022'}</div>`,
+          )
+          .join('');
+
+        const clueCards = puzzle.clues
+          .map((c, i) => {
+            if (i >= cluesRevealed) return '';
+            return `<div class="clue-card visible">
+      <span class="clue-domain">${c.domain}</span>
+      <span class="clue-text">${c.text}</span>
+    </div>`;
+          })
+          .join('');
+
+        let inputArea = '';
+        if (gameState === 'playing') {
+          inputArea = `
+      <div class="input-area">
+        <input type="text" class="guess-input" id="guessInput" 
+          placeholder="co je \u0142\u0105czy?" 
+          onkeydown="if(event.key==='Enter')submitGuess()"
+          autocomplete="off" autocapitalize="off" spellcheck="false">
+      </div>
+      <div class="btn-row">
+        ${cluesRevealed < 4 ? `<button class="btn" onclick="revealClue()">WSKAZ\u00D3WKA ${cluesRevealed + 1}/4</button>` : ''}
+        <button class="btn primary" onclick="submitGuess()">ZGADUJ</button>
+      </div>
+    `;
+        } else if (gameState === 'revealed') {
+          const isCorrect = guessedWrong === false;
+          const pts = getPoints();
+          inputArea = `
+      <div class="answer-reveal">
+        <div class="answer-word ${isCorrect ? 'correct' : 'wrong'}">${puzzle.answer}</div>
+        <div class="answer-sub">${isCorrect ? 'Znalaz\u0142e\u015B przeci\u0119cie' : 'Przeci\u0119cie by\u0142o tutaj'}</div>
+        <div class="answer-points ${isCorrect ? 'positive' : 'zero'}">
+          ${isCorrect ? `+${pts} PKT${streak > 1 ? ` \u2022 SERIA ${streak}` : ''}` : '+0 PKT \u2022 SERIA UTRACONA'}
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn primary" onclick="nextRound()">${currentRound < TOTAL_ROUNDS - 1 ? 'NAST\u0118PNE' : 'WYNIKI'}</button>
+      </div>
+    `;
+        }
+
+        app.innerHTML = `
+    <div class="header">
+      <div class="logo">\u221E + 1</div>
+      <h1 class="title">PRZECI\u0118CIE</h1>
+    </div>
+    <div class="score-bar">
+      <span>RUNDA <span class="value">${currentRound + 1}/${TOTAL_ROUNDS}</span></span>
+      <span>WYNIK <span class="value">${score}</span></span>
+      <span>SERIA <span class="value">${streak}\uD83D\uDD25</span></span>
+    </div>
+    <div class="phase-grid">${phaseNodes}</div>
+    <div class="clues-area">${clueCards}</div>
+    ${inputArea}
+    <div class="footer"><a href="https://homodigital.io">homodigital.io</a></div>
+  `;
+
+        if (gameState === 'playing') {
+          setTimeout(() => {
+            const input = document.getElementById('guessInput');
+            if (input) input.focus();
+          }, 100);
+        }
+      }
+
+      function renderGameOver() {
+        const maxScore = TOTAL_ROUNDS * 4;
+        const pct = Math.round((score / maxScore) * 100);
+
+        let rank, rankDesc;
+        if (pct >= 90) {
+          rank = 'Umys\u0142 Tesseractu';
+          rankDesc = 'Trzymasz wszystkie ramy jednocze\u015Bnie';
+        } else if (pct >= 70) {
+          rank = 'Widz\u0105cy Wzorce';
+          rankDesc =
+            'Po\u0142\u0105czenia ujawniaj\u0105 Ci si\u0119 wcze\u015Bnie';
+        } else if (pct >= 50) {
+          rank = 'W\u0119drowiec Pola';
+          rankDesc = 'Wyczuwasz przeci\u0119cie zanim je nazwiesz';
+        } else if (pct >= 30) {
+          rank = 'Czytaj\u0105cy Sygna\u0142y';
+          rankDesc =
+            'Znajdujesz ni\u0107, gdy masz wystarczaj\u0105co perspektyw';
+        } else {
+          rank = 'Obserwator';
+          rankDesc =
+            'Ka\u017Cda podr\u00F3\u017C przez pole uczy czego\u015B nowego';
+        }
+
+        app.innerHTML = `
+    <div class="header">
+      <div class="logo">\u221E + 1</div>
+      <h1 class="title">PRZECI\u0118CIE</h1>
+    </div>
+    <div class="intro">
+      <div class="game-over">
+        <div class="final-score">${score}</div>
+        <div class="final-label">Z ${maxScore} MO\u017BLIWYCH</div>
+        <div class="uneligence-rank">\u201E${rank}\u201D</div>
+        <p class="intro-text" style="margin-bottom: 8px">${rankDesc}</p>
+        <p class="intro-text" style="font-size: 0.9rem">
+          Uneligencja to nie wiedzie\u0107 wi\u0119cej.<br>
+          To widzie\u0107 z wi\u0119kszej liczby miejsc naraz.
+        </p>
+        <div class="btn-row" style="margin-top: 32px">
+          <button class="btn primary" onclick="resetGame()">ZAGRAJ PONOWNIE</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><a href="https://homodigital.io">homodigital.io</a></div>
+  `;
+      }
+
+      function startGame() {
+        gameState = 'playing';
+        cluesRevealed = 1;
+        render();
+      }
+
+      function revealClue() {
+        if (cluesRevealed < 4) {
+          cluesRevealed++;
+          render();
+        }
+      }
+
+      function getPoints() {
+        return Math.max(1, 5 - cluesRevealed);
+      }
+
+      function normalize(s) {
+        return s
+          .toLowerCase()
+          .trim()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/\u0142/g, 'l')
+          .replace(/[^a-z0-9]/g, '');
+      }
+
+      function submitGuess() {
+        const input = document.getElementById('guessInput');
+        if (!input) return;
+        const guess = input.value.trim();
+        if (!guess) return;
+
+        const puzzle = puzzles[currentRound];
+        const normalizedGuess = normalize(guess);
+        const allAnswers = [puzzle.answer, ...(puzzle.alt || [])];
+        const correct = allAnswers.some(a => normalize(a) === normalizedGuess);
+
+        if (correct) {
+          const pts = getPoints();
+          score += pts;
+          streak++;
+          guessedWrong = false;
+          gameState = 'revealed';
+          render();
+        } else {
+          guessedWrong = true;
+          input.classList.add('shake');
+          input.style.borderBottomColor = 'var(--wrong)';
+          setTimeout(() => {
+            input.classList.remove('shake');
+            input.style.borderBottomColor = '';
+            input.value = '';
+            input.focus();
+          }, 500);
+
+          if (cluesRevealed >= 4) {
+            streak = 0;
+            gameState = 'revealed';
+            render();
+          } else {
+            cluesRevealed++;
+            setTimeout(() => render(), 600);
+          }
+        }
+      }
+
+      function nextRound() {
+        currentRound++;
+        if (currentRound >= TOTAL_ROUNDS) {
+          gameState = 'gameover';
+        } else {
+          gameState = 'playing';
+          cluesRevealed = 1;
+          guessedWrong = false;
+        }
+        render();
+      }
+
+      function resetGame() {
+        puzzles = shuffle(PUZZLES).slice(0, TOTAL_ROUNDS);
+        currentRound = 0;
+        cluesRevealed = 0;
+        score = 0;
+        streak = 0;
+        guessedWrong = false;
+        gameState = 'intro';
+        render();
+      }
+
+      render();
+    </script>
+  </body>
+</html>

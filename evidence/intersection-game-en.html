@@ -1,0 +1,1130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTERSECTION — A Tesseract Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --gold: #d4af37;
+        --gold-dim: rgba(212, 175, 55, 0.3);
+        --gold-glow: rgba(212, 175, 55, 0.15);
+        --bg: #0a0a0c;
+        --bg2: #111114;
+        --text: #e8e4dc;
+        --text-dim: rgba(232, 228, 220, 0.5);
+        --correct: #4ade80;
+        --wrong: #f87171;
+        --phase-aa: #d4af37;
+        --phase-cc: #6366f1;
+        --phase-ca: #22d3ee;
+        --phase-ac: #f472b6;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Background grain */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="200" height="200" filter="url(%23n)" opacity="0.03"/></svg>');
+        pointer-events: none;
+        z-index: 9999;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 24px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* HEADER */
+      .header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .logo {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        color: var(--gold-dim);
+        margin-bottom: 16px;
+      }
+
+      .title {
+        font-size: 3.2rem;
+        font-weight: 300;
+        letter-spacing: 0.08em;
+        color: var(--text);
+        line-height: 1.1;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--text-dim);
+        margin-top: 12px;
+      }
+
+      /* SCORE BAR */
+      .score-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+        border-top: 1px solid var(--gold-dim);
+        border-bottom: 1px solid var(--gold-dim);
+        margin-bottom: 40px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+      }
+
+      .score-bar .value {
+        color: var(--gold);
+        font-weight: 500;
+      }
+
+      /* PHASE INDICATOR */
+      .phase-grid {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .phase-node {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        cursor: default;
+      }
+
+      .phase-node.locked {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.15);
+        background: transparent;
+      }
+
+      .phase-node.revealed {
+        border: 2px solid;
+        color: white;
+        animation: phaseReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .phase-node:nth-child(1).revealed {
+        border-color: var(--phase-aa);
+        background: rgba(212, 175, 55, 0.15);
+        color: var(--phase-aa);
+      }
+      .phase-node:nth-child(2).revealed {
+        border-color: var(--phase-cc);
+        background: rgba(99, 102, 241, 0.15);
+        color: var(--phase-cc);
+      }
+      .phase-node:nth-child(3).revealed {
+        border-color: var(--phase-ca);
+        background: rgba(34, 211, 238, 0.15);
+        color: var(--phase-ca);
+      }
+      .phase-node:nth-child(4).revealed {
+        border-color: var(--phase-ac);
+        background: rgba(244, 114, 182, 0.15);
+        color: var(--phase-ac);
+      }
+
+      @keyframes phaseReveal {
+        0% {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.15);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* CLUE CARDS */
+      .clues-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .clue-card {
+        background: var(--bg2);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        opacity: 0;
+        transform: translateY(16px);
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .clue-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .clue-card.dimmed {
+        opacity: 0.3;
+      }
+
+      .clue-domain {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        min-width: 80px;
+        flex-shrink: 0;
+      }
+
+      .clue-card:nth-child(1) .clue-domain {
+        color: var(--phase-aa);
+      }
+      .clue-card:nth-child(2) .clue-domain {
+        color: var(--phase-cc);
+      }
+      .clue-card:nth-child(3) .clue-domain {
+        color: var(--phase-ca);
+      }
+      .clue-card:nth-child(4) .clue-domain {
+        color: var(--phase-ac);
+      }
+
+      .clue-text {
+        font-size: 1.3rem;
+        font-weight: 300;
+        font-style: italic;
+        line-height: 1.4;
+      }
+
+      /* INPUT AREA */
+      .input-area {
+        margin-bottom: 24px;
+      }
+
+      .guess-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid var(--gold-dim);
+        padding: 16px 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: var(--text);
+        text-align: center;
+        letter-spacing: 0.05em;
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      .guess-input::placeholder {
+        color: var(--text-dim);
+        font-style: italic;
+      }
+
+      .guess-input:focus {
+        border-bottom-color: var(--gold);
+      }
+
+      /* BUTTONS */
+      .btn-row {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 32px;
+      }
+
+      .btn {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding: 14px 32px;
+        border: 1px solid var(--gold-dim);
+        background: transparent;
+        color: var(--gold);
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background: var(--gold-glow);
+        border-color: var(--gold);
+      }
+
+      .btn.primary {
+        background: var(--gold);
+        color: var(--bg);
+        border-color: var(--gold);
+      }
+
+      .btn.primary:hover {
+        background: #c9a432;
+      }
+
+      .btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      /* ANSWER REVEAL */
+      .answer-reveal {
+        text-align: center;
+        padding: 32px;
+        animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .answer-word {
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+      }
+
+      .answer-word.correct {
+        color: var(--correct);
+      }
+      .answer-word.wrong {
+        color: var(--gold);
+      }
+
+      .answer-sub {
+        font-size: 1rem;
+        font-style: italic;
+        color: var(--text-dim);
+        margin-bottom: 16px;
+      }
+
+      .answer-points {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+      }
+
+      .answer-points.positive {
+        color: var(--correct);
+      }
+      .answer-points.zero {
+        color: var(--wrong);
+      }
+
+      /* INTRO SCREEN */
+      .intro {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+      }
+
+      .intro-text {
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.8;
+        color: var(--text-dim);
+        max-width: 480px;
+      }
+
+      .intro-text em {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      .how-to {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .how-step {
+        text-align: center;
+      }
+
+      .how-step .num {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+      }
+
+      .how-step:nth-child(1) .num {
+        border: 1px solid var(--phase-aa);
+        color: var(--phase-aa);
+      }
+      .how-step:nth-child(2) .num {
+        border: 1px solid var(--phase-cc);
+        color: var(--phase-cc);
+      }
+      .how-step:nth-child(3) .num {
+        border: 1px solid var(--phase-ca);
+        color: var(--phase-ca);
+      }
+      .how-step:nth-child(4) .num {
+        border: 1px solid var(--phase-ac);
+        color: var(--phase-ac);
+      }
+
+      .how-step .label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.55rem;
+        letter-spacing: 0.1em;
+        color: var(--text-dim);
+        text-transform: uppercase;
+      }
+
+      /* GAME OVER */
+      .game-over {
+        text-align: center;
+      }
+
+      .final-score {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      .final-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        color: var(--text-dim);
+        margin-bottom: 32px;
+      }
+
+      .uneligence-rank {
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--text);
+        margin-bottom: 32px;
+      }
+
+      /* FOOTER */
+      .footer {
+        text-align: center;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: auto;
+      }
+
+      .footer a {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.65rem;
+        letter-spacing: 0.2em;
+        color: var(--gold-dim);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer a:hover {
+        color: var(--gold);
+      }
+
+      /* SHAKE */
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-8px);
+        }
+        40% {
+          transform: translateX(8px);
+        }
+        60% {
+          transform: translateX(-4px);
+        }
+        80% {
+          transform: translateX(4px);
+        }
+      }
+      .shake {
+        animation: shake 0.4s ease-out;
+      }
+
+      @media (max-width: 600px) {
+        .title {
+          font-size: 2.2rem;
+        }
+        .clue-card {
+          padding: 16px;
+          gap: 12px;
+        }
+        .clue-domain {
+          min-width: 60px;
+          font-size: 0.5rem;
+        }
+        .clue-text {
+          font-size: 1.1rem;
+        }
+        .guess-input {
+          font-size: 1.4rem;
+        }
+        .how-to {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="app"></div>
+
+    <script>
+      const PUZZLES = [
+        {
+          answer: 'RESONANCE',
+          clues: [
+            {
+              domain: 'Physics',
+              text: 'When two frequencies align and amplify each other',
+            },
+            {
+              domain: 'Music',
+              text: 'The quality that makes a concert hall feel alive',
+            },
+            {
+              domain: 'Psychology',
+              text: 'That moment when someone says exactly what you were thinking',
+            },
+            {
+              domain: 'Engineering',
+              text: 'A bridge can collapse if soldiers march in step across it',
+            },
+          ],
+        },
+        {
+          answer: 'SILENCE',
+          clues: [
+            {
+              domain: 'Music',
+              text: 'John Cage composed 4\u203233\u2033 of nothing but this',
+            },
+            {
+              domain: 'Therapy',
+              text: 'Sometimes the most powerful response a therapist can give',
+            },
+            { domain: 'Physics', text: 'In space, no one can hear you scream' },
+            {
+              domain: 'Chess',
+              text: 'A quiet move that threatens everything without aggression',
+            },
+          ],
+        },
+        {
+          answer: 'MIRROR',
+          clues: [
+            {
+              domain: 'Neuroscience',
+              text: 'Neurons that fire both when you act and when you watch another act',
+            },
+            {
+              domain: 'Literature',
+              text: 'In fairy tales, it always tells the truth you don\u2019t want to hear',
+            },
+            {
+              domain: 'Physics',
+              text: 'Light encounters a boundary and returns along a predictable path',
+            },
+            {
+              domain: 'Psychology',
+              text: 'Your partner often reflects your own unresolved issues back to you',
+            },
+          ],
+        },
+        {
+          answer: 'GRAVITY',
+          clues: [
+            {
+              domain: 'Physics',
+              text: 'Einstein reimagined it not as force, but as curvature of spacetime',
+            },
+            {
+              domain: 'Leadership',
+              text: 'Some people walk into a room and everything shifts toward them',
+            },
+            {
+              domain: 'Cinema',
+              text: 'Bullock, Clooney, and the terrifying beauty of orbital debris',
+            },
+            {
+              domain: 'Language',
+              text: 'From the Latin \u2018gravis\u2019 \u2014 meaning heavy, serious, weighty',
+            },
+          ],
+        },
+        {
+          answer: 'FIELD',
+          clues: [
+            {
+              domain: 'Physics',
+              text: 'An invisible structure that permeates space and carries force',
+            },
+            {
+              domain: 'Agriculture',
+              text: 'Where seeds are planted and growth depends on conditions',
+            },
+            {
+              domain: 'Psychology',
+              text: 'Lewin said behavior is a function of the person and this',
+            },
+            {
+              domain: 'Sports',
+              text: 'The bounded space where the game actually happens',
+            },
+          ],
+        },
+        {
+          answer: 'WAVE',
+          clues: [
+            {
+              domain: 'Quantum',
+              text: 'Every particle is also this, depending on how you look',
+            },
+            {
+              domain: 'Sociology',
+              text: 'Toffler described history as moving in these, not lines',
+            },
+            {
+              domain: 'Ocean',
+              text: 'Energy traveling through water without the water itself moving',
+            },
+            {
+              domain: 'Greeting',
+              text: 'The simplest human gesture of acknowledgment across distance',
+            },
+          ],
+        },
+        {
+          answer: 'MEMORY',
+          clues: [
+            {
+              domain: 'Computing',
+              text: 'RAM \u2014 volatile storage that vanishes when power is lost',
+            },
+            {
+              domain: 'Neuroscience',
+              text: 'Not a recording, but a reconstruction assembled each time',
+            },
+            {
+              domain: 'Culture',
+              text: 'Monuments are built so collective experience survives generations',
+            },
+            {
+              domain: 'AI',
+              text: 'The fundamental limitation that makes each conversation start from zero',
+            },
+          ],
+        },
+        {
+          answer: 'EMERGENCE',
+          clues: [
+            {
+              domain: 'Biology',
+              text: 'A single ant is simple; a colony exhibits complex intelligence',
+            },
+            {
+              domain: 'Philosophy',
+              text: 'The whole possessing properties that none of its parts have alone',
+            },
+            {
+              domain: 'Music',
+              text: 'Individual notes are sounds; together they become a symphony',
+            },
+            {
+              domain: 'AI',
+              text: 'Capabilities appearing in large models that weren\u2019t explicitly programmed',
+            },
+          ],
+        },
+        {
+          answer: 'SHADOW',
+          clues: [
+            {
+              domain: 'Jung',
+              text: 'The unconscious part of personality the ego refuses to identify with',
+            },
+            {
+              domain: 'Physics',
+              text: 'Formed when an object blocks light, revealing shape through absence',
+            },
+            {
+              domain: 'Finance',
+              text: 'Banking outside regulation \u2014 unseen but systemically important',
+            },
+            {
+              domain: 'Plato',
+              text: 'In the cave, prisoners mistake these projections for reality',
+            },
+          ],
+        },
+        {
+          answer: 'THRESHOLD',
+          clues: [
+            {
+              domain: 'Architecture',
+              text: 'The strip of floor between one room and the next',
+            },
+            {
+              domain: 'Psychology',
+              text: 'The minimum stimulus intensity needed for conscious perception',
+            },
+            {
+              domain: 'Mythology',
+              text: 'Every hero\u2019s journey begins by crossing one',
+            },
+            {
+              domain: 'Physics',
+              text: 'Below this critical value, nothing happens; above it, everything changes',
+            },
+          ],
+        },
+        {
+          answer: 'SPECTRUM',
+          clues: [
+            {
+              domain: 'Optics',
+              text: 'White light split through a prism reveals hidden multiplicity',
+            },
+            {
+              domain: 'Psychology',
+              text: 'Modern understanding sees autism not as binary, but as this',
+            },
+            {
+              domain: 'Politics',
+              text: 'Left and right are endpoints; most people exist somewhere between',
+            },
+            {
+              domain: 'Radio',
+              text: 'Invisible frequencies that carry voice, data, and music through air',
+            },
+          ],
+        },
+        {
+          answer: 'PATTERN',
+          clues: [
+            {
+              domain: 'Mathematics',
+              text: 'Fibonacci found it in rabbits, sunflowers, and galaxies',
+            },
+            {
+              domain: 'Psychology',
+              text: 'Repetition compulsion \u2014 we recreate familiar dynamics unconsciously',
+            },
+            {
+              domain: 'Fabric',
+              text: 'The repeated design that transforms plain cloth into something meaningful',
+            },
+            {
+              domain: 'AI',
+              text: 'What neural networks are fundamentally trained to recognize',
+            },
+          ],
+        },
+        {
+          answer: 'ENTROPY',
+          clues: [
+            {
+              domain: 'Physics',
+              text: 'The universe\u2019s tendency toward disorder and equilibrium',
+            },
+            {
+              domain: 'Information',
+              text: 'Shannon measured surprise \u2014 the unexpected carries the most',
+            },
+            {
+              domain: 'Relationships',
+              text: 'Without deliberate energy, every connection eventually cools',
+            },
+            {
+              domain: 'Code',
+              text: 'Software left unmaintained slowly degrades into incomprehensibility',
+            },
+          ],
+        },
+        {
+          answer: 'BRIDGE',
+          clues: [
+            {
+              domain: 'Engineering',
+              text: 'Structure that exists solely to connect two separated things',
+            },
+            {
+              domain: 'Music',
+              text: 'The section between verse and chorus that changes everything',
+            },
+            {
+              domain: 'Dentistry',
+              text: 'A prosthetic anchored to neighbors, filling the gap where something was lost',
+            },
+            {
+              domain: 'Diplomacy',
+              text: 'What every mediator tries to build between opposing sides',
+            },
+          ],
+        },
+        {
+          answer: 'LOOP',
+          clues: [
+            {
+              domain: 'Programming',
+              text: 'A block of code that repeats until a condition is met',
+            },
+            {
+              domain: 'Psychology',
+              text: 'Rumination \u2014 the mind cycling through the same thoughts endlessly',
+            },
+            {
+              domain: 'Music',
+              text: 'A short passage played repeatedly as the foundation of a track',
+            },
+            {
+              domain: 'Physics',
+              text: 'In quantum gravity, space itself may be woven from tiny ones',
+            },
+          ],
+        },
+      ];
+
+      // Shuffle puzzles
+      function shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      const TOTAL_ROUNDS = 10;
+      let puzzles = shuffle(PUZZLES).slice(0, TOTAL_ROUNDS);
+      let currentRound = 0;
+      let cluesRevealed = 0;
+      let score = 0;
+      let streak = 0;
+      let gameState = 'intro'; // intro, playing, revealed, gameover
+      let guessedWrong = false;
+
+      const app = document.getElementById('app');
+
+      function render() {
+        if (gameState === 'intro') renderIntro();
+        else if (gameState === 'gameover') renderGameOver();
+        else renderGame();
+      }
+
+      function renderIntro() {
+        app.innerHTML = `
+    <div class="header">
+      <div class="logo">\u221E + 1</div>
+      <h1 class="title">INTERSECTION</h1>
+      <p class="subtitle">find the concept that connects four perspectives</p>
+    </div>
+    <div class="intro">
+      <div class="how-to">
+        <div class="how-step"><div class="num">1</div><div class="label">Read clue</div></div>
+        <div class="how-step"><div class="num">2</div><div class="label">Hold it</div></div>
+        <div class="how-step"><div class="num">3</div><div class="label">Add more</div></div>
+        <div class="how-step"><div class="num">4</div><div class="label">Find the<br>intersection</div></div>
+      </div>
+      <p class="intro-text">
+        Four clues. Four domains. One hidden concept.<br><br>
+        Guess with <em>fewer clues</em> for more points.<br>
+        The first clue is worth 4\u00D7. The last \u2014 just 1\u00D7.<br><br>
+        This is not about knowledge.<br>
+        It\u2019s about <em>holding multiple frames simultaneously</em>.
+      </p>
+      <button class="btn primary" onclick="startGame()">BEGIN</button>
+    </div>
+    <div class="footer"><a href="https://homodigital.io">homodigital.io</a></div>
+  `;
+      }
+
+      function renderGame() {
+        const puzzle = puzzles[currentRound];
+        const phases = ['AA', 'CC', 'CA', 'AC'];
+
+        const phaseNodes = phases
+          .map(
+            (p, i) =>
+              `<div class="phase-node ${i < cluesRevealed ? 'revealed' : 'locked'}">${i < cluesRevealed ? p : '\u2022'}</div>`,
+          )
+          .join('');
+
+        const clueCards = puzzle.clues
+          .map((c, i) => {
+            if (i >= cluesRevealed) return '';
+            const dimmed = gameState === 'revealed' ? '' : '';
+            return `<div class="clue-card visible ${dimmed}">
+      <span class="clue-domain">${c.domain}</span>
+      <span class="clue-text">${c.text}</span>
+    </div>`;
+          })
+          .join('');
+
+        let inputArea = '';
+        if (gameState === 'playing') {
+          inputArea = `
+      <div class="input-area">
+        <input type="text" class="guess-input" id="guessInput" 
+          placeholder="what connects them?" 
+          onkeydown="if(event.key==='Enter')submitGuess()"
+          autocomplete="off" autocapitalize="off" spellcheck="false">
+      </div>
+      <div class="btn-row">
+        ${cluesRevealed < 4 ? `<button class="btn" onclick="revealClue()">REVEAL CLUE ${cluesRevealed + 1}/4</button>` : ''}
+        <button class="btn primary" onclick="submitGuess()">GUESS</button>
+      </div>
+    `;
+        } else if (gameState === 'revealed') {
+          const isCorrect = guessedWrong === false;
+          const pts = getPoints();
+          inputArea = `
+      <div class="answer-reveal">
+        <div class="answer-word ${isCorrect ? 'correct' : 'wrong'}">${puzzle.answer}</div>
+        <div class="answer-sub">${isCorrect ? 'You found the intersection' : 'The intersection was here'}</div>
+        <div class="answer-points ${isCorrect ? 'positive' : 'zero'}">
+          ${isCorrect ? `+${pts} POINTS${streak > 1 ? ` \u2022 ${streak} STREAK` : ''}` : '+0 POINTS \u2022 STREAK LOST'}
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn primary" onclick="nextRound()">${currentRound < TOTAL_ROUNDS - 1 ? 'NEXT PUZZLE' : 'SEE RESULTS'}</button>
+      </div>
+    `;
+        }
+
+        app.innerHTML = `
+    <div class="header">
+      <div class="logo">\u221E + 1</div>
+      <h1 class="title">INTERSECTION</h1>
+    </div>
+    <div class="score-bar">
+      <span>ROUND <span class="value">${currentRound + 1}/${TOTAL_ROUNDS}</span></span>
+      <span>SCORE <span class="value">${score}</span></span>
+      <span>STREAK <span class="value">${streak}\uD83D\uDD25</span></span>
+    </div>
+    <div class="phase-grid">${phaseNodes}</div>
+    <div class="clues-area">${clueCards}</div>
+    ${inputArea}
+    <div class="footer"><a href="https://homodigital.io">homodigital.io</a></div>
+  `;
+
+        if (gameState === 'playing') {
+          setTimeout(() => {
+            const input = document.getElementById('guessInput');
+            if (input) input.focus();
+          }, 100);
+        }
+      }
+
+      function renderGameOver() {
+        const maxScore = TOTAL_ROUNDS * 4;
+        const pct = Math.round((score / maxScore) * 100);
+
+        let rank, rankDesc;
+        if (pct >= 90) {
+          rank = 'Tesseract Mind';
+          rankDesc = 'You hold all frames simultaneously';
+        } else if (pct >= 70) {
+          rank = 'Pattern Seer';
+          rankDesc = 'Connections reveal themselves to you early';
+        } else if (pct >= 50) {
+          rank = 'Field Walker';
+          rankDesc = 'You sense the intersection before you name it';
+        } else if (pct >= 30) {
+          rank = 'Signal Reader';
+          rankDesc = 'You find the thread, given enough perspectives';
+        } else {
+          rank = 'Observer';
+          rankDesc = 'Every journey through the field teaches something new';
+        }
+
+        app.innerHTML = `
+    <div class="header">
+      <div class="logo">\u221E + 1</div>
+      <h1 class="title">INTERSECTION</h1>
+    </div>
+    <div class="intro">
+      <div class="game-over">
+        <div class="final-score">${score}</div>
+        <div class="final-label">OUT OF ${maxScore} POSSIBLE</div>
+        <div class="uneligence-rank">\u201C${rank}\u201D</div>
+        <p class="intro-text" style="margin-bottom: 8px">${rankDesc}</p>
+        <p class="intro-text" style="font-size: 0.9rem">
+          Uneligence isn\u2019t about knowing more.<br>
+          It\u2019s about seeing from more places at once.
+        </p>
+        <div class="btn-row" style="margin-top: 32px">
+          <button class="btn primary" onclick="resetGame()">PLAY AGAIN</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><a href="https://homodigital.io">homodigital.io</a></div>
+  `;
+      }
+
+      function startGame() {
+        gameState = 'playing';
+        cluesRevealed = 1;
+        render();
+      }
+
+      function revealClue() {
+        if (cluesRevealed < 4) {
+          cluesRevealed++;
+          render();
+        }
+      }
+
+      function getPoints() {
+        // 4 pts for 1 clue, 3 for 2, 2 for 3, 1 for 4
+        return Math.max(1, 5 - cluesRevealed);
+      }
+
+      function normalize(s) {
+        return s
+          .toLowerCase()
+          .trim()
+          .replace(/[^a-z0-9]/g, '');
+      }
+
+      function submitGuess() {
+        const input = document.getElementById('guessInput');
+        if (!input) return;
+        const guess = input.value.trim();
+        if (!guess) return;
+
+        const puzzle = puzzles[currentRound];
+        const correct = normalize(guess) === normalize(puzzle.answer);
+
+        if (correct) {
+          const pts = getPoints();
+          score += pts;
+          streak++;
+          guessedWrong = false;
+          gameState = 'revealed';
+          render();
+        } else {
+          // Wrong guess - shake and clear
+          guessedWrong = true;
+          input.classList.add('shake');
+          input.style.borderBottomColor = 'var(--wrong)';
+          setTimeout(() => {
+            input.classList.remove('shake');
+            input.style.borderBottomColor = '';
+            input.value = '';
+            input.focus();
+          }, 500);
+
+          // If all 4 clues shown and wrong, reveal answer
+          if (cluesRevealed >= 4) {
+            streak = 0;
+            gameState = 'revealed';
+            render();
+          } else {
+            // Auto-reveal next clue on wrong guess
+            cluesRevealed++;
+            setTimeout(() => render(), 600);
+          }
+        }
+      }
+
+      function nextRound() {
+        currentRound++;
+        if (currentRound >= TOTAL_ROUNDS) {
+          gameState = 'gameover';
+        } else {
+          gameState = 'playing';
+          cluesRevealed = 1;
+          guessedWrong = false;
+        }
+        render();
+      }
+
+      function resetGame() {
+        puzzles = shuffle(PUZZLES).slice(0, TOTAL_ROUNDS);
+        currentRound = 0;
+        cluesRevealed = 0;
+        score = 0;
+        streak = 0;
+        guessedWrong = false;
+        gameState = 'intro';
+        render();
+      }
+
+      // Init
+      render();
+    </script>
+  </body>
+</html>
