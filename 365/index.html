@@ -7,24 +7,33 @@
     <!-- SEO: canonical wskazuje właściwy adres -->
     <link rel="canonical" href="https://homodigital.io/365/en.html" />
 
-    <!-- SEO: natychmiastowy redirect -->
-    <meta
-      http-equiv="refresh"
-      content="0; url=https://homodigital.io/365/en.html"
-    />
-
     <!-- Robots: nie indeksuj tej strony -->
     <meta name="robots" content="noindex, follow" />
 
-    <!-- JS fallback -->
+    <!-- JS: redirect based on browser locale -->
     <script>
-      window.location.replace('https://homodigital.io/365/en.html');
+      var lang = (
+        navigator.language ||
+        navigator.userLanguage ||
+        'en'
+      ).toLowerCase();
+      var url = lang.startsWith('pl')
+        ? 'https://homodigital.io/365/pl.html'
+        : 'https://homodigital.io/365/en.html';
+      window.location.replace(url);
     </script>
+
+    <!-- Fallback for no-JS: default to English -->
+    <meta
+      http-equiv="refresh"
+      content="1; url=https://homodigital.io/365/en.html"
+    />
   </head>
   <body>
     <p>
-      Redirecting to
-      <a href="https://homodigital.io/365/en.html">English version</a>…
+      Redirecting…
+      <a href="https://homodigital.io/365/en.html">English</a> |
+      <a href="https://homodigital.io/365/pl.html">Polski</a>
     </p>
   </body>
 </html>
