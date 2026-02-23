@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emotion Game — Homo Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        background: #0f172a;
+        color: white;
+        text-align: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      #round-counter {
+        font-size: 0.85rem;
+        color: #94a3b8;
+        margin-bottom: 10px;
+      }
+
+      #emoji {
+        font-size: clamp(80px, 20vw, 140px);
+        margin: 20px 0;
+        line-height: 1.2;
+      }
+
+      #buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+
+      .button {
+        font-size: clamp(14px, 3vw, 20px);
+        padding: 12px 20px;
+        border-radius: 12px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        background: #1e293b;
+        color: white;
+        transition: all 0.2s;
+        min-width: 120px;
+      }
+
+      .button:hover {
+        background: #334155;
+      }
+      .button:active {
+        transform: scale(0.96);
+      }
+      .button.correct {
+        background: #16a34a;
+        border-color: #22c55e;
+      }
+      .button.wrong {
+        background: #dc2626;
+        border-color: #ef4444;
+      }
+
+      #message {
+        font-size: clamp(1.1rem, 3vw, 1.5rem);
+        margin-top: 20px;
+        min-height: 40px;
+      }
+
+      #score-bar {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        color: #94a3b8;
+      }
+
+      #score-bar span strong {
+        color: #d4af37;
+      }
+
+      /* Video overlay */
+      #video-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      #video-overlay.active {
+        display: flex;
+      }
+
+      #video-overlay video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      #video-overlay .overlay-emoji {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 60px;
+        z-index: 1001;
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+      }
+
+      #video-overlay .overlay-text {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        color: white;
+        z-index: 1001;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+        white-space: nowrap;
+      }
+
+      #next-btn {
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        z-index: 1002;
+        font-size: 1.1rem;
+        padding: 14px 28px;
+        border-radius: 12px;
+        background: #16a34a;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+
+      #next-btn:hover {
+        background: #15803d;
+        transform: scale(1.05);
+      }
+
+      #close-video-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1002;
+        font-size: 1.5rem;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      #close-video-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Footer */
+      #footer {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #1e293b;
+        font-size: 0.75rem;
+        color: #475569;
+      }
+
+      #footer a {
+        color: #d4af37;
+        text-decoration: none;
+      }
+      #footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="score-bar">
+      <span>✓ <strong id="correct-count">0</strong></span>
+      <span>✗ <strong id="wrong-count">0</strong></span>
+      <span id="streak-display"></span>
+    </div>
+
+    <h1 id="title"></h1>
+    <div id="round-counter"></div>
+    <div id="emoji"></div>
+    <div id="buttons"></div>
+    <div id="message"></div>
+
+    <div id="video-overlay">
+      <video id="camera" autoplay muted playsinline></video>
+      <div class="overlay-emoji" id="overlay-emoji"></div>
+      <div class="overlay-text" id="overlay-text"></div>
+      <button id="close-video-btn">✕</button>
+      <button id="next-btn"></button>
+    </div>
+
+    <div id="footer">
+      Homo Digital ∞ + 1 — <a href="https://homodigital.io">homodigital.io</a>
+    </div>
+
+    <script>
+      // ================================================================
+      // LANGUAGE DETECTION
+      // ================================================================
+      const userLang = (
+        navigator.language ||
+        navigator.userLanguage ||
+        'en'
+      ).toLowerCase();
+      const isPL = userLang.startsWith('pl');
+
+      const t = isPL
+        ? {
+            title: 'Jaką emocję widzisz?',
+            showEmotion: 'Brawo! Teraz pokaż tę emocję!',
+            tryAgain: 'Spróbuj jeszcze raz 🙂',
+            next: 'Dalej →',
+            round: 'Runda',
+            streak: '🔥 seria',
+            noCamera: 'Nie można włączyć kamery — kliknij Dalej',
+            of: 'z',
+          }
+        : {
+            title: 'What emotion do you see?',
+            showEmotion: 'Correct! Now show this emotion!',
+            tryAgain: 'Try again 🙂',
+            next: 'Next →',
+            round: 'Round',
+            streak: '🔥 streak',
+            noCamera: 'Cannot access camera — click Next',
+            of: 'of',
+          };
+
+      document.documentElement.lang = isPL ? 'pl' : 'en';
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('next-btn').textContent = t.next;
+
+      // ================================================================
+      // FULL EMOTION LIST
+      // ================================================================
+      const emotions = [
+        // Joy / Happiness
+        { emoji: '😀', en: 'happiness', pl: 'radość' },
+        { emoji: '😃', en: 'joy', pl: 'radość' },
+        { emoji: '😄', en: 'glee', pl: 'wesołość' },
+        { emoji: '😁', en: 'delight', pl: 'zachwyt' },
+        { emoji: '😆', en: 'amusement', pl: 'rozbawienie' },
+        { emoji: '🤣', en: 'hilarity', pl: 'histeryczny śmiech' },
+        { emoji: '😂', en: 'laughing', pl: 'śmiech' },
+        { emoji: '🙂', en: 'contentment', pl: 'zadowolenie' },
+        { emoji: '😊', en: 'warmth', pl: 'ciepło' },
+        { emoji: '😇', en: 'innocence', pl: 'niewinność' },
+        { emoji: '🥰', en: 'adoration', pl: 'uwielbienie' },
+        { emoji: '😍', en: 'love', pl: 'miłość' },
+        { emoji: '🤩', en: 'starstruck', pl: 'zachwyt' },
+        { emoji: '😋', en: 'savoring', pl: 'delektowanie' },
+        { emoji: '🥲', en: 'bittersweet', pl: 'rozczulenie' },
+
+        // Affection
+        { emoji: '😘', en: 'affection', pl: 'czułość' },
+        { emoji: '😗', en: 'tenderness', pl: 'tkliwość' },
+        { emoji: '🫶', en: 'heart hands', pl: 'serdeczność' },
+
+        // Playful / Cheeky
+        { emoji: '😜', en: 'playfulness', pl: 'psotność' },
+        { emoji: '🤪', en: 'zaniness', pl: 'szaleństwo' },
+        { emoji: '😝', en: 'teasing', pl: 'dokuczanie' },
+        { emoji: '😏', en: 'smugness', pl: 'pewność siebie' },
+        { emoji: '😈', en: 'mischief', pl: 'figlarność' },
+
+        // Thinking / Neutral
+        { emoji: '🤔', en: 'curiosity', pl: 'ciekawość' },
+        { emoji: '🤨', en: 'skepticism', pl: 'sceptycyzm' },
+        { emoji: '😐', en: 'neutrality', pl: 'obojętność' },
+        { emoji: '😑', en: 'blankness', pl: 'pustka' },
+        { emoji: '😶', en: 'speechlessness', pl: 'oniemienie' },
+        { emoji: '🫤', en: 'uncertainty', pl: 'niepewność' },
+        { emoji: '🤐', en: 'secrecy', pl: 'tajemnica' },
+
+        // Surprise
+        { emoji: '😲', en: 'shock', pl: 'szok' },
+        { emoji: '😮', en: 'surprise', pl: 'zaskoczenie' },
+        { emoji: '🤯', en: 'mind blown', pl: 'olśnienie' },
+        { emoji: '😯', en: 'astonishment', pl: 'zdumienie' },
+        { emoji: '😳', en: 'embarrassment', pl: 'zażenowanie' },
+
+        // Sadness
+        { emoji: '😢', en: 'sadness', pl: 'smutek' },
+        { emoji: '😭', en: 'grief', pl: 'rozpacz' },
+        { emoji: '🥺', en: 'pleading', pl: 'błaganie' },
+        { emoji: '😞', en: 'disappointment', pl: 'rozczarowanie' },
+        { emoji: '😔', en: 'melancholy', pl: 'melancholia' },
+        { emoji: '😟', en: 'worry', pl: 'zmartwienie' },
+        { emoji: '🫠', en: 'overwhelm', pl: 'przytłoczenie' },
+        { emoji: '😩', en: 'exhaustion', pl: 'wyczerpanie' },
+        { emoji: '😫', en: 'despair', pl: 'desperacja' },
+
+        // Anger
+        { emoji: '😠', en: 'anger', pl: 'złość' },
+        { emoji: '😡', en: 'fury', pl: 'furia' },
+        { emoji: '🤬', en: 'rage', pl: 'wściekłość' },
+        { emoji: '😤', en: 'frustration', pl: 'frustracja' },
+        { emoji: '👿', en: 'malice', pl: 'złośliwość' },
+
+        // Fear / Anxiety
+        { emoji: '😨', en: 'fear', pl: 'strach' },
+        { emoji: '😰', en: 'anxiety', pl: 'niepokój' },
+        { emoji: '😱', en: 'terror', pl: 'przerażenie' },
+        { emoji: '😬', en: 'awkwardness', pl: 'niezręczność' },
+        { emoji: '🫣', en: 'dread', pl: 'obawa' },
+        { emoji: '🫨', en: 'trembling', pl: 'drżenie' },
+
+        // Disgust / Contempt
+        { emoji: '🤢', en: 'nausea', pl: 'mdłości' },
+        { emoji: '🤮', en: 'disgust', pl: 'obrzydzenie' },
+        { emoji: '🙄', en: 'contempt', pl: 'pogarda' },
+        { emoji: '😒', en: 'disdain', pl: 'niechęć' },
+
+        // Sickness / Pain
+        { emoji: '🤒', en: 'illness', pl: 'choroba' },
+        { emoji: '🤕', en: 'pain', pl: 'ból' },
+        { emoji: '🥴', en: 'dizziness', pl: 'zamroczenie' },
+        { emoji: '😵', en: 'overwhelm', pl: 'ogłuszenie' },
+
+        // Sleepy / Tired
+        { emoji: '😴', en: 'sleepiness', pl: 'senność' },
+        { emoji: '🥱', en: 'boredom', pl: 'znudzenie' },
+        { emoji: '😪', en: 'drowsiness', pl: 'ospałość' },
+
+        // Cool / Confident
+        { emoji: '😎', en: 'confidence', pl: 'pewność siebie' },
+        { emoji: '🤑', en: 'greed', pl: 'chciwość' },
+        { emoji: '🧐', en: 'scrutiny', pl: 'dociekliwość' },
+        { emoji: '🤓', en: 'nerdiness', pl: 'nerdowatość' },
+
+        // Compassion / Gratitude
+        { emoji: '🥹', en: 'gratitude', pl: 'wdzięczność' },
+        { emoji: '🤗', en: 'compassion', pl: 'współczucie' },
+        { emoji: '😌', en: 'serenity', pl: 'spokój' },
+        { emoji: '🙏', en: 'gratitude', pl: 'wdzięczność' },
+
+        // Shame / Guilt
+        { emoji: '😖', en: 'shame', pl: 'wstyd' },
+        { emoji: '😣', en: 'guilt', pl: 'poczucie winy' },
+        { emoji: '🫠', en: 'cringe', pl: 'żenada' },
+
+        // Loneliness / Isolation
+        { emoji: '🫥', en: 'emptiness', pl: 'pustka' },
+        { emoji: '😶‍🌫️', en: 'isolation', pl: 'izolacja' },
+      ];
+
+      // Deduplicate by emoji
+      const seen = new Set();
+      const uniqueEmotions = emotions.filter(e => {
+        if (seen.has(e.emoji)) return false;
+        seen.add(e.emoji);
+        return true;
+      });
+
+      // ================================================================
+      // GAME STATE
+      // ================================================================
+      let current = null;
+      let correctCount = 0;
+      let wrongCount = 0;
+      let streak = 0;
+      let round = 0;
+      let cameraStream = null;
+      const totalRounds = 20;
+
+      function getName(emotion) {
+        return isPL ? emotion.pl : emotion.en;
+      }
+
+      function shuffle(array) {
+        const a = [...array];
+        for (let i = a.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+      }
+
+      // ================================================================
+      // GAME LOGIC
+      // ================================================================
+      function nextRound() {
+        stopCamera();
+        document.getElementById('video-overlay').classList.remove('active');
+        document.getElementById('message').textContent = '';
+
+        round++;
+        if (round > totalRounds) {
+          showFinalScore();
+          return;
+        }
+
+        document.getElementById('round-counter').textContent =
+          `${t.round} ${round} ${t.of} ${totalRounds}`;
+
+        current =
+          uniqueEmotions[Math.floor(Math.random() * uniqueEmotions.length)];
+        document.getElementById('emoji').textContent = current.emoji;
+
+        // Build 4 unique options including correct answer
+        let options = shuffle(
+          uniqueEmotions.filter(e => e.emoji !== current.emoji),
+        ).slice(0, 3);
+        options.push(current);
+        options = shuffle(options);
+
+        const buttonsDiv = document.getElementById('buttons');
+        buttonsDiv.innerHTML = '';
+
+        options.forEach(option => {
+          const btn = document.createElement('button');
+          btn.className = 'button';
+          btn.textContent = getName(option);
+          btn.onclick = () => handleAnswer(btn, option);
+          buttonsDiv.appendChild(btn);
+        });
+      }
+
+      function handleAnswer(btn, option) {
+        const allBtns = document.querySelectorAll('.button');
+
+        if (getName(option) === getName(current)) {
+          btn.classList.add('correct');
+          allBtns.forEach(b => (b.disabled = true));
+          correctCount++;
+          streak++;
+          updateScore();
+
+          document.getElementById('message').textContent = t.showEmotion;
+          document.getElementById('overlay-emoji').textContent = current.emoji;
+          document.getElementById('overlay-text').textContent =
+            `${getName(current).toUpperCase()}`;
+
+          setTimeout(() => startCamera(), 600);
+        } else {
+          btn.classList.add('wrong');
+          btn.disabled = true;
+          wrongCount++;
+          streak = 0;
+          updateScore();
+          document.getElementById('message').textContent = t.tryAgain;
+        }
+      }
+
+      function updateScore() {
+        document.getElementById('correct-count').textContent = correctCount;
+        document.getElementById('wrong-count').textContent = wrongCount;
+        document.getElementById('streak-display').textContent =
+          streak >= 2 ? `${t.streak} ${streak}` : '';
+      }
+
+      // ================================================================
+      // CAMERA
+      // ================================================================
+      async function startCamera() {
+        const overlay = document.getElementById('video-overlay');
+        const video = document.getElementById('camera');
+
+        overlay.classList.add('active');
+
+        try {
+          cameraStream = await navigator.mediaDevices.getUserMedia({
+            video: {
+              facingMode: 'user',
+              width: { ideal: 1280 },
+              height: { ideal: 720 },
+            },
+          });
+          video.srcObject = cameraStream;
+        } catch {
+          document.getElementById('overlay-text').textContent = t.noCamera;
+        }
+      }
+
+      function stopCamera() {
+        if (cameraStream) {
+          cameraStream.getTracks().forEach(track => track.stop());
+          cameraStream = null;
+        }
+        const video = document.getElementById('camera');
+        video.srcObject = null;
+      }
+
+      document.getElementById('next-btn').onclick = nextRound;
+      document.getElementById('close-video-btn').onclick = nextRound;
+
+      // ================================================================
+      // FINAL SCORE
+      // ================================================================
+      function showFinalScore() {
+        const pct = Math.round(
+          (correctCount / (correctCount + wrongCount)) * 100,
+        );
+
+        document.getElementById('emoji').textContent =
+          pct >= 80 ? '🏆' : pct >= 50 ? '👏' : '💪';
+        document.getElementById('buttons').innerHTML = '';
+        document.getElementById('round-counter').textContent = '';
+
+        const msgEl = document.getElementById('message');
+        msgEl.innerHTML = isPL
+          ? `Koniec! Wynik: <strong>${correctCount}</strong> z <strong>${correctCount + wrongCount}</strong> odpowiedzi (${pct}%)<br><br><button class="button" onclick="resetGame()" style="background:#16a34a;">Zagraj ponownie</button>`
+          : `Done! Score: <strong>${correctCount}</strong> of <strong>${correctCount + wrongCount}</strong> answers (${pct}%)<br><br><button class="button" onclick="resetGame()" style="background:#16a34a;">Play again</button>`;
+      }
+
+      function resetGame() {
+        correctCount = 0;
+        wrongCount = 0;
+        streak = 0;
+        round = 0;
+        updateScore();
+        nextRound();
+      }
+
+      // ================================================================
+      // START
+      // ================================================================
+      nextRound();
+    </script>
+  </body>
+</html>
