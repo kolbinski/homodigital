@@ -1,46 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="512" height="512" viewBox="0 0 512 512"
-     xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- background -->
+  <rect width="64" height="64" rx="14" fill="#000"/>
 
-  <!-- Background -->
-  <rect width="512" height="512" fill="#000000"/>
-
-  <!-- Center group -->
-  <g>
-    <!-- Infinity (gold) -->
-    <text x="220"
-          y="300"
-          font-family="Noto Sans Symbols 2, Noto Sans Symbols, Segoe UI Symbol, Apple Symbols, Arial, sans-serif"
-          font-size="270"
-          fill="#D4AF37"
-          text-anchor="middle"
-          dominant-baseline="alphabetic">
-      ∞
-    </text>
-
-    <!-- + (white) -->
-    <text x="342"
-          y="300"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="120"
-          font-weight="600"
-          fill="#FFFFFF"
-          text-anchor="middle"
-          dominant-baseline="alphabetic">
-      +
-    </text>
-
-    <!-- 1 (white) -->
-    <text x="402"
-          y="300"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="120"
-          font-weight="600"
-          fill="#FFFFFF"
-          text-anchor="middle"
-          dominant-baseline="alphabetic">
-      1
-    </text>
-  </g>
-
+  <!-- infinity symbol -->
+  <path
+    d="M16 32
+       C16 20, 32 20, 32 32
+       C32 44, 48 44, 48 32
+       C48 20, 32 20, 32 32
+       C32 44, 16 44, 16 32"
+    fill="none"
+    stroke="#fff"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>
