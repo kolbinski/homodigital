@@ -5,22 +5,6 @@
  */
 
 // ============================================================================
-// COOKIE HELPERS
-// ============================================================================
-
-function setCookie(name, value, days = 365) {
-  const expires = new Date(Date.now() + days * 864e5).toUTCString();
-  document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
-}
-
-function getCookie(name) {
-  return document.cookie.split('; ').reduce((r, v) => {
-    const parts = v.split('=');
-    return parts[0] === name ? decodeURIComponent(parts[1]) : r;
-  }, '');
-}
-
-// ============================================================================
 // FIELD ID GENERATOR
 // ============================================================================
 
@@ -62,12 +46,10 @@ class FieldState {
   }
   
   init() {
-    this.fieldId = localStorage.getItem('homodigital_field_id') || getCookie('homodigital_field_id');
+    this.fieldId = localStorage.getItem('homodigital_field_id');
     if (!this.fieldId) {
       this.fieldId = generateFieldId();
       localStorage.setItem('homodigital_field_id', this.fieldId);
-      setCookie('homodigital_field_id', this.fieldId);
-      localStorage.setItem('homodigital_field_created_at', Date.now());
       
       // Generate random initial resonance (8-15)
       const initialRes = 8 + Math.floor(Math.random() * 8);
