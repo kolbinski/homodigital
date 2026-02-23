@@ -733,7 +733,22 @@
           ZADAJ MI DZISIEJSZE PYTANIE
         </button>
 
-        <div id="question-display"></div>
+        <div style="position: relative">
+          <div id="question-display"></div>
+          <button
+            id="copy-btn"
+            class="btn"
+            onclick="copyQuestion()"
+            style="
+              display: none;
+              padding: 8px 16px;
+              font-size: 0.75rem;
+              margin-top: 10px;
+            "
+          >
+            SKOPIUJ
+          </button>
+        </div>
 
         <p style="margin-top: 30px; font-size: 1rem">
           To nie są pytania dla odpowiedzi.<br />To są pytania, które zmieniają
@@ -1511,6 +1526,18 @@
         questionDisplay.scrollIntoView({
           behavior: 'smooth',
           block: 'nearest',
+        });
+        document.getElementById('copy-btn').style.display = 'inline-block';
+      }
+
+      function copyQuestion() {
+        const text = document.getElementById('question-display').textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          const btn = document.getElementById('copy-btn');
+          btn.textContent = 'SKOPIOWANO ✓';
+          setTimeout(() => {
+            btn.textContent = 'SKOPIUJ';
+          }, 1500);
         });
       }
     </script>
