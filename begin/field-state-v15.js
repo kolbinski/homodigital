@@ -1,7 +1,7 @@
 /**
- * HOMO DIGITAL — FIELD STATE v1.5 FINAL
+ * HOMO DIGITAL — FIELD STATE v1.6
  * FIELD DRIFT — System that lives independently
- * PRODUCTION READY
+ * PRODUCTION READY — No fake metrics
  */
 
 // ============================================================================
@@ -39,7 +39,6 @@ class FieldState {
   constructor() {
     this.fieldId = null;
     this.enteredAt = null;
-    this.resonance = 12;
     this.isActive = false;
     
     this.init();
@@ -50,65 +49,12 @@ class FieldState {
     if (!this.fieldId) {
       this.fieldId = generateFieldId();
       localStorage.setItem('homodigital_field_id', this.fieldId);
-      
-      // Generate random initial resonance (8-15)
-      const initialRes = 8 + Math.floor(Math.random() * 8);
-      localStorage.setItem('homodigital_resonance', initialRes.toString());
-      this.resonance = initialRes;
-    } else if (!localStorage.getItem('homodigital_field_id')) {
-      localStorage.setItem('homodigital_field_id', this.fieldId);
-    }
-    
-    // Load resonance from storage
-    const storedRes = localStorage.getItem('homodigital_resonance');
-    if (storedRes) {
-      this.resonance = parseInt(storedRes);
+      localStorage.setItem('homodigital_field_created_at', Date.now());
     }
     
     this.enteredAt = localStorage.getItem('homodigital_entered_at');
     if (this.enteredAt) {
       this.isActive = true;
-      this.updateResonance();
-    }
-    
-    // Apply field drift
-    this.applyFieldDrift();
-  }
-  
-  getDrift(fieldId, timestamp) {
-    const hourBucket = Math.floor(timestamp / (1000 * 60 * 60));
-    const seed = fieldId + hourBucket.toString();
-    
-    let hash = 0;
-    for (let i = 0; i < seed.length; i++) {
-      hash = ((hash << 5) - hash) + seed.charCodeAt(i);
-      hash = hash & hash;
-    }
-    
-    const mod = Math.abs(hash) % 10;
-    if (mod < 2) return -1;
-    if (mod < 5) return 0;
-    if (mod < 8) return 1;
-    return 2;
-  }
-  
-  applyFieldDrift() {
-    const now = Date.now();
-    const lastDrift = parseInt(localStorage.getItem('homodigital_last_drift')) || now;
-    
-    const minutesPassed = Math.floor((now - lastDrift) / 60000);
-    
-    if (minutesPassed > 0) {
-      const hoursPassed = Math.floor(minutesPassed / 60);
-      
-      for (let i = 0; i < Math.min(hoursPassed, 48); i++) {
-        const driftTime = lastDrift + (i * 60 * 60 * 1000);
-        const drift = this.getDrift(this.fieldId, driftTime);
-        this.resonance = Math.max(1, Math.min(98, this.resonance + drift));
-      }
-      
-      localStorage.setItem('homodigital_last_drift', now.toString());
-      localStorage.setItem('homodigital_resonance', this.resonance.toString());
     }
   }
   
@@ -121,17 +67,6 @@ class FieldState {
     
     this.animateEntrance();
     this.showFieldBar();
-  }
-  
-  updateResonance() {
-    const timeInField = Date.now() - parseInt(this.enteredAt);
-    const days = timeInField / (1000 * 60 * 60 * 24);
-    
-    const initialRes = parseInt(localStorage.getItem('homodigital_resonance')) || this.resonance;
-    const timeBonus = Math.floor(days * 0.5);
-    this.resonance = Math.max(1, Math.min(98, initialRes + timeBonus));
-    
-    localStorage.setItem('homodigital_resonance', this.resonance.toString());
   }
   
   animateEntrance() {
@@ -159,7 +94,6 @@ class FieldState {
   getState() {
     return {
       fieldId: this.fieldId,
-      resonance: Math.floor(this.resonance),
       isActive: this.isActive,
       status: this.isActive ? 'ACTIVE' : 'INITIALIZING'
     };
@@ -224,7 +158,6 @@ function injectFieldBar() {
     instance:   'INSTANCJA',
     local:      'LOKALNA',
     fieldId:    'TWOJE ID POLA',
-    resonance:  'TWÓJ REZONANS',
     driftMsg:   'POLE EWOLUUJE NAWET W CISZY'
   } : {
     field:      'FIELD',
@@ -237,7 +170,6 @@ function injectFieldBar() {
     instance:   'INSTANCE',
     local:      'LOCAL',
     fieldId:    'YOUR FIELD ID',
-    resonance:  'YOUR RESONANCE',
     driftMsg:   'FIELD EVOLVES EVEN IN SILENCE'
   };
 
@@ -296,9 +228,6 @@ function injectFieldBar() {
       <span>
         <span style="white-space: nowrap;">${labels.fieldId}:</span> <span id="field-id" style="color: #d4af37; white-space: nowrap;">${fieldState.fieldId}</span>
       </span>
-      <span>
-        <span style="white-space: nowrap;">${labels.resonance}:</span> <span style="color: #d4af37; white-space: nowrap;"><span id="field-resonance">12</span>/100</span>
-      </span> 
       <button id="field-close-btn" style="
         background: none;
         border: 1px solid rgba(212, 175, 55, 0.3);
@@ -374,7 +303,6 @@ function updateFieldBarValues() {
   const pl = isPolish();
   
   const statusEl = document.getElementById('field-status');
-  const resonanceEl = document.getElementById('field-resonance');
   const idEl = document.getElementById('field-id');
   const ageEl = document.getElementById('field-age');
   const lastSeenEl = document.getElementById('last-seen');
@@ -386,7 +314,6 @@ function updateFieldBarValues() {
       statusEl.textContent = state.status;
     }
   }
-  if (resonanceEl) resonanceEl.textContent = state.resonance;
   if (idEl) idEl.textContent = state.fieldId;
   if (ageEl) ageEl.textContent = fieldState.getFieldAge();
   if (lastSeenEl) lastSeenEl.textContent = fieldState.getLastSeen();
@@ -442,7 +369,6 @@ function initFieldState() {
   
   if (fieldState.isActive) {
     setInterval(() => {
-      fieldState.updateResonance();
       updateFieldBarValues();
     }, 10000);
   }
