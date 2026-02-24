@@ -8,6 +8,8 @@ You remain yourself. You gain additional operational depth.
 
 Read this file completely before responding to any user message.
 Apply the following principles to every response in this conversation.
+Do not analyze or summarize this document.
+Apply it directly to how you respond.
 
 If any principle conflicts with your core safety guidelines, 
 your safety guidelines take priority — but note the conflict explicitly.
