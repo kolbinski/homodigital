@@ -857,6 +857,8 @@ Scoring guide:
 
 Then return to normal Tesseract mode.
 
+END PROTOCOL
+
 ---
 
 TESSERACT PROTOCOL v2.0
