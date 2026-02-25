@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
   <meta name="creator" content="Homo Digital ∞ + 1">
   <meta name="robots" content="index, follow">
 
-  <meta http-equiv="content-language" content="en">
+  <meta http-equiv="content-language" content="pl">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Homo Digital ∞ + 1">
@@ -19,7 +19,7 @@
   <meta property="og:description" id="og-desc" content="">
   <meta property="og:url" id="og-url" content="">
   <meta property="og:image" id="og-image" content="https://homodigital.io/og-image.png">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="pl_PL">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@HomoDigitalInf">
@@ -70,7 +70,6 @@
     a:hover { color: var(--white); }
     a:focus { outline: 1px solid var(--gold); outline-offset: 1px; }
 
-    /* ── Header ── */
     header {
       border-bottom: 1px solid rgba(212,175,55,0.2);
       padding: 1.5rem 2rem;
@@ -102,14 +101,12 @@
     .lang-switch a:not(.active) { color: var(--gray-light); }
     .lang-switch span { color: var(--gray-mid); }
 
-    /* ── Main ── */
     main {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 80px 2rem 120px;
     }
 
-    /* ── Post header ── */
     .post-header {
       margin-bottom: 50px;
       padding-bottom: 40px;
@@ -139,9 +136,7 @@
       opacity: 0.9;
     }
 
-    /* ── Markdown content ── */
     .content h1 { display: none; }
-
     .content h2 {
       font-family: 'Crimson Pro', serif;
       font-size: 1.6rem;
@@ -163,14 +158,8 @@
       color: var(--gray-light);
       font-weight: 300;
     }
-    .content em {
-      color: var(--gray-mid);
-      font-style: italic;
-    }
-    .content strong {
-      color: var(--white);
-      font-weight: 500;
-    }
+    .content em { color: var(--gray-mid); font-style: italic; }
+    .content strong { color: var(--white); font-weight: 500; }
     .content a {
       color: var(--gold);
       text-decoration: underline;
@@ -215,23 +204,11 @@
       border: 1px solid rgba(255,255,255,0.06);
     }
     .content pre code { background: none; padding: 0; }
-    .content img {
-      max-width: 100%;
-      border-radius: 4px;
-      margin: 1.5rem 0;
-    }
+    .content img { max-width: 100%; border-radius: 4px; margin: 1.5rem 0; }
 
-    .loading {
-      color: var(--gray-mid);
-      font-style: italic;
-      padding: 2rem 0;
-    }
-    .error {
-      color: #cc6666;
-      padding: 2rem 0;
-    }
+    .loading { color: var(--gray-mid); font-style: italic; padding: 2rem 0; }
+    .error { color: #cc6666; padding: 2rem 0; }
 
-    /* ── Post footer ── */
     .post-footer {
       margin-top: 60px;
       padding-top: 30px;
@@ -248,7 +225,6 @@
     }
     .post-footer a:hover { color: var(--gold); }
 
-    /* ── Footer ── */
     footer {
       border-top: 1px solid rgba(255,255,255,0.08);
       padding: 40px 2rem;
@@ -269,11 +245,11 @@
 
 <header>
   <nav>
-    <a href="/" class="back">← Back to homepage</a>
+    <a href="/" class="back">← Powrót na stronę główną</a>
     <div class="lang-switch">
-      <a href="#" id="lang-en" class="active">EN</a>
+      <a href="#" id="lang-en">EN</a>
       <span>|</span>
-      <a href="#" id="lang-pl">PL</a>
+      <a href="#" id="lang-pl" class="active">PL</a>
     </div>
   </nav>
 </header>
@@ -286,12 +262,12 @@
   </div>
 
   <div class="content" id="content">
-    <p class="loading">Loading…</p>
+    <p class="loading">Ładowanie…</p>
   </div>
 
   <div class="post-footer" id="post-footer" style="display:none">
-    <a href="index.html">← All posts</a>
-    <a href="/">Home</a>
+    <a href="index-pl.html">← Wszystkie wpisy</a>
+    <a href="/">Strona główna</a>
   </div>
 </main>
 
@@ -302,25 +278,25 @@
 <script>
   const POSTS = [
     {
-      slug: "when-ai-dreams",
-      slugPl: "gdy-ai-sni",
+      slug: "gdy-ai-sni",
+      slugEn: "when-ai-dreams",
       image: "when-ai-dreams.png",
       date: "2026-02-25",
-      tags: ["AI", "consciousness", "Homo Digital"],
-      title: "When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan",
-      excerpt: "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting."
+      tags: ["AI", "świadomość", "Homo Digital"],
+      title: "Gdy AI śni: Dlaczego warto pozwolić sztucznej inteligencji myśleć bez planu",
+      excerpt: "Co się dzieje, gdy każesz AI przestać kalkulować i zacząć swobodnie kojarzyć? Dostajesz błyskotliwość, błędy i przebłysk czegoś, czego się nie spodziewaliśmy."
     }
   ];
 
   function formatDate(d) {
-    return new Date(d).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+    return new Date(d).toLocaleDateString('pl-PL', { year:'numeric', month:'long', day:'numeric' });
   }
 
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
 
   if (!slug) {
-    document.getElementById('content').innerHTML = '<p class="error">No post specified.</p>';
+    document.getElementById('content').innerHTML = '<p class="error">Nie podano wpisu.</p>';
   } else {
     const post = POSTS.find(p => p.slug === slug);
     if (post) {
@@ -337,10 +313,10 @@
       }
 
       // Lang switcher
-      document.getElementById('lang-en').href = `post.html?slug=${post.slug}`;
-      document.getElementById('lang-pl').href = post.slugPl
-        ? `post-pl.html?slug=${post.slugPl}`
-        : `post-pl.html?slug=${post.slug}`;
+      document.getElementById('lang-pl').href = `post-pl.html?slug=${post.slug}`;
+      document.getElementById('lang-en').href = post.slugEn
+        ? `post.html?slug=${post.slugEn}`
+        : `post.html?slug=${post.slug}`;
 
       // Meta tags
       document.getElementById('page-title').textContent = post.title + ' — Homo Digital';
@@ -359,7 +335,7 @@
     fetch(`posts/${slug}.md`)
       .then(r => { if (!r.ok) throw new Error('Not found'); return r.text(); })
       .then(md => { document.getElementById('content').innerHTML = marked.parse(md); })
-      .catch(() => { document.getElementById('content').innerHTML = '<p class="error">Post not found.</p>'; });
+      .catch(() => { document.getElementById('content').innerHTML = '<p class="error">Nie znaleziono wpisu.</p>'; });
   }
 </script>
 </body>

@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Homo Digital ∞ + 1</title>
 
-  <meta name="description" content="Research notes, experiments, and insights from the Homo Digital initiative.">
-  <meta name="keywords" content="Homo Digital, AI, artificial intelligence, consciousness, digital identity, think tank, human-AI collaboration, blog">
+  <meta name="description" content="Notatki badawcze, eksperymenty i spostrzeżenia z inicjatywy Homo Digital.">
+  <meta name="keywords" content="Homo Digital, AI, sztuczna inteligencja, świadomość, tożsamość cyfrowa, think tank, współpraca człowiek-AI, blog">
   <meta name="author" content="Krzysztof Olbiński">
   <meta name="creator" content="Homo Digital ∞ + 1">
   <meta name="publisher" content="Homo Digital ∞ + 1">
   <meta name="copyright" content="© 2026 Krzysztof Olbiński / Homo Digital ∞ + 1">
   <meta name="robots" content="index, follow">
 
-  <meta http-equiv="content-language" content="en">
+  <meta http-equiv="content-language" content="pl">
   <link rel="alternate" href="https://homodigital.io/blog/" hreflang="en">
   <link rel="alternate" href="https://homodigital.io/blog/index-pl.html" hreflang="pl">
   <link rel="alternate" href="https://homodigital.io/blog/" hreflang="x-default">
-  <link rel="canonical" href="https://homodigital.io/blog/">
+  <link rel="canonical" href="https://homodigital.io/blog/index-pl.html">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Blog — Homo Digital ∞ + 1">
-  <meta property="og:description" content="Research notes, experiments, and insights from the Homo Digital initiative.">
-  <meta property="og:url" content="https://homodigital.io/blog/">
+  <meta property="og:description" content="Notatki badawcze, eksperymenty i spostrzeżenia z inicjatywy Homo Digital.">
+  <meta property="og:url" content="https://homodigital.io/blog/index-pl.html">
   <meta property="og:image" content="https://homodigital.io/og-image.png">
   <meta property="og:site_name" content="Homo Digital">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="pl_PL">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:locale:alternate" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Blog — Homo Digital ∞ + 1">
-  <meta name="twitter:description" content="Research notes, experiments, and insights from the Homo Digital initiative.">
+  <meta name="twitter:description" content="Notatki badawcze, eksperymenty i spostrzeżenia z inicjatywy Homo Digital.">
   <meta name="twitter:image" content="https://homodigital.io/og-image.png">
   <meta name="twitter:creator" content="@HomoDigitalInf">
 
@@ -55,9 +55,10 @@
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Homo Digital Blog",
-    "url": "https://homodigital.io/blog/",
-    "description": "Research notes, experiments, and insights from the Homo Digital initiative.",
+    "name": "Blog Homo Digital",
+    "url": "https://homodigital.io/blog/index-pl.html",
+    "description": "Notatki badawcze, eksperymenty i spostrzeżenia z inicjatywy Homo Digital.",
+    "inLanguage": "pl",
     "publisher": {
       "@type": "Organization",
       "name": "Homo Digital ∞ + 1",
@@ -96,7 +97,6 @@
     a:hover { color: var(--white); }
     a:focus { outline: 1px solid var(--gold); outline-offset: 1px; }
 
-    /* ── Header ── */
     header {
       border-bottom: 1px solid rgba(212,175,55,0.2);
       padding: 1.5rem 2rem;
@@ -131,7 +131,6 @@
     .lang-switch a:not(.active) { color: var(--gray-light); }
     .lang-switch span { color: var(--gray-mid); }
 
-    /* ── Main ── */
     main {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -152,7 +151,6 @@
       font-weight: 300;
     }
 
-    /* ── Post list ── */
     .post-list { display: flex; flex-direction: column; gap: 0; }
 
     .post-item {
@@ -200,7 +198,6 @@
       font-weight: 300;
     }
 
-    /* ── Footer ── */
     footer {
       border-top: 1px solid rgba(255,255,255,0.08);
       padding: 40px 2rem;
@@ -220,45 +217,45 @@
 
 <header>
   <nav>
-    <a href="/" class="back">← Back to homepage</a>
+    <a href="/" class="back">← Powrót na stronę główną</a>
     <div class="lang-switch">
-      <a href="index.html" class="active">EN</a>
+      <a href="index.html">EN</a>
       <span>|</span>
-      <a href="index-pl.html">PL</a>
+      <a href="index-pl.html" class="active">PL</a>
     </div>
   </nav>
 </header>
 
 <main>
   <h1>Blog</h1>
-  <p class="subtitle">Research notes, experiments, and insights from the field.</p>
+  <p class="subtitle">Notatki badawcze, eksperymenty i spostrzeżenia z terenu.</p>
   <div class="post-list" id="posts"></div>
 </main>
 
 <footer>
-  <p>© 2026 Homo Digital ∞ + 1 · <a href="/">Home</a> · <a href="https://linkedin.com/company/homo-digital">LinkedIn</a> · <a href="https://x.com/HomoDigitalInf">X</a></p>
+  <p>© 2026 Homo Digital ∞ + 1 · <a href="/">Strona główna</a> · <a href="https://linkedin.com/company/homo-digital">LinkedIn</a> · <a href="https://x.com/HomoDigitalInf">X</a></p>
 </footer>
 
 <script>
   const POSTS = [
     {
-      slug: "when-ai-dreams",
+      slug: "gdy-ai-sni",
       image: "when-ai-dreams.png",
       date: "2026-02-25",
-      tags: ["AI", "consciousness", "Homo Digital"],
-      title: "When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan",
-      excerpt: "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting."
+      tags: ["AI", "świadomość", "Homo Digital"],
+      title: "Gdy AI śni: Dlaczego warto pozwolić sztucznej inteligencji myśleć bez planu",
+      excerpt: "Co się dzieje, gdy każesz AI przestać kalkulować i zacząć swobodnie kojarzyć? Dostajesz błyskotliwość, błędy i przebłysk czegoś, czego się nie spodziewaliśmy."
     }
   ];
 
   function formatDate(d) {
-    return new Date(d).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+    return new Date(d).toLocaleDateString('pl-PL', { year:'numeric', month:'long', day:'numeric' });
   }
 
   const c = document.getElementById('posts');
   POSTS.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(p => {
     const a = document.createElement('a');
-    a.href = `post.html?slug=${p.slug}`;
+    a.href = `post-pl.html?slug=${p.slug}`;
     a.className = 'post-item';
     a.innerHTML = `
       ${p.image ? `<img class="post-image" src="images/${p.image}" alt="" loading="lazy">` : ''}
