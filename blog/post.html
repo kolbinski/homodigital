@@ -424,7 +424,7 @@
             }
 
             // Load markdown — slug is the filename
-            return fetch(`posts/${slug}.md`);
+            return fetch(`posts/${slug}-en.md`);
           })
           .then(r => {
             if (!r || !r.ok) throw new Error('Not found');
