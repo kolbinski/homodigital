@@ -336,7 +336,7 @@
           posts
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .forEach(p => {
-              const slug = p.slugPl || p.slug;
+              const slug = p.slug;
               const a = document.createElement('a');
               a.href = `post-pl.html?slug=${slug}`;
               a.className = 'post-item';
