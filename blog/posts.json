@@ -21,5 +21,30 @@
       "title": "Gdy AI śni: Dlaczego warto pozwolić sztucznej inteligencji myśleć bez planu",
       "excerpt": "Co się dzieje, gdy każesz AI przestać kalkulować i zacząć swobodnie kojarzyć? Dostajesz błyskotliwość, błędy i przebłysk czegoś, czego się nie spodziewaliśmy."
     }
+  },
+  {
+    "slug": "when-ai-cant-stop-organizing",
+    "image": "when-ai-cant-stop-organizing.png",
+    "date": "2026-02-25",
+    "tags": [
+      "AI",
+      "multi-agent",
+      "phase dynamics",
+      "Homo Digital"
+    ],
+    "tagsPl": [
+      "AI",
+      "multi-agent",
+      "dynamika fazowa",
+      "Homo Digital"
+    ],
+    "en": {
+      "title": "When AI Can't Stop Organizing: What Happens When a Second System Tries to Dream",
+      "excerpt": "I asked two different AI systems to think without a plan. One dreamed. The other built a framework about dreaming — and couldn't stop, even when it saw what it was doing."
+    },
+    "pl": {
+      "title": "Gdy AI nie potrafi przestać porządkować: Co się dzieje, gdy drugi system próbuje śnić",
+      "excerpt": "Poprosiłem dwa różne systemy AI, żeby myślały bez planu. Jeden śnił. Drugi zbudował framework o śnieniu — i nie potrafił przestać, nawet gdy zobaczył, co robi."
+    }
   }
 ]
