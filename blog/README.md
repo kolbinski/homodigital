@@ -6,9 +6,8 @@ Markdown-based blog system for homodigital.io. Zero dependencies, zero build ste
 
 ```
 blog/
-├── index.html          ← Blog listing page
+├── index.html          ← Blog listing page (posts registry inline)
 ├── post.html           ← Single post viewer (renders .md via marked.js)
-├── posts.json          ← Post manifest (title, date, slug, tags, excerpt)
 └── posts/
     └── when-ai-dreams.md   ← First post (and any future .md files)
 ```
@@ -22,15 +21,15 @@ blog/
 ## How to add a new post
 
 1. Write a new `.md` file and save it in `blog/posts/` (e.g. `my-new-post.md`)
-2. Add an entry to `posts.json`:
+2. Add an entry to the `POSTS` array in **both** `index.html` and `post.html`:
 
-```json
+```js
 {
-  "slug": "my-new-post",
-  "title": "My New Post Title",
-  "date": "2026-03-01",
-  "tags": ["tag1", "tag2"],
-  "excerpt": "A short description for the listing page."
+  slug: "my-new-post",
+  title: "My New Post Title",
+  date: "2026-03-01",
+  tags: ["tag1", "tag2"],
+  excerpt: "A short description for the listing page."
 }
 ```
 
@@ -39,7 +38,8 @@ blog/
 ## Notes
 
 - `marked.js` is loaded from CDN (jsdelivr) — no local dependencies
-- The first `# heading` in the .md file is hidden in the post view (the title comes from posts.json)
+- Posts registry is inline in HTML (no fetch/CORS issues — works locally and on server)
+- The first `# heading` in the .md file is hidden in post view (title comes from POSTS array)
 - Dark theme matches homodigital.io aesthetic
 - Responsive — works on mobile
 - OG meta tags are set dynamically for social sharing

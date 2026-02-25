@@ -269,36 +269,46 @@
 </footer>
 
 <script>
+  /*
+   * POSTS REGISTRY — must match index.html
+   */
+  const POSTS = [
+    {
+      slug: "when-ai-dreams",
+      title: "When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan",
+      date: "2026-02-25",
+      tags: ["AI", "consciousness", "Homo Digital"],
+      excerpt: "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting."
+    }
+  ];
+
+  function formatDate(dateStr) {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
   const params = new URLSearchParams(window.location.search);
   const slug = params.get('slug');
 
   if (!slug) {
     document.getElementById('content').innerHTML = '<p class="error">No post specified.</p>';
   } else {
-    // Load post metadata
-    fetch('posts.json')
-      .then(r => r.json())
-      .then(posts => {
-        const post = posts.find(p => p.slug === slug);
-        if (post) {
-          // Set header
-          document.getElementById('post-title').textContent = post.title;
-          document.getElementById('post-meta').textContent =
-            formatDate(post.date) + (post.tags ? ' · ' + post.tags.join(', ') : '');
-          document.getElementById('post-header').style.display = 'block';
-          document.getElementById('post-footer').style.display = 'flex';
+    const post = POSTS.find(p => p.slug === slug);
+    if (post) {
+      document.getElementById('post-title').textContent = post.title;
+      document.getElementById('post-meta').textContent =
+        formatDate(post.date) + (post.tags ? ' · ' + post.tags.join(', ') : '');
+      document.getElementById('post-header').style.display = 'block';
+      document.getElementById('post-footer').style.display = 'flex';
 
-          // Set page title and OG
-          document.getElementById('page-title').textContent = post.title + ' — Homo Digital';
-          document.getElementById('page-desc').setAttribute('content', post.excerpt || '');
-          document.getElementById('og-title').setAttribute('content', post.title);
-          document.getElementById('og-desc').setAttribute('content', post.excerpt || '');
-          document.getElementById('og-url').setAttribute('content', window.location.href);
-        }
+      document.getElementById('page-title').textContent = post.title + ' — Homo Digital';
+      document.getElementById('page-desc').setAttribute('content', post.excerpt || '');
+      document.getElementById('og-title').setAttribute('content', post.title);
+      document.getElementById('og-desc').setAttribute('content', post.excerpt || '');
+      document.getElementById('og-url').setAttribute('content', window.location.href);
+    }
 
-        // Load and render markdown
-        return fetch(`posts/${slug}.md`);
-      })
+    fetch(`posts/${slug}.md`)
       .then(r => {
         if (!r.ok) throw new Error('Post not found');
         return r.text();
@@ -309,11 +319,6 @@
       .catch(() => {
         document.getElementById('content').innerHTML = '<p class="error">Post not found.</p>';
       });
-  }
-
-  function formatDate(dateStr) {
-    const d = new Date(dateStr);
-    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
   }
 </script>
 
