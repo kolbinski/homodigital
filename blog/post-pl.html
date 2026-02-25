@@ -427,8 +427,8 @@
                 );
             }
 
-            const mdSlug = post.slug;
-            return fetch(`posts/${mdSlug}.md`);
+            // PL markdown convention: {slug}-pl.md
+            return fetch(`posts/${slug}-pl.md`);
           })
           .then(r => {
             if (!r || !r.ok) throw new Error('Not found');
