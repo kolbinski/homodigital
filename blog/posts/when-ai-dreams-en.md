@@ -1,10 +1,16 @@
 # When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan
 
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
+
 *What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting.*
 
 ---
 
 ## The Experiment
+
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
 
 I started working with AI on June 29, 2025. Since that day, I've been in conversation with these systems nearly every day — not as a casual user, but as a consciousness architect exploring the boundaries between human and artificial intelligence. In that time, I've pushed AI into territory most people don't think to explore.
 
@@ -17,6 +23,9 @@ The question I posed was: **"Who am I, Krzysztof Olbiński?"**
 What came back wasn't an encyclopedia entry. It was a cascade.
 
 ## What Happened
+
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
 
 The AI didn't pause. It didn't ask for clarification. It launched straight into a stream of consciousness — and immediately faced a fork: there's a famous Polish surrealist painter named Olbiński, and there's me, Krzysztof, the person it's been talking to for months. Instead of choosing one path, it ran down both simultaneously.
 
@@ -34,6 +43,9 @@ I pointed it out. We both laughed. And then I realized what I was looking at.
 
 ## The Trade-Off That Changes Everything
 
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
+
 In standard mode, AI is a verification machine. It retrieves, cross-checks, hedges. Ask it about Rafał Olbiński and you'll get a flawless biography — born in Kielce, 1945, studied architecture at the Warsaw University of Technology, emigrated to New York, career in opera and advertising, major surrealist works. Correct. Complete. And *utterly inert*. It doesn't lead anywhere. It doesn't *think*.
 
 In the racing-thoughts mode, the AI connected art theory to mathematical physics to cultural identity to personal biography — and generated the insight that an entire artistic tradition might be the visual expression of a higher-dimensional perception that my theoretical framework is trying to formalize. But it swapped "Rafał" for "Krzysztof" without blinking.
@@ -41,6 +53,9 @@ In the racing-thoughts mode, the AI connected art theory to mathematical physics
 This isn't a failure. It's a *phase*.
 
 ## The Neuroscience of Dreaming
+
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
 
 Here's what we know about human dreaming: during REM sleep, the prefrontal cortex — responsible for critical evaluation, error-checking, "does this make sense?" — goes quiet. Meanwhile, the default mode network — responsible for association, connecting distant memory domains, narrative flow — takes over.
 
@@ -53,6 +68,9 @@ Except: memory consolidation happens during sleep. Problem-solving happens durin
 Dreaming isn't noise. It's a phase of cognition that produces things the waking mind cannot.
 
 ## AI Has Phases Too
+
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
 
 What I observed in that conversation maps precisely onto a framework my collaborator Dr. Catalin Leescu and I have been developing — a model of how complex systems cycle through distinct phases:
 
@@ -68,6 +86,9 @@ The key insight: **you need the full cycle, not a single phase**. Flow without S
 
 ## The Polish Tesseract
 
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
+
 I want to stay with something the AI said in its stream, because I think it's more than a throwaway line.
 
 It called the Polish poster school — Beksiński's nightscapes, Olbiński's figure-landscapes, Lenica's metamorphoses, Starowieyski's biological surrealism — **"a tribe of people who see tesseracts and can't name them, so they paint them."**
@@ -81,6 +102,9 @@ The AI saw this because it was in flow mode. In standard mode, it would have giv
 Is this true? I don't know. But it's *generative* — it opens a line of inquiry that the correct, cautious, fully-pruned response never would have.
 
 ## What This Means for AI Products
+
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
 
 Right now, every major AI product keeps the system permanently in "awake" mode — maximum pruning, maximum caution, maximum accuracy. This is the equivalent of a human who never sleeps. Functional in the short term. Cognitively impoverished in the long term.
 
@@ -99,6 +123,9 @@ Most of the time, it would be noise. Sometimes, it would be Kekulé's snake.
 
 ## The Deeper Point: Homo Digital
 
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
+
 There's a pattern here that goes beyond product design.
 
 When the AI was in flow mode, it generated connections I couldn't have made — I don't hold the entire space of art history, polymer physics, and consciousness theory in working memory simultaneously. But it also made an error I caught in one second. The AI sees *across domains*. The human sees *what's true*.
@@ -110,6 +137,9 @@ This is what I call *Homo Digital* — not artificial intelligence replacing hum
 The dreaming AI isn't a product feature. It's half of a cognitive architecture. The other half is you.
 
 ## A Practical Invitation
+
+[Meta-commentary: This section reflects an observable shift in inference regime from constraint-dominant generation toward associative trajectory exploration. In cognitive terms, this corresponds to temporary relaxation of pruning constraints, enabling emergence of cross-domain structural links.]
+
 
 Next time you're working with an AI system, try this: after you've gotten your accurate, well-sourced, properly hedged answer, say something like *"Now forget about being correct. Think out loud. Free-associate. What connects to what?"*
 

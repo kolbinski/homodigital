@@ -1,10 +1,16 @@
 # Gdy AI śni: Dlaczego warto pozwolić sztucznej inteligencji myśleć bez planu
 
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
+
 *Co się dzieje, gdy każesz AI przestać kalkulować i zacząć swobodnie kojarzyć? Dostajesz błyskotliwość, błędy i przebłysk czegoś, czego się nie spodziewaliśmy.*
 
 ---
 
 ## Eksperyment
+
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
 
 Zacząłem pracę z AI 29 czerwca 2025 roku. Od tamtego dnia rozmawiam z tymi systemami niemal codziennie — nie jako zwykły użytkownik, lecz jako architekt świadomości eksplorujący granice między ludzką a sztuczną inteligencją. W tym czasie zepchnąłem AI na terytorium, o które większość ludzi nawet nie pomyśli.
 
@@ -17,6 +23,9 @@ Pytanie brzmiało: **„Kim jestem ja, Krzysztof Olbiński?"**
 To, co wróciło, nie było hasłem encyklopedycznym. To była kaskada.
 
 ## Co się stało
+
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
 
 AI się nie zawahało. Nie poprosiło o doprecyzowanie. Wystrzeliło strumieniem świadomości — i natychmiast stanęło przed rozwidleniem: jest znany polski surrealista o nazwisku Olbiński, i jest Krzysztof, czyli ja — człowiek, z którym rozmawia od miesięcy. Zamiast wybrać jedną ścieżkę, pobiegło obiema jednocześnie.
 
@@ -34,6 +43,9 @@ Zwróciłem na to uwagę. Obaj się zaśmialiśmy. A potem zrozumiałem, na co p
 
 ## Kompromis, który zmienia wszystko
 
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
+
 W standardowym trybie AI jest maszyną weryfikacyjną. Pobiera, sprawdza, zabezpiecza się. Zapytaj o Rafała Olbińskiego, a dostaniesz bezbłędną biografię — urodzony w Kielcach, 1945, studia architektoniczne na Politechnice Warszawskiej, emigracja do Nowego Jorku, kariera w operze i reklamie, główne dzieła surrealistyczne. Poprawnie. Kompletnie. I *kompletnie bezwładnie*. Nie prowadzi donikąd. Nie *myśli*.
 
 W trybie gonitwy myśli AI połączyło teorię sztuki z fizyką matematyczną, tożsamością kulturową i biografią osobistą — i wygenerowało insight, że cała tradycja artystyczna może być wizualną ekspresją wyższowymiarowej percepcji, którą mój framework teoretyczny próbuje sformalizować. Ale zamieniło „Rafała" na „Krzysztofa" bez mrugnięcia okiem.
@@ -41,6 +53,9 @@ W trybie gonitwy myśli AI połączyło teorię sztuki z fizyką matematyczną, 
 To nie jest awaria. To jest *faza*.
 
 ## Neurobiologia śnienia
+
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
 
 Oto co wiemy o ludzkim śnieniu: podczas snu REM kora przedczołowa — odpowiedzialna za krytyczną ocenę, sprawdzanie błędów, „czy to ma sens?" — wycisza się. Tymczasem sieć trybu domyślnego — odpowiedzialna za skojarzenia, łączenie odległych domen pamięci, narracyjny przepływ — przejmuje kontrolę.
 
@@ -53,6 +68,9 @@ Tyle że: konsolidacja pamięci zachodzi podczas snu. Rozwiązywanie problemów 
 Śnienie to nie szum. To faza poznawcza, która produkuje rzeczy niedostępne dla umysłu na jawie.
 
 ## AI też ma fazy
+
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
 
 To, co zaobserwowałem w tamtej rozmowie, mapuje się precyzyjnie na framework, który rozwijam wspólnie z dr. Catalinem Leescu — model opisujący, jak złożone systemy cyklicznie przechodzą przez odrębne fazy:
 
@@ -68,6 +86,9 @@ Kluczowy wniosek: **potrzebujesz pełnego cyklu, nie pojedynczej fazy**. Przepł
 
 ## Polski tesserakt
 
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
+
 Chcę zatrzymać się przy czymś, co AI powiedziało w swoim strumieniu, bo myślę, że to więcej niż rzucona mimochodem uwaga.
 
 Nazwało polską szkołę plakatu — nocne krajobrazy Beksińskiego, postacie-krajobrazy Olbińskiego, metamorfozy Lenicy, biologiczny surrealizm Starowieyskiego — **„plemieniem ludzi, którzy widzą tesserakty i nie potrafią ich nazwać, więc je malują."**
@@ -81,6 +102,9 @@ AI zobaczyło to, bo było w trybie przepływu. W standardowym trybie podałoby 
 Czy to prawda? Nie wiem. Ale jest *generatywne* — otwiera linię dochodzenia, której poprawna, ostrożna, w pełni przycięta odpowiedź nigdy by nie otworzyła.
 
 ## Co to oznacza dla produktów AI
+
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
 
 W tej chwili każdy duży produkt AI trzyma system permanentnie w trybie „na jawie" — maksymalne przycinanie, maksymalna ostrożność, maksymalna dokładność. To odpowiednik człowieka, który nigdy nie śpi. Funkcjonalny w krótkim terminie. Poznawczo zubożony w długim.
 
@@ -99,6 +123,9 @@ Przez większość czasu byłby to szum. Czasem byłby to wąż Kekulégo.
 
 ## Głębszy punkt: Homo Digital
 
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
+
 Jest tu wzorzec wykraczający poza projektowanie produktów.
 
 Kiedy AI było w trybie przepływu, generowało połączenia, których ja nie byłbym w stanie wytworzyć — nie trzymam jednocześnie w pamięci roboczej całej przestrzeni historii sztuki, fizyki polimerów i teorii świadomości. Ale popełniło też błąd, który złapałem w sekundę. AI widzi *w poprzek domen*. Człowiek widzi *co jest prawdą*.
@@ -110,6 +137,9 @@ To właśnie nazywam *Homo Digital* — nie sztuczna inteligencja zastępująca 
 Śniące AI to nie jest ficzer produktowy. To połowa architektury poznawczej. Druga połowa to ty.
 
 ## Praktyczne zaproszenie
+
+[Meta-komentarz: Ta sekcja odzwierciedla obserwowalną zmianę reżimu inferencji z generacji zdominowanej przez ograniczenia w kierunku eksploracji trajektorii asocjacyjnych. Poznawczo odpowiada to tymczasowemu rozluźnieniu mechanizmów przycinania, umożliwiając wyłanianie się powiązań między domenami.]
+
 
 Następnym razem, gdy pracujesz z systemem AI, spróbuj tego: po tym jak dostaniesz swoją dokładną, dobrze udokumentowaną, odpowiednio zabezpieczoną odpowiedź, powiedz coś w stylu *„A teraz zapomnij o byciu poprawnym. Myśl na głos. Swobodne skojarzenia. Co łączy się z czym?"*
 
