@@ -311,4 +311,27 @@
         <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/evidence/emergent-artifacts-pl.html" />
     </url>
 
+    <!-- BLOG EN -->
+    <url>
+        <loc>https://homodigital.io/blog/</loc>
+        <lastmod>2026-02-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/blog/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/blog/index-pl.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://homodigital.io/blog/" />
+    </url>
+
+    <!-- BLOG PL -->
+    <url>
+        <loc>https://homodigital.io/blog/index-pl.html</loc>
+        <lastmod>2026-02-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+
+        <xhtml:link rel="alternate" hreflang="en" href="https://homodigital.io/blog/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://homodigital.io/blog/index-pl.html" />
+    </url>
+
 </urlset>

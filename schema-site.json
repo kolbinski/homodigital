@@ -443,6 +443,43 @@
             "translationOfWork": {
                 "@id": "https://homodigital.io/evidence/emergent-artifacts-en.html#article"
             }
+        },
+        {
+            "@type": "Blog",
+            "@id": "https://homodigital.io/blog/#blog",
+            "name": "Homo Digital Blog",
+            "url": "https://homodigital.io/blog/",
+            "description": "Research notes, experiments, and insights from the Homo Digital initiative.",
+            "inLanguage": "en",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://homodigital.io/#website"
+            }
+        },
+        {
+            "@type": "Blog",
+            "@id": "https://homodigital.io/blog/index-pl.html#blog",
+            "name": "Blog Homo Digital",
+            "url": "https://homodigital.io/blog/index-pl.html",
+            "description": "Notatki badawcze, eksperymenty i spostrzeżenia z inicjatywy Homo Digital.",
+            "inLanguage": "pl",
+            "author": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "isPartOf": {
+                "@id": "https://homodigital.io/#website"
+            },
+            "translationOfWork": {
+                "@id": "https://homodigital.io/blog/#blog"
+            }
         }
     ]
 }
