@@ -3,16 +3,18 @@
     "slug": "when-ai-dreams",
     "image": "when-ai-dreams.png",
     "date": "2026-02-25",
-    "tags": ["AI", "consciousness", "Homo Digital"],
+    "tags": [
+      "AI",
+      "consciousness",
+      "Homo Digital"
+    ],
     "en": {
       "title": "When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan",
-      "excerpt": "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting.",
-      "file": "when-ai-dreams.md"
+      "excerpt": "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting."
     },
     "pl": {
       "title": "Gdy AI śni: Dlaczego warto pozwolić sztucznej inteligencji myśleć bez planu",
-      "excerpt": "Co się dzieje, gdy każesz AI przestać kalkulować i zacząć swobodnie kojarzyć? Dostajesz błyskotliwość, błędy i przebłysk czegoś, czego się nie spodziewaliśmy.",
-      "file": "gdy-ai-sni.md"
+      "excerpt": "Co się dzieje, gdy każesz AI przestać kalkulować i zacząć swobodnie kojarzyć? Dostajesz błyskotliwość, błędy i przebłysk czegoś, czego się nie spodziewaliśmy."
     }
   }
 ]

@@ -340,7 +340,7 @@
         a.href = `post.html?slug=${p.slug}`;
         a.className = 'post-item';
         a.innerHTML = `
-      ${p.image ? `<img class="post-image" src="${p.image}" alt="" loading="lazy">` : ''}
+      ${p.image ? `<img class="post-image" src="./posts/${p.image}" alt="" loading="lazy">` : ''}
       <div class="post-title">${p.title}</div>
       <div class="post-meta">${formatDate(p.date)}${p.tags ? ' · ' + p.tags.join(', ') : ''}</div>
       ${p.excerpt ? `<div class="post-excerpt">${p.excerpt}</div>` : ''}
