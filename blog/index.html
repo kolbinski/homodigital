@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Homo Digital ∞ + 1</title>
+  <meta name="description" content="Research notes, experiments, and insights from the Homo Digital initiative.">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-card: #111111;
+      --text: #e0e0e0;
+      --text-muted: #888888;
+      --accent: #ffffff;
+      --border: #222222;
+      --link: #cccccc;
+      --link-hover: #ffffff;
+      --max-width: 780px;
+    }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+    }
+
+    header nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    header .logo:hover { color: var(--accent); }
+
+    header .back {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    header .back:hover { color: var(--accent); }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 3rem;
+    }
+
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .post-item {
+      display: block;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+
+    .post-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .post-item:hover {
+      padding-left: 1rem;
+    }
+
+    .post-item:hover .post-title {
+      color: var(--accent);
+    }
+
+    .post-title {
+      font-size: 1.15rem;
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+      transition: color 0.2s ease;
+    }
+
+    .post-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+    }
+
+    .post-excerpt {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.2rem; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/" class="logo">Homo Digital ∞ + 1</a>
+    <a href="/" class="back">← Home</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Blog</h1>
+  <p class="subtitle">Research notes, experiments, and insights from the field.</p>
+
+  <div class="post-list" id="posts">
+    <!-- Posts loaded dynamically from posts.json -->
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 Homo Digital ∞ + 1 · <a href="/">Home</a> · <a href="https://linkedin.com/company/homo-digital">LinkedIn</a> · <a href="https://x.com/HomoDigitalInf">X</a></p>
+</footer>
+
+<script>
+  fetch('posts.json')
+    .then(r => r.json())
+    .then(posts => {
+      const container = document.getElementById('posts');
+      posts
+        .sort((a, b) => new Date(b.date) - new Date(a.date))
+        .forEach(post => {
+          const a = document.createElement('a');
+          a.href = `post.html?slug=${post.slug}`;
+          a.className = 'post-item';
+          a.innerHTML = `
+            <div class="post-title">${post.title}</div>
+            <div class="post-meta">${formatDate(post.date)}${post.tags ? ' · ' + post.tags.join(', ') : ''}</div>
+            ${post.excerpt ? `<div class="post-excerpt">${post.excerpt}</div>` : ''}
+          `;
+          container.appendChild(a);
+        });
+    })
+    .catch(() => {
+      document.getElementById('posts').innerHTML = '<p style="color:var(--text-muted)">No posts yet.</p>';
+    });
+
+  function formatDate(dateStr) {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+</script>
+
+</body>
+</html>
