@@ -18,11 +18,7 @@
     <meta property="og:title" id="og-title" content="" />
     <meta property="og:description" id="og-desc" content="" />
     <meta property="og:url" id="og-url" content="" />
-    <meta
-      property="og:image"
-      id="og-image"
-      content="https://homodigital.io/og-image.png"
-    />
+    <meta property="og:image" id="og-image" content="https://homodigital.io/og-image.png" />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -37,10 +33,7 @@
     <meta name="theme-color" content="#000000" />
 
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta
-      http-equiv="Referrer-Policy"
-      content="strict-origin-when-cross-origin"
-    />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,14 +54,8 @@
         --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        overflow-x: hidden;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { overflow-x: hidden; }
 
       body {
         font-family: 'Work Sans', sans-serif;
@@ -79,22 +66,12 @@
         overflow-x: hidden;
       }
 
-      a,
-      a:visited {
-        color: var(--gold);
-        text-decoration: none;
-      }
-      a:hover {
-        color: var(--white);
-      }
-      a:focus {
-        outline: 1px solid var(--gold);
-        outline-offset: 1px;
-      }
+      a, a:visited { color: var(--gold); text-decoration: none; }
+      a:hover { color: var(--white); }
+      a:focus { outline: 1px solid var(--gold); outline-offset: 1px; }
 
-      /* ── Header ── */
       header {
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        border-bottom: 1px solid rgba(212,175,55,0.2);
         padding: 1.5rem 2rem;
       }
       header nav {
@@ -107,15 +84,12 @@
       header .back {
         font-family: 'Work Sans', sans-serif;
         font-size: 0.85rem;
-        color: var(--gray-mid);
+        color: var(--gold);
         text-decoration: none;
-        transition: color 0.3s;
-        color: var(--gold);
         text-transform: uppercase;
+        transition: color 0.3s;
       }
-      header .back:hover {
-        color: var(--gold);
-      }
+      header .back:hover { color: var(--white); }
       .lang-switch {
         font-size: 0.9rem;
         font-weight: 500;
@@ -123,32 +97,21 @@
         gap: 10px;
         align-items: center;
       }
-      .lang-switch a {
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-      .lang-switch a.active {
-        color: var(--gold);
-      }
-      .lang-switch a:not(.active) {
-        color: var(--gray-light);
-      }
-      .lang-switch span {
-        color: var(--gray-mid);
-      }
+      .lang-switch a { text-decoration: none; transition: color 0.3s; }
+      .lang-switch a.active { color: var(--gold); }
+      .lang-switch a:not(.active) { color: var(--gray-light); }
+      .lang-switch span { color: var(--gray-mid); }
 
-      /* ── Main ── */
       main {
         max-width: var(--max-width);
         margin: 0 auto;
         padding: 80px 2rem 120px;
       }
 
-      /* ── Post header ── */
       .post-header {
         margin-bottom: 50px;
         padding-bottom: 40px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
       }
       .post-header h1 {
         font-family: 'Crimson Pro', serif;
@@ -174,19 +137,14 @@
         opacity: 0.9;
       }
 
-      /* ── Markdown content ── */
-      .content h1 {
-        display: none;
-      }
-
+      .content h1 { display: none; }
       .content h2 {
         font-family: 'Crimson Pro', serif;
         font-size: 1.6rem;
         font-weight: 400;
-        color: var(--white);
+        color: var(--gold);
         margin: 3rem 0 1.2rem;
         letter-spacing: -0.01em;
-        color: var(--gold);
       }
       .content h3 {
         font-family: 'Crimson Pro', serif;
@@ -201,24 +159,15 @@
         color: var(--gray-light);
         font-weight: 300;
       }
-      .content em {
-        color: var(--gray-mid);
-        font-style: italic;
-      }
-      .content strong {
-        color: var(--white);
-        font-weight: 500;
-      }
+      .content em { color: var(--gray-mid); font-style: italic; }
+      .content strong { color: var(--white); font-weight: 500; }
       .content a {
         color: var(--gold);
         text-decoration: underline;
         text-underline-offset: 3px;
         transition: color 0.3s;
       }
-      .content a:hover {
-        color: var(--white);
-      }
-
+      .content a:hover { color: var(--white); }
       .content blockquote {
         border-left: 2px solid var(--gold);
         padding-left: 1.5rem;
@@ -228,61 +177,41 @@
         font-family: 'Crimson Pro', serif;
         font-size: 1.1rem;
       }
-      .content ul,
-      .content ol {
+      .content ul, .content ol {
         margin: 1rem 0 1.5rem 1.5rem;
         color: var(--gray-light);
       }
-      .content li {
-        margin-bottom: 0.5rem;
-        font-weight: 300;
-      }
-
+      .content li { margin-bottom: 0.5rem; font-weight: 300; }
       .content hr {
         border: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 1px solid rgba(255,255,255,0.08);
         margin: 3rem 0;
       }
       .content code {
         font-family: 'SF Mono', 'Fira Code', monospace;
         font-size: 0.88em;
-        background: rgba(255, 255, 255, 0.06);
+        background: rgba(255,255,255,0.06);
         padding: 0.15em 0.4em;
         border-radius: 3px;
       }
       .content pre {
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(255,255,255,0.04);
         padding: 1.2rem;
         border-radius: 4px;
         overflow-x: auto;
         margin: 1.5rem 0;
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255,255,255,0.06);
       }
-      .content pre code {
-        background: none;
-        padding: 0;
-      }
-      .content img {
-        max-width: 100%;
-        border-radius: 4px;
-        margin: 1.5rem 0;
-      }
+      .content pre code { background: none; padding: 0; }
+      .content img { max-width: 100%; border-radius: 4px; margin: 1.5rem 0; }
 
-      .loading {
-        color: var(--gray-mid);
-        font-style: italic;
-        padding: 2rem 0;
-      }
-      .error {
-        color: #cc6666;
-        padding: 2rem 0;
-      }
+      .loading { color: var(--gray-mid); font-style: italic; padding: 2rem 0; }
+      .error { color: #cc6666; padding: 2rem 0; }
 
-      /* ── Post footer ── */
       .post-footer {
         margin-top: 60px;
         padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 1px solid rgba(255,255,255,0.08);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -293,170 +222,119 @@
         font-size: 0.9rem;
         transition: color 0.3s;
       }
-      .post-footer a:hover {
-        color: var(--gold);
-      }
+      .post-footer a:hover { color: var(--gold); }
 
-      /* ── Footer ── */
       footer {
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 1px solid rgba(255,255,255,0.08);
         padding: 40px 2rem;
         text-align: center;
         font-size: 0.8rem;
         color: var(--gray-mid);
       }
-      footer a {
-        color: var(--gray-mid);
-        text-decoration: none;
-      }
-      footer a:hover {
-        color: var(--gold);
-      }
+      footer a { color: var(--gray-mid); text-decoration: none; }
+      footer a:hover { color: var(--gold); }
 
       @media (max-width: 600px) {
-        main {
-          padding: 40px 1.2rem 80px;
-        }
-        .post-header h1 {
-          font-size: 1.6rem;
-        }
+        main { padding: 40px 1.2rem 80px; }
+        .post-header h1 { font-size: 1.6rem; }
       }
     </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="./index.html" class="back">← Back to posts</a>
-        <div class="lang-switch">
-          <a href="#" id="lang-en" class="active">EN</a>
-          <span>|</span>
-          <a href="#" id="lang-pl">PL</a>
-        </div>
-      </nav>
-    </header>
 
-    <main>
-      <div class="post-header" id="post-header" style="display: none">
-        <h1 id="post-title"></h1>
-        <div class="post-meta" id="post-meta"></div>
-        <img
-          class="post-hero-image"
-          id="post-image"
-          style="display: none"
-          alt=""
-        />
+  <header>
+    <nav>
+      <a href="./index.html" class="back">← All posts</a>
+      <div class="lang-switch">
+        <a href="#" id="lang-en" class="active">EN</a>
+        <span>|</span>
+        <a href="#" id="lang-pl">PL</a>
       </div>
+    </nav>
+  </header>
 
-      <div class="content" id="content">
-        <p class="loading">Loading…</p>
-      </div>
+  <main>
+    <div class="post-header" id="post-header" style="display:none">
+      <h1 id="post-title"></h1>
+      <div class="post-meta" id="post-meta"></div>
+      <img class="post-hero-image" id="post-image" style="display:none" alt="">
+    </div>
 
-      <div class="post-footer" id="post-footer" style="display: none">
-        <a href="index.html">← All posts</a>
-        <a href="/">Home</a>
-      </div>
-    </main>
+    <div class="content" id="content">
+      <p class="loading">Loading…</p>
+    </div>
 
-    <footer>
-      <p>© 2026 Homo Digital ∞ + 1</p>
-    </footer>
+    <div class="post-footer" id="post-footer" style="display:none">
+      <a href="index.html">← All posts</a>
+      <a href="/">Home</a>
+    </div>
+  </main>
 
-    <script>
-      const POSTS = [
-        {
-          slug: 'when-ai-dreams',
-          slugPl: 'gdy-ai-sni',
-          image: 'when-ai-dreams.png',
-          date: '2026-02-25',
-          tags: ['AI', 'consciousness', 'Homo Digital'],
-          title:
-            'When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan',
-          excerpt:
-            "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting.",
-        },
-      ];
+  <footer>
+    <p>© 2026 Homo Digital ∞ + 1</p>
+  </footer>
 
-      function formatDate(d) {
-        return new Date(d).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        });
-      }
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug');
 
-      const params = new URLSearchParams(window.location.search);
-      const slug = params.get('slug');
+    if (!slug) {
+      document.getElementById('content').innerHTML = '<p class="error">No post specified.</p>';
+    } else {
+      fetch('posts.json')
+        .then(r => r.json())
+        .then(posts => {
+          const post = posts.find(p => p.slug === slug);
+          if (!post) {
+            document.getElementById('content').innerHTML = '<p class="error">Post not found.</p>';
+            return;
+          }
 
-      if (!slug) {
-        document.getElementById('content').innerHTML =
-          '<p class="error">No post specified.</p>';
-      } else {
-        const post = POSTS.find(p => p.slug === slug);
-        if (post) {
-          document.getElementById('post-title').textContent = post.title;
-          document.getElementById('post-meta').textContent =
-            formatDate(post.date) +
-            (post.tags ? ' · ' + post.tags.join(', ') : '');
+          // Header
+          document.getElementById('post-title').textContent = post.en.title;
+          const date = new Date(post.date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+          const tags = post.tags ? ' · ' + post.tags.join(', ') : '';
+          document.getElementById('post-meta').textContent = date + tags;
           document.getElementById('post-header').style.display = 'block';
           document.getElementById('post-footer').style.display = 'flex';
 
+          // Image
           if (post.image) {
             const img = document.getElementById('post-image');
-            img.src = './posts/' + post.image;
+            img.src = 'posts/' + post.image;
             img.style.display = 'block';
           }
 
           // Lang switcher
-          document.getElementById('lang-en').href =
-            `post.html?slug=${post.slug}`;
-          document.getElementById('lang-pl').href = post.slugPl
-            ? `post-pl.html?slug=${post.slugPl}`
-            : `post-pl.html?slug=${post.slug}`;
+          document.getElementById('lang-en').href = `post.html?slug=${post.slug}`;
+          document.getElementById('lang-pl').href = `post-pl.html?slug=${post.slugPl || post.slug}`;
 
           // Meta tags
-          document.getElementById('page-title').textContent =
-            post.title + ' — Homo Digital';
-          document
-            .getElementById('page-desc')
-            .setAttribute('content', post.excerpt || '');
-          document
-            .getElementById('og-title')
-            .setAttribute('content', post.title);
-          document
-            .getElementById('og-desc')
-            .setAttribute('content', post.excerpt || '');
-          document
-            .getElementById('og-url')
-            .setAttribute('content', window.location.href);
-          document
-            .getElementById('tw-title')
-            .setAttribute('content', post.title);
-          document
-            .getElementById('tw-desc')
-            .setAttribute('content', post.excerpt || '');
+          document.getElementById('page-title').textContent = post.en.title + ' — Homo Digital';
+          document.getElementById('page-desc').setAttribute('content', post.en.excerpt || '');
+          document.getElementById('og-title').setAttribute('content', post.en.title);
+          document.getElementById('og-desc').setAttribute('content', post.en.excerpt || '');
+          document.getElementById('og-url').setAttribute('content', window.location.href);
+          document.getElementById('tw-title').setAttribute('content', post.en.title);
+          document.getElementById('tw-desc').setAttribute('content', post.en.excerpt || '');
           if (post.image) {
-            document
-              .getElementById('og-image')
-              .setAttribute(
-                'content',
-                'https://homodigital.io/blog/posts/' + post.image,
-              );
+            document.getElementById('og-image').setAttribute('content', 'https://homodigital.io/blog/posts/' + post.image);
           }
-        }
 
-        fetch(`posts/${slug}.md`)
-          .then(r => {
-            if (!r.ok) throw new Error('Not found');
-            return r.text();
-          })
-          .then(md => {
-            document.getElementById('content').innerHTML = marked.parse(md);
-          })
-          .catch(() => {
-            document.getElementById('content').innerHTML =
-              '<p class="error">Post not found.</p>';
-          });
-      }
-    </script>
+          // Load markdown — slug is the filename
+          return fetch(`posts/${slug}.md`);
+        })
+        .then(r => {
+          if (!r || !r.ok) throw new Error('Not found');
+          return r.text();
+        })
+        .then(md => {
+          document.getElementById('content').innerHTML = marked.parse(md);
+        })
+        .catch(() => {
+          document.getElementById('content').innerHTML = '<p class="error">Post not found.</p>';
+        });
+    }
+  </script>
   </body>
 </html>
