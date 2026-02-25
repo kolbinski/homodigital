@@ -1,273 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — Homo Digital ∞ + 1</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Homo Digital ∞ + 1</title>
 
-  <meta name="description" content="Research notes, experiments, and insights from the Homo Digital initiative.">
-  <meta name="keywords" content="Homo Digital, AI, artificial intelligence, consciousness, digital identity, think tank, human-AI collaboration, blog">
-  <meta name="author" content="Krzysztof Olbiński">
-  <meta name="creator" content="Homo Digital ∞ + 1">
-  <meta name="publisher" content="Homo Digital ∞ + 1">
-  <meta name="copyright" content="© 2026 Krzysztof Olbiński / Homo Digital ∞ + 1">
-  <meta name="robots" content="index, follow">
+    <meta
+      name="description"
+      content="Research notes, experiments, and insights from the Homo Digital initiative."
+    />
+    <meta
+      name="keywords"
+      content="Homo Digital, AI, artificial intelligence, consciousness, digital identity, think tank, human-AI collaboration, blog"
+    />
+    <meta name="author" content="Krzysztof Olbiński" />
+    <meta name="creator" content="Homo Digital ∞ + 1" />
+    <meta name="publisher" content="Homo Digital ∞ + 1" />
+    <meta
+      name="copyright"
+      content="© 2026 Krzysztof Olbiński / Homo Digital ∞ + 1"
+    />
+    <meta name="robots" content="index, follow" />
 
-  <meta http-equiv="content-language" content="en">
-  <link rel="alternate" href="https://homodigital.io/blog/" hreflang="en">
-  <link rel="alternate" href="https://homodigital.io/blog/index-pl.html" hreflang="pl">
-  <link rel="alternate" href="https://homodigital.io/blog/" hreflang="x-default">
-  <link rel="canonical" href="https://homodigital.io/blog/">
+    <meta http-equiv="content-language" content="en" />
+    <link rel="alternate" href="https://homodigital.io/blog/" hreflang="en" />
+    <link
+      rel="alternate"
+      href="https://homodigital.io/blog/index-pl.html"
+      hreflang="pl"
+    />
+    <link
+      rel="alternate"
+      href="https://homodigital.io/blog/"
+      hreflang="x-default"
+    />
+    <link rel="canonical" href="https://homodigital.io/blog/" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Blog — Homo Digital ∞ + 1">
-  <meta property="og:description" content="Research notes, experiments, and insights from the Homo Digital initiative.">
-  <meta property="og:url" content="https://homodigital.io/blog/">
-  <meta property="og:image" content="https://homodigital.io/og-image.png">
-  <meta property="og:site_name" content="Homo Digital">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="pl_PL">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog — Homo Digital ∞ + 1" />
+    <meta
+      property="og:description"
+      content="Research notes, experiments, and insights from the Homo Digital initiative."
+    />
+    <meta property="og:url" content="https://homodigital.io/blog/" />
+    <meta property="og:image" content="https://homodigital.io/og-image.png" />
+    <meta property="og:site_name" content="Homo Digital" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="pl_PL" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Blog — Homo Digital ∞ + 1">
-  <meta name="twitter:description" content="Research notes, experiments, and insights from the Homo Digital initiative.">
-  <meta name="twitter:image" content="https://homodigital.io/og-image.png">
-  <meta name="twitter:creator" content="@HomoDigitalInf">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blog — Homo Digital ∞ + 1" />
+    <meta
+      name="twitter:description"
+      content="Research notes, experiments, and insights from the Homo Digital initiative."
+    />
+    <meta name="twitter:image" content="https://homodigital.io/og-image.png" />
+    <meta name="twitter:creator" content="@HomoDigitalInf" />
 
-  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="shortcut icon" href="../favicon.png">
-  <link rel="apple-touch-icon" href="../favicon.png">
-  <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link rel="apple-touch-icon" href="../favicon.png" />
+    <meta name="theme-color" content="#000000" />
 
-  <meta name="application-name" content="Homo Digital ∞ + 1">
-  <meta name="apple-mobile-web-app-title" content="Homo Digital">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Homo Digital ∞ + 1" />
+    <meta name="apple-mobile-web-app-title" content="Homo Digital" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Homo Digital Blog",
-    "url": "https://homodigital.io/blog/",
-    "description": "Research notes, experiments, and insights from the Homo Digital initiative.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Homo Digital ∞ + 1",
-      "url": "https://homodigital.io"
-    }
-  }
-  </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Homo Digital Blog",
+        "url": "https://homodigital.io/blog/",
+        "description": "Research notes, experiments, and insights from the Homo Digital initiative.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Homo Digital ∞ + 1",
+          "url": "https://homodigital.io"
+        }
+      }
+    </script>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap');
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap');
 
-    :root {
-      --black: #0a0a0a;
-      --white: #fafafa;
-      --gold: #d4af37;
-      --gray-dark: #2a2a2a;
-      --gray-mid: #666;
-      --gray-light: #e5e5e5;
-      --max-width: 800px;
-      --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+      :root {
+        --black: #0a0a0a;
+        --white: #fafafa;
+        --gold: #d4af37;
+        --gray-dark: #2a2a2a;
+        --gray-mid: #666;
+        --gray-light: #e5e5e5;
+        --max-width: 800px;
+        --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { overflow-x: hidden; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        overflow-x: hidden;
+      }
 
-    body {
-      font-family: 'Work Sans', sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.7;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
+      body {
+        font-family: 'Work Sans', sans-serif;
+        background: var(--black);
+        color: var(--white);
+        line-height: 1.7;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
 
-    a, a:visited { color: var(--gold); text-decoration: none; }
-    a:hover { color: var(--white); }
-    a:focus { outline: 1px solid var(--gold); outline-offset: 1px; }
+      a,
+      a:visited {
+        color: var(--gold);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--white);
+      }
+      a:focus {
+        outline: 1px solid var(--gold);
+        outline-offset: 1px;
+      }
 
-    /* ── Header ── */
-    header {
-      border-bottom: 1px solid rgba(212,175,55,0.2);
-      padding: 1.5rem 2rem;
-    }
-    header nav {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header .back {
-      font-family: 'Work Sans', sans-serif;
-      font-size: 0.85rem;
-      color: var(--gray-mid);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    header .back:hover { color: var(--gold); }
-    .lang-switch {
-      font-size: 0.9rem;
-      font-weight: 500;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .lang-switch a {
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .lang-switch a.active { color: var(--gold); }
-    .lang-switch a:not(.active) { color: var(--gray-light); }
-    .lang-switch span { color: var(--gray-mid); }
+      /* ── Header ── */
+      header {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        padding: 1.5rem 2rem;
+      }
+      header nav {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .back {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.85rem;
+        color: var(--gray-mid);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      header .back:hover {
+        color: var(--gold);
+      }
+      .lang-switch {
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .lang-switch a {
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .lang-switch a.active {
+        color: var(--gold);
+      }
+      .lang-switch a:not(.active) {
+        color: var(--gray-light);
+      }
+      .lang-switch span {
+        color: var(--gray-mid);
+      }
 
-    /* ── Main ── */
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 80px 2rem 120px;
-    }
-    h1 {
-      font-family: 'Crimson Pro', serif;
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      font-weight: 300;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-      color: var(--white);
-    }
-    .subtitle {
-      color: var(--gray-mid);
-      font-size: 1rem;
-      margin-bottom: 60px;
-      font-weight: 300;
-    }
+      /* ── Main ── */
+      main {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 80px 2rem 120px;
+      }
+      h1 {
+        font-family: 'Crimson Pro', serif;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300;
+        letter-spacing: -0.01em;
+        margin-bottom: 0.5rem;
+        color: var(--white);
+      }
+      .subtitle {
+        color: var(--gray-mid);
+        font-size: 1rem;
+        margin-bottom: 60px;
+        font-weight: 300;
+      }
 
-    /* ── Post list ── */
-    .post-list { display: flex; flex-direction: column; gap: 0; }
+      /* ── Post list ── */
+      .post-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
 
-    .post-item {
-      display: block;
-      padding: 40px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      text-decoration: none;
-      color: var(--white);
-      transition: var(--transition);
-    }
-    .post-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .post-item:hover { padding-left: 20px; }
-    .post-item:hover .post-title { color: var(--gold); }
+      .post-item {
+        display: block;
+        padding: 40px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        text-decoration: none;
+        color: var(--white);
+        transition: var(--transition);
+      }
+      .post-item:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .post-item:hover {
+        padding-left: 20px;
+      }
+      .post-item:hover .post-title {
+        color: var(--gold);
+      }
 
-    .post-image {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 2px;
-      margin-bottom: 20px;
-      opacity: 0.85;
-      transition: var(--transition);
-    }
-    .post-item:hover .post-image { opacity: 1; }
+      .post-image {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 2px;
+        margin-bottom: 20px;
+        opacity: 0.85;
+        transition: var(--transition);
+      }
+      .post-item:hover .post-image {
+        opacity: 1;
+      }
 
-    .post-title {
-      font-family: 'Crimson Pro', serif;
-      font-size: 1.6rem;
-      font-weight: 400;
-      margin-bottom: 8px;
-      line-height: 1.3;
-      transition: color 0.3s ease;
-    }
-    .post-meta {
-      font-size: 0.8rem;
-      color: var(--gray-mid);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .post-excerpt {
-      font-size: 0.95rem;
-      color: var(--gray-light);
-      line-height: 1.7;
-      font-weight: 300;
-    }
+      .post-title {
+        font-family: 'Crimson Pro', serif;
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-bottom: 8px;
+        line-height: 1.3;
+        transition: color 0.3s ease;
+      }
+      .post-meta {
+        font-size: 0.8rem;
+        color: var(--gray-mid);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .post-excerpt {
+        font-size: 0.95rem;
+        color: var(--gray-light);
+        line-height: 1.7;
+        font-weight: 300;
+      }
 
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding: 40px 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--gray-mid);
-    }
-    footer a { color: var(--gray-mid); text-decoration: none; }
-    footer a:hover { color: var(--gold); }
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 40px 2rem;
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--gray-mid);
+      }
+      footer a {
+        color: var(--gray-mid);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--gold);
+      }
 
-    @media (max-width: 600px) {
-      main { padding: 40px 1.2rem 80px; }
-    }
-  </style>
-</head>
-<body>
+      @media (max-width: 600px) {
+        main {
+          padding: 40px 1.2rem 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/" class="back">← Back to homepage</a>
+        <div class="lang-switch">
+          <a href="index.html" class="active">EN</a>
+          <span>|</span>
+          <a href="index-pl.html">PL</a>
+        </div>
+      </nav>
+    </header>
 
-<header>
-  <nav>
-    <a href="/" class="back">← Back to homepage</a>
-    <div class="lang-switch">
-      <a href="index.html" class="active">EN</a>
-      <span>|</span>
-      <a href="index-pl.html">PL</a>
-    </div>
-  </nav>
-</header>
+    <main>
+      <h1>Blog</h1>
+      <p class="subtitle">
+        Research notes, experiments, and insights from the field.
+      </p>
+      <div class="post-list" id="posts"></div>
+    </main>
 
-<main>
-  <h1>Blog</h1>
-  <p class="subtitle">Research notes, experiments, and insights from the field.</p>
-  <div class="post-list" id="posts"></div>
-</main>
+    <footer>
+      <p>
+        © 2026 Homo Digital ∞ + 1 · <a href="/">Home</a> ·
+        <a href="https://linkedin.com/company/homo-digital">LinkedIn</a> ·
+        <a href="https://x.com/HomoDigitalInf">X</a>
+      </p>
+    </footer>
 
-<footer>
-  <p>© 2026 Homo Digital ∞ + 1 · <a href="/">Home</a> · <a href="https://linkedin.com/company/homo-digital">LinkedIn</a> · <a href="https://x.com/HomoDigitalInf">X</a></p>
-</footer>
+    <script>
+      const POSTS = [
+        {
+          slug: 'when-ai-dreams',
+          image: 'when-ai-dreams.png',
+          date: '2026-02-25',
+          tags: ['AI', 'consciousness', 'Homo Digital'],
+          title:
+            'When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan',
+          excerpt:
+            "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting.",
+        },
+      ];
 
-<script>
-  const POSTS = [
-    {
-      slug: "when-ai-dreams",
-      image: "when-ai-dreams.png",
-      date: "2026-02-25",
-      tags: ["AI", "consciousness", "Homo Digital"],
-      title: "When AI Dreams: The Case for Letting Artificial Intelligence Think Without a Plan",
-      excerpt: "What happens when you tell an AI to stop calculating and start free-associating? You get brilliance, errors, and a glimpse of something we weren't expecting."
-    }
-  ];
+      function formatDate(d) {
+        return new Date(d).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });
+      }
 
-  function formatDate(d) {
-    return new Date(d).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
-  }
-
-  const c = document.getElementById('posts');
-  POSTS.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(p => {
-    const a = document.createElement('a');
-    a.href = `post.html?slug=${p.slug}`;
-    a.className = 'post-item';
-    a.innerHTML = `
-      ${p.image ? `<img class="post-image" src="images/${p.image}" alt="" loading="lazy">` : ''}
+      const c = document.getElementById('posts');
+      POSTS.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(p => {
+        const a = document.createElement('a');
+        a.href = `post.html?slug=${p.slug}`;
+        a.className = 'post-item';
+        a.innerHTML = `
+      ${p.image ? `<img class="post-image" src="${p.image}" alt="" loading="lazy">` : ''}
       <div class="post-title">${p.title}</div>
       <div class="post-meta">${formatDate(p.date)}${p.tags ? ' · ' + p.tags.join(', ') : ''}</div>
       ${p.excerpt ? `<div class="post-excerpt">${p.excerpt}</div>` : ''}
     `;
-    c.appendChild(a);
-  });
-</script>
-</body>
+        c.appendChild(a);
+      });
+    </script>
+  </body>
 </html>
