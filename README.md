@@ -8,7 +8,7 @@
 
 Homo Digital is an independent research initiative investigating what emerges when intelligence becomes relational — not owned by a single agent, but co-generated between human and artificial cognition.
 
-We do not build AI. We study what happens _between_ human and AI.
+We do not build AI. We study what happens _between_ human and _AI_.
 
 ## Core Research Areas
 
