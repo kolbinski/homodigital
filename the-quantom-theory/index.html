@@ -1,1 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Quantóm Theory — A Series by Krzysztof Olbiński</title>
+<meta name="description" content="A comedy-drama about consciousness, ambition, and the question machines can't answer. 10×60 min premium series.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --bg-card: #111114;
+    --bg-card-hover: #18181d;
+    --text: #e8e6e1;
+    --text-dim: #a8a59d;
+    --text-muted: #7a776f;
+    --accent: #c9a84c;
+    --accent-glow: #c9a84c33;
+    --accent-dim: #a08535;
+    --border: #28282f;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Jost', sans-serif;
+  }
 
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* === HERO === */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+    animation: lineIn 2s ease-out forwards;
+  }
+
+  @keyframes lineIn {
+    from { opacity: 0; height: 0; }
+    to { opacity: 1; height: 120px; }
+  }
+
+  .hero-pre {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    animation: fadeUp 1s 0.5s ease-out both;
+  }
+
+  .hero-title {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.3em;
+    animation: fadeUp 1.2s 0.7s ease-out both;
+  }
+
+  .hero-title .o-accent {
+    color: var(--accent);
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-title .o-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.5;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.7; transform: translateX(-50%) scale(1.5); }
+  }
+
+  .hero-sub {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--text-dim);
+    max-width: 600px;
+    margin-bottom: 3rem;
+    animation: fadeUp 1.2s 0.9s ease-out both;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    animation: fadeUp 1s 1.1s ease-out both;
+  }
+
+  .hero-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .hero-meta .dot {
+    width: 4px;
+    height: 4px;
+    background: var(--accent-dim);
+    border-radius: 50%;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeUp 1s 1.5s ease-out both;
+  }
+
+  .scroll-hint svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-muted);
+    animation: bob 2s ease-in-out infinite;
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* === POSTER SECTION === */
+  .poster-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+    text-align: center;
+  }
+
+  .poster-frame {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    aspect-ratio: 2/3;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .poster-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .poster-placeholder {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .logline {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-dim);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .logline em {
+    color: var(--text);
+    font-style: normal;
+  }
+
+  /* === ABOUT THE TITLE === */
+  .title-explanation {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .title-explanation h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text);
+  }
+
+  .title-explanation h2 .o-accent {
+    color: var(--accent);
+  }
+
+  .title-layers {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .title-layer {
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border);
+    transition: border-color 0.3s;
+  }
+
+  .title-layer:hover {
+    border-left-color: var(--accent);
+  }
+
+  .title-layer h3 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .title-layer p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  /* === DOCUMENTS SECTION === */
+  .documents {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .doc-group {
+    margin-bottom: 3rem;
+  }
+
+  .doc-group-title {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .doc-list {
+    display: grid;
+    gap: 1px;
+  }
+
+  .doc-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background: var(--bg-card);
+    border-radius: 2px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    gap: 1rem;
+  }
+
+  .doc-link:hover {
+    background: var(--bg-card-hover);
+    transform: translateX(4px);
+  }
+
+  .doc-link:hover .doc-title {
+    color: var(--accent);
+  }
+
+  .doc-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .doc-title {
+    font-weight: 400;
+    font-size: 0.95rem;
+    transition: color 0.25s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .doc-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
+  .doc-badge {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+  }
+
+  .doc-arrow {
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: transform 0.25s, color 0.25s;
+  }
+
+  .doc-link:hover .doc-arrow {
+    transform: translateX(3px);
+    color: var(--accent);
+  }
+
+  /* === CREDENTIALS === */
+  .credentials {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .cred-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .cred-item {
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 2px;
+  }
+
+  .cred-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .cred-value {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .cred-value a {
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent-dim);
+    transition: border-color 0.2s;
+  }
+
+  .cred-value a:hover {
+    border-color: var(--accent);
+  }
+
+  /* === FOOTER === */
+  footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-logo {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+
+  .footer-copy a {
+    color: var(--text-dim);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .footer-copy a:hover {
+    border-color: var(--text-dim);
+  }
+
+  /* === RESPONSIVE === */
+  @media (max-width: 600px) {
+    .hero-meta { flex-direction: column; gap: 0.75rem; }
+    .cred-grid { grid-template-columns: 1fr; }
+    .doc-link { padding: 0.85rem 1rem; }
+    .doc-badge { display: none; }
+  }
+
+  /* === ANIMATIONS ON SCROLL === */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-pre">A series created by Krzysztof Olbiński</div>
+  <h1 class="hero-title">The Quant<span class="o-accent">ó</span>m Theory</h1>
+  <p class="hero-sub">A comedy-drama about consciousness, ambition,<br>and the question machines can't answer</p>
+  <div class="hero-meta">
+    <span>10 × 60 min</span>
+    <span class="dot"></span>
+    <span>Premium Drama</span>
+    <span class="dot"></span>
+    <span>English language</span>
+    <span class="dot"></span>
+    <span>Season 1 complete</span>
+  </div>
+  <div class="scroll-hint">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- POSTER + LOGLINE -->
+<section class="poster-section fade-in">
+  <div class="poster-frame">
+    <!-- Replace src with actual poster URL -->
+    <!-- <img src="poster.jpg" alt="The Quantóm Theory — Series Poster"> -->
+    <span class="poster-placeholder">Poster coming soon</span>
+  </div>
+  <p class="logline">
+    <em>A young Polish quantum physicist wins the Nobel Prize</em> for a theory that bridges consciousness and quantum mechanics. His rival — a Stanford laureate whose life's work says the theory is impossible — discovers that three months of trying to destroy it only made it stronger.
+  </p>
+</section>
+
+<!-- ABOUT THE TITLE -->
+<section class="title-explanation fade-in">
+  <h2>Why <span class="o-accent">ó</span></h2>
+  <div class="title-layers">
+    <div class="title-layer">
+      <h3>Polish Identity</h3>
+      <p>The ó is a Polish diacritical mark. One character announces that this story comes from Poland. No American writer would invent this title. The ó is authentic — it cannot be faked.</p>
+    </div>
+    <div class="title-layer">
+      <h3>Closed &amp; Open</h3>
+      <p>In Polish, ó is a closed <em>u</em> — it sounds like one thing but is written as another. Like superposition: the state that is both until observed. The show's central metaphor, encoded in a single character.</p>
+    </div>
+    <div class="title-layer">
+      <h3>Genesis</h3>
+      <p>Visually, ó resembles a fertilized cell — an ovum with a single line of origin. The show is about the birth of a theory, the birth of a new kind of scientist, the birth of something between fiction and reality.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="documents fade-in">
+  <div class="section-header">
+    <h2>Series Package</h2>
+    <p>20 development documents — full Season 1 ready for production</p>
+  </div>
+
+  <!-- CORE IP -->
+  <div class="doc-group">
+    <div class="doc-group-title">Core IP</div>
+    <div class="doc-list">
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/the-quantum-theory-series-bible.md">
+        <div class="doc-info">
+          <div class="doc-title">Series Bible</div>
+          <div class="doc-desc">Concept, tone, characters, format, season arcs</div>
+        </div>
+        <span class="doc-badge">Bible</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/character_bible.md">
+        <div class="doc-info">
+          <div class="doc-title">Character Bible</div>
+          <div class="doc-desc">Full character profiles, arcs, and relationship dynamics</div>
+        </div>
+        <span class="doc-badge">Bible</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/series_synopsis.md">
+        <div class="doc-info">
+          <div class="doc-title">Series Synopsis</div>
+          <div class="doc-desc">Four-season overview</div>
+        </div>
+        <span class="doc-badge">Overview</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/one_pager.md">
+        <div class="doc-info">
+          <div class="doc-title">One-Pager</div>
+          <div class="doc-desc">Pitch summary — logline, hook, comparables, why now</div>
+        </div>
+        <span class="doc-badge">Pitch</span>
+        <span class="doc-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SEASON 1 SCRIPTS -->
+  <div class="doc-group">
+    <div class="doc-group-title">Season 1 — Scripts &amp; Outlines</div>
+    <div class="doc-list">
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/the_quantum_theory_pilot.md">
+        <div class="doc-info">
+          <div class="doc-title">Pilot Screenplay</div>
+          <div class="doc-desc">Episode 1: "The Measurement Problem" — full script</div>
+        </div>
+        <span class="doc-badge">Script</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/season1_beat_sheet.md">
+        <div class="doc-info">
+          <div class="doc-title">Season 1 Beat Sheet</div>
+          <div class="doc-desc">10-episode structural overview with key beats</div>
+        </div>
+        <span class="doc-badge">Structure</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/outlines_ep_02_05.md">
+        <div class="doc-info">
+          <div class="doc-title">Episode Outlines 2–5</div>
+          <div class="doc-desc">Detailed scene-by-scene outlines</div>
+        </div>
+        <span class="doc-badge">Outlines</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/outlines_ep_06_09.md">
+        <div class="doc-info">
+          <div class="doc-title">Episode Outlines 6–9</div>
+          <div class="doc-desc">Detailed scene-by-scene outlines</div>
+        </div>
+        <span class="doc-badge">Outlines</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/ep_10_finale_screenplay.md">
+        <div class="doc-info">
+          <div class="doc-title">Season Finale Screenplay</div>
+          <div class="doc-desc">Episode 10: "The Observer Effect" — full script</div>
+        </div>
+        <span class="doc-badge">Script</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/fourth_wall_scene.md">
+        <div class="doc-info">
+          <div class="doc-title">The Fourth Wall Scene</div>
+          <div class="doc-desc">Signature scene where fiction and reality blur</div>
+        </div>
+        <span class="doc-badge">Scene</span>
+        <span class="doc-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- SCIENCE -->
+  <div class="doc-group">
+    <div class="doc-group-title">Science &amp; Research</div>
+    <div class="doc-list">
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/science_bible.md">
+        <div class="doc-info">
+          <div class="doc-title">Science Bible</div>
+          <div class="doc-desc">Real physics and consciousness research behind the show</div>
+        </div>
+        <span class="doc-badge">Science</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/r_equation_reference.md">
+        <div class="doc-info">
+          <div class="doc-title">The R Equation</div>
+          <div class="doc-desc">The show's central equation — how it works in the story</div>
+        </div>
+        <span class="doc-badge">Science</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/r_equation_evolution.md">
+        <div class="doc-info">
+          <div class="doc-title">R Equation Evolution</div>
+          <div class="doc-desc">How the equation develops across Season 1</div>
+        </div>
+        <span class="doc-badge">Science</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/role_of_ai_reference.md">
+        <div class="doc-info">
+          <div class="doc-title">The Role of AI</div>
+          <div class="doc-desc">AI as consequence, not theme — the show's unique framing</div>
+        </div>
+        <span class="doc-badge">Science</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/real_world_convergences.md">
+        <div class="doc-info">
+          <div class="doc-title">Real-World Convergences</div>
+          <div class="doc-desc">Where the fiction parallels real research — and why</div>
+        </div>
+        <span class="doc-badge">Meta</span>
+        <span class="doc-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- PRODUCTION & TONE -->
+  <div class="doc-group">
+    <div class="doc-group-title">Production &amp; Tone</div>
+    <div class="doc-list">
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/production_overview.md">
+        <div class="doc-info">
+          <div class="doc-title">Production Overview</div>
+          <div class="doc-desc">Budget framework, casting, locations, schedule</div>
+        </div>
+        <span class="doc-badge">Production</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/tone_and_comps.md">
+        <div class="doc-info">
+          <div class="doc-title">Tone &amp; Comparables</div>
+          <div class="doc-desc">Ted Lasso meets Arrival — visual and tonal references</div>
+        </div>
+        <span class="doc-badge">Tone</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/voice_and_language_guide.md">
+        <div class="doc-info">
+          <div class="doc-title">Voice &amp; Language Guide</div>
+          <div class="doc-desc">Dialogue style, bilingual elements, character voices</div>
+        </div>
+        <span class="doc-badge">Writing</span>
+        <span class="doc-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- DEVELOPMENT -->
+  <div class="doc-group">
+    <div class="doc-group-title">Development</div>
+    <div class="doc-list">
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/pilot_rewrite_notes.md">
+        <div class="doc-info">
+          <div class="doc-title">Pilot Rewrite Notes</div>
+          <div class="doc-desc">Revision log and structural decisions</div>
+        </div>
+        <span class="doc-badge">Dev</span>
+        <span class="doc-arrow">→</span>
+      </a>
+      <a class="doc-link" href="https://homodigital.io/view.html?file=./the-quantom-theory/development_roadmap.md">
+        <div class="doc-info">
+          <div class="doc-title">Development Roadmap</div>
+          <div class="doc-desc">Package strategy and next steps</div>
+        </div>
+        <span class="doc-badge">Dev</span>
+        <span class="doc-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- CREDENTIALS -->
+<section class="credentials fade-in">
+  <div class="section-header">
+    <h2>Credentials</h2>
+  </div>
+  <div class="cred-grid">
+    <div class="cred-item">
+      <div class="cred-label">WGAW Registration</div>
+      <div class="cred-value">#2332268<br>#2332269</div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-label">Science Advisor</div>
+      <div class="cred-value">Dr. Catalin Leescu<br><span style="font-size:0.85rem;color:var(--text-muted)">Energetic First Principles</span></div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-label">Published</div>
+      <div class="cred-value"><a href="https://www.empik.com" target="_blank">365 pytań, które zmieniły wszystko</a><br><span style="font-size:0.85rem;color:var(--text-muted)">Empik, February 2026</span></div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-label">Contact</div>
+      <div class="cred-value"><a href="mailto:olbinski@gmail.com">olbinski@gmail.com</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">HOMO DIGITAL ∞ + 1</div>
+  <div class="footer-copy">
+    <a href="https://homodigital.io">homodigital.io</a><br>
+    © 2026 Krzysztof Olbiński. All rights reserved.<br>
+    WGAW Reg. #2332258–2332262 (original) • #2332268–2332269 (standalone)
+  </div>
+</footer>
+
+<script>
+  // Scroll-triggered fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
