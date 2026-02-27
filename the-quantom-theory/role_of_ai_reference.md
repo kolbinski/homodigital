@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — The Role of AI
+# THE QUANTÓM THEORY — The Role of AI
 
 ## Reference Document
 
@@ -9,7 +9,7 @@
 
 ## Core Principle
 
-AI in The Quantum Theory is not a theme. It is a **consequence**.
+AI in The Quantóm Theory is not a theme. It is a **consequence**.
 
 This is the fundamental distinction that separates the show from every other AI project in television. AI does not drive the plot. The physics drives the plot. AI is where the physics leads — inevitably, uncomfortably, and without a simple answer.
 
@@ -22,7 +22,7 @@ Every existing TV show/film about AI asks one of two questions:
 1. **"Will AI destroy us?"** — Terminator, Westworld, The Matrix
 2. **"Is AI like us?"** — Ex Machina, Her, Blade Runner
 
-The Quantum Theory asks a third question that has never been posed in television:
+The Quantóm Theory asks a third question that has never been posed in television:
 
 > **"What if the question 'is AI conscious?' is as poorly framed as the question 'is light a wave or a particle?'"**
 
@@ -194,5 +194,5 @@ AI is not just in the serial. AI is in the process of creating it. This recursio
 ---
 
 *Reference document v1.0*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

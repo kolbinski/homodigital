@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Pilot Rewrite Notes
+# THE QUANTÓM THEORY — Pilot Rewrite Notes
 
 ## Development Document — Session 5
 
@@ -349,5 +349,5 @@ The rule for every change: does this make the audience trust the show more?
 ---
 
 *Pilot Rewrite Notes v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

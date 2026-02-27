@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — The Fourth Wall Scene
+# THE QUANTÓM THEORY — The Fourth Wall Scene
 
 ## Development Note — Season 4 Finale Concept
 
@@ -165,5 +165,5 @@ Not a number. Not a question mark. A confession from inside the measurement itse
 ---
 
 *Development Note v2.0 — February 26, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — R Equation Evolution
+# THE QUANTÓM THEORY — R Equation Evolution
 
 ## Dramaturgic Map: From Measurement Tool to Consciousness Theory
 
@@ -339,5 +339,5 @@ That distance is the show.
 ---
 
 *R Equation Evolution Document v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY
+# THE QUANTÓM THEORY
 
 ## Episode 10 — "The Measurement Problem"
 
@@ -185,7 +185,7 @@ He picks up the phone.
 
 ---
 
-**TITLE CARD: THE QUANTUM THEORY**
+**TITLE CARD: THE QUANTÓM THEORY**
 
 *"The Measurement Problem"*
 
@@ -1280,7 +1280,7 @@ The guitar motif returns. Maciej's melody — the one that's been threading thro
 
 **TITLE CARD:**
 
-**THE QUANTUM THEORY**
+**THE QUANTÓM THEORY**
 
 *"The Measurement Problem"*
 
@@ -1292,6 +1292,6 @@ The guitar motif returns. Maciej's melody — the one that's been threading thro
 
 ---
 
-*The Quantum Theory — Season One Finale*
+*The Quantóm Theory — Season One Finale*
 *Created by Krzysztof Olbiński*
 *homodigital.io*

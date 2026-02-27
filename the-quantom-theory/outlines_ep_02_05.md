@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Detailed Outlines: Episodes 2-5
+# THE QUANTÓM THEORY — Detailed Outlines: Episodes 2-5
 
 ## Development Document — Session 2
 
@@ -1095,5 +1095,5 @@ The man who plays the guitar doesn't look defeated anymore. He looks like someon
 ---
 
 *Episode Outlines 2-5 v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

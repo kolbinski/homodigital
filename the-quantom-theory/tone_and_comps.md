@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Tone, Comparables & Market Positioning
+# THE QUANTÓM THEORY — Tone, Comparables & Market Positioning
 
 ## Development Document — Session 8
 
@@ -17,7 +17,7 @@ A show where the smartest person in the room is also the kindest — and the fun
 
 ### 1. Ted Lasso — Warmth Without Naïveté
 
-Ted Lasso proved that optimism is not the absence of conflict — it's a strategy for surviving it. The Quantum Theory inherits this principle. Maciej Kowalski is not naive. He's a physicist who has spent a decade in competitive European academia. He simply chooses curiosity over defensiveness. This is radical in a world that rewards cynicism.
+Ted Lasso proved that optimism is not the absence of conflict — it's a strategy for surviving it. The Quantóm Theory inherits this principle. Maciej Kowalski is not naive. He's a physicist who has spent a decade in competitive European academia. He simply chooses curiosity over defensiveness. This is radical in a world that rewards cynicism.
 
 **What we borrow:** The ensemble's emotional generosity. The comedy that comes from people being deeply specific about their work. The audience's growing attachment to characters who are trying, genuinely trying, to be good at what they do.
 
@@ -27,19 +27,19 @@ Ted Lasso proved that optimism is not the absence of conflict — it's a strateg
 
 Arrival didn't explain its science — it made you feel it. The moment Louise realizes the alien language changes how she perceives time, the audience experiences the paradigm shift alongside her. No exposition. Pure cinema.
 
-The Quantum Theory aims for the same. When Maciej writes R = w₁·S + w₂·T + w₃·I + w₄·D on a whiteboard at 2 AM, the audience doesn't need to understand the variables. They need to understand that this man just formalized the thing he's been chasing for a decade, alone, in a silent lab, and that the equation is beautiful the way a bridge is beautiful — it connects things that were separate.
+The Quantóm Theory aims for the same. When Maciej writes R = w₁·S + w₂·T + w₃·I + w₄·D on a whiteboard at 2 AM, the audience doesn't need to understand the variables. They need to understand that this man just formalized the thing he's been chasing for a decade, alone, in a silent lab, and that the equation is beautiful the way a bridge is beautiful — it connects things that were separate.
 
 **What we borrow:** The patience. The willingness to let an idea breathe. The trust that audiences can feel the weight of a concept without having it explained.
 
-**What we don't borrow:** The genre framing. Arrival is sci-fi. The Quantum Theory is not. There are no aliens, no spaceships, no visual effects. The most dramatic image in our show is a question mark on a whiteboard.
+**What we don't borrow:** The genre framing. Arrival is sci-fi. The Quantóm Theory is not. There are no aliens, no spaceships, no visual effects. The most dramatic image in our show is a question mark on a whiteboard.
 
 ### 3. The Physics Comedy Tradition — The Architecture of Recognition
 
-Television has taught audiences to love physics. From sitcoms that made whiteboards iconic to dramas that made scientists human, there is a visual and emotional language audiences already know. The Quantum Theory inherits this language but changes the register. The physics is no longer furniture. It's load-bearing structure. The equation isn't background — it evolves, it's contested, it's feared, it's measured. Audiences will watch Maciej's whiteboard change over ten episodes and feel the accumulation of meaning.
+Television has taught audiences to love physics. From sitcoms that made whiteboards iconic to dramas that made scientists human, there is a visual and emotional language audiences already know. The Quantóm Theory inherits this language but changes the register. The physics is no longer furniture. It's load-bearing structure. The equation isn't background — it evolves, it's contested, it's feared, it's measured. Audiences will watch Maciej's whiteboard change over ten episodes and feel the accumulation of meaning.
 
 **What we borrow:** The warmth of the ensemble. The comfort of watching smart people argue about things that matter. The visual pleasure of a whiteboard filling up.
 
-**What we don't borrow:** The laugh track. The punchline cadence. The multicam visual language. The Quantum Theory treats its science the way The Bear treats its kitchen — as the furnace that forges the characters.
+**What we don't borrow:** The laugh track. The punchline cadence. The multicam visual language. The Quantóm Theory treats its science the way The Bear treats its kitchen — as the furnace that forges the characters.
 
 ---
 
@@ -103,7 +103,7 @@ Grand. Cold. Gold and blue. The Nobel ceremony is shot like a painting — the K
 
 **What we share:** A protagonist whose discovery changes how they see reality. Science as revelation, not exposition. The paradigm shift experienced by the audience in real time.
 
-**What we add:** Comedy. Arrival is solemn. We are warm. The Quantum Theory delivers the same intellectual rewiring with laughter alongside the awe.
+**What we add:** Comedy. Arrival is solemn. We are warm. The Quantóm Theory delivers the same intellectual rewiring with laughter alongside the awe.
 
 ### Oppenheimer (Universal, 2023)
 
@@ -117,7 +117,7 @@ Grand. Cold. Gold and blue. The Nobel ceremony is shot like a painting — the K
 
 **What it proved:** A show about the precision and pressure of professional craft — shot with cinematic ambition, scored with emotional intelligence — can become the most talked-about show on television. You don't need genre hooks. You need specificity.
 
-**What we share:** The same treatment of professional excellence as dramatic engine. The Bear made audiences care about plating and timing. The Quantum Theory makes audiences care about equations and measurements. Both shows find drama in the gap between what someone knows how to do and what the situation demands of them.
+**What we share:** The same treatment of professional excellence as dramatic engine. The Bear made audiences care about plating and timing. The Quantóm Theory makes audiences care about equations and measurements. Both shows find drama in the gap between what someone knows how to do and what the situation demands of them.
 
 ### Lessons in Chemistry (Apple TV+, 2023)
 
@@ -159,7 +159,7 @@ The viewers who watched Cosmos, listened to Lex Fridman, read Carlo Rovelli, and
 
 HBO has built the defining prestige brands of the last three decades: The Sopranos, The Wire, Game of Thrones, Succession, True Detective, The White Lotus. Each show redefined what television could be.
 
-The Quantum Theory is the next step: a show that makes the most important question of the 21st century — what is consciousness, and can it exist in machines? — into a character-driven comedy-drama with built-in crossover appeal.
+The Quantóm Theory is the next step: a show that makes the most important question of the 21st century — what is consciousness, and can it exist in machines? — into a character-driven comedy-drama with built-in crossover appeal.
 
 **What HBO gets:**
 
@@ -180,5 +180,5 @@ The Quantum Theory is the next step: a show that makes the most important questi
 ---
 
 *Tone & Comps v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

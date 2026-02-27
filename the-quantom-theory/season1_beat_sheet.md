@@ -1,5 +1,5 @@
 
-# THE QUANTUM THEORY — SEASON 1: "THE MEASUREMENT PROBLEM"
+# THE QUANTÓM THEORY — SEASON 1: "THE MEASUREMENT PROBLEM"
 
 ## Master Beat Sheet
 
@@ -455,6 +455,6 @@ HOLD.
 ---
 
 *Season beat sheet v1.0 — February 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 
 ---

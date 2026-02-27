@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Detailed Outlines: Episodes 6-9
+# THE QUANTÓM THEORY — Detailed Outlines: Episodes 6-9
 
 ## Development Document — Session 3
 
@@ -1367,5 +1367,5 @@ But the phone stays in his hand.
 ---
 
 *Episode Outlines 6-9 v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

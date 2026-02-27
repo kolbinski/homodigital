@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Character Bible
+# THE QUANTÓM THEORY — Character Bible
 
 ## Development Document — Session 1
 
@@ -527,5 +527,5 @@ The public antagonist. Where Cross's critique is private, precise, and ultimatel
 ---
 
 *Character Bible v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

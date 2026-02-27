@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Development Roadmap
+# THE QUANTÓM THEORY — Development Roadmap
 
 ## Master Document Production Plan
 
@@ -109,7 +109,7 @@ Documents that demonstrate the show is real, not just clever.
 - IIT (Tononi), zero-point field (Keppler), E1P (Leescu), First Signal Law (Mureddu)
 - How real science maps to show science — what's real, what's extrapolated, what's fictional
 - Includes: consultant recommendations (real physicists who could advise)
-- WHY IMPORTANT: This is what separates The Quantum Theory from every other sci-fi pitch. The science is real. This document proves it.
+- WHY IMPORTANT: This is what separates The Quantóm Theory from every other sci-fi pitch. The science is real. This document proves it.
 - Depends on: R equation reference, AI reference, outlines
 - Feeds: credibility in pitch, potential science advisor attachment
 
@@ -198,5 +198,5 @@ Start by reading the relevant existing documents. Don't write from memory — wr
 ---
 
 *Roadmap v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

@@ -1,5 +1,5 @@
 
-# THE QUANTUM THEORY
+# THE QUANTÓM THEORY
 
 ## Pilot — "The Observer Effect"
 
@@ -259,7 +259,7 @@ She scrolls to the data section. Her own anomalous results from three years ago 
 
 We HOLD on her face — a neuroscientist recognizing something important — while in Palo Alto, Cross is still reading.
 
-**TITLE CARD: THE QUANTUM THEORY**
+**TITLE CARD: THE QUANTÓM THEORY**
 
 **MAIN TITLES.**
 
@@ -2039,7 +2039,7 @@ The camera holds on the equation on Cross's refrigerator. We can almost read it.
 
 **TITLE CARD:**
 
-**THE QUANTUM THEORY**
+**THE QUANTÓM THEORY**
 
 *"The Observer Effect"*
 

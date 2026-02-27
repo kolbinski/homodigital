@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — The R Equation in the Series
+# THE QUANTÓM THEORY — The R Equation in the Series
 
 ## Reference Document
 
@@ -7,7 +7,7 @@
 
 ---
 
-## The Three Acts of Science in The Quantum Theory
+## The Three Acts of Science in The Quantóm Theory
 
 The show's scientific progression mirrors how real physics evolves: fundamental theory → measurement tool → dynamic discovery. Each act is an answer to a failure of the previous one.
 
@@ -82,7 +82,7 @@ This is seeded in the Season 1 finale ("R = f(t)?" written on the whiteboard) an
 
 In : whiteboards are background. Nobody reads them.
 In Good Will Hunting: the equation is something you WAIT FOR.
-In The Quantum Theory: R is a character. It evolves, it's contested, it's feared, it's measured.
+In The Quantóm Theory: R is a character. It evolves, it's contested, it's feared, it's measured.
 
 The audience must WANT to see R before they see it. This means withholding it.
 
@@ -265,5 +265,5 @@ This is subtle, scientific, and dramaturgically powerful — because it means AI
 ---
 
 *Reference document v1.0*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

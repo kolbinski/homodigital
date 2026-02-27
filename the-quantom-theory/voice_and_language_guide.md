@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Voice & Language Guide
+# THE QUANTÓM THEORY — Voice & Language Guide
 
 ## Development Document — Writers' Room Reference
 
@@ -22,7 +22,7 @@ Read it once fully. Then use it as a lookup. The Character Voice Cards (Section 
 
 ### What This Show Sounds Like
 
-The Quantum Theory sounds like intelligent people talking to each other without performing intelligence. Conversations are fast but never frantic. Technical but never expository. Warm but never sentimental. The comedy comes from precision — people being exact about things that terrify them.
+The Quantóm Theory sounds like intelligent people talking to each other without performing intelligence. Conversations are fast but never frantic. Technical but never expository. Warm but never sentimental. The comedy comes from precision — people being exact about things that terrify them.
 
 Three principles define the voice:
 
@@ -516,5 +516,5 @@ Before submitting any script page, apply this test:
 ---
 
 *Voice & Language Guide v1.0 — February 26, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

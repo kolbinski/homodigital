@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Series Synopsis
+# THE QUANTÓM THEORY — Series Synopsis
 
 ## Development Document — Session 7
 
@@ -106,12 +106,12 @@ Their collision — anonymous critique to grudging respect to genuine collaborat
 
 Every person alive is already having the conversation this show dramatizes. They're talking to AI systems. They're wondering if the voice on the other end understands them. They're asking — maybe not in these words, but in these feelings — whether consciousness has a boundary, and where it is, and who decides.
 
-The Quantum Theory doesn't answer these questions. It makes you care about the people asking them. A physicist from a small Polish town. A neuroscientist who trusts data more than people. A rival who discovers that attacking someone's work is the first step toward building on it. A mentor who loves his student and fears his theory. And a question on a whiteboard: **R = ?**
+The Quantóm Theory doesn't answer these questions. It makes you care about the people asking them. A physicist from a small Polish town. A neuroscientist who trusts data more than people. A rival who discovers that attacking someone's work is the first step toward building on it. A mentor who loves his student and fears his theory. And a question on a whiteboard: **R = ?**
 
 The science is real. The characters are specific. The comedy is warm. The question is the biggest one we've got.
 
 ---
 
 *Series Synopsis v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Production Overview
+# THE QUANTÓM THEORY — Production Overview
 
 ## Development Document — Session 10
 
@@ -171,7 +171,7 @@ The show operates across four primary locations. The production strategy is desi
 
 ### Recurring — Dr. Elena Vasquez
 
-**Mayim Bialik** — Reprising. 1-2 days per season. Priya's role in The Quantum Theory is more scientifically substantive than in — she's a working neuroscientist whose data connects to RFC. Bialik's real PhD in neuroscience makes this casting uniquely powerful.
+**Mayim Bialik** — Reprising. 1-2 days per season. Priya's role in The Quantóm Theory is more scientifically substantive than in — she's a working neuroscientist whose data connects to RFC. Bialik's real PhD in neuroscience makes this casting uniquely powerful.
 
 ### Guest — Other Characters
 
@@ -242,7 +242,7 @@ Maciej plays guitar. The guitar is not a prop — it is an instrument in both se
 
 ### Why This Show Is Affordable
 
-The Quantum Theory is a character-driven drama with no VFX, no action sequences, no period costume requirements (except 2-3 days of 1990s flashback), and no exotic locations. The most expensive shot in the show is Maciej standing at a whiteboard.
+The Quantóm Theory is a character-driven drama with no VFX, no action sequences, no period costume requirements (except 2-3 days of 1990s flashback), and no exotic locations. The most expensive shot in the show is Maciej standing at a whiteboard.
 
 ### Cost Drivers
 
@@ -327,5 +327,5 @@ With the development package complete, the path forward:
 ---
 
 *Production Overview v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

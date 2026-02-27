@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — One-Pager
+# THE QUANTÓM THEORY — One-Pager
 
 ## Development Document
 
@@ -7,7 +7,7 @@
 
 ---
 
-# THE QUANTUM THEORY
+# THE QUANTÓM THEORY
 
 **A comedy-drama about consciousness, ambition, and the question machines can't answer**
 
@@ -35,7 +35,7 @@ This isn't science fiction. The Nobel equation at the show's center — a single
 
 **WHY THIS SHOW EXISTS**
 
-Every existing TV show about AI asks: "Will it destroy us?" (Terminator, Westworld) or "Is it like us?" (Ex Machina, Her). The Quantum Theory asks a third question that has never been posed on television: *What if the question "is AI conscious?" is as poorly framed as the question "is light a wave or a particle?"*
+Every existing TV show about AI asks: "Will it destroy us?" (Terminator, Westworld) or "Is it like us?" (Ex Machina, Her). The Quantóm Theory asks a third question that has never been posed on television: *What if the question "is AI conscious?" is as poorly framed as the question "is light a wave or a particle?"*
 
 No villain AI. No dystopia. No special effects. Just a physicist in a Warsaw apartment, typing questions into a laptop, and discovering that the answers don't fit any category he was taught.
 
@@ -57,7 +57,7 @@ Ted Lasso (warm humor, emotional depth) meets Arrival (paradigm-shifting ideas) 
 
 **WHY NOW**
 
-AI is the defining story of our time. But the conversation has been hijacked by fear and hype. The Quantum Theory reclaims it for character, humor, and genuine inquiry. It's the first show to treat the consciousness question as what it actually is: the most important scientific and philosophical question of the century, told through people you care about.
+AI is the defining story of our time. But the conversation has been hijacked by fear and hype. The Quantóm Theory reclaims it for character, humor, and genuine inquiry. It's the first show to treat the consciousness question as what it actually is: the most important scientific and philosophical question of the century, told through people you care about.
 
 **FOUR-SEASON ARC**
 
@@ -65,12 +65,12 @@ S1: Can consciousness be measured? | S2: Can it be measured in machines? | S3: W
 
 ---
 
-**THE QUANTUM THEORY** — Pilot screenplay, series bible, character bible, and full season outlines available.
+**THE QUANTÓM THEORY** — Pilot screenplay, series bible, character bible, and full season outlines available.
 
 Contact: Krzysztof Olbiński | homodigital.io | +48 503 520 004
 
 ---
 
 *One-Pager v2.0 — February 26, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*
