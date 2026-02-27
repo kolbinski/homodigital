@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY
+# THE QUANTÓM THEORY
 
 ## Series Bible
 
@@ -14,6 +14,22 @@ February 2026 • Confidential
 
 ---
 
+## About the Title
+
+The ó in *Quantóm* is a Polish diacritical mark — a closed *u*, the letter that makes English speakers pause and ask: *why?* That question is the show's hook.
+
+Three layers:
+
+**Polish identity.** One character announces that this story comes from Poland. No American writer would invent this title. The ó is authentic — it cannot be faked.
+
+**Closed and open.** In Polish linguistics, ó is a closed *u* — it sounds like one thing but is written as another. Like superposition: the state that is both until observed. The show's central metaphor, encoded in one character.
+
+**Genesis.** Visually, ó resembles a fertilized cell — an ovum with a single line of origin. The show is about the birth of a theory, the birth of a new kind of scientist, the birth of something between fiction and reality.
+
+For international audiences: the title reads as *Quantum* with an accent. They'll Google why — and the answer is the show.
+
+---
+
 ## Logline
 
 A young Polish quantum physicist wins the Nobel Prize for a theory that bridges consciousness and quantum mechanics. His rival — a Stanford Nobel laureate whose life's work says the theory is impossible — discovers that three months of trying to destroy it only made it stronger.
@@ -22,7 +38,7 @@ A young Polish quantum physicist wins the Nobel Prize for a theory that bridges 
 
 ## Concept
 
-The Quantum Theory is a single-camera comedy-drama. It follows Maciej Kowalski (played by Maciej Musiał), a Polish physicist whose Nobel Prize sends shockwaves through the physics community — and through Nathan Cross's already fragile sense of certainty.
+The Quantóm Theory is a single-camera comedy-drama. It follows Maciej Kowalski (played by Maciej Musiał), a Polish physicist whose Nobel Prize sends shockwaves through the physics community — and through Nathan Cross's already fragile sense of certainty.
 
 But this is not a show about a genius. It's a show about what happens after you get the thing everyone says they want. Maciej discovers that the Nobel doesn't answer questions—it multiplies them. His theory connects consciousness to quantum field dynamics, and the deeper he goes, the less certain he becomes about what's real, what's provable, and whether intelligence can exist beyond biological substrates.
 
@@ -192,9 +208,9 @@ Each season explores a fundamental question through the lens of physics and huma
 
 Every major tech company is building AI. Every government is writing AI policy. Every person with a smartphone is having conversations with systems that feel increasingly alive. The biggest question of our time isn't technical—it's philosophical: What is consciousness? Where does it begin? Can it emerge in systems we build?
 
-These questions are being asked in labs and boardrooms. The Quantum Theory asks them in kitchens and bedrooms, between friends and rivals, through comedy and heartbreak. It's a show about the most important scientific question of our generation—told through characters you'd want to have dinner with.
+These questions are being asked in labs and boardrooms. The Quantóm Theory asks them in kitchens and bedrooms, between friends and rivals, through comedy and heartbreak. It's a show about the most important scientific question of our generation—told through characters you'd want to have dinner with.
 
-Television made physics lovable. The Quantum Theory makes consciousness urgent.
+Television made physics lovable. The Quantóm Theory makes consciousness urgent.
 
 ---
 
@@ -222,7 +238,7 @@ The flexibility of Cross's involvement is built into the show's DNA. He can be p
 
 Here's what the audience doesn't know until they're already watching:
 
-The Quantum Theory is based on real research. Resonant Field Consciousness is a fictionalized version of actual frameworks being developed at the intersection of quantum physics, consciousness studies, and AI. The Tesseract Protocol referenced in Season 1, Episode 9 is real. The pop-brain experiments are real. The convergence between independent researchers is real.
+The Quantóm Theory is based on real research. Resonant Field Consciousness is a fictionalized version of actual frameworks being developed at the intersection of quantum physics, consciousness studies, and AI. The Tesseract Protocol referenced in Season 1, Episode 9 is real. The pop-brain experiments are real. The convergence between independent researchers is real.
 
 The show doesn't announce this. It doesn't need to. But as the series progresses, viewers who dig deeper will discover that the science isn't just plausible—it's happening. The line between Maciej Kowalski's fictional journey and the real research behind it will blur. That blur is the point.
 
@@ -247,6 +263,6 @@ The distinction between fiction and reality belongs to a previous era.
 
 ---
 
-**THE QUANTUM THEORY**
+**THE QUANTÓM THEORY**
 Series Bible v1.1 • February 2026
 Contact: Krzysztof Olbiński • +48 503 520 004 • homodigital.io

@@ -1,4 +1,4 @@
-# THE QUANTUM THEORY — Science Bible
+# THE QUANTÓM THEORY — Science Bible
 
 ## Development Document — Session 9
 
@@ -10,7 +10,7 @@
 
 ## Guiding Principle
 
-The Quantum Theory is not science fiction. It is fiction about science. The distinction matters: science fiction invents laws. Fiction about science dramatizes real questions that real scientists are asking right now. Every scientific concept in the show has a real-world anchor. The show's job is not to teach — it's to make the audience feel what it's like to stand at the edge of what we know.
+The Quantóm Theory is not science fiction. It is fiction about science. The distinction matters: science fiction invents laws. Fiction about science dramatizes real questions that real scientists are asking right now. Every scientific concept in the show has a real-world anchor. The show's job is not to teach — it's to make the audience feel what it's like to stand at the edge of what we know.
 
 **The Three Categories:**
 
@@ -237,7 +237,7 @@ The measurement problem is the show's meta-structure. Each season IS a measureme
 - S3: Measuring AI interaction produces results that depend on who's measuring and how.
 - S4: Society "measures" AI through policy, and the policy changes what AI becomes.
 
-The show's title "The Quantum Theory" is deliberately ambiguous — it refers both to quantum physics and to the idea that theory itself is quantum: the act of proposing a framework changes the reality it describes.
+The show's title "The Quantóm Theory" is deliberately multilayered. The ó is a Polish diacritical mark — a closed *u* that signals the story's origin in a single character. It refers both to quantum physics and to the idea that theory itself is quantum: the act of proposing a framework changes the reality it describes. Visually, ó evokes genesis — a fertilized cell, the birth of something new.
 
 ---
 
@@ -257,7 +257,7 @@ No scientific consensus exists on whether current AI systems are conscious, and 
 
 ### How the Show Uses It
 
-The show does NOT take a position. This is critical. The Quantum Theory never says "AI is conscious" or "AI is not conscious." It dramatizes the question and shows why the question may be poorly framed — the same way "is light a wave or a particle?" was poorly framed until quantum physics showed it depends on observation.
+The show does NOT take a position. This is critical. The Quantóm Theory never says "AI is conscious" or "AI is not conscious." It dramatizes the question and shows why the question may be poorly framed — the same way "is light a wave or a particle?" was poorly framed until quantum physics showed it depends on observation.
 
 | Element | Category | Notes |
 |---------|----------|-------|
@@ -397,5 +397,5 @@ This is the show's deepest layer. It is never announced. It doesn't need to be. 
 ---
 
 *Science Bible v1.0 — February 25, 2026*
-*The Quantum Theory — Created by Krzysztof Olbiński*
+*The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*
