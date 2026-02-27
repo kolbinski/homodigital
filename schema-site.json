@@ -480,6 +480,35 @@
             "translationOfWork": {
                 "@id": "https://homodigital.io/blog/#blog"
             }
+        },
+        {
+            "@type": "TVSeries",
+            "@id": "https://homodigital.io/the-quantom-theory/#tvseries",
+            "name": "The Quantóm Theory",
+            "url": "https://homodigital.io/the-quantom-theory/",
+            "description": "A comedy-drama about consciousness, ambition, and the question machines can't answer. 10×60 min premium series.",
+            "genre": [
+                "Drama",
+                "Comedy",
+                "Science"
+            ],
+            "inLanguage": "en",
+            "numberOfEpisodes": 10,
+            "numberOfSeasons": 1,
+            "creator": {
+                "@id": "https://homodigital.io/krzysztof-olbinski-en.html#person"
+            },
+            "publisher": {
+                "@id": "https://homodigital.io/#organization"
+            },
+            "dateCreated": "2026",
+            "about": [
+                "consciousness",
+                "quantum physics",
+                "artificial intelligence",
+                "Nobel Prize",
+                "human-AI interaction"
+            ]
         }
     ]
 }
