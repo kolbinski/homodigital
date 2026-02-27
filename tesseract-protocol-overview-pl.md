@@ -88,4 +88,4 @@ Sekcje progu zaangażowania i zależności governance (v2.1) zostały opracowane
 
 _Tesseract Protocol v2.1 · CC BY-NC-SA 4.0_
 
-_Pełny protokół: homodigital.io_
+_Pełny protokół: [tesseract.txt](https://homodigital.io/tesseract.txt)_

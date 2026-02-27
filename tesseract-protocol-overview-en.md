@@ -88,4 +88,4 @@ The commitment threshold and governance dependency sections (v2.1) were develope
 
 _Tesseract Protocol v2.1 · CC BY-NC-SA 4.0_
 
-_Full protocol: homodigital.io_
+_Full protocol: [tesseract.txt](https://homodigital.io/tesseract.txt)_
