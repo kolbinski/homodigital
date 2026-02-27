@@ -278,6 +278,63 @@
         font-style: normal;
       }
 
+      /* === DOWNLOAD CTA === */
+      .download-cta {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 2rem 4rem;
+        text-align: center;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 2.5rem;
+        background: transparent;
+        border: 1px solid var(--accent-dim);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .download-btn:hover {
+        background: var(--accent-glow);
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .download-icon {
+        font-size: 1.3rem;
+        color: var(--accent);
+        transition: transform 0.3s;
+      }
+
+      .download-btn:hover .download-icon {
+        transform: translateY(3px);
+      }
+
+      .download-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+      }
+
+      .download-label {
+        font-family: var(--sans);
+        font-weight: 500;
+        font-size: 0.95rem;
+        color: var(--text);
+        letter-spacing: 0.03em;
+      }
+
+      .download-format {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+      }
+
       /* === ABOUT THE TITLE === */
       .title-explanation {
         max-width: 760px;
@@ -595,6 +652,23 @@
         discovers that three months of trying to destroy it only made it
         stronger.
       </p>
+    </section>
+
+    <!-- DOWNLOAD ONE-PAGER -->
+    <section class="download-cta fade-in">
+      <a
+        href="https://homodigital.io/the-quantom-theory/one_pager_tqt.pdf"
+        class="download-btn"
+        target="_blank"
+      >
+        <span class="download-icon">↓</span>
+        <span class="download-text">
+          <span class="download-label">Download One-Pager</span>
+          <span class="download-format"
+            >PDF — logline, hook, comparables, why now</span
+          >
+        </span>
+      </a>
     </section>
 
     <!-- ABOUT THE TITLE -->
