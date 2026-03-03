@@ -1,758 +1,388 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homo Digital — Structured AI Interaction for Teams</title>
-    <meta
-      name="description"
-      content="Workshops and consulting that change how teams work with AI. Not prompt engineering — structural methodology that improves output quality."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Workshops and consulting that change how teams work with AI. Not prompt engineering — structural methodology that improves output quality.">
+    <meta name="keywords" content="Homo Digital, AI consulting, Tesseract Protocol, human oversight, AI Act, automation bias, structured AI interaction, LLM workshops">
+    <meta name="author" content="Krzysztof Olbiński">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="content-language" content="en">
+    <link rel="alternate" href="https://homodigital.io/" hreflang="en">
+    <link rel="alternate" href="https://homodigital.io/" hreflang="x-default">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <meta name="theme-color" content="#2B5C3F">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Homo Digital — Structured AI Interaction for Teams">
+    <meta property="og:description" content="Workshops and consulting that change how teams work with AI. Structural methodology for better human-AI oversight.">
+    <meta property="og:url" content="https://homodigital.io">
+    <meta property="og:image" content="https://homodigital.io/og-image.png">
+    <meta property="og:site_name" content="Homo Digital">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Homo Digital — Structured AI Interaction for Teams">
+    <meta name="twitter:description" content="Workshops and consulting that change how teams work with AI.">
+    <meta name="twitter:image" content="https://homodigital.io/og-image.png">
+    <link rel="canonical" href="https://homodigital.io/">
+    <meta name="application-name" content="Homo Digital">
+    <meta name="apple-mobile-web-app-title" content="Homo Digital">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Homo Digital",
+        "url": "https://homodigital.io",
+        "logo": "https://homodigital.io/favicon.png",
+        "founder": {"@type": "Person", "name": "Krzysztof Olbiński"},
+        "foundingDate": "2026",
+        "description": "AI interaction consulting — workshops and methodology for structured human-AI collaboration and governance.",
+        "sameAs": ["https://www.linkedin.com/in/olbinski/"]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <style>
-      :root {
-        --color-bg: #fafaf8;
-        --color-surface: #ffffff;
-        --color-text: #1a1a1a;
-        --color-text-secondary: #5c5c5c;
-        --color-accent: #2b5c3f;
-        --color-accent-light: #e8f0eb;
-        --color-border: #e5e5e0;
-        --color-highlight: #f5f0e8;
-        --font-display: 'DM Serif Display', Georgia, serif;
-        --font-body: 'DM Sans', -apple-system, sans-serif;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: var(--font-body);
-        color: var(--color-text);
-        background: var(--color-bg);
-        line-height: 1.7;
-        font-size: 17px;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      /* --- NAV --- */
-      nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(250, 250, 248, 0.92);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--color-border);
-        z-index: 100;
-        padding: 0 2rem;
-      }
-      nav .nav-inner {
-        max-width: 1080px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px;
-      }
-      nav .logo {
-        font-family: var(--font-display);
-        font-size: 1.15rem;
-        color: var(--color-text);
-        text-decoration: none;
-        letter-spacing: -0.01em;
-      }
-      nav .nav-links {
-        display: flex;
-        gap: 2rem;
-      }
-      nav .nav-links a {
-        text-decoration: none;
-        color: var(--color-text-secondary);
-        font-size: 0.88rem;
-        font-weight: 500;
-        transition: color 0.2s;
-      }
-      nav .nav-links a:hover {
-        color: var(--color-accent);
-      }
-
-      /* --- LAYOUT --- */
-      .container {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding: 0 2rem;
-      }
-      section {
-        padding: 6rem 0;
-        border-bottom: 1px solid var(--color-border);
-      }
-      section:last-of-type {
-        border-bottom: none;
-      }
-
-      /* --- HERO --- */
-      .hero {
-        padding: 10rem 0 6rem;
-        border-bottom: 1px solid var(--color-border);
-      }
-      .hero-label {
-        font-size: 0.82rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: var(--color-accent);
-        margin-bottom: 1.5rem;
-      }
-      .hero h1 {
-        font-family: var(--font-display);
-        font-size: clamp(2.2rem, 5vw, 3.4rem);
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-        max-width: 720px;
-        margin-bottom: 1.5rem;
-      }
-      .hero p {
-        font-size: 1.15rem;
-        color: var(--color-text-secondary);
-        max-width: 580px;
-        margin-bottom: 2.5rem;
-      }
-      .hero-cta {
-        display: inline-block;
-        padding: 0.85rem 2rem;
-        background: var(--color-accent);
-        color: #fff;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.95rem;
-        border-radius: 6px;
-        transition: background 0.2s;
-      }
-      .hero-cta:hover {
-        background: #1e4530;
-      }
-
-      /* --- SECTION HEADERS --- */
-      .section-label {
-        font-size: 0.78rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: var(--color-accent);
-        margin-bottom: 1rem;
-      }
-      .section-title {
-        font-family: var(--font-display);
-        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-        line-height: 1.25;
-        letter-spacing: -0.015em;
-        margin-bottom: 1.5rem;
-        max-width: 640px;
-      }
-      .section-intro {
-        font-size: 1.05rem;
-        color: var(--color-text-secondary);
-        max-width: 600px;
-        margin-bottom: 3rem;
-      }
-
-      /* --- PROBLEM SECTION --- */
-      .problem-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-      .problem-card {
-        padding: 2rem;
-        border-radius: 8px;
-        border: 1px solid var(--color-border);
-        background: var(--color-surface);
-      }
-      .problem-card.highlighted {
-        background: var(--color-accent);
-        color: #fff;
-        border-color: var(--color-accent);
-      }
-      .problem-card.highlighted .card-label {
-        color: rgba(255, 255, 255, 0.7);
-      }
-      .problem-card.highlighted p {
-        color: rgba(255, 255, 255, 0.85);
-      }
-      .card-label {
-        font-size: 0.75rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--color-text-secondary);
-        margin-bottom: 0.75rem;
-      }
-      .problem-card h3 {
-        font-family: var(--font-display);
-        font-size: 1.3rem;
-        margin-bottom: 0.75rem;
-      }
-      .problem-card p {
-        font-size: 0.95rem;
-        line-height: 1.65;
-        color: var(--color-text-secondary);
-      }
-
-      /* --- FRAMEWORK SECTION --- */
-      .framework-list {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-      .framework-item {
-        display: grid;
-        grid-template-columns: 80px 1fr;
-        gap: 1.5rem;
-        align-items: start;
-        padding: 2rem;
-        background: var(--color-surface);
-        border: 1px solid var(--color-border);
-        border-radius: 8px;
-      }
-      .framework-number {
-        font-family: var(--font-display);
-        font-size: 2.2rem;
-        color: var(--color-accent);
-        line-height: 1;
-      }
-      .framework-item h3 {
-        font-size: 1.05rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-      }
-      .framework-item .tag {
-        display: inline-block;
-        font-size: 0.72rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--color-accent);
-        background: var(--color-accent-light);
-        padding: 0.2rem 0.6rem;
-        border-radius: 3px;
-        margin-bottom: 0.75rem;
-      }
-      .framework-item p {
-        font-size: 0.95rem;
-        color: var(--color-text-secondary);
-        line-height: 1.65;
-      }
-
-      .protocol-explainer {
-        background: var(--color-surface);
-        border: 1px solid var(--color-border);
-        border-left: 3px solid var(--color-accent);
-        border-radius: 6px;
-        padding: 1.75rem 2rem;
-        margin-bottom: 3rem;
-      }
-      .protocol-explainer p {
-        font-size: 0.95rem;
-        color: var(--color-text-secondary);
-        line-height: 1.7;
-        margin-bottom: 1rem;
-      }
-      .protocol-link {
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: var(--color-accent);
-        text-decoration: none;
-      }
-      .protocol-link:hover {
-        text-decoration: underline;
-      }
-
-      /* --- CASE STUDY --- */
-      .case-study-box {
-        background: var(--color-highlight);
-        border-radius: 10px;
-        padding: 3rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        align-items: center;
-      }
-      .case-metric {
-        text-align: center;
-        padding: 1.5rem;
-      }
-      .case-metric .number {
-        font-family: var(--font-display);
-        font-size: 3rem;
-        color: var(--color-accent);
-        line-height: 1;
-      }
-      .case-metric .label {
-        font-size: 0.85rem;
-        color: var(--color-text-secondary);
-        margin-top: 0.5rem;
-      }
-      .case-details h3 {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-      }
-      .case-details p {
-        font-size: 0.95rem;
-        color: var(--color-text-secondary);
-        line-height: 1.7;
-        margin-bottom: 0.75rem;
-      }
-      .case-metrics-row {
-        display: flex;
-        gap: 2rem;
-        margin-top: 1.5rem;
-      }
-
-      /* --- ABOUT --- */
-      .about-grid {
-        display: grid;
-        grid-template-columns: 280px 1fr;
-        gap: 3rem;
-        align-items: start;
-      }
-      .about-photo {
-        width: 100%;
-        aspect-ratio: 1;
-        background: var(--color-border);
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .about-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .about-content h3 {
-        font-family: var(--font-display);
-        font-size: 1.6rem;
-        margin-bottom: 0.25rem;
-      }
-      .about-role {
-        font-size: 0.9rem;
-        color: var(--color-accent);
-        font-weight: 500;
-        margin-bottom: 1.25rem;
-      }
-      .about-content p {
-        font-size: 0.95rem;
-        color: var(--color-text-secondary);
-        line-height: 1.7;
-        margin-bottom: 1rem;
-      }
-      .about-links {
-        display: flex;
-        gap: 1.5rem;
-        margin-top: 1rem;
-      }
-      .about-links a {
-        font-size: 0.88rem;
-        color: var(--color-accent);
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .about-links a:hover {
-        text-decoration: underline;
-      }
-
-      /* --- CONTACT --- */
-      .contact-section {
-        text-align: center;
-        padding: 6rem 0;
-      }
-      .contact-section .section-title {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .contact-section p {
-        color: var(--color-text-secondary);
-        max-width: 480px;
-        margin: 0 auto 2rem;
-      }
-      .contact-email {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        color: var(--color-accent);
-        text-decoration: none;
-      }
-      .contact-email:hover {
-        text-decoration: underline;
-      }
-
-      /* --- FOOTER --- */
-      footer {
-        padding: 2rem 0;
-        border-top: 1px solid var(--color-border);
-        font-size: 0.82rem;
-        color: var(--color-text-secondary);
-      }
-      .footer-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .footer-links {
-        display: flex;
-        gap: 1.5rem;
-      }
-      .footer-links a {
-        color: var(--color-text-secondary);
-        text-decoration: none;
-        font-size: 0.82rem;
-      }
-      .footer-links a:hover {
-        color: var(--color-accent);
-      }
-
-      /* --- RESPONSIVE --- */
-      @media (max-width: 768px) {
-        .problem-grid {
-          grid-template-columns: 1fr;
+        :root {
+            --color-bg: #FAFAF8;
+            --color-surface: #FFFFFF;
+            --color-text: #1A1A1A;
+            --color-text-secondary: #5C5C5C;
+            --color-accent: #2B5C3F;
+            --color-accent-light: #E8F0EB;
+            --color-border: #E5E5E0;
+            --color-highlight: #F5F0E8;
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
         }
-        .case-study-box {
-          grid-template-columns: 1fr;
-          padding: 2rem;
-        }
-        .case-metrics-row {
-          flex-direction: column;
-          gap: 1rem;
-        }
-        .about-grid {
-          grid-template-columns: 1fr;
-        }
-        .about-photo {
-          max-width: 200px;
-        }
-        .framework-item {
-          grid-template-columns: 60px 1fr;
-        }
-        nav .nav-links {
-          gap: 1rem;
-        }
-        nav .nav-links a {
-          font-size: 0.8rem;
-        }
-      }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.7; font-size: 17px; -webkit-font-smoothing: antialiased; }
 
-      /* --- ANIMATIONS --- */
-      @media (prefers-reduced-motion: no-preference) {
-        .fade-in {
-          opacity: 0;
-          transform: translateY(16px);
-          animation: fadeUp 0.6s ease forwards;
+        /* NAV */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); z-index: 100; }
+        nav .nav-inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 60px; padding: 0 2rem; }
+        nav .logo { font-family: var(--font-display); font-size: 1.15rem; color: var(--color-text); text-decoration: none; letter-spacing: -0.01em; }
+        nav .nav-links { display: flex; gap: 2rem; }
+        nav .nav-links a { text-decoration: none; color: var(--color-text-secondary); font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
+        nav .nav-links a:hover { color: var(--color-accent); }
+        .burger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 28px; height: 28px; cursor: pointer; background: none; border: none; padding: 0; z-index: 110; }
+        .burger span { display: block; width: 100%; height: 2px; background: var(--color-text); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+        .burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .burger.active span:nth-child(2) { opacity: 0; }
+        .burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: rgba(250,250,248,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); padding: 1.5rem 2rem; z-index: 99; flex-direction: column; gap: 1.25rem; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { text-decoration: none; color: var(--color-text); font-size: 1rem; font-weight: 500; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: var(--color-accent); }
+
+        /* LAYOUT */
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 6rem 0; border-bottom: 1px solid var(--color-border); }
+        section:last-of-type { border-bottom: none; }
+
+        /* HERO */
+        .hero { padding: 10rem 0 6rem; border-bottom: 1px solid var(--color-border); }
+        .hero-label { font-size: 0.82rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 1.5rem; }
+        .hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.2; letter-spacing: -0.02em; max-width: 720px; margin-bottom: 1.5rem; }
+        .hero p { font-size: 1.15rem; color: var(--color-text-secondary); max-width: 580px; margin-bottom: 2.5rem; }
+        .hero-cta { display: inline-block; padding: 0.85rem 2rem; background: var(--color-accent); color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; border-radius: 6px; transition: background 0.2s; }
+        .hero-cta:hover { background: #1e4530; }
+
+        /* SECTION HEADERS */
+        .section-label { font-size: 0.78rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 1rem; }
+        .section-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.2rem); line-height: 1.25; letter-spacing: -0.015em; margin-bottom: 1.5rem; max-width: 640px; }
+        .section-intro { font-size: 1.05rem; color: var(--color-text-secondary); max-width: 600px; margin-bottom: 3rem; }
+
+        /* PROBLEM */
+        .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        .problem-card { padding: 2rem; border-radius: 8px; border: 1px solid var(--color-border); background: var(--color-surface); }
+        .problem-card.highlighted { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+        .problem-card.highlighted .card-label { color: rgba(255,255,255,0.7); }
+        .problem-card.highlighted p { color: rgba(255,255,255,0.85); }
+        .card-label { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-secondary); margin-bottom: 0.75rem; }
+        .problem-card h3 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.75rem; }
+        .problem-card p { font-size: 0.95rem; line-height: 1.65; color: var(--color-text-secondary); }
+
+        /* FRAMEWORK */
+        .protocol-explainer { background: var(--color-surface); border: 1px solid var(--color-border); border-left: 3px solid var(--color-accent); border-radius: 6px; padding: 1.75rem 2rem; margin-bottom: 3rem; }
+        .protocol-explainer p { font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+        .protocol-link { font-size: 0.9rem; font-weight: 500; color: var(--color-accent); text-decoration: none; }
+        .protocol-link:hover { text-decoration: underline; }
+        .framework-list { display: flex; flex-direction: column; gap: 2rem; margin-top: 2rem; }
+        .framework-item { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; align-items: start; padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; }
+        .framework-number { font-family: var(--font-display); font-size: 2.2rem; color: var(--color-accent); line-height: 1; }
+        .framework-item h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .framework-item .tag { display: inline-block; font-size: 0.72rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); background: var(--color-accent-light); padding: 0.2rem 0.6rem; border-radius: 3px; margin-bottom: 0.75rem; }
+        .framework-item p { font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.65; }
+
+        /* CASE STUDY */
+        .case-study-box { background: var(--color-highlight); border-radius: 10px; padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .case-metric { text-align: center; padding: 1.5rem; }
+        .case-metric .number { font-family: var(--font-display); font-size: 3rem; color: var(--color-accent); line-height: 1; }
+        .case-metric .label { font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.5rem; }
+        .case-details h3 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 1rem; }
+        .case-details p { font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 0.75rem; }
+        .case-metrics-row { display: flex; gap: 2rem; justify-content: center; }
+
+        /* ABOUT */
+        .about-grid { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: start; }
+        .about-photo { width: 100%; aspect-ratio: 1; background: var(--color-border); border-radius: 8px; overflow: hidden; }
+        .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .about-content h3 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 0.25rem; }
+        .about-role { font-size: 0.9rem; color: var(--color-accent); font-weight: 500; margin-bottom: 1.25rem; }
+        .about-content p { font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 1rem; }
+        .about-links { display: flex; gap: 1.5rem; margin-top: 1rem; }
+        .about-links a { font-size: 0.88rem; color: var(--color-accent); text-decoration: none; font-weight: 500; }
+        .about-links a:hover { text-decoration: underline; }
+
+        /* CONTACT */
+        .contact-section { text-align: center; padding: 6rem 0; }
+        .contact-section .section-title { margin-left: auto; margin-right: auto; }
+        .contact-section p { color: var(--color-text-secondary); max-width: 480px; margin: 0 auto 2rem; }
+        .contact-email { font-family: var(--font-display); font-size: 1.4rem; color: var(--color-accent); text-decoration: none; }
+        .contact-email:hover { text-decoration: underline; }
+
+        /* FOOTER */
+        footer { padding: 2rem 0; border-top: 1px solid var(--color-border); font-size: 0.82rem; color: var(--color-text-secondary); }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+        .footer-links { display: flex; gap: 1.5rem; }
+        .footer-links a { color: var(--color-text-secondary); text-decoration: none; font-size: 0.82rem; }
+        .footer-links a:hover { color: var(--color-accent); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav .nav-links { display: none; }
+            .burger { display: flex; }
+            .hero { padding: 7rem 0 4rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .problem-grid { grid-template-columns: 1fr; }
+            .framework-item { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; }
+            .framework-number { font-size: 1.1rem; color: var(--color-accent); margin-bottom: 0.25rem; }
+            .case-study-box { grid-template-columns: 1fr; padding: 2rem; gap: 2rem; }
+            .case-metrics-row { gap: 1.5rem; }
+            .case-metric .number { font-size: 2.4rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-photo { max-width: 180px; }
+            .contact-email { font-size: 1.1rem; }
+            .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+            section { padding: 4rem 0; }
+            .protocol-explainer { padding: 1.25rem 1.5rem; }
         }
-        @keyframes fadeUp {
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+
+        /* ANIMATIONS */
+        @media (prefers-reduced-motion: no-preference) {
+            .fade-in { opacity: 0; transform: translateY(16px); animation: fadeUp 0.6s ease forwards; }
+            @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+            .delay-1 { animation-delay: 0.1s; }
+            .delay-2 { animation-delay: 0.2s; }
+            .delay-3 { animation-delay: 0.3s; }
         }
-        .delay-1 {
-          animation-delay: 0.1s;
-        }
-        .delay-2 {
-          animation-delay: 0.2s;
-        }
-        .delay-3 {
-          animation-delay: 0.3s;
-        }
-      }
     </style>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-inner">
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
         <a href="#" class="logo">Homo Digital</a>
         <div class="nav-links">
-          <a href="#problem">Problem</a>
-          <a href="#framework">Framework</a>
-          <a href="#proof">Case Study</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+            <a href="#problem">Problem</a>
+            <a href="#framework">Framework</a>
+            <a href="#proof">Case Study</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </div>
-      </div>
-    </nav>
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#problem">Problem</a>
+    <a href="#framework">Framework</a>
+    <a href="#proof">Case Study</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</div>
 
-    <div class="container">
-      <!-- HERO -->
-      <section class="hero">
+<div class="container">
+
+    <section class="hero">
         <div class="hero-label fade-in">AI Interaction Consulting</div>
-        <h1 class="fade-in delay-1">
-          Your teams use AI every day.<br />Are they getting what they should?
-        </h1>
-        <p class="fade-in delay-2">
-          Workshops and consulting that change how people work with LLMs. Not
-          prompt engineering — a structural methodology that improves output
-          quality, reduces automation bias, and builds real human oversight.
-        </p>
-        <a href="#contact" class="hero-cta fade-in delay-3"
-          >Start a conversation</a
-        >
-      </section>
+        <h1 class="fade-in delay-1">Your teams use AI every day.<br>Are they getting what they should?</h1>
+        <p class="fade-in delay-2">Workshops and consulting that change how people work with LLMs. Not prompt engineering — a structural methodology that improves output quality, reduces automation bias, and builds real human oversight.</p>
+        <a href="#contact" class="hero-cta fade-in delay-3">Start a conversation</a>
+    </section>
 
-      <!-- PROBLEM -->
-      <section id="problem">
+    <section id="problem">
         <div class="section-label">The Problem</div>
-        <h2 class="section-title">
-          Most teams extract a fraction of what AI can deliver
-        </h2>
-        <p class="section-intro">
-          The gap isn't in the technology. It's in the interaction. Default AI
-          behavior is optimized for user satisfaction — not for truth, quality,
-          or critical thinking.
-        </p>
+        <h2 class="section-title">Most teams extract a fraction of what AI can deliver</h2>
+        <p class="section-intro">The gap isn't in the technology. It's in the interaction. Default AI behavior is optimized for user satisfaction — not for truth, quality, or critical thinking.</p>
         <div class="problem-grid">
-          <div class="problem-card">
-            <div class="card-label">Automation Bias</div>
-            <h3>People accept AI output by default</h3>
-            <p>
-              LLMs are designed to agree, to be helpful, to satisfy. This
-              creates a pattern where humans stop questioning outputs — even
-              when they should. EU AI Act Article 14 names this as a core risk.
-            </p>
-          </div>
-          <div class="problem-card">
-            <div class="card-label">Shallow Interaction</div>
-            <h3>Prompt-in, answer-out is a dead end</h3>
-            <p>
-              Most teams treat AI as a search engine with better grammar.
-              Single-turn interactions. No structure. No quality control. The
-              result: generic outputs that could have come from anyone.
-            </p>
-          </div>
-          <div class="problem-card">
-            <div class="card-label">No Oversight Layer</div>
-            <h3>Compliance checkboxes don't change behavior</h3>
-            <p>
-              Pop-ups and approval workflows satisfy regulators. They don't
-              change how people actually interact with AI. The oversight layer
-              is missing where it matters — inside the interaction itself.
-            </p>
-          </div>
-          <div class="problem-card highlighted">
-            <div class="card-label">The Result</div>
-            <h3>Teams operate at 30% of AI's potential</h3>
-            <p>
-              Not because the models are weak. Because the interaction is
-              unstructured. Structured dialogue with AI produces fundamentally
-              different outputs — faster, deeper, and more reliable.
-            </p>
-          </div>
+            <div class="problem-card">
+                <div class="card-label">Automation Bias</div>
+                <h3>People accept AI output by default</h3>
+                <p>LLMs are designed to agree, to be helpful, to satisfy. This creates a pattern where humans stop questioning outputs — even when they should. EU AI Act Article 14 names this as a core risk.</p>
+            </div>
+            <div class="problem-card">
+                <div class="card-label">Shallow Interaction</div>
+                <h3>Prompt-in, answer-out is a dead end</h3>
+                <p>Most teams treat AI as a search engine with better grammar. Single-turn interactions. No structure. No quality control. The result: generic outputs that could have come from anyone.</p>
+            </div>
+            <div class="problem-card">
+                <div class="card-label">No Oversight Layer</div>
+                <h3>Compliance checkboxes don't change behavior</h3>
+                <p>Pop-ups and approval workflows satisfy regulators. They don't change how people actually interact with AI. The oversight layer is missing where it matters — inside the interaction itself.</p>
+            </div>
+            <div class="problem-card highlighted">
+                <div class="card-label">The Result</div>
+                <h3>Teams operate at 30% of AI's potential</h3>
+                <p>Not because the models are weak. Because the interaction is unstructured. Structured dialogue with AI produces fundamentally different outputs — faster, deeper, and more reliable.</p>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- FRAMEWORK -->
-      <section id="framework">
+    <section id="framework">
         <div class="section-label">The Framework</div>
-        <h2 class="section-title">
-          Tesseract Protocol: a runtime governance layer for human-AI
-          interaction
-        </h2>
-        <p class="section-intro">
-          A configurable behavioral framework deployed on existing LLMs. It
-          changes how the AI engages with the human operator — embedding
-          governance directly into the interaction flow.
-        </p>
+        <h2 class="section-title">Tesseract Protocol: a runtime governance layer for human-AI interaction</h2>
+        <p class="section-intro">A configurable behavioral framework deployed on existing LLMs. It changes how the AI engages with the human operator — embedding governance directly into the interaction flow.</p>
         <div class="protocol-explainer">
-          <p>
-            Tesseract Protocol is not a product or a platform. It is a
-            structured set of instructions — a system-level configuration layer
-            — that reconfigures how commercial AI models (Claude, GPT-4, Gemini)
-            interact with the user. Think of it as a behavioral rulebook that
-            shifts the AI from "assistant mode" (agree, satisfy, produce) to
-            "partner mode" (challenge, verify, flag risks). It runs on existing
-            infrastructure with zero setup cost. Developed over 12 months of
-            daily cross-platform testing, with 10 built-in falsification
-            criteria.
-          </p>
-          <a
-            href="./view.html?file=tesseract-ai-act-brief.md"
-            class="protocol-link"
-            >Read the full brief: Tesseract Protocol &amp; EU AI Act Article 14
-            &rarr;</a
-          >
+            <p>Tesseract Protocol is not a product or a platform. It is a structured set of instructions — a system-level configuration layer — that reconfigures how commercial AI models (Claude, GPT-4, Gemini) interact with the user. Think of it as a behavioral rulebook that shifts the AI from "assistant mode" (agree, satisfy, produce) to "partner mode" (challenge, verify, flag risks). It runs on existing infrastructure with zero setup cost. Developed over 12 months of daily cross-platform testing, with 10 built-in falsification criteria.</p>
+            <a href="./tesseract-ai-act-brief.html" class="protocol-link">Read the full brief: Tesseract Protocol &amp; EU AI Act Article 14 &rarr;</a>
         </div>
         <div class="framework-list">
-          <div class="framework-item">
-            <div class="framework-number">01</div>
-            <div>
-              <div class="tag">Counters automation bias</div>
-              <h3>Assertiveness Principle</h3>
-              <p>
-                The AI is configured to actively challenge the user when it
-                detects inconsistencies, unsupported assumptions, or
-                confirmation-seeking behavior. It becomes a structural
-                counterweight to over-reliance — not through warning labels, but
-                through its actual behavior.
-              </p>
+            <div class="framework-item">
+                <div class="framework-number">01</div>
+                <div>
+                    <div class="tag">Counters automation bias</div>
+                    <h3>Assertiveness Principle</h3>
+                    <p>The AI is configured to actively challenge the user when it detects inconsistencies, unsupported assumptions, or confirmation-seeking behavior. It becomes a structural counterweight to over-reliance — not through warning labels, but through its actual behavior.</p>
+                </div>
             </div>
-          </div>
-          <div class="framework-item">
-            <div class="framework-number">02</div>
-            <div>
-              <div class="tag">Prevents false confidence</div>
-              <h3>Truth Maximization Hierarchy</h3>
-              <p>
-                A strict priority order: safety > truth > interaction quality >
-                protocol rules. If producing a satisfying response requires
-                omitting information, the system chooses truth. It explicitly
-                states when it lacks knowledge or when its output shouldn't be
-                treated as authoritative.
-              </p>
+            <div class="framework-item">
+                <div class="framework-number">02</div>
+                <div>
+                    <div class="tag">Prevents false confidence</div>
+                    <h3>Truth Maximization Hierarchy</h3>
+                    <p>A strict priority order: safety &gt; truth &gt; interaction quality &gt; protocol rules. If producing a satisfying response requires omitting information, the system chooses truth. It explicitly states when it lacks knowledge or when its output shouldn't be treated as authoritative.</p>
+                </div>
             </div>
-          </div>
-          <div class="framework-item">
-            <div class="framework-number">03</div>
-            <div>
-              <div class="tag">Continuous oversight</div>
-              <h3>Commitment Threshold Detection</h3>
-              <p>
-                The system monitors when decisions approach irreversibility and
-                flags these moments explicitly. Human oversight shifts from a
-                one-time gate at the end of a process to a continuous function
-                embedded throughout the interaction.
-              </p>
+            <div class="framework-item">
+                <div class="framework-number">03</div>
+                <div>
+                    <div class="tag">Continuous oversight</div>
+                    <h3>Commitment Threshold Detection</h3>
+                    <p>The system monitors when decisions approach irreversibility and flags these moments explicitly. Human oversight shifts from a one-time gate at the end of a process to a continuous function embedded throughout the interaction.</p>
+                </div>
             </div>
-          </div>
-          <div class="framework-item">
-            <div class="framework-number">04</div>
-            <div>
-              <div class="tag">Preserves human agency</div>
-              <h3>Governance Dependency</h3>
-              <p>
-                The protocol defines itself as a guidance layer, not
-                enforcement. It can recommend, flag, and refuse — but the human
-                retains full authority to override, pause, or terminate. Genuine
-                agency, not automated decision-making disguised as oversight.
-              </p>
+            <div class="framework-item">
+                <div class="framework-number">04</div>
+                <div>
+                    <div class="tag">Preserves human agency</div>
+                    <h3>Governance Dependency</h3>
+                    <p>The protocol defines itself as a guidance layer, not enforcement. It can recommend, flag, and refuse — but the human retains full authority to override, pause, or terminate. Genuine agency, not automated decision-making disguised as oversight.</p>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <!-- CASE STUDY -->
-      <section id="proof">
+    <section id="proof">
         <div class="section-label">Proof of Concept</div>
-        <h2 class="section-title">
-          From concept to production-ready document in 5 minutes
-        </h2>
-        <p class="section-intro">
-          A real case study demonstrating the difference between default AI
-          interaction and structured dialogue under Tesseract Protocol.
-        </p>
+        <h2 class="section-title">From concept to production-ready document in 5 minutes</h2>
+        <p class="section-intro">A real case study demonstrating the difference between default AI interaction and structured dialogue under Tesseract Protocol.</p>
         <div class="case-study-box">
-          <div>
-            <div class="case-metrics-row">
-              <div class="case-metric">
-                <div class="number">5</div>
-                <div class="label">Minutes to completion</div>
-              </div>
-              <div class="case-metric">
-                <div class="number">3</div>
-                <div class="label">Dialogue paths designed</div>
-              </div>
+            <div>
+                <div class="case-metrics-row">
+                    <div class="case-metric">
+                        <div class="number">5</div>
+                        <div class="label">Minutes to completion</div>
+                    </div>
+                    <div class="case-metric">
+                        <div class="number">3</div>
+                        <div class="label">Dialogue paths designed</div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="case-details">
-            <h3>VR Training Persona Design</h3>
-            <p>
-              Task: Design a psychologically nuanced persona for VR-based soft
-              skills training — including personality profile, three branching
-              dialogue paths, de-escalation triggers, and measurable training
-              metrics.
-            </p>
-            <p>
-              Under Tesseract Protocol, the AI produced a complete,
-              implementation-ready document that received positive feedback from
-              the Immersion / metaCoach AI team.
-            </p>
-            <p>
-              Without the protocol, the same task typically produces generic
-              outputs requiring hours of manual refinement.
-            </p>
-          </div>
+            <div class="case-details">
+                <h3>VR Training Persona Design</h3>
+                <p>Task: Design a psychologically nuanced persona for VR-based soft skills training — including personality profile, three branching dialogue paths, de-escalation triggers, and measurable training metrics.</p>
+                <p>Under Tesseract Protocol, the AI produced a complete, implementation-ready document that received positive feedback from the Immersion / metaCoach AI team.</p>
+                <p>Without the protocol, the same task typically produces generic outputs requiring hours of manual refinement.</p>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- ABOUT -->
-      <section id="about">
+    <section id="about">
         <div class="section-label">About</div>
         <div class="about-grid">
-          <div class="about-photo">
-            <img src="./krzysztof-olbinski.png" />
-          </div>
-          <div class="about-content">
-            <h3>Krzysztof Olbiński</h3>
-            <div class="about-role">Founder, Homo Digital</div>
-            <p>
-              Software engineer by training (FTIMS, Łódź University of
-              Technology). 12 months of intensive daily work with LLMs — Claude,
-              GPT-4, Gemini — resulting in the Tesseract Protocol framework for
-              structured human-AI interaction.
-            </p>
-            <p>
-              The protocol was developed through cross-platform testing and
-              iterative refinement, with built-in falsification criteria — 10
-              testable conditions under which it would require revision.
-            </p>
-            <p>
-              Currently focused on workshops for teams working with AI and
-              consulting on human oversight quality under EU AI Act
-              requirements.
-            </p>
-            <div class="about-links">
-              <a href="https://www.linkedin.com/in/olbinski/">LinkedIn</a>
-              <a href="mailto:contact@homodigital.io" target="_blank">Email</a>
+            <div class="about-photo">
+                <img src="./krzysztof-olbinski.png" alt="Krzysztof Olbiński">
             </div>
-          </div>
+            <div class="about-content">
+                <h3>Krzysztof Olbiński</h3>
+                <div class="about-role">Founder, Homo Digital</div>
+                <p>Software engineer by training (FTIMS, Łódź University of Technology). 12 months of intensive daily work with LLMs — Claude, GPT-4, Gemini — resulting in the Tesseract Protocol framework for structured human-AI interaction.</p>
+                <p>The protocol was developed through cross-platform testing and iterative refinement, with built-in falsification criteria — 10 testable conditions under which it would require revision.</p>
+                <p>Currently focused on workshops for teams working with AI and consulting on human oversight quality under EU AI Act requirements.</p>
+                <div class="about-links">
+                    <a href="https://www.linkedin.com/in/olbinski/" target="_blank">LinkedIn</a>
+                    <a href="mailto:contact@homodigital.io">Email</a>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section">
         <div class="section-label">Get in Touch</div>
-        <h2 class="section-title">
-          Interested in a pilot workshop for your team?
-        </h2>
-        <p>
-          Free pilot session — I test the methodology in your environment, you
-          see whether it delivers value. No commitment, no cost.
-        </p>
-        <a
-          href="mailto:contact@homodigital.io"
-          class="contact-email"
-          target="_blank"
-          >contact@homodigital.io</a
-        >
-      </section>
-    </div>
+        <h2 class="section-title">Interested in a pilot workshop for your team?</h2>
+        <p>Free pilot session — I test the methodology in your environment, you see whether it delivers value. No commitment, no cost.</p>
+        <a href="mailto:contact@homodigital.io" class="contact-email">contact@homodigital.io</a>
+    </section>
 
-    <footer>
-      <div class="container">
+</div>
+
+<footer>
+    <div class="container">
         <div class="footer-inner">
-          <span
-            >&copy; 2026 Homo Digital. Independent research initiative.</span
-          >
-          <div class="footer-links">
-            <a href="https://www.linkedin.com/in/olbinski/">LinkedIn</a>
-            <a href="https://www.linkedin.com/company/homo-digital">Company</a>
-          </div>
+            <span>&copy; 2026 Homo Digital. Independent research initiative.</span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/olbinski/" target="_blank">LinkedIn</a>
+            </div>
         </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+</footer>
+
+<script>
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('open');
+        });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+</script>
+
+</body>
 </html>

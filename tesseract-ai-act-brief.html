@@ -1,211 +1,368 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tesseract Protocol & EU AI Act Article 14 — Brief</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --color-bg: #FAFAF8;
-            --color-surface: #FFFFFF;
-            --color-text: #1A1A1A;
-            --color-text-secondary: #5C5C5C;
-            --color-accent: #2B5C3F;
-            --color-accent-light: #E8F0EB;
-            --color-border: #E5E5E0;
-            --font-display: 'DM Serif Display', Georgia, serif;
-            --font-body: 'DM Sans', -apple-system, sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: var(--font-body);
-            color: var(--color-text);
-            background: var(--color-bg);
-            line-height: 1.8;
-            font-size: 17px;
-            -webkit-font-smoothing: antialiased;
-        }
-        .back-nav {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem 0;
-        }
-        .back-nav a {
-            font-size: 0.88rem;
-            color: var(--color-accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .back-nav a:hover { text-decoration: underline; }
-        article {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 2rem 2rem 6rem;
-        }
-        .brief-label {
-            font-size: 0.78rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-        }
-        h1 {
-            font-family: var(--font-display);
-            font-size: clamp(1.6rem, 4vw, 2.2rem);
-            line-height: 1.25;
-            letter-spacing: -0.015em;
-            margin-bottom: 0.5rem;
-        }
-        .author {
-            font-size: 0.9rem;
-            color: var(--color-text-secondary);
-            margin-bottom: 3rem;
-        }
-        h2 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
-        }
-        h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        p { margin-bottom: 1rem; color: var(--color-text-secondary); }
-        .tag {
-            display: inline-block;
-            font-size: 0.72rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--color-accent);
-            background: var(--color-accent-light);
-            padding: 0.2rem 0.6rem;
-            border-radius: 3px;
-            margin-bottom: 0.5rem;
-        }
-        .mechanism-block {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
-            border-radius: 8px;
-            padding: 1.75rem 2rem;
-            margin: 1.5rem 0;
-        }
-        .mechanism-block p:last-child { margin-bottom: 0; }
+      :root {
+        --color-bg: #fafaf8;
+        --color-surface: #ffffff;
+        --color-text: #1a1a1a;
+        --color-text-secondary: #5c5c5c;
+        --color-accent: #2b5c3f;
+        --color-accent-light: #e8f0eb;
+        --color-border: #e5e5e0;
+        --font-display: 'DM Serif Display', Georgia, serif;
+        --font-body: 'DM Sans', -apple-system, sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background: var(--color-bg);
+        line-height: 1.8;
+        font-size: 17px;
+        -webkit-font-smoothing: antialiased;
+      }
+      .back-nav {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 1.5rem 2rem 0;
+      }
+      .back-nav a {
+        font-size: 0.88rem;
+        color: var(--color-accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .back-nav a:hover {
+        text-decoration: underline;
+      }
+      article {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 2rem 6rem;
+      }
+      .brief-label {
+        font-size: 0.78rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-accent);
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+        margin-bottom: 0.5rem;
+      }
+      .author {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        margin-bottom: 3rem;
+      }
+      h2 {
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+        color: var(--color-text-secondary);
+      }
+      .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--color-accent);
+        background: var(--color-accent-light);
+        padding: 0.2rem 0.6rem;
+        border-radius: 3px;
+        margin-bottom: 0.5rem;
+      }
+      .mechanism-block {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 1.75rem 2rem;
+        margin: 1.5rem 0;
+      }
+      .mechanism-block p:last-child {
+        margin-bottom: 0;
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+      .col-box {
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid var(--color-border);
+        background: var(--color-surface);
+      }
+      .col-box.exists {
+        border-left: 3px solid var(--color-accent);
+      }
+      .col-box.missing {
+        border-left: 3px solid #c4a35a;
+      }
+      .col-box h3 {
+        margin-top: 0;
+      }
+      .col-box p:last-child {
+        margin-bottom: 0;
+      }
+      .question-box {
+        background: var(--color-accent);
+        color: #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        margin: 3rem 0 2rem;
+      }
+      .question-box h2 {
+        color: #fff;
+        margin-top: 0;
+      }
+      .question-box p {
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .question-box ol {
+        color: rgba(255, 255, 255, 0.85);
+        padding-left: 1.25rem;
+      }
+      .question-box li {
+        margin-bottom: 0.5rem;
+      }
+      .contact {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--color-border);
+      }
+      .contact a {
+        color: var(--color-accent);
+        text-decoration: none;
+      }
+      @media (max-width: 768px) {
         .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0;
+          grid-template-columns: 1fr;
         }
-        .col-box {
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--color-border);
-            background: var(--color-surface);
-        }
-        .col-box.exists { border-left: 3px solid var(--color-accent); }
-        .col-box.missing { border-left: 3px solid #C4A35A; }
-        .col-box h3 { margin-top: 0; }
-        .col-box p:last-child { margin-bottom: 0; }
-        .question-box {
-            background: var(--color-accent);
-            color: #fff;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 3rem 0 2rem;
-        }
-        .question-box h2 { color: #fff; margin-top: 0; }
-        .question-box p { color: rgba(255,255,255,0.85); }
-        .question-box ol { color: rgba(255,255,255,0.85); padding-left: 1.25rem; }
-        .question-box li { margin-bottom: 0.5rem; }
-        .contact { font-size: 0.9rem; color: var(--color-text-secondary); margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); }
-        .contact a { color: var(--color-accent); text-decoration: none; }
-        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="back-nav">
+      <a href="index.html">&larr; Back to Homo Digital</a>
+    </div>
 
-<div class="back-nav"><a href="index.html">&larr; Back to Homo Digital</a></div>
+    <article>
+      <div class="brief-label">Brief</div>
+      <h1>
+        Tesseract Protocol: A Runtime Governance Layer for Human Oversight Under
+        EU AI Act Article 14
+      </h1>
+      <div class="author">Krzysztof Olbiński · March 2026</div>
 
-<article>
-    <div class="brief-label">Brief</div>
-    <h1>Tesseract Protocol: A Runtime Governance Layer for Human Oversight Under EU AI Act Article 14</h1>
-    <div class="author">Krzysztof Olbiński · March 2026</div>
+      <h2>The Problem</h2>
+      <p>
+        Article 14 of the EU AI Act requires that high-risk AI systems be
+        designed for effective human oversight. In practice, most
+        implementations reduce this to formal checkpoints — confirmation
+        dialogs, approval workflows, audit logs. These satisfy the letter of the
+        regulation but fail to address its intent.
+      </p>
+      <p>
+        The core issue: humans over-rely on AI outputs by default. Article
+        14(4)(b) explicitly names this as "automation bias" — the tendency to
+        automatically rely on AI-generated results without critical evaluation.
+        Current compliance measures (pop-ups, checkboxes, review steps) do not
+        change the underlying interaction dynamic. They add friction, not
+        oversight.
+      </p>
+      <p>
+        The missing layer is not another control <em>around</em> the AI system.
+        It is a behavioral layer <em>within</em> the interaction itself — one
+        that structurally changes how the AI engages with the human operator.
+      </p>
 
-    <h2>The Problem</h2>
-    <p>Article 14 of the EU AI Act requires that high-risk AI systems be designed for effective human oversight. In practice, most implementations reduce this to formal checkpoints — confirmation dialogs, approval workflows, audit logs. These satisfy the letter of the regulation but fail to address its intent.</p>
-    <p>The core issue: humans over-rely on AI outputs by default. Article 14(4)(b) explicitly names this as "automation bias" — the tendency to automatically rely on AI-generated results without critical evaluation. Current compliance measures (pop-ups, checkboxes, review steps) do not change the underlying interaction dynamic. They add friction, not oversight.</p>
-    <p>The missing layer is not another control <em>around</em> the AI system. It is a behavioral layer <em>within</em> the interaction itself — one that structurally changes how the AI engages with the human operator.</p>
+      <h2>The Proposal</h2>
+      <p>
+        The Tesseract Protocol is a configurable behavioral framework deployed
+        as a system-level instruction layer on existing LLMs (Claude, GPT-4,
+        Gemini). It does not require building custom models. It reconfigures how
+        commercial AI systems interact with human operators by embedding
+        governance principles directly into the interaction flow.
+      </p>
+      <p>The protocol addresses four specific requirements of Article 14(4):</p>
 
-    <h2>The Proposal</h2>
-    <p>The Tesseract Protocol is a configurable behavioral framework deployed as a system-level instruction layer on existing LLMs (Claude, GPT-4, Gemini). It does not require building custom models. It reconfigures how commercial AI systems interact with human operators by embedding governance principles directly into the interaction flow.</p>
-    <p>The protocol addresses four specific requirements of Article 14(4):</p>
-
-    <div class="mechanism-block">
+      <div class="mechanism-block">
         <div class="tag">Art. 14(4)(b) — Countering automation bias</div>
         <h3>1. Assertiveness Principle</h3>
-        <p><strong>The requirement:</strong> Humans must remain aware of the tendency to over-rely on AI output.</p>
-        <p><strong>The mechanism:</strong> The protocol instructs the AI to actively challenge the user when it detects logical inconsistencies, unsupported assumptions, or confirmation-seeking behavior. Rather than defaulting to agreement, the system flags disagreement and surfaces tension points.</p>
-        <p><strong>Practical effect:</strong> The AI becomes a structural counterweight to automation bias — not through a warning label, but through its actual behavior in the interaction.</p>
-    </div>
+        <p>
+          <strong>The requirement:</strong> Humans must remain aware of the
+          tendency to over-rely on AI output.
+        </p>
+        <p>
+          <strong>The mechanism:</strong> The protocol instructs the AI to
+          actively challenge the user when it detects logical inconsistencies,
+          unsupported assumptions, or confirmation-seeking behavior. Rather than
+          defaulting to agreement, the system flags disagreement and surfaces
+          tension points.
+        </p>
+        <p>
+          <strong>Practical effect:</strong> The AI becomes a structural
+          counterweight to automation bias — not through a warning label, but
+          through its actual behavior in the interaction.
+        </p>
+      </div>
 
-    <div class="mechanism-block">
-        <div class="tag">Art. 14(4)(a) — Understanding AI capabilities &amp; limitations</div>
+      <div class="mechanism-block">
+        <div class="tag">
+          Art. 14(4)(a) — Understanding AI capabilities &amp; limitations
+        </div>
         <h3>2. Truth Maximization Hierarchy</h3>
-        <p><strong>The requirement:</strong> Humans must properly understand AI system capabilities and limitations, including detecting anomalies and unexpected performance.</p>
-        <p><strong>The mechanism:</strong> The protocol enforces a strict priority hierarchy: safety > truth > interaction quality > protocol rules > default behavior. The AI explicitly states when it lacks sufficient information, when a question exceeds its competence, or when its output should not be treated as authoritative.</p>
-        <p><strong>Practical effect:</strong> The system actively prevents the illusion of AI omniscience — one of the primary drivers of inappropriate over-reliance.</p>
-    </div>
+        <p>
+          <strong>The requirement:</strong> Humans must properly understand AI
+          system capabilities and limitations, including detecting anomalies and
+          unexpected performance.
+        </p>
+        <p>
+          <strong>The mechanism:</strong> The protocol enforces a strict
+          priority hierarchy: safety > truth > interaction quality > protocol
+          rules > default behavior. The AI explicitly states when it lacks
+          sufficient information, when a question exceeds its competence, or
+          when its output should not be treated as authoritative.
+        </p>
+        <p>
+          <strong>Practical effect:</strong> The system actively prevents the
+          illusion of AI omniscience — one of the primary drivers of
+          inappropriate over-reliance.
+        </p>
+      </div>
 
-    <div class="mechanism-block">
-        <div class="tag">Art. 14(4)(d) — Ability to override or reverse AI output</div>
+      <div class="mechanism-block">
+        <div class="tag">
+          Art. 14(4)(d) — Ability to override or reverse AI output
+        </div>
         <h3>3. Commitment Threshold Detection</h3>
-        <p><strong>The requirement:</strong> Humans must be able to disregard, override, or reverse AI system output in any particular situation.</p>
-        <p><strong>The mechanism:</strong> The protocol monitors the trajectory of the interaction and flags moments when decisions approach irreversibility — when the cost of reversal increases significantly.</p>
-        <p><strong>Practical effect:</strong> Human oversight shifts from a one-time gate at the end of a process to a continuous, context-aware function embedded throughout the interaction.</p>
-    </div>
+        <p>
+          <strong>The requirement:</strong> Humans must be able to disregard,
+          override, or reverse AI system output in any particular situation.
+        </p>
+        <p>
+          <strong>The mechanism:</strong> The protocol monitors the trajectory
+          of the interaction and flags moments when decisions approach
+          irreversibility — when the cost of reversal increases significantly.
+        </p>
+        <p>
+          <strong>Practical effect:</strong> Human oversight shifts from a
+          one-time gate at the end of a process to a continuous, context-aware
+          function embedded throughout the interaction.
+        </p>
+      </div>
 
-    <div class="mechanism-block">
+      <div class="mechanism-block">
         <div class="tag">Art. 14(4)(e) — Ability to interrupt the system</div>
         <h3>4. Governance Dependency Principle</h3>
-        <p><strong>The requirement:</strong> Humans must be able to intervene in or interrupt the AI system's operation.</p>
-        <p><strong>The mechanism:</strong> The protocol explicitly defines itself as a guidance layer, not an enforcement layer. It includes a built-in acknowledgment that protocol-level instructions require external governance infrastructure for enforcement.</p>
-        <p><strong>Practical effect:</strong> The interaction preserves genuine human agency rather than creating a new form of automated decision-making disguised as "AI-assisted oversight."</p>
-    </div>
+        <p>
+          <strong>The requirement:</strong> Humans must be able to intervene in
+          or interrupt the AI system's operation.
+        </p>
+        <p>
+          <strong>The mechanism:</strong> The protocol explicitly defines itself
+          as a guidance layer, not an enforcement layer. It includes a built-in
+          acknowledgment that protocol-level instructions require external
+          governance infrastructure for enforcement.
+        </p>
+        <p>
+          <strong>Practical effect:</strong> The interaction preserves genuine
+          human agency rather than creating a new form of automated
+          decision-making disguised as "AI-assisted oversight."
+        </p>
+      </div>
 
-    <h2>Current Status</h2>
-    <div class="two-col">
+      <h2>Current Status</h2>
+      <div class="two-col">
         <div class="col-box exists">
-            <h3>What exists today</h3>
-            <p>A working protocol (v2.2.1) tested over 12 months of daily use across Claude, GPT-4, and Gemini. Documented behavioral changes in AI output quality. A concrete case study: VR training persona design in 5 minutes, validated by a professional team. 10 defined falsification criteria.</p>
+          <h3>What exists today</h3>
+          <p>
+            A working protocol (v2.2.1) tested over 12 months of daily use
+            across Claude, GPT-4, and Gemini. Documented behavioral changes in
+            AI output quality. A concrete case study: VR training persona design
+            in 5 minutes, validated by a professional team. 10 defined
+            falsification criteria.
+          </p>
         </div>
         <div class="col-box missing">
-            <h3>What does not exist yet</h3>
-            <p>Formal academic validation or peer review. Quantitative measurement framework for oversight quality improvement. Integration with existing AI governance tooling. Deployment beyond single-operator use.</p>
+          <h3>What does not exist yet</h3>
+          <p>
+            Formal academic validation or peer review. Quantitative measurement
+            framework for oversight quality improvement. Integration with
+            existing AI governance tooling. Deployment beyond single-operator
+            use.
+          </p>
         </div>
-    </div>
+      </div>
 
-    <div class="question-box">
+      <div class="question-box">
         <h2>The Question</h2>
-        <p>Does a runtime behavioral layer — one that changes how the AI interacts with its human operator rather than adding controls around the interaction — have a place in the practical implementation of Article 14?</p>
+        <p>
+          Does a runtime behavioral layer — one that changes how the AI
+          interacts with its human operator rather than adding controls around
+          the interaction — have a place in the practical implementation of
+          Article 14?
+        </p>
         <p>If so, the logical next steps would be:</p>
         <ol>
-            <li><strong>Mapping exercise:</strong> Detailed alignment of all protocol mechanisms against Article 14 sub-requirements</li>
-            <li><strong>Measurement framework:</strong> Defining metrics for "oversight quality" beyond compliance checkboxes</li>
-            <li><strong>Pilot deployment:</strong> Testing the protocol with a real team in a regulated context</li>
+          <li>
+            <strong>Mapping exercise:</strong> Detailed alignment of all
+            protocol mechanisms against Article 14 sub-requirements
+          </li>
+          <li>
+            <strong>Measurement framework:</strong> Defining metrics for
+            "oversight quality" beyond compliance checkboxes
+          </li>
+          <li>
+            <strong>Pilot deployment:</strong> Testing the protocol with a real
+            team in a regulated context
+          </li>
         </ol>
-    </div>
+      </div>
 
-    <div class="contact">
-        <p>Krzysztof Olbiński · <a href="mailto:krzysztof@homodigital.io">krzysztof@homodigital.io</a> · <a href="https://www.linkedin.com/in/olbinski/">LinkedIn</a></p>
-    </div>
-</article>
-
-</body>
+      <div class="contact">
+        <p>
+          Krzysztof Olbiński ·
+          <a href="mailto:contact@homodigital.io" target="_blank"
+            >contact@homodigital.io</a
+          >
+          ·
+          <a href="https://www.linkedin.com/in/olbinski/">LinkedIn</a>
+        </p>
+      </div>
+    </article>
+  </body>
 </html>
