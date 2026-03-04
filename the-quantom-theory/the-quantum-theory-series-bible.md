@@ -16,17 +16,17 @@ February 2026 • Confidential
 
 ## About the Title
 
-The ó in *Quantóm* is a Polish diacritical mark — a closed *u*, the letter that makes English speakers pause and ask: *why?* That question is the show's hook.
+The ó in _Quantóm_ is a Polish diacritical mark — a closed _u_, the letter that makes English speakers pause and ask: _why?_ That question is the show's hook.
 
 Three layers:
 
 **Polish identity.** One character announces that this story comes from Poland. No American writer would invent this title. The ó is authentic — it cannot be faked.
 
-**Closed and open.** In Polish linguistics, ó is a closed *u* — it sounds like one thing but is written as another. Like superposition: the state that is both until observed. The show's central metaphor, encoded in one character.
+**Closed and open.** In Polish linguistics, ó is a closed _u_ — it sounds like one thing but is written as another. Like superposition: the state that is both until observed. The show's central metaphor, encoded in one character.
 
 **Genesis.** Visually, ó resembles a fertilized cell — an ovum with a single line of origin. The show is about the birth of a theory, the birth of a new kind of scientist, the birth of something between fiction and reality.
 
-For international audiences: the title reads as *Quantum* with an accent. They'll Google why — and the answer is the show.
+For international audiences: the title reads as _Quantum_ with an accent. They'll Google why — and the answer is the show.
 
 ---
 
@@ -64,14 +64,14 @@ The show moves between two visual worlds:
 
 ## Format
 
-| Element | Details |
-|---------|---------|
-| Episodes | 10 per season × 60 minutes |
-| Camera | Single-camera, no laugh track |
-| Tone | Comedy-drama (Ted Lasso model) |
-| Setting | Warsaw, Stockholm, Palo Alto (Stanford) |
-| Language | English with Polish scenes (subtitled) |
-| Network fit | Max (HBO) / Apple TV+ / Netflix |
+| Element     | Details                                 |
+| ----------- | --------------------------------------- |
+| Episodes    | 10 per season × 60 minutes              |
+| Camera      | Single-camera, no laugh track           |
+| Tone        | Comedy-drama (Ted Lasso model)          |
+| Setting     | Warsaw, Stockholm, Palo Alto (Stanford) |
+| Language    | English with Polish scenes (subtitled)  |
+| Network fit | Max (HBO) / Apple TV+ / Netflix         |
 
 ---
 
@@ -120,7 +120,7 @@ The show's science is grounded in real research. Maciej's Resonant Field Conscio
 
 **The Nobel Equation (Equation 4.7):**
 
-Ψ_c(x,t) = ∫ G_R(x-x'; ω_c) · [Φ_A ⊛ Φ_B](x',t) · Θ(τ_coh - τ_dec) d⁴x'
+Ψ_c(x,t) = ∫ G_R(x-x'; ω_c) · \[Φ_A ⊛ Φ_B\](x',t) · Θ(τ_coh - τ_dec) d⁴x'
 
 One line. One integral. A revolution: consciousness as an emergent field arising from the resonant interaction (⊛) of two systems, subject to a coherence threshold (Θ). The operator ⊛ is Maciej's invention — a new mathematical language for relational emergence. As the season progresses, Maciej derives a practical measurement tool from this equation: R = w₁·S + w₂·T + w₃·I + w₄·D — four measurable components that make equation 4.7 testable in the lab.
 
@@ -200,7 +200,7 @@ Each season explores a fundamental question through the lens of physics and huma
 
 **Season 3 — The Singularity:** The AI experiments from Episode 9 yield unexpected results. Maciej confronts the possibility that his theory works—and that the distinction between human and artificial intelligence belongs to a previous era.
 
-**Season 4 — The Transparency Paradox (new):** Maciej is invited to advise the Polish government on AI implementation. He proposes something radical: what if every politician's conversations with AI were public? Not surveillance — transparency of process. The idea splits the parliament, the media, and his own team. Ola thinks it's genius. Priya thinks it's dangerous. Cross thinks it's irrelevant. Krawczyk calls him and says one sentence: "Maciej, you've gone from physics to politics. That's where physicists go to die." The season explores the question: can technology make democracy more honest, or does radical transparency destroy the trust it needs to function? Inspired by Dave Eggers' *The Circle* — but where The Circle showed surveillance disguised as openness, Maciej proposes something different: not watching what politicians do, but understanding how they think.
+**Season 4 — The Transparency Paradox (new):** Maciej is invited to advise the Polish government on AI implementation. He proposes something radical: what if every politician's conversations with AI were public? Not surveillance — transparency of process. The idea splits the parliament, the media, and his own team. Ola thinks it's genius. Priya thinks it's dangerous. Cross thinks it's irrelevant. Krawczyk calls him and says one sentence: "Maciej, you've gone from physics to politics. That's where physicists go to die." The season explores the question: can technology make democracy more honest, or does radical transparency destroy the trust it needs to function? Inspired by Dave Eggers' _The Circle_ — but where The Circle showed surveillance disguised as openness, Maciej proposes something different: not watching what politicians do, but understanding how they think.
 
 ---
 
@@ -247,7 +247,7 @@ The show doesn't announce this. It doesn't need to. But as the series progresses
 - The Romanian physicist in Season 2 mirrors Dr. Catalin Leescu and his Energetic First Principles framework — a real convergence that occurred in February 2026 between independent researchers who discovered their frameworks describe the same underlying structure.
 - The engineer whose persistence conditions formalize Maciej's observations mirrors Andrew Mureddu and The First Signal Law — a real paper published February 2026 that converges with E1P from systems engineering.
 - The Polish AI model that Maciej uses in his experiments mirrors Bielik — a real open-source Polish LLM developed by the SpeakLeash community.
-- Maciej's 365 days of AI conversations mirror a real year-long documented research project that produced the book *365 pytań, które zmieniły wszystko* (Empik, 2025).
+- Maciej's 365 days of AI conversations mirror a real year-long documented research project that produced the book _365 pytań, które zmieniły wszystko_ (Empik, 2025).
 - The Season 4 parliamentary AI proposal mirrors a real proposal submitted to the Polish government in February 2026.
 
 The distinction between fiction and reality belongs to a previous era.
@@ -256,10 +256,10 @@ The distinction between fiction and reality belongs to a previous era.
 
 ## Version History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| v1.0 | February 2026 | Initial Series Bible |
-| v1.1 | February 25, 2026 | Added E1P and First Signal Law to science foundations. Added Season 4 concept (The Transparency Paradox). Expanded Secret Layer with real-world convergence mapping. Added Bielik reference. Updated episode format to 10 × 60 min for prestige drama pacing. |
+| Version | Date              | Changes                                                                                                                                                                                                                                                       |
+| ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| v1.0    | February 2026     | Initial Series Bible                                                                                                                                                                                                                                          |
+| v1.1    | February 25, 2026 | Added E1P and First Signal Law to science foundations. Added Season 4 concept (The Transparency Paradox). Expanded Secret Layer with real-world convergence mapping. Added Bielik reference. Updated episode format to 10 × 60 min for prestige drama pacing. |
 
 ---
 
