@@ -139,6 +139,8 @@ Dr. Nathan Cross is the world's foremost authority on quantum decoherence bounda
 
 He is divorced. He plays piano. He is outwardly sociable and professionally generous — he mentors students, speaks at conferences, writes accessible books. He is not a social misfit. He is a man whose emotional armor is professional rather than neurological. His control is deliberate, not compulsive. This makes his unraveling more dramatic: he doesn't break because he can't handle people. He breaks because the data doesn't behave the way his life's work says it should.
 
+His marriage ended years ago — his ex-wife was a literature professor who saw him clearly but couldn't live with what she saw. More recently, he was involved with Priya Sharma, his former PhD student. They were together at Stanford for two years after she completed her doctorate. She left six months before the pilot — moved to MIT, disagreed with his rigid stance on decoherence, needed distance from both the institution and the man. The apartment still has gaps where her books were. Cross hasn't filled them.
+
 ---
 
 ## Psychology
@@ -190,7 +192,7 @@ His voice and perspective are ALWAYS present, even when he's not on screen. Othe
 
 **Maciej (indirect → direct):** The entire season builds toward their first conversation. Everything before is mediated — papers, Priya (who trained under Cross), reputation. The phone call in Ep 10 is the climax. Maciej's question ("When you won the Nobel, did it feel like you expected it to?") is the one thing Cross has no protocol for: a simple, personal question from someone whose work he respects.
 
-**Priya (former mentor → reluctant antagonist):** Priya did her PhD under Cross at Stanford. She left because she disagreed with his rigid position on decoherence. Now she's collaborating with the man whose theory Cross attacked. The betrayal is professional, not personal — but it stings. Cross recognizes his own rigor in Priya's methodology, which makes her support of Maciej harder to dismiss.
+**Priya (former partner → reluctant antagonist):** Priya did her PhD under Cross at Stanford. They became involved after she graduated — two years of a relationship that was intellectually electric and emotionally guarded. She left six months before the pilot: disagreed with his rigid position on decoherence, took a faculty position at MIT, and ended the relationship. Now she's collaborating with the man whose theory Cross attacked. The betrayal is professional AND personal — and it stings on both levels. Cross recognizes his own rigor in Priya's methodology, which makes her support of Maciej harder to dismiss. When they speak across 3000 miles, past tense keeps slipping into present.
 
 **The scientific community:** Cross's reputation gives his anonymous critique devastating weight. When he eventually publishes his bridge paper under his own name, the scientific community is stunned — the man who built the wall just opened a door in it.
 
@@ -343,7 +345,7 @@ Then Maciej won the Nobel.
 
 **Maciej:** Intellectual respect that develops slowly into something warmer. Priya will never be Maciej's cheerleader. She will be the person who makes his theory survive. There's a subtle attraction — the show doesn't deny it but doesn't rush it. Two people operating at the same intellectual frequency in close proximity for months. The tension is real. What they do with it is a question for later seasons.
 
-**Cross (indirect):** Priya knows Cross's reputation. She's not intimidated — she's a tenured MIT professor. She refers to his anonymous critique as "technically competent but strategically unserious." When Cross eventually encounters her, he will meet his match in a different way than Maciej — Priya fights on Cross's terms (data, methodology, precision) and wins.
+**Cross (the weight she carries):** Priya trained under Cross at Stanford. After her PhD, they became involved — two years together, intellectually matched, emotionally incomplete. She left six months ago. MIT was the professional reason; Cross was the personal one. His rigid certainty about decoherence boundaries became a metaphor for everything in their relationship: he knew where the lines were, she kept seeing evidence they were wrong. Now she's collaborating with the physicist whose work threatens everything Cross built — including the worldview that made their relationship impossible. She refers to his anonymous critique as "technically competent but strategically unserious." She's not intimidated by him. She's grieving the version of him that could have been curious instead of certain.
 
 ---
 
@@ -502,7 +504,7 @@ The public antagonist. Where Cross's critique is private, precise, and ultimatel
  │ PRIYA ──────── MARCUS
  │ (skeptic → ally) (lab hands, audience proxy)
  │ │
- │ │ former student of:
+ │ │ former student + ex-partner of:
  │ │
  │ CROSS
  │ (anonymous antagonist → grudging respect)
@@ -512,7 +514,7 @@ The public antagonist. Where Cross's critique is private, precise, and ultimatel
  └──────────── The Phone Call (Ep 10)
 ```
 
-**Key dynamic:** Priya is the hinge. She trained under Cross at Stanford, now collaborates with Maciej at MIT. She recognizes Cross's writing style in the anonymous arXiv critique. She is the bridge between the two physicists — but nobody's messenger. Her loyalty is to the data.
+**Key dynamic:** Priya is the hinge — professionally AND personally. She trained under Cross at Stanford, was in a relationship with him, left both for MIT. Now she collaborates with the man whose theory Cross attacked. She recognizes Cross's writing style in the anonymous arXiv critique. She is the bridge between the two physicists — but nobody's messenger. Her loyalty is to the data. The romantic history with Cross adds a layer the audience discovers gradually: every phone call between them carries the weight of what ended.
 
 ---
 

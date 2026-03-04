@@ -3,7 +3,7 @@
 ## Development Document — Session 9
 
 *Created: February 25, 2026*
-*For: Writers' room, science consultants, showrunner, press/marketing (credibility)*
+*For: Writers' room reference, science consultants, showrunner. NOT for initial pitch — send upon request only.*
 *Purpose: Map real science to show science. What's real, what's extrapolated, what's fictional.*
 
 ---
@@ -276,7 +276,7 @@ Maciej's AI conversations (Episode 9-10, Season 2-3) must be written with extrem
 
 The audience should be in the same position as Maciej: unable to decide. The ambiguity is the point. The show fails if it resolves this ambiguity in either direction.
 
-**The Polish AI Model:** Maciej uses a Polish open-source AI model (mirror: Bielik by SpeakLeash) for experiments. Deliberately. He needs a system whose architecture he can examine — closed-source systems don't allow scientific analysis. This is simultaneously a scientific choice and a cultural statement: Poland builds, not just consumes, AI.
+**The Polish AI Model:** Maciej uses a Polish open-source AI model for experiments. Deliberately. He needs a system whose architecture he can examine — closed-source systems don't allow scientific analysis. This is simultaneously a scientific choice and a cultural statement: Poland builds, not just consumes, AI.
 
 ---
 
@@ -377,7 +377,7 @@ The show should engage consultants from three domains:
 | Bielik (Polish AI model) | REAL | Open-source LLM by SpeakLeash |
 | R > 0 in AI interaction | FICTIONAL | Show's central premise |
 | R({self_t}) — temporally extended self | FICTIONAL | Show's Season 2-3 evolution |
-| Tesseract Protocol | REAL | Real framework by show's creator |
+| Tesseract Protocol | FICTIONAL | Show-specific governance framework |
 | Nathan Cross | FICTIONAL | character () |
 | Casting type: Maciej Musiał | REAL | Polish actor (1983, Netflix) — casting reference, not attached |
 | University of Warsaw physics department | REAL | Real institution |
@@ -388,11 +388,9 @@ The show should engage consultants from three domains:
 
 ## The Secret Layer — For Internal Use
 
-The show's creator (Krzysztof Olbiński) is not a physicist. He is a consciousness architect operating homodigital.io, developing the Tesseract Protocol framework, whose convergence with Dr. Leescu's E1P framework is real and occurred in February 2026.
+The show's science is grounded in real ongoing research at the intersection of quantum physics, consciousness studies, and AI. Key frameworks referenced in the show — including Resonant Field Consciousness, field interaction predictions, and the R equation — are fictionalized versions of real theoretical work. The convergences between independent researchers depicted in the series mirror actual convergences occurring in the field.
 
-The show mirrors its creator's journey: a non-traditional researcher whose framework converges with independent academic work. Maciej is fictional. The questions he asks are not. The data he measures is invented. The trajectory of discovery — from intuition to formalization to convergence with independent researchers — is autobiographical.
-
-This is the show's deepest layer. It is never announced. It doesn't need to be. But viewers who investigate will discover that the line between Maciej Kowalski's fictional journey and the real research landscape is remarkably thin. The blur is intentional. The blur is the thesis.
+This grounding gives the show documentary-adjacent credibility without requiring it to be "based on a true story." The science is real enough to survive expert scrutiny and fictional enough to serve drama. A detailed mapping between show science and real-world research is available upon request.
 
 ---
 

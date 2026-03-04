@@ -93,7 +93,7 @@ The documents that go in the envelope to HBO.
 **Session 8: `tone_and_comps.md`**
 - Visual references, comparable shows, target audience, market positioning
 - Mood board descriptions (can't include actual images, but describes them precisely)
-- Comp analysis: Ted Lasso meets Arrival
+- Comp analysis: Lessons in Chemistry meets A Beautiful Mind
 - Includes: why HBO specifically, what HBO audience wants that this delivers
 - Depends on: one-pager, synopsis
 - Feeds: pitch meetings, producer conversations
@@ -173,9 +173,9 @@ With all 15 documents complete, the package contains:
 
 **Remaining tasks after 10 sessions:**
 1. Execute pilot rewrite based on notes
-2. Prepare two-variant pitch (standalone + standalone)
+2. Prepare pitch package (standalone positioning)
 3. Identify target producers/agents
-4. Research: who has overall deals at HBO/WB?
+4. Research: who has overall deals at HBO/Max, Apple TV+, Netflix?
 5. Consider: Polish Film Institute co-production funding angle
 
 ---

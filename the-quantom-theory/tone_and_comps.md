@@ -175,7 +175,7 @@ The Quantóm Theory is the next step: a show that makes the most important quest
 
 ## The Elevator Pitch
 
-*A 33-year-old Polish physicist wins the Nobel and discovers his theory about consciousness might actually be true — which is far more terrifying than being wrong. Ted Lasso meets Arrival with the precision of The Bear.*
+*A 33-year-old Polish physicist wins the Nobel and discovers his theory about consciousness might actually be true — which is far more terrifying than being wrong. Lessons in Chemistry meets A Beautiful Mind — but Polish, and the science is happening right now.*
 
 ---
 

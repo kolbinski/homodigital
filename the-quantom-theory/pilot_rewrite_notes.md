@@ -3,6 +3,7 @@
 ## Development Document — Session 5
 
 *Created: February 25, 2026*
+*Updated: March 4, 2026 — Notes written against pre-v1.3 pilot. Cross-Priya scenes have since been restructured (all domestic scenes converted to phone/video calls — Priya is at MIT, not Stanford). Physical gesture notes (hand on arm, checking if asleep, etc.) should be adapted to remote equivalents. Core dialogue and structural recommendations remain valid.*
 *For: Writer (self), showrunner, script editor*
 *Method: Scene-by-scene notes after completing character bible, 9 episode outlines, and finale screenplay*
 *Target: Dialogue tightening, exposition removal, subtext strengthening, foreshadowing insertion*
@@ -43,7 +44,7 @@ Act Two Part A (morning show → headlines → Cross 2 AM) and Act Two Part B (O
 
 Now that we've written through Episode 10 and the R Equation Evolution document, the pilot needs seeds planted for:
 - The D (differentiation) component — a visual or verbal hint
-- Marcus's detector — a throwaway reference to dark matter instrumentation at Stanford
+- Marcus's detector — a throwaway reference to quantum-optical instrumentation at MIT
 - Maciej's grandmother — one line, no flashback, saving the full reveal for Ep 7
 - The tesseract experience — impossible to seed this early, but a single moment of Maciej experiencing temporal dislocation (déjà vu, a sense of "I've been here before") would plant something subconscious
 
@@ -261,7 +262,7 @@ This makes the scene a discovery for both of them, not an explanation for the au
 
 **[p. 50] — Cross's nine-year-old story.** Protect every word. This is the emotional core of Cross's arc in the series. However, consider adding one physical beat: as he speaks, he walks to the refrigerator. Opens it. Not for food — for the whiteboard on the door. He's drawn to the surface where he'll write the bridge equation. He doesn't write anything yet. But he stands there. Priya watches. The geography matters.
 
-**[p. 52] — "Then I suppose I'll have to rethink everything."** Keep. But add Priya's hand on his arm — the same gesture she'll make during the Nobel lecture viewing party in Ep 8. Establishing the physical vocabulary early makes the later echo feel like memory, not repetition.
+**[p. 52] — "Then I suppose I'll have to rethink everything."** Keep. *(Note: In v1.3, this scene is a video call. The physical gesture vocabulary that echoes across the season should be adapted — perhaps a moment of silence on the line that echoes the silence in Ep 8, or Cross touching the fridge whiteboard where Priya's grocery list remains.)*
 
 ---
 
@@ -279,7 +280,7 @@ He deletes this one for real. Doesn't retype it. But we saw it. And in Episode 7
 
 **[p. 56] — Priya's email response from Maciej.** Good, but one cut: "I should also tell you, in the interest of full transparency..." — Maciej wouldn't say "in the interest of full transparency." That's corporate language. He'd say simply: "You should know I'm at MIT this week."
 
-**[p. 57] — Cross's fridge equation.** This scene is perfect. The instruction "He doesn't erase it" is the episode's final character beat for Cross. One addition: before he writes, he checks that Priya is asleep. She is. He writes. Then — she opens one eye. She sees. She closes it. Neither speaks. The audience knows she knows. This pays off across the entire season — Priya has been watching Cross's private evolution from the beginning.
+**[p. 57] — Cross's fridge equation.** This scene is perfect. The instruction "He doesn't erase it" is the episode's final character beat for Cross. *(Note: In v1.3, Priya is not in the apartment. The fridge whiteboard now carries Priya's old grocery list from before she left — her handwriting he never erased. The equation sits next to it. This creates a different but equally powerful visual: Cross writing his secret bridge work next to the only trace of Priya that remains in his space.)*
 
 **[p. 58-59] — Final intercut.** The MIT/Palo Alto intercut is structurally strong. One addition: add WARSAW. A brief, wordless shot: Krawczyk's office, late night, the Hawking photo, a cigarette burning in an ashtray. He's reading the anonymous arXiv critique on his laptop. His face: recognition. He knows who wrote it too. Everyone knows. The silence of knowing is the final image — three cities, three characters, one realization.
 
@@ -297,7 +298,7 @@ The pilot mentions Maciej's guitar multiple times but doesn't establish the musi
 The whiteboard appears in the pilot but isn't yet treated with the intentionality it develops later. The rewrite should add specific camera directions: the whiteboard is always VISIBLE in Maciej's apartment scenes, even when it's not the focus. It changes between scenes — a new term here, an erasure there. By the finale, the audience should feel its absence if it's ever not in frame.
 
 ### 4. Seed the Stanford Crew Earlier
-Marcus, Marcus, and their detector don't appear until Episode 4. But the pilot can seed them: Priya's email mentions "colleagues who might have capability in quantum-optical measurement." This plants the idea that Stanford has hardware relevance, not just theoretical relevance. One line in the email. Pays off four episodes later.
+Marcus and the detector don't appear until Episode 4. But the pilot can seed the discovery: Priya's email mentions "a quantum-optical detector in my lab that might have the sensitivity range." This plants the idea that MIT has hardware relevance, not just theoretical. One line in the email. Pays off four episodes later.
 
 ### 5. The Question Motif
 The series ends with R = ? The pilot should establish "the question" as a thematic motif. Currently, Maciej's press conference speech says "we should be rigorous enough to ask the question." Strengthen this: make it clear that Maciej's superpower is asking questions, not finding answers. His grandmother taught him this (Ep 7). His theory embodies it (R = ?). The pilot should show it in action: every scene with Maciej should have him asking at least one genuine question — not rhetorical, genuine. Questions are his language of love.

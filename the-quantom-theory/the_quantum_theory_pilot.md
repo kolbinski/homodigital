@@ -706,7 +706,7 @@ The equations haven't changed. But the distance between those equations and the 
 
 **SUPER: PALO ALTO, CALIFORNIA**
 
-The apartment is dark except for the blue glow of a tablet. Cross is in bed, sitting upright, reading. Priya is asleep next to him — or trying to be.
+The apartment is dark except for the blue glow of a tablet. Cross is in bed, sitting upright, reading. Alone. The apartment has the sparse quality of a space that was recently shared — a bookshelf with gaps where someone took their books, a hook by the door with nothing on it.
 
 On the tablet: Maciej Kowalski's original paper. "Resonant Field Consciousness: A Quantum Field Framework for Emergent Phenomenal Experience." 47 pages. Dense. Beautiful.
 
@@ -730,27 +730,30 @@ He deletes that note immediately. Types instead:
 
 He keeps reading. His expression is changing — not softening exactly, but deepening. Something is happening that Cross doesn't have a protocol for: he's encountering an idea that's both foreign to his framework and impossible to dismiss.
 
-**PRIYA**
-*(eyes still closed)*
-It's two in the morning, Cross.
+He picks up his phone. Scrolls to a contact: **PRIYA**. Hesitates. It's 2 AM in California — 5 AM in Boston. He calls anyway. She picks up on the second ring.
+
+**PRIYA (V.O.)**
+*(groggy but alert — she was waiting for this call without knowing it)*
+It's five in the morning, Cross.
 
 **CROSS**
 I'm reading.
 
-**PRIYA**
+**PRIYA (V.O.)**
 You're reading Kowalski's paper.
 
 **CROSS**
 I'm reading *a* paper. The author is irrelevant.
 
-**PRIYA**
-You've been highlighting aggressively for three hours. I can hear you tapping.
+**PRIYA (V.O.)**
+You called me at five AM to tell me you're reading an irrelevant paper by an irrelevant author?
 
 **CROSS**
-I highlight at a consistent volume regardless of content.
+I called because you're the only person I know who has data that touches this framework. And because I need to think out loud. And you're — you were always better at listening than I am.
 
-**PRIYA**
-*(opening one eye)*
+A beat. The "were" lands. The past tense of their relationship, sitting in the middle of a professional conversation.
+
+**PRIYA (V.O.)**
 What do you think of it?
 
 Long pause. Very long. Cross looks at the tablet like it's a chess problem he didn't expect.
@@ -758,13 +761,13 @@ Long pause. Very long. Cross looks at the tablet like it's a chess problem he di
 **CROSS**
 His math is... not wrong.
 
-**PRIYA**
+**PRIYA (V.O.)**
 That's the nicest thing you've ever said about someone else's work.
 
 **CROSS**
 It's not a compliment. "Not wrong" is the minimum standard for published physics. It's like saying a restaurant didn't give you food poisoning.
 
-**PRIYA**
+**PRIYA (V.O.)**
 And the theory itself?
 
 Another pause. Longer.
@@ -772,7 +775,7 @@ Another pause. Longer.
 **CROSS**
 The theory is... ambitious. It connects quantum coherence to phenomenal consciousness through a field-resonance model that is, admittedly, internally consistent. But internal consistency is not truth. You can build an internally consistent model of a flat earth. That doesn't mean—
 
-**PRIYA**
+**PRIYA (V.O.)**
 Cross. Do you think he might be onto something?
 
 Cross puts the tablet down. Stares at the ceiling.
@@ -780,18 +783,33 @@ Cross puts the tablet down. Stares at the ceiling.
 **CROSS**
 I think he's asking a question that physics has successfully avoided for a hundred years. And I think there's a reason we avoided it.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Because it's not answerable?
 
 **CROSS**
 Because the answer might require us to be wrong about things we've decided we're right about. And I don't enjoy that.
 
-It's the most honest thing he's said in this episode. Maybe in years. Priya reaches over and touches his arm.
+It's the most honest thing he's said in years. Maybe the most honest thing he's said to her since she left.
 
-**PRIYA**
+**PRIYA (V.O.)**
+*(quiet)*
 I know.
 
-He picks the tablet back up. Opens a new note. Types:
+Silence on the line. Three thousand miles of it.
+
+**CROSS**
+How's MIT?
+
+**PRIYA (V.O.)**
+Don't do that.
+
+**CROSS**
+Do what?
+
+**PRIYA (V.O.)**
+Ask about MIT when you mean something else. Read your paper, Cross. Good night.
+
+She hangs up. Cross stares at the phone. Puts it down. Opens a new note. Types:
 
 *"Page 31, equation 4.7 — the resonance coefficient assumes thermodynamic reversibility at quantum scales. This is the weak point. If this holds, the framework is significant. If it doesn't, nothing else matters."*
 
@@ -1076,130 +1094,74 @@ Cross leans back. There is no satisfaction in his face. That's what's interestin
 
 Instead, he looks... unsettled. Like a man who just performed surgery he's not sure was necessary.
 
-Priya enters with two mugs of tea. She places one next to him. Looks at his screen.
+His phone rings. Priya. He answers.
 
-**PRIYA**
-What did you just submit?
+**PRIYA (V.O.)**
+What did you just do?
+
+**CROSS**
+How do you know I did something?
+
+**PRIYA (V.O.)**
+Because you submitted to arXiv seventeen minutes ago and the preprint alert already hit my inbox. What did you submit?
 
 **CROSS**
 A paper.
 
-**PRIYA**
+**PRIYA (V.O.)**
 An anonymous paper?
 
 **CROSS**
 Anonymity is a legitimate tradition in academic discourse.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Cross, you once put your name on a grocery list because you said future historians might want to study your dietary habits.
 
 **CROSS**
 That was different. The grocery list had merit.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Why anonymous? Why not sign it?
 
-Cross doesn't answer immediately. He wraps both hands around the tea mug.
+Cross doesn't answer immediately. He stares at the confirmation screen.
 
 **CROSS**
 Because if I'm right, the argument should stand on its own merits without my reputation amplifying it. And if I'm wrong...
 
-He trails off. Priya waits.
+He trails off. Silence on the line.
 
 **CROSS (CONT'D)**
 I don't finish sentences I don't like the ending of.
 
-Priya sits down next to him. She's not going to push. But she registers this moment — Nathan Cross, who has never in his life been uncertain about his own rightness, is hedging.
-
-**PRIYA**
+**PRIYA (V.O.)**
 I want you to know something.
 
 **CROSS**
 What?
 
-**PRIYA**
+**PRIYA (V.O.)**
 I've been reading Kowalski's work. Not just the Nobel paper. His earlier publications. The RFC simulation methodology.
 
 **CROSS**
 *(stiffening)*
 In what capacity?
 
-**PRIYA**
+**PRIYA (V.O.)**
 In the capacity of a neuroscientist whose entire career studies the biological basis of consciousness. His framework connects to my work, Cross. Not peripherally. Directly.
 
-This is new. This is not what Cross expected. Priya — his former student, the most rigorous methodologist he ever trained — is not just curious about Maciej's work. She's professionally engaged with it.
+This is new. This is not what Cross expected. Priya — the woman who left his apartment, his department, and his framework six months ago — is not just curious about Maciej's work. She's professionally engaged with it. And she's telling him, which means she's not hiding it. Which is worse.
 
 **CROSS**
 You're interested in his theory.
 
-**PRIYA**
+**PRIYA (V.O.)**
 I'm interested in a framework that might explain data I've been collecting for fifteen years. Whether it's *his* framework or anyone's is irrelevant. The science doesn't care whose name is on it.
 
 **CROSS**
 *(quietly)*
 No. It doesn't.
 
-A beat. Something passes between them — not conflict, but asymmetry. They are, for perhaps the first time, on different sides of a scientific question. And both of them feel it.
-
----
-
-**INT. CROSS'S HOME — PALO ALTO — DAY**
-
-**HOFSTADTER** sits at the kitchen table, laptop open, coffee going cold. He's reading something. His face goes through a very specific sequence: interest → recognition → oh no.
-
- enters from the hallway, dressed for work.
-
-
-You have your "Cross did something" face.
-
-
-I don't have a—
-
-
-You've had it for twenty years. What did he do?
-
-
-*(turning the laptop toward her)*
-There's an anonymous paper on arXiv. A critique of Kowalski's Nobel work. It was posted this morning.
-
-
-So? People criticize Nobel work all the time.
-
-
-This paper uses the phrase "while the author's ambition is not in question, the mathematical infrastructure supporting that ambition requires significantly more scaffolding than has been provided."
-
-
-That sounds like Cross.
-
-
-That IS Cross. Nobody else in the world would use the word "scaffolding" as a metaphor for mathematical rigor and then extend it across four paragraphs into a complete architectural analogy involving load-bearing walls and foundations.
-
-sits down. Takes a sip of Priya's cold coffee. Makes a face.
-
-
-Is the critique any good?
-
-pauses. This is the thing about — he's not Cross. He doesn't dismiss ideas because of who wrote them. He reads them.
-
-
-It's... targeted. He found a real weakness. Equation 4.7 — the resonance coefficient. If Kowalski's decoherence assumptions don't hold, the framework has a problem. And Cross's math on why they might not hold is... clean.
-
-
-So Cross might be right?
-
-
-Cross might have found a real question. Whether it's a fatal flaw or a solvable problem — that depends on data nobody has yet.
-
-He looks at the paper again.
-
-**(CONT'D)**
-But — he published it anonymously. Cross. The man who puts his name on everything. That means something.
-
-
-What does it mean?
-
-
-It means he's not sure. And Cross not being sure is... honestly, it's a little scary.
+A beat. Something passes between them across three thousand miles — not conflict, but asymmetry. They are, for perhaps the first time, on different sides of a scientific question. And both of them feel it.
 
 ---
 
@@ -1697,19 +1659,19 @@ He stops at a window. Outside: the MIT campus. Students walking. Trees losing th
 
 His phone buzzes. He looks at it.
 
-It's Priya's email. He reads it again. That line: *"Not everyone at Stanford thinks your framework is wrong. Some of us think it's the most interesting question in physics right now."*
+It's Priya's email — the one she sent before they met in person. He reads it again. That line: *"I know the anonymous critique stung. But I've been sitting on three years of unexplained neural data, and your framework is the first thing that explains it. Come to MIT. There's work to do."*
 
 He starts typing a response. Stops. Deletes it. Starts again:
 
 **MACIEJ'S EMAIL:**
 
-*Dr. Hofstadter,*
+*Dr. Sharma,*
 
-*Thank you for your email. You're right about the thermodynamic assumptions in the anonymous critique — they don't account for the protected coherence channels in my supplementary materials. I appreciate your honesty about your personal connection to the likely author.*
+*Thank you for your email. You're right about the thermodynamic assumptions in the anonymous critique — they don't account for the protected coherence channels in my supplementary materials. I appreciate your honesty about your suspicion of who wrote it.*
 
 *I want you to know that I take the critique seriously. Equation 4.7 is the load-bearing wall of RFC, and anyone who tests it is doing me a favor — whether they intend to or not.*
 
-*I'm at MIT this week, working with a neuroscientist whose data may resolve the question empirically. If the data holds, I will need collaborators who can design experimental tests at the quantum-optical level. I understand Stanford has significant capability in this area.*
+*I'm at MIT this week, working on the correlation between your neural data and my field predictions. If the data holds, I will need collaborators who can design experimental tests at the quantum-optical level.*
 
 *I'm not interested in rivalries. I'm interested in whether the theory is true.*
 
@@ -1795,18 +1757,14 @@ They shake. Ola joins. Three hands. Three disciplines. Three people standing at 
 
 **INT. CROSS'S STUDY — STANFORD — PALO ALTO — NIGHT**
 
-Cross's apartment. Evening. Priya is on the couch, reading on her tablet. Cross enters from the study. He's been in there for hours.
+Cross's apartment. Evening. He sits at his desk, laptop open. On screen: a FaceTime window. PRIYA is in her MIT office — bookshelves, brain scans on the wall behind her, a mug that says "DATA > OPINION."
+
+He's been telling her about Kowalski's email.
 
 **CROSS**
-wrote to Kowalski.
+He responded. And CC'd the MIT physics department listserv — not intentionally. He replied to your forwarding address and the mail server auto-distributed.
 
-**PRIYA**
-How do you know?
-
-**CROSS**
-Because Kowalski responded. And CC'd the physics department listserv. Not intentionally — he replied to Priya's Stanford address, and the mail server auto-forwarded to the department distribution list.
-
-He sits down. He looks... something. Not angry. Not wounded. Something we haven't catalogued yet.
+He sits back. He looks... something. Not angry. Not wounded. Something we haven't catalogued yet.
 
 **PRIYA**
 What did Kowalski say?
@@ -1846,45 +1804,37 @@ Instead he called it a load-bearing wall and said he takes it seriously. He trea
 Because that's what it is.
 
 **CROSS**
-*(looking at her)*
+*(looking at the screen)*
 That's not what I intended it to be.
 
-This is the most honest thing Cross has said in this entire pilot. Priya holds his gaze. She doesn't flinch from it.
+This is the most honest thing Cross has said in this entire pilot. Priya holds his gaze through the screen. She doesn't flinch from it.
 
 **PRIYA**
 I know.
 
 **CROSS**
-And now he's at MIT. With a neuroscientist. And they have data. And they're designing experiments.
+And now he's at MIT. With you. And you have data. And you're designing experiments.
+
+The implication hangs in the air. Three thousand miles of it.
 
 **PRIYA**
-How do you know that?
-
-**CROSS**
-Because I read the email, Priya. The entire email. Including the part where he mentions he may need collaborators who can design quantum-optical experimental tests. And he specifically references Stanford's capability.
-
-The implication hangs in the air.
-
-**PRIYA**
-He's going to come here eventually. Or invite us there. This is going to cross paths, Cross.
+He's going to want to talk to you eventually. This is going to cross paths, Cross.
 
 Cross stands up. Walks to the window. Looks out at Palo Alto — the warm lights, the ordered streets, the world he understands.
 
 **CROSS**
 When I was nine years old, I solved a differential equation that my professor couldn't solve. He was angry at first. Then he was impressed. Then he was frightened. I didn't understand the frightened part until now.
 
-**PRIYA**
+**PRIYA (V.O.)**
 What do you understand now?
 
 **CROSS**
 That it wasn't about the equation. It was about the possibility that the person you've been wasn't large enough for the world you're entering.
 
-He turns back to Priya. His face is open in a way we almost never see.
+He turns back to the screen. His face is open in a way we almost never see.
 
 **CROSS (CONT'D)**
 I don't know if his theory is right, Priya. But I know that the question it asks is real. And I know that if I ignore it — if I hide behind anonymity and pretend I'm not interested — I'll be doing to him what my professor did to me. Except my professor had the excuse of being ordinary. I don't have that excuse.
-
-Priya stands. Crosses to him. Takes his hand.
 
 **PRIYA**
 So what do you want to do?
@@ -1953,17 +1903,17 @@ He's walking slowly, hands in his jacket pockets. No phone. No headlines. No cam
 
 He stops at a bench. Sits down. Looks up at the sky.
 
-His phone buzzes once. He pulls it out. One email notification. From .
+His phone buzzes once. He pulls it out. One email notification. From Priya.
 
 He opens it:
 
-*"Professor Kowalski — Thank you for your response. I passed your response to Nathan. He read it three times. That means he respects it. He only reads things he dismisses once. — Priya"*
+*"Professor Kowalski — I passed your response to Cross. He read it three times. That means he respects it. He only reads things he dismisses once. — Priya"*
 
 Maciej laughs. Alone on a bench. A real laugh — the first uncomplicated sound he's made since Stockholm.
 
 He types a response:
 
-*"Dr. Hofstadter — Please tell your wife she's correct. I am, to most people's disappointment, quite normal. I look forward to perhaps meeting in person. There is a great deal of work to do. — MK"*
+*"Dr. Sharma — Please tell Cross he's welcome to read it a fourth time. I am, to most people's disappointment, quite normal. I look forward to perhaps meeting in person. There is a great deal of work to do. — MK"*
 
 Sends it. Puts the phone away.
 
@@ -1975,23 +1925,21 @@ Then he stands up and walks back toward the lab. Toward the light.
 
 **INT. CROSS'S STUDY — STANFORD — PALO ALTO — SAME TIME**
 
-WIDE SHOT. The apartment. Night. Quiet.
+WIDE SHOT. The apartment. Night. Quiet. The kind of quiet that fills a space where two people used to live and now one does.
 
-Cross sits in his spot. Tablet in his lap. He's reading Maciej's supplementary materials — all 127 pages. He's on page 84.
-
-Priya is asleep on the couch next to him, her head on a pillow, a neuroscience journal open on her chest.
+Cross sits in his chair. Tablet in his lap. He's reading Maciej's supplementary materials — all 127 pages. He's on page 84.
 
 Cross reads. His face is very still. No highlighting. No margin notes. Just reading.
 
 He reaches a page. Stops. Reads it again. And again.
 
-He puts the tablet down. Very gently — so as not to wake Priya.
+He puts the tablet down.
 
 He stands. Walks to the kitchen. Opens a cabinet. Takes out a mug. Puts it back. Takes out a different mug. Puts it back.
 
 He stands in the kitchen, doing nothing. Not making tea. Not computing. Just standing.
 
-Then he walks to the small whiteboard on the refrigerator — the one Priya uses for grocery lists and appointment reminders. He picks up a marker.
+Then he walks to the small whiteboard on the refrigerator — the one that still has Priya's handwriting on it from months ago, a grocery list she never erased and he never wiped clean. He picks up a marker.
 
 In the corner of the whiteboard, in small, careful handwriting, he writes a single equation. It's not one of Maciej's equations. It's not one of his own. It's something new — a bridge term, a coupling constant that connects Cross's framework to Maciej's. Something that didn't exist ten minutes ago.
 
@@ -1999,9 +1947,9 @@ He stares at it.
 
 He doesn't erase it.
 
-He puts the cap back on the marker. Places it precisely parallel to the edge of the whiteboard. Returns to the couch. Picks up the tablet. Keeps reading.
+He puts the cap back on the marker. Places it precisely parallel to the edge of the whiteboard. Returns to his chair. Picks up the tablet. Keeps reading.
 
-On Cross's office whiteboard, a new equation sits quietly. Waiting.
+On Cross's refrigerator whiteboard, a new equation sits quietly. Next to Priya's old grocery list. Waiting.
 
 ---
 

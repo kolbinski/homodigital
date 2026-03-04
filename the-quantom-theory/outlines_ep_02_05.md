@@ -286,7 +286,7 @@ She's protecting the science. And she's terrified.
 
 **WARSAW:** Krawczyk in his office, reading coverage of his own press conference. Each article gets the quote wrong in a slightly different way. He lights a cigarette from the stub of the previous one.
 
-**STANFORD:** Cross in bed. Priya is asleep. He reaches for the tablet on the nightstand. Opens Maciej's paper. Reads it again. The same page. The same equation. Looking for the flaw that will save him.
+**STANFORD:** Cross in bed. Alone. The apartment has the sparse quality it's had since Priya left — a bookshelf with gaps, a hook by the door with nothing on it. He reaches for the tablet on the nightstand. Opens Maciej's paper. Reads it again. The same page. The same equation. Looking for the flaw that will save him.
 
 He can't find it.
 
@@ -486,9 +486,9 @@ OLA: "Together."
 
 ## ACT THREE (pages 40-55)
 
-**INT. CROSS'S STANFORD OFFICE — STANFORD — NIGHT**
+**INT. CROSS'S APARTMENT — STANFORD — NIGHT**
 
-3 AM. Cross is in bed. Priya is asleep. He can't sleep.
+3 AM. Cross can't sleep. The apartment is quiet in the way only a space meant for two people and occupied by one can be.
 
 He gets up. Goes to his study. Opens his laptop. Stares at a blank document.
 
@@ -565,49 +565,33 @@ For the first time since the Nobel, he is choosing not to be observed. The super
 **Runtime:** 60 minutes
 **Timeline:** November. ~5-6 weeks post-Nobel.
 **Locations:** MIT, Stanford (Palo Alto), Cross residence
-**Director's note:** This is the episode where the show expands. New characters enter (Marcus, Marcus). New dynamics form. The intercut rhythm accelerates — more scenes, shorter, showing connections forming across distance. Like entanglement.
+**Director's note:** This is the episode where the show expands. Marcus Torres gets his first substantial storyline. New dynamics form. The intercut rhythm accelerates — more scenes, shorter, showing connections forming across distance. Like entanglement.
 
 ---
 
 ## TEASER (pages 1-5)
 
-**INT. STANFORD — CROSS'S OFFICE — DAY**
+**INT. MIT — SHARMA LAB — NIGHT**
 
-**MARCUS** KOOTHRAPPALI sits at his desk reading something on his screen with undisguised delight. His office is covered in star charts and Marvel posters. He's eating take-out Indian food. It's 10 AM.
+MARCUS TORRES sits alone at a workstation, running calibration tests on a quantum-optical detector. The lab is quiet — everyone else has gone home. On his screen: two windows side by side. One shows detector schematics. The other shows Maciej's RFC paper, open to the field interaction predictions.
 
-**MARCUS** WOLOWITZ enters without knocking (he never knocks).
+Marcus has been staring at this for three days. Something doesn't add up. Or rather — something adds up too well.
 
-MARCUS: "Why are you smiling like that? Last time you smiled like that, you'd found a planet. The time before that, you'd found a dating app that only matched you with other astrophysicists."
+The detector was built for Priya's neural oscillation experiments. It measures field interactions at specific frequency ranges. Marcus has been recalibrating it for weeks.
 
-MARCUS: "This is bigger than planets. Have you read Kowalski's RFC paper?"
+Tonight, he notices something: the sensitivity range of Priya's detector overlaps precisely with the frequency ranges RFC predicts for consciousness-related field interactions. The instrument they've been using for neuroscience happens to be perfectly tuned to test Maciej's theory.
 
-MARCUS: "I've heard about it. Cross won't stop not talking about it, which is his way of talking about it constantly."
+MARCUS *(to himself)*: "No way."
 
-MARCUS: "Marcus. Listen to me. This man has written the most beautiful theory I've read since I was an undergrad. He's saying consciousness is a field interaction. That it can be measured. That the boundary between biological and artificial systems might be—"
+He pulls up the RFC predictions on one screen, the detector specs on the other. Overlays them.
 
-MARCUS: "Marcus. It's ten in the morning. Can you be inspired after lunch?"
+MARCUS: "No. Way."
 
-MARCUS: "He's like a European me, but successful."
+He picks up his phone. Puts it down. Picks it up again. It's 11 PM. He texts Priya:
 
-MARCUS: "That's... not the compliment you think it is."
+MARCUS *(text)*: "Don't freak out. But I think our detector can measure RFC field signatures. Like, directly. Call me when you're up."
 
-But Marcus's enthusiasm is infectious. He pulls up the paper on his screen. Points to a specific section — the field interaction predictions.
-
-MARCUS: "Marcus. Look at this. The predicted field signatures. The frequency ranges. The interaction patterns. Now look at your detector specs."
-
-He pulls up Marcus's quantum-optical detector schematics on a second screen.
-
-MARCUS: "Your dark matter detector. The one you've been calibrating for six months. Look at the sensitivity range."
-
-Marcus looks. His face changes.
-
-MARCUS: "That's... a coincidence."
-
-MARCUS: "That's entanglement."
-
-MARCUS: "That's not what entanglement means."
-
-MARCUS: "It's exactly what entanglement means."
+He stares at the screens. The predicted signatures and the detector specifications, side by side. A coincidence — or the kind of convergence Maciej's theory is built on.
 
 ---
 
@@ -635,29 +619,35 @@ She says it lightly. It lands heavy.
 
 ---
 
-**INT. STANFORD — MIT EXPERIMENTAL LAB — DAY**
+**INT. MIT — SHARMA LAB — DETECTOR ROOM — DAY**
 
-Marcus and Marcus run the test. The quantum-optical detector — a beautiful, complex instrument designed for dark matter interactions — is repurposed. Marcus has calculated the parameters for detecting RFC's predicted field signatures.
+Marcus runs the test. The quantum-optical detector — a beautiful, complex instrument originally calibrated for neural oscillation measurements — is repurposed. Marcus has calculated the parameters for detecting RFC's predicted field signatures. Priya has signed off on the protocol. Maciej is deliberately absent — he doesn't want to influence the measurement.
 
-The test runs for four hours. They watch the readout.
+The test runs for four hours. Marcus watches the readout alone.
 
 At hour three, the detector registers something. A spike. Then another. A pattern.
 
 MARCUS: "That's probably noise."
 
-MARCUS: "That's probably history."
+He runs it again. Same pattern. Third time. Fourth. Fifth. Sixth.
 
-MARCUS: "We need to run it again."
+MARCUS *(staring at the data, to himself)*: "This is either a systematic error in the detector... or Maciej just became the most important physicist alive."
 
-MARCUS: "We need to run it six times."
+He calls Priya.
 
-They run it again. Same pattern. Third time. Fourth. Fifth. Sixth.
+MARCUS: "I think we accidentally built the thing that tests Kowalski's theory. I ran it six times."
 
-**MARCUS** *(staring at the data)*: "This is either a systematic error in my detector... or your guy from Poland just became the most important physicist alive."
+PRIYA: "You need to tell him."
 
-MARCUS: "He's not 'my guy from Poland.' He's our generation's—"
+MARCUS: "I need to tell Cross first."
 
-MARCUS: "Let's not put him on a poster just yet. We need to check the instrument. Could be a calibration artifact."
+PRIYA: "Why Cross?"
+
+MARCUS: "Because if Cross can't destroy the data, nobody can. And I want it bulletproof before Maciej sees it."
+
+PRIYA: "That's... brave."
+
+MARCUS: "That's terrifying. I'm still going to do it."
 
 But his face says what his words won't: this is not noise.
 
@@ -753,7 +743,7 @@ She takes her jacket (which was, in fact, on the chair). Leaves. Maciej watches 
 
 ## ACT THREE (pages 40-55)
 
-**INT. STANFORD — MIT EXPERIMENTAL LAB — DAY**
+**INT. MIT — SHARMA LAB — DETECTOR ROOM — DAY**
 
 Marcus stares at the detector data from all six runs. He's eliminated instrument error. Calibration is clean. The signal is real — or at least, it's not an artifact of the equipment.
 
@@ -763,15 +753,13 @@ MARCUS: "I need to talk to you. And then I need to talk to Cross. And the order 
 
 ---
 
-**INT. PRIYA'S MIT APARTMENT — DAY**
+**INT. MIT — PRIYA'S OFFICE — DAY**
 
-Marcus and Marcus present their findings to Priya. Six runs. Consistent signal. Matching RFC's predicted field-interaction signatures.
+Marcus presents his findings to Priya. Six runs. Consistent signal. Matching RFC's predicted field-interaction signatures.
 
-PRIYA: "You're telling me your dark matter detector picked up a signal that matches Kowalski's consciousness framework?"
+PRIYA: "You're telling me our detector picked up a signal that matches Kowalski's consciousness framework?"
 
-MARCUS: "I'm telling you my detector picked up a signal. What it matches is someone else's problem."
-
-MARCUS: "It matches. I checked. Four times."
+MARCUS: "I'm telling you the detector picked up a signal. What it matches is someone else's problem. But it matches. I checked. Four times."
 
 PRIYA: "You need to tell Cross."
 
@@ -780,10 +768,6 @@ MARCUS: "I know."
 PRIYA: "That's going to be..."
 
 MARCUS: "I know."
-
-MARCUS: "Should I be there? For emotional support?"
-
-PRIYA: "For whose?"
 
 ---
 
@@ -819,7 +803,7 @@ Marcus leaves. In the corridor, he exhales like a man who just survived a car cr
 
 Priya at the table. Laptop open. An email notification:
 
-"Dear Dr. Fowler, We are pleased to inform you that your manuscript has been accepted for publication in Nature Neuroscience, pending minor revisions..."
+"Dear Dr. Sharma, We are pleased to inform you that your manuscript has been accepted for publication in Nature Neuroscience, pending minor revisions..."
 
 She reads it. A small, private smile. This is her moment — not Maciej's, not Cross's. Hers.
 

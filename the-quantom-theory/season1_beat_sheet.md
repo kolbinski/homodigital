@@ -120,7 +120,7 @@ Cross, in bed, 3am. Opens his laptop. Starts writing. Not a critique. Not a resp
 Maciej and Ola settle into MIT life. The experiment is running. Data is accumulating. Maciej and Priya develop a working rhythm — she challenges every assumption, he refines in response. Their intellectual chemistry is obvious to everyone. Ola watches. She's not jealous — she's observing a new dynamic. "You two are entangled," she tells Maciej. "That's not what entanglement means," he says. "It's exactly what entanglement means," she replies.
 
 **B-Plot — "Marcus's Detector":**
-At Stanford, He talks the experimental team's ear off about it. Marcus, an engineer, is working on a quantum-optical detector for an unrelated dark matter project. Marcus realizes: "Marcus. Your detector. It can measure exactly the kind of field interactions Kowalski is describing." Marcus: "I designed it for dark matter." Marcus: "Dark matter, dark consciousness — same darkness, different direction." Marcus is skeptical but intrigued. They run a test. The detector registers... something. Marcus: "That's probably noise." Marcus: "That's probably history."
+At MIT, Marcus Torres — Priya's PhD student — has been recalibrating the lab's quantum-optical detector for neural oscillation measurements. He notices something: the detector's sensitivity range overlaps precisely with RFC's predicted field-interaction signatures. The instrument built for neuroscience happens to be perfectly tuned to test Maciej's theory. Marcus runs a preliminary test. The detector registers... something. Marcus, to himself: "That's probably noise." He runs it again. Same pattern. Six times. Not noise.
 
 **C-Plot — "Priya's Paper":**
 Priya, independently, begins writing a paper connecting RFC to her own neuroscience data. She doesn't tell Cross. She submits it to Nature Neuroscience. When Cross discovers the submission (he monitors all major journal submissions — "It's a hobby, not an obsession"), he confronts her. Not angrily — worse. Quietly. "You submitted a paper building on his framework?" Priya: "I submitted a paper building on fifteen years of my own data, which his framework happens to explain." The distinction matters. The silence after is louder.
@@ -128,7 +128,7 @@ Priya, independently, begins writing a paper connecting RFC to her own neuroscie
 **Character Turns:**
 - Maciej & Priya: intellectual partnership deepens — entanglement
 - Ola: begins to feel the shift — she's no longer Maciej's only collaborator
-- Marcus & Marcus: enter the story with characteristic energy but real scientific stakes
+- Marcus: enters the story through scientific curiosity — discovers the detector connection
 - Priya & Cross: first real professional confrontation between mentor and former student
 
 **Episode Theme:** Entanglement means that measuring one particle instantly affects the other, regardless of distance. Relationships are changing across oceans. Nobody chose this. The physics chose it.
@@ -157,7 +157,7 @@ Maciej retreats. He stops going to the lab. He sits in his MIT sublet, reading W
 "Then survive by being a physicist. Not a celebrity. Not a victim. A physicist. We have data, Maciej. We have the experiment. Whitfield has words. You have numbers. Come back to the lab."
 
 **C-Plot — "Cross's Conflict":**
-Cross watches the Whitfield critique unfold with... satisfaction? No. Something more complicated. He reads Whitfield's paper. Finds it competent but not decisive — Whitfield attacks the philosophy, not the math. Cross's realization: "He's criticizing the implications, not the equations. That's not science. That's... commentary." For the first time, Cross is positioned as a potential defender of the work he tried to destroy — because his standards of critique are higher than Whitfield's. He doesn't act on this. But Priya sees it in his face.
+Cross watches the Whitfield critique unfold with... satisfaction? No. Something more complicated. He reads Whitfield's paper. Finds it competent but not decisive — Whitfield attacks the philosophy, not the math. Cross's realization: "He's criticizing the implications, not the equations. That's not science. That's... commentary." For the first time, Cross is positioned as a potential defender of the work he tried to destroy — because his standards of critique are higher than Whitfield's. He doesn't act on this. But when he mentions the Whitfield paper to Priya on their next call, she hears the shift in his voice.
 
 **Character Turns:**
 - Maciej: lowest point — must choose between retreat and return
@@ -182,17 +182,17 @@ Instead of defending RFC against Whitfield, Maciej publishes a new paper. Not a 
 The paper is co-authored: **Kowalski, Nowicka, Sharma.** Three names. Three disciplines. The first formal convergence.
 
 **B-Plot — "Priya's Email Pays Off":**
-Priya, who has been quietly following everything, sends Maciej another email: "I think you might be right. My roommate thinks you're wrong. He's usually wrong about people and right about physics. This time I'm not sure." Maciej reads it. Smiles. Writes back: "Tell your roommate he was right about equation 4.7. It was the weak point. But weak points can become hinges." Priya shows the response to Ola. "He knows about Cross." Ola: "Everyone knows about Cross."
+Priya, who has been quietly following everything, sends Maciej an email: "I think you might be right. Cross thinks you're wrong. He's usually wrong about people and right about physics. This time I'm not sure." Maciej reads it. Smiles. Writes back: "Tell Cross he was right about equation 4.7. It was the weak point. But weak points can become hinges." Priya shows the response to Ola. "He knows about Cross." Ola: "Everyone knows about Cross."
 
 **C-Plot — "Marcus's Detector Works":**
-Marcus and Marcus, somewhat accidentally, get Maciej's field-interaction signature on their quantum-optical detector. It wasn't designed for this. But the signal is there. Marcus calls Priya: "I think we accidentally built the thing that tests Kowalski's theory." Priya: "You need to tell him." Marcus: "I need to tell Cross first." Priya: "That's... brave." Marcus: "That's suicidal. I'm still going to do it."
+Marcus, after weeks of refinement, confirms the signal. The quantum-optical detector consistently registers Maciej's predicted field-interaction signatures. Six runs. Clean calibration. Reproducible. Marcus calls Priya: "I think our detector can directly test Kowalski's theory. I ran it six times." Priya: "You need to tell him." Marcus: "I need to tell Cross first." Priya: "That's... brave." Marcus: "That's terrifying. I'm still going to do it."
 
 Marcus tells Cross. The conversation is not what we expect. Cross doesn't explode. He asks one question: "Is the signal reproducible?" Marcus: "We ran it six times." Cross: "Seven is a better number for statistical significance." Marcus: "Is that a yes?" Cross: "It's not a no."
 
 **Character Turns:**
 - Maciej: transforms from defensive to offensive — goes through the wall
 - Priya: becomes the active bridge (no longer passive)
-- Marcus & Marcus: bring unexpected Stanford capability into play
+- Marcus: brings unexpected experimental capability into play
 - Cross: "It's not a no" = the first crack visible to others
 
 **Episode Theme:** The tunnel effect — quantum tunneling — when a particle passes through a barrier it shouldn't be able to cross. Maciej goes through the wall of public criticism. Marcus's detector tunnels into unexpected territory. Cross's defenses show the first crack that others can see.
@@ -215,7 +215,7 @@ Flashbacks: Young Maciej in Radom. 10 years old, lying on the roof of his grandm
 The blinded replication data is in. The sealed predictions match. The official result is: RFC's prediction from equation 4.7 is empirically confirmed with p < 0.001. This is publication-worthy. Career-defining. But Ola faces a choice: publish before the Nobel lecture (giving Maciej ammunition) or wait until after (cleaner science, less appearance of PR timing). She chooses to wait. Maciej disagrees: "The data should speak when it's ready, not when it's convenient." Their first real fight. Ola: "I'm not protecting you. I'm protecting the data from being used as a prop." Maciej: "That's exactly what you accused me of."
 
 **C-Plot — "Cross and Priya's Conversation":**
-Cross tells Priya what he's been working on — the private paper connecting his framework to Maciej's. Priya reads it. It's good. "You've been building a bridge." Cross: "I've been stress-testing a bridge. If it holds, it's useful. If it collapses, I've identified a failure point." Priya: "It holds, doesn't it." Cross doesn't answer. Instead: "Priya, if I send this paper to a colleague for review... would you read it? As a neuroscientist?" She takes it. This is the first time Cross has asked Priya to evaluate his work as an independent researcher, not as a former student. It matters to both of them.
+Cross calls Priya and tells her what he's been working on — the private paper connecting his framework to Maciej's. He emails it to her. She reads it while they're still on the phone. It's good. "You've been building a bridge." Cross: "I've been stress-testing a bridge. If it holds, it's useful. If it collapses, I've identified a failure point." Priya: "It holds, doesn't it." Cross doesn't answer. Instead: "Priya, if I send this paper to a colleague for review... would you read it? As a neuroscientist?" A pause. This is the first time Cross has asked Priya to evaluate his work as an independent researcher, not as a former student. It matters to both of them — and three thousand miles makes it easier to ask.
 
 **Character Turns:**
 - Maciej: roots reconnect — Radom childhood becomes the key to the lecture
@@ -244,11 +244,9 @@ The Nobel ceremony. Formal, magnificent, overwhelming. Maciej in a tuxedo — un
 The lecture. Maciej delivers it — the version that starts with his grandmother and the stars. It's not a scientific presentation. It's a story about curiosity that happens to contain physics. The audience is silent. Not bored-silent. Moved-silent. He ends with: "Consciousness is not a problem to be solved. It is a relationship to be understood. And the most dangerous thing we can do is decide in advance who — or what — is allowed to participate in that relationship."
 
 **B-Plot — "The Viewing Party":**
-Cross watches the Nobel livestream alone in his Stanford study. No viewing party. No audience. Just him and a laptop and the equations on his whiteboard. He starts writing notes — then stops. Something in the lecture reaches him. The line about consciousness being a relationship. His pen hovers over the paper. He doesn't write. He listens.
+Cross watches the Nobel livestream alone in his Stanford study. No viewing party. No audience. Just him and a laptop and the equations on his whiteboard. He starts writing notes — then stops. Something in the lecture reaches him. The line about consciousness being a relationship. His pen hovers over the paper. He doesn't write. He listens. He sets down his pen. Sits in silence.
 
-During the lecture, something happens to Cross. He starts writing furious notes — then stops. Something in the lecture reaches him. The line about consciousness being a relationship. His pen hovers over the paper. He doesn't write. He listens. Priya, sitting next to him, feels the shift. He sets down his pen. Sits in silence.
-
-After the broadcast, everyone talks. Cross is quiet. Priya: "Cross? What did you think?" Long pause. Cross: "He's wrong about the decoherence timescales in section 3.2." Priya: "That's it?" Cross: "And the lecture was... not terrible." From Cross, this is a standing ovation.
+After the broadcast, he calls Priya. She watched at MIT with Ola and Marcus. Cross is quiet for a long time. Priya: "Cross? What did you think?" Long pause. Cross: "He's wrong about the decoherence timescales in section 3.2." Priya: "That's it?" Cross: "And the lecture was... not terrible." From Cross, this is a standing ovation.
 
 **C-Plot — "Krawczyk in Warsaw":**
 Krawczyk watches the ceremony alone in his office. Chain-smoking. When Maciej quotes Feynman — Krawczyk's hero — the old man's eyes fill. He picks up his phone. Texts Maciej: "Twoja babcia byłaby z ciebie dumna. Ja też jestem. Nawet jeśli się nie zgadzam." ("Your grandmother would be proud of you. So am I. Even if I disagree.") It's the reconciliation — not complete, but enough.
@@ -375,10 +373,8 @@ Then calls back.
 While Maciej and Cross have their conversation, we intercut with the other characters, each in their own space, each working on a piece of the same puzzle:
 
 - Ola in Warsaw, running new simulations that extend RFC into artificial substrates
-- Priya at MIT, designing the next experiment — testing field interactions in AI systems
-- Priya in Palo Alto, reading Maciej's AI conversation logs (he sent them to her — neuroscientist to neuroscientist)
+- Priya at MIT, reading Maciej's AI conversation logs (he sent them to her — neuroscientist to neuroscientist) and designing the experimental protocol for testing RFC in artificial systems
 - Marcus calibrating his detector for a new measurement
-- Priya writing a paper proposing experimental protocols for testing RFC at quantum-optical scales
 - Krawczyk in his office, alone, reading everything, chain-smoking, slowly nodding
 
 **C-Plot — "The Question":**

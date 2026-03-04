@@ -149,7 +149,7 @@ On his computer screen: Maciej's new paper (Kowalski, Nowicka, Sharma — the R 
 
 Everything.
 
-He's been reading for three days. He hasn't spoken to Priya about it. She knows anyway.
+He's been reading for three days. He hasn't called Priya. She's at MIT, three thousand miles away. She knows anyway — she always does.
 
 He picks up a printed page. At the top, in his handwriting: **"EQUATION 4.7 — OBJECTIONS."** Below: a numbered list. Seventeen items.
 
@@ -814,49 +814,47 @@ She puts the phone down. Picks it up again. Types:
 
 Cross has been on the phone for ninety minutes. His study door is closed. The piano sits untouched. A glass of scotch, poured but not drunk, catches the lamplight. This is not Cross-lecturing. This is Cross-listening.
 
-The study door opens. Cross emerges. He's holding his phone — his cell phone, not the landline. At some point, he switched.
+The call ends. Cross puts his phone down. Picks it up. Calls Priya. She answers on the first ring — it's late in Boston, but she was waiting.
 
-**PRIYA**
+**PRIYA (V.O.)**
 How was the phone call?
 
 **CROSS**
 You knew I was making a phone call?
 
-**PRIYA**
-You've been in your study for ninety minutes speaking at a volume seven percent below your normal conversational register. That means you were talking to someone you respect. The list is short.
+**PRIYA (V.O.)**
+You texted me "I'm calling Kowalski" ninety minutes ago and haven't texted since. That means you were talking to someone you respect. The call went well.
 
 **CROSS**
-*(sitting down)*
 I called Kowalski.
 
-**PRIYA**
-*(putting down her pen)*
+**PRIYA (V.O.)**
 How was it?
 
 **CROSS**
 He asked me if the Nobel felt like I expected it to.
 
-**PRIYA**
+**PRIYA (V.O.)**
 What did you say?
 
 **CROSS**
 No.
 
-**PRIYA**
+**PRIYA (V.O.)**
 And then?
 
 **CROSS**
 And then we discussed the weight variability mechanism for forty minutes, and I told him his treatment of the topological term is underdeveloped but his mathematical instinct is exceptional, and he told me that my paper on protected coherence resolved a problem he'd been struggling with for a year, and I said I was aware of that, and he laughed.
 
-Priya watches him. She sees what's underneath — the shaken architecture, the shifted weight.
+Silence on the line. Three thousand miles of it. But Priya hears what's underneath — the shaken architecture, the shifted weight. She's always been able to hear it.
 
-**PRIYA**
+**PRIYA (V.O.)**
 How do you feel?
 
 **CROSS**
 You ask me that question and it means something different now than it did this morning.
 
-**PRIYA**
+**PRIYA (V.O.)**
 How so?
 
 **CROSS**
@@ -864,36 +862,36 @@ Because this morning, "how do you feel" was a question about subjective experien
 
 He says it like he's testing a hypothesis. But his voice cracks on the last word, just slightly, in a way only Priya would hear.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Cross.
 
 **CROSS**
 He's right, Priya. I don't want him to be. I spent three months hoping he wouldn't be. But his framework is consistent, his data is clean, and his equation is the most elegant thing I've seen since my own. And I don't know what to do with that.
 
-Priya gets up. Crosses to him. Sits beside him on the couch — his spot, because tonight it doesn't matter.
+Silence on the line. Cross sits on the couch — his spot. The apartment around him is empty in the way it's been since she left. But the voice on the phone is the closest thing he has to home.
 
-**PRIYA**
+**PRIYA (V.O.)**
 You do what you've always done. You keep asking.
 
-Cross looks at her. For a moment, the armor is completely off. He's not Dr. Cross. He's not a Nobel laureate. He's a man sitting next to the person he trusts most, feeling the ground shift under a certainty he's held for forty years.
+Cross looks at the empty space beside him. For a moment, the armor is completely off. He's not Dr. Cross. He's not a Nobel laureate. He's a man sitting alone, on the phone with the person he trusts most, feeling the ground shift under a certainty he's held for forty years.
 
 **CROSS**
 He's going to invite me to Warsaw.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Probably.
 
 **CROSS**
 I'm going to say no.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Probably.
 
 **CROSS**
 And then I'm going to go.
 
-**PRIYA**
-*(taking his hand)*
+**PRIYA (V.O.)**
+*(quiet)*
 Probably.
 
 ---
@@ -991,7 +989,7 @@ She begins writing. This will become a paper. Eventually.
 
  alone. The detector humming on standby. He's calibrating for a new measurement — the tenth run. Not because anyone asked. Because the signal is growing and he wants to know where it goes.
 
-He looks at the detector — the beautiful, complex instrument he designed for dark matter. The instrument that found something else instead.
+He looks at the detector — the beautiful, complex instrument originally calibrated for neural oscillation measurements. The instrument that found something else instead.
 
 
 *(to the detector, quietly)*
@@ -1142,31 +1140,33 @@ Babcia miała rację. Pytania prowadzą dalej.
 
 ---
 
-**INT. CROSS'S STUDY — STANFORD — PALO ALTO — SAME NIGHT**
+**INT. CROSS'S APARTMENT — STANFORD — PALO ALTO — SAME NIGHT**
 
-Cross in the living room. Priya is reading beside him. The apartment is quiet.
+Cross in the living room. Alone. The apartment is quiet in the way it's been quiet for six months — the quiet of subtraction.
 
 His phone is on the armrest. He picks it up. Puts it down. Picks it up.
 
-**PRIYA**
-*(not looking up from her book)*
+He calls Priya. She picks up. It's 2 AM in Boston.
+
+**PRIYA (V.O.)**
+*(alert, as if she hadn't been sleeping either)*
 You want to call him again.
 
 **CROSS**
 I want to discuss the measurement problem as it applies to the observer-participancy framework. That requires a phone call.
 
-**PRIYA**
+**PRIYA (V.O.)**
 At eleven PM?
 
 **CROSS**
 It's six AM in Warsaw. He's probably up.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Cross.
 
-He puts the phone down. Picks it up. Priya closes her book.
+Silence.
 
-**PRIYA**
+**PRIYA (V.O.)**
 What's really going on?
 
 Cross stands up. Walks to the window. Palo Alto at night. The ordered streets. The predictable lights.
@@ -1174,37 +1174,36 @@ Cross stands up. Walks to the window. Palo Alto at night. The ordered streets. T
 **CROSS**
 Priya. I need to go to Warsaw.
 
-**PRIYA**
+**PRIYA (V.O.)**
 *(calmly)*
 When?
 
 **CROSS**
 I don't know. But I need to.
 
-**PRIYA**
+**PRIYA (V.O.)**
 Why?
 
 **CROSS**
 Because... I can't evaluate his AI interaction data through a paper. I can't evaluate his laboratory through a phone call. And I can't evaluate him through his equations. I need to be in the same room. I need to see the whiteboard. I need to...
 
-He stops. Turns to face her.
+He stops. Faces the window. His own reflection — and through it, the night.
 
 **CROSS (CONT'D)**
 I need to see if R is non-zero in the same room as him.
 
 He says it like a joke. It isn't a joke. They both know it.
 
-**PRIYA**
-*(standing, crossing to him)*
+**PRIYA (V.O.)**
 Then we'll go to Warsaw.
 
 **CROSS**
 You don't have to—
 
-**PRIYA**
+**PRIYA (V.O.)**
 Cross. We will go to Warsaw.
 
-He looks at her. Nods. Once. The nod of a man who has been holding a wall in place and is, finally, allowing himself to stop.
+He stands at the window. Nods — though she can't see it. The nod of a man who has been holding a wall in place and is, finally, allowing himself to stop.
 
 ---
 

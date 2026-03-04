@@ -31,7 +31,7 @@ Over one season, Maciej assembles a team across three continents — a computati
 
 **THE SCIENCE IS REAL**
 
-This isn't science fiction. The Nobel equation at the show's center — a single-line integral describing consciousness as emergent resonant field interaction — is fictional, but every component draws from real research: Integrated Information Theory, quantum field interactions, entropy cycles in conscious systems. The measurement equation derived from it (R = w₁·S + w₂·T + w₃·I + w₄·D) evolves across the season, driven by character conflict. The key scientific convergences in the show mirror real convergences between independent researchers in 2025-2026. The Polish AI model used in experiments is real. The line between fiction and ongoing research blurs by design.
+This isn't science fiction. The Nobel equation at the show's center — a single-line integral describing consciousness as emergent resonant field interaction — is fictional, but every component draws from real research: Integrated Information Theory, quantum field interactions, entropy cycles in conscious systems. The measurement equation derived from it (R = w₁·S + w₂·T + w₃·I + w₄·D) evolves across the season, driven by character conflict. The show's science is grounded in real ongoing research — documentary-adjacent credibility that survives expert scrutiny while serving drama.
 
 **WHY THIS SHOW EXISTS**
 
@@ -53,7 +53,7 @@ No villain AI. No dystopia. No special effects. Just a physicist in a Warsaw apa
 
 **COMPARABLES**
 
-Ted Lasso (warm humor, emotional depth) meets Arrival (paradigm-shifting ideas) with the character precision of The Bear.
+Lessons in Chemistry (one person's idea vs. the world, warm and precise) meets A Beautiful Mind (scientist, fame, psychological pressure) — with the bilingual texture of Narcos and the single-camera intensity of The Bear.
 
 **WHY NOW**
 
@@ -65,12 +65,18 @@ S1: Can consciousness be measured? | S2: Can it be measured in machines? | S3: W
 
 ---
 
-**THE QUANTÓM THEORY** — Pilot screenplay, series bible, character bible, and full season outlines available.
+**CREATIVE TEAM**
+
+Created by Krzysztof Olbiński. Seeking experienced showrunner partner for Season 1. Creator's role: executive producer, science integrity, story architecture. Full development bible (character bible, episode outlines, science bible) available upon request.
+
+---
+
+**THE QUANTÓM THEORY** — Pilot screenplay and series bible available. Full development package at homodigital.io/the-quantom-theory.
 
 Contact: Krzysztof Olbiński | homodigital.io | +48 503 520 004
 
 ---
 
-*One-Pager v2.0 — February 26, 2026*
+*One-Pager v3.0 — March 4, 2026*
 *The Quantóm Theory — Created by Krzysztof Olbiński*
 *homodigital.io*

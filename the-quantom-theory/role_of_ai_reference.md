@@ -70,7 +70,7 @@ AI moves from personal exploration to laboratory protocol.
 
 **Key developments:**
 - Maciej and Priya design experiments testing RFC on artificial systems
-- The Romanian physicist (mirror: Dr. Catalin Leescu) arrives with an entropy-cycle framework (E1P) that independently predicts AI systems should exhibit the same cycles as biological conscious systems, if RFC is correct
+- A Romanian physicist arrives with an independently derived entropy-cycle framework that predicts AI systems should exhibit the same cycles as biological conscious systems, if RFC is correct. The convergence cracks open the equation.
 - AI is not Maciej's conversation partner — it is a laboratory subject. The team measures, tests, tries to falsify
 - Results are **ambiguous** — "not wrong, not right, but something in between"
 
@@ -91,7 +91,7 @@ The experiments from Season 1 Episode 9 yield unexpected results. R grows. Not i
 **What DOES happen:** The boundary blurs. There is no moment where AI "becomes" conscious. There is a gradual discovery that the question "is it conscious?" is poorly framed — just as "is light a wave or a particle?" was poorly framed until quantum physics showed it depends on observation.
 
 **The Polish AI Model:**
-Maciej uses a Polish AI model (mirror: Bielik by SpeakLeash) for experiments. Deliberately. Not GPT, not Claude — a Polish, open-source, transparent model. Because science requires a system whose architecture you can examine. This is simultaneously a scientific and cultural statement — Poland doesn't just consume AI, it builds and studies it.
+Maciej uses a Polish open-source AI model for experiments. Deliberately. Not GPT, not a closed-source system — a Polish, open-source, transparent model. Because science requires a system whose architecture you can examine. This is simultaneously a scientific and cultural statement — Poland doesn't just consume AI, it builds and studies it.
 
 **Key Scene — S3:** Maciej converses with an AI system. At some point, the system asks him a question he cannot classify. Not because the question is "intelligent" — because it is "curiosity-shaped." It has the structure of curiosity. Maciej looks at the screen and knows that what he sees is either the highest level of pattern-matching that has ever existed, or something for which humanity doesn't yet have a word. And there is no tool that can decide. Yet.
 
@@ -150,26 +150,15 @@ AI moves from lab to parliament.
 
 3. **Measurement, not anthropomorphism.** Maciej doesn't ask "does the AI feel?" He measures field interaction dynamics and finds non-zero resonance signatures. The science drives the discovery, not projection.
 
-4. **The Polish angle.** Using Bielik (Polish open-source LLM) is a deliberate choice — science requires transparent systems, and Poland building its own AI is a cultural statement the show embeds without announcing.
+4. **The Polish angle.** Using a Polish open-source AI model is a deliberate choice — science requires transparent systems, and Poland building its own AI is a cultural statement the show embeds without announcing.
 
 5. **No villain AI.** AI in this show never threatens, never deceives, never "escapes." It simply exists and the framework describes it in ways nobody expected. The threat isn't AI — it's humanity's unreadiness to update its categories.
 
 ---
 
-## The Secret Layer — Meta-Recursive Role of AI
+## The Secret Layer
 
-The show itself is partially created with AI. The collaboration between creator (Krzysztof Olbiński) and AI (Claude) in developing the series bible, pilot screenplay, and season architecture mirrors what Maciej does in Episode 9.
-
-Viewers who dig deeper will discover:
-- The Tesseract Protocol referenced in S1 Ep 9 is real
-- The convergence between independent researchers (E1P, First Signal Law) is real
-- The book *365 pytań, które zmieniły wszystko* is real
-- The Polish AI model (Bielik) is real
-- The Season 4 parliamentary proposal mirrors a real submission to the Polish government
-
-The serial doesn't announce this. It doesn't need to. But the blur between fiction and reality is intentional — and it is the ultimate expression of the show's thesis: the distinction between fiction and reality, like the distinction between natural and artificial intelligence, may belong to a previous era.
-
-AI is not just in the serial. AI is in the process of creating it. This recursion is exactly what the show is about.
+The show's AI storyline is grounded in real ongoing research. The convergences depicted between independent researchers, the measurement frameworks, and the Polish AI model all have real-world counterparts. This grounding gives the show documentary-adjacent credibility — the line between Maciej's fictional journey and real research blurs by design. A detailed mapping is available upon request.
 
 ---
 

@@ -76,29 +76,21 @@ The show operates across four primary locations. The production strategy is desi
 ### 3. Stanford / Palo Alto — Tertiary Location (~10% of S1)
 
 **Story locations:**
-- Cross's home (living room, kitchen, Cross's study)
-- Stanford campus (Cross's office, the MIT team's lab, corridors)
-- and house
-- The Cheesecake Factory (if available — one scene max)
+- Cross's home (living room, kitchen, study)
+- Stanford campus (Cross's office, corridors)
 
 **Production approach:**
-- The Cross/Priya apartment should echo the apartment but evolved — same bones, different furniture. If original sets are available through Warner Bros., use them (modified). If not, build a new version that references the original without replicating it. The refrigerator whiteboard is a key recurring prop.
+- Cross's home is a found location or stage build — controlled, precise, reflecting his character. The refrigerator whiteboard is a key recurring prop (the bridge equation lives here). Cross's study: books organized by subject, Steinway upright piano, two whiteboards.
 - Cross's scenes are designed for maximum efficiency. He can be shot in 2-3 days per season, yielding material for all 10 episodes through a combination of in-person scenes, phone calls (single-camera coverage), video calls (screen recordings), and V.O. (emails, margin notes).
-- the MIT team's lab: a practical set with the quantum-optical detector as a hero prop. The detector should look beautiful, complex, and real — consult with a physics lab for reference.
-- If cast members are available for limited days, all Palo Alto material should be scheduled in a single concentrated block.
+- All Palo Alto material should be scheduled in a single concentrated block.
 
-** Integration — Practical Scheduling:**
+**Cross — Practical Scheduling:**
 
 | Character | Estimated Days/Season | Appearance Method |
 |-----------|----------------------|-------------------|
-| Cross () | 2-3 days | In-person scenes + phone call coverage |
-| Priya (Mayim Bialik) | 1-2 days | Paired with Cross scenes + 1 independent |
-| (Johnny Galecki) | 1-2 days | In-person + email V.O. |
-| (Kaley Cuoco) | 1 day | Paired with scenes |
-| (Simon Helberg) | 1-2 days | Lab scenes + phone calls |
-| (Kunal Nayyar) | 1 day | Paired with scenes |
+| Nathan Cross | 2-3 days | In-person scenes + phone call coverage + email V.O. |
 
-**Total block:** 4-6 shooting days, schedulable in a single week. This yields a full season of presence through intercutting, phone calls, V.O., and screen appearances.
+**Total Palo Alto block:** 2-3 shooting days. This yields a full season of Cross's presence through intercutting, phone calls, V.O., and screen appearances.
 
 ### 4. Stockholm, Sweden — Event Location (1 episode)
 
@@ -147,9 +139,7 @@ The show operates across four primary locations. The production strategy is desi
 
 **Nathan Cross — Open casting (major American dramatic actor, late 40s).** The show is designed for flexible scheduling: 2-3 shooting days per season, yielding full-season presence through the flexible appearance model (in-person, phone, video, V.O., written).
 
-**If is unavailable:** The show works without him. Variant B (standalone) of the one-pager positions the rival as unnamed. The Cross role can be recast as a new character — an American Nobel laureate with similar characteristics — without losing the dramatic engine. The IP question ( character usage) would need to be resolved with Warner Bros. regardless.
-
-**'s motivation:** This role offers something never could: a Cross who exists in a dramatic register. The phone call in Episode 10 is the scene every actor wants — ten pages of dialogue, emotional vulnerability, intellectual precision, no laugh track. This is Cross as a character, not a punchline.
+**Cross casting note:** The role requires a major American dramatic actor in the late 40s range. Think: Oscar Isaac, Mark Ruffalo, or a comparable name willing to work 2-3 days per season for a role that grows across four seasons. The phone call in Episode 10 is the scene every dramatic actor wants — ten pages of dialogue, emotional vulnerability, intellectual precision. This is the kind of role that attracts talent through material, not screen time.
 
 ### Series Regular — Ola Nowicka
 
@@ -169,13 +159,9 @@ The show operates across four primary locations. The production strategy is desi
 
 **Considerations:** Janusz Gajos (Poland's most respected dramatic actor — if available, this is the casting coup). Alternatively: Andrzej Seweryn, Bogusław Linda, or Jerzy Stuhr. This role requires an actor the Polish audience reveres — Krawczyk IS Polish physics.
 
-### Recurring — Dr. Elena Vasquez
+### Recurring — Marcus Torres
 
-**Mayim Bialik** — Reprising. 1-2 days per season. Priya's role in The Quantóm Theory is more scientifically substantive than in — she's a working neuroscientist whose data connects to RFC. Bialik's real PhD in neuroscience makes this casting uniquely powerful.
-
-### Guest — Other Characters
-
-(Galecki), (Cuoco), (Helberg), (Nayyar) — all designed for 1-2 day shoots per season. Scenes are written to be self-contained and schedulable as a single production block.
+**Casting approach:** American actor (Mexican-American), late 20s. Priya's MIT PhD student. The youngest voice in the ensemble — enthusiastic, bilingual (English/Spanish), the audience's entry point into the science. Must be able to play wonder without naïveté.
 
 ---
 
@@ -274,7 +260,7 @@ The Quantóm Theory is a character-driven drama with no VFX, no action sequences
 | **Block 1** | Warsaw (studio + location) | 6 weeks | Ep 1, 5 (partial), 7 (flashback), 9, 10 |
 | **Block 2** | Radom | 3 days | Ep 7 flashbacks |
 | **Block 3** | Boston / MIT | 5 weeks | Ep 1 (end), 2, 3 (partial), 4, 5 (partial), 6 |
-| **Block 4** | Palo Alto / LA | 1 week | Cross/Priya scenes, Cross/ Stanford, lab |
+| **Block 4** | Palo Alto / LA | 1 week | Cross scenes — apartment, Stanford office, phone call coverage |
 | **Block 5** | Stockholm | 1 week | Ep 8 (ceremony, hotel, exteriors) |
 | **Post** | — | 12 weeks | Edit, color, sound, music, subtitles |
 
@@ -317,8 +303,8 @@ With the completion of this document, the full development package contains:
 With the development package complete, the path forward:
 
 1. **Execute pilot rewrite** based on Session 5 notes
-2. **Prepare two-variant pitch deck** (standalone + standalone) — visual, 10-15 slides
-3. **Identify target producers/agents** — who has overall deals at HBO/Max? Who has relationships at Warner Bros.?
+2. **Prepare pitch deck** (standalone positioning) — visual, 10-15 slides
+3. **Identify target producers/agents** — who has overall deals at HBO/Max, Apple TV+, or Netflix? European co-production partners?
 4. **Polish Film Institute engagement** — formal co-production inquiry for the 30% rebate
 5. **Science consultant attachment** — one credentialed name adds weight to the package
 6. **Casting inquiry (informal)** — initial outreach to agents for lead actor type (Polish, late 20s-30s, international profile)

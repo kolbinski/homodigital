@@ -187,41 +187,33 @@ First genuine three-way laugh. The collaboration is real. The convergence is for
 
 **INT. CROSS'S HOME — PALO ALTO — DAY**
 
-at his laptop. An email notification. From: m.kowalski@uw.edu.pl
+Cross at his laptop. An email notification. From: m.kowalski@uw.edu.pl
 
 He opens it. Reads. His face changes — not dramatic, just the quiet recognition of something significant.
 
-*(entering with groceries)*: "Who died?"
+He reads aloud to himself:
 
-"Nobody died. Kowalski wrote back."
+*(reading)*: "'Dear Dr. Sharma. Thank you for your message. I apologize for the delay — the past weeks have been turbulent. Your observations about the coupling terms in Section 3 are perceptive. And you may tell Cross that he was right about equation 4.7. It was the weak point. But weak points can become hinges. Best regards, M. Kowalski.'"
 
-"The Polish Nobel guy? I thought you emailed him weeks ago."
+Cross stares at the screen.
 
-"I did. He didn't respond. Now he did."
+He calls Priya.
 
-He reads aloud:
+CROSS: "He knows it was me."
 
-*(reading)*: "'Dear Dr. Hofstadter. Thank you for your message. I apologize for the delay — the past weeks have been turbulent. Your observations about the coupling terms in Section 3 are perceptive. And you may tell your roommate that he was right about equation 4.7. It was the weak point. But weak points can become hinges. Best regards, M. Kowalski.'"
+PRIYA: "Everyone knows it was you."
 
-stares at the screen.
+CROSS: "No — he specifically says 'tell Cross.' He's not guessing. He knows."
 
-"He knows about Cross."
+PRIYA: "Of course he knows. A Nobel-level physicist publishes an anonymous critique of another Nobel-level physicist's weak point? Who else would it be?"
 
-"Everyone knows about Cross."
+CROSS: "He called my critique a 'hinge.' Not an attack. A hinge."
 
-"No — he knows the anonymous critique was Cross. Or he suspects."
+PRIYA: "Maybe that's what it is."
 
-"Of course he suspects. A Nobel-level physicist publishes an anonymous critique of another Nobel-level physicist's weak point? Who else would it be?"
+CROSS: "That's not what I intended it to be."
 
-looks at her. This is why is in the show — she sees people clearly, without the mathematics in the way.
-
-"Should I tell Cross?"
-
-"Tell Cross what? That the guy he's been secretly obsessing over just called his critique a 'hinge'? That's going to short-circuit his brain."
-
-"Maybe that's what he needs."
-
-"Maybe it doesn't do anything to you. Maybe it just does something to physics."
+PRIYA: "Maybe it doesn't matter what you intended. Maybe it just does something to physics."
 
 The simplest and truest line in the episode.
 
@@ -887,7 +879,7 @@ CUT TO: Krawczyk in his Warsaw office. Alone. Chain-smoking. Watching on his lap
 
 *"Resonant Field Consciousness does not claim to solve the problem of consciousness. No equation can. What it claims is simpler and, perhaps, more dangerous: that the relationship between observing systems — the dynamic, measurable interaction between fields — contains a signature. We can detect it. We can measure it. We cannot yet explain it. But we can begin to listen."*
 
-CUT TO: Palo Alto. wipes his eyes. hands him a napkin without looking. mouths "Are you okay?" "He's fine. He cries at CERN press releases too."
+CUT TO: MIT lab. Ola wipes her eyes. Marcus hands her a napkin without looking.
 
 ---
 
@@ -899,43 +891,39 @@ CUT TO: Krawczyk. His eyes fill when Maciej quotes Feynman — his hero, attribu
 
 *"The most dangerous thing we can do is decide in advance who — or what — is allowed to participate in that relationship."*
 
-CUT TO: Palo Alto. Cross, who has been writing furious notes through the lecture, stops writing. His pen hovers. Something in this line reaches past the equations, past the objections, past the competition — and touches something he doesn't have a variable for.
+CUT TO: Palo Alto. Cross, alone in his study, has been writing furious notes through the lecture. His pen hovers. Something in this line reaches past the equations, past the objections, past the competition — and touches something he doesn't have a variable for.
 
-Priya, beside him, feels the shift. The infinitesimal change in his posture. The pen that stops. She takes his hand.
-
-He doesn't pull away.
+His pen stops. He sets it down. Sits in silence.
 
 ---
 
-**INT. CROSS'S HOME — AFTER THE BROADCAST**
+**INT. MIT — SHARMA LAB — SAME TIME**
 
-The room buzzes. Everyone talks at once — the energy of people who have just witnessed something and need to process it through conversation.
-
-"That was the most beautiful scientific lecture I have ever seen."
-
-"It was a good lecture."
+The lab buzzes. Priya, Ola, and Marcus have gathered to watch the livestream together — the energy of people who have just witnessed something and need to process it through conversation.
 
 Marcus, watching from the back of the room, whispers to Ola: "I had goosebumps."
 
 "I had a draft."
 
-Cross sits in silence. The phone still in his hand. He hasn't moved.
+Ola wipes her eyes. Marcus hands her a napkin without looking. Priya mouths "Are you okay?" Marcus: "She's fine. She cries at CERN press releases too."
 
-"Cross? What did you think?"
+Priya picks up her phone. Texts Cross: "What did you think?"
 
-Long pause. The room gets quiet. Everyone watches.
+Long pause. Three dots appear. Disappear. Appear again.
 
-CROSS: "He's wrong about the decoherence timescales in section 3.2."
+CROSS *(text)*: "He's wrong about the decoherence timescales in section 3.2."
+
+Priya shows the text to the room.
 
 "That's it?"
 
-CROSS: "And the lecture was... not terrible."
+Another text: "And the lecture was... not terrible."
 
-From Cross, this is a standing ovation. Everyone in the room knows it. Nobody says so.
+From Cross, this is a standing ovation. Everyone in the room knows it.
 
-*(to quietly)*: "Did Cross just say something nice about another physicist?"
+Marcus to Ola: "Did Cross just say something nice about another physicist?"
 
-*(quietly)*: "Write it down. It may never happen again."
+Ola: "Screenshot it. It may never happen again."
 
 ---
 

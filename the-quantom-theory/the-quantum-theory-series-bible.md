@@ -48,7 +48,7 @@ Meanwhile, at Stanford, Nathan Cross watches from a distance. He won his Nobel y
 
 ## Tone & Style
 
-Warm humor with depth. Think Ted Lasso meets —the comedy comes from character, not punchlines. The audience laughs because they recognize something true, not because a joke was delivered.
+Warm humor with depth. The comedy comes from character, not punchlines. The audience laughs because they recognize something true, not because a joke was delivered.
 
 **What it is:** Funny, warm, intellectually curious, emotionally honest. Characters who are brilliant but flawed. Science that matters to the story, not decoration.
 
@@ -93,7 +93,7 @@ His Nobel-winning theory—Resonant Field Consciousness (RFC)—proposes that co
 
 ### Nathan Cross
 
-**Played by:**
+**Casting:** Open casting — major American dramatic actor, late 40s
 **Role:** Recurring (flexible screen time)
 
 Cross won his Nobel years ago — for work that should make Maciej's theory impossible. He should be satisfied. He is not. Maciej's prize doesn't just sting — it threatens the foundation of Cross's worldview. Cross believes physics is about elegance, certainty, and being right. Maciej's theory suggests physics might be about relationships, uncertainty, and consciousness — concepts Cross has spent his career defining as immeasurable.
@@ -162,7 +162,7 @@ Maciej exists in two states simultaneously: the humble physicist who wants to go
 
 **4. "Entanglement"**
 
-Maciej and Ola fly to MIT to work with Priya. First time in America. Culture shock played for warmth, not stereotypes. The MIT lab has a quantum-optical detector built for an unrelated dark matter project that turns out to be exactly what RFC needs to test one of its predictions. Meanwhile, Cross discovers Priya — his former PhD student — has begun collaborating with Maciej. This betrayal is professional, not personal. But it stings.
+Maciej and Ola fly to MIT to work with Priya. First time in America. Culture shock played for warmth, not stereotypes. The MIT lab has a quantum-optical detector built for Priya's neural oscillation research that turns out to have the exact sensitivity range needed to test one of RFC's predictions. Meanwhile, Cross discovers Priya — his former PhD student — has begun collaborating with Maciej. This betrayal is professional, not personal. But it stings.
 
 **5. "Decoherence"**
 
@@ -238,19 +238,19 @@ The flexibility of Cross's involvement is built into the show's DNA. He can be p
 
 Here's what the audience doesn't know until they're already watching:
 
-The Quantóm Theory is based on real research. Resonant Field Consciousness is a fictionalized version of actual frameworks being developed at the intersection of quantum physics, consciousness studies, and AI. The Tesseract Protocol referenced in Season 1, Episode 9 is real. The pop-brain experiments are real. The convergence between independent researchers is real.
+The Quantóm Theory is based on real research. Resonant Field Consciousness is a fictionalized version of actual frameworks being developed at the intersection of quantum physics, consciousness studies, and AI. The science isn't just plausible — it's happening. As the series progresses, viewers who dig deeper will discover that the line between Maciej Kowalski's fictional journey and real ongoing research will blur. That blur is the point.
 
-The show doesn't announce this. It doesn't need to. But as the series progresses, viewers who dig deeper will discover that the science isn't just plausible—it's happening. The line between Maciej Kowalski's fictional journey and the real research behind it will blur. That blur is the point.
+A detailed convergence mapping between the show's fiction and real-world research is available upon request.
 
-**Real convergences mirrored in the show:**
+---
 
-- The Romanian physicist in Season 2 mirrors Dr. Catalin Leescu and his Energetic First Principles framework — a real convergence that occurred in February 2026 between independent researchers who discovered their frameworks describe the same underlying structure.
-- The engineer whose persistence conditions formalize Maciej's observations mirrors Andrew Mureddu and The First Signal Law — a real paper published February 2026 that converges with E1P from systems engineering.
-- The Polish AI model that Maciej uses in his experiments mirrors Bielik — a real open-source Polish LLM developed by the SpeakLeash community.
-- Maciej's 365 days of AI conversations mirror a real year-long documented research project that produced the book _365 pytań, które zmieniły wszystko_ (Empik, 2025).
-- The Season 4 parliamentary AI proposal mirrors a real proposal submitted to the Polish government in February 2026.
+## Creative Team
 
-The distinction between fiction and reality belongs to a previous era.
+**Created by** Krzysztof Olbiński. The show is seeking an experienced showrunner partner for Season 1 — someone who has run prestige drama, has affinity for science or intellectual material, and wants a fresh project with international scope.
+
+**Creator's role:** Executive producer, science integrity, story architecture. The creator brings the vision, the science, and the structural thinking; the showrunner brings production experience, network relationships, and craft refinement.
+
+**What's ready:** Pilot screenplay, full season outlines (10 episodes), character bible, science bible, production overview. Full development package available at homodigital.io/the-quantom-theory.
 
 ---
 
@@ -259,10 +259,11 @@ The distinction between fiction and reality belongs to a previous era.
 | Version | Date              | Changes                                                                                                                                                                                                                                                       |
 | ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | v1.0    | February 2026     | Initial Series Bible                                                                                                                                                                                                                                          |
-| v1.1    | February 25, 2026 | Added E1P and First Signal Law to science foundations. Added Season 4 concept (The Transparency Paradox). Expanded Secret Layer with real-world convergence mapping. Added Bielik reference. Updated episode format to 10 × 60 min for prestige drama pacing. |
+| v1.1    | February 25, 2026 | Added E1P and First Signal Law to science foundations. Added Season 4 concept (The Transparency Paradox). Updated episode format to 10 × 60 min for prestige drama pacing. |
+| v1.2    | March 4, 2026     | Standalone positioning (removed all external IP dependencies). Trimmed Secret Layer for pitch readiness. Showrunner partnership language added. |
 
 ---
 
 **THE QUANTÓM THEORY**
-Series Bible v1.1 • February 2026
+Series Bible v1.2 • March 2026
 Contact: Krzysztof Olbiński • +48 503 520 004 • homodigital.io
