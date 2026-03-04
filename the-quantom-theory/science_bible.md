@@ -379,7 +379,7 @@ The show should engage consultants from three domains:
 | R({self_t}) — temporally extended self | FICTIONAL | Show's Season 2-3 evolution |
 | Tesseract Protocol | REAL | Real framework by show's creator |
 | Nathan Cross | FICTIONAL | character () |
-| Maciej Musiał as actor | REAL | Polish actor (1983, Netflix) |
+| Casting type: Maciej Musiał | REAL | Polish actor (1983, Netflix) — casting reference, not attached |
 | University of Warsaw physics department | REAL | Real institution |
 | MIT McGovern Institute | REAL | Real institution |
 | Stanford | REAL | Real institution |

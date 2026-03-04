@@ -41,7 +41,7 @@ No villain AI. No dystopia. No special effects. Just a physicist in a Warsaw apa
 
 **THE CHARACTERS**
 
-**Maciej Kowalski** (33, Polish) — Brilliant, approachable, plays guitar, has friends. The anti-stereotype genius. Played by Maciej Musiał (1983, Netflix).
+**Maciej Kowalski** (33, Polish) — Brilliant, approachable, plays guitar, has friends. The anti-stereotype genius. Casting type: Maciej Musiał (1983, Netflix).
 
 **Ola Nowicka** (31, Polish) — His research partner. Built the simulations that proved the theory. Smarter than him in ways he's only beginning to understand.
 

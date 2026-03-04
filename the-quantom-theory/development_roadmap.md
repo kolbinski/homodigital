@@ -117,7 +117,7 @@ Documents that demonstrate the show is real, not just clever.
 - Practical production information
 - Locations: Warsaw (Mokotów apartment, University, streets), Stockholm (Nobel ceremony), Boston/Cambridge (MIT), Stanford / Palo Alto
 - Budget tier: mid-range prestige drama (no VFX, character-driven)
-- Casting notes: Maciej Musiał rationale, Cross flexibility ( scheduling)
+- Casting notes: lead actor type rationale, Cross flexibility (scheduling)
 - Language strategy: English primary, Polish subtitled scenes
 - Music: guitar motif, European vs. American sonic palette
 - Depends on: everything (this is the "how we actually make it" document)

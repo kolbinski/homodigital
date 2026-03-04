@@ -132,16 +132,16 @@ The show operates across four primary locations. The production strategy is desi
 
 ### Lead — Maciej Kowalski
 
-**Maciej Musiał** — Poland's most internationally recognized young actor. Known for 1983 (Netflix's first Polish original), The Witcher (Netflix), and a significant Polish film career. Age-appropriate (born 1996). Fluent in English with a natural Polish accent. Guitar-playing ability (trainable if not already proficient).
+**Casting type: Maciej Musiał** — Poland's most internationally recognized young actor. Known for 1983 (Netflix's first Polish original), The Witcher (Netflix), and a significant Polish film career. Age-appropriate (born 1996). Fluent in English with a natural Polish accent. Guitar-playing ability (trainable if not already proficient).
 
-**Why Musiał:**
+**Why this type:**
 - International recognition through Netflix — existing global audience awareness
 - Physical match: tall, lean, naturally disheveled in the way the role requires
 - Demonstrated range: 1983 required dramatic intensity; this role requires warmth plus intensity
 - Authentic Polish presence — not an American actor performing Polishness
 - The casting itself makes a statement the show believes in: breakthroughs come from unexpected places
 
-**Casting note:** If Musiał is unavailable, the role requires: Polish native speaker, late 20s to mid 30s, fluent English with accent, ability to play intellectual without performing intellectual. The character must feel like the smartest person in the room who doesn't know he's the smartest person in the room. This is rare.
+**Core requirements:** Polish native speaker, late 20s to mid 30s, fluent English with accent, ability to play intellectual without performing intellectual. The character must feel like the smartest person in the room who doesn't know he's the smartest person in the room. This is rare.
 
 ### Recurring — Nathan Cross
 
@@ -153,7 +153,7 @@ The show operates across four primary locations. The production strategy is desi
 
 ### Series Regular — Ola Nowicka
 
-**Casting approach:** Polish actress, early 30s. Must be able to play funny and fierce simultaneously. The role demands rapid-fire Polish dialogue, emotional depth, and the ability to hold the screen against Musiał in two-handers that form the show's emotional core.
+**Casting approach:** Polish actress, early 30s. Must be able to play funny and fierce simultaneously. The role demands rapid-fire Polish dialogue, emotional depth, and the ability to hold the screen against the lead in two-handers that form the show's emotional core.
 
 **Considerations:** Vanessa Aleksander, Magdalena Różczka, or Maria Dębska from the Polish film industry. The role could also launch a lesser-known Polish actress internationally — Ola is the breakout character.
 
@@ -321,7 +321,7 @@ With the development package complete, the path forward:
 3. **Identify target producers/agents** — who has overall deals at HBO/Max? Who has relationships at Warner Bros.?
 4. **Polish Film Institute engagement** — formal co-production inquiry for the 30% rebate
 5. **Science consultant attachment** — one credentialed name adds weight to the package
-6. **Casting inquiry (informal)** — is Maciej Musiał aware? Is there agent-level interest?
+6. **Casting inquiry (informal)** — initial outreach to agents for lead actor type (Polish, late 20s-30s, international profile)
 7. **Consider festival/market strategy** — Series Mania (Lille), Berlin Series Market, or MIPCOM for international co-production partners
 
 ---
