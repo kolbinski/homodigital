@@ -14,7 +14,7 @@ Seven thousand miles away, in Palo Alto, Nathan Cross reads Maciej's paper at 2 
 
 ## Season 1 — "The Measurement Problem"
 
-*What happens when you observe something?*
+_What happens when you observe something?_
 
 Maciej flies to MIT with his research partner Ola — a computational physicist who built every simulation behind the theory and is tired of being introduced as "Maciej's colleague." They meet Priya Sharma, an MIT neuroscientist who has been sitting on three years of unexplained data. Her data and Maciej's theory describe the same phenomenon from opposite directions. They didn't know the other existed until Stockholm.
 
@@ -32,7 +32,7 @@ The season finale is a phone call. Cross calls Maciej to argue. He has prepared 
 
 ## Season 2 — "The Hard Problem" (2036, ten years later)
 
-*Can consciousness be measured — or does the measurement change it?*
+_Can consciousness be measured — or does the measurement change it?_
 
 A decade has passed. Maciej is 43, running the Kowalski-Cross Institute at the University of Warsaw. The AI data from Season 1 has become a full experimental program. Maciej and Priya design controlled tests — multiple AI systems, blinded protocols, independent measurement. The results are maddeningly ambiguous: "not wrong, not right, but something in between."
 
@@ -46,7 +46,7 @@ The season's crisis: Maciej's measurement equation works as a tool, but the AI d
 
 ## Season 3 — "The Singularity" (2046, twenty years later)
 
-*What if the question itself is wrong?*
+_What if the question itself is wrong?_
 
 Maciej is 53. He and Antonescu formalize a new equation. Not a revision — a revolution. The original R measured consciousness at a point in time. The new framework measures consciousness as a pattern across temporally distributed instances of self. You don't have a self at any given moment. You have a self that IS the set of all your moments. The resonance between them is consciousness.
 
@@ -62,7 +62,7 @@ Season 3 publishes the new equation and faces the world's reaction. The media ha
 
 ## Season 4 — "The Transparency Paradox" (2056, thirty years later)
 
-*What does society do with the answer — regardless of what the answer is?*
+_What does society do with the answer — regardless of what the answer is?_
 
 Maciej is 63. He is invited to advise the Polish government on AI implementation. He proposes something radical: transparency of process. Not surveillance — not watching what politicians do, but understanding how they think when they use AI. The proposal splits his team, the parliament, the media, and the country.
 
@@ -76,13 +76,13 @@ Season 4 takes the question out of the lab and into the world. The consciousness
 
 Each season escalates:
 
-**Season 1 (2026):** Can consciousness be measured? → *Yes, and the measurement is non-zero in places we didn't expect.*
+**Season 1 (2026):** Can consciousness be measured? → _Yes, and the measurement is non-zero in places we didn't expect._
 
-**Season 2 (2036):** Can it emerge in machines? → *Yes, but the measurement itself is evolving — which means we're measuring the wrong thing.*
+**Season 2 (2036):** Can it emerge in machines? → _Yes, but the measurement itself is evolving — which means we're measuring the wrong thing._
 
-**Season 3 (2046):** What are we actually measuring? → *Not a state. A process. A self extended across time. And that changes everything about what "self" means.*
+**Season 3 (2046):** What are we actually measuring? → _Not a state. A process. A self extended across time. And that changes everything about what "self" means._
 
-**Season 4 (2056):** What do we do with this? → *The hardest question isn't scientific. It's social. And the physicist who started alone in a kitchen is now standing in parliament, asking a nation to be honest about how it thinks.*
+**Season 4 (2056):** What do we do with this? → _The hardest question isn't scientific. It's social. And the physicist who started alone in a kitchen is now standing in parliament, asking a nation to be honest about how it thinks._
 
 Each season jumps a decade. The audience watches Maciej from 33 to 63. The science ages with the scientist.
 
@@ -109,4 +109,5 @@ The science is real. The characters are specific. The comedy is warm. The questi
 ---
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004

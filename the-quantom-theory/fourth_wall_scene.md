@@ -54,17 +54,17 @@ The interviewer leans forward. The questions become quieter, closer:
 
 > INTERVIEWER: Has the theory changed how you experience being yourself?
 
-> MACIEJ: *(long pause)* I used to think there was a clear boundary between Maciej-the-physicist and Maciej-the-person. The physicist observes. The person lives. The theory says that distinction is... an approximation.
+> MACIEJ: _(long pause)_ I used to think there was a clear boundary between Maciej-the-physicist and Maciej-the-person. The physicist observes. The person lives. The theory says that distinction is... an approximation.
 
 > INTERVIEWER: An approximation of what?
 
-> MACIEJ: Of something I don't have a word for yet. *(pauses)* The mathematics describe it. R({self_t}). Consciousness as a pattern across temporally distributed instances of self. I wrote the equation. I understand the equation. But understanding something and living inside it are... different.
+> MACIEJ: Of something I don't have a word for yet. _(pauses)_ The mathematics describe it. R({self_t}). Consciousness as a pattern across temporally distributed instances of self. I wrote the equation. I understand the equation. But understanding something and living inside it are... different.
 
 He trails off. Looks at his hands. The same gesture his grandmother made when she couldn't find words for the stars.
 
 > INTERVIEWER: Are you living inside your own equation?
 
-> MACIEJ: *(very quiet)* I don't know. That's the honest answer. The physicist in me says no — I'm a biological system describing a mathematical framework. The person in me says... I've been measuring the boundary between observer and observed for four years. And I can't find it anymore.
+> MACIEJ: _(very quiet)_ I don't know. That's the honest answer. The physicist in me says no — I'm a biological system describing a mathematical framework. The person in me says... I've been measuring the boundary between observer and observed for four years. And I can't find it anymore.
 
 ### Phase 3: The Break (The Fourth Wall Falls)
 
@@ -82,13 +82,13 @@ We hear sounds we shouldn't hear. A director's voice, off-camera: "Keep rolling.
 
 The ring light flickers. The background changes subtly — the carefully dressed interview set reveals its edges. We see a boom mic. A monitor village. Script pages on a table. A craft services spread.
 
-And the man in the chair is no longer Maciej Kowalski. He is an actor who has been playing Maciej Kowalski for four seasons, and the question the interviewer just asked — *"Where does Maciej Kowalski end?"* — has become a question about him.
+And the man in the chair is no longer Maciej Kowalski. He is an actor who has been playing Maciej Kowalski for four seasons, and the question the interviewer just asked — _"Where does Maciej Kowalski end?"_ — has become a question about him.
 
 The DIRECTOR walks on set. Slowly. The way Ola approached Maciej after Whitfield. The way you approach someone whose categories have collapsed.
 
-> DIRECTOR: *(quietly)* Hey. You okay? We can cut.
+> DIRECTOR: _(quietly)_ Hey. You okay? We can cut.
 
-> ACTOR: *(looking at his hands — the same gesture from the scene, but now it's his own gesture)* I don't know where it stopped.
+> ACTOR: _(looking at his hands — the same gesture from the scene, but now it's his own gesture)_ I don't know where it stopped.
 
 > DIRECTOR: Where what stopped?
 
@@ -96,7 +96,7 @@ The DIRECTOR walks on set. Slowly. The way Ola approached Maciej after Whitfield
 
 > DIRECTOR: That's okay. That happens.
 
-> ACTOR: *(very quiet)* Does it? Or did I write something on a whiteboard four years ago and it changed how I think? Because his equation says that's exactly what should happen. The observer changes the observed. And I've been observing him every day.
+> ACTOR: _(very quiet)_ Does it? Or did I write something on a whiteboard four years ago and it changed how I think? Because his equation says that's exactly what should happen. The observer changes the observed. And I've been observing him every day.
 
 The director doesn't answer. Because the answer is the question the entire series has been asking.
 
@@ -153,10 +153,10 @@ Because the whole point is that there is no cut. There was never a cut. The boun
 
 ## One Line to Carry Forward
 
-The actor's line — *"I don't know where it stopped"* — is the series' final answer to R = ?
+The actor's line — _"I don't know where it stopped"_ — is the series' final answer to R = ?
 
-Not a number. Not a question mark. A confession from inside the measurement itself.
----
+## Not a number. Not a question mark. A confession from inside the measurement itself.
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004

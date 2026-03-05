@@ -27,7 +27,7 @@ MACIEJ: "Agreed."
 
 PRIYA: "And one more thing. No results leave this room until I say they're clean. Not to your university. Not to journalists. Not to anyone."
 
-OLA *(in Polish to Maciej; subtitled)*: "Podoba mi się ta kobieta." *(I like this woman.)*
+OLA _(in Polish to Maciej; subtitled)_: "Podoba mi się ta kobieta." _(I like this woman.)_
 
 PRIYA: "I understood that. I spent a summer in Kraków. I know 'podoba mi się.'"
 
@@ -43,7 +43,7 @@ The RECTOR sits at his enormous desk, rehearsing talking points with a PR ASSIST
 
 The rector's phone rings. TVN24 — the Polish news channel. He puts on his best voice.
 
-RECTOR *(in Polish; subtitled)*: "The University fully supports Professor Kowalski's groundbreaking work and his collaboration with international institutions..."
+RECTOR _(in Polish; subtitled)_: "The University fully supports Professor Kowalski's groundbreaking work and his collaboration with international institutions..."
 
 He pauses. Listens. His face changes.
 
@@ -66,6 +66,7 @@ RECTOR: "Issue three. One for each interpretation."
 Experiment design montage — but NOT a Hollywood montage. This is the real thing: messy, slow, frustrating. Ola writes simulation code. Priya designs measurement protocols. Maciej works on the mathematical predictions that will go into sealed envelopes.
 
 Details that make this feel real:
+
 - An electrode calibration fails. Priya calls the manufacturer. Hold music for twenty minutes.
 - Maciej's prediction envelope requires a specific formatting protocol for the blinded review. He keeps getting the LaTeX wrong.
 - A grad student (JAMES, 26, nervous) asks Priya if "the Nobel guy" wants coffee. Priya: "His name is Maciej, he's not a celebrity, and yes — black, no sugar."
@@ -76,19 +77,19 @@ Through these small moments, the episode shows: science is not discovery. Scienc
 
 Ola makes tea. Maciej stares at his laptop — not at equations. At Polish news headlines.
 
-OLA *(in Polish; subtitled)*: "Przestań to czytać." *(Stop reading that.)*
+OLA _(in Polish; subtitled)_: "Przestań to czytać." _(Stop reading that.)_
 
-MACIEJ *(in Polish; subtitled)*: "Piszą, że uciekłem." *(They're saying I fled.)*
+MACIEJ _(in Polish; subtitled)_: "Piszą, że uciekłem." _(They're saying I fled.)_
 
-OLA *(in Polish; subtitled)*: "Nie uciekłeś. Pojechałeś pracować. To jest różnica, którą rozumie każdy naukowiec i żaden dziennikarz." *(You didn't flee. You went to work. That's a difference every scientist understands and no journalist does.)*
+OLA _(in Polish; subtitled)_: "Nie uciekłeś. Pojechałeś pracować. To jest różnica, którą rozumie każdy naukowiec i żaden dziennikarz." _(You didn't flee. You went to work. That's a difference every scientist understands and no journalist does.)_
 
-MACIEJ *(in Polish; subtitled)*: "Krawczyk dzwonił. Ma jutro konferencję prasową. Będzie mnie bronił." *(Krawczyk called. He has a press conference tomorrow. He's going to defend me.)*
+MACIEJ _(in Polish; subtitled)_: "Krawczyk dzwonił. Ma jutro konferencję prasową. Będzie mnie bronił." _(Krawczyk called. He has a press conference tomorrow. He's going to defend me.)_
 
-OLA *(in Polish; subtitled)*: "To dobrze." *(That's good.)*
+OLA _(in Polish; subtitled)_: "To dobrze." _(That's good.)_
 
-MACIEJ *(in Polish; subtitled)*: "Nie jestem pewien. Za każdym razem, gdy ktoś mnie broni, musi uprościć. A uproszczenie to zniekształcenie. A zniekształcenie to... wiesz co." *(I'm not sure. Every time someone defends me, they have to simplify. And simplification is distortion. And distortion is... you know.)*
+MACIEJ _(in Polish; subtitled)_: "Nie jestem pewien. Za każdym razem, gdy ktoś mnie broni, musi uprościć. A uproszczenie to zniekształcenie. A zniekształcenie to... wiesz co." _(I'm not sure. Every time someone defends me, they have to simplify. And simplification is distortion. And distortion is... you know.)_
 
-OLA *(in Polish; subtitled)*: "Popatrz na dane, Maciej. Nie na nagłówki. Na dane." *(Look at the data, Maciej. Not the headlines. The data.)*
+OLA _(in Polish; subtitled)_: "Popatrz na dane, Maciej. Nie na nagłówki. Na dane." _(Look at the data, Maciej. Not the headlines. The data.)_
 
 ---
 
@@ -96,17 +97,17 @@ OLA *(in Polish; subtitled)*: "Popatrz na dane, Maciej. Nie na nagłówki. Na da
 
 Krawczyk at a podium. Fewer cameras than Maciej's press conference — this is the aftermath, not the event. But the Polish media is hungry.
 
-Krawczyk delivers a measured defense *(in Polish; subtitled)*:
+Krawczyk delivers a measured defense _(in Polish; subtitled)_:
 
 "Professor Kowalski is at MIT because that is where the best neuroscience equipment in the world is located. He is doing what any serious scientist would do — seeking the best possible conditions for empirical testing. His theory is ambitious, and like all ambitious theories, it requires rigorous verification. It is, if I may say, still unfinished work — by which I mean, as all great science is, a work in progress."
 
 It's a good statement. Careful. Precise. The problem: "ambitious but unfinished" is the only phrase that survives.
 
-CUT TO: headline — TVN24 ticker: **"MENTOR KOWALSKIEGO: TEORIA 'AMBITNA, ALE NIEDOKOŃCZONA'"** *(Kowalski's mentor: theory "ambitious but unfinished")*
+CUT TO: headline — TVN24 ticker: **"MENTOR KOWALSKIEGO: TEORIA 'AMBITNA, ALE NIEDOKOŃCZONA'"** _(Kowalski's mentor: theory "ambitious but unfinished")_
 
 CUT TO: Krawczyk in his office, watching the news. Cigarette. The chyron twists his words. He sees it happen in real time.
 
-KRAWCZYK *(in Polish; subtitled, to himself)*: "No pięknie." *(Beautiful.)*
+KRAWCZYK _(in Polish; subtitled, to himself)_: "No pięknie." _(Beautiful.)_
 
 ---
 
@@ -119,24 +120,24 @@ Maciej watches the Krawczyk press conference clip on his phone. His face: not an
 He calls Krawczyk. The conversation is tense — conducted entirely in Polish, subtitled:
 
 MACIEJ: "Profesorze, powiedział pan 'niedokończona.'"
-*(Professor, you said 'unfinished.')*
+_(Professor, you said 'unfinished.')_
 
 KRAWCZYK: "Powiedziałem 'praca w toku.' To nie jest to samo."
-*(I said 'work in progress.' That's not the same thing.)*
+_(I said 'work in progress.' That's not the same thing.)_
 
 MACIEJ: "Dla pana nie. Dla nich — tak."
-*(Not to you. To them — yes.)*
+_(Not to you. To them — yes.)_
 
 KRAWCZYK: "Maciej, bronię cię od dwóch tygodni. Każdego dnia. Przed rektorem, przed mediami, przed kolegami, którzy uważają, że świadomość w równaniu to obłęd. Bronię cię, bo wierzę w twoją matematykę, nawet jeśli nie wierzę w twoje wnioski. Nie mów mi, że robię to źle."
-*(Maciej, I've been defending you for two weeks. Every day. Against the rector, the media, colleagues who think consciousness in an equation is madness. I defend you because I believe in your mathematics, even if I don't believe in your conclusions. Don't tell me I'm doing it wrong.)*
+_(Maciej, I've been defending you for two weeks. Every day. Against the rector, the media, colleagues who think consciousness in an equation is madness. I defend you because I believe in your mathematics, even if I don't believe in your conclusions. Don't tell me I'm doing it wrong.)_
 
 Silence. Both men are hurt. Neither is wrong.
 
 MACIEJ: "Przepraszam, profesorze."
-*(I'm sorry, Professor.)*
+_(I'm sorry, Professor.)_
 
 KRAWCZYK: "Nie przepraszaj. Pracuj. To jest jedyna obrona, która działa."
-*(Don't apologize. Work. That's the only defense that works.)*
+_(Don't apologize. Work. That's the only defense that works.)_
 
 ---
 
@@ -190,9 +191,9 @@ First day of data collection: an EEG amplifier fails during session three. Data 
 
 PRIYA: "We recalibrate. We run it again tomorrow. Welcome to neuroscience."
 
-MACIEJ *(to Ola, in Polish; subtitled)*: "W fizyce teoretycznej nie ma problemów ze sprzętem." *(In theoretical physics, we don't have equipment problems.)*
+MACIEJ _(to Ola, in Polish; subtitled)_: "W fizyce teoretycznej nie ma problemów ze sprzętem." _(In theoretical physics, we don't have equipment problems.)_
 
-OLA *(in Polish; subtitled)*: "W fizyce teoretycznej nie macie danych. Więc cisza." *(In theoretical physics, you don't have data. So hush.)*
+OLA _(in Polish; subtitled)_: "W fizyce teoretycznej nie macie danych. Więc cisza." _(In theoretical physics, you don't have data. So hush.)_
 
 Second day: equipment works. Data flows. Ola watches the raw numbers scroll across her screen. She's looking for the oscillation pattern RFC predicts.
 
@@ -212,11 +213,11 @@ Maciej picks up his guitar for the first time since arriving in America. Plays s
 
 His phone rings. Ola.
 
-OLA (V.O.) *(in Polish; subtitled)*: "Idź spać. Jutro jest kolejny dzień danych." *(Go to sleep. Tomorrow is another data day.)*
+OLA (V.O.) _(in Polish; subtitled)_: "Idź spać. Jutro jest kolejny dzień danych." _(Go to sleep. Tomorrow is another data day.)_
 
-MACIEJ *(in Polish; subtitled)*: "Nie mogę spać." *(Can't sleep.)*
+MACIEJ _(in Polish; subtitled)_: "Nie mogę spać." _(Can't sleep.)_
 
-OLA (V.O.) *(in Polish; subtitled)*: "Graj. To pomaga. Ale nie tę smutną. Zagraj coś brazylijskiego." *(Play. It helps. But not the sad one. Play something Brazilian.)*
+OLA (V.O.) _(in Polish; subtitled)_: "Graj. To pomaga. Ale nie tę smutną. Zagraj coś brazylijskiego." _(Play. It helps. But not the sad one. Play something Brazilian.)_
 
 He smiles. Switches to bossa nova. The camera pulls back from the window — a small, lit rectangle in Cambridge, Massachusetts. A man with a guitar, waiting for data.
 
@@ -256,7 +257,7 @@ Third time. Different statistical method. Same.
 
 She stares at the screen. Her hands are shaking. Literally shaking.
 
-OLA *(in Polish; subtitled, to herself)*: "Nie. Jeszcze nie. Nie teraz." *(No. Not yet. Not now.)*
+OLA _(in Polish; subtitled, to herself)_: "Nie. Jeszcze nie. Nie teraz." _(No. Not yet. Not now.)_
 
 She closes the analysis window. Deletes the output file. Then sits very still.
 
@@ -305,15 +306,15 @@ Maciej, Ola, and Priya review the experiment protocol. Data collection entering 
 
 Maciej's phone pings. An email from the ROYAL INSTITUTION in London — the most prestigious lecture venue in British science. Faraday spoke there. Hawking spoke there. They want Maciej. December slot. Prime time.
 
-MACIEJ *(reading aloud)*: "'We would be honored to host Professor Kowalski for a lecture on Resonant Field Consciousness and its implications for the understanding of consciousness in physical systems.'"
+MACIEJ _(reading aloud)_: "'We would be honored to host Professor Kowalski for a lecture on Resonant Field Consciousness and its implications for the understanding of consciousness in physical systems.'"
 
-OLA *(in Polish; subtitled)*: "Powiedz nie." *(Say no.)*
+OLA _(in Polish; subtitled)_: "Powiedz nie." _(Say no.)_
 
 PRIYA: "She's right. Say no. You have an experiment running."
 
 Maciej puts the phone down. But we can see it — the pull. The Royal Institution. Faraday. Hawking.
 
-His phone pings again. This time from Krawczyk: "Widziałem zaproszenie z Royal Institution. Musisz to przyjąć. To jest jedyny sposób, żeby kontrolować narrację. Jeśli nie mówisz ty, mówią za ciebie." *(I saw the Royal Institution invitation. You must accept. This is the only way to control the narrative. If you don't speak, they speak for you.)*
+His phone pings again. This time from Krawczyk: "Widziałem zaproszenie z Royal Institution. Musisz to przyjąć. To jest jedyny sposób, żeby kontrolować narrację. Jeśli nie mówisz ty, mówią za ciebie." _(I saw the Royal Institution invitation. You must accept. This is the only way to control the narrative. If you don't speak, they speak for you.)_
 
 Two advisors. Opposite advice. Maciej exists in superposition.
 
@@ -326,11 +327,11 @@ Two advisors. Opposite advice. Maciej exists in superposition.
 Maciej calls Krawczyk. The conversation — in Polish, subtitled — is warmer than last time. The wound from "unfinished" is scabbing, not healed.
 
 KRAWCZYK: "Posłuchaj. Masz wybór. Siedzisz w laboratorium i czekasz na dane, które pojawią się za tygodnie. Albo jedziesz do Londynu i mówisz swoimi słowami, co ta teoria naprawdę znaczy, zanim Whitfield — bo Whitfield przyjdzie, Maciej, zawsze przychodzi — zanim on powie swoimi."
-*(Listen. You have a choice. You sit in the lab and wait for data that won't come for weeks. Or you go to London and say in your own words what this theory really means, before Whitfield — because Whitfield will come, Maciej, he always does — before he says it in his.)*
+_(Listen. You have a choice. You sit in the lab and wait for data that won't come for weeks. Or you go to London and say in your own words what this theory really means, before Whitfield — because Whitfield will come, Maciej, he always does — before he says it in his.)_
 
-MACIEJ: "Priya mówi, żeby zostać." *(Priya says to stay.)*
+MACIEJ: "Priya mówi, żeby zostać." _(Priya says to stay.)_
 
-KRAWCZYK: "Priya jest empiryczką. Myśli w danych. Ale ty nie jesteś tylko empirykiem. Jesteś teoretykiem. Twoja praca żyje w interpretacji. I jeśli oddasz interpretację innym, stracisz ją." *(Priya is an empiricist. She thinks in data. But you're not just an empiricist. You're a theorist. Your work lives in interpretation. And if you give the interpretation to others, you'll lose it.)*
+KRAWCZYK: "Priya jest empiryczką. Myśli w danych. Ale ty nie jesteś tylko empirykiem. Jesteś teoretykiem. Twoja praca żyje w interpretacji. I jeśli oddasz interpretację innym, stracisz ją." _(Priya is an empiricist. She thinks in data. But you're not just an empiricist. You're a theorist. Your work lives in interpretation. And if you give the interpretation to others, you'll lose it.)_
 
 Maciej accepts the London invitation.
 
@@ -416,21 +417,21 @@ Ola watches the clip. She knows what's coming. She's been through this before �
 
 She calls Maciej.
 
-OLA *(in Polish; subtitled)*: "Widziałam Londyn." *(I saw London.)*
+OLA _(in Polish; subtitled)_: "Widziałam Londyn." _(I saw London.)_
 
-MACIEJ (V.O.) *(in Polish; subtitled)*: "I?" *(And?)*
+MACIEJ (V.O.) _(in Polish; subtitled)_: "I?" _(And?)_
 
-OLA *(in Polish; subtitled)*: "I powiem ci to co zawsze. Nie możesz kontrolować tego, co ludzie wycinają z twojego wykładu. Możesz kontrolować to, co robisz w laboratorium. Kiedy wracasz?" *(And I'll tell you what I always do. You can't control what people cut from your lecture. You can control what you do in the lab. When are you coming back?)*
+OLA _(in Polish; subtitled)_: "I powiem ci to co zawsze. Nie możesz kontrolować tego, co ludzie wycinają z twojego wykładu. Możesz kontrolować to, co robisz w laboratorium. Kiedy wracasz?" _(And I'll tell you what I always do. You can't control what people cut from your lecture. You can control what you do in the lab. When are you coming back?)_
 
 Pause.
 
-MACIEJ (V.O.): "Jutro." *(Tomorrow.)*
+MACIEJ (V.O.): "Jutro." _(Tomorrow.)_
 
 OLA: "Dobrze. Bo muszę ci coś powiedzieć."
 
 She almost says it. Almost tells him about the preliminary data. She stops herself.
 
-OLA: "...Nie, nic. Nieważne. Po prostu wróć." *(Never mind. Just come back.)*
+OLA: "...Nie, nic. Nieważne. Po prostu wróć." _(Never mind. Just come back.)_
 
 ---
 
@@ -569,7 +570,7 @@ The detector was built for Priya's neural oscillation experiments. It measures f
 
 Tonight, he notices something: the sensitivity range of Priya's detector overlaps precisely with the frequency ranges RFC predicts for consciousness-related field interactions. The instrument they've been using for neuroscience happens to be perfectly tuned to test Maciej's theory.
 
-MARCUS *(to himself)*: "No way."
+MARCUS _(to himself)_: "No way."
 
 He pulls up the RFC predictions on one screen, the detector specs on the other. Overlays them.
 
@@ -577,7 +578,7 @@ MARCUS: "No. Way."
 
 He picks up his phone. Puts it down. Picks it up again. It's 11 PM. He texts Priya:
 
-MARCUS *(text)*: "Don't freak out. But I think our detector can measure RFC field signatures. Like, directly. Call me when you're up."
+MARCUS _(text)_: "Don't freak out. But I think our detector can measure RFC field signatures. Like, directly. Call me when you're up."
 
 He stares at the screens. The predicted signatures and the detector specifications, side by side. A coincidence — or the kind of convergence Maciej's theory is built on.
 
@@ -597,11 +598,11 @@ She's not jealous. The show must make this clear — it's not romance. It's some
 
 Later — Ola and Maciej alone:
 
-OLA *(in Polish; subtitled)*: "Wy dwoje jesteście splątani." *(You two are entangled.)*
+OLA _(in Polish; subtitled)_: "Wy dwoje jesteście splątani." _(You two are entangled.)_
 
-MACIEJ *(in Polish; subtitled)*: "To nie jest to, co splątanie oznacza." *(That's not what entanglement means.)*
+MACIEJ _(in Polish; subtitled)_: "To nie jest to, co splątanie oznacza." _(That's not what entanglement means.)_
 
-OLA *(in Polish; subtitled)*: "Mierzenie jednego natychmiast wpływa na drugie, niezależnie od odległości. To jest dokładnie to, co splątanie oznacza." *(Measuring one instantly affects the other, regardless of distance. It's exactly what entanglement means.)*
+OLA _(in Polish; subtitled)_: "Mierzenie jednego natychmiast wpływa na drugie, niezależnie od odległości. To jest dokładnie to, co splątanie oznacza." _(Measuring one instantly affects the other, regardless of distance. It's exactly what entanglement means.)_
 
 She says it lightly. It lands heavy.
 
@@ -619,7 +620,7 @@ MARCUS: "That's probably noise."
 
 He runs it again. Same pattern. Third time. Fourth. Fifth. Sixth.
 
-MARCUS *(staring at the data, to himself)*: "This is either a systematic error in the detector... or Maciej just became the most important physicist alive."
+MARCUS _(staring at the data, to himself)_: "This is either a systematic error in the detector... or Maciej just became the most important physicist alive."
 
 He calls Priya.
 
@@ -890,8 +891,8 @@ SUPER: WARSAW
 
 The rector reads Whitfield's paper. Calls his PR assistant.
 
-RECTOR *(in Polish; subtitled)*: "Prepare a statement. 'The University of Warsaw supports all scientific inquiry, including productive debate about the Resonant Field Consciousness framework.' Nothing more."
-*(Beat.)*
+RECTOR _(in Polish; subtitled)_: "Prepare a statement. 'The University of Warsaw supports all scientific inquiry, including productive debate about the Resonant Field Consciousness framework.' Nothing more."
+_(Beat.)_
 "And remove the Nobel banner from the building entrance. For now."
 
 ---
@@ -902,18 +903,18 @@ Krawczyk reads the paper. Finishes. Lights a cigarette. Reads it again.
 
 His phone rings. A COLLEAGUE from the department.
 
-KRAWCZYK *(in Polish; subtitled)*: "Tak, czytałem... Nie, nie sądzę, żeby to był koniec... Tak, rozumiem, że rektor... Nie, nie zamierzam... Posłuchaj. Maciej jest moim byłym studentem. Był najlepszy, jakiego miałem. Ale nie mogę... nie, nie chodzi o to. Chodzi o to, że..."
-*(Yes, I've read it... No, I don't think it's the end... Yes, I understand the rector... No, I'm not going to... Listen. Maciej is my former student. He was the best I ever had. But I can't... no, it's not about that. It's about...)*
+KRAWCZYK _(in Polish; subtitled)_: "Tak, czytałem... Nie, nie sądzę, żeby to był koniec... Tak, rozumiem, że rektor... Nie, nie zamierzam... Posłuchaj. Maciej jest moim byłym studentem. Był najlepszy, jakiego miałem. Ale nie mogę... nie, nie chodzi o to. Chodzi o to, że..."
+_(Yes, I've read it... No, I don't think it's the end... Yes, I understand the rector... No, I'm not going to... Listen. Maciej is my former student. He was the best I ever had. But I can't... no, it's not about that. It's about...)_
 
 He stops. Long pause.
 
 KRAWCZYK: "Nie jestem pewien, czy powinienem dalej go publicznie bronić. Nie dlatego, że nie wierzę w matematykę. Dlatego, że bronić teorii, w której implikacje mnie przerażają... to jest coś, na co nie jestem gotowy."
-*(I'm not sure I should keep defending him publicly. Not because I don't believe in the mathematics. Because defending a theory whose implications terrify me... is something I'm not ready for.)*
+_(I'm not sure I should keep defending him publicly. Not because I don't believe in the mathematics. Because defending a theory whose implications terrify me... is something I'm not ready for.)_
 
 He hangs up. Calls Maciej.
 
 KRAWCZYK: "Maciej. Czytałem Whitfielda."
-*(Maciej. I've read Whitfield.)*
+_(Maciej. I've read Whitfield.)_
 
 MACIEJ (V.O.): "Wiem."
 
@@ -922,15 +923,15 @@ KRAWCZYK: "Ostrzegałem cię. Nie pamiętają matematyki. Pamiętają nagłówek
 Long pause.
 
 KRAWCZYK: "Nie jestem pewien, czy mogę dalej cię bronić publicznie. Nie jestem pewien, czy powinienem."
-*(I'm not sure I can keep defending you publicly. I'm not sure I should.)*
+_(I'm not sure I can keep defending you publicly. I'm not sure I should.)_
 
 The line goes quiet. This is the break — not dramatic, not loud. Just a man telling his protégé that he's reached his limit.
 
 MACIEJ (V.O.): "Rozumiem, profesorze."
-*(I understand, Professor.)*
+_(I understand, Professor.)_
 
 KRAWCZYK: "Nie rozumiesz. Ale pewnego dnia zrozumiesz."
-*(You don't understand. But one day you will.)*
+_(You don't understand. But one day you will.)_
 
 ---
 
@@ -980,35 +981,35 @@ She enters. The apartment is dark. Maciej sits on the floor, back against the be
 
 What follows is the emotional center of Episode 5 — and potentially of the entire season.
 
-OLA *(in Polish; subtitled)*: "Dwa dni." *(Two days.)*
+OLA _(in Polish; subtitled)_: "Dwa dni." _(Two days.)_
 
-MACIEJ *(in Polish; subtitled)*: "Czytam." *(I'm reading.)*
+MACIEJ _(in Polish; subtitled)_: "Czytam." _(I'm reading.)_
 
-OLA *(in Polish; subtitled)*: "Czytasz to samo od dwóch dni. Szukasz błędu we własnej pracy, bo ktoś ci powiedział, że jest tam błąd. A ja mam pytanie: kiedy James Whitfield z Princeton stał się ważniejszy niż twoje własne równania?" *(You've been reading the same thing for two days. Looking for the flaw in your own work because someone told you there's a flaw. And I have a question: when did James Whitfield from Princeton become more important than your own equations?)*
+OLA _(in Polish; subtitled)_: "Czytasz to samo od dwóch dni. Szukasz błędu we własnej pracy, bo ktoś ci powiedział, że jest tam błąd. A ja mam pytanie: kiedy James Whitfield z Princeton stał się ważniejszy niż twoje własne równania?" _(You've been reading the same thing for two days. Looking for the flaw in your own work because someone told you there's a flaw. And I have a question: when did James Whitfield from Princeton become more important than your own equations?)_
 
-MACIEJ *(in Polish; subtitled)*: "To nie jest kwestia Whitfielda. To jest kwestia tego, czy ja mam rację." *(This isn't about Whitfield. It's about whether I'm right.)*
+MACIEJ _(in Polish; subtitled)_: "To nie jest kwestia Whitfielda. To jest kwestia tego, czy ja mam rację." _(This isn't about Whitfield. It's about whether I'm right.)_
 
-OLA *(in Polish; subtitled)*: "Nie. To jest kwestia tego, czy pozwolisz komuś innemu zdecydować o tym za ciebie." *(No. It's about whether you'll let someone else decide that for you.)*
+OLA _(in Polish; subtitled)_: "Nie. To jest kwestia tego, czy pozwolisz komuś innemu zdecydować o tym za ciebie." _(No. It's about whether you'll let someone else decide that for you.)_
 
 She sits down across from him. On the floor. Like they're back in Warsaw at 3 AM after the Nobel call.
 
-OLA *(in Polish; subtitled)*: "Posłuchaj mnie. Próbujesz się podobać ludziom, którzy nie rozumieją twojej pracy. I ignorujesz ludzi, którzy ją rozumieją. Masz mnie. Masz Priyę. Masz eksperyment, który generuje dane w tej chwili. W tej chwili, Maciej. Whitfield ma słowa. Ty masz liczby. Wróć do laboratorium." *(Listen to me. You're trying to be liked by people who don't understand the work, and ignoring the people who do. You have me. You have Priya. You have an experiment generating data right now. Right now, Maciej. Whitfield has words. You have numbers. Come back to the lab.)*
+OLA _(in Polish; subtitled)_: "Posłuchaj mnie. Próbujesz się podobać ludziom, którzy nie rozumieją twojej pracy. I ignorujesz ludzi, którzy ją rozumieją. Masz mnie. Masz Priyę. Masz eksperyment, który generuje dane w tej chwili. W tej chwili, Maciej. Whitfield ma słowa. Ty masz liczby. Wróć do laboratorium." _(Listen to me. You're trying to be liked by people who don't understand the work, and ignoring the people who do. You have me. You have Priya. You have an experiment generating data right now. Right now, Maciej. Whitfield has words. You have numbers. Come back to the lab.)_
 
-MACIEJ *(in Polish; subtitled)*: "Nie próbuję się podobać. Próbuję przetrwać." *(I'm not trying to be liked. I'm trying to survive.)*
+MACIEJ _(in Polish; subtitled)_: "Nie próbuję się podobać. Próbuję przetrwać." _(I'm not trying to be liked. I'm trying to survive.)_
 
-OLA *(in Polish; subtitled)*: "To przetrwaj jako fizyk. Nie jako celebryta. Nie jako ofiara. Jako fizyk." *(Then survive as a physicist. Not a celebrity. Not a victim. A physicist.)*
+OLA _(in Polish; subtitled)_: "To przetrwaj jako fizyk. Nie jako celebryta. Nie jako ofiara. Jako fizyk." _(Then survive as a physicist. Not a celebrity. Not a victim. A physicist.)_
 
 Silence. Long. The only sound is traffic outside.
 
 Maciej looks at the papers on the floor. At Whitfield's critique. At his own work. At Ola.
 
-MACIEJ *(in Polish; subtitled)*: "Masz rację." *(You're right.)*
+MACIEJ _(in Polish; subtitled)_: "Masz rację." _(You're right.)_
 
-OLA *(in Polish; subtitled)*: "Wiem." *(I know.)*
+OLA _(in Polish; subtitled)_: "Wiem." _(I know.)_
 
 A beat. Almost a smile.
 
-OLA *(in Polish; subtitled)*: "Wstań z podłogi. Weź prysznic. Spotkamy się w laboratorium za godzinę. I zabierz gitarę. Wyglądasz, jakbyś jej potrzebował." *(Get off the floor. Take a shower. Meet us at the lab in an hour. And bring the guitar. You look like you need it.)*
+OLA _(in Polish; subtitled)_: "Wstań z podłogi. Weź prysznic. Spotkamy się w laboratorium za godzinę. I zabierz gitarę. Wyglądasz, jakbyś jej potrzebował." _(Get off the floor. Take a shower. Meet us at the lab in an hour. And bring the guitar. You look like you need it.)_
 
 ---
 
@@ -1034,7 +1035,7 @@ Ola watches him write. She knows the data already matches. She knows what's in t
 
 Priya watches him write. She sees something different — a scientist who was knocked down and chose to advance instead of retreat. She's seen this before. It's rare.
 
-PRIYA *(quietly, to Ola)*: "He's going to be okay."
+PRIYA _(quietly, to Ola)_: "He's going to be okay."
 
 OLA: "He's going to be better than okay."
 
@@ -1061,7 +1062,9 @@ The man who plays the guitar doesn't look defeated anymore. He looks like someon
 **END OF EPISODE 5**
 
 ---
+
 ---
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004

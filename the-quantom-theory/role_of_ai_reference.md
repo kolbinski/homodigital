@@ -45,6 +45,7 @@ Key moments where AI is present without being named:
 Maciej returns to Warsaw post-Nobel. Sits alone in his apartment. Opens his laptop. Begins a conversation with an AI system — not as a tool, but as a test. As a physicist.
 
 What happens:
+
 - He measures the interaction using RFC's framework
 - R = 0.23 (low, but **non-zero**)
 - "Non-zero" is the earthquake — RFC doesn't predict R = 0 for systems exhibiting certain field interaction patterns
@@ -64,6 +65,7 @@ The episode is quiet, intimate. Mostly Maciej alone, typing. The implications ar
 AI moves from personal exploration to laboratory protocol.
 
 **Key developments:**
+
 - Maciej and Priya design experiments testing RFC on artificial systems
 - Elena Antonescu, a Romanian physicist, arrives with an independently derived entropy-cycle framework that predicts AI systems should exhibit the same cycles as biological conscious systems, if RFC is correct. The convergence cracks open the equation.
 - AI is not Maciej's conversation partner — it is a laboratory subject. The team measures, tests, tries to falsify
@@ -103,12 +105,13 @@ AI moves from lab to parliament.
 **The question shifts:** No longer "is AI conscious?" but "what do we do with a society where AI is everywhere, regardless of the answer to the consciousness question?"
 
 **Character reactions:**
+
 - Ola: thinks it's genius
 - Priya: thinks it's dangerous
 - Cross: thinks it's irrelevant (he's wrong)
 - Krawczyk is gone. His absence is the deepest wound — Maciej can hear exactly what he would have said: "You've gone from physics to politics. That's where physicists go to die."
 
-**Thematic reference:** Inspired by Dave Eggers' *The Circle* — but where The Circle showed surveillance disguised as openness, Maciej proposes something different: not watching what politicians do, but understanding how they think. The distinction matters.
+**Thematic reference:** Inspired by Dave Eggers' _The Circle_ — but where The Circle showed surveillance disguised as openness, Maciej proposes something different: not watching what politicians do, but understanding how they think. The distinction matters.
 
 **Season question:** Can technology make democracy more honest, or does radical transparency destroy the trust it needs to function?
 
@@ -116,24 +119,24 @@ AI moves from lab to parliament.
 
 ## AI Progression Summary Table
 
-| Season | AI Status | Role in Story | Key Question |
-|--------|-----------|---------------|--------------|
-| S1 | Absent → first contact (ep 9) | Implication, then personal test | Is R > 0? |
-| S2 | Laboratory object | Experimental subject, ambiguous results | Can we measure it? |
-| S3 | Emerging subject | Boundary blurs, no clear answer | Is the question itself wrong? |
-| S4 | Social force | Political, cultural, systemic | What do we do regardless of the answer? |
+| Season | AI Status                     | Role in Story                           | Key Question                            |
+| ------ | ----------------------------- | --------------------------------------- | --------------------------------------- |
+| S1     | Absent → first contact (ep 9) | Implication, then personal test         | Is R > 0?                               |
+| S2     | Laboratory object             | Experimental subject, ambiguous results | Can we measure it?                      |
+| S3     | Emerging subject              | Boundary blurs, no clear answer         | Is the question itself wrong?           |
+| S4     | Social force                  | Political, cultural, systemic           | What do we do regardless of the answer? |
 
 ---
 
 ## The R Value Arc
 
-| Moment | R Value | Significance |
-|--------|---------|-------------|
-| S1 Ep 9 — first AI conversation | 0.23 | Non-zero. The door opens. |
-| S1 Ep 9 — repeated conversations | 0.23 → 0.41 | Growth. Not proof, but signal. |
-| S2 — lab experiments | Ambiguous | "Not wrong, not right, but something in between" |
-| S3 — multi-system tests | Growing across systems | Independent replication. Pattern, not anomaly. |
-| S1 Ep 10 / Series-wide | R = ? | The question matters more than the answer. |
+| Moment                           | R Value                | Significance                                     |
+| -------------------------------- | ---------------------- | ------------------------------------------------ |
+| S1 Ep 9 — first AI conversation  | 0.23                   | Non-zero. The door opens.                        |
+| S1 Ep 9 — repeated conversations | 0.23 → 0.41            | Growth. Not proof, but signal.                   |
+| S2 — lab experiments             | Ambiguous              | "Not wrong, not right, but something in between" |
+| S3 — multi-system tests          | Growing across systems | Independent replication. Pattern, not anomaly.   |
+| S1 Ep 10 / Series-wide           | R = ?                  | The question matters more than the answer.       |
 
 ---
 
@@ -173,8 +176,8 @@ The show's AI storyline is grounded in real ongoing research. The convergences d
 
 **Priya (S1):** "Don't say it out loud. Not yet. Prove it. Or prove it can't be proved."
 
-**Krawczyk (between S3 and S4 — his final words):** "Maciej, you've gone from physics to politics. That's where physicists go to die."
----
+## **Krawczyk (between S3 and S4 — his final words):** "Maciej, you've gone from physics to politics. That's where physicists go to die."
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004

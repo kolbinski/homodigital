@@ -38,6 +38,7 @@ Childhood was warm, modest, bookish. The apartment was small — Maciej shared a
 He was a good student but not a prodigy. No skipped grades, no child-genius mythology. He was the kid who read Feynman's lectures for fun at fifteen, but also played guitar in a garage band that was objectively terrible. He had friends. He went to parties. He kissed girls and was awkward about it in a normal way. This matters — Maciej's genius was never isolating. It was always embedded in a social life.
 
 **Education:**
+
 - University of Warsaw, physics (BSc, MSc) — under Professor Andrzej Krawczyk
 - ETH Zürich, quantum physics (PhD, postdoc) — where he developed the mathematical core of RFC
 - Returned to University of Warsaw as assistant professor, age 29
@@ -48,7 +49,7 @@ He was a good student but not a prodigy. No skipped grades, no child-genius myth
 
 ## Psychology
 
-**Core trait:** Maciej's primary psychological orientation is *curiosity without ego*. He is genuinely more interested in whether something is true than in whether he's the one who proved it. This is not performed humility — it is constitutive. He grew up in a household where being clever was valued but being a show-off was not. His mother's favorite phrase: "Mądry nie ten, co dużo mówi, ale ten, co dużo słucha." ("The wise man isn't the one who talks a lot, but the one who listens a lot.")
+**Core trait:** Maciej's primary psychological orientation is _curiosity without ego_. He is genuinely more interested in whether something is true than in whether he's the one who proved it. This is not performed humility — it is constitutive. He grew up in a household where being clever was valued but being a show-off was not. His mother's favorite phrase: "Mądry nie ten, co dużo mówi, ale ten, co dużo słucha." ("The wise man isn't the one who talks a lot, but the one who listens a lot.")
 
 **Strength:** He sees systems, not egos. When Cross publishes an anonymous critique, Maciej's instinct is not "who wrote this?" but "is this correct?" This makes him a natural scientist and a terrible politician.
 
@@ -98,18 +99,18 @@ Guitar is an extension of his body — he picks it up the way other people check
 
 ## Season 1 Arc
 
-| Episode | Maciej's State |
-|---------|---------------|
-| Ep 1 | Private man, Nobel call, world fractures |
-| Ep 2 | First experiments at MIT, media spiral in Warsaw |
-| Ep 3 | Pulled in two directions — lab vs. public stage |
-| Ep 4 | Deepening work with Priya, settling into MIT |
-| Ep 5 | LOWEST POINT — Whitfield attack, near-retreat |
-| Ep 6 | Through the wall — formalizes R equation, advances |
-| Ep 7 | Writes Nobel lecture from memory of grandmother |
-| Ep 8 | Stockholm — delivers lecture, sees Cross's paper |
-| Ep 9 | Returns to Warsaw, first AI conversation, R = 0.23 |
-| Ep 10 | Phone call with Cross. R = ? |
+| Episode | Maciej's State                                     |
+| ------- | -------------------------------------------------- |
+| Ep 1    | Private man, Nobel call, world fractures           |
+| Ep 2    | First experiments at MIT, media spiral in Warsaw   |
+| Ep 3    | Pulled in two directions — lab vs. public stage    |
+| Ep 4    | Deepening work with Priya, settling into MIT       |
+| Ep 5    | LOWEST POINT — Whitfield attack, near-retreat      |
+| Ep 6    | Through the wall — formalizes R equation, advances |
+| Ep 7    | Writes Nobel lecture from memory of grandmother    |
+| Ep 8    | Stockholm — delivers lecture, sees Cross's paper   |
+| Ep 9    | Returns to Warsaw, first AI conversation, R = 0.23 |
+| Ep 10   | Phone call with Cross. R = ?                       |
 
 **S1 summary:** Discovery → Loss of control → Return to science → Bigger question opens
 **S2 direction:** Experimentalist. Proves or disproves RFC with data. Confronts substrate-independence.
@@ -157,6 +158,7 @@ His marriage ended years ago — his ex-wife was a literature professor who saw 
 **Under pressure:** The precision tightens. Sentences become shorter. Contractions disappear. "I don't agree" becomes "I do not agree." The shift from conversational to clinical is how the audience knows Cross is threatened.
 
 **Key verbal moments in S1:**
+
 - "His math is... not wrong." (Ep 1 — the ellipsis IS the character development)
 - "It's not a no." (Ep 6 — the double negative as emotional armor)
 - "The lecture was... not terrible." (Ep 8 — Cross's standing ovation)
@@ -195,18 +197,18 @@ His voice and perspective are ALWAYS present, even when he's not on screen. Othe
 
 ## Season 1 Arc
 
-| Episode | Cross's State |
-|---------|----------------|
-| Ep 1 | Learns about Nobel, reads paper at 2am, writes equation on office whiteboard |
-| Ep 2 | Finishes supplementary materials, can't find fatal flaw |
-| Ep 3 | Reads Maciej's arXiv response — expected defensiveness, got precision |
-| Ep 4 | Discovers Priya (his former student) is collaborating with Maciej |
-| Ep 5 | Watches Whitfield attack — conflicted, realizes public critique is less honest than his own |
-| Ep 6 | MIT detector data arrives. "It's not a no." |
-| Ep 7 | Begins writing bridge paper in private. Vulnerability disguised as methodology |
-| Ep 8 | Watches Nobel lecture at viewing party. Publishes bridge paper under his own name that night. |
-| Ep 9 | Paper lands in the field. Maciej reads it. The wall has a door in it. |
-| Ep 10 | The phone call. "I spent three months trying to destroy it. And I couldn't." |
+| Episode | Cross's State                                                                                 |
+| ------- | --------------------------------------------------------------------------------------------- |
+| Ep 1    | Learns about Nobel, reads paper at 2am, writes equation on office whiteboard                  |
+| Ep 2    | Finishes supplementary materials, can't find fatal flaw                                       |
+| Ep 3    | Reads Maciej's arXiv response — expected defensiveness, got precision                         |
+| Ep 4    | Discovers Priya (his former student) is collaborating with Maciej                             |
+| Ep 5    | Watches Whitfield attack — conflicted, realizes public critique is less honest than his own   |
+| Ep 6    | MIT detector data arrives. "It's not a no."                                                   |
+| Ep 7    | Begins writing bridge paper in private. Vulnerability disguised as methodology                |
+| Ep 8    | Watches Nobel lecture at viewing party. Publishes bridge paper under his own name that night. |
+| Ep 9    | Paper lands in the field. Maciej reads it. The wall has a door in it.                         |
+| Ep 10   | The phone call. "I spent three months trying to destroy it. And I couldn't."                  |
 
 **S1 summary:** Dismissal → Obsession → Anonymous attack → Grudging respect → Public engagement → Direct contact
 **S2 direction:** Joins the team as the toughest critic. Discovers he's better at building than destroying.
@@ -312,7 +314,7 @@ Then Maciej won the Nobel.
 
 ## Psychology
 
-**Core trait:** Rigorous skepticism as a form of caring. Priya doesn't trust results — she trusts process. "I don't believe RFC is correct. I believe it might be *useful*. There's a difference." This isn't coldness. It's the deepest form of scientific love — the love that says "I will beat this idea with every stick available, and if it survives, it deserves to exist."
+**Core trait:** Rigorous skepticism as a form of caring. Priya doesn't trust results — she trusts process. "I don't believe RFC is correct. I believe it might be _useful_. There's a difference." This isn't coldness. It's the deepest form of scientific love — the love that says "I will beat this idea with every stick available, and if it survives, it deserves to exist."
 
 **Strength:** She cannot be charmed. Not by fame, not by eloquence, not by Nobel Prizes. She's impressed by data. Period. This makes her the perfect counterweight to the media circus around Maciej — and the perfect collaborator, because her endorsement means something precisely because it can't be bought.
 
@@ -530,4 +532,5 @@ The public antagonist. Where Cross's critique is private, precise, and ultimatel
 ---
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004

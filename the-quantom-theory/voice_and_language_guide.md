@@ -55,21 +55,21 @@ The show operates in two languages. This is not a production compromise. It is t
 
 ### When Characters Speak What
 
-| Situation | Language | Why |
-|-----------|----------|-----|
-| Maciej alone, thinking aloud | Polish | Internal voice is always native tongue |
-| Maciej + Ola, any context | Polish | Their shared language. Switching would be false |
-| Maciej + Priya, in lab | English | Working language of science |
-| Maciej + Priya, late night, guard down | English with Polish fragments | Stress erodes the English filter |
-| Maciej at press conference | English | International media |
-| Maciej on Polish TV | Polish | Domestic audience |
-| Maciej + Krawczyk | Polish | Krawczyk will not speak English if Polish is available |
-| Maciej + Cross (phone call) | English | Common language, only option |
-| Ola + Priya, working | English | Professional default |
-| Ola + Priya, personal moment | English, but Ola's syntax loosens | Trust shows in grammar |
-| Cross / all Palo Alto scenes | English | Their world |
-| Krawczyk in any scene | Polish (subtitled) | Non-negotiable. See Character Voice Card |
-| Flashbacks (Radom) | Polish | Memory is in the mother tongue |
+| Situation                              | Language                          | Why                                                    |
+| -------------------------------------- | --------------------------------- | ------------------------------------------------------ |
+| Maciej alone, thinking aloud           | Polish                            | Internal voice is always native tongue                 |
+| Maciej + Ola, any context              | Polish                            | Their shared language. Switching would be false        |
+| Maciej + Priya, in lab                 | English                           | Working language of science                            |
+| Maciej + Priya, late night, guard down | English with Polish fragments     | Stress erodes the English filter                       |
+| Maciej at press conference             | English                           | International media                                    |
+| Maciej on Polish TV                    | Polish                            | Domestic audience                                      |
+| Maciej + Krawczyk                      | Polish                            | Krawczyk will not speak English if Polish is available |
+| Maciej + Cross (phone call)            | English                           | Common language, only option                           |
+| Ola + Priya, working                   | English                           | Professional default                                   |
+| Ola + Priya, personal moment           | English, but Ola's syntax loosens | Trust shows in grammar                                 |
+| Cross / all Palo Alto scenes           | English                           | Their world                                            |
+| Krawczyk in any scene                  | Polish (subtitled)                | Non-negotiable. See Character Voice Card               |
+| Flashbacks (Radom)                     | Polish                            | Memory is in the mother tongue                         |
 
 ### Code-Switching Rules
 
@@ -79,9 +79,11 @@ Code-switching — shifting between Polish and English mid-scene or mid-sentence
 When Maciej is under emotional pressure while speaking English, Polish leaks in. Not full sentences — fragments. An interjection. A curse. A half-thought that starts in one language and finishes in the other.
 
 Example (correct):
+
 > MACIEJ: The coupling coefficient should converge at — no, to jest — wait. I need to recalculate.
 
 Example (incorrect — too performative):
+
 > MACIEJ: The coupling coefficient should converge at — o cholera, to jest zupełnie nie tak jak myślałem, I need to recalculate entirely!
 
 The rule: one fragment, not a bilingual monologue. The switch should feel involuntary — like a stammer, not a speech.
@@ -90,11 +92,12 @@ The rule: one fragment, not a bilingual monologue. The switch should feel involu
 When Maciej and Ola are alone and the conversation turns personal, Polish takes over even if they've been speaking English. The switch is not announced. It just happens. Like two people slipping into their native register when no one else is listening.
 
 Example:
+
 > OLA: The simulation is converging. Another six hours, maybe eight.
 > MACIEJ: Okay. Good.
-> *(beat — the work talk is over, the real talk begins)*
-> OLA: *(in Polish; subtitled)* Jak się czujesz? *(How are you feeling?)*
-> MACIEJ: *(in Polish; subtitled)* Nie wiem. Zmęczony. *(I don't know. Tired.)*
+> _(beat — the work talk is over, the real talk begins)_
+> OLA: _(in Polish; subtitled)_ Jak się czujesz? _(How are you feeling?)_
+> MACIEJ: _(in Polish; subtitled)_ Nie wiem. Zmęczony. _(I don't know. Tired.)_
 
 **Rule 3: Krawczyk never switches.**
 He speaks Polish. Always. Even in scenes with English speakers present, Krawczyk speaks Polish and lets the world accommodate him. If Priya is in the room, Maciej or Ola translates — or Priya uses the few Polish phrases she's learned. This is not rudeness. It is quiet nationalism and generational identity. Krawczyk learned English at Cambridge. He chooses not to use it.
@@ -119,13 +122,13 @@ Subtitles translate words. They do not translate subtext, emotion, or implicatio
 
 They render Polish dialogue into clean, readable English. Short sentences. No explanation. No editorializing. The subtitle matches the rhythm of the spoken line — if the Polish is three words, the English subtitle should be three to five words, not twelve.
 
-| Polish Dialogue | Good Subtitle | Bad Subtitle |
-|----------------|---------------|--------------|
-| O kurwa. | Oh shit. | Oh shit — the data is significant. |
-| Nie wiem. | I don't know. | I honestly don't know what to say about this. |
-| To jest piękne. | It's beautiful. | This is beautiful work, truly remarkable. |
-| Daj mi chwilę. | Give me a moment. | Just give me a moment to process all of this. |
-| Dostałem Nobla. | I got the Nobel. | I just received the Nobel Prize. |
+| Polish Dialogue | Good Subtitle     | Bad Subtitle                                  |
+| --------------- | ----------------- | --------------------------------------------- |
+| O kurwa.        | Oh shit.          | Oh shit — the data is significant.            |
+| Nie wiem.       | I don't know.     | I honestly don't know what to say about this. |
+| To jest piękne. | It's beautiful.   | This is beautiful work, truly remarkable.     |
+| Daj mi chwilę.  | Give me a moment. | Just give me a moment to process all of this. |
+| Dostałem Nobla. | I got the Nobel.  | I just received the Nobel Prize.              |
 
 The bad examples add interpretation. The good examples trust the actor's face to do the rest. "O kurwa" delivered by Ola with tears in her eyes means something different than "o kurwa" delivered with a grin. The subtitle is the same both times. The performance is the variable.
 
@@ -139,12 +142,12 @@ The bad examples add interpretation. The good examples trust the actor's face to
 
 **Untranslated words:** Some Polish words should remain untranslated because they carry cultural weight that English cannot capture. These appear in dialogue with no subtitle — the context makes the meaning clear.
 
-| Word | Context | Why No Translation |
-|------|---------|-------------------|
-| Profesorze | Maciej addressing Krawczyk | The vocative case signals a respect register that "Professor" doesn't carry |
-| Babciu | Maciej addressing grandmother (flashbacks) | Diminutive + vocative. "Grandma" is flat by comparison |
-| Proszę | Multiple contexts | "Please" doesn't capture the formal-intimate range of Polish proszę |
-| No dobra | Maciej, Ola | Conversational filler — "okay fine" is approximate but loses the Polish rhythm |
+| Word       | Context                                    | Why No Translation                                                             |
+| ---------- | ------------------------------------------ | ------------------------------------------------------------------------------ |
+| Profesorze | Maciej addressing Krawczyk                 | The vocative case signals a respect register that "Professor" doesn't carry    |
+| Babciu     | Maciej addressing grandmother (flashbacks) | Diminutive + vocative. "Grandma" is flat by comparison                         |
+| Proszę     | Multiple contexts                          | "Please" doesn't capture the formal-intimate range of Polish proszę            |
+| No dobra   | Maciej, Ola                                | Conversational filler — "okay fine" is approximate but loses the Polish rhythm |
 
 **The 30% rule:** Polish dialogue should never exceed 30% of any single scene's running time unless the scene is entirely set in a Polish-only context (e.g., Krawczyk's office, Radom flashbacks, the dinner party). Mixed-language scenes should feel effortless, not burdensome for a non-Polish-speaking viewer.
 
@@ -163,9 +166,11 @@ Television has two modes for science: decoration ( — whiteboards in the backgr
 **Rule 1: Characters talk about what the science MEANS, not what it IS.**
 
 Wrong:
+
 > MACIEJ: The synchronization component measures phase-locking in cortical oscillations, which represents the degree to which gamma-band activity in neural tissue achieves temporal coherence.
 
 Right:
+
 > MACIEJ: If the synchronization term is right, it means Priya's been measuring the thing I've been predicting. For three years. Neither of us knew.
 
 The first version is a lecture. The second is a scene. The first tells you what S does. The second tells you what S means for two people's lives.
@@ -174,8 +179,8 @@ The first version is a lecture. The second is a scene. The first tells you what 
 
 The audience can SEE equations. They don't need to HEAR them explained. When Maciej writes R = w₁·S + w₂·T + w₃·I + w₄·D on a whiteboard, the camera shows the writing. The dialogue around the writing is emotional, not expository:
 
-> MACIEJ: *(writing, to himself)* Synchronization. Topological complexity. Information integration. Differentiation.
-> *(steps back)*
+> MACIEJ: _(writing, to himself)_ Synchronization. Topological complexity. Information integration. Differentiation.
+> _(steps back)_
 > Four variables. One relationship. And the relationship is the consciousness.
 
 He names the components but doesn't define them. The audience absorbs "synchronization" as a word, not a definition. They understand it means "things lining up" — which is enough. The feeling of understanding is more important than the understanding itself.
@@ -185,6 +190,7 @@ He names the components but doesn't define them. The audience absorbs "synchroni
 When two characters argue about the science, the argument naturally explains the science without either character performing as a teacher.
 
 Example — Krawczyk and Maciej:
+
 > KRAWCZYK: You can't put consciousness in an equation. That's philosophy, not physics.
 > MACIEJ: I'm not putting consciousness in an equation. I'm putting a measurable relationship between fields. Consciousness is what that relationship does.
 > KRAWCZYK: That's the same thing.
@@ -197,9 +203,9 @@ This exchange teaches the audience the crucial distinction (R measures interacti
 When R = 0.23 appears, it doesn't arrive in a sentence about methodology. It arrives in a moment:
 
 > Maciej stares at the screen. His notebook. A pencil. He writes:
-> *R = 0.23*
+> _R = 0.23_
 > He underlines "non-zero." Twice.
-> MACIEJ: *(quietly)* Proceed.
+> MACIEJ: _(quietly)_ Proceed.
 
 The number carries weight because the scene carries weight. The audience doesn't need to know what 0.23 means on a scale. They need to see a man's hand tremble when he writes it.
 
@@ -229,7 +235,7 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 
 ### MACIEJ KOWALSKI — The Questioner
 
-**In Polish:** Fast, warm, colloquial. Uses Radom-inflected slang. Incomplete sentences with friends. More formal with Krawczyk — the student register never fully leaves. Starts difficult thoughts with "To znaczy..." *(I mean...)*
+**In Polish:** Fast, warm, colloquial. Uses Radom-inflected slang. Incomplete sentences with friends. More formal with Krawczyk — the student register never fully leaves. Starts difficult thoughts with "To znaczy..." _(I mean...)_
 
 **In English:** Precise, slightly careful. Comfortable but constructed. You can hear him choosing words. This reads as elegant intelligence, but it's the mark of a non-native speaker who learned to think before speaking. Starts difficult thoughts with "The thing is..."
 
@@ -242,14 +248,17 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 **Humor:** Dry, self-deprecating, often in Polish. In English, the humor becomes slightly more formal — a second-language filter that gives his wit accidental elegance. He doesn't tell jokes. He says true things in situations where truth is funny.
 
 **Sample voice — Polish, intimate:**
+
 > OLA: Jak się czujesz? Serio.
 > MACIEJ: Nie wiem. To brzmi głupio, ale... nie wiem. Czuję się tak, jakby ktoś otworzył drzwi do pokoju, o którym nie wiedziałem, że istnieje.
 
 **Sample voice — English, professional:**
+
 > PRIYA: What does your framework predict for my data?
 > MACIEJ: If the synchronization component is correct — and the simulations say it is — your anomalous resonance signature should appear at frequencies between 30 and 80 hertz. Above that, noise. Below that, too slow to be consciousness. The window is narrow. Which is either a weakness or a prediction, depending on what we find.
 
 **Sample voice — English, personal:**
+
 > CROSS: When you won the Nobel, did it feel like you expected it to?
 > MACIEJ: I expected it to feel like winning. It feels like beginning.
 
@@ -272,12 +281,15 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 **The double negative:** Cross can't bring himself to say something is good. He says it's "not wrong" or "not terrible" or "not a no." The double negative is emotional armor. The audience learns to decode it: when Cross says "not wrong," he means "brilliant."
 
 **Sample voice — dismissal:**
+
 > CROSS: He's thirty-three. Nobody should win the Nobel at thirty-three. I was forty-one, and that was considered unseemly.
 
 **Sample voice — engagement:**
+
 > CROSS: The equation is internally consistent. Internal consistency is not truth. But it is the first requirement for truth, and very few equations pass it on the first reading.
 
 **Sample voice — vulnerability (rare, earned):**
+
 > CROSS: I spent three months trying to destroy it. And I couldn't. I want you to understand what that means. In forty years of physics, nothing has survived three months of my attention. Nothing. Until this.
 
 **The diagnostic:** If you've written a Cross line and it gets a quick laugh, reconsider. Cross gets quick laughs. TQT Cross gets slow ones — the kind where the audience smiles three seconds after the line because they've processed the layers.
@@ -292,21 +304,24 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 
 **Humor:** Deflection. When something moves her, she makes a joke. When the joke fails, it's serious. The audience learns: if Ola is quiet, pay attention.
 
-**What she always says:** "Popatrz na dane." *(Look at the data.)* Her answer to every argument, every doubt, every existential crisis. It's a mantra, a methodology, and occasionally a weapon.
+**What she always says:** "Popatrz na dane." _(Look at the data.)_ Her answer to every argument, every doubt, every existential crisis. It's a mantra, a methodology, and occasionally a weapon.
 
 **What she never says:** "You're right, Maciej." Even when he is. Especially when he is. She'll say "the data supports it" — which means the same thing but costs less.
 
 **Sample voice — Polish, working:**
+
 > OLA: Symulacja zbiega się. Jeszcze sześć godzin, może osiem. Idź spać.
 > MACIEJ: Nie mogę spać.
 > OLA: No to przynajmniej nie stój mi nad głową.
 
 **Sample voice — English, professional:**
+
 > PRIYA: These preliminary results are encouraging.
 > OLA: Encouraging is what you say at a conference. This is the data confirming a prediction to three decimal places. Say what it is.
 
 **Sample voice — the confrontation (her strongest register):**
-> OLA: You're trying to be liked by people who don't understand the work, and ignoring the people who do. Przestań. *(Stop it.)*
+
+> OLA: You're trying to be liked by people who don't understand the work, and ignoring the people who do. Przestań. _(Stop it.)_
 
 **The diagnostic:** If Ola's dialogue sounds supportive or nurturing, you've written it wrong. Ola supports through challenge. She cares by demanding more. Her love language is "that's not good enough yet."
 
@@ -323,16 +338,19 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 **What she never says:** "I believe." Always "the data suggests" or "the evidence indicates." She will not make a claim the data doesn't support. Even in private. Even at 3 AM. This is not a tic — it is a religion.
 
 **Sample voice — professional:**
+
 > PRIYA: Before we start — ground rules. This is my lab, my equipment, my reputation. If we test RFC with my data, we do it my way. Blinded. Pre-registered. Sealed predictions.
 
 **Sample voice — the crack (rare, earned):**
-> PRIYA: *(staring at data)* That can't be right.
+
+> PRIYA: _(staring at data)_ That can't be right.
 > OLA: It's right. I ran it six times.
-> PRIYA: *(very quiet)* Run it again.
-> *(beat)*
+> PRIYA: _(very quiet)_ Run it again.
+> _(beat)_
 > PRIYA: And don't tell anyone. Not yet. Not until I'm sure.
 
 **Sample voice — with Maciej (the warmth emerging):**
+
 > MACIEJ: You don't believe the theory is correct.
 > PRIYA: I don't believe any theory is correct. I believe some theories are useful. Yours might be useful. That's the highest compliment I know how to give.
 
@@ -348,16 +366,18 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 
 **Feynman quotes:** At least one per episode. It's a character quirk that reveals his intellectual heroes AND his generational limitation. He quotes the masters. Maciej is becoming one.
 
-**What he always says:** Some variation of "Nie mów mi, że robię to źle" *(Don't tell me I'm doing it wrong)* — usually about smoking, but the phrase carries the weight of a man who has been told he's wrong by systems larger than himself and survived anyway.
+**What he always says:** Some variation of "Nie mów mi, że robię to źle" _(Don't tell me I'm doing it wrong)_ — usually about smoking, but the phrase carries the weight of a man who has been told he's wrong by systems larger than himself and survived anyway.
 
 **Love language:** Criticism. "This is terrible" means "I care enough to tell you." Silence means worry. If Krawczyk stops arguing, the relationship is in danger.
 
 **Sample voice:**
+
 > KRAWCZYK: Wiesz, co Feynman powiedział o ludziach, którzy dostają Nobla? Że nagle wszyscy pytają ich o politykę, jakby nagroda z fizyki dawała im wiedzę o czymkolwiek innym. Nie dawaj się w to wciągnąć, Maciej.
 
 **Sample voice — the break:**
-> KRAWCZYK: *(on phone, quiet)* Nie jestem pewien, czy mogę cię dalej bronić.
-> *(long pause)*
+
+> KRAWCZYK: _(on phone, quiet)_ Nie jestem pewien, czy mogę cię dalej bronić.
+> _(long pause)_
 > To nie znaczy, że nie masz racji. To znaczy, że mam sześćdziesiąt cztery lata i nie mam już siły walczyć z ludźmi, którzy nie rozumieją, o czym mówisz.
 
 **The diagnostic:** If Krawczyk speaks English at any point, you've broken the character. If Krawczyk agrees with Maciej without a fight, you've broken the relationship. He arrives at support through resistance — like a river finding the sea.
@@ -377,12 +397,14 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 **With Ola:** Instant friendship energy. Two fast-talkers from different hemispheres.
 
 **Sample voice — the lab:**
-> MARCUS: Okay so the signal is... *(stares at screen)* ...Dr. Sharma? You should probably see this.
+
+> MARCUS: Okay so the signal is... _(stares at screen)_ ...Dr. Sharma? You should probably see this.
 > PRIYA: On a scale of "interesting" to "career-defining"?
 > MARCUS: On a scale of "noise" to "holy shit" — it's at holy shit.
 
 **Sample voice — with Cross (via email response):**
-> MARCUS *(reading aloud)*: "Seven is a better number for statistical significance. Send me the raw data." *(looks at Priya)* Is that a yes?
+
+> MARCUS _(reading aloud)_: "Seven is a better number for statistical significance. Send me the raw data." _(looks at Priya)_ Is that a yes?
 > PRIYA: From Cross, that's a standing ovation.
 
 **The diagnostic:** Marcus should feel like a real grad student — overworked, underpaid, passionate. If his lines sound like exposition delivery, you've written him wrong. He asks questions because he genuinely doesn't know, not because the audience needs to hear the answer.
@@ -447,7 +469,7 @@ Things this show never does:
 
 **Never:** Maciej being inarticulate or bumbling. He's not a romcom lead who happens to do physics. He's a confident adult who is simply out of his depth in fame, not in thought.
 
-**Never:** A subtitle that includes stage-direction information. "O kurwa *(Holy shit — she realizes the data confirms the theory)*" — the parenthetical is not subtitle work. It's a director's note in the wrong place.
+**Never:** A subtitle that includes stage-direction information. "O kurwa _(Holy shit — she realizes the data confirms the theory)_" — the parenthetical is not subtitle work. It's a director's note in the wrong place.
 
 **Never:** Music telling the audience how to feel about a scientific moment. Silence under science. Always.
 
@@ -465,16 +487,16 @@ Things this show never does:
 
 These phrases recur across the season. They are not catchphrases — they are load-bearing walls. Each repetition gains weight from the previous use.
 
-| Phrase | Character | First Use | Function |
-|--------|-----------|-----------|----------|
-| "To znaczy..." / "The thing is..." | Maciej | Ep 1 | Marks the moment he's about to say something true and difficult |
-| "O kurwa." | Ola | Ep 1 | Intensity diagnostic — calibrate to the data significance |
-| "Popatrz na dane." | Ola | Ep 2 | Her answer to everything. Gains power through repetition |
-| "His math is... not [x]." | Cross | Ep 1 | The ellipsis-concession pattern. Each repetition = growth |
-| "The data suggests..." | Priya | Ep 2 | Her refusal to say "I believe." The day she drops this phrase is seismic |
-| "Co by powiedział Feynman?" | Krawczyk | Ep 1 | Feynman invocations. At least one per episode |
-| "Proceed." | Maciej | Ep 9 | One-word diagnosis. After R = 0.23. After every threshold |
-| "R = ?" | Visual/thematic | Ep 10 | The season's closing question. Seeded in Maciej's notebooks from Ep 6 |
+| Phrase                             | Character       | First Use | Function                                                                 |
+| ---------------------------------- | --------------- | --------- | ------------------------------------------------------------------------ |
+| "To znaczy..." / "The thing is..." | Maciej          | Ep 1      | Marks the moment he's about to say something true and difficult          |
+| "O kurwa."                         | Ola             | Ep 1      | Intensity diagnostic — calibrate to the data significance                |
+| "Popatrz na dane."                 | Ola             | Ep 2      | Her answer to everything. Gains power through repetition                 |
+| "His math is... not [x]."          | Cross           | Ep 1      | The ellipsis-concession pattern. Each repetition = growth                |
+| "The data suggests..."             | Priya           | Ep 2      | Her refusal to say "I believe." The day she drops this phrase is seismic |
+| "Co by powiedział Feynman?"        | Krawczyk        | Ep 1      | Feynman invocations. At least one per episode                            |
+| "Proceed."                         | Maciej          | Ep 9      | One-word diagnosis. After R = 0.23. After every threshold                |
+| "R = ?"                            | Visual/thematic | Ep 10     | The season's closing question. Seeded in Maciej's notebooks from Ep 6    |
 
 ### The Question Motif
 
@@ -505,8 +527,8 @@ Before submitting any script page, apply this test:
 
 **5. Check the math.** If a character explains science, ask: do both characters already know this? If yes, cut the explanation. If only one character knows it, the explanation must come from disagreement, discovery, or crisis — never from lecture.
 
-**6. Read it at 2 AM.** The show's best scenes happen late at night — two people, exhausted, honest. If the dialogue sounds sharp and performative at 2 AM, it's wrong. If it sounds like two people who are too tired to lie, it's right.
----
+## **6. Read it at 2 AM.** The show's best scenes happen late at night — two people, exhausted, honest. If the dialogue sounds sharp and performative at 2 AM, it's wrong. If it sounds like two people who are too tired to lie, it's right.
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004

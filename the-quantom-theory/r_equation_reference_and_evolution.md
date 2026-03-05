@@ -464,8 +464,8 @@ Each step is a season. Each step raises the stakes. Each step makes the previous
 
 Maciej's Nobel was for equation 4.7 — the fundamental theory. R-Static was the measurement tool he built afterward. His legacy will be R-Dynamic. The distance between Nobel and legacy is the distance between understanding the river's physics and learning to read its currents.
 
-That distance is the show.
----
+## That distance is the show.
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004

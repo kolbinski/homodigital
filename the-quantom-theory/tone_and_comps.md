@@ -170,9 +170,10 @@ It makes the most important question of the 21st century — what is consciousne
 
 ## The Elevator Pitch
 
-*A 33-year-old Polish physicist wins the Nobel and discovers his theory about consciousness might actually be true — which is far more terrifying than being wrong. Lessons in Chemistry meets A Beautiful Mind — but Polish, and the science is happening right now.*
+_A 33-year-old Polish physicist wins the Nobel and discovers his theory about consciousness might actually be true — which is far more terrifying than being wrong. Lessons in Chemistry meets A Beautiful Mind — but Polish, and the science is happening right now._
 
 ---
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+
 Contact: olbinski@gmail.com | +48 503 520 004
