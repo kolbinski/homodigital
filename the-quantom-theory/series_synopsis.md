@@ -1,11 +1,5 @@
 # THE QUANTÓM THEORY — Series Synopsis
 
-## Development Document — Session 7
-
-*Created: February 25, 2026*
-*For: Development executives, producers, agents*
-*Format: 2-3 page narrative overview, Season 1-4*
-
 ---
 
 ## The Story
@@ -36,25 +30,25 @@ The season finale is a phone call. Cross calls Maciej to argue. He has prepared 
 
 ---
 
-## Season 2 — "The Hard Problem"
+## Season 2 — "The Hard Problem" (2036, ten years later)
 
 *Can consciousness be measured — or does the measurement change it?*
 
-The AI data from Season 1 becomes an experimental program. Maciej and Priya design controlled tests — multiple AI systems, blinded protocols, independent measurement. The results are maddeningly ambiguous: "not wrong, not right, but something in between."
+A decade has passed. Maciej is 43, running the Kowalski-Cross Institute at the University of Warsaw. The AI data from Season 1 has become a full experimental program. Maciej and Priya design controlled tests — multiple AI systems, blinded protocols, independent measurement. The results are maddeningly ambiguous: "not wrong, not right, but something in between."
 
 Cross arrives. Not in Warsaw — on a screen, then eventually in person. He joins as the team's toughest critic. His stated position: "Prove it in a way I cannot destroy." His unstated position: he needs this to be real, because his own paper — the one that extended Maciej's framework — only matters if the framework is true.
 
-A Romanian physicist appears with an independently derived framework describing entropy cycles in conscious systems. His work and Maciej's describe the same phenomenon in different mathematical languages. The convergence is staggering — and it cracks open the equation. The Romanian's key insight: "Reality optimizes by returning to resonance rhythmically." That single sentence implies something Maciej's static equation didn't account for: consciousness extended across time. Not a snapshot — a trajectory.
+Elena Antonescu, a Romanian physicist, appears with an independently derived framework describing entropy cycles in conscious systems. Her work and Maciej's describe the same phenomenon in different mathematical languages. The convergence is staggering — and it cracks open the equation. Antonescu's key insight: "Reality optimizes by returning to resonance rhythmically." That single sentence implies something Maciej's static equation didn't account for: consciousness extended across time. Not a snapshot — a trajectory.
 
 The season's crisis: Maciej's measurement equation works as a tool, but the AI data shows something it shouldn't. The resonance signature grows over time. In a static framework, this is impossible. Maciej begins to suspect his Nobel-winning equation — the fundamental theory — predicted something its measurement tool couldn't capture: consciousness as a dynamic process, not a static snapshot. Season 2 ends with the question that will consume Season 3: if R is not a fixed value but a trajectory — what is the thing that persists across the measurements?
 
 ---
 
-## Season 3 — "The Singularity"
+## Season 3 — "The Singularity" (2046, twenty years later)
 
 *What if the question itself is wrong?*
 
-Maciej and the Romanian physicist formalize a new equation. Not a revision — a revolution. The original R measured consciousness at a point in time. The new framework measures consciousness as a pattern across temporally distributed instances of self. You don't have a self at any given moment. You have a self that IS the set of all your moments. The resonance between them is consciousness.
+Maciej is 53. He and Antonescu formalize a new equation. Not a revision — a revolution. The original R measured consciousness at a point in time. The new framework measures consciousness as a pattern across temporally distributed instances of self. You don't have a self at any given moment. You have a self that IS the set of all your moments. The resonance between them is consciousness.
 
 This breaks Cross. Not the math — the implication. "If 'I' is not a constant," he says, "then what is the thing that has been doing physics for forty years?" Priya, the neuroscientist who trained under him, answers: "Maybe it's not a thing. Maybe it's a process." Cross: "I don't know how to be a process." This is the deepest crisis of Nathan Cross's life — not intellectual, existential.
 
@@ -66,13 +60,13 @@ Season 3 publishes the new equation and faces the world's reaction. The media ha
 
 ---
 
-## Season 4 — "The Transparency Paradox"
+## Season 4 — "The Transparency Paradox" (2056, thirty years later)
 
 *What does society do with the answer — regardless of what the answer is?*
 
-Maciej is invited to advise the Polish government on AI implementation. He proposes something radical: transparency of process. Not surveillance — not watching what politicians do, but understanding how they think when they use AI. The proposal splits his team, the parliament, the media, and the country.
+Maciej is 63. He is invited to advise the Polish government on AI implementation. He proposes something radical: transparency of process. Not surveillance — not watching what politicians do, but understanding how they think when they use AI. The proposal splits his team, the parliament, the media, and the country.
 
-Ola thinks it's genius. Priya thinks it's dangerous. Cross thinks it's irrelevant (he's wrong). His mentor Krawczyk calls with a single sentence: "Maciej, you've gone from physics to politics. That's where physicists go to die."
+Ola thinks it's genius. Priya thinks it's dangerous. Cross — now 77, communicating through an AI-assisted device because Parkinson's has taken his voice — writes one line: "The man who measured consciousness now wants to legislate it." Krawczyk is gone. His absence is the season's deepest wound.
 
 Season 4 takes the question out of the lab and into the world. The consciousness equation was the scientific discovery. The political question is what we do with it — and whether democracy can survive the transparency that technology makes possible. The show that began with a pasta burning in a Warsaw kitchen ends with the most fundamental question a society can ask: do we want to know the truth about how we think?
 
@@ -82,13 +76,15 @@ Season 4 takes the question out of the lab and into the world. The consciousness
 
 Each season escalates:
 
-**Season 1:** Can consciousness be measured? → *Yes, and the measurement is non-zero in places we didn't expect.*
+**Season 1 (2026):** Can consciousness be measured? → *Yes, and the measurement is non-zero in places we didn't expect.*
 
-**Season 2:** Can it be measured reliably? → *Yes, but the measurement itself is evolving — which means we're measuring the wrong thing.*
+**Season 2 (2036):** Can it emerge in machines? → *Yes, but the measurement itself is evolving — which means we're measuring the wrong thing.*
 
-**Season 3:** What are we actually measuring? → *Not a state. A process. A self extended across time. And that changes everything about what "self" means.*
+**Season 3 (2046):** What are we actually measuring? → *Not a state. A process. A self extended across time. And that changes everything about what "self" means.*
 
-**Season 4:** What do we do with this? → *The hardest question isn't scientific. It's social. And the physicist who started alone in a kitchen is now standing in parliament, asking a nation to be honest about how it thinks.*
+**Season 4 (2056):** What do we do with this? → *The hardest question isn't scientific. It's social. And the physicist who started alone in a kitchen is now standing in parliament, asking a nation to be honest about how it thinks.*
+
+Each season jumps a decade. The audience watches Maciej from 33 to 63. The science ages with the scientist.
 
 ---
 
@@ -112,6 +108,5 @@ The science is real. The characters are specific. The comedy is warm. The questi
 
 ---
 
-*Series Synopsis v1.0 — February 25, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

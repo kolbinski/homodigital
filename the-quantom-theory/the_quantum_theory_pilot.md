@@ -202,7 +202,7 @@ He says "quantum field consciousness" the way a sommelier might say "boxed wine.
 
 He sets the phone face-down. Picks up his scotch. Doesn't drink it. Puts it back.
 
-He opens his laptop. Types: "Kowalski Nobel Physics 2025." Reads. Scrolls. Reads more. His expression shifts through a sequence his grad students would recognize as diagnostic: dismissal, curiosity, irritation, then — the dangerous one — interest.
+He opens his laptop. Types: "Kowalski Nobel Physics 2026." Reads. Scrolls. Reads more. His expression shifts through a sequence his grad students would recognize as diagnostic: dismissal, curiosity, irritation, then — the dangerous one — interest.
 
 He reaches for a pen. Opens a fresh notebook page. Writes: "Equation 4.7 — Θ function. Decoherence timescale assumption."
 
@@ -1331,75 +1331,75 @@ Book the flights. We're going to MIT.
 
 ---
 
-**INT. CROSS'S HOME — PALO ALTO — EVENING**
+**INT. DAVID KIM'S APARTMENT — PALO ALTO — EVENING**
 
-sits at his laptop. He's been writing and deleting the same email for twenty minutes. Finally, he commits:
+DAVID KIM sits at his laptop. He's been writing and deleting the same email for twenty minutes. Finally, he commits:
 
 **EMAIL:**
 
 *To: m.kowalski@uw.edu.pl*
-*From: psharma@mit.edu*
+*From: d.kim@stanford.edu*
 *Subject: Your work*
 
 *Professor Kowalski,*
 
-*I realize this is unsolicited and you're probably drowning in emails right now. My name is , experimental physics, Stanford. I've read your Nobel paper and the subsequent arXiv critique.*
+*I realize this is unsolicited and you're probably drowning in emails right now. My name is David Kim, experimental physics, Stanford. I've read your Nobel paper and the subsequent arXiv critique.*
 
 *I think you should know that the anonymous critique, while technically sound, is operating under classical thermodynamic assumptions that may not apply to the coherence channels you describe in your supplementary materials. Whether this is an oversight or a deliberate simplification by the author, I can't say.*
 
 *I should also tell you, in the interest of full transparency, that I have a personal connection to someone who might have written that critique. I won't say more than that. But I wanted you to know that not everyone at Stanford thinks your framework is wrong. Some of us think it's the most interesting question in physics right now.*
 
 *Respectfully,*
-*, Ph.D.*
-*California Institute of Technology*
+*David Kim, Ph.D.*
+*Stanford University*
 
 He reads it over. Hovers over SEND. Takes a breath.
 
-(O.S.)
-Just send it,
+**ELENA VASQUEZ** (O.S.)
+Just send it, David.
 
-He turns. stands in the doorway, arms crossed, smiling.
+He turns. ELENA VASQUEZ stands in the doorway, arms crossed, smiling.
 
-
+**DAVID KIM**
 How long have you been standing there?
 
-
+**ELENA VASQUEZ**
 Long enough to watch you delete "Kind regards" and replace it with "Respectfully" three times.
 
-
+**DAVID KIM**
 "Kind regards" felt too casual. "Respectfully" has gravitas.
 
-
+**ELENA VASQUEZ**
 Send the email.
 
-
+**DAVID KIM**
 If Cross finds out I wrote to Kowalski—
 
-
+**ELENA VASQUEZ**
 Cross published an anonymous hit piece on a guy who just won the Nobel Prize. I think you're allowed to send a polite email.
 
-
+**DAVID KIM**
 It wasn't a hit piece. It was a legitimate scientific critique.
 
-
+**ELENA VASQUEZ**
 Published anonymously. The day after the prize announcement.
 
-
+**DAVID KIM**
 ...Fair point.
 
 He clicks SEND.
 
-The email disappears into the ether. stares at the screen.
+The email disappears into the ether. David stares at the screen.
 
-**(CONT'D)**
+**DAVID KIM** (CONT'D)
 You know what's funny? Cross has been the smartest person I know for twenty years. And I've always been okay with that. But this Kowalski guy — he might be asking a question Cross can't answer. And I don't know what that does to Cross. I don't know what that does to any of us.
 
-sits down next to him. Puts her hand on his.
+Elena sits down next to him. Puts her hand on his.
 
-
+**ELENA VASQUEZ**
 Maybe it doesn't do anything to you. Maybe it just does something to physics.
 
-looks at her. After all these years, she still surprises him.
+David looks at her. After all these years, she still surprises him.
 
 ---
 
@@ -1996,5 +1996,7 @@ The camera holds on the equation on Cross's refrigerator. We can almost read it.
 ---
 
 **END OF PILOT**
-
 ---
+
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

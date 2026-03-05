@@ -1,11 +1,6 @@
 # THE QUANTÓM THEORY — The Fourth Wall Scene
 
-## Development Note — Season 4 Finale Concept
-
-*Created: February 26, 2026*
-*Updated: February 26, 2026 — Standalone version*
-*Status: Seed. Do not register. Let it grow.*
-*For: Showrunner's eyes only until Season 3 writers' room*
+## Season 4 Finale Concept
 
 ---
 
@@ -161,9 +156,7 @@ Because the whole point is that there is no cut. There was never a cut. The boun
 The actor's line — *"I don't know where it stopped"* — is the series' final answer to R = ?
 
 Not a number. Not a question mark. A confession from inside the measurement itself.
-
 ---
 
-*Development Note v2.0 — February 26, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

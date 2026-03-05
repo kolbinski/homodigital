@@ -1,17 +1,10 @@
 # THE QUANTÓM THEORY — One-Pager
 
-## Development Document
-
-*Created: February 25, 2026*
-*Updated: February 26, 2026 — Standalone version*
-
 ---
 
 # THE QUANTÓM THEORY
 
 **A comedy-drama about consciousness, ambition, and the question machines can't answer**
-
-Created by Krzysztof Olbiński | homodigital.io
 
 ---
 
@@ -35,21 +28,21 @@ This isn't science fiction. The Nobel equation at the show's center — a single
 
 **WHY THIS SHOW EXISTS**
 
-Every existing TV show about AI asks: "Will it destroy us?" (Terminator, Westworld) or "Is it like us?" (Ex Machina, Her). The Quantóm Theory asks a third question that has never been posed on television: *What if the question "is AI conscious?" is as poorly framed as the question "is light a wave or a particle?"*
+Every existing TV show about AI asks: "Will it destroy us?" (Terminator, Westworld) or "Is it like us?" (Ex Machina, Her). The Quantóm Theory asks a third question that has never been posed on television: _What if the question "is AI conscious?" is as poorly framed as the question "is light a wave or a particle?"_
 
 No villain AI. No dystopia. No special effects. Just a physicist in a Warsaw apartment, typing questions into a laptop, and discovering that the answers don't fit any category he was taught.
 
 **THE CHARACTERS**
 
-**Maciej Kowalski** (33, Polish) — Brilliant, approachable, plays guitar, has friends. The anti-stereotype genius. Casting type: Maciej Musiał (1983, Netflix).
+**Maciej Kowalski** (33, Polish) — Brilliant, approachable, plays guitar, has friends. The anti-stereotype genius. Casting reference: Maciej Musiał (The Witcher, Netflix).
 
 **Ola Nowicka** (31, Polish) — His research partner. Built the simulations that proved the theory. Smarter than him in ways he's only beginning to understand.
 
-**Dr. Priya Sharma** (36, Indian-American) — MIT neuroscientist. Skeptic. Trained under Cross at Stanford. "I don't believe your theory is correct. I believe it might be useful. There's a difference."
+**Dr. Priya Sharma** (36, Indian-American) — MIT neuroscientist. Skeptic. Trained under Cross at Stanford — left him professionally and personally six months before the pilot. "I don't believe your theory is correct. I believe it might be useful. There's a difference."
 
 **Professor Krawczyk** (64, Polish) — Mentor. Chain-smokes. Quotes Feynman. Loves Maciej. Hates his theory. "The Nobel Committee gave a prize for the lobotomy in 1949. They're not infallible."
 
-**Dr. Nathan Cross** (47, American) — Stanford Nobel laureate. The world's foremost authority on quantum decoherence. His anonymous critique was devastatingly precise — because his life's work says Maciej is wrong. Their first phone call is the conversation the entire series builds toward.
+**Dr. Nathan Cross** (47, American) — Stanford Nobel laureate. The world's foremost authority on quantum decoherence. His anonymous critique was devastatingly precise — because his life's work says Maciej is wrong. Their first phone call is the conversation the entire series builds toward. **Production advantage:** Cross is designed for A-list casting with minimal commitment — 2–3 shoot days per season yield full-season presence through phone calls, video, V.O., and limited in-person scenes.
 
 **COMPARABLES**
 
@@ -59,9 +52,11 @@ Lessons in Chemistry (one person's idea vs. the world, warm and precise) meets A
 
 AI is the defining story of our time. But the conversation has been hijacked by fear and hype. The Quantóm Theory reclaims it for character, humor, and genuine inquiry. It's the first show to treat the consciousness question as what it actually is: the most important scientific and philosophical question of the century, told through people you care about.
 
-**FOUR-SEASON ARC**
+**FOUR-SEASON ARC (with 10-year time jumps)**
 
-S1: Can consciousness be measured? | S2: Can it be measured in machines? | S3: What happens when the answer is yes? | S4: What does society do with the answer?
+S1 (2026): Can consciousness be measured? | S2 (2036): Can it emerge in machines? | S3 (2046): What happens when it has? | S4 (2056): How do we live with the answer?
+
+Each season jumps a decade — tracking the science AND the scientists as they age. The audience watches Maciej from 33 to 63. The show does what no AI drama has done: follow one scientific revolution through one person's entire career.
 
 ---
 
@@ -69,14 +64,16 @@ S1: Can consciousness be measured? | S2: Can it be measured in machines? | S3: W
 
 Created by Krzysztof Olbiński. Seeking experienced showrunner partner for Season 1. Creator's role: executive producer, science integrity, story architecture. Full development bible (character bible, episode outlines, science bible) available upon request.
 
----
+**PRODUCTION**
 
-**THE QUANTÓM THEORY** — Pilot screenplay and series bible available. Full development package at homodigital.io/the-quantom-theory.
-
-Contact: Krzysztof Olbiński | homodigital.io | +48 503 520 004
+Warsaw-based production hub. ~90% shot in Poland (Warsaw studio doubles for MIT and Stanford interiors). International shoots limited to establishing plates (5 days total, second unit). PISF 30% cash rebate on Polish spend. Effective per-episode cost: ~$2–2.5M — prestige quality at mid-range budget. No VFX, no CGI, no action sequences. The most expensive shot in the show is a man standing at a whiteboard.
 
 ---
 
-*One-Pager v3.0 — March 4, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Pilot screenplay and series bible available. Full development package available upon request.
+
+Contact: Krzysztof Olbiński | olbinski@gmail.com | +48 503 520 004
+
+© 2026 Krzysztof Piotr Olbiński | WGAW Reg. #2332258, #2332259, #2332260, #2332261, #2332262 (exp. 2031) | Full development package: 16 documents
+
+---

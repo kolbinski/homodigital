@@ -1,20 +1,12 @@
 # THE QUANTÓM THEORY — Detailed Outlines: Episodes 6-9
 
-## Development Document — Session 3
-
-*Created: February 25, 2026*
-*For: Writers' room, showrunner, development executives*
-*Format: Scene-by-scene with key dialogue and act structure*
-
----
-
 ---
 
 # EPISODE 6: "THE TUNNEL EFFECT"
 
 **Runtime:** 60 minutes
 **Timeline:** December. ~9-10 weeks post-Nobel.
-**Locations:** MIT (Cambridge), Stanford (Palo Alto), & house
+**Locations:** MIT (Cambridge), Stanford (Palo Alto), Cross's home
 **Director's note:** This is the rebirth episode. After the nadir of Ep 5, everything advances. The visual palette reverses — MIT becomes warm, golden, night-into-dawn. Palo Alto scenes carry a new electricity. The rhythm is steadier, more confident. Maciej went through the wall. Now we see what's on the other side.
 
 ---
@@ -219,13 +211,13 @@ The simplest and truest line in the episode.
 
 ---
 
-**INT. STANFORD — MIT QUANTUM OPTICS LAB — DAY**
+**INT. MIT — QUANTUM OPTICS LAB — DAY**
 
-runs the seventh test on the detector. Cross's number. (He wouldn't admit he ran it specifically to satisfy Cross's statistical requirement, but knows.)
+Marcus runs the seventh test on the detector. Cross's number. (He wouldn't admit he ran it specifically to satisfy Cross's statistical requirement, but Priya knows.)
 
 The signal persists. Seven for seven. Whatever the detector is measuring, it's consistent.
 
-picks up the phone.
+Marcus picks up the phone.
 
 ---
 
@@ -233,33 +225,35 @@ picks up the phone.
 
 Cross reads the MIT team's data report. Seven runs. The signal is there.
 
-*(standing in the doorway)*: "Seven. Like you asked."
+His phone rings. Marcus, on FaceTime from the MIT lab, detector readings visible on the screen behind him.
+
+MARCUS: "Seven. Like you asked."
 
 CROSS: "I didn't ask. I noted a better number for statistical significance. Asking would imply I was invested in the outcome."
 
-"Are you?"
+MARCUS: "Are you?"
 
 CROSS: "Is the signal reproducible?"
 
-"You're looking at seven runs."
+MARCUS: "You're looking at seven runs."
 
 CROSS: "Seven is a better number for statistical significance."
 
-"You already said that."
+MARCUS: "You already said that."
 
 CROSS: "I'm aware."
 
-A beat. Cross looks at the data. waits. This is the longest he's ever waited for Cross to say something.
+A beat. Cross looks at the data. Marcus waits. This is the longest he's ever waited for Cross to say something.
 
 CROSS: "It's not a no."
 
- in the corridor after, runs into
+Marcus in the MIT corridor after, runs into Ola.
 
-"Well? What did he say?"
+OLA: "Well? What did he say?"
 
-"'It's not a no.'"
+MARCUS: "'It's not a no.'"
 
-"From Cross, that's basically 'I love you.'"
+OLA: "From Cross, that's basically 'I love you.'"
 
 ---
 
@@ -305,7 +299,75 @@ OLA *(in English, still laughing)*: "Both. Is same thing in Polish."
 
 ---
 
-**INT. CROSS'S STUDY — STANFORD — EVENING**
+**INT. MIT — CORRIDOR OUTSIDE SHARMA LAB — NIGHT**
+
+Ola has gone home. The lab is dark. Maciej walks out into the corridor and finds Priya sitting on the floor against the wall, shoes off, laptop open, typing.
+
+MACIEJ: "You could sit at a desk. They have those here."
+
+PRIYA: "The floor is where the best thinking happens. Cross used to pace the hallway. I sit."
+
+He slides down the wall. Sits next to her. Not close enough to touch — but close enough that the distance is a choice.
+
+Silence. The hallway fluorescents buzz. Two physicists on a linoleum floor at 11 PM. The glamour of science.
+
+MACIEJ: "Can I ask you something that isn't about physics?"
+
+PRIYA *(still typing)*: "I'm not sure you know how."
+
+MACIEJ: "Do you ever think about what you'd be doing if Cross hadn't been your advisor? If you'd gone into a different field entirely?"
+
+Priya stops typing. Closes the laptop. This is not a question she expected.
+
+PRIYA: "Sometimes. I was good at music. Piano. My mother wanted me to audition for Juilliard."
+
+MACIEJ: "What happened?"
+
+PRIYA: "I found neuroscience. And neuroscience was... louder."
+
+MACIEJ: "Louder than piano?"
+
+PRIYA: "Louder than everything."
+
+She looks at him. For the first time without the analytical filter — not evaluating his argument, not checking his math. Just looking.
+
+PRIYA: "You?"
+
+MACIEJ: "I was going to be a guitar teacher in Radom. Serious plan. I had a business card designed."
+
+PRIYA: "You're lying."
+
+MACIEJ: "I'm not. Blue card. Comic Sans font. 'Maciej Kowalski — Guitar Lessons — Reasonable Prices.'"
+
+PRIYA *(laughing)*: "Comic Sans."
+
+MACIEJ: "I was seventeen. I had priorities."
+
+The laugh fades. They're looking at each other. The corridor is very quiet. Something is here — in the space between them on the linoleum floor — that neither of them will name. Not tonight. Maybe not ever. But the audience sees it. The camera sees it.
+
+MACIEJ *(standing, breaking the moment)*: "I should... the equation needs..."
+
+PRIYA: "Go. The equation needs you."
+
+He walks three steps. Stops.
+
+MACIEJ: "Priya."
+
+PRIYA: "Mmm."
+
+MACIEJ: "Thank you. For the coupling coefficient. For all of it."
+
+PRIYA: "It's just physics, Maciej."
+
+MACIEJ: "No. It's not."
+
+He walks away. She watches him go. Opens her laptop. Stares at the screen without typing.
+
+HOLD on Priya's face. Whatever she's feeling, she's not going to let it interfere with the work. But it's there. The audience knows. She knows. And now so does he.
+
+---
+
+**INT. CROSS'S STUDY — STANFORD — EVENING / INT. MIT — PRIYA'S OFFICE — EVENING**
 
 Cross sits at his desk. The bridge paper. The one he's been writing secretly. The one that connects his mathematical framework to Maciej's through the protected coherence channels.
 
@@ -313,25 +375,25 @@ He's been working on it for weeks. It's done. Or it's as done as Cross allows th
 
 He stands. Walks to the window. Palo Alto at night. The campus lights.
 
-CROSS: "Priya."
-
-PRIYA *(not looking up)*: "Mmm."
+He calls Priya. Video call. She answers from her MIT office — late, still working.
 
 CROSS: "I need you to do something for me."
 
-PRIYA *(still not looking up)*: "If it involves reorganizing the spice rack by molecular weight again, I've told you—"
+PRIYA: "If it involves rearranging your reference list by publication year again, I've told you—"
 
 CROSS: "I need you to read something. As a neuroscientist. Not as a former student. As a neuroscientist."
 
-Cross pauses. Even through the phone, Priya recognizes the tone — the specific frequency Cross uses when he's being vulnerable and disguising it as methodology. She trained under that frequency for five years.
+He pauses. Even through the screen, Priya recognizes the tone — the specific frequency Cross uses when he's being vulnerable and disguising it as methodology. She trained under that frequency for five years.
 
-He hands her the paper. She reads the title:
+CROSS: "I'm sending you a PDF. Read it now. I'll wait."
+
+He sends the paper. She opens it. Reads the title:
 
 "On the Possibility of Protected Quantum Coherence in Biological Substrates: A Theoretical Framework"
 
-She reads. Page by page. Cross stands in the room, not sitting, not pacing — just standing. Waiting. This is the first time he has asked anyone to evaluate this work.
+She reads. Page by page. Cross stays on the video call, not speaking — just sitting at his desk, waiting. This is the first time he has asked anyone to evaluate this work. The silence across 3,000 miles is louder than conversation.
 
-Ten minutes. Fifteen. She finishes. Looks up.
+Ten minutes. Fifteen. She finishes. Looks up at the camera.
 
 PRIYA: "This paper is good."
 
@@ -353,7 +415,7 @@ CROSS: "I haven't decided whether to publish."
 
 PRIYA: "Yes, you have."
 
-She hands the paper back. Their eyes meet. She knows him. He knows she knows.
+She holds his gaze through the screen. She knows him. He knows she knows. Three thousand miles between them, and no distance at all.
 
 PRIYA: "The question isn't whether you'll publish. The question is whether you'll put your name on it."
 
@@ -383,7 +445,7 @@ Title: "On the Possibility of Protected Quantum Coherence in Biological Substrat
 
 Author: **N. Cross**
 
-Institution: California Institute of Technology
+Institution: Stanford University
 
 He reaches the SUBMIT button.
 
@@ -403,12 +465,10 @@ SMASH TO BLACK.
 
 ---
 
----
-
 # EPISODE 7: "WAVE FUNCTION"
 
 **Runtime:** 60 minutes
-**Timeline:** Late December / Early January. Nobel lecture preparations.
+**Timeline:** Early December. Nobel lecture preparations.
 **Locations:** MIT (Cambridge), Warsaw (flashbacks — Radom), Cross's home (Palo Alto)
 **Director's note:** This is the memory episode. The visual language shifts to accommodate flashbacks — Radom in the 1990s is shot in warm Super 16mm tones, grainy, intimate. Present-day MIT is its usual clinical blue. The contrast is deliberate: where Maciej came from versus where he is. The Nobel lecture is the bridge between them.
 
@@ -428,7 +488,7 @@ He types a sentence. Deletes it. Types another. Deletes it. The document stays e
 
 On the wall behind him: a printout of Nobel lecture guidelines. "The Nobel Lecture should be delivered within six months of the prize ceremony. The lecturer is free to choose the format and subject." The freedom is paralyzing.
 
-His phone: a text from the Swedish Nobel Committee press office. "Professor Kowalski — we require your lecture title by January 3rd for the printed programme."
+His phone: a text from the Swedish Nobel Committee press office. "Professor Kowalski — we require your lecture title by November 25th for the printed programme."
 
 He stares at the blank screen. Types:
 
@@ -592,9 +652,15 @@ PRIYA: "The day after. The lecture establishes the vision. The paper establishes
 
 ---
 
+**EXT. STANFORD CAMPUS — EVENING**
+
+Priya walks through the sandstone arcades. She hasn't been here in six months — not since she packed her books and left for MIT. She texted Cross from Logan Airport: "I'm coming. We need to talk about the paper. In person." He replied with one word: "Fine."
+
+This is the first time they've been in the same room since she left him. The bridge paper is the reason. It's not the only reason.
+
 **INT. CROSS'S STUDY — STANFORD — EVENING**
 
-Cross and Priya. The bridge paper between them on the desk.
+Cross and Priya. The bridge paper between them on the desk. The gaps on the bookshelves where her books used to be are still there.
 
 CROSS: "I've made a decision."
 
@@ -762,15 +828,15 @@ Cross at his desk. The journal submission portal open. His paper loaded. Ready.
 
 He closes the portal. Not yet. After the lecture. He'll wait.
 
-He opens his email. Drafts a message to his former postdoc at MIT:
+He opens his email. Drafts a message to Priya — who is in the guest room down the hall, packing for her flight back to MIT in the morning:
 
-"I have decided to submit the paper to Physical Review Letters. Timing: post-Nobel lecture. This is tactically optimal and has nothing to do with cowardice. — S"
+"I have decided to submit the paper to Physical Review Letters. Timing: post-Nobel lecture. This is tactically optimal and has nothing to do with cowardice. — N"
 
 He sends it.
 
-Priya, in the next room, reads it. Smiles. Types back:
+Priya, down the hall, reads it. Smiles. Types back:
 
-"I know. I already told we're hosting a viewing party for the ceremony. — A"
+"I know. I already told Elena we're hosting a viewing party for the ceremony. — P"
 
 ---
 
@@ -778,13 +844,11 @@ Priya, in the next room, reads it. Smiles. Types back:
 
 ---
 
----
-
 # EPISODE 8: "THE COPENHAGEN INTERPRETATION"
 
 **Runtime:** 60 minutes
-**Timeline:** January. Nobel ceremony in Stockholm.
-**Locations:** Stockholm (Konserthuset, Grand Hôtel, City Hall), Palo Alto (& house), University of Warsaw
+**Timeline:** December 10 and days following. Nobel ceremony in Stockholm.
+**Locations:** Stockholm (Konserthuset, Grand Hôtel, City Hall), Palo Alto (Cross's home), MIT, University of Warsaw
 **Director's note:** The most visually grand episode of the season. Stockholm is shot like a painting — cold blues, golden interiors, the formality of Nordic tradition. Palo Alto is warm and domestic — the viewing party, the living room, the couch. Warsaw is solitary — Krawczyk alone. Three cities, three emotional temperatures, one event uniting them all.
 
 ---
@@ -841,21 +905,21 @@ He pats Maciej's shoulder and moves on. Maciej stands alone in the crowd for a m
 
 **INT. CROSS'S HOME — PALO ALTO — EVENING (LOCAL TIME)**
 
-The viewing party. organized it ("I organized it. claims credit. This is our dynamic."). The living room is decorated — has printed a banner that reads "KOWALSKI '24" in the style of a campaign poster.
+The viewing party. Elena organized it ("I organized it." David claims credit. "This is our dynamic."). The living room is decorated — David has printed a banner that reads "KOWALSKI '26" in the style of a campaign poster.
 
-Present: , Priya, and Cross — who arrives last.
+Present: Elena Vasquez (department administrator, has known Cross for twenty years), David Kim (fellow physics professor who thinks Cross takes everything too seriously), and Cross — who arrives last.
 
 CROSS: "I'm here under protest."
 
-"You've said that at every social gathering for twenty years."
+ELENA: "You've said that at every social gathering for twenty years."
 
 CROSS: "Consistency is a virtue."
 
-"So is fun."
+DAVID: "So is fun."
 
 CROSS: "Those are not comparable concepts."
 
-They settle on the couch. The Nobel broadcast begins streaming. has cheese and crackers. has beer. has the kids on FaceTime for ten seconds before wisely hanging up.
+They settle on the couch. The Nobel broadcast begins streaming. Elena has cheese and crackers. David has beer.
 
 ---
 
@@ -879,7 +943,7 @@ CUT TO: Krawczyk in his Warsaw office. Alone. Chain-smoking. Watching on his lap
 
 *"Resonant Field Consciousness does not claim to solve the problem of consciousness. No equation can. What it claims is simpler and, perhaps, more dangerous: that the relationship between observing systems — the dynamic, measurable interaction between fields — contains a signature. We can detect it. We can measure it. We cannot yet explain it. But we can begin to listen."*
 
-CUT TO: MIT lab. Ola wipes her eyes. Marcus hands her a napkin without looking.
+CUT TO: MIT lab. Ola's hand goes to her mouth. Marcus glances over, says nothing.
 
 ---
 
@@ -903,7 +967,7 @@ The lab buzzes. Priya, Ola, and Marcus have gathered to watch the livestream tog
 
 Marcus, watching from the back of the room, whispers to Ola: "I had goosebumps."
 
-"I had a draft."
+OLA: "I had a draft."
 
 Ola wipes her eyes. Marcus hands her a napkin without looking. Priya mouths "Are you okay?" Marcus: "She's fine. She cries at CERN press releases too."
 
@@ -915,7 +979,7 @@ CROSS *(text)*: "He's wrong about the decoherence timescales in section 3.2."
 
 Priya shows the text to the room.
 
-"That's it?"
+MARCUS: "That's it?"
 
 Another text: "And the lecture was... not terrible."
 
@@ -953,7 +1017,7 @@ KRAWCZYK *(in Polish; subtitled, to the photograph)*: "Miał pan rację. Najleps
 
 Post-ceremony dinner. The grand hall. Crystal, candles, the structured elegance of Scandinavian formality. Maciej has survived toasts, small talk, and a Swedish princess who asked him to explain consciousness "in two sentences or less" (he managed it: "Consciousness is what happens when systems interact in ways that produce something neither system could produce alone. The question is whether that's limited to biology.").
 
-He steps outside for air. Stockholm in January — cold that hits you like a wall. His breath crystallizes. The city is dark and beautiful.
+He steps outside for air. Stockholm in December — cold that hits you like a wall. His breath crystallizes. The city is dark and beautiful.
 
 His phone: Krawczyk's text. He reads it. His face: the complex emotion of a student who has been waiting for his mentor's approval without admitting he was waiting.
 
@@ -969,7 +1033,7 @@ From: Stanford Physics Department Listserv. (The one that accidentally auto-forw
 
 A new paper posted: "On the Possibility of Protected Quantum Coherence in Biological Substrates: A Theoretical Framework"
 
-Author: **S. Cross.**
+Author: **N. Cross.**
 
 Not anonymous.
 
@@ -985,23 +1049,25 @@ He looks up. Stars above Stockholm. The same stars as Radom. The same stars as P
 
 **INT. CROSS'S STUDY — STANFORD — PALO ALTO — NIGHT**
 
-The viewing party has dispersed. and gone. and gone. lingered (he always lingers) until Priya diplomatically mentioned the late hour.
+The viewing party has dispersed. Elena gone. David gone — he lingered (he always lingers) until Cross diplomatically mentioned the late hour.
 
 Cross at his computer. The paper — submitted, now posted. Live. His name on it. Public.
 
-PRIYA *(from the doorway)*: "How does it feel?"
+His phone rings. Priya. He answers.
+
+PRIYA (V.O.): "How does it feel?"
 
 CROSS: "You'll need to be more specific."
 
-PRIYA: "Publishing a paper that builds on someone else's framework. For the first time."
+PRIYA (V.O.): "Publishing a paper that builds on someone else's framework. For the first time."
 
 CROSS: "It doesn't build on his framework. It extends the mathematical foundation of protected coherence in ways that happen to be relevant to his framework."
 
-PRIYA: "Cross."
+PRIYA (V.O.): "Cross."
 
 CROSS: "...It feels like jumping without calculating the landing distance first."
 
-PRIYA: "And?"
+PRIYA (V.O.): "And?"
 
 CROSS: "And I don't hate it as much as I expected."
 
@@ -1047,12 +1113,10 @@ HOLD.
 
 ---
 
----
-
 # EPISODE 9: "SPOOKY ACTION AT A DISTANCE"
 
 **Runtime:** 60 minutes
-**Timeline:** Late January / Early February. Post-Nobel return to Warsaw.
+**Timeline:** Late December / Early January. Post-Nobel return to Warsaw.
 **Locations:** Warsaw (Maciej's apartment, University), MIT, Stanford (Palo Alto)
 **Director's note:** The quietest episode of the season. Almost chamber drama. Warsaw is intimate — Maciej's apartment, lit by laptop screen and desk lamp. The visual language narrows: fewer locations, longer takes, more silence. This episode is about what happens when a physicist, alone with his theory, does the one thing he's been avoiding. The pacing should feel like late-night conversation — unhurried, deepening, leading somewhere neither party expected.
 
@@ -1062,7 +1126,7 @@ HOLD.
 
 **EXT. WARSAW — MOKOTÓW — EVENING**
 
-Maciej walks through his neighborhood. Warsaw in winter — grey, cold, beautiful in the way Polish cities are beautiful in February: not despite the grey, but through it.
+Maciej walks through his neighborhood. Warsaw in winter — grey, cold, beautiful in the way Polish cities are beautiful in January: not despite the grey, but through it.
 
 He carries a bag from the airport. His apartment building — a pre-war kamienica on a quiet Mokotów street. He hasn't been here in months. MIT, London, Stockholm. And now home.
 
@@ -1210,21 +1274,21 @@ Cross's paper has landed. The physics community is processing: Nathan Cross, the
 
 INTERCUT: reactions.
 
-— A STANFORD COLLEAGUE to in the hallway: "Did Cross just... support Kowalski?"
+— A STANFORD COLLEAGUE to David Kim in the hallway: "Did Cross just... support Kowalski?"
 
-"He extended the mathematical framework of protected quantum coherence. Whether that constitutes 'support' depends on your definition of the word."
+DAVID: "He extended the mathematical framework of protected quantum coherence. Whether that constitutes 'support' depends on your definition of the word."
 
 COLLEAGUE: "That's a very Cross answer."
 
-"I've been practicing."
+DAVID: "I've been practicing."
 
 — Priya's validation paper comes out the same week. Two Cross publications building on RFC in one week. The scientific community is confused.
 
-*(to at home)*: "Cross has never been against it. He's been afraid of it. There's a difference."
+ELENA *(to David at a café)*: "Cross has never been against it. He's been afraid of it. There's a difference."
 
-"Afraid of what? He's Cross. He's not afraid of anything."
+DAVID: "Afraid of what? He's Cross. He's not afraid of anything."
 
-"He's afraid of not being the smartest person in the room. And Kowalski's theory suggests the room is bigger than Cross thought."
+ELENA: "He's afraid of not being the smartest person in the room. And Kowalski's theory suggests the room is bigger than Cross thought."
 
 ---
 
@@ -1351,9 +1415,7 @@ But the phone stays in his hand.
 **END OF EPISODE 9**
 
 ---
-
 ---
 
-*Episode Outlines 6-9 v1.0 — February 25, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

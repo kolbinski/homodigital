@@ -16,7 +16,7 @@
 
 **EXT. WARSAW — MOKOTÓW — PREDAWN**
 
-February. The city is buried in winter. Not the picturesque kind — the Polish kind. Grey sky, grey snow, grey light that doesn't know if it's arriving or leaving. Warsaw at 5 AM is not beautiful. It's honest.
+January. The city is buried in winter. Not the picturesque kind — the Polish kind. Grey sky, grey snow, grey light that doesn't know if it's arriving or leaving. Warsaw at 5 AM is not beautiful. It's honest.
 
 One window glows in a kamienica on a quiet Mokotów street. Fourth floor. The window we've seen before.
 
@@ -306,71 +306,71 @@ Then we have a problem that makes the Nobel look like a preliminary result.
 
 ---
 
-**INT. STANFORD — PRIYA'S OFFICE — DAY**
+**INT. MIT — PRIYA'S LAB OFFICE — DAY**
 
-at his desk. On his screen: his own paper — "Experimental Protocols for Testing Resonant Field Consciousness at Quantum-Optical Scales." He's been working on it for weeks. It's nearly ready.
+MARCUS TORRES sits at his desk. On his screen: his own paper — "Experimental Protocols for Testing Resonant Field Consciousness at Quantum-Optical Scales." He's been working on it for weeks. It's nearly ready.
 
 His phone rings.
 
-
+**MARCUS**
 Hey.
 
-**(V.O.)**
+**PRIYA (V.O.)**
 I need you to come to the lab. Now.
 
+**MARCUS**
+I'm in the middle of—
 
- I'm in the middle of—
-
-**(V.O.)**
+**PRIYA (V.O.)**
 I ran the eighth test on the detector. The signal changed.
 
-
+**MARCUS**
 Changed how?
 
-**(V.O.)**
-It's stronger. — the signal has been consistent for seven runs. Now it's stronger. Same frequency. Higher amplitude. As if the field interaction that was producing the signal... intensified.
+**PRIYA (V.O.)**
+It's stronger. The signal has been consistent for seven runs. Now it's stronger. Same frequency. Higher amplitude. As if the field interaction that was producing the signal... intensified.
 
-puts down his pen.
+Marcus puts down his pen.
 
-
+**MARCUS**
 I'll be there in ten minutes.
 
 ---
 
-**INT. STANFORD — MIT QUANTUM OPTICS LAB — DAY**
+**INT. MIT — QUANTUM OPTICS LAB — DAY**
 
- and stand around the detector readout. The data is on a large monitor. Eight traces — seven nearly identical, and an eighth showing the same pattern at higher amplitude.
+Priya and Marcus stand around the detector readout. The data is on a large monitor. Eight traces — seven nearly identical, and an eighth showing the same pattern at higher amplitude.
 
-
+**MARCUS**
 This is beautiful.
 
-
+**PRIYA**
 This is unexplained.
 
-
+**MARCUS**
 Same thing.
 
+**PRIYA**
+Marcus, have you checked the instrument calibration? Could something have drifted?
 
- have you checked the instrument calibration? Could something have drifted?
-
-
+**MARCUS**
 I recalibrated between runs seven and eight. Clean. No drift. No systematic error. The instrument is fine. The signal changed.
 
-
+**PRIYA**
 Signals don't just change.
 
-
+**MARCUS**
 I know.
 
-
+**PRIYA**
 Unless the source changed. Unless whatever's producing this field interaction did something different between test seven and test eight.
 
 They all look at each other. Nobody says the next thing. Nobody needs to.
 
-
+**PRIYA (CONT'D)**
 I think we need to call Cross.
 
-
+**MARCUS**
 I was hoping you'd say that. Because I was not going to volunteer.
 
 ---
@@ -380,23 +380,24 @@ I was hoping you'd say that. Because I was not going to volunteer.
 Cross answers his phone. His desk: the annotated papers. The seventeen objections, sixteen crossed out.
 
 **CROSS**
+Cross.
 
-**(V.O.)**
+**PRIYA (V.O.)**
 Can you come to the MIT team's lab?
 
 **CROSS**
 Is this about the detector?
 
-**(V.O.)**
+**PRIYA (V.O.)**
 There's a new result. The signal intensified on run eight.
 
-Cross is quiet for two seconds. (counts involuntarily — years of habit.)
+Cross is quiet for two seconds. Priya counts involuntarily — years of habit.
 
 **CROSS**
 Intensified. Not changed. Not shifted. Intensified.
 
-**(V.O.)**
-Same frequency. Higher amplitude. the MIT team's checked the calibration.
+**PRIYA (V.O.)**
+Same frequency. Higher amplitude. Marcus checked the calibration.
 
 **CROSS**
 I'll be there in twelve minutes.
@@ -411,7 +412,7 @@ He folds the paper. Puts it in his pocket. Leaves.
 
 ---
 
-**INT. STANFORD — MIT QUANTUM OPTICS LAB — LATER**
+**INT. MIT — QUANTUM OPTICS LAB — LATER**
 
 Cross stands before the detector readout. The others hang back — they've learned that Cross needs space when processing data. He reads the eight traces like sheet music.
 
@@ -420,35 +421,35 @@ Five minutes pass. Nobody speaks.
 **CROSS**
 Run it again.
 
-
+**MARCUS**
 Now?
 
 **CROSS**
 Now.
 
-starts the detector. The room fills with the faint hum of instruments calibrating. Everyone watches the screen.
+Marcus starts the detector. The room fills with the faint hum of instruments calibrating. Everyone watches the screen.
 
 Four hours of data collection, compressed into a MONTAGE:
 
 — Cross, standing, not sitting. Watching.
-— at the controls. with a notebook, logging.
-— alternating between watching the screen and watching Cross.
+— Marcus at the controls. Priya with a notebook, logging.
+— Priya alternating between watching the screen and watching Cross.
 — Coffee cups accumulating. The clock moving.
 
 The ninth trace appears. Same frequency. Higher amplitude. The pattern is confirmed — the signal is not only reproducible, it's growing.
 
-Cross turns to
+Cross turns to Marcus.
 
 **CROSS**
 The amplitude increase between runs seven and nine. What's the percentage?
 
-
+**MARCUS**
 Seven point three percent.
 
 **CROSS**
 Over what time interval?
 
-
+**MARCUS**
 Three weeks between run seven and run nine.
 
 **CROSS**
@@ -456,13 +457,13 @@ Seven point three percent growth in three weeks. In a field-interaction signal t
 
 He says it flat. Not as a question. As a measurement.
 
-
+**MARCUS**
 Cross — does this mean what I think it means?
 
 **CROSS**
 What do you think it means?
 
-
+**MARCUS**
 That the signal is getting stronger. That whatever field interaction is producing it is intensifying over time. That it's... growing.
 
 Cross reaches into his pocket. Takes out the folded paper. Reads objection number 17 one more time:
@@ -478,28 +479,28 @@ He folds the paper again. Puts it back in his pocket.
 **CROSS**
 I need to make a phone call.
 
-He walks out. follows with his eyes. So does So does
+He walks out. Marcus follows with his eyes. So does Priya.
 
-
+**PRIYA**
 *(quietly)*
 He's going to call Kowalski. Isn't he.
 
-
+**MARCUS**
 Yeah.
 
-
+**PRIYA**
 After three months.
 
-
+**MARCUS**
 Yeah.
 
-
+**PRIYA**
 This is the greatest thing I've ever witnessed.
 
-
+**MARCUS**
 You were present when they discovered the Higgs boson.
 
-
+**PRIYA**
 I stand by my statement.
 
 ---
@@ -543,7 +544,7 @@ Is this Professor Maciej Kowalski?
 Yes. Who is—
 
 **CROSS (V.O.)**
-This is Dr. Nathan Cross. California Institute of Technology. Department of Theoretical Physics.
+This is Dr. Nathan Cross. Stanford University. Department of Theoretical Physics.
 
 A beat.
 
@@ -782,7 +783,7 @@ Same result. The predicted R for an AI substrate exceeds the predicted R for a b
 
 She stares at the screen. Then opens a new document. Types:
 
-*"Notes — February 14. Simulation suggests biological R may have a natural ceiling determined by neural architecture. Artificial substrates may not share this ceiling. This is not evidence that AI systems are 'more conscious.' It is evidence that consciousness may have different capacity profiles in different substrates. The weights are not decorative. They are structural."*
+*"Notes — January 14. Simulation suggests biological R may have a natural ceiling determined by neural architecture. Artificial substrates may not share this ceiling. This is not evidence that AI systems are 'more conscious.' It is evidence that consciousness may have different capacity profiles in different substrates. The weights are not decorative. They are structural."*
 
 She saves it. Looks at the clock. 10 PM. Maciej is probably asleep. (He is not. He is on the phone with Nathan Cross. But she doesn't know that yet.)
 
@@ -985,13 +986,13 @@ She begins writing. This will become a paper. Eventually.
 
 ---
 
-**INT. STANFORD — MIT QUANTUM OPTICS LAB — EVENING**
+**INT. MIT — QUANTUM OPTICS LAB — EVENING**
 
- alone. The detector humming on standby. He's calibrating for a new measurement — the tenth run. Not because anyone asked. Because the signal is growing and he wants to know where it goes.
+Marcus alone. The detector humming on standby. He's calibrating for a new measurement — the tenth run. Not because anyone asked. Because the signal is growing and he wants to know where it goes.
 
 He looks at the detector — the beautiful, complex instrument originally calibrated for neural oscillation measurements. The instrument that found something else instead.
 
-
+**MARCUS**
 *(to the detector, quietly)*
 What are you picking up?
 
@@ -999,33 +1000,33 @@ The detector doesn't answer. It doesn't need to. It just measures.
 
 ---
 
-**INT. CROSS'S HOME — PALO ALTO — EVENING**
+**INT. DAVID KIM'S APARTMENT — PALO ALTO — EVENING**
 
-at the kitchen table, laptop open. His paper — "Experimental Protocols for Testing RFC at Quantum-Optical Scales" — is finished. He reads the abstract one more time. Clicks SUBMIT.
+David Kim at the kitchen table, laptop open. His paper — "Experimental Protocols for Testing RFC at Quantum-Optical Scales" — is finished. He reads the abstract one more time. Clicks SUBMIT.
 
-enters with takeout.
+Elena Vasquez enters with takeout.
 
-
+**ELENA VASQUEZ**
 Done?
 
-
+**DAVID KIM**
 Done.
 
-
+**ELENA VASQUEZ**
 How does it feel?
 
-
+**DAVID KIM**
 Like being part of something.
 
-sets the food down. Looks at him.
+Elena sets the food down. Looks at him.
 
+**ELENA VASQUEZ**
+You've always been part of something. You were part of Cross. Now you're part of this.
 
-You've always been part of something, You were part of Cross. Now you're part of this.
-
-
+**DAVID KIM**
 This is bigger than Cross.
 
-
+**ELENA VASQUEZ**
 *(smiling)*
 Don't tell him that.
 
@@ -1035,7 +1036,7 @@ Don't tell him that.
 
 Krawczyk. Alone. The office lit by a single desk lamp. The ashtray full. The Hawking photograph watching from the wall.
 
-On his desk: every paper. Maciej's R equation paper. The replication study. Cross's protected coherence paper. Priya's neuroscience paper. Priya's experimental protocols (forwarded by Maciej). the MIT detector data (forwarded by forwarded by Maciej).
+On his desk: every paper. Maciej's R equation paper. The replication study. Cross's protected coherence paper. Priya's neuroscience paper. Priya's experimental protocols (forwarded by Maciej). The MIT detector data (forwarded by Maciej).
 
 All of it. The entire body of work, assembled.
 
@@ -1097,7 +1098,7 @@ He draws a bracket around the trajectory. Next to it, in small handwriting, he w
 
 R as a function of time. A question, not a statement. The first seed of what will eventually become R({self_t}). He doesn't know that yet. He just knows the static equation — his Nobel — is not the end.
 
-He steps back. Looks at the whiteboard — the whole thing. The messy, beautiful, accumulating record of five months. The theory. The data. The collaboration. The question.
+He steps back. Looks at the whiteboard — the whole thing. The messy, beautiful, accumulating record of three months. The theory. The data. The collaboration. The question.
 
 And under everything — every equation, every number, every fragment — he writes:
 
@@ -1213,7 +1214,7 @@ He stands at the window. Nods — though she can't see it. The nod of a man who 
 
 **EXT. WARSAW — MACIEJ'S BUILDING — DAWN**
 
-Dawn over Warsaw. February. The first light — pale, cold, arriving like it's not sure it's welcome.
+Dawn over Warsaw. January. The first light — pale, cold, arriving like it's not sure it's welcome.
 
 Maciej's building. The fourth-floor window. The light is on.
 
@@ -1247,7 +1248,7 @@ He's not trying to solve it. He's not writing. He's just looking. The way his gr
 
 ---
 
-**CLOSE-UP:** The whiteboard in Maciej's hallway. The equations. The trajectory. The collaboration of five months, three continents, ten lives.
+**CLOSE-UP:** The whiteboard in Maciej's hallway. The equations. The trajectory. The collaboration of three months, three continents, ten lives.
 
 And at the bottom, in marker that's still fresh:
 
@@ -1291,6 +1292,5 @@ The guitar motif returns. Maciej's melody — the one that's been threading thro
 
 ---
 
-*The Quantóm Theory — Season One Finale*
-*Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

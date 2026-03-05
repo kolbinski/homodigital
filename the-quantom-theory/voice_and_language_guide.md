@@ -1,11 +1,5 @@
 # THE QUANTÓM THEORY — Voice & Language Guide
 
-## Development Document — Writers' Room Reference
-
-*Created: February 26, 2026*
-*For: Showrunner, writers' room, script editors, dialogue coaches, subtitle translators*
-*Purpose: The definitive reference for how this show sounds on paper. Every writer, every episode, one voice.*
-
 ---
 
 ## How to Use This Document
@@ -265,7 +259,7 @@ Each card is a quick-reference for writing that character's dialogue. Pin these 
 
 ### NATHAN CROSS — The Precision Instrument
 
-**Register:** This is NOT Season 1-3 Cross. This is Cross after the Nobel. After the divorce. After years of solitude. The architecture is the same — categorical statements, inability to use contractions when escalated, lectures nobody asked for — but the frequency is lower and the weight is higher. When he makes a joke, it costs him something. He's not performing.
+**Register:** Cross is not a sitcom antagonist. He is a man in his late 40s, post-Nobel, post-divorce, post-certainty. The architecture is the same — categorical statements, inability to use contractions when escalated, lectures nobody asked for — but the frequency is lower and the weight is higher. When he makes a joke, it costs him something. He's not performing.
 
 **Verbal signature:** The ellipsis. "His math is... not wrong." "The lecture was... not terrible." "It's... not a no." The pause before the concession is the character development. That pause is where Cross fights with himself and loses. Protect every ellipsis.
 
@@ -489,7 +483,7 @@ Maciej's superpower is asking questions, not delivering answers. Every episode s
 ### Physical Motifs
 
 - **Maciej's hand trembling** — established at the Nobel call, returns at R = 0.23, returns at the phone call. Same gesture, escalating meaning.
-- **Priya taking Cross's hand** — established at the viewing party (Ep 8). A physical gesture that signals emotional threshold.
+- **Priya texting Cross a single period** — established after the Nobel lecture (Ep 8). Her shorthand for "I'm here." He never replies. He doesn't need to.
 - **Krawczyk's cigarette** — always present, never commented on after the first scene.
 - **The whiteboard** — always visible in Maciej's apartment scenes. Changes between episodes. If it doesn't change, something is wrong.
 
@@ -509,12 +503,10 @@ Before submitting any script page, apply this test:
 
 **4. Find the code-switch.** If a scene has Polish and English speakers in the same room, where does the language shift? Is it motivated? Does the shift reveal something about the characters' emotional state? If the code-switch is random, it's noise. If it's precise, it's music.
 
-**5. Check the math.** If a character explains science, ask: does both characters already know this? If yes, cut the explanation. If only one character knows it, the explanation must come from disagreement, discovery, or crisis — never from lecture.
+**5. Check the math.** If a character explains science, ask: do both characters already know this? If yes, cut the explanation. If only one character knows it, the explanation must come from disagreement, discovery, or crisis — never from lecture.
 
 **6. Read it at 2 AM.** The show's best scenes happen late at night — two people, exhausted, honest. If the dialogue sounds sharp and performative at 2 AM, it's wrong. If it sounds like two people who are too tired to lie, it's right.
-
 ---
 
-*Voice & Language Guide v1.0 — February 26, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

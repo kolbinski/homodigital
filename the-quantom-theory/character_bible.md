@@ -1,10 +1,5 @@
 # THE QUANTÓM THEORY — Character Bible
 
-## Development Document — Session 1
-
-*Created: February 25, 2026*
-*For: Writers' room reference, casting directors, showrunner*
-
 ---
 
 ## How to Use This Document
@@ -26,7 +21,7 @@ Characters are ordered by narrative weight in Season 1.
 
 # MACIEJ KOWALSKI
 
-**Casting type:** Maciej Musiał — Polish, late 20s to mid-30s, charismatic without arrogance, intellectual without performing intellectual
+**Casting reference (not attached):** Maciej Musiał — Polish, late 20s to mid-30s, charismatic without arrogance, intellectual without performing intellectual
 **Age:** 33
 **Role:** Series Lead
 **Nationality:** Polish
@@ -89,7 +84,7 @@ Guitar is an extension of his body — he picks it up the way other people check
 
 ## Key Relationships
 
-**Ola Nowicka:** His closest relationship. Not romantic (this is important and deliberate — the show resists the urge to make them a couple). They have the intimacy of people who have worked together on something enormous and survived. She knows him better than anyone, including things he doesn't know about himself. She's the first person he calls. She's also the person most willing to tell him he's wrong. The relationship's tension in S1: Ola begins as his orbit and ends as her own planet. This shift is necessary and painful for both.
+**Ola Nowicka:** His closest relationship. Not romantic in S1 — and this is deliberate. They were together briefly in their mid-twenties; their daughter Hania was born in 2021. The relationship ended amicably two years later — before the RFC work began. They chose to be collaborators and co-parents rather than partners who resent each other. By the time S1 begins, the romantic history is scar tissue — healed, structural, never discussed. The audience senses it in the way they move around each other, in the silences between arguments, in the fact that she's still the first person he calls. Hania is five during S1 but never appears on screen — she lives with Ola in Warsaw, mentioned only in passing (a phone call, a schedule conflict). The show doesn't reveal the full domestic picture until S2, when the decade jump shows them as separated co-parents and Hania as a teenager who asks the question her father can't answer. The relationship's tension in S1: Ola begins as his orbit and ends as her own planet. This shift is necessary and painful for both — and layered with a history the audience doesn't yet fully see.
 
 **Professor Krawczyk:** Father figure, intellectual anchor, and the voice of caution. Maciej respects him deeply — and is beginning to outgrow him, which neither of them can fully face. Krawczyk sees the theory's implications and is terrified, not because it's wrong, but because it might be right. Their relationship is the show's most tender and most painful dynamic.
 
@@ -128,8 +123,8 @@ Guitar is an extension of his body — he picks it up the way other people check
 # DR. NATHAN CROSS
 
 **Played by:** Open casting — major American dramatic actor, late 40s
-**Age:** 47
-**Role:** Recurring (flexible — designed for 3-4 shooting days per season yielding full-season presence)
+**Age:** 47 (born 1979)
+**Role:** Recurring (flexible — designed for 2-3 shooting days per season yielding full-season presence)
 
 ---
 
@@ -184,7 +179,7 @@ Cross is designed for maximum impact with minimum shooting days. He can appear t
 
 His voice and perspective are ALWAYS present, even when he's not on screen. Other characters reference him constantly. His reputation precedes him. His published papers are plot devices.
 
-**The office whiteboard:** Cross writes a bridge equation on his Stanford office whiteboard after reading equation 4.7. This equation becomes a recurring visual motif. Each time we see Cross's office, the equation has evolved — new terms, new connections. It's Cross's secret collaboration — work he's doing that he won't show anyone.
+**The refrigerator whiteboard:** Cross writes a bridge equation on his kitchen whiteboard after reading equation 4.7. This equation becomes a recurring visual motif. Each time we see Cross's home, the equation has evolved — new terms, new connections. It's Cross's secret collaboration — work he's doing that he won't show anyone.
 
 ---
 
@@ -209,8 +204,8 @@ His voice and perspective are ALWAYS present, even when he's not on screen. Othe
 | Ep 5 | Watches Whitfield attack — conflicted, realizes public critique is less honest than his own |
 | Ep 6 | MIT detector data arrives. "It's not a no." |
 | Ep 7 | Begins writing bridge paper in private. Vulnerability disguised as methodology |
-| Ep 8 | Watches Nobel lecture livestream alone. "The lecture was... not terrible." |
-| Ep 9 | Publishes bridge paper under his own name. Public alignment. |
+| Ep 8 | Watches Nobel lecture at viewing party. Publishes bridge paper under his own name that night. |
+| Ep 9 | Paper lands in the field. Maciej reads it. The wall has a door in it. |
 | Ep 10 | The phone call. "I spent three months trying to destroy it. And I couldn't." |
 
 **S1 summary:** Dismissal → Obsession → Anonymous attack → Grudging respect → Public engagement → Direct contact
@@ -269,7 +264,7 @@ She returned to Warsaw with Maciej. Same university, same department, different 
 
 ## Key Relationships
 
-**Maciej:** The most important relationship in the show. Not romantic — and the show must earn this by making the non-romance feel more intimate than romance. They have the closeness of people who have built something together. He knows how she takes her coffee (black, strong, too much). She knows when he's lying about being fine (always). The S1 tension: Maciej's world expands (Nobel, Priya, MIT, Cross) while Ola's role in it becomes less exclusive. This isn't jealousy — it's recalibration.
+**Maciej:** The most important relationship in the show. Not romantic in S1 — but it was, once. They were together in their mid-twenties; Hania was born in 2021; the relationship ended before the RFC work began. What remains is more intimate than romance: the closeness of people who have built something together, raised a child together, and chosen to keep building. He knows how she takes her coffee (black, strong, too much). She knows when he's lying about being fine (always). The S1 tension: Maciej's world expands (Nobel, Priya, MIT, Cross) while Ola's role in it becomes less exclusive. This isn't jealousy — it's recalibration. The romantic history is subtext: the audience feels it before they understand it.
 
 **Priya:** The most important NEW relationship. Priya sees Ola before she sees Maciej — deliberately. "I want to talk to the person who built the simulations." This is the first time someone from outside their world has recognized Ola's independent value. It changes things. Ola and Priya develop a working trust that's different from Ola-and-Maciej — more equal, more challenging, more fun.
 
@@ -524,10 +519,15 @@ The public antagonist. Where Cross's critique is private, precise, and ultimatel
 
 **Maciej's parents (Marek & Dorota):** Mentioned, not seen in S1. Phone calls. Pride mixed with worry. Dorota sends a care package to MIT that includes homemade pierogi and a note: "Eat properly. Nobel or no Nobel."
 
-**The Romanian physicist (S2):** Foreshadowed but not named in S1. Mirrors Dr. Catalin Leescu. His arrival in S2 will be the next paradigm shift.
+**Hania Kowalska-Nowicka** (5 in S1, 15 in S2): Maciej and Ola's daughter. Not seen or named in S1 — she exists in the background of Ola's life (a phone call about bedtime, a schedule conflict with the MIT trip). Her presence becomes central in S2, where she asks the question that mirrors Halina's rooftop: "If your theory is right, is my phone conscious?" The generational echo — grandmother to granddaughter, both asking what consciousness is — is the emotional spine of the series.
+
+**Dr. Elena Antonescu (S2):** Romanian physicist from Bucharest. Arrives in S2 with an independently derived entropy-cycle framework built on Leescu's Energetic First Principles. Her work converges with RFC so precisely that it cracks open the equation. Foreshadowed but not named in S1.
+
+**Elena Vasquez** (45): Stanford physics department administrator. Has known Cross for twenty years. The person who organizes the viewing party he didn't want (Ep 8) and the person Cross trusts most outside of science. Warm, perceptive, unimpressed by Nobel Prizes. Her relationship with Cross is the closest thing he has to unconditional friendship.
+
+**David Kim** (41): Stanford experimental physics professor. Cross's colleague and counterweight — the one who thinks Cross takes everything too seriously and says so. Co-organizes the viewing party with Elena. His banner reading "KOWALSKI '26" is the kind of gesture Cross would never make and secretly appreciates. In the pilot, he emails Kowalski directly — hinting at the anonymous critique's authorship. The first person in Cross's orbit to break ranks.
 
 ---
 
-*Character Bible v1.0 — February 25, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

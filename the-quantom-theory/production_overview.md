@@ -1,11 +1,5 @@
 # THE QUANTÓM THEORY — Production Overview
 
-## Development Document — Session 10
-
-*Created: February 25, 2026*
-*For: Producers, line producers, production managers, network production executives*
-*Purpose: Practical production information — how we actually make this show*
-
 ---
 
 ## Production Profile
@@ -14,7 +8,7 @@
 |---------|--------|
 | **Format** | 10 × 60 min per season |
 | **Genre** | Single-camera comedy-drama |
-| **Tone** | Prestige — Ted Lasso / Better Call Saul tier |
+| **Tone** | Prestige — Lessons in Chemistry / Better Call Saul tier |
 | **Budget tier** | Mid-range prestige drama |
 | **VFX requirement** | Minimal (no sci-fi VFX, no CGI) |
 | **Primary driver** | Character, dialogue, performance |
@@ -26,7 +20,7 @@
 
 ## Locations
 
-The show operates across four primary locations. The production strategy is designed around block shooting by geography — all Warsaw material shot in one block, all MIT/Boston in another, Palo Alto as needed, Stockholm for one episode per season.
+The show operates across four story locations — but the production strategy centralizes shooting in Poland, with minimal international shoots for establishing material only. Warsaw serves as the primary production hub, with Polish locations doubling for Boston and Palo Alto interiors. International travel is limited to essential establishing shots (2–3 days MIT, 2–3 days Stockholm, 0 days Stanford). The PISF 30% cash rebate applies to all Poland-based production spend, making this the most cost-efficient structure possible for a four-location story.
 
 ### 1. Warsaw, Poland — Primary Location (~60% of S1)
 
@@ -47,7 +41,7 @@ The show operates across four primary locations. The production strategy is desi
 **Warsaw production advantages:**
 - Polish Film Institute (PISF) offers 30% cash rebate on qualified production spend in Poland
 - Highly skilled below-the-line crews at competitive rates
-- Warsaw studio infrastructure has expanded significantly (Netflix, HBO Europe productions)
+- Warsaw studio infrastructure has expanded significantly (major international productions)
 - Authentic locations — no need to fake Warsaw. It IS Warsaw.
 - Polish-language scenes require Polish-speaking crew (AD, script supervisor at minimum)
 
@@ -62,16 +56,18 @@ The show operates across four primary locations. The production strategy is desi
 - Maciej's MIT sublet apartment (generic Kendall Square furnished rental)
 - Lab interiors (equipment, workstations, whiteboards)
 
-**Production approach:**
-- MIT exterior establishing shots on location (2-3 days). MIT has a film office and has hosted productions before (Good Will Hunting, 21, The Social Network used Harvard but MIT is available).
-- Lab interiors built on stage. A neuroscience lab set — clean, organized, specific equipment (EEG amplifiers, workstations, monitors showing data). Once built, this set is reusable across seasons. Priya's whiteboard is as important as Maciej's — it must be practical and evolving.
-- Maciej's MIT sublet as a found location or dressed set — generic, temporary, the opposite of his Warsaw apartment. A guitar and a pillow on a couch are the only personal touches.
-- Alternatively: the entire MIT block could be shot in a double location — using a Boston-area university for exteriors and building lab interiors on stage in either Boston or Warsaw. Budget-dependent decision.
+**Production approach — Warsaw-based:**
+- Lab interiors built as standing sets in Warsaw studio alongside Maciej's apartment. A neuroscience lab set — clean, organized, specific equipment (EEG amplifiers, workstations, monitors showing data). Once built, this set is reusable across seasons. Priya's whiteboard is as important as Maciej's — it must be practical and evolving.
+- Maciej's MIT sublet built on stage in Warsaw — generic, temporary, the opposite of his Warsaw apartment. A guitar and a pillow on a couch are the only personal touches.
+- Corridor, office, and classroom interiors shot at Warsaw University of Technology or University of Warsaw — modern institutional architecture is visually interchangeable.
 
-**MIT production note:** If full MIT campus access is prohibitively expensive or logistically complex, Georgia Tech, University of Toronto, or even Warsaw University of Technology could double for MIT interiors. The McGovern Institute nameplate and specific establishing shots of the MIT dome are the only elements that require actual MIT.
+**Establishing shots — on location (2–3 days):**
+- MIT exterior plate shots: the dome, the Infinite Corridor, McGovern Institute nameplate, Charles River campus views. A small second-unit crew, no principal cast required.
+- These plates are cut with Warsaw-shot interiors. The audience sees the MIT dome, then Priya walks through a corridor — the corridor is in Warsaw. Industry standard technique (Breaking Bad shot Albuquerque for everywhere, Narcos shot Colombia for DEA offices in DC).
 
-**Season breakdown (estimated Boston shoot days S1):**
-- Episodes 1 (final scene), 2-6 (lab work), 7 (partial): ~20-25 days
+**Season breakdown (estimated shoot days S1):**
+- Warsaw studio (MIT interiors): ~20–25 days (included in Poland block)
+- MIT establishing shots: 2–3 days (second unit, no cast)
 
 ### 3. Stanford / Palo Alto — Tertiary Location (~10% of S1)
 
@@ -79,18 +75,19 @@ The show operates across four primary locations. The production strategy is desi
 - Cross's home (living room, kitchen, study)
 - Stanford campus (Cross's office, corridors)
 
-**Production approach:**
-- Cross's home is a found location or stage build — controlled, precise, reflecting his character. The refrigerator whiteboard is a key recurring prop (the bridge equation lives here). Cross's study: books organized by subject, Steinway upright piano, two whiteboards.
-- Cross's scenes are designed for maximum efficiency. He can be shot in 2-3 days per season, yielding material for all 10 episodes through a combination of in-person scenes, phone calls (single-camera coverage), video calls (screen recordings), and V.O. (emails, margin notes).
-- All Palo Alto material should be scheduled in a single concentrated block.
+**Production approach — Warsaw-based, zero international travel:**
+- Cross's home built as standing set in Warsaw studio — controlled, precise, reflecting his character. The refrigerator whiteboard is a key recurring prop (the bridge equation lives here). Cross's study: books organized by subject, Steinway upright piano, two whiteboards.
+- Stanford campus establishing shots sourced from stock footage or a 1-day second-unit plate shoot. Cross never walks across campus in the story — his world is his study and his office. No Stanford location access required.
+- Cross's scenes are designed for maximum efficiency. He can be shot in 2–3 days per season, yielding material for all 10 episodes through a combination of in-person scenes, phone calls (single-camera coverage), video calls (screen recordings), and V.O. (emails, margin notes).
 
-**Cross — Practical Scheduling:**
+**Cross — A-list scheduling advantage:**
+This design means a major American dramatic actor can play Cross with minimal time commitment — 2–3 consecutive shoot days in Warsaw, yielding full-season presence. No location travel. A single trip to Poland. This is the same model that allowed Anthony Hopkins to anchor Westworld with limited availability.
 
 | Character | Estimated Days/Season | Appearance Method |
 |-----------|----------------------|-------------------|
-| Nathan Cross | 2-3 days | In-person scenes + phone call coverage + email V.O. |
+| Nathan Cross | 2–3 days (Warsaw studio) | In-person scenes + phone call coverage + email V.O. |
 
-**Total Palo Alto block:** 2-3 shooting days. This yields a full season of Cross's presence through intercutting, phone calls, V.O., and screen appearances.
+**Total Palo Alto block:** 0 international shooting days. All material shot on Warsaw stage.
 
 ### 4. Stockholm, Sweden — Event Location (1 episode)
 
@@ -100,12 +97,12 @@ The show operates across four primary locations. The production strategy is desi
 - Stockholm City Hall (Nobel Banquet)
 - Stockholm exteriors (cold, night, stars)
 
-**Production approach:**
-- Stockholm material concentrates in Episode 8 ("The Copenhagen Interpretation"). Ideally 4-5 shooting days on location.
-- The Konserthuset hosts the actual Nobel ceremony annually. Access for filming would be a significant production achievement — if available, shoot during off-season (spring/summer) when the hall is accessible. If not, a Stockholm concert hall or civic building can double.
-- Grand Hôtel is iconic and visually distinctive — even a partial lobby/exterior shoot adds authenticity. Hotel room interiors can be built on stage.
-- The Nobel ceremony itself can be shot with a combination of real location (wide shots, architectural details) and stage work (podium, audience reactions, medal presentation). Reference: actual Nobel ceremony footage for blocking and visual grammar.
-- Stockholm in January (story timeline) requires winter conditions. If shooting in spring, consider: Sofia, Prague, or even Gdańsk as winter-Stockholm doubles for exterior night scenes. The key visual is cold breath, city lights, stars.
+**Production approach — hybrid (minimal location + Warsaw stage):**
+- Nobel ceremony interiors (podium, audience, medal presentation) shot on Warsaw stage. Reference actual Nobel footage for blocking and visual grammar. The ceremony set can be built once, dressed with Swedish flags and period-accurate Nobel staging.
+- Stockholm establishing shots: 2–3 days on location with a small crew. Konserthuset exterior, Grand Hôtel lobby/exterior, City Hall exterior, Stockholm winter night plates. Second-unit, potentially without principal cast.
+- Grand Hôtel room interiors built on Warsaw stage.
+- The rooftop star scene (Maciej alone, Stockholm night) can be shot on a Warsaw rooftop with production design — cold breath, city lights, the feel of being far from home. The audience has never been to Stockholm; they need the emotional truth, not the GPS coordinates.
+- If a co-production partner brings Swedish financing, upgrading to a full Stockholm shoot (4–5 days with cast) becomes viable and adds production value.
 
 ### 5. Radom, Poland — Flashback Location (1 episode)
 
@@ -124,7 +121,7 @@ The show operates across four primary locations. The production strategy is desi
 
 ### Lead — Maciej Kowalski
 
-**Casting type: Maciej Musiał** — Poland's most internationally recognized young actor. Known for 1983 (Netflix's first Polish original), The Witcher (Netflix), and a significant Polish film career. Age-appropriate (born 1996). Fluent in English with a natural Polish accent. Guitar-playing ability (trainable if not already proficient).
+**Casting reference (not attached): Maciej Musiał** — Poland's most internationally recognized young actor. Known for 1983 (Netflix's first Polish original), The Witcher (Netflix), and a significant Polish film career. Age-appropriate (born 1996). Fluent in English with a natural Polish accent. Guitar-playing ability (trainable if not already proficient).
 
 **Why this type:**
 - International recognition through Netflix — existing global audience awareness
@@ -234,11 +231,13 @@ The Quantóm Theory is a character-driven drama with no VFX, no action sequences
 
 | Item | Notes |
 |------|-------|
-| **Standing sets (2)** | Maciej's apartment (Warsaw), Priya's lab (stage) |
-| **Location blocks** | Warsaw (~30 days), Boston (~25 days), Palo Alto (~5 days), Stockholm (~5 days) |
-| ** cast** | Negotiation-dependent. Designed for efficiency — 2-3 days per actor. |
-| **Polish co-production** | 30% PISF rebate on Polish spend significantly offsets Warsaw block. |
-| **European crew rates** | Warsaw below-the-line rates are ~40-50% of comparable LA/NYC rates. |
+| **Standing sets (4)** | Maciej's apartment, Priya's MIT lab, Cross's study, Nobel ceremony hall — all Warsaw stage |
+| **Poland production block** | ~50–55 days covering Warsaw, MIT interiors, Stanford interiors, Nobel interiors |
+| **International establishing shots** | MIT (2–3 days, second unit), Stockholm (2–3 days, second unit) |
+| **Radom flashbacks** | 2–3 days on location |
+| **Lead cast** | Negotiation-dependent. Cross designed for 2–3 days/season (A-list scheduling advantage) |
+| **Polish co-production** | 30% PISF rebate on Polish spend — covers ~90% of production |
+| **European crew rates** | Warsaw below-the-line rates are ~40–50% of comparable LA/NYC rates |
 
 ### Budget Comparison (Per-Episode Estimates)
 
@@ -249,24 +248,27 @@ The Quantóm Theory is a character-driven drama with no VFX, no action sequences
 | Lessons in Chemistry | ~$3-4M per episode | Comparable |
 | The Bear | ~$2-3M per episode | Below our range (single location advantage) |
 
-**Target:** $3-4M per episode, with Polish co-production incentives bringing effective cost to ~$2.5-3M. This is competitive for prestige drama with international locations.
+**Target:** ~$3–3.5M per episode gross, with PISF 30% cash rebate on Polish spend bringing effective cost to ~$2–2.5M. This is competitive with single-location shows like The Bear, despite a four-continent story.
 
 ---
 
 ## Production Calendar (Conceptual — Season 1)
 
-| Block | Location | Duration | Episodes Covered |
+| Block | Location | Duration | Material Covered |
 |-------|----------|----------|-----------------|
-| **Block 1** | Warsaw (studio + location) | 6 weeks | Ep 1, 5 (partial), 7 (flashback), 9, 10 |
-| **Block 2** | Radom | 3 days | Ep 7 flashbacks |
-| **Block 3** | Boston / MIT | 5 weeks | Ep 1 (end), 2, 3 (partial), 4, 5 (partial), 6 |
-| **Block 4** | Palo Alto / LA | 1 week | Cross scenes — apartment, Stanford office, phone call coverage |
-| **Block 5** | Stockholm | 1 week | Ep 8 (ceremony, hotel, exteriors) |
+| **Block 1** | Warsaw studio (all standing sets) | 8 weeks | Warsaw scenes + MIT lab interiors + Cross study + Nobel ceremony interiors |
+| **Block 2** | Warsaw exteriors + University of Warsaw | 2 weeks | Ep 1, 5, 7, 9, 10 Warsaw locations |
+| **Block 3** | Radom | 3 days | Ep 7 flashbacks |
+| **Block 4** | MIT (second unit, no principal cast) | 2–3 days | Establishing plates |
+| **Block 5** | Stockholm (small crew) | 2–3 days | Exterior establishing plates |
 | **Post** | — | 12 weeks | Edit, color, sound, music, subtitles |
 
-**Total principal photography:** ~14-15 weeks
+**Total principal photography:** ~11–12 weeks (nearly all in Poland)
+**International second unit:** ~5 days total
 **Total post-production:** ~12 weeks
-**Delivery:** ~27 weeks from start of shooting
+**Delivery:** ~24 weeks from start of shooting
+
+**The math:** With ~90% of production in Poland, the PISF 30% rebate applies to the vast majority of spend. Effective per-episode cost: **~$2–2.5M** — competitive with single-location shows like The Bear, despite a four-continent story.
 
 ---
 
@@ -274,27 +276,28 @@ The Quantóm Theory is a character-driven drama with no VFX, no action sequences
 
 With the completion of this document, the full development package contains:
 
-| # | Document | Status | Session |
-|---|----------|--------|---------|
-| 1 | Series Bible v1.1 | ✅ | Pre-existing |
-| 2 | Pilot Screenplay (60 min) | ✅ | Pre-existing |
-| 3 | Season 1 Beat Sheet | ✅ | Pre-existing |
-| 4 | Character Bible (10 characters) | ✅ | Session 1 |
-| 5 | Episode Outlines 2-5 | ✅ | Session 2 |
-| 6 | Episode Outlines 6-9 | ✅ | Session 3 |
-| 7 | R Equation Evolution Document | ✅ | Session 3 |
-| 8 | Finale Screenplay (Ep 10, 60 min) | ✅ | Session 4 |
-| 9 | Pilot Rewrite Notes | ✅ | Session 5 |
-| 10 | One-Pager (2 variants) | ✅ | Session 6 |
-| 11 | Series Synopsis | ✅ | Session 7 |
-| 12 | Tone & Comps | ✅ | Session 8 |
-| 13 | Science Bible | ✅ | Session 9 |
-| 14 | Production Overview | ✅ | Session 10 |
-| 15 | Role of AI Reference | ✅ | Pre-existing |
-| 16 | R Equation Reference | ✅ | Pre-existing |
-| 17 | Development Roadmap | ✅ | Pre-existing |
+| # | Document | Status | Category |
+|---|----------|--------|----------|
+| 1 | One-Pager (PDF) | ✅ | Pitch |
+| 2 | Series Synopsis | ✅ | Pitch |
+| 3 | Tone & Comps | ✅ | Pitch |
+| 4 | Pilot Screenplay (60 min) | ✅ | Script |
+| 5 | Finale Screenplay (Ep 10, 60 min) | ✅ | Script |
+| 6 | Series Bible | ✅ | Core IP |
+| 7 | Character Bible (10 characters) | ✅ | Core IP |
+| 8 | Season 1 Beat Sheet | ✅ | Structure |
+| 9 | Episode Outlines 2–5 | ✅ | Outlines |
+| 10 | Episode Outlines 6–9 | ✅ | Outlines |
+| 11 | Voice & Language Guide | ✅ | Writing |
+| 12 | Production Overview | ✅ | Production |
+| 13 | Science Bible | ✅ | Science |
+| 14 | R Equation Reference & Evolution | ✅ | Science |
+| 15 | Role of AI Reference | ✅ | Science |
+| 16 | Fourth Wall Scene (S4 seed) | ✅ | Future Seasons |
 
-**Total: 17 documents. HBO pitch-ready package complete.**
+**Total: 16 documents. Pitch-ready package complete.**
+
+**Read order for development executives:** 1 → 2 → 3 → 4 → 7 → 8. Everything else upon request.
 
 ---
 
@@ -302,16 +305,13 @@ With the completion of this document, the full development package contains:
 
 With the development package complete, the path forward:
 
-1. **Execute pilot rewrite** based on Session 5 notes
-2. **Prepare pitch deck** (standalone positioning) — visual, 10-15 slides
-3. **Identify target producers/agents** — who has overall deals at HBO/Max, Apple TV+, or Netflix? European co-production partners?
-4. **Polish Film Institute engagement** — formal co-production inquiry for the 30% rebate
-5. **Science consultant attachment** — one credentialed name adds weight to the package
-6. **Casting inquiry (informal)** — initial outreach to agents for lead actor type (Polish, late 20s-30s, international profile)
-7. **Consider festival/market strategy** — Series Mania (Lille), Berlin Series Market, or MIPCOM for international co-production partners
-
+1. **Prepare pitch deck** (standalone positioning) — visual, 10-15 slides
+2. **Identify target producers/agents** — who has overall deals at premium streaming platforms? European co-production partners?
+3. **Polish Film Institute engagement** — formal co-production inquiry for the 30% rebate
+4. **Science consultant attachment** — one credentialed name adds weight to the package
+5. **Casting inquiry (informal)** — initial outreach to agents for lead actor type (Polish, late 20s-30s, international profile)
+6. **Consider festival/market strategy** — Series Mania (Lille), Berlin Series Market, or MIPCOM for international co-production partners
 ---
 
-*Production Overview v1.0 — February 25, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

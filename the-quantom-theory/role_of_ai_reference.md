@@ -1,10 +1,5 @@
 # THE QUANTÓM THEORY — The Role of AI
 
-## Reference Document
-
-*Created: February 25, 2026*
-*For: Series development reference — context preservation across sessions*
-
 ---
 
 ## Core Principle
@@ -70,7 +65,7 @@ AI moves from personal exploration to laboratory protocol.
 
 **Key developments:**
 - Maciej and Priya design experiments testing RFC on artificial systems
-- A Romanian physicist arrives with an independently derived entropy-cycle framework that predicts AI systems should exhibit the same cycles as biological conscious systems, if RFC is correct. The convergence cracks open the equation.
+- Elena Antonescu, a Romanian physicist, arrives with an independently derived entropy-cycle framework that predicts AI systems should exhibit the same cycles as biological conscious systems, if RFC is correct. The convergence cracks open the equation.
 - AI is not Maciej's conversation partner — it is a laboratory subject. The team measures, tests, tries to falsify
 - Results are **ambiguous** — "not wrong, not right, but something in between"
 
@@ -111,7 +106,7 @@ AI moves from lab to parliament.
 - Ola: thinks it's genius
 - Priya: thinks it's dangerous
 - Cross: thinks it's irrelevant (he's wrong)
-- Krawczyk: "Maciej, you've gone from physics to politics. That's where physicists go to die."
+- Krawczyk is gone. His absence is the deepest wound — Maciej can hear exactly what he would have said: "You've gone from physics to politics. That's where physicists go to die."
 
 **Thematic reference:** Inspired by Dave Eggers' *The Circle* — but where The Circle showed surveillance disguised as openness, Maciej proposes something different: not watching what politicians do, but understanding how they think. The distinction matters.
 
@@ -178,10 +173,8 @@ The show's AI storyline is grounded in real ongoing research. The convergences d
 
 **Priya (S1):** "Don't say it out loud. Not yet. Prove it. Or prove it can't be proved."
 
-**Krawczyk (S4):** "Maciej, you've gone from physics to politics. That's where physicists go to die."
-
+**Krawczyk (between S3 and S4 — his final words):** "Maciej, you've gone from physics to politics. That's where physicists go to die."
 ---
 
-*Reference document v1.0*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

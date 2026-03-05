@@ -1,10 +1,5 @@
 # THE QUANTÓM THEORY — Tone, Comparables & Market Positioning
 
-## Development Document — Session 8
-
-*Created: February 25, 2026*
-*For: Development executives, producers, marketing, packaging*
-
 ---
 
 ## The Tone in One Sentence
@@ -61,7 +56,7 @@ Clinical blue. Clean lines. Equipment hum. The organized chaos of active science
 
 ### Stanford / Palo Alto
 
-Warm tones. Institutional geometry. Manicured lawns, sandstone arcades, the quiet wealth of Silicon Valley academia. Cross's study is precise, controlled — books organized by subject, piano by the window, a single whiteboard holding his bridge equation that evolves silently through the season. The contrast with Maciej's messy Warsaw apartment tells the thematic story: structure vs. exploration, certainty vs. curiosity.
+Warm tones. Institutional geometry. Manicured lawns, sandstone arcades, the quiet wealth of Silicon Valley academia. Cross's study is precise, controlled — books organized by subject, piano by the window, a whiteboard holding his bridge equation that evolves silently through the season. The contrast with Maciej's messy Warsaw apartment tells the thematic story: structure vs. exploration, certainty vs. curiosity.
 
 **Reference palette:** The Social Network (2010, Fincher) — institutional architecture as power. But warmer. Imagine Stanford shot by the cinematographer of The Bear — tighter close-ups, more silence. The comedy lives in behavior, not in blocking.
 
@@ -155,19 +150,19 @@ The viewers who watched Cosmos, listened to Lex Fridman, read Carlo Rovelli, and
 
 ---
 
-## Market Positioning — Why HBO / Max
+## Market Positioning — Why This Show, Why Now
 
-HBO has built the defining prestige brands of the last three decades: The Sopranos, The Wire, Game of Thrones, Succession, True Detective, The White Lotus. Each show redefined what television could be.
+The prestige brands of the last decade — from Succession to Shogun, from The Bear to Lessons in Chemistry — share a common trait: they treated their audience as intelligent adults. The Quantóm Theory belongs in that lineage.
 
-The Quantóm Theory is the next step: a show that makes the most important question of the 21st century — what is consciousness, and can it exist in machines? — into a character-driven comedy-drama with built-in crossover appeal.
+It makes the most important question of the 21st century — what is consciousness, and can it exist in machines? — into a character-driven comedy-drama with built-in crossover appeal.
 
-**What HBO gets:**
+**What a prestige partner gets:**
 
-1. **A prestige original with global reach.** An international production — Warsaw, MIT, Stanford, Stockholm — with a Polish lead, subtitled scenes, and the kind of intellectual ambition that defines the HBO brand. This is the show that proves prestige drama doesn't need an American living room.
+1. **A prestige original with global reach.** A Warsaw-based production hub — ~90% shot in Poland, with Warsaw studio doubling for MIT and Stanford interiors. A Polish lead, subtitled scenes, and the kind of intellectual ambition that defines the best of premium television. A story spanning four continents at a fraction of the cost. This is the show that proves prestige drama doesn't need an American living room.
 
 2. **The AI show that isn't dystopia.** Every studio is developing AI content. Most of it is fear-driven (killer robots, surveillance states). This is the counter-programming: a warm, funny, intellectually honest exploration of the question everyone is actually asking.
 
-3. **European co-production potential.** Polish Film Institute funding. European location shooting (Warsaw, Stockholm). Tax incentives. An authentic international production at a mid-range prestige budget — no VFX, character-driven, the kind of show that costs less than it looks.
+3. **Built-in cost efficiency.** PISF 30% cash rebate on Polish spend covers ~90% of production. International shoots limited to establishing plates (5 days total, second unit). Effective per-episode cost: ~$2–2.5M — prestige quality at mid-range budget. No VFX, no CGI, no action sequences. Pure performance and writing.
 
 4. **Award positioning.** The show is built for the conversation that drives Emmy campaigns: what is television doing that matters? A comedy-drama about consciousness, starring a Polish lead, with real science and subtitled scenes — this is the show critics write about.
 
@@ -179,6 +174,5 @@ The Quantóm Theory is the next step: a show that makes the most important quest
 
 ---
 
-*Tone & Comps v1.0 — February 25, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

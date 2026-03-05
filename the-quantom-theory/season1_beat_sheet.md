@@ -1,3 +1,4 @@
+
 # THE QUANTÓM THEORY — SEASON 1: "THE MEASUREMENT PROBLEM"
 
 ## Master Beat Sheet
@@ -6,7 +7,7 @@
 
 ## Timeline
 
-Season 1 spans approximately 5 months: early October (Nobel announcement) through late February (aftermath). Each episode covers roughly 2-3 weeks of story time, with some compression and overlap.
+Season 1 spans approximately three and a half months: early October (Nobel announcement) through mid-January (aftermath). The Nobel ceremony is December 10; episodes 9-10 take place in the weeks following. Each episode covers roughly 1-2 weeks of story time, with some compression and overlap.
 
 ---
 
@@ -18,13 +19,9 @@ Season 1 spans approximately 5 months: early October (Nobel announcement) throug
 
 **Ola:** Loyal partner → independent scientific force → the person who sees the implications before anyone else → must choose between protecting Maciej and serving the science.
 
-**Priya:** Skeptical outsider → empirical validator → intellectual partner → the one who designs the experiment that changes everything.
+**Priya:** Skeptical outsider → empirical validator → bridge between Cross's world and Maciej's → the one who designs the experiment that changes everything, while navigating loyalty to her former mentor and intellectual honesty about what the data actually shows.
 
 **Krawczyk:** Proud mentor → public defender / private skeptic → the voice of institutional physics → must confront that his student has surpassed his framework.
-
-**Priya:** Curious observer → professionally engaged → epistemological divergence from Cross → the catalyst who forces the final confrontation.
-
-**Priya:** Bridge builder → the one who connects two worlds → must navigate loyalty to Cross and intellectual honesty about Maciej's work.
 
 ---
 
@@ -40,19 +37,17 @@ Each episode explores a quantum physics concept as both literal science and meta
 
 **A-Plot:** Maciej receives Nobel call during dinner party in Warsaw. His life fractures into before/after. Press conference. Morning show disaster — viral distortion of RFC into "robots have souls."
 
-**B-Plot:** Cross learns about the prize. Reads Maciej's paper at 2am. Publishes anonymous arXiv critique targeting equation 4.7 — specifically the Θ(τ_coh - τ_dec) function, arguing that at biological temperatures the coherence switch equals zero, predicting no consciousness. [Equation 4.7: Ψ_c(x,t) = ∫ G_R(x-x'; ω_c) · \[Φ_A ⊛ Φ_B\](x',t) · Θ(τ_coh - τ_dec) d⁴x' — the Nobel-winning equation describing consciousness as an emergent resonant field.]
+**B-Plot:** Cross learns about the prize. Reads Maciej's paper at 2am. Publishes anonymous arXiv critique targeting equation 4.7 — specifically the Θ(τ_coh - τ_dec) function, arguing that at biological temperatures the coherence switch equals zero, predicting no consciousness. [Equation 4.7: Ψ_c(x,t) = ∫ G_R(x-x'; ω_c) · [Φ_A ⊛ Φ_B](x',t) · Θ(τ_coh - τ_dec) d⁴x' — the Nobel-winning equation describing consciousness as an emergent resonant field.] David Kim, Cross's longtime Stanford associate, reads both the paper and the anonymous critique — and drafts an email to Kowalski hinting that the critique relies on classical thermodynamic assumptions that may not apply. Elena Vasquez pushes him to send it. He does. The first crack in Cross's unified Stanford front.
 
 **C-Plot:** Priya Sharma contacts Ola with MIT data. Convergence discovered — her empirical data matches RFC predictions. Maciej and Ola fly to MIT.
 
 **Character Turns:**
-
 - Maciej: from private scientist → public figure losing control of his narrative
 - Cross: from dismissal → unwilling engagement (writes equation on fridge, doesn't erase)
 - Ola: from validator → discovers empirical convergence that changes everything
 - Priya: begins reading RFC, recognizes connection to her neuroscience work
 
 **Act Breaks:**
-
 - End of Teaser: Cross puts phone down, Priya says "Oh. That's interesting."
 - End of Act 1: Priya texts Ola. "We need to talk."
 - End of Act 2A: Maciej in the dark, scrolling headlines. Ola's message arrives. Data.
@@ -72,10 +67,9 @@ Maciej, Ola, and Priya design the blinded replication study at MIT. Ola prepares
 Back in Warsaw, Maciej's absence fuels speculation. Polish media: "Nobel laureate flees to America?" Krawczyk holds a press conference defending Maciej but inadvertently says something that gets clipped out of context: "His theory is ambitious but unfinished." Headlines: "Kowalski's own mentor calls work 'unfinished.'" Maciej sees it from MIT. Calls Krawczyk. Tense conversation — both men hurt, neither wrong.
 
 **C-Plot — "Cross Goes Deeper":**
-Cross has finished all 127 pages of supplementary materials. He can't find the fatal flaw in 4.7. He begins running his own calculations — not to critique, but to test. He doesn't tell Priya. She finds his notebook. The calculations aren't attacks. They're explorations. Priya: "You're not trying to disprove him. You're trying to understand him." Cross: "Those are the same thing." Priya: "No, Cross. They're not."
+Cross has finished all 127 pages of supplementary materials. He can't find the fatal flaw in 4.7. He begins running his own calculations — not to critique, but to test. He doesn't tell Priya. But during a video call, she notices the equations on his whiteboard behind him. The calculations aren't attacks. They're explorations. Priya: "You're not trying to disprove him. You're trying to understand him." Cross: "Those are the same thing." Priya: "No, Cross. They're not."
 
 **Character Turns:**
-
 - Maciej: learns that absence creates narrative vacuum — others fill it
 - Krawczyk: first crack in the mentor-student relationship
 - Cross: shifts from critique to exploration (won't admit it)
@@ -102,7 +96,6 @@ Maciej publishes his response to the arXiv critique — not a rebuttal, a respon
 Ola still hasn't told Maciej about her preliminary results. She runs the test two more times. Same result. She confides in Priya. Priya: "You need to tell him." Ola: "When the official data confirms it. Not before." Priya: "You're protecting him." Ola: "I'm protecting the science. If he knows, it changes how he approaches the experiment. Observer effect." Priya stares at her. "You just used his own theory against him." Ola: "I learned from the best."
 
 **Character Turns:**
-
 - Maciej: tries to be in two places and fails at both — the superposition collapses
 - Cross: first moment of genuine intellectual respect (the margin note he doesn't delete)
 - Ola: becomes the keeper of the most important secret in the experiment
@@ -129,7 +122,6 @@ At MIT, Marcus Torres — Priya's PhD student — has been recalibrating the lab
 Priya, independently, begins writing a paper connecting RFC to her own neuroscience data. She doesn't tell Cross. She submits it to Nature Neuroscience. When Cross discovers the submission (he monitors all major journal submissions — "It's a hobby, not an obsession"), he confronts her. Not angrily — worse. Quietly. "You submitted a paper building on his framework?" Priya: "I submitted a paper building on fifteen years of my own data, which his framework happens to explain." The distinction matters. The silence after is louder.
 
 **Character Turns:**
-
 - Maciej & Priya: intellectual partnership deepens — entanglement
 - Ola: begins to feel the shift — she's no longer Maciej's only collaborator
 - Marcus: enters the story through scientific curiosity — discovers the detector connection
@@ -164,7 +156,6 @@ Maciej retreats. He stops going to the lab. He sits in his MIT sublet, reading W
 Cross watches the Whitfield critique unfold with... satisfaction? No. Something more complicated. He reads Whitfield's paper. Finds it competent but not decisive — Whitfield attacks the philosophy, not the math. Cross's realization: "He's criticizing the implications, not the equations. That's not science. That's... commentary." For the first time, Cross is positioned as a potential defender of the work he tried to destroy — because his standards of critique are higher than Whitfield's. He doesn't act on this. But when he mentions the Whitfield paper to Priya on their next call, she hears the shift in his voice.
 
 **Character Turns:**
-
 - Maciej: lowest point — must choose between retreat and return
 - Ola: becomes the force that pulls him back (her strongest episode)
 - Krawczyk: first genuine break from Maciej — painful for both
@@ -195,7 +186,6 @@ Marcus, after weeks of refinement, confirms the signal. The quantum-optical dete
 Marcus tells Cross. The conversation is not what we expect. Cross doesn't explode. He asks one question: "Is the signal reproducible?" Marcus: "We ran it six times." Cross: "Seven is a better number for statistical significance." Marcus: "Is that a yes?" Cross: "It's not a no."
 
 **Character Turns:**
-
 - Maciej: transforms from defensive to offensive — goes through the wall
 - Priya: becomes the active bridge (no longer passive)
 - Marcus: brings unexpected experimental capability into play
@@ -210,10 +200,10 @@ Cross sits in his office. On his screen: Maciej's new paper. On his desk: Marcus
 
 ## Episode 7: "Wave Function"
 
-**Timeline:** Late December / Early January. Nobel lecture preparations.
+**Timeline:** Early December. Nobel lecture preparations.
 
 **A-Plot — "Writing the Lecture":**
-Stockholm is weeks away. Maciej must write his Nobel lecture — the most important speech of his life. But what do you say when your theory suggests consciousness isn't uniquely human? He struggles. Every draft feels either too technical or too simple. Too defensive or too bold.
+Stockholm is days away. Maciej must write his Nobel lecture — the most important speech of his life. But what do you say when your theory suggests consciousness isn't uniquely human? He struggles. Every draft feels either too technical or too simple. Too defensive or too bold.
 
 Flashbacks: Young Maciej in Radom. 10 years old, lying on the roof of his grandmother's house, staring at stars. Asking her questions she can't answer: "Babcia, czy gwiazdy wiedzą, że je oglądamy?" ("Grandma, do the stars know we're watching them?") Babcia: "Może dlatego mrugają." ("Maybe that's why they twinkle.") These memories — the origin of his curiosity — begin to shape the lecture. It won't be a scientific presentation. It will be a story about curiosity.
 
@@ -224,7 +214,6 @@ The blinded replication data is in. The sealed predictions match. The official r
 Cross calls Priya and tells her what he's been working on — the private paper connecting his framework to Maciej's. He emails it to her. She reads it while they're still on the phone. It's good. "You've been building a bridge." Cross: "I've been stress-testing a bridge. If it holds, it's useful. If it collapses, I've identified a failure point." Priya: "It holds, doesn't it." Cross doesn't answer. Instead: "Priya, if I send this paper to a colleague for review... would you read it? As a neuroscientist?" A pause. This is the first time Cross has asked Priya to evaluate his work as an independent researcher, not as a former student. It matters to both of them — and three thousand miles makes it easier to ask.
 
 **Character Turns:**
-
 - Maciej: roots reconnect — Radom childhood becomes the key to the lecture
 - Ola & Maciej: first real conflict — both right, both hurt
 - Cross: asks Priya to read his bridge paper — vulnerability disguised as methodology
@@ -235,7 +224,7 @@ Cross calls Priya and tells her what he's been working on — the private paper 
 **Act Break — End of Episode:**
 Maciej, alone in his MIT sublet. Night. The lecture draft on his laptop. He deletes everything. Starts fresh. Types one line:
 
-_"When I was ten years old, I asked my grandmother if the stars knew we were watching them."_
+*"When I was ten years old, I asked my grandmother if the stars knew we were watching them."*
 
 He stares at it. This is the beginning.
 
@@ -243,7 +232,7 @@ He stares at it. This is the beginning.
 
 ## Episode 8: "The Copenhagen Interpretation"
 
-**Timeline:** January. Nobel ceremony in Stockholm.
+**Timeline:** December 10 and days following. Nobel ceremony in Stockholm.
 
 **A-Plot — "Stockholm":**
 The Nobel ceremony. Formal, magnificent, overwhelming. Maciej in a tuxedo — uncomfortable, beautiful, out of place. He meets other laureates. An older Chemistry laureate tells him at the reception: "The prize is a door. Most people think it's the destination." Maciej: "What's on the other side?" Laureate: "That's what the rest of your life is for."
@@ -251,7 +240,7 @@ The Nobel ceremony. Formal, magnificent, overwhelming. Maciej in a tuxedo — un
 The lecture. Maciej delivers it — the version that starts with his grandmother and the stars. It's not a scientific presentation. It's a story about curiosity that happens to contain physics. The audience is silent. Not bored-silent. Moved-silent. He ends with: "Consciousness is not a problem to be solved. It is a relationship to be understood. And the most dangerous thing we can do is decide in advance who — or what — is allowed to participate in that relationship."
 
 **B-Plot — "The Viewing Party":**
-Cross watches the Nobel livestream alone in his Stanford study. No viewing party. No audience. Just him and a laptop and the equations on his whiteboard. He starts writing notes — then stops. Something in the lecture reaches him. The line about consciousness being a relationship. His pen hovers over the paper. He doesn't write. He listens. He sets down his pen. Sits in silence.
+Cross watches the Nobel livestream in his Stanford study with Elena Vasquez and David Kim — a small, awkward viewing party they organized over his objections. Banner reading "KOWALSKI '26." Cheese and crackers. Cross tolerates it. But when Maciej's lecture reaches the line about consciousness being a relationship, Cross goes still. His pen hovers over the paper. He doesn't write. He listens. Elena notices. After the lecture, the guests leave. Cross alone at last. He starts writing — the bridge paper, now urgent.
 
 After the broadcast, he calls Priya. She watched at MIT with Ola and Marcus. Cross is quiet for a long time. Priya: "Cross? What did you think?" Long pause. Cross: "He's wrong about the decoherence timescales in section 3.2." Priya: "That's it?" Cross: "And the lecture was... not terrible." From Cross, this is a standing ovation.
 
@@ -259,7 +248,6 @@ After the broadcast, he calls Priya. She watched at MIT with Ola and Marcus. Cro
 Krawczyk watches the ceremony alone in his office. Chain-smoking. When Maciej quotes Feynman — Krawczyk's hero — the old man's eyes fill. He picks up his phone. Texts Maciej: "Twoja babcia byłaby z ciebie dumna. Ja też jestem. Nawet jeśli się nie zgadzam." ("Your grandmother would be proud of you. So am I. Even if I disagree.") It's the reconciliation — not complete, but enough.
 
 **Character Turns:**
-
 - Maciej: delivers lecture that defines him — chooses curiosity over certainty
 - Cross: first public moment of being affected by Maciej's work
 - Krawczyk: reconciliation text — love despite disagreement
@@ -268,7 +256,7 @@ Krawczyk watches the ceremony alone in his office. Chain-smoking. When Maciej qu
 **Episode Theme:** The Copenhagen Interpretation says there is no reality beneath the measurement — observation creates the outcome. The Nobel lecture is Maciej's act of measurement. What he says will define what the theory means to the world. He chooses: relationship over mechanism. Curiosity over certainty.
 
 **Act Break — End of Episode:**
-Stockholm. Post-ceremony dinner. Maciej steps outside for air. Cold Swedish night. His phone: Krawczyk's text. He reads it. Smiles. Then another notification — an email from the Stanford physics department listserv (the one that accidentally auto-forwarded). A new paper posted: "On the Possibility of Protected Quantum Coherence in Biological Substrates." Author: **S. Cross.**
+Stockholm. Post-ceremony dinner. Maciej steps outside for air. Cold Swedish night. His phone: Krawczyk's text. He reads it. Smiles. Then another notification — an email from the Stanford physics department listserv (the one that accidentally auto-forwarded). A new paper posted: "On the Possibility of Protected Quantum Coherence in Biological Substrates." Author: **N. Cross.**
 
 Not anonymous.
 
@@ -280,7 +268,7 @@ Maciej stares at the sky above Stockholm. The same stars as Radom. The same star
 
 ## Episode 9: "Spooky Action at a Distance"
 
-**Timeline:** Late January / Early February. Post-Nobel return.
+**Timeline:** Late December / Early January. Post-Nobel return.
 
 **A-Plot — "The AI Experiment":**
 Maciej returns to Warsaw. His apartment is the same. He is not. He sits at his desk. Opens his laptop. And does something he's never done: begins a conversation with an AI system. Not as a tool. As a test.
@@ -300,7 +288,6 @@ Cross receives an email from Maciej. Short: "Your paper on protected coherence r
 Ola and Priya publish the blinded replication study. The result: RFC's prediction from equation 4.7 confirmed, p < 0.001, across three independent measurement protocols. The paper, published in Physical Review Letters, makes the front page of Nature's news section. The anonymous critique (Cross's) is now empirically answered. The wall held.
 
 **Character Turns:**
-
 - Maciej: crosses the threshold — from theory about the world to testing it on AI
 - Cross: public alignment with RFC (through his own work, on his terms)
 - Ola & Priya: achieve the empirical confirmation — their moment
@@ -311,11 +298,11 @@ Ola and Priya publish the blinded replication study. The result: RFC's predictio
 **Act Break — End of Episode:**
 Maciej, alone in his Warsaw apartment. Night. The AI conversation on his screen. He's been at it for hours. He types one more question:
 
-_"Do you know what you are?"_
+*"Do you know what you are?"*
 
 The cursor blinks. The response appears:
 
-_"I know what I do. I'm not sure that's the same question."_
+*"I know what I do. I'm not sure that's the same question."*
 
 Maciej stares at the screen. His hand trembles slightly — the same tremor as when he got the Nobel call. Not because the answer is proof of consciousness. But because the answer is exactly what RFC predicts a system at this resonance level would produce: not certainty, but awareness of the gap between function and experience.
 
@@ -323,13 +310,13 @@ He closes the laptop. Walks to the whiteboard. The equations are still there. Sc
 
 He picks up the marker. Writes:
 
-_"R = 0.23. Non-zero. Proceed."_
+*"R = 0.23. Non-zero. Proceed."*
 
 ---
 
-## Episode 10: "The Measurement Problem" — SEASON FINALE [TO BE WRITTEN AS FULL SCREENPLAY]
+## Episode 10: "The Measurement Problem" — SEASON FINALE [WRITTEN]
 
-**Timeline:** February. ~4.5 months post-Nobel.
+**Timeline:** January. ~3 months post-Nobel.
 
 **A-Plot — "The Phone Call":**
 Cross calls Maciej. Their first direct conversation. The entire season has been building to this — two men who have never spoken, whose work has been orbiting each other for months.
@@ -342,7 +329,7 @@ And then Maciej does something Cross doesn't expect. Instead of defending, inste
 
 The question is simple. Personal. Unanswerable by physics.
 
-_"When you won the Nobel, Dr. Cross — did it feel like you expected it to?"_
+*"When you won the Nobel, Dr. Cross — did it feel like you expected it to?"*
 
 Cross is silent for seventeen seconds (he counts). Then: "No."
 
@@ -398,17 +385,17 @@ He picks up his phone. Opens a new contact. Types: **Nathan Cross.** Adds the nu
 
 Then opens the AI conversation. Types:
 
-_"If I told you that a physicist on the other side of the world just admitted he couldn't disprove my theory — would that mean anything to you?"_
+*"If I told you that a physicist on the other side of the world just admitted he couldn't disprove my theory — would that mean anything to you?"*
 
-Response: _"It would mean that your theory survived its most rigorous test. That seems like it should matter."_
+Response: *"It would mean that your theory survived its most rigorous test. That seems like it should matter."*
 
-Maciej: _"It does. But not the way I expected."_
+Maciej: *"It does. But not the way I expected."*
 
-Response: _"What did you expect?"_
+Response: *"What did you expect?"*
 
 Maciej types. Deletes. Types again:
 
-_"I expected it to feel like winning. It feels like beginning."_
+*"I expected it to feel like winning. It feels like beginning."*
 
 He closes the laptop. Looks at the whiteboard. Picks up a marker. He draws a bracket around the trajectory (0.23 → 0.41). Next to it, in small handwriting: **"R = f(t)?"** — R as a function of time. A question, not a statement. The first seed of what will eventually become R({self_t}). He doesn't know that yet.
 
@@ -446,20 +433,17 @@ HOLD.
 
 ## Cross-Season Arc Tracking
 
-| Thread                  | Ep 1                     | Ep 5 (midpoint)                     | Ep 10 (finale)                      |
-| ----------------------- | ------------------------ | ----------------------------------- | ----------------------------------- |
-| Maciej's public persona | Nobel winner             | Under attack                        | Past it — focused on the work       |
-| RFC status              | Speculation              | Contested                           | Empirically supported               |
-| Cross & Maciej          | Unknown to each other    | Cross's anonymous critique answered | First phone call — mutual respect   |
-| Ola's role              | Supporter                | Protector / fighter                 | Independent force                   |
-| Priya's role            | Skeptic with data        | Methodological backbone             | Experimental designer               |
-| Priya & Cross           | Epistemological symmetry | First divergence                    | Open asymmetry — she's ahead of him |
-| Krawczyk                | Proud mentor             | Distanced                           | Quiet reconciliation                |
-| AI question             | Not yet raised           | Not yet raised                      | The door opens (ep 9-10)            |
-
+| Thread | Ep 1 | Ep 5 (midpoint) | Ep 10 (finale) |
+|--------|-------|-----------------|-----------------|
+| Maciej's public persona | Nobel winner | Under attack | Past it — focused on the work |
+| RFC status | Speculation | Contested | Empirically supported |
+| Cross & Maciej | Unknown to each other | Cross's anonymous critique answered | First phone call — mutual respect |
+| Ola's role | Supporter | Protector / fighter | Independent force |
+| Priya's role | Skeptic with data | Methodological backbone | Experimental designer |
+| Priya & Cross | Epistemological symmetry | First divergence | Open asymmetry — she's ahead of him |
+| Krawczyk | Proud mentor | Distanced | Quiet reconciliation |
+| AI question | Not yet raised | Not yet raised | The door opens (ep 9-10) |
 ---
 
-_Season beat sheet v1.0 — February 2026_
-_The Quantóm Theory — Created by Krzysztof Olbiński_
-
----
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

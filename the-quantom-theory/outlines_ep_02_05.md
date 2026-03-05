@@ -1,13 +1,5 @@
 # THE QUANTÓM THEORY — Detailed Outlines: Episodes 2-5
 
-## Development Document — Session 2
-
-*Created: February 25, 2026*
-*For: Writers' room, showrunner, development executives*
-*Format: Scene-by-scene with key dialogue and act structure*
-
----
-
 ---
 
 # EPISODE 2: "THE UNCERTAINTY PRINCIPLE"
@@ -296,8 +288,6 @@ He can't find it.
 
 ---
 
----
-
 # EPISODE 3: "SUPERPOSITION"
 
 **Runtime:** 60 minutes
@@ -555,8 +545,6 @@ For the first time since the Nobel, he is choosing not to be observed. The super
 ---
 
 **END OF EPISODE 3**
-
----
 
 ---
 
@@ -821,8 +809,6 @@ The campus is quiet. The equation on Cross's whiteboard — his bridge between t
 
 ---
 
----
-
 # EPISODE 5: "DECOHERENCE"
 
 **Runtime:** 60 minutes
@@ -1075,9 +1061,7 @@ The man who plays the guitar doesn't look defeated anymore. He looks like someon
 **END OF EPISODE 5**
 
 ---
-
 ---
 
-*Episode Outlines 2-5 v1.0 — February 25, 2026*
-*The Quantóm Theory — Created by Krzysztof Olbiński*
-*homodigital.io*
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004

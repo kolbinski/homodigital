@@ -2,11 +2,6 @@
 
 ## From Nobel Theory to Consciousness Framework
 
-_Created: February 25, 2026_
-_Merged: March 4, 2026 — Combines R Equation Reference and R Equation Evolution into single document_
-_For: Writers' room, showrunner, science consultant_
-_Purpose: The definitive reference for how science works in the show — the equations, how they evolve, how they're staged, how characters talk about them_
-
 ---
 
 ## Guiding Principle: Equations as Dramaturgy, Not Decoration
@@ -470,9 +465,7 @@ Each step is a season. Each step raises the stakes. Each step makes the previous
 Maciej's Nobel was for equation 4.7 — the fundamental theory. R-Static was the measurement tool he built afterward. His legacy will be R-Dynamic. The distance between Nobel and legacy is the distance between understanding the river's physics and learning to read its currents.
 
 That distance is the show.
-
 ---
 
-_R Equation: Reference & Evolution — Merged v1.0 — March 4, 2026_
-_The Quantóm Theory — Created by Krzysztof Olbiński_
-_homodigital.io_
+**THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
+Contact: olbinski@gmail.com | +48 503 520 004
