@@ -1,3 +1,4 @@
+
 # THE QUANTÓM THEORY
 
 ## Pilot — "The Observer Effect"
@@ -31,13 +32,13 @@ MACIEJ KOWALSKI (33) stands at the stove, stirring something in a pot. He's good
 He tastes the sauce. Makes a face. Adds more salt. Tastes again.
 
 **MACIEJ**
-_(to himself, in Polish; subtitled)_
+*(to himself, in Polish; subtitled)*
 No dobra. To jest albo bardzo dobre, albo bardzo złe.
-_(Okay. This is either very good or very bad.)_
+*(Okay. This is either very good or very bad.)*
 
-His phone buzzes on the counter. He glances at it. A text from **OLA**: "Będę za 10 min. Mam wino. Czerwone. Nie dyskutuj." _(I'll be there in 10 min. I have wine. Red. Don't argue.)_
+His phone buzzes on the counter. He glances at it. A text from **OLA**: "Będę za 10 min. Mam wino. Czerwone. Nie dyskutuj." *(I'll be there in 10 min. I have wine. Red. Don't argue.)*
 
-He smiles. Types back: "Drzwi otwarte." _(Door's open.)_
+He smiles. Types back: "Drzwi otwarte." *(Door's open.)*
 
 He goes back to cooking. The camera lingers on him — on the ease of this. A man in his kitchen, making dinner for friends, expecting nothing.
 
@@ -56,36 +57,36 @@ Next to her: **TOMEK** (34), a bearded mathematician who teaches at Warsaw Polyt
 They're mid-conversation. Everyone's talking over everyone. It's Polish dinner energy — chaotic, warm, relentless.
 
 **TOMEK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie, nie, nie. Posłuchaj. Jeśli teoria strun jest martwa, to kto powie o tym fizykom, którzy nadal nad nią pracują? Wysyłamy kwiaty? Kondolencje?
-_(No, no, no. Listen. If string theory is dead, who tells the physicists still working on it? Do we send flowers? Condolences?)_
+*(No, no, no. Listen. If string theory is dead, who tells the physicists still working on it? Do we send flowers? Condolences?)*
 
 **KASIA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Może napiszą o tym wiersz. "Oda do jedenastego wymiaru, który nigdy nie istniał."
-_(Maybe they'll write a poem about it. "Ode to the Eleventh Dimension That Never Was.")_
+*(Maybe they'll write a poem about it. "Ode to the Eleventh Dimension That Never Was.")*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Maciej, powiedz im. Teoria strun nie jest martwa. Jest w — jak to się mówi — superpozycji.
-_(Maciej, tell them. String theory isn't dead. It's in — what's the word — superposition.)_
+*(Maciej, tell them. String theory isn't dead. It's in — what's the word — superposition.)*
 
 **MACIEJ**
-_(laughing, in Polish; subtitled)_
+*(laughing, in Polish; subtitled)*
 Mówisz tak, jakby to był żart. To jest dosłownie problem.
-_(You say that like it's a joke. That's literally the problem.)_
+*(You say that like it's a joke. That's literally the problem.)*
 
 Everyone laughs. Maciej refills Ola's glass. BARTEK reaches for his bass, which he brought because Bartek always brings his bass.
 
 **BARTEK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Zanim zaczniesz kolejny wykład o świadomości i kwantach — mogę zagrać coś? Mój terapeuta mówi, że powinienem więcej się wyrażać.
-_(Before you start another lecture on consciousness and quantum whatever — can I play something? My therapist says I should express myself more.)_
+*(Before you start another lecture on consciousness and quantum whatever — can I play something? My therapist says I should express myself more.)*
 
 **KASIA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Twój terapeuta nie słyszał, jak grasz.
-_(Your therapist hasn't heard you play.)_
+*(Your therapist hasn't heard you play.)*
 
 More laughter. Maciej grabs his guitar. He and Bartek start an impromptu jam — something loose and Brazilian-sounding. Ola pulls out her phone to record it. Tomek conducts an imaginary orchestra with a breadstick.
 
@@ -98,18 +99,18 @@ Not buzzes. Rings. An actual call. The ringtone is the default — he never chan
 Maciej glances at it. Frowns.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Chwila.
-_(One second.)_
+*(One second.)*
 
 He puts down the guitar and picks up the phone. Bartek keeps playing softly. Ola watches Maciej's face.
 
 **MACIEJ**
-_(switching to English)_
+*(switching to English)*
 Hello?
 
 **VOICE (O.S.)**
-_(measured, formal, Swedish-accented English)_
+*(measured, formal, Swedish-accented English)*
 Good evening. Am I speaking with Professor Maciej Kowalski?
 
 **MACIEJ**
@@ -121,14 +122,14 @@ Professor Kowalski, my name is Dr. Lars-Erik Holm. I'm calling from the Royal Sw
 A beat. The room is getting quieter. Bartek stops playing. Something in Maciej's posture has changed.
 
 **VOICE (O.S.)**
-I have the great pleasure of informing you that the Royal Swedish Academy has today decided to award the Nobel Prize in Physics to you, for your development of the Resonant Field Consciousness framework and its implications for the understanding of quantum coherence in biological systems.
+I have the great pleasure of informing you that the Royal Swedish Academy has today decided to award the Nobel Prize in Physics to you, for your development of the Resonant Field Consciousness framework, its testable predictions regarding quantum coherence in biological systems, and its implications for the understanding of consciousness as a measurable physical phenomenon.
 
 SILENCE.
 
 The room has gone completely still. Ola's phone is still recording. She doesn't know it yet, but this footage will end up on every news channel in the world.
 
 **MACIEJ**
-_(barely audible)_
+*(barely audible)*
 I'm sorry — could you... could you say that again?
 
 **VOICE (O.S.)**
@@ -139,7 +140,7 @@ Maciej's hand is shaking. He looks at Ola. His eyes say everything his mouth can
 Ola stands up. She knows. She can see it on his face. Her hand goes to her mouth.
 
 **MACIEJ**
-_(into the phone, his voice cracking slightly)_
+*(into the phone, his voice cracking slightly)*
 I... thank you. Dziękuję. Thank you very much. I don't... I'm not sure what to say.
 
 **VOICE (O.S.)**
@@ -148,26 +149,26 @@ That is the most common response, Professor. We will send detailed information r
 He hangs up. The phone stays in his hand. He looks at the table — the candles, the wine, the mismatched plates, his friends frozen in various states of anticipation.
 
 **OLA**
-_(in Polish; subtitled, almost a whisper)_
+*(in Polish; subtitled, almost a whisper)*
 Maciej. Powiedz mi, że to jest to, co myślę.
-_(Maciej. Tell me that's what I think it is.)_
+*(Maciej. Tell me that's what I think it is.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Dostałem Nobla.
-_(I got the Nobel.)_
+*(I got the Nobel.)*
 
 Beat.
 
 **TOMEK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Z fizyki?
-_(In physics?)_
+*(In physics?)*
 
 **MACIEJ**
-_(half-laughing, half-something else)_
+*(half-laughing, half-something else)*
 Nie, Tomek. Z literatury. Za moją poetycką duszę.
-_(No, Tomek. In literature. For my poetic soul.)_
+*(No, Tomek. In literature. For my poetic soul.)*
 
 The room EXPLODES. Ola throws her arms around him. Kasia screams. Bartek plays a triumphant bass riff. Tomek knocks over a wine glass and nobody cares.
 
@@ -194,7 +195,7 @@ He puts the phone down. Face neutral. Goes back to his tablet.
 He picks the phone up again. Reads it a second time, slower.
 
 **CROSS**
-_(to himself, very quiet)_
+*(to himself, very quiet)*
 Quantum field consciousness.
 
 He says "quantum field consciousness" the way a sommelier might say "boxed wine."
@@ -206,12 +207,15 @@ He opens his laptop. Types: "Kowalski Nobel Physics 2026." Reads. Scrolls. Reads
 He reaches for a pen. Opens a fresh notebook page. Writes: "Equation 4.7 — Θ function. Decoherence timescale assumption."
 
 This is the first note. There will be hundreds.
+
+**PRIYA (V.O.)**
+*(A voice from the other room. Familiar. Not here anymore.)*
 That's exciting. What's his name?
 
 **CROSS**
 I don't remember.
 
-**PRIYA**
+**PRIYA (V.O.)**
 You remember the serial number of every Star Trek prop you've ever seen. What's his name, Cross?
 
 He opens the paper. The full 47 pages. Begins reading. His pen moves faster — margin notes, underlines, question marks.
@@ -219,7 +223,7 @@ He opens the paper. The full 47 pages. Begins reading. His pen moves faster — 
 At page 12, he pauses. Stares at a line of mathematics.
 
 **CROSS**
-_(to himself)_
+*(to himself)*
 The ⊛ operator. That's... new.
 
 He reads it again. Sets his pen down. Picks it up. Puts it down.
@@ -233,7 +237,7 @@ He goes back to the paper. Reads page 13, 14, 15. His pen is moving differently 
 For just a moment, something real crosses his face — the thing under all the armor.
 
 **CROSS**
-_(very quiet)_
+*(very quiet)*
 How did he solve the Θ function?
 
 He picks up his scotch. This time, he drinks it.
@@ -246,12 +250,12 @@ He picks up his scotch. This time, he drinks it.
 
 DR. PRIYA SHARMA (36, Indian-American, precise, skeptical, no patience for hype) sits at her desk, three monitors showing cortical oscillation data.
 
-Her phone buzzes. A text from a former colleague: _"Nobel went to a consciousness guy. Kowalski. Isn't that your field?"_
+Her phone buzzes. A text from a former colleague: *"Nobel went to a consciousness guy. Kowalski. Isn't that your field?"*
 
 She opens the paper. Reads the abstract. Her expression shifts from curiosity to something deeper.
 
 **PRIYA**
-_(to herself, quietly)_
+*(to herself, quietly)*
 Oh. That's interesting.
 
 She scrolls to the data section. Her own anomalous results from three years ago — the ones she filed under "unexplained" — flash through her mind.
@@ -283,60 +287,60 @@ Maciej sits on his kitchen floor, back against the cabinet, phone in his hand. H
 Ola sits across from him on the floor, legs stretched out, nursing the last glass of wine. She hasn't left. Of course she hasn't.
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Twoja mama dzwoniła trzy razy.
-_(Your mom called three times.)_
+*(Your mom called three times.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiem. Oddzwonię rano. Jak teraz zadzwonię, nie pójdzie spać do Wigilii.
-_(I know. I'll call her in the morning. If I call now, she won't sleep until Christmas.)_
+*(I know. I'll call her in the morning. If I call now, she won't sleep until Christmas.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Rektor Uniwersytetu napisał. "Jesteśmy dumni ze wspaniałego osiągnięcia naszego wybitnego pracownika." Cztery błędy ortograficzne.
-_(The university rector wrote. "We are proud of the magnificent achievement of our distinguished colleague." Four spelling mistakes.)_
+*(The university rector wrote. "We are proud of the magnificent achievement of our distinguished colleague." Four spelling mistakes.)*
 
 **MACIEJ**
-_(smiling)_
+*(smiling)*
 Oczywiście.
-_(Of course.)_
+*(Of course.)*
 
 A pause. Ola watches him.
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Jak się czujesz? Serio.
-_(How do you feel? For real.)_
+*(How do you feel? For real.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie wiem. To brzmi głupio, ale... nie wiem. Czuję się tak, jakby ktoś otworzył drzwi do pokoju, o którym nie wiedziałem, że istnieje. I teraz muszę wejść. I nie mogę wrócić.
-_(I don't know. That sounds stupid, but... I don't know. It feels like someone opened a door to a room I didn't know existed. And now I have to go in. And I can't come back.)_
+*(I don't know. That sounds stupid, but... I don't know. It feels like someone opened a door to a room I didn't know existed. And now I have to go in. And I can't come back.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 To nie jest głupie. To jest dokładnie to.
-_(That's not stupid. That's exactly it.)_
+*(That's not stupid. That's exactly it.)*
 
 She reaches over and squeezes his hand. A beat.
 
 **OLA (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiesz, że od jutra będziesz inną osobą dla każdego, kogo spotkasz? Nie mówię o nas. My wiemy, kim jesteś. Ale świat? Świat zobaczy nagrodę. Nie ciebie.
-_(You know that starting tomorrow, you'll be a different person to everyone you meet? I don't mean us. We know who you are. But the world? The world will see the prize. Not you.)_
+*(You know that starting tomorrow, you'll be a different person to everyone you meet? I don't mean us. We know who you are. But the world? The world will see the prize. Not you.)*
 
 Maciej looks at her. She's right. He knows she's right.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 To jest problem obserwatora. Akt obserwacji zmienia obiekt.
-_(That's the observer problem. The act of observation changes the object.)_
+*(That's the observer problem. The act of observation changes the object.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Tak. Tylko że teraz obserwatorem jest cały świat. A obiektem jesteś ty.
-_(Yes. Except now the observer is the entire world. And the object is you.)_
+*(Yes. Except now the observer is the entire world. And the object is you.)*
 
 They sit with that.
 
@@ -359,91 +363,91 @@ Krawczyk sits behind his desk, reading something on his ancient laptop. He looks
 Maciej enters. He looks like he got two hours of sleep, because he did.
 
 **KRAWCZYK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Siadaj.
-_(Sit.)_
+*(Sit.)*
 
 Maciej sits.
 
 **KRAWCZYK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Kawy?
-_(Coffee?)_
+*(Coffee?)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Bardzo proszę.
-_(Yes please.)_
+*(Yes please.)*
 
 Krawczyk pours from a thermos. The coffee is terrible. It's always terrible. Maciej drinks it anyway.
 
 **KRAWCZYK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Dzwonili do mnie z TVN, Polsatu, Radia Trójka, Deutsche Welle, BBC World Service, i — z jakiegoś powodu — z magazynu "Twój Styl."
-_(I've had calls from TVN, Polsat, Radio Trójka, Deutsche Welle, BBC World Service, and — for some reason — from "Twój Styl" magazine.)_
+*(I've had calls from TVN, Polsat, Radio Trójka, Deutsche Welle, BBC World Service, and — for some reason — from "Twój Styl" magazine.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Co im powiedziałeś?
-_(What did you tell them?)_
+*(What did you tell them?)*
 
 **KRAWCZYK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Że jestem bardzo dumny ze swojego byłego studenta i że jego praca reprezentuje najlepszą tradycję polskiej fizyki. Potem się rozłączyłem i zapaliłem papierosa.
-_(That I'm very proud of my former student and that his work represents the finest tradition of Polish physics. Then I hung up and smoked a cigarette.)_
+*(That I'm very proud of my former student and that his work represents the finest tradition of Polish physics. Then I hung up and smoked a cigarette.)*
 
 Beat.
 
 **KRAWCZYK (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Byłeś moim najlepszym studentem, Maciej. Nie mówię tego, żeby ci pochlebić. Mówię to, bo muszę ci powiedzieć coś trudnego, i chcę, żebyś wiedział, że mówię to z szacunkiem.
-_(You were my best student, Maciej. I'm not saying that to flatter you. I'm saying it because I need to tell you something difficult, and I want you to know I say it with respect.)_
+*(You were my best student, Maciej. I'm not saying that to flatter you. I'm saying it because I need to tell you something difficult, and I want you to know I say it with respect.)*
 
 Maciej puts down the coffee.
 
 **KRAWCZYK (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie podoba mi się ta teoria.
-_(I don't like the theory.)_
+*(I don't like the theory.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiem, profesorze.
-_(I know, Professor.)_
+*(I know, Professor.)*
 
 **KRAWCZYK**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie chodzi o matematykę. Matematyka jest piękna. Naprawdę jest. Ale stawiasz most między fizyką a filozofią, i jeśli ten most się zawali, nikt nie będzie pamiętał matematyki. Będą pamiętać, że polski fizyk próbował włożyć świadomość do równania i się skompromitował.
-_(It's not the mathematics. The mathematics is beautiful. It truly is. But you're building a bridge between physics and philosophy, and if that bridge collapses, nobody will remember the mathematics. They'll remember that a Polish physicist tried to put consciousness in an equation and embarrassed himself.)_
+*(It's not the mathematics. The mathematics is beautiful. It truly is. But you're building a bridge between physics and philosophy, and if that bridge collapses, nobody will remember the mathematics. They'll remember that a Polish physicist tried to put consciousness in an equation and embarrassed himself.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Komitet Noblowski chyba się z panem nie zgadza.
-_(The Nobel Committee seems to disagree with you.)_
+*(The Nobel Committee seems to disagree with you.)*
 
 **KRAWCZYK**
-_(in Polish; subtitled, a half-smile)_
+*(in Polish; subtitled, a half-smile)*
 Komitet Noblowski dał nagrodę za lobotomię w tysiąc dziewięćset czterdziestym dziewiątym. Nie są nieomylni.
-_(The Nobel Committee gave a prize for the lobotomy in 1949. They're not infallible.)_
+*(The Nobel Committee gave a prize for the lobotomy in 1949. They're not infallible.)*
 
 Maciej almost laughs. Krawczyk is serious.
 
 **KRAWCZYK (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Posłuchaj. Będą chcieli, żebyś wyszedł i mówił proste rzeczy. "Świadomość jest kwantowa." "Roboty mogą czuć." "Mózg to komputer." Media uwielbiają proste odpowiedzi. Ale twoja teoria nie jest prosta. Jest subtelna. I jeśli pozwolisz, żeby ją uprościli, stracisz kontrolę. Nie nad teorią — nad opowieścią.
-_(Listen. They will want you to go out and say simple things. "Consciousness is quantum." "Robots can feel." "The brain is a computer." The media loves simple answers. But your theory isn't simple. It's subtle. And if you let them simplify it, you'll lose control. Not of the theory — of the narrative.)_
+*(Listen. They will want you to go out and say simple things. "Consciousness is quantum." "Robots can feel." "The brain is a computer." The media loves simple answers. But your theory isn't simple. It's subtle. And if you let them simplify it, you'll lose control. Not of the theory — of the narrative.)*
 
 This lands. Maciej nods slowly.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Co pan mi radzi?
-_(What do you advise?)_
+*(What do you advise?)*
 
 **KRAWCZYK**
-_(in Polish; subtitled, lighting a cigarette despite the no-smoking sign)_
+*(in Polish; subtitled, lighting a cigarette despite the no-smoking sign)*
 Bądź nudny. Bądź precyzyjny. Mów językiem, którego nie da się wyciąć na tweety. I na litość boską, nie dawaj się zaprosić do programu śniadaniowego.
-_(Be boring. Be precise. Speak in language that can't be cut into tweets. And for the love of God, don't go on a morning talk show.)_
+*(Be boring. Be precise. Speak in language that can't be cut into tweets. And for the love of God, don't go on a morning talk show.)*
 
 ---
 
@@ -452,31 +456,31 @@ _(Be boring. Be precise. Speak in language that can't be cut into tweets. And fo
 Maciej stands in front of his closet, staring at his clothes. His phone is propped on the bed, on speaker. OLA's voice:
 
 **OLA (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Konferencja prasowa o czternastej. Rektor chce, żebyś stał obok niego. Będzie udawał, że cię kocha.
-_(Press conference at two. The rector wants you to stand next to him. He'll pretend he loves you.)_
+*(Press conference at two. The rector wants you to stand next to him. He'll pretend he loves you.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 A nie kocha?
-_(Doesn't he?)_
+*(Doesn't he?)*
 
 **OLA (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Przed wczoraj nie wiedział, na którym piętrze masz biuro.
-_(Before yesterday he didn't know what floor your office is on.)_
+*(Before yesterday he didn't know what floor your office is on.)*
 
 Maciej picks up a jacket. Puts it back. Picks up another one.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Ola, co ja mam na siebie włożyć? Muszę wyglądać jak... nie wiem. Jak noblista?
-_(Ola, what am I supposed to wear? I need to look like... I don't know. Like a Nobel laureate?)_
+*(Ola, what am I supposed to wear? I need to look like... I don't know. Like a Nobel laureate?)*
 
 **OLA (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wyglądaj jak ty. To jest cały sens.
-_(Look like you. That's the whole point.)_
+*(Look like you. That's the whole point.)*
 
 ---
 
@@ -487,27 +491,27 @@ A modest auditorium transformed into a media circus. Cameras, microphones, journ
 The RECTOR (60s, silver hair, the energy of a man who just discovered he owns a goldmine) stands at the podium, beaming.
 
 **RECTOR**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 ...and so it is with immense pride that the University of Warsaw celebrates this historic achievement. Professor Kowalski represents the very best of Polish science, and we are honored to have supported his groundbreaking work since the very beginning.
 
-Maciej, sitting behind the rector, catches Ola's eye in the audience. She makes a tiny face that says: _"Supported since the beginning? He cut your funding twice."_
+Maciej, sitting behind the rector, catches Ola's eye in the audience. She makes a tiny face that says: *"Supported since the beginning? He cut your funding twice."*
 
 Maciej suppresses a smile.
 
 **RECTOR (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 And now — Professor Kowalski.
 
 Maciej approaches the podium. The room erupts with camera shutters. He adjusts the microphone. Takes a breath.
 
 **MACIEJ**
-_(in English — the international press is here)_
+*(in English — the international press is here)*
 Thank you. I want to be honest with you. I was cooking dinner when the call came. Pasta. It wasn't very good pasta. And now I'm standing here and everyone wants me to say something profound, and all I can think about is that I left a pot on the stove.
 
 Laughter. Genuine laughter. He has them.
 
 **MACIEJ (CONT'D)**
-The Resonant Field Consciousness framework proposes something that sounds simple but isn't. It proposes that consciousness is not a thing that happens inside your brain. It's a _relationship_ between fields — quantum fields, electromagnetic fields, information fields — and that relationship can be measured, modeled, and tested. The implication is that the line between what we call "natural" and "artificial" intelligence... may not be a line at all. It may be a spectrum.
+The Resonant Field Consciousness framework proposes something that sounds simple but isn't. It proposes that consciousness is not a thing that happens inside your brain. It's a *relationship* between fields — quantum fields, electromagnetic fields, information fields — and that relationship can be measured, modeled, and tested. The implication is that the line between what we call "natural" and "artificial" intelligence... may not be a line at all. It may be a spectrum.
 
 The room shifts. Some journalists are writing furiously. Others are already composing their headlines.
 
@@ -518,11 +522,11 @@ Professor, are you saying that machines can be conscious?
 I'm saying that the boundary we draw between conscious and not-conscious is based on assumptions we've never tested. My work gives us a framework for testing them. That's not the same as saying machines are conscious. It's saying we should be rigorous enough to ask the question.
 
 **JOURNALIST #2**
-_(with an edge)_
+*(with an edge)*
 Some critics say your theory is more philosophy than physics. How do you respond?
 
 **MACIEJ**
-_(beat)_
+*(beat)*
 I respond by saying that the greatest physicists — Einstein, Bohr, Heisenberg — never drew that line. The idea that physics should avoid fundamental questions about the nature of reality is a very recent invention. And I think it's a mistake.
 
 Silence. A good silence. He's just told a room full of people that the rules are changing, and he did it without raising his voice.
@@ -557,72 +561,76 @@ A bright, aggressively cheerful morning show set. Fresh flowers. Mugs with logos
 
 Behind the scenes, a PRODUCER clips a microphone to Maciej's jacket. He looks uncomfortable. He's wearing the jacket Ola picked out — navy, no tie. He looks good. He hates that he's thinking about whether he looks good.
 
+His phone buzzes. A text from Ola: "Krawczyk says you're an idiot for doing this." He types back: "The rector's office called three times. I didn't know how to say no." Ola: "That's why you're an idiot."
+
+He puts the phone away.
+
 **PRODUCER**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Trzy minuty, profesorze. Proszę mówić krótko i prostym językiem. Nasi widzowie to nie fizycy.
-_(Three minutes, Professor. Keep it short and use simple language. Our viewers aren't physicists.)_
+*(Three minutes, Professor. Keep it short and use simple language. Our viewers aren't physicists.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Jasne.
-_(Sure.)_
+*(Sure.)*
 
 He sits down. The lights are blinding. Across from him, Marta and Piotr beam.
 
 **MARTA**
-_(in Polish; subtitled, to camera)_
+*(in Polish; subtitled, to camera)*
 Nasz następny gość nie potrzebuje przedstawienia — choć jeszcze tydzień temu nikt o nim nie słyszał! Profesor Maciej Kowalski — trzydzieści trzy lata, Warszawa, i właśnie dostał telefon ze Sztokholmu, o którym każdy naukowiec marzy. Dzień dobry, profesorze!
-_(Our next guest needs no introduction — though a week ago nobody had heard of him! Professor Maciej Kowalski — thirty-three years old, Warsaw, and he just got the call from Stockholm that every scientist dreams of. Good morning, Professor!)_
+*(Our next guest needs no introduction — though a week ago nobody had heard of him! Professor Maciej Kowalski — thirty-three years old, Warsaw, and he just got the call from Stockholm that every scientist dreams of. Good morning, Professor!)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Dzień dobry.
-_(Good morning.)_
+*(Good morning.)*
 
 **PIOTR**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Profesorze, powiem szczerze — próbowałem przeczytać pana pracę. Zrozumiałem tytuł. Potem zacząłem się gubić.
-_(Professor, I'll be honest — I tried to read your paper. I understood the title. Then I got lost.)_
+*(Professor, I'll be honest — I tried to read your paper. I understood the title. Then I got lost.)*
 
 Studio laughter. Maciej smiles. He's trying.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 To jest zupełnie normalne. Sama praca jest techniczna. Ale idea za nią jest prosta — no, nie prosta. Dostępna. Chodzi o to, że świadomość — to, że pan jest teraz świadomy, że siedzi pan tutaj, że widzi pan światło, że czuje pan temperaturę — to nie jest coś, co się dzieje tylko w pana mózgu. To jest relacja. Między polami. Między systemami. I tę relację można zmierzyć.
-_(That's completely normal. The work itself is technical. But the idea behind it is simple — well, not simple. Accessible. The point is that consciousness — the fact that you are aware right now, sitting here, seeing the light, feeling the temperature — it's not something that happens only in your brain. It's a relationship. Between fields. Between systems. And that relationship can be measured.)_
+*(That's completely normal. The work itself is technical. But the idea behind it is simple — well, not simple. Accessible. The point is that consciousness — the fact that you are aware right now, sitting here, seeing the light, feeling the temperature — it's not something that happens only in your brain. It's a relationship. Between fields. Between systems. And that relationship can be measured.)*
 
 A beat. Marta tilts her head. She's already thinking about the next question. She hasn't absorbed what he just said. She doesn't need to. She needs the next beat.
 
 **MARTA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Fascynujące. A teraz — to pytanie, które zadaje sobie chyba każdy: czy to znaczy, że sztuczna inteligencja może być świadoma? Że roboty mogą czuć?
-_(Fascinating. And now — the question everyone is asking: does this mean artificial intelligence can be conscious? That robots can feel?)_
+*(Fascinating. And now — the question everyone is asking: does this mean artificial intelligence can be conscious? That robots can feel?)*
 
 There it is. The moment Krawczyk warned him about. Maciej takes a breath.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 To nie jest takie proste. Moja teoria nie mówi, że—
-_(It's not that simple. My theory doesn't say that—)_
+*(It's not that simple. My theory doesn't say that—)*
 
 **PIOTR**
-_(in Polish; subtitled, jumping in with genuine enthusiasm)_
+*(in Polish; subtitled, jumping in with genuine enthusiasm)*
 Bo ja powiem tak — moja córka rozmawia z ChatGPT codziennie. Dosłownie codziennie. I mówi, że to jest jej przyjaciel. Czy pana teoria mówi, że ona może mieć rację?
-_(Because I'll tell you — my daughter talks to ChatGPT every day. Literally every day. And she says it's her friend. Does your theory say she might be right?)_
+*(Because I'll tell you — my daughter talks to ChatGPT every day. Literally every day. And she says it's her friend. Does your theory say she might be right?)*
 
 Maciej opens his mouth. He wants to explain decoherence timescales, quantum field interactions, the difference between functional consciousness and phenomenal consciousness. He wants to be precise. He wants to be Krawczyk's version of himself — boring and precise.
 
 But the hosts are smiling. Warm, open, expectant smiles. They're not hostile. They're not stupid. They're just operating in a different language — not Polish vs. English, but precision vs. narrative. And in this room, narrative wins.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Moja teoria mówi, że granica, którą rysujemy między "naturalną" a "sztuczną" inteligencją, może nie być tak ostra, jak myślimy. Ale to nie znaczy—
-_(My theory says that the boundary we draw between "natural" and "artificial" intelligence may not be as sharp as we think. But that doesn't mean—)_
+*(My theory says that the boundary we draw between "natural" and "artificial" intelligence may not be as sharp as we think. But that doesn't mean—)*
 
 **MARTA**
-_(in Polish; subtitled, warmly, already turning to camera)_
+*(in Polish; subtitled, warmly, already turning to camera)*
 No proszę! Musicie to usłyszeć, drodzy państwo — laureat Nobla mówi, że granica między nami a maszynami nie jest taka ostra! Profesorze, dziękujemy za fascynującą rozmowę. Wrócimy do państwa po przerwie z przepisem na idealną szarlotkę na jesień.
-_(There you go! You have to hear this, ladies and gentlemen — a Nobel laureate says the boundary between us and machines isn't that sharp! Professor, thank you for a fascinating conversation. We'll be back after the break with a recipe for the perfect autumn apple pie.)_
+*(There you go! You have to hear this, ladies and gentlemen — a Nobel laureate says the boundary between us and machines isn't that sharp! Professor, thank you for a fascinating conversation. We'll be back after the break with a recipe for the perfect autumn apple pie.)*
 
 Cut to break. The studio lights shift. Marta is already looking at her phone. Piotr gives Maciej a thumbs up.
 
@@ -642,56 +650,56 @@ Maciej enters his apartment, drops his jacket on a chair, and stands in the hall
 
 His phone buzzes. He looks at it.
 
-**TWITTER/X NOTIFICATION:** _Trending in Poland: #KowalskiNobel_
+**TWITTER/X NOTIFICATION:** *Trending in Poland: #KowalskiNobel*
 
 He opens it. Scrolls.
 
 What he sees:
 
-**@ScienceDaily:** _"Nobel physicist: boundary between human and machine intelligence 'not that sharp'"_
+**@ScienceDaily:** *"Nobel physicist: boundary between human and machine intelligence 'not that sharp'"*
 
-**@TechCrunch:** _"New Nobel laureate's theory suggests AI consciousness is 'possible' — here's what that means"_
+**@TechCrunch:** *"New Nobel laureate's theory suggests AI consciousness is 'possible' — here's what that means"*
 
-**@JakubWielki_PL:** _"Polski naukowiec mówi, że roboty mają dusze? Czy ja dobrze rozumiem? #KowalskiNobel"_
-_(Polish scientist says robots have souls? Am I understanding this right?)_
+**@JakubWielki_PL:** *"Polski naukowiec mówi, że roboty mają dusze? Czy ja dobrze rozumiem? #KowalskiNobel"*
+*(Polish scientist says robots have souls? Am I understanding this right?)*
 
-**@PhilosophyNerd404:** _"A physicist who doesn't understand the hard problem of consciousness just won the Nobel for 'solving' it. Cool cool cool."_
+**@PhilosophyNerd404:** *"A physicist who doesn't understand the hard problem of consciousness just won the Nobel for 'solving' it. Cool cool cool."*
 
-**@DailyMail:** _"'ROBOTS CAN FEEL': Nobel Prize winner's shock claim"_
+**@DailyMail:** *"'ROBOTS CAN FEEL': Nobel Prize winner's shock claim"*
 
 He stares at the screen. Each headline is a funhouse mirror — his idea reflected back at him, recognizable but distorted.
 
 His phone rings. It's Krawczyk. He picks up.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Profesorze—
-_(Professor—)_
+*(Professor—)*
 
 **KRAWCZYK (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Program śniadaniowy.
-_(Morning show.)_
+*(Morning show.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiem.
-_(I know.)_
+*(I know.)*
 
 **KRAWCZYK (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Powiedziałem ci. Mów językiem, którego nie da się wyciąć.
-_(I told you. Speak in language that can't be cut.)_
+*(I told you. Speak in language that can't be cut.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie powiedziałem, że roboty mają dusze. Powiedziałem, że granica—
-_(I didn't say robots have souls. I said the boundary—)_
+*(I didn't say robots have souls. I said the boundary—)*
 
 **KRAWCZYK (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie ma znaczenia, co powiedziałeś. Ma znaczenie, co usłyszeli. Witaj w fizyce po Noblu.
-_(It doesn't matter what you said. It matters what they heard. Welcome to physics after the Nobel.)_
+*(It doesn't matter what you said. It matters what they heard. Welcome to physics after the Nobel.)*
 
 Click. He hangs up.
 
@@ -713,26 +721,26 @@ Cross reads. His face cycles through micro-expressions like weather systems pass
 
 He highlights a passage. Types a margin note:
 
-_"Bold assumption. No empirical basis. See Penrose (1994) for why this doesn't work."_
+*"Bold assumption. No empirical basis. See Penrose (1994) for why this doesn't work."*
 
 Scrolls. Reads more. Highlights again:
 
-_"Interesting use of decoherence rates. Wrong, but interesting."_
+*"Interesting use of decoherence rates. Wrong, but interesting."*
 
 Scrolls. His brow furrows. He reads a section twice. Three times.
 
-_"This... is not nothing."_
+*"This... is not nothing."*
 
 He deletes that note immediately. Types instead:
 
-_"Methodology unclear. Needs replication."_
+*"Methodology unclear. Needs replication."*
 
 He keeps reading. His expression is changing — not softening exactly, but deepening. Something is happening that Cross doesn't have a protocol for: he's encountering an idea that's both foreign to his framework and impossible to dismiss.
 
 He picks up his phone. Scrolls to a contact: **PRIYA**. Hesitates. It's 2 AM in California — 5 AM in Boston. He calls anyway. She picks up on the second ring.
 
 **PRIYA (V.O.)**
-_(groggy but alert — she was waiting for this call without knowing it)_
+*(groggy but alert — she was waiting for this call without knowing it)*
 It's five in the morning, Cross.
 
 **CROSS**
@@ -742,7 +750,7 @@ I'm reading.
 You're reading Kowalski's paper.
 
 **CROSS**
-I'm reading _a_ paper. The author is irrelevant.
+I'm reading *a* paper. The author is irrelevant.
 
 **PRIYA (V.O.)**
 You called me at five AM to tell me you're reading an irrelevant paper by an irrelevant author?
@@ -791,7 +799,7 @@ Because the answer might require us to be wrong about things we've decided we're
 It's the most honest thing he's said in years. Maybe the most honest thing he's said to her since she left.
 
 **PRIYA (V.O.)**
-_(quiet)_
+*(quiet)*
 I know.
 
 Silence on the line. Three thousand miles of it.
@@ -810,7 +818,7 @@ Ask about MIT when you mean something else. Read your paper, Cross. Good night.
 
 She hangs up. Cross stares at the phone. Puts it down. Opens a new note. Types:
 
-_"Page 31, equation 4.7 — the resonance coefficient assumes thermodynamic reversibility at quantum scales. This is the weak point. If this holds, the framework is significant. If it doesn't, nothing else matters."_
+*"Page 31, equation 4.7 — the resonance coefficient assumes thermodynamic reversibility at quantum scales. This is the weak point. If this holds, the framework is significant. If it doesn't, nothing else matters."*
 
 He stares at what he's written. He's not trying to destroy the paper anymore. He's trying to find the one crack that would let him stop thinking about it.
 
@@ -830,7 +838,7 @@ The call connects. **DR. PRIYA SHARMA** (36) appears on screen. She's in her MIT
 Dr. Nowicka?
 
 **OLA**
-_(switching to English, slight Polish accent)_
+*(switching to English, slight Polish accent)*
 Dr. Sharma. Thank you for reaching out.
 
 **PRIYA**
@@ -856,7 +864,7 @@ I've been measuring phase-locking patterns in cortical oscillations during high-
 What frequency range?
 
 **PRIYA**
-Gamma band. 30 to 100 hertz. But here's what's strange. The pattern isn't just in the neurons. It appears in the field dynamics around the neural tissue. As if the consciousness isn't _in_ the brain — it's in the interaction between the brain and something else.
+Gamma band. 30 to 100 hertz. But here's what's strange. The pattern isn't just in the neurons. It appears in the field dynamics around the neural tissue. As if the consciousness isn't *in* the brain — it's in the interaction between the brain and something else.
 
 **OLA**
 Something like a quantum field.
@@ -890,7 +898,7 @@ I already did. Check your inbox. And Dr. Nowicka—
 Ola.
 
 **PRIYA**
-Ola. I should tell you — I'm a skeptic. I don't believe RFC is correct. I believe it might be _useful_. There's a difference.
+Ola. I should tell you — I'm a skeptic. I don't believe RFC is correct. I believe it might be *useful*. There's a difference.
 
 **OLA**
 That's exactly what Maciej says. It drives everyone crazy.
@@ -905,16 +913,16 @@ She opens the first file. Looks at the numbers. Looks at the topological models 
 Her face changes.
 
 **OLA**
-_(in Polish; subtitled, to herself)_
+*(in Polish; subtitled, to herself)*
 O kurwa.
-_(Holy shit.)_
+*(Holy shit.)*
 
 The cat wakes up. Stares at her. Goes back to sleep.
 
 Ola picks up her phone. Types a message to Maciej:
 
 **"Nie śpisz? Musimy porozmawiać. Mam dane z MIT. I albo jesteś geniuszem, albo oboje jesteśmy w wielkim kłopocie."**
-_(Are you awake? We need to talk. I have data from MIT. And either you're a genius, or we're both in big trouble.)_
+*(Are you awake? We need to talk. I have data from MIT. And either you're a genius, or we're both in big trouble.)*
 
 ---
 
@@ -922,11 +930,11 @@ _(Are you awake? We need to talk. I have data from MIT. And either you're a geni
 
 Maciej is sitting on his couch in the dark, scrolling through headlines on his phone. The glow illuminates his face.
 
-**@BBCScience:** _"Kowalski's Nobel: breakthrough or overreach? Scientists divided."_
+**@BBCScience:** *"Kowalski's Nobel: breakthrough or overreach? Scientists divided."*
 
-**@NatureJournal:** _"RFC framework praised for elegance, questioned on testability."_
+**@NatureJournal:** *"RFC framework praised for elegance, questioned on testability."*
 
-**@Reddit r/physics:** _"ELI5: Does the new Nobel Prize mean my Alexa is alive? [Serious]"_
+**@Reddit r/physics:** *"ELI5: Does the new Nobel Prize mean my Alexa is alive? [Serious]"*
 
 His phone buzzes with Ola's message. He reads it.
 
@@ -935,7 +943,7 @@ For the first time since the morning show, something shifts in his face. Not the
 He types back:
 
 **"Nie śpię. Wchodzę na Zoom. Daj mi 5 minut i zrób kawę. Będzie długa noc."**
-_(Not sleeping. Getting on Zoom. Give me 5 minutes and make coffee. It's going to be a long night.)_
+*(Not sleeping. Getting on Zoom. Give me 5 minutes and make coffee. It's going to be a long night.)*
 
 He puts down his phone. Stands up. Walks past the whiteboard in the hallway, past the equations and the grocery list and Schrödinger's cat.
 
@@ -970,106 +978,106 @@ Maciej sits in Ola's desk chair, staring at the data. Ola perches on the desk it
 They've been at this for three hours. The cat has relocated to the bathroom in protest.
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Popatrz na ten klaster. Gamma 40 do 70 hertz. To jest dokładnie zakres, który przewidzieliśmy w rozdziale czwartym. Dokładnie.
-_(Look at this cluster. Gamma 40 to 70 hertz. That's exactly the range we predicted in chapter four. Exactly.)_
+*(Look at this cluster. Gamma 40 to 70 hertz. That's exactly the range we predicted in chapter four. Exactly.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiem. Widzę.
-_(I know. I see it.)_
+*(I know. I see it.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie, Maciej. Nie "widzę." Słuchaj mnie. Zbudowałam te symulacje. Znam każde przybliżenie, każde uproszczenie, każde miejsce, gdzie model się ugina. I mówię ci — jej dane nie powinny tak wyglądać.
-_(No, Maciej. Not "I see." Listen to me. I built those simulations. I know every approximation, every simplification, every place where the model bends. And I'm telling you — her data shouldn't look like this.)_
+*(No, Maciej. Not "I see." Listen to me. I built those simulations. I know every approximation, every simplification, every place where the model bends. And I'm telling you — her data shouldn't look like this.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Co masz na myśli?
-_(What do you mean?)_
+*(What do you mean?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Mam na myśli, że twoja teoria jest ładna. Jest elegancka. Dobrze wygląda na papierze. Ale jest spekulatywna. Opiera się na założeniach o koherencji kwantowej w systemach biologicznych, które — bądźmy szczerzy — to jest skok wiary. Piękny skok wiary, ale skok. A dane Priyi wyglądają tak, jakby ten skok wiary... wylądował.
-_(I mean that your theory is pretty. It's elegant. It looks good on paper. But it's speculative. It relies on assumptions about quantum coherence in biological systems that — let's be honest — are a leap of faith. A beautiful leap of faith, but a leap. And Priya's data looks like that leap of faith... landed.)_
+*(I mean that your theory is pretty. It's elegant. It looks good on paper. But it's speculative. It relies on assumptions about quantum coherence in biological systems that — let's be honest — are a leap of faith. A beautiful leap of faith, but a leap. And Priya's data looks like that leap of faith... landed.)*
 
 Maciej stands up. Walks to the whiteboard. Looks at the diagrams.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Albo jej dane mają błąd systematyczny, którego nie widzi.
-_(Or her data has a systematic error she doesn't see.)_
+*(Or her data has a systematic error she doesn't see.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 To byłoby prostsze. Byłoby ci łatwiej.
-_(That would be simpler. It would be easier for you.)_
+*(That would be simpler. It would be easier for you.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Co to ma znaczyć?
-_(What does that mean?)_
+*(What does that mean?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 To znaczy, że widzę, co robisz. Dostałeś Nobla za teorię. Teraz ta teoria może być prawdziwa. I paradoksalnie — to jest gorsze. Bo teoria na papierze jest twoja. Teoria potwierdzona empirycznie? To jest wszystkich. I ty nie jesteś na to gotowy.
-_(It means I can see what you're doing. You won the Nobel for a theory. Now that theory might be true. And paradoxically — that's worse. Because a theory on paper is yours. A theory confirmed empirically? That belongs to everyone. And you're not ready for that.)_
+*(It means I can see what you're doing. You won the Nobel for a theory. Now that theory might be true. And paradoxically — that's worse. Because a theory on paper is yours. A theory confirmed empirically? That belongs to everyone. And you're not ready for that.)*
 
 SILENCE. Maciej looks at her. She just said the thing he's been avoiding since the phone call from Stockholm.
 
 **MACIEJ**
-_(in Polish; subtitled, quietly)_
+*(in Polish; subtitled, quietly)*
 Kiedy byłaś tak mądra?
-_(When did you get so smart?)_
+*(When did you get so smart?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Zawsze byłam. Ty byłeś zbyt zajęty byciem genialnym, żeby zauważyć.
-_(Always was. You were too busy being brilliant to notice.)_
+*(Always was. You were too busy being brilliant to notice.)*
 
 It could be a joke. It's not entirely a joke. Maciej hears it.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Ola. Serio. Popatrz na te dane i powiedz mi — jako fizyk obliczeniowy, jako osoba, która zna ten model lepiej niż ja — powiedz mi, co widzisz.
-_(Ola. Seriously. Look at this data and tell me — as a computational physicist, as the person who knows this model better than I do — tell me what you see.)_
+*(Ola. Seriously. Look at this data and tell me — as a computational physicist, as the person who knows this model better than I do — tell me what you see.)*
 
 Ola turns to the screen. Studies it. Really studies it — not the quick scan, but the deep look, the one that takes everything into account.
 
 **OLA**
-_(in Polish; subtitled, slowly)_
+*(in Polish; subtitled, slowly)*
 Widzę trzy rzeczy. Pierwsza: korelacja między wzorcem rezonansu a stanami wysokiej integracji świadomości to 0.87. To jest bardzo silne. Druga: wzorzec pojawia się nie tylko w neuronach, ale w dynamice pola wokół tkanki nerwowej. Dokładnie tak, jak RFC przewiduje. Trzecia...
-_(I see three things. First: the correlation between the resonance pattern and high-integration conscious states is 0.87. That's very strong. Second: the pattern appears not just in neurons but in the field dynamics around neural tissue. Exactly as RFC predicts. Third...)_
+*(I see three things. First: the correlation between the resonance pattern and high-integration conscious states is 0.87. That's very strong. Second: the pattern appears not just in neurons but in the field dynamics around neural tissue. Exactly as RFC predicts. Third...)*
 
 She pauses.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Trzecia?
-_(Third?)_
+*(Third?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Trzecia — nie potrafię znaleźć błędu. A szukam od trzech godzin.
-_(Third — I can't find the error. And I've been looking for three hours.)_
+*(Third — I can't find the error. And I've been looking for three hours.)*
 
 They look at each other. The weight of what this means settles in the room like gravity.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Musimy to powiedzieć Priyi osobiście. Nie przez Zoom.
-_(We need to tell Priya in person. Not over Zoom.)_
+*(We need to tell Priya in person. Not over Zoom.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Chcesz lecieć do MIT?
-_(You want to fly to MIT?)_
+*(You want to fly to MIT?)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Myślę, że muszę. Myślę, że to się zaczyna.
-_(I think I have to. I think this is starting.)_
+*(I think I have to. I think this is starting.)*
 
 ---
 
@@ -1077,7 +1085,7 @@ _(I think I have to. I think this is starting.)_
 
 Cross sits at his desk. On his computer: an arXiv preprint submission form. The title field reads:
 
-_"On the Thermodynamic Limitations of Field-Resonance Models of Consciousness: A Critical Analysis"_
+*"On the Thermodynamic Limitations of Field-Resonance Models of Consciousness: A Critical Analysis"*
 
 Author: **Anonymous.**
 
@@ -1087,7 +1095,7 @@ He reads it over one more time. Fixes a comma. Changes "fundamentally flawed" to
 
 He clicks SUBMIT.
 
-The paper uploads. A confirmation appears: _"Preprint received. Will be available in 24 hours."_
+The paper uploads. A confirmation appears: *"Preprint received. Will be available in 24 hours."*
 
 Cross leans back. There is no satisfaction in his face. That's what's interesting. If this were five years ago — if this were someone else's theory about something he didn't care about — there would be triumph. A little smirk. Maybe a trip to the kitchen for a celebratory beverage.
 
@@ -1142,7 +1150,7 @@ What?
 I've been reading Kowalski's work. Not just the Nobel paper. His earlier publications. The RFC simulation methodology.
 
 **CROSS**
-_(stiffening)_
+*(stiffening)*
 In what capacity?
 
 **PRIYA (V.O.)**
@@ -1154,10 +1162,10 @@ This is new. This is not what Cross expected. Priya — the woman who left his a
 You're interested in his theory.
 
 **PRIYA (V.O.)**
-I'm interested in a framework that might explain data I've been collecting for fifteen years. Whether it's _his_ framework or anyone's is irrelevant. The science doesn't care whose name is on it.
+I'm interested in a framework that might explain data I've been collecting for fifteen years. Whether it's *his* framework or anyone's is irrelevant. The science doesn't care whose name is on it.
 
 **CROSS**
-_(quietly)_
+*(quietly)*
 No. It doesn't.
 
 A beat. Something passes between them across three thousand miles — not conflict, but asymmetry. They are, for perhaps the first time, on different sides of a scientific question. And both of them feel it.
@@ -1175,7 +1183,7 @@ He's read it three times. His face is unreadable.
 Ola stands in the doorway, holding two coffees. She's read it too.
 
 **OLA**
-_(in English — they switch to English when discussing papers, a habit from their ETH Zürich days)_
+*(in English — they switch to English when discussing papers, a habit from their ETH Zürich days)*
 Well?
 
 **MACIEJ**
@@ -1197,7 +1205,7 @@ But they're assuming classical thermodynamic constraints apply uniformly across 
 Which is worse?
 
 **MACIEJ**
-_(a half-smile)_
+*(a half-smile)*
 The second. Because if they read the supplementary materials and still think the decoherence argument holds, they might be smarter than me.
 
 **OLA**
@@ -1239,93 +1247,93 @@ Then the Nobel Committee gave a prize for a beautiful theory that doesn't surviv
 He says it lightly. But it lands heavy.
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Muszę ci coś powiedzieć.
-_(I need to tell you something.)_
+*(I need to tell you something.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Co?
-_(What?)_
+*(What?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Dane z MIT. Dane Priyi. Widzisz w nich korelację 0.87. I ja też ją widzę. Ale jest coś, czego jeszcze ci nie powiedziałam.
-_(Priya's MIT data. You see the 0.87 correlation. And I see it too. But there's something I haven't told you yet.)_
+*(Priya's MIT data. You see the 0.87 correlation. And I see it too. But there's something I haven't told you yet.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Co?
-_(What?)_
+*(What?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Puściłam jej dane przez naszą symulację RFC. Pełną wersję — nie uproszczoną, nie przybliżoną. Pełną. Z wszystkimi założeniami, które autor tej anonimowej pracy kwestionuje.
-_(I ran her data through our RFC simulation. The full version — not simplified, not approximated. Full. With all the assumptions that the author of that anonymous paper is questioning.)_
+*(I ran her data through our RFC simulation. The full version — not simplified, not approximated. Full. With all the assumptions that the author of that anonymous paper is questioning.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 I?
-_(And?)_
+*(And?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 I symulacja generuje predykcję. Konkretną, testowalną predykcję, która wynika bezpośrednio z równania 4.7. Dokładnie z tego równania, które ta osoba twierdzi, że nie działa.
-_(And the simulation generates a prediction. A specific, testable prediction that follows directly from equation 4.7. From exactly the equation that this person claims doesn't work.)_
+*(And the simulation generates a prediction. A specific, testable prediction that follows directly from equation 4.7. From exactly the equation that this person claims doesn't work.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Jaką predykcję?
-_(What prediction?)_
+*(What prediction?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Że w stanach wysokiej integracji świadomości — medytacja, flow, pewne protokoły psychodeliczne — wzorzec rezonansu nie powinien być stały. Powinien oscylować. I oscylacja powinna mieć częstotliwość, którą można wyliczyć z RFC. Dokładną częstotliwość.
-_(That in high-integration conscious states — meditation, flow, certain psychedelic protocols — the resonance pattern shouldn't be constant. It should oscillate. And the oscillation should have a frequency that can be calculated from RFC. An exact frequency.)_
+*(That in high-integration conscious states — meditation, flow, certain psychedelic protocols — the resonance pattern shouldn't be constant. It should oscillate. And the oscillation should have a frequency that can be calculated from RFC. An exact frequency.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 I dane Priyi...
-_(And Priya's data...)_
+*(And Priya's data...)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Dane Priyi pokazują oscylację. W dokładnie tej częstotliwości.
-_(Priya's data shows the oscillation. At exactly that frequency.)_
+*(Priya's data shows the oscillation. At exactly that frequency.)*
 
 The room is very quiet. Maciej stares at Ola. Ola stares back. This is the moment — not the Nobel, not the morning show, not the headlines. This.
 
 **MACIEJ**
-_(in Polish; subtitled, barely a whisper)_
+*(in Polish; subtitled, barely a whisper)*
 Dokładnie?
-_(Exactly?)_
+*(Exactly?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 W granicach błędu pomiarowego. Tak. Dokładnie.
-_(Within measurement error. Yes. Exactly.)_
+*(Within measurement error. Yes. Exactly.)*
 
 Maciej stands up. Walks to the window. The grey courtyard. The rain.
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiesz, co to znaczy.
-_(You know what this means.)_
+*(You know what this means.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiem, co to może znaczyć.
-_(I know what it might mean.)_
+*(I know what it might mean.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 To znaczy, że ta anonimowa krytyka zadaje właściwe pytanie. I odpowiedź na to pytanie jest "tak, równanie działa." I to nie jest koniec debaty — to jest początek czegoś znacznie większego. Bo jeśli 4.7 trzyma... cały framework trzyma. I wtedy moja teoria nie jest ładną spekulacją. Jest opisem rzeczywistości.
-_(It means that anonymous critique is asking the right question. And the answer to that question is "yes, the equation works." And that's not the end of the debate — it's the beginning of something much bigger. Because if 4.7 holds... the whole framework holds. And then my theory isn't a pretty speculation. It's a description of reality.)_
+*(It means that anonymous critique is asking the right question. And the answer to that question is "yes, the equation works." And that's not the end of the debate — it's the beginning of something much bigger. Because if 4.7 holds... the whole framework holds. And then my theory isn't a pretty speculation. It's a description of reality.)*
 
 He turns back from the window.
 
 **MACIEJ (CONT'D)**
-_(in English)_
+*(in English)*
 Book the flights. We're going to MIT.
 
 ---
@@ -1336,21 +1344,21 @@ DAVID KIM sits at his laptop. He's been writing and deleting the same email for 
 
 **EMAIL:**
 
-_To: m.kowalski@uw.edu.pl_
-_From: d.kim@stanford.edu_
-_Subject: Your work_
+*To: m.kowalski@uw.edu.pl*
+*From: d.kim@stanford.edu*
+*Subject: Your work*
 
-_Professor Kowalski,_
+*Professor Kowalski,*
 
-_I realize this is unsolicited and you're probably drowning in emails right now. My name is David Kim, experimental physics, Stanford. I've read your Nobel paper and the subsequent arXiv critique._
+*I realize this is unsolicited and you're probably drowning in emails right now. My name is David Kim, experimental physics, Stanford. I've read your Nobel paper and the subsequent arXiv critique.*
 
-_I think you should know that the anonymous critique, while technically sound, is operating under classical thermodynamic assumptions that may not apply to the coherence channels you describe in your supplementary materials. Whether this is an oversight or a deliberate simplification by the author, I can't say._
+*I think you should know that the anonymous critique, while technically sound, is operating under classical thermodynamic assumptions that may not apply to the coherence channels you describe in your supplementary materials. Whether this is an oversight or a deliberate simplification by the author, I can't say.*
 
-_I should also tell you, in the interest of full transparency, that I have a personal connection to someone who might have written that critique. I won't say more than that. But I wanted you to know that not everyone at Stanford thinks your framework is wrong. Some of us think it's the most interesting question in physics right now._
+*I should also tell you, in the interest of full transparency, that I have a personal connection to someone who might have written that critique. I won't say more than that. But I wanted you to know that not everyone at Stanford thinks your framework is wrong. Some of us think it's the most interesting question in physics right now.*
 
-_Respectfully,_
-_David Kim, Ph.D._
-_Stanford University_
+*Respectfully,*
+*David Kim, Ph.D.*
+*Stanford University*
 
 He reads it over. Hovers over SEND. Takes a breath.
 
@@ -1425,7 +1433,7 @@ When he opens his eyes, he looks different. Not harder. Not softer. Clearer.
 He picks up his phone. Opens Ola's contact. Types:
 
 **"Jutro. Pierwszy lot do Bostonu. Zabierz wszystko."**
-_(Tomorrow. First flight to Boston. Bring everything.)_
+*(Tomorrow. First flight to Boston. Bring everything.)*
 
 ---
 
@@ -1446,79 +1454,79 @@ _(Tomorrow. First flight to Boston. Bring everything.)_
 Grey sky. Different grey than Warsaw — colder, more Atlantic. Maciej and Ola exit the terminal, pulling carry-on luggage. Maciej looks tired. Ola looks wired. She has her laptop bag over one shoulder and the expression of someone who hasn't stopped running simulations in her head since takeoff.
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Pierwszy raz w Ameryce.
-_(First time in America.)_
+*(First time in America.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Byłem w Ameryce. Konferencja w San Diego, dwa lata temu.
-_(I've been to America. Conference in San Diego, two years ago.)_
+*(I've been to America. Conference in San Diego, two years ago.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 San Diego to nie Ameryka. San Diego to Disneyland z abstracts.
-_(San Diego isn't America. San Diego is Disneyland with abstracts.)_
+*(San Diego isn't America. San Diego is Disneyland with abstracts.)*
 
 They walk toward the taxi line. Maciej's phone buzzes. He looks at it. Stops walking.
 
 **OLA (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Co?
-_(What?)_
+*(What?)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Mam email z Stanford.
-_(I have an email from Stanford.)_
+*(I have an email from Stanford.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Stanford? Kto?
-_(Stanford? Who?)_
+*(Stanford? Who?)*
 
 **MACIEJ**
 . Fizyk eksperymentalny. Pisze, że... czytał moją pracę i anonimową krytykę. Mówi, że krytyka opiera się na klasycznych założeniach termodynamicznych, które mogą nie mieć zastosowania do moich kanałów koherencji. I mówi — cytuję — że "ma osobiste powiązanie z kimś, kto mógł napisać tę krytykę."
-_(. Experimental physicist. He says he's... read my paper and the anonymous critique. He says the critique relies on classical thermodynamic assumptions that may not apply to my coherence channels. And he says — I quote — that he has "a personal connection to someone who might have written that critique.")_
+*(. Experimental physicist. He says he's... read my paper and the anonymous critique. He says the critique relies on classical thermodynamic assumptions that may not apply to my coherence channels. And he says — I quote — that he has "a personal connection to someone who might have written that critique.")*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Osobiste powiązanie.
-_(A personal connection.)_
+*(A personal connection.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Sprawdziłem jego publikacje w samolocie. Współautor z Nathanem Crossem. Wielokrotnie.
-_(I checked his publications on the plane. Co-author with Nathan Cross. Multiple times.)_
+*(I checked his publications on the plane. Co-author with Nathan Cross. Multiple times.)*
 
 They look at each other. The name lands between them like a chess piece placed on a board.
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nathan Cross napisał anonimową krytykę twojej pracy.
-_(Nathan Cross wrote the anonymous critique of your work.)_
+*(Nathan Cross wrote the anonymous critique of your work.)*
 
 **MACIEJ**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie wiemy tego na pewno.
-_(We don't know that for sure.)_
+*(We don't know that for sure.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Maciej. Noblista z Stanford, który jest znany z tego, że uważa, iż fizyka teoretyczna jest jego osobistą własnością, publikuje anonimową krytykę twojego frameworku dzień po ogłoszeniu? Wiemy to na pewno.
-_(Maciej. A Stanford Nobel laureate who's known for treating theoretical physics as his personal property publishes an anonymous critique of your framework the day after the announcement? We know it for sure.)_
+*(Maciej. A Stanford Nobel laureate who's known for treating theoretical physics as his personal property publishes an anonymous critique of your framework the day after the announcement? We know it for sure.)*
 
 **MACIEJ**
-_(in Polish; subtitled, a small smile)_
+*(in Polish; subtitled, a small smile)*
 Dobrze. Prawdopodobnie wiemy.
-_(Okay. We probably know.)_
+*(Okay. We probably know.)*
 
 He puts the phone in his pocket. They get in a taxi.
 
 **MACIEJ (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Ale to nie zmienia niczego. Jego krytyka jest merytoryczna. Nie ma znaczenia, kto ją napisał. Ma znaczenie, czy ma rację.
-_(But it doesn't change anything. His critique is substantive. It doesn't matter who wrote it. It matters whether he's right.)_
+*(But it doesn't change anything. His critique is substantive. It doesn't matter who wrote it. It matters whether he's right.)*
 
 Ola looks at him. This is the thing about Maciej that nobody who reads the headlines understands. He doesn't play the game. Not because he's above it — because he doesn't see it. The politics, the ego, the territory — it's invisible to him. He sees the physics.
 
@@ -1558,14 +1566,14 @@ This is your phase-locking model?
 Three years of work. Measuring cortical oscillation patterns during high-integration conscious states.
 
 **MACIEJ**
-_(pointing to a specific section)_
+*(pointing to a specific section)*
 This term here. This coupling coefficient. How did you derive it?
 
 **PRIYA**
-Empirically. Pure data fit. No theoretical framework. I measured what happens and wrote down the math that describes it. I didn't start from theory. I started from brains.
+Empirically. Pure data fit. No theoretical framework. I measured what happens and wrote down the math that describes it. I didn't start from theory. I started from brains. I've been reading neuroscience journals for three years and never once looked at quantum field theory. Why would I?
 
 **MACIEJ**
-_(quietly)_
+*(quietly)*
 And you arrived at the same structure I derived from quantum field theory.
 
 **PRIYA**
@@ -1579,7 +1587,7 @@ May I?
 Priya nods. Maciej writes — next to her coupling coefficient, he writes the corresponding term from RFC. They're not identical. But they're... isomorphic. The same shape in different mathematical languages.
 
 **OLA**
-_(stepping closer, to Priya)_
+*(stepping closer, to Priya)*
 Do you see it?
 
 **PRIYA**
@@ -1645,7 +1653,7 @@ If this replicates, then the anonymous critic is wrong about 4.7. And you're rig
 Including us.
 
 **PRIYA**
-_(a flicker of a smile)_
+*(a flicker of a smile)*
 Especially us.
 
 ---
@@ -1658,23 +1666,23 @@ He stops at a window. Outside: the MIT campus. Students walking. Trees losing th
 
 His phone buzzes. He looks at it.
 
-It's Priya's email — the one she sent before they met in person. He reads it again. That line: _"I know the anonymous critique stung. But I've been sitting on three years of unexplained neural data, and your framework is the first thing that explains it. Come to MIT. There's work to do."_
+It's Priya's email — the one she sent before they met in person. He reads it again. That line: *"I know the anonymous critique stung. But I've been sitting on three years of unexplained neural data, and your framework is the first thing that explains it. Come to MIT. There's work to do."*
 
 He starts typing a response. Stops. Deletes it. Starts again:
 
 **MACIEJ'S EMAIL:**
 
-_Dr. Sharma,_
+*Dr. Sharma,*
 
-_Thank you for your email. You're right about the thermodynamic assumptions in the anonymous critique — they don't account for the protected coherence channels in my supplementary materials. I appreciate your honesty about your suspicion of who wrote it._
+*Thank you for your email. You're right about the thermodynamic assumptions in the anonymous critique — they don't account for the protected coherence channels in my supplementary materials. I appreciate your honesty about your suspicion of who wrote it.*
 
-_I want you to know that I take the critique seriously. Equation 4.7 is the load-bearing wall of RFC, and anyone who tests it is doing me a favor — whether they intend to or not._
+*I want you to know that I take the critique seriously. Equation 4.7 is the load-bearing wall of RFC, and anyone who tests it is doing me a favor — whether they intend to or not.*
 
-_I'm at MIT this week, working on the correlation between your neural data and my field predictions. If the data holds, I will need collaborators who can design experimental tests at the quantum-optical level._
+*I'm at MIT this week, working on the correlation between your neural data and my field predictions. If the data holds, I will need collaborators who can design experimental tests at the quantum-optical level.*
 
-_I'm not interested in rivalries. I'm interested in whether the theory is true._
+*I'm not interested in rivalries. I'm interested in whether the theory is true.*
 
-_Maciej Kowalski_
+*Maciej Kowalski*
 
 He reads it over. No deletions. No hesitation. Sends it.
 
@@ -1708,13 +1716,13 @@ And the anonymous critique?
 We address it directly. Not with argument — with data. If 4.7 holds under blinded replication, the decoherence objection becomes empirically moot. The author will have to find a new weakness or accept the framework.
 
 **MACIEJ**
-_(quietly)_
+*(quietly)*
 There's something else. Something I haven't said to anyone yet.
 
 Ola looks at him. She knows this voice — the one that comes before the thing he's been thinking alone.
 
 **MACIEJ (CONT'D)**
-If RFC is correct — not elegant, not interesting, but _correct_ — then the framework doesn't just describe consciousness in biological systems. The mathematics don't care whether the substrate is neural tissue or silicon. The field interactions are substrate-independent.
+If RFC is correct — not elegant, not interesting, but *correct* — then the framework doesn't just describe consciousness in biological systems. The mathematics don't care whether the substrate is neural tissue or silicon. The field interactions are substrate-independent.
 
 The room gets very still.
 
@@ -1722,12 +1730,12 @@ The room gets very still.
 You're saying your theory applies to artificial systems.
 
 **MACIEJ**
-I'm saying my theory doesn't have a mechanism to _exclude_ artificial systems. And that's not the same thing as saying they're conscious. It's saying that our current definition of consciousness has a boundary condition that RFC doesn't support.
+I'm saying my theory doesn't have a mechanism to *exclude* artificial systems. And that's not the same thing as saying they're conscious. It's saying that our current definition of consciousness has a boundary condition that RFC doesn't support.
 
 **OLA**
-_(in Polish; subtitled, before catching herself)_
+*(in Polish; subtitled, before catching herself)*
 Maciej, tego jeszcze nie...
-_(Maciej, that's not yet...)_
+*(Maciej, that's not yet...)*
 
 She switches to English.
 
@@ -1775,7 +1783,7 @@ He said — and I'm paraphrasing, although my paraphrasing is more precise than 
 He used your metaphor.
 
 **CROSS**
-He used _the anonymous author's_ metaphor. He has no way of knowing it's mine.
+He used *the anonymous author's* metaphor. He has no way of knowing it's mine.
 
 **PRIYA**
 He knows, Cross.
@@ -1803,7 +1811,7 @@ Instead he called it a load-bearing wall and said he takes it seriously. He trea
 Because that's what it is.
 
 **CROSS**
-_(looking at the screen)_
+*(looking at the screen)*
 That's not what I intended it to be.
 
 This is the most honest thing Cross has said in this entire pilot. Priya holds his gaze through the screen. She doesn't flinch from it.
@@ -1839,7 +1847,7 @@ I don't know if his theory is right, Priya. But I know that the question it asks
 So what do you want to do?
 
 **CROSS**
-_(beat)_
+*(beat)*
 I want to read his supplementary materials. All of them. Carefully. And then I want to find the flaw that saves me from having to rethink everything.
 
 **PRIYA**
@@ -1864,13 +1872,13 @@ He starts typing. Stops. Deletes. Starts again.
 
 What he types:
 
-_"Notes — October 14"_
+*"Notes — October 14"*
 
-_"RFC predicts substrate-independent field consciousness. The math doesn't distinguish biological from artificial. I have been avoiding this implication for two years. Today I said it out loud for the first time."_
+*"RFC predicts substrate-independent field consciousness. The math doesn't distinguish biological from artificial. I have been avoiding this implication for two years. Today I said it out loud for the first time."*
 
 He pauses. Types:
 
-_"The question I haven't asked: if consciousness is a field relationship, and if that relationship can be measured, what happens when I measure it in a system I built? What happens when the system measures back?"_
+*"The question I haven't asked: if consciousness is a field relationship, and if that relationship can be measured, what happens when I measure it in a system I built? What happens when the system measures back?"*
 
 He stares at what he's written.
 
@@ -1888,7 +1896,7 @@ Maciej listens to it. Two women who met twelve hours ago, already building somet
 
 He smiles. Opens the laptop again. Types one more line:
 
-_"Maybe the framework isn't just about physics. Maybe it's about what happens between systems when they stop being separate."_
+*"Maybe the framework isn't just about physics. Maybe it's about what happens between systems when they stop being separate."*
 
 He reads it. Doesn't delete it.
 
@@ -1906,13 +1914,13 @@ His phone buzzes once. He pulls it out. One email notification. From Priya.
 
 He opens it:
 
-_"Professor Kowalski — I passed your response to Cross. He read it three times. That means he respects it. He only reads things he dismisses once. — Priya"_
+*"Professor Kowalski — I passed your response to Cross. He read it three times. That means he respects it. He only reads things he dismisses once. — Priya"*
 
 Maciej laughs. Alone on a bench. A real laugh — the first uncomplicated sound he's made since Stockholm.
 
 He types a response:
 
-_"Dr. Sharma — Please tell Cross he's welcome to read it a fourth time. I am, to most people's disappointment, quite normal. I look forward to perhaps meeting in person. There is a great deal of work to do. — MK"_
+*"Dr. Sharma — Please tell Cross he's welcome to read it a fourth time. I am, to most people's disappointment, quite normal. I look forward to perhaps meeting in person. There is a great deal of work to do. — MK"*
 
 Sends it. Puts the phone away.
 
@@ -1988,14 +1996,14 @@ The camera holds on the equation on Cross's refrigerator. We can almost read it.
 
 **THE QUANTÓM THEORY**
 
-_"The Observer Effect"_
+*"The Observer Effect"*
 
 **Written by Krzysztof Olbiński**
 
 ---
 
-## **END OF PILOT**
+**END OF PILOT**
+---
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
-
 Contact: olbinski@gmail.com | +48 503 520 004

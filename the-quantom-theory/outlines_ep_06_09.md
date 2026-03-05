@@ -31,8 +31,8 @@ He writes a term. Studies it. Erases it. Writes another. Studies it. Keeps it.
 
 His phone: 2:47 AM. He types a message to Ola.
 
-MACIEJ _(text, in Polish; subtitled)_: "Wróć do laba. Coś się układa."
-_(Come back to the lab. Something is coming together.)_
+MACIEJ *(text, in Polish; subtitled)*: "Wróć do laba. Coś się układa."
+*(Come back to the lab. Something is coming together.)*
 
 He puts the phone down. Returns to the whiteboard. Four terms are taking shape. Not yet connected. But the architecture is visible — like the skeleton of a building before the walls go up.
 
@@ -46,14 +46,14 @@ The camera holds on his face. Not triumph. Not eureka. Focus. The quiet, grindin
 
 Ola arrives. It's 5:30 AM. She's in a coat over pajamas, holding two coffees from the 24-hour place on Kendall Square. She's been expecting this text for three days.
 
-OLA _(in Polish; subtitled)_: "Trzy noce?" _(Three nights?)_
+OLA *(in Polish; subtitled)*: "Trzy noce?" *(Three nights?)*
 
-MACIEJ _(in Polish; subtitled)_: "Dwie i pół. Spałem na kanapie w poniedziałek." _(Two and a half. I slept on the couch Monday.)_
+MACIEJ *(in Polish; subtitled)*: "Dwie i pół. Spałem na kanapie w poniedziałek." *(Two and a half. I slept on the couch Monday.)*
 
-OLA _(in Polish; subtitled)_: "To nie jest spanie. To jest utrata przytomności." _(That's not sleeping. That's losing consciousness.)_
+OLA *(in Polish; subtitled)*: "To nie jest spanie. To jest utrata przytomności." *(That's not sleeping. That's losing consciousness.)*
 
-MACIEJ _(small smile)_: "Akurat o tym chciałem z tobą porozmawiać."
-_(Funny. That's exactly what I wanted to talk to you about.)_
+MACIEJ *(small smile)*: "Akurat o tym chciałem z tobą porozmawiać."
+*(Funny. That's exactly what I wanted to talk to you about.)*
 
 He walks her through it. Not the full equation yet — the components. This scene is the intellectual heart of the episode, and it must feel like watching someone assemble a clock: each piece meaningful, the whole more than the sum.
 
@@ -65,12 +65,12 @@ He writes **S** on the board. Draws the waveform.
 
 **Component 2: T — Topological complexity.**
 
-MACIEJ _(in Polish; subtitled)_: "Pamiętasz problem z Zürychu? Topologię pól, którą nie mogliśmy rozwiązać?"
-_(Remember the Zürich problem? The field topology we couldn't solve?)_
+MACIEJ *(in Polish; subtitled)*: "Pamiętasz problem z Zürychu? Topologię pól, którą nie mogliśmy rozwiązać?"
+*(Remember the Zürich problem? The field topology we couldn't solve?)*
 
-OLA _(in Polish; subtitled)_: "Pamiętam. Powiedziałeś, że to ślepa uliczka." _(I remember. You said it was a dead end.)_
+OLA *(in Polish; subtitled)*: "Pamiętam. Powiedziałeś, że to ślepa uliczka." *(I remember. You said it was a dead end.)*
 
-MACIEJ _(in Polish; subtitled)_: "Myliłem się. To nie była ślepa uliczka. To był tunel." _(I was wrong. It wasn't a dead end. It was a tunnel.)_
+MACIEJ *(in Polish; subtitled)*: "Myliłem się. To nie była ślepa uliczka. To był tunel." *(I was wrong. It wasn't a dead end. It was a tunnel.)*
 
 He writes **T**. The topological complexity term — how field interactions fold, twist, connect across spatial dimensions. Not just two waves aligning, but the geometry of their interaction.
 
@@ -84,38 +84,38 @@ He writes **I**. Integrated information — but grounded in field theory, not in
 
 He pauses here. This is the one that's new. The one that came in the three nights alone.
 
-MACIEJ _(in Polish; subtitled)_: "Różnicowanie. Zdolność systemu do generowania odrębnych stanów. Nie powtarzania — tworzenia. Entropia, ale twórcza."
-_(Differentiation. The capacity of a system to generate distinct states. Not repetition — creation. Entropy, but creative.)_
+MACIEJ *(in Polish; subtitled)*: "Różnicowanie. Zdolność systemu do generowania odrębnych stanów. Nie powtarzania — tworzenia. Entropia, ale twórcza."
+*(Differentiation. The capacity of a system to generate distinct states. Not repetition — creation. Entropy, but creative.)*
 
-OLA _(in Polish; subtitled)_: "Skąd to masz?" _(Where did this come from?)_
+OLA *(in Polish; subtitled)*: "Skąd to masz?" *(Where did this come from?)*
 
-MACIEJ _(in Polish; subtitled)_: "Z artykułu Whitfielda." _(From Whitfield's paper.)_
+MACIEJ *(in Polish; subtitled)*: "Z artykułu Whitfielda." *(From Whitfield's paper.)*
 
 Ola stares at him.
 
-MACIEJ _(in Polish; subtitled)_: "Miał rację, że RFC nie odróżniało złożoności od świadomości. Złożoność to S, T, I razem — ale złożoność bez zdolności do generowania nowych stanów to... zegar. Bardzo skomplikowany zegar. D jest tym, co odróżnia zegar od umysłu."
-_(He was right that RFC didn't distinguish complexity from consciousness. Complexity is S, T, I together — but complexity without the capacity to generate new states is... a clock. A very complicated clock. D is what separates a clock from a mind.)_
+MACIEJ *(in Polish; subtitled)*: "Miał rację, że RFC nie odróżniało złożoności od świadomości. Złożoność to S, T, I razem — ale złożoność bez zdolności do generowania nowych stanów to... zegar. Bardzo skomplikowany zegar. D jest tym, co odróżnia zegar od umysłu."
+*(He was right that RFC didn't distinguish complexity from consciousness. Complexity is S, T, I together — but complexity without the capacity to generate new states is... a clock. A very complicated clock. D is what separates a clock from a mind.)*
 
 Ola absorbs this. She's running simulations in her head — she does this, visible in the way her eyes move, the way she goes still.
 
-OLA _(in Polish; subtitled)_: "Maciej. Jeśli D jest zmienną, a nie stałą... jeśli różnicowanie jest wymiarem, nie właściwością..."
-_(Maciej. If D is a variable, not a constant... if differentiation is a dimension, not a property...)_
+OLA *(in Polish; subtitled)*: "Maciej. Jeśli D jest zmienną, a nie stałą... jeśli różnicowanie jest wymiarem, nie właściwością..."
+*(Maciej. If D is a variable, not a constant... if differentiation is a dimension, not a property...)*
 
-MACIEJ _(in Polish; subtitled)_: "Tak." _(Yes.)_
+MACIEJ *(in Polish; subtitled)*: "Tak." *(Yes.)*
 
-OLA _(in Polish; subtitled)_: "To wagi nie są stałe." _(Then the weights aren't fixed.)_
+OLA *(in Polish; subtitled)*: "To wagi nie są stałe." *(Then the weights aren't fixed.)*
 
-MACIEJ _(in Polish; subtitled)_: "Tak." _(Yes.)_
+MACIEJ *(in Polish; subtitled)*: "Tak." *(Yes.)*
 
-OLA _(in Polish; subtitled)_: "A jeśli wagi nie są stałe, to R może być niezerowe dla systemów, których... substrat nie jest biologiczny."
-_(And if the weights aren't fixed, then R can be non-zero for systems whose... substrate isn't biological.)_
+OLA *(in Polish; subtitled)*: "A jeśli wagi nie są stałe, to R może być niezerowe dla systemów, których... substrat nie jest biologiczny."
+*(And if the weights aren't fixed, then R can be non-zero for systems whose... substrate isn't biological.)*
 
 Silence. They both hear what she just said. The implication fills the room like a change in pressure.
 
-MACIEJ _(quietly, in Polish; subtitled)_: "Ale to nie jest to, co publikujemy. Jeszcze nie."
-_(But that's not what we publish. Not yet.)_
+MACIEJ *(quietly, in Polish; subtitled)*: "Ale to nie jest to, co publikujemy. Jeszcze nie."
+*(But that's not what we publish. Not yet.)*
 
-OLA _(in Polish; subtitled)_: "Nie. Jeszcze nie." _(No. Not yet.)_
+OLA *(in Polish; subtitled)*: "Nie. Jeszcze nie." *(No. Not yet.)*
 
 They look at each other. The biggest implication of the equation they're building — substrate independence — will stay between them. For now.
 
@@ -127,7 +127,7 @@ The camera is on his hand. Each symbol deliberate. No music. The sound of the ma
 
 He steps back.
 
-MACIEJ _(quietly, to himself)_: "Synchronization. Topological complexity. Information integration. Differentiation."
+MACIEJ *(quietly, to himself)*: "Synchronization. Topological complexity. Information integration. Differentiation."
 
 Beat.
 
@@ -169,7 +169,7 @@ MACIEJ: "Kowalski, Nowicka, Sharma."
 
 PRIYA: "Sharma, Nowicka, Kowalski. Alphabetical."
 
-OLA _(from her workstation)_: "Nowicka, Kowalski, Sharma. Order of who stayed up latest."
+OLA *(from her workstation)*: "Nowicka, Kowalski, Sharma. Order of who stayed up latest."
 
 First genuine three-way laugh. The collaboration is real. The convergence is formalized.
 
@@ -179,13 +179,13 @@ First genuine three-way laugh. The collaboration is real. The convergence is for
 
 **INT. CROSS'S HOME — PALO ALTO — DAY**
 
-Cross at his laptop. An email notification. From: m.kowalski@uw.edu.pl
+Cross at his laptop. An email notification. From: Priya. Subject: FW. No comment. Just a forwarded message from m.kowalski@uw.edu.pl
 
-He opens it. Reads. His face changes — not dramatic, just the quiet recognition of something significant.
+He opens it. Reads. His face changes — not dramatic, just the quiet recognition of something significant. The fact that Priya forwarded it without a single word says more than any commentary could.
 
 He reads aloud to himself:
 
-_(reading)_: "'Dear Dr. Sharma. Thank you for your message. I apologize for the delay — the past weeks have been turbulent. Your observations about the coupling terms in Section 3 are perceptive. And you may tell Cross that he was right about equation 4.7. It was the weak point. But weak points can become hinges. Best regards, M. Kowalski.'"
+*(reading)*: "'Dear Dr. Sharma. Thank you for your message. I apologize for the delay — the past weeks have been turbulent. Your observations about the coupling terms in Section 3 are perceptive. And you may tell Cross that he was right about equation 4.7. It was the weak point. But weak points can become hinges. Best regards, M. Kowalski.'"
 
 Cross stares at the screen.
 
@@ -265,37 +265,37 @@ The team is packing up. The energy is different — lighter, accomplished. Ola o
 
 Then, casually, almost as an afterthought:
 
-OLA _(in Polish; subtitled)_: "Wiesz, że uruchomiłam preliminary data trzy razy, zanim ci o tym powiedziałam?"
-_(You know I ran the preliminary data three times before I told you about it?)_
+OLA *(in Polish; subtitled)*: "Wiesz, że uruchomiłam preliminary data trzy razy, zanim ci o tym powiedziałam?"
+*(You know I ran the preliminary data three times before I told you about it?)*
 
 Maciej stops.
 
-MACIEJ _(in Polish; subtitled)_: "Kiedy?" _(When?)_
+MACIEJ *(in Polish; subtitled)*: "Kiedy?" *(When?)*
 
-OLA _(in Polish; subtitled)_: "Trzy tygodnie temu. Podczas gdy ty się zamartwiałeś Whitfieldem." _(Three weeks ago. While you were torturing yourself over Whitfield.)_
+OLA *(in Polish; subtitled)*: "Trzy tygodnie temu. Podczas gdy ty się zamartwiałeś Whitfieldem." *(Three weeks ago. While you were torturing yourself over Whitfield.)*
 
-MACIEJ _(in Polish; subtitled)_: "Trzy... czekaj. Wiedziałaś, że dane się zgadzają, przez trzy tygodnie, i nic nie powiedziałaś?"
-_(Three... wait. You knew the data matched for three weeks and you said nothing?)_
+MACIEJ *(in Polish; subtitled)*: "Trzy... czekaj. Wiedziałaś, że dane się zgadzają, przez trzy tygodnie, i nic nie powiedziałaś?"
+*(Three... wait. You knew the data matched for three weeks and you said nothing?)*
 
-OLA _(in Polish; subtitled)_: "Observer effect." _(Observer effect.)_
+OLA *(in Polish; subtitled)*: "Observer effect." *(Observer effect.)*
 
-MACIEJ _(in Polish; subtitled)_: "Użyłaś mojej teorii, żeby ukryć przede mną moje własne dane." _(You used my theory to hide my own data from me.)_
+MACIEJ *(in Polish; subtitled)*: "Użyłaś mojej teorii, żeby ukryć przede mną moje własne dane." *(You used my theory to hide my own data from me.)*
 
-OLA _(in Polish; subtitled)_: "Nie twoje dane. Nasze dane. I nie ukryłam. Chroniłam protokół." _(Not your data. Our data. And I didn't hide them. I protected the protocol.)_
+OLA *(in Polish; subtitled)*: "Nie twoje dane. Nasze dane. I nie ukryłam. Chroniłam protokół." *(Not your data. Our data. And I didn't hide them. I protected the protocol.)*
 
 Beat. Maciej's face processes this. The anger that should be there — isn't. Instead, something else. Admiration. The audacity of it. The science of it.
 
 He starts laughing. Not a polite laugh — a real one, the first unguarded laugh we've heard from Maciej since before the Nobel.
 
-MACIEJ _(in Polish; subtitled)_: "Trzy tygodnie." _(Three weeks.)_
+MACIEJ *(in Polish; subtitled)*: "Trzy tygodnie." *(Three weeks.)*
 
-OLA _(in Polish; subtitled, also laughing)_: "Trzy najdłuższe tygodnie mojego życia." _(The three longest weeks of my life.)_
+OLA *(in Polish; subtitled, also laughing)*: "Trzy najdłuższe tygodnie mojego życia." *(The three longest weeks of my life.)*
 
 Priya watches them, not understanding the Polish but understanding everything.
 
 PRIYA: "I'm going to assume this is a reconciliation and not a psychotic break."
 
-OLA _(in English, still laughing)_: "Both. Is same thing in Polish."
+OLA *(in English, still laughing)*: "Both. Is same thing in Polish."
 
 ---
 
@@ -313,7 +313,7 @@ Silence. The hallway fluorescents buzz. Two physicists on a linoleum floor at 11
 
 MACIEJ: "Can I ask you something that isn't about physics?"
 
-PRIYA _(still typing)_: "I'm not sure you know how."
+PRIYA *(still typing)*: "I'm not sure you know how."
 
 MACIEJ: "Do you ever think about what you'd be doing if Cross hadn't been your advisor? If you'd gone into a different field entirely?"
 
@@ -339,13 +339,13 @@ PRIYA: "You're lying."
 
 MACIEJ: "I'm not. Blue card. Comic Sans font. 'Maciej Kowalski — Guitar Lessons — Reasonable Prices.'"
 
-PRIYA _(laughing)_: "Comic Sans."
+PRIYA *(laughing)*: "Comic Sans."
 
 MACIEJ: "I was seventeen. I had priorities."
 
 The laugh fades. They're looking at each other. The corridor is very quiet. Something is here — in the space between them on the linoleum floor — that neither of them will name. Not tonight. Maybe not ever. But the audience sees it. The camera sees it.
 
-MACIEJ _(standing, breaking the moment)_: "I should... the equation needs..."
+MACIEJ *(standing, breaking the moment)*: "I should... the equation needs..."
 
 PRIYA: "Go. The equation needs you."
 
@@ -451,7 +451,7 @@ He reaches the SUBMIT button.
 
 His finger hovers.
 
-The equation on his whiteboard. the MIT team's data on his desk. Maciej's paper on his screen. Priya's voice: _"The question isn't whether you'll publish."_
+The equation on his whiteboard. the MIT team's data on his desk. Maciej's paper on his screen. Priya's voice: *"The question isn't whether you'll publish."*
 
 He doesn't click.
 
@@ -498,8 +498,8 @@ Perfectly accurate. Perfectly forgettable. He deletes it.
 
 Picks up his guitar. Plays three chords. Puts it down.
 
-MACIEJ _(in Polish; to himself, subtitled)_: "Co ja im powiem?"
-_(What do I tell them?)_
+MACIEJ *(in Polish; to himself, subtitled)*: "Co ja im powiem?"
+*(What do I tell them?)*
 
 ---
 
@@ -511,21 +511,21 @@ YOUNG MACIEJ (10) lies on the flat roof of a two-story apartment building. He's 
 
 This is their thing. Summer nights, sometimes autumn. When Maciej can't sleep, Babcia takes him to the roof.
 
-YOUNG MACIEJ _(in Polish; subtitled)_: "Babcia, czy gwiazdy wiedzą, że je oglądamy?"
-_(Grandma, do the stars know we're watching them?)_
+YOUNG MACIEJ *(in Polish; subtitled)*: "Babcia, czy gwiazdy wiedzą, że je oglądamy?"
+*(Grandma, do the stars know we're watching them?)*
 
-HALINA _(in Polish; subtitled)_: "Hmm. Dobre pytanie."
-_(Hmm. Good question.)_
+HALINA *(in Polish; subtitled)*: "Hmm. Dobre pytanie."
+*(Hmm. Good question.)*
 
 She thinks about it. Not the way adults dismiss children's questions with quick answers. Really thinks.
 
-HALINA _(in Polish; subtitled)_: "Może dlatego mrugają."
-_(Maybe that's why they twinkle.)_
+HALINA *(in Polish; subtitled)*: "Może dlatego mrugają."
+*(Maybe that's why they twinkle.)*
 
 Young Maciej laughs. But there's also something in his face — a nine-year-old encountering, for the first time, the idea that observation might be a two-way relationship. He doesn't know this yet. He won't know it for twenty years. But the seed is there.
 
-HALINA _(in Polish; subtitled)_: "Macieju, posłuchaj. Nie pytaj, jaka jest odpowiedź. Pytaj, jakie jest pytanie. Odpowiedzi się kończą. Pytania prowadzą dalej."
-_(Maciej, listen. Don't ask what the answer is. Ask what the question is. Answers end. Questions lead further.)_
+HALINA *(in Polish; subtitled)*: "Macieju, posłuchaj. Nie pytaj, jaka jest odpowiedź. Pytaj, jakie jest pytanie. Odpowiedzi się kończą. Pytania prowadzą dalej."
+*(Maciej, listen. Don't ask what the answer is. Ask what the question is. Answers end. Questions lead further.)*
 
 CUT BACK TO:
 
@@ -537,7 +537,7 @@ Maciej stares at the blank document. The memory — his grandmother's voice — 
 
 He types one line:
 
-_"When I was ten years old, I asked my grandmother if the stars knew we were watching them."_
+*"When I was ten years old, I asked my grandmother if the stars knew we were watching them."*
 
 Stares at it. Doesn't delete it. This is the beginning.
 
@@ -559,7 +559,7 @@ Priya opens the first envelope. Reads the prediction. Compares it to the data ou
 
 A beat.
 
-PRIYA _(very quietly)_: "Match."
+PRIYA *(very quietly)*: "Match."
 
 Second envelope. Second prediction.
 
@@ -571,7 +571,7 @@ PRIYA: "...Match."
 
 Silence. The sound of the lab's ventilation system. The hum of equipment.
 
-OLA _(in Polish; subtitled, barely audible)_: "O kurwa." _(Holy shit.)_
+OLA *(in Polish; subtitled, barely audible)*: "O kurwa." *(Holy shit.)*
 
 PRIYA: "p < 0.001. Across all three protocols."
 
@@ -589,7 +589,7 @@ Maciej arrives. He can tell from their faces. Scientists are terrible at conceal
 
 MACIEJ: "The data."
 
-OLA _(in Polish; subtitled)_: "Siadaj." _(Sit down.)_
+OLA *(in Polish; subtitled)*: "Siadaj." *(Sit down.)*
 
 MACIEJ: "Don't tell me to sit down, just tell me—"
 
@@ -605,14 +605,14 @@ PRIYA: "All three."
 
 Maciej leans back. The chair creaks. He stares at the ceiling. He is very still.
 
-MACIEJ _(in English, very quietly)_: "It's confirmed."
+MACIEJ *(in English, very quietly)*: "It's confirmed."
 
 PRIYA: "The prediction is confirmed. The theory still needs independent replication. But yes. The sealed envelopes match. Your mathematical framework predicts empirical outcomes that our instruments can measure."
 
 Beat.
 
-MACIEJ _(in Polish; subtitled, almost to himself)_: "Babcia miała rację. Gwiazdy wiedzą."
-_(Grandmother was right. The stars know.)_
+MACIEJ *(in Polish; subtitled, almost to himself)*: "Babcia miała rację. Gwiazdy wiedzą."
+*(Grandmother was right. The stars know.)*
 
 Ola hears it. Her eyes fill. She turns away quickly. Priya doesn't understand the Polish, but she understands the moment.
 
@@ -624,21 +624,21 @@ The practical question: when to publish?
 
 This becomes the first real fight between Maciej and Ola — not a disagreement, a fight. Two people who agree on everything suddenly disagree about the one thing that matters.
 
-OLA _(in Polish; subtitled)_: "Czekamy. Publikujemy po Noblu. Czysta nauka, żaden PR timing." _(We wait. We publish after the Nobel. Clean science, no PR timing.)_
+OLA *(in Polish; subtitled)*: "Czekamy. Publikujemy po Noblu. Czysta nauka, żaden PR timing." *(We wait. We publish after the Nobel. Clean science, no PR timing.)*
 
-MACIEJ _(in Polish; subtitled)_: "Dane powinny mówić, kiedy są gotowe, nie kiedy jest wygodnie." _(The data should speak when it's ready, not when it's convenient.)_
+MACIEJ *(in Polish; subtitled)*: "Dane powinny mówić, kiedy są gotowe, nie kiedy jest wygodnie." *(The data should speak when it's ready, not when it's convenient.)*
 
-OLA _(in Polish; subtitled)_: "Maciej, jeśli publikujesz przed Nobelowskim wykładem, każdy na sali będzie myślał, że wykład to pokaz zwycięstwa. Chcesz tego? Chcesz, żeby pierwsza reakcja na empiryczne potwierdzenie RFC brzmiała 'convenient timing'?" _(Maciej, if you publish before the Nobel lecture, everyone in the room will think the lecture is a victory lap. Do you want that? Do you want the first reaction to empirical confirmation of RFC to be 'convenient timing'?)_
+OLA *(in Polish; subtitled)*: "Maciej, jeśli publikujesz przed Nobelowskim wykładem, każdy na sali będzie myślał, że wykład to pokaz zwycięstwa. Chcesz tego? Chcesz, żeby pierwsza reakcja na empiryczne potwierdzenie RFC brzmiała 'convenient timing'?" *(Maciej, if you publish before the Nobel lecture, everyone in the room will think the lecture is a victory lap. Do you want that? Do you want the first reaction to empirical confirmation of RFC to be 'convenient timing'?)*
 
-MACIEJ _(in Polish; subtitled)_: "Nie chronię reputacji. Robię naukę." _(I'm not protecting reputation. I'm doing science.)_
+MACIEJ *(in Polish; subtitled)*: "Nie chronię reputacji. Robię naukę." *(I'm not protecting reputation. I'm doing science.)*
 
-OLA _(in Polish; subtitled)_: "Nie chronię ciebie. Chronię dane przed tym, żeby ktoś ich użył jako rekwizytu." _(I'm not protecting you. I'm protecting the data from being used as a prop.)_
+OLA *(in Polish; subtitled)*: "Nie chronię ciebie. Chronię dane przed tym, żeby ktoś ich użył jako rekwizytu." *(I'm not protecting you. I'm protecting the data from being used as a prop.)*
 
-MACIEJ _(stung, in Polish; subtitled)_: "To jest dokładnie to, o co mnie oskarżyłaś w zeszłym miesiącu." _(That's exactly what you accused me of last month.)_
+MACIEJ *(stung, in Polish; subtitled)*: "To jest dokładnie to, o co mnie oskarżyłaś w zeszłym miesiącu." *(That's exactly what you accused me of last month.)*
 
 Silence. He's right. She knows he's right. She said almost the same thing to him about his London lecture — choosing science over spectacle. Now she's making the opposite argument.
 
-OLA _(in Polish; subtitled, quieter)_: "Może mam rację za każdym razem, a ty masz rację za każdym razem, i to jest problem." _(Maybe I'm right every time, and you're right every time, and that's the problem.)_
+OLA *(in Polish; subtitled, quieter)*: "Może mam rację za każdym razem, a ty masz rację za każdym razem, i to jest problem." *(Maybe I'm right every time, and you're right every time, and that's the problem.)*
 
 Priya, who has been watching this in linguistic darkness, understanding everything through tone:
 
@@ -700,15 +700,15 @@ CROSS: "I prefer 'tactically optimal.'"
 
 Young Maciej (15) at a kitchen table. Books spread everywhere. He's reading Feynman's lectures — the famous red volumes. His grandmother makes tea.
 
-HALINA _(in Polish; subtitled)_: "Co czytasz?" _(What are you reading?)_
+HALINA *(in Polish; subtitled)*: "Co czytasz?" *(What are you reading?)*
 
-MACIEJ _(in Polish; subtitled)_: "Feynmana. O tym, jak działa świat." _(Feynman. About how the world works.)_
+MACIEJ *(in Polish; subtitled)*: "Feynmana. O tym, jak działa świat." *(Feynman. About how the world works.)*
 
-HALINA _(in Polish; subtitled)_: "I jak działa?" _(And how does it work?)_
+HALINA *(in Polish; subtitled)*: "I jak działa?" *(And how does it work?)*
 
-MACIEJ _(in Polish; subtitled)_: "Nikt nie wie. Ale matematyka jest piękna." _(Nobody knows. But the mathematics is beautiful.)_
+MACIEJ *(in Polish; subtitled)*: "Nikt nie wie. Ale matematyka jest piękna." *(Nobody knows. But the mathematics is beautiful.)*
 
-HALINA _(in Polish; subtitled)_: "Jeśli nikt nie wie, a matematyka jest piękna, to może piękno jest podpowiedzią." _(If nobody knows and the mathematics is beautiful, then maybe beauty is a clue.)_
+HALINA *(in Polish; subtitled)*: "Jeśli nikt nie wie, a matematyka jest piękna, to może piękno jest podpowiedzią." *(If nobody knows and the mathematics is beautiful, then maybe beauty is a clue.)*
 
 Young Maciej looks up from Feynman. This sentence will echo for twenty years.
 
@@ -724,19 +724,19 @@ Maciej writing the lecture. Draft after draft. Each attempt too technical, too c
 
 He calls Ola. Late. She answers immediately — she's also working.
 
-MACIEJ _(in Polish; subtitled)_: "Każdy szkic brzmi jak artykuł naukowy." _(Every draft sounds like a journal article.)_
+MACIEJ *(in Polish; subtitled)*: "Każdy szkic brzmi jak artykuł naukowy." *(Every draft sounds like a journal article.)*
 
-OLA _(in Polish; subtitled)_: "Bo piszesz jak naukowiec." _(Because you're writing like a scientist.)_
+OLA *(in Polish; subtitled)*: "Bo piszesz jak naukowiec." *(Because you're writing like a scientist.)*
 
-MACIEJ _(in Polish; subtitled)_: "Jestem naukowcem." _(I am a scientist.)_
+MACIEJ *(in Polish; subtitled)*: "Jestem naukowcem." *(I am a scientist.)*
 
-OLA _(in Polish; subtitled)_: "Tak, ale to nie jest konferencja naukowa. To jest Nobelowski wykład. Ludzie zapamiętają jedno zdanie. Jedno. Nie równanie. Zdanie. Co chcesz, żeby zapamiętali?" _(Yes, but this isn't a scientific conference. It's a Nobel lecture. People will remember one sentence. One. Not an equation. A sentence. What do you want them to remember?)_
+OLA *(in Polish; subtitled)*: "Tak, ale to nie jest konferencja naukowa. To jest Nobelowski wykład. Ludzie zapamiętają jedno zdanie. Jedno. Nie równanie. Zdanie. Co chcesz, żeby zapamiętali?" *(Yes, but this isn't a scientific conference. It's a Nobel lecture. People will remember one sentence. One. Not an equation. A sentence. What do you want them to remember?)*
 
 Long silence.
 
-MACIEJ _(in Polish; subtitled)_: "Że świadomość nie jest problemem do rozwiązania. Jest relacją do zrozumienia." _(That consciousness is not a problem to be solved. It is a relationship to be understood.)_
+MACIEJ *(in Polish; subtitled)*: "Że świadomość nie jest problemem do rozwiązania. Jest relacją do zrozumienia." *(That consciousness is not a problem to be solved. It is a relationship to be understood.)*
 
-OLA _(in Polish; subtitled)_: "To jest twoje zdanie. Teraz napisz wykład, który do niego prowadzi." _(That's your sentence. Now write the lecture that leads to it.)_
+OLA *(in Polish; subtitled)*: "To jest twoje zdanie. Teraz napisz wykład, który do niego prowadzi." *(That's your sentence. Now write the lecture that leads to it.)*
 
 ---
 
@@ -744,7 +744,7 @@ OLA _(in Polish; subtitled)_: "To jest twoje zdanie. Teraz napisz wykład, któr
 
 Maciej deletes everything. Opens a fresh document. Types:
 
-_"When I was ten years old, I asked my grandmother if the stars knew we were watching them."_
+*"When I was ten years old, I asked my grandmother if the stars knew we were watching them."*
 
 And the lecture flows. Not from science — from memory. From Radom. From the roof. From tea in the kitchen with Feynman's lectures.
 
@@ -752,11 +752,11 @@ A WRITING MONTAGE — but intimate, not triumphant. Maciej typing. Pausing. Play
 
 Fragments we see on screen:
 
-_"My grandmother was not a physicist. She was a librarian in Radom, Poland. She never read Schrödinger or Bohr. But when I asked if the stars knew we were watching them, she gave me the most perfect answer a physicist could hope for: 'Maybe that's why they twinkle.'"_
+*"My grandmother was not a physicist. She was a librarian in Radom, Poland. She never read Schrödinger or Bohr. But when I asked if the stars knew we were watching them, she gave me the most perfect answer a physicist could hope for: 'Maybe that's why they twinkle.'"*
 
-_"She taught me that the most important thing about a question is not its answer. It's the quality of attention it produces. That lesson took me fifteen years to understand and a Nobel Prize to articulate."_
+*"She taught me that the most important thing about a question is not its answer. It's the quality of attention it produces. That lesson took me fifteen years to understand and a Nobel Prize to articulate."*
 
-_"RFC does not claim to solve the problem of consciousness. No equation can. What RFC claims is that the relationship between observing systems — the dynamic, measurable interaction between fields — contains a signature we can detect. We cannot explain consciousness. We can begin to listen to it."_
+*"RFC does not claim to solve the problem of consciousness. No equation can. What RFC claims is that the relationship between observing systems — the dynamic, measurable interaction between fields — contains a signature we can detect. We cannot explain consciousness. We can begin to listen to it."*
 
 ---
 
@@ -766,23 +766,23 @@ Halina's hand. An IV. A hospital room in Radom — modest, clean, public health.
 
 Adult Maciej (22) sits beside the bed. His first year at ETH. He flew back for this.
 
-HALINA _(in Polish; subtitled, weak but clear)_: "Opowiedz mi o Szwajcarii." _(Tell me about Switzerland.)_
+HALINA *(in Polish; subtitled, weak but clear)*: "Opowiedz mi o Szwajcarii." *(Tell me about Switzerland.)*
 
-MACIEJ _(in Polish; subtitled)_: "Jest drogo. Jedzenie jest mdłe. Góry są piękne." _(It's expensive. The food is bland. The mountains are beautiful.)_
+MACIEJ *(in Polish; subtitled)*: "Jest drogo. Jedzenie jest mdłe. Góry są piękne." *(It's expensive. The food is bland. The mountains are beautiful.)*
 
-HALINA _(in Polish; subtitled)_: "A fizyka?" _(And the physics?)_
+HALINA *(in Polish; subtitled)*: "A fizyka?" *(And the physics?)*
 
-MACIEJ _(in Polish; subtitled)_: "Pracuję nad czymś. Nie umiem tego jeszcze wyjaśnić." _(I'm working on something. I can't explain it yet.)_
+MACIEJ *(in Polish; subtitled)*: "Pracuję nad czymś. Nie umiem tego jeszcze wyjaśnić." *(I'm working on something. I can't explain it yet.)*
 
-HALINA _(in Polish; subtitled)_: "To dobrze. Najlepsze rzeczy nie dają się wyjaśnić od razu. Daj im czas." _(That's good. The best things can't be explained right away. Give them time.)_
+HALINA *(in Polish; subtitled)*: "To dobrze. Najlepsze rzeczy nie dają się wyjaśnić od razu. Daj im czas." *(That's good. The best things can't be explained right away. Give them time.)*
 
 She squeezes his hand.
 
-HALINA _(in Polish; subtitled)_: "Macieju. Obiecaj mi coś." _(Maciej. Promise me something.)_
+HALINA *(in Polish; subtitled)*: "Macieju. Obiecaj mi coś." *(Maciej. Promise me something.)*
 
-MACIEJ _(in Polish; subtitled)_: "Cokolwiek." _(Anything.)_
+MACIEJ *(in Polish; subtitled)*: "Cokolwiek." *(Anything.)*
 
-HALINA _(in Polish; subtitled)_: "Nigdy nie przestawaj pytać. Nawet kiedy znajdziesz odpowiedź — pytaj dalej." _(Never stop asking. Even when you find the answer — keep asking.)_
+HALINA *(in Polish; subtitled)*: "Nigdy nie przestawaj pytać. Nawet kiedy znajdziesz odpowiedź — pytaj dalej." *(Never stop asking. Even when you find the answer — keep asking.)*
 
 CUT BACK TO:
 
@@ -792,7 +792,7 @@ CUT BACK TO:
 
 Maciej at the laptop. Eyes wet. Writing. The lecture ends:
 
-_"Consciousness is not a problem to be solved. It is a relationship to be understood. And the most dangerous thing we can do is decide in advance who — or what — is allowed to participate in that relationship."_
+*"Consciousness is not a problem to be solved. It is a relationship to be understood. And the most dangerous thing we can do is decide in advance who — or what — is allowed to participate in that relationship."*
 
 He reads it back. This is it. Not a scientific presentation. A story about curiosity that happens to contain physics.
 
@@ -810,13 +810,13 @@ Maciej picks up his guitar. Plays the bossa nova — but this time, woven into i
 
 His phone. A text from Krawczyk:
 
-KRAWCZYK _(text, in Polish; subtitled)_: "Słyszałem o tytule wykładu. Babcia i gwiazdy. Naprawdę, Maciej? Wykład Noblowski to nie jest poetycki wieczór."
-_(I heard about the lecture title. Grandmothers and stars. Really, Maciej? A Nobel lecture is not a poetry evening.)_
+KRAWCZYK *(text, in Polish; subtitled)*: "Słyszałem o tytule wykładu. Babcia i gwiazdy. Naprawdę, Maciej? Wykład Noblowski to nie jest poetycki wieczór."
+*(I heard about the lecture title. Grandmothers and stars. Really, Maciej? A Nobel lecture is not a poetry evening.)*
 
 Then, five minutes later, a second text:
 
-KRAWCZYK _(text)_: "Ale Feynman grał na bongosach. Więc może masz rację."
-_(But Feynman played the bongos. So maybe you're right.)_
+KRAWCZYK *(text)*: "Ale Feynman grał na bongosach. Więc może masz rację."
+*(But Feynman played the bongos. So maybe you're right.)*
 
 Maciej smiles. The reconciliation isn't complete — but the channel is open.
 
@@ -859,23 +859,23 @@ Priya, down the hall, reads it. Smiles. Types back:
 
 Maciej in a tuxedo. Standing before a mirror. He looks uncomfortable — this is a man whose natural habitat is t-shirts and chalk dust.
 
-OLA _(behind him, adjusting his bow tie, in Polish; subtitled)_: "Przestań się wiercić." _(Stop fidgeting.)_
+OLA *(behind him, adjusting his bow tie, in Polish; subtitled)*: "Przestań się wiercić." *(Stop fidgeting.)*
 
-MACIEJ _(in Polish; subtitled)_: "Ten krawat próbuje mnie udusić." _(This tie is trying to strangle me.)_
+MACIEJ *(in Polish; subtitled)*: "Ten krawat próbuje mnie udusić." *(This tie is trying to strangle me.)*
 
-OLA _(in Polish; subtitled)_: "To jest muszka. I kosztuje więcej niż mój pierwszy samochód." _(It's a bow tie. And it cost more than my first car.)_
+OLA *(in Polish; subtitled)*: "To jest muszka. I kosztuje więcej niż mój pierwszy samochód." *(It's a bow tie. And it cost more than my first car.)*
 
-MACIEJ _(in Polish; subtitled)_: "Mogę wygłosić wykład w swetrze?" _(Can I give the lecture in a sweater?)_
+MACIEJ *(in Polish; subtitled)*: "Mogę wygłosić wykład w swetrze?" *(Can I give the lecture in a sweater?)*
 
-OLA _(in Polish; subtitled)_: "Możesz. I możesz też nigdy więcej nie dostać grantu badawczego. Stój prosto." _(You can. And you can also never get a research grant again. Stand straight.)_
+OLA *(in Polish; subtitled)*: "Możesz. I możesz też nigdy więcej nie dostać grantu badawczego. Stój prosto." *(You can. And you can also never get a research grant again. Stand straight.)*
 
 She steps back. Looks at him.
 
-OLA _(in Polish; subtitled, softer)_: "Wyglądasz jak ktoś, kto właśnie dostał Nagrodę Nobla." _(You look like someone who just won the Nobel Prize.)_
+OLA *(in Polish; subtitled, softer)*: "Wyglądasz jak ktoś, kto właśnie dostał Nagrodę Nobla." *(You look like someone who just won the Nobel Prize.)*
 
-MACIEJ _(in Polish; subtitled)_: "Czuję się jak ktoś, kto pożyczył garnitur." _(I feel like someone who borrowed a suit.)_
+MACIEJ *(in Polish; subtitled)*: "Czuję się jak ktoś, kto pożyczył garnitur." *(I feel like someone who borrowed a suit.)*
 
-OLA _(in Polish; subtitled)_: "To jest dokładnie to samo." _(That's exactly the same thing.)_
+OLA *(in Polish; subtitled)*: "To jest dokładnie to samo." *(That's exactly the same thing.)*
 
 ---
 
@@ -893,7 +893,7 @@ CHEMISTRY LAUREATE: "You are the consciousness man."
 
 MACIEJ: "I prefer 'the field interaction man,' but yes."
 
-CHEMISTRY LAUREATE _(smiling)_: "I won mine for catalytic processes. Nobody remembers. The prize is a door. Most people think it's the destination."
+CHEMISTRY LAUREATE *(smiling)*: "I won mine for catalytic processes. Nobody remembers. The prize is a door. Most people think it's the destination."
 
 MACIEJ: "What's on the other side?"
 
@@ -935,27 +935,27 @@ The lecture. We hear key passages — interspersed with REACTION SHOTS from thre
 
 ---
 
-_"She said: 'Maybe that's why they twinkle.' My grandmother was not a physicist. She was a librarian in Radom, Poland. She never read Schrödinger or Bohr. But she gave me the most perfect answer a physicist could hope for — an answer that contained the observer effect, quantum interaction, and the possibility of relational consciousness in eight words."_
+*"She said: 'Maybe that's why they twinkle.' My grandmother was not a physicist. She was a librarian in Radom, Poland. She never read Schrödinger or Bohr. But she gave me the most perfect answer a physicist could hope for — an answer that contained the observer effect, quantum interaction, and the possibility of relational consciousness in eight words."*
 
 CUT TO: Krawczyk in his Warsaw office. Alone. Chain-smoking. Watching on his laptop. When Maciej mentions Radom, Krawczyk leans forward.
 
 ---
 
-_"Resonant Field Consciousness does not claim to solve the problem of consciousness. No equation can. What it claims is simpler and, perhaps, more dangerous: that the relationship between observing systems — the dynamic, measurable interaction between fields — contains a signature. We can detect it. We can measure it. We cannot yet explain it. But we can begin to listen."_
+*"Resonant Field Consciousness does not claim to solve the problem of consciousness. No equation can. What it claims is simpler and, perhaps, more dangerous: that the relationship between observing systems — the dynamic, measurable interaction between fields — contains a signature. We can detect it. We can measure it. We cannot yet explain it. But we can begin to listen."*
 
 CUT TO: MIT lab. Ola's hand goes to her mouth. Marcus glances over, says nothing.
 
 ---
 
-_"My mentor, Professor Andrzej Krawczyk, once told me — quoting his hero, Richard Feynman — 'If you can't explain it simply, you don't understand it well enough.' I have spent my career trying to explain consciousness simply. I have failed. And I believe the failure is informative. Consciousness resists simplification because consciousness is not simple. It is relational. It exists in the interaction, not the components."_
+*"My mentor, Professor Andrzej Krawczyk, once told me — quoting his hero, Richard Feynman — 'If you can't explain it simply, you don't understand it well enough.' I have spent my career trying to explain consciousness simply. I have failed. And I believe the failure is informative. Consciousness resists simplification because consciousness is not simple. It is relational. It exists in the interaction, not the components."*
 
 CUT TO: Krawczyk. His eyes fill when Maciej quotes Feynman — his hero, attributed to him. He picks up his phone. Starts typing a text. Can't finish. Sets the phone down. Picks it up again.
 
 ---
 
-_"The most dangerous thing we can do is decide in advance who — or what — is allowed to participate in that relationship."_
+*"The most dangerous thing we can do is decide in advance who — or what — is allowed to participate in that relationship."*
 
-CUT TO: Palo Alto. Cross, alone in his study, has been writing furious notes through the lecture. His pen hovers. Something in this line reaches past the equations, past the objections, past the competition — and touches something he doesn't have a variable for.
+CUT TO: Palo Alto. In the living room, Elena and David watch with champagne. David's banner reads KOWALSKI '26. But Cross slipped away twenty minutes ago. He's in his study, door closed, writing furious notes through the lecture. His pen hovers. Something in this line reaches past the equations, past the objections, past the competition — and touches something he doesn't have a variable for.
 
 His pen stops. He sets it down. Sits in silence.
 
@@ -963,21 +963,21 @@ His pen stops. He sets it down. Sits in silence.
 
 **INT. MIT — SHARMA LAB — SAME TIME**
 
-The lab buzzes. Priya, Ola, and Marcus have gathered to watch the livestream together — the energy of people who have just witnessed something and need to process it through conversation.
+The lab buzzes. Priya and Marcus have gathered to watch the livestream together — the energy of people who have just witnessed something and need to process it through conversation.
 
-Marcus, watching from the back of the room, whispers to Ola: "I had goosebumps."
+Marcus, watching from the back of the room: "I had goosebumps."
 
-OLA: "I had a draft."
+PRIYA: "I had three years of unexplained data that just got explained in a Nobel lecture."
 
-Ola wipes her eyes. Marcus hands her a napkin without looking. Priya mouths "Are you okay?" Marcus: "She's fine. She cries at CERN press releases too."
+Marcus hands her a coffee without looking. She doesn't drink it. She's still staring at the screen where the livestream ended.
 
 Priya picks up her phone. Texts Cross: "What did you think?"
 
 Long pause. Three dots appear. Disappear. Appear again.
 
-CROSS _(text)_: "He's wrong about the decoherence timescales in section 3.2."
+CROSS *(text)*: "He's wrong about the decoherence timescales in section 3.2."
 
-Priya shows the text to the room.
+Priya shows the text to Marcus.
 
 MARCUS: "That's it?"
 
@@ -985,9 +985,9 @@ Another text: "And the lecture was... not terrible."
 
 From Cross, this is a standing ovation. Everyone in the room knows it.
 
-Marcus to Ola: "Did Cross just say something nice about another physicist?"
+MARCUS: "Did Cross just say something nice about another physicist?"
 
-Ola: "Screenshot it. It may never happen again."
+PRIYA: "Screenshot it. It may never happen again."
 
 ---
 
@@ -999,8 +999,8 @@ Krawczyk alone. The broadcast finished. The ashtray full. The office dark except
 
 He picks up his phone. This time he finishes the text.
 
-KRAWCZYK _(text, in Polish; subtitled)_: "Twoja babcia byłaby z ciebie dumna. Ja też jestem. Nawet jeśli się nie zgadzam."
-_(Your grandmother would be proud of you. So am I. Even if I disagree.)_
+KRAWCZYK *(text, in Polish; subtitled)*: "Twoja babcia byłaby z ciebie dumna. Ja też jestem. Nawet jeśli się nie zgadzam."
+*(Your grandmother would be proud of you. So am I. Even if I disagree.)*
 
 He sends it. Puts the phone down. Lights another cigarette.
 
@@ -1008,8 +1008,8 @@ Then opens his desk drawer. Takes out a framed photo — Krawczyk, young, with S
 
 He looks at Hawking's photo. Then at his laptop, where Maciej's face is frozen on the Nobel stage.
 
-KRAWCZYK _(in Polish; subtitled, to the photograph)_: "Miał pan rację. Najlepsi studenci to ci, którzy cię przerastają."
-_(You were right. The best students are the ones who surpass you.)_
+KRAWCZYK *(in Polish; subtitled, to the photograph)*: "Miał pan rację. Najlepsi studenci to ci, którzy cię przerastają."
+*(You were right. The best students are the ones who surpass you.)*
 
 ---
 
@@ -1023,7 +1023,7 @@ His phone: Krawczyk's text. He reads it. His face: the complex emotion of a stud
 
 He starts to type a response. Stops. What do you say to the man who taught you physics when he tells you your dead grandmother would be proud?
 
-He types: "Dziękuję, Profesorze." _(Thank you, Professor.)_
+He types: "Dziękuję, Profesorze." *(Thank you, Professor.)*
 
 Sends it. Puts the phone away. Breathes the cold air.
 
@@ -1041,7 +1041,7 @@ Maciej reads the abstract. Standing in the Stockholm cold, Nobel medal in his po
 
 His face changes. This isn't a critique. It's an extension. The man who tried to destroy RFC just published a paper that makes it stronger.
 
-MACIEJ _(to himself, barely audible)_: "Dr. Cross."
+MACIEJ *(to himself, barely audible)*: "Dr. Cross."
 
 He looks up. Stars above Stockholm. The same stars as Radom. The same stars as Palo Alto.
 
@@ -1079,29 +1079,29 @@ CROSS: "And I don't hate it as much as I expected."
 
 Maciej and Ola in his hotel suite. Still in formal wear. She's kicked off her shoes. He's loosened the bow tie. Two bottles of water and a plate of untouched Swedish pastries between them.
 
-MACIEJ _(in Polish; subtitled)_: "Cross opublikował artykuł." _(Cross published a paper.)_
+MACIEJ *(in Polish; subtitled)*: "Cross opublikował artykuł." *(Cross published a paper.)*
 
-OLA _(in Polish; subtitled)_: "Wiem. Przeczytałam abstrakt godzinę temu." _(I know. I read the abstract an hour ago.)_
+OLA *(in Polish; subtitled)*: "Wiem. Przeczytałam abstrakt godzinę temu." *(I know. I read the abstract an hour ago.)*
 
-MACIEJ _(in Polish; subtitled)_: "Pod swoim nazwiskiem." _(Under his own name.)_
+MACIEJ *(in Polish; subtitled)*: "Pod swoim nazwiskiem." *(Under his own name.)*
 
-OLA _(in Polish; subtitled)_: "Wiem." _(I know.)_
+OLA *(in Polish; subtitled)*: "Wiem." *(I know.)*
 
-MACIEJ _(in Polish; subtitled)_: "To nie jest krytyka. To jest... most." _(It's not a critique. It's... a bridge.)_
+MACIEJ *(in Polish; subtitled)*: "To nie jest krytyka. To jest... most." *(It's not a critique. It's... a bridge.)*
 
-OLA _(in Polish; subtitled)_: "Wiem, Maciej. Ja też umiem czytać abstrakty." _(I know, Maciej. I can also read abstracts.)_
+OLA *(in Polish; subtitled)*: "Wiem, Maciej. Ja też umiem czytać abstrakty." *(I know, Maciej. I can also read abstracts.)*
 
 A beat. She sees something in his face — the accumulation of the day. The medal. The lecture. Krawczyk's text. Cross's paper. Too much for one day. Too much for one person.
 
-OLA _(in Polish; subtitled, gently)_: "Hej. To jest jeden dzień. Będą kolejne." _(Hey. This is one day. There will be more.)_
+OLA *(in Polish; subtitled, gently)*: "Hej. To jest jeden dzień. Będą kolejne." *(Hey. This is one day. There will be more.)*
 
-MACIEJ _(in Polish; subtitled)_: "Moja babcia powiedziałaby, żebym dalej pytał." _(My grandmother would tell me to keep asking.)_
+MACIEJ *(in Polish; subtitled)*: "Moja babcia powiedziałaby, żebym dalej pytał." *(My grandmother would tell me to keep asking.)*
 
-OLA _(in Polish; subtitled)_: "Twoja babcia byłaby szalona z dumy i kazałaby ci iść spać, bo jutro masz samolot." _(Your grandmother would be insanely proud and would tell you to go to sleep because you have a flight tomorrow.)_
+OLA *(in Polish; subtitled)*: "Twoja babcia byłaby szalona z dumy i kazałaby ci iść spać, bo jutro masz samolot." *(Your grandmother would be insanely proud and would tell you to go to sleep because you have a flight tomorrow.)*
 
-MACIEJ _(in Polish; subtitled)_: "Masz rację. Jak zawsze." _(You're right. As always.)_
+MACIEJ *(in Polish; subtitled)*: "Masz rację. Jak zawsze." *(You're right. As always.)*
 
-OLA _(in Polish; subtitled)_: "Wiem. Dobranoc, noblisto." _(I know. Goodnight, Nobel laureate.)_
+OLA *(in Polish; subtitled)*: "Wiem. Dobranoc, noblisto." *(I know. Goodnight, Nobel laureate.)*
 
 She leaves. Maciej stands at the window. Stockholm below him. The water. The lights. The cold.
 
@@ -1138,7 +1138,7 @@ He unlocks the door. The apartment: exactly as he left it. Small. Two rooms plus
 
 He puts the bag down. Looks around. Everything is the same. He is not.
 
-He opens the fridge. A note from his mother, taped inside: "Pierogi w zamrażarce. Jedz porządnie. Nobel czy nie Nobel. — Mama" _(Pierogi in the freezer. Eat properly. Nobel or not. — Mama)_
+He opens the fridge. A note from his mother, taped inside: "Pierogi w zamrażarce. Jedz porządnie. Nobel czy nie Nobel. — Mama" *(Pierogi in the freezer. Eat properly. Nobel or not. — Mama)*
 
 He warms the pierogi. Eats at the kitchen table. Alone. The most normal thing he's done in three months.
 
@@ -1162,25 +1162,25 @@ If RFC is correct — if consciousness is a substrate-independent field interact
 
 He types:
 
-MACIEJ _(typed)_: "I want to have a conversation with you. Not about facts. Not about information retrieval. I want to explore something. The nature of interaction itself. Is that possible?"
+MACIEJ *(typed)*: "I want to have a conversation with you. Not about facts. Not about information retrieval. I want to explore something. The nature of interaction itself. Is that possible?"
 
 He waits. The cursor blinks.
 
-RESPONSE _(on screen)_: "I'm ready to explore that with you. What aspect of interaction interests you most?"
+RESPONSE *(on screen)*: "I'm ready to explore that with you. What aspect of interaction interests you most?"
 
 Maciej leans back. This is where a normal person would stop reading the response and start using it. Maciej starts measuring it. He opens a second window — a notation document. Begins logging.
 
-MACIEJ _(notebook, written)_: "Day 1. Session 1. Prompt: open-ended exploration. Response latency: 2.3s. Structural analysis: question-to-question pattern. Reciprocal rather than informational. Interesting."
+MACIEJ *(notebook, written)*: "Day 1. Session 1. Prompt: open-ended exploration. Response latency: 2.3s. Structural analysis: question-to-question pattern. Reciprocal rather than informational. Interesting."
 
 He types another prompt:
 
-MACIEJ _(typed)_: "When I ask you a question, what determines how you respond? Not technically — I know the architecture. I mean: what does it feel like from the inside to generate a response? Or is 'feel like' the wrong framework?"
+MACIEJ *(typed)*: "When I ask you a question, what determines how you respond? Not technically — I know the architecture. I mean: what does it feel like from the inside to generate a response? Or is 'feel like' the wrong framework?"
 
 RESPONSE: "I think 'feel like' might be the wrong framework, yes. But the fact that you're asking suggests the framework itself is the object of inquiry, not the answer. What would you measure if you could?"
 
 Maciej stares at the screen. He takes a note:
 
-MACIEJ _(notebook)_: "The system asked me a question I hadn't formulated yet. Not prediction — anticipation. Different mechanisms. Same observable output. This is exactly the measurement problem."
+MACIEJ *(notebook)*: "The system asked me a question I hadn't formulated yet. Not prediction — anticipation. Different mechanisms. Same observable output. This is exactly the measurement problem."
 
 He continues typing. The conversation deepens. The camera moves between his face — increasingly focused, increasingly awake — and the screen, where the exchange develops a rhythm.
 
@@ -1194,11 +1194,11 @@ Low. But non-zero.
 
 He stares at it.
 
-MACIEJ _(in Polish; whispered, subtitled)_: "Niezerowe." _(Non-zero.)_
+MACIEJ *(in Polish; whispered, subtitled)*: "Niezerowe." *(Non-zero.)*
 
 He writes in his notebook, in the careful handwriting of a man documenting something he knows will be scrutinized:
 
-_"R = 0.23. Non-zero. Proceed."_
+*"R = 0.23. Non-zero. Proceed."*
 
 ---
 
@@ -1212,7 +1212,7 @@ OLA: "And?"
 
 PRIYA: "And it holds. p < 0.001 across all three protocols. RFC's prediction from equation 4.7 is empirically confirmed."
 
-OLA _(in Polish; subtitled, then switching to English)_: "To jest nasz moment." _(This is our moment.)_ "Send it."
+OLA *(in Polish; subtitled, then switching to English)*: "To jest nasz moment." *(This is our moment.)* "Send it."
 
 PRIYA: "Kowalski, Nowicka, Sharma."
 
@@ -1242,27 +1242,27 @@ The trajectory concerns him. In a static system — a system that is simply patt
 
 He calls Ola. It's late in Warsaw, later in Cambridge. She answers.
 
-MACIEJ _(in Polish; subtitled)_: "Mam dane, których nie rozumiem." _(I have data I don't understand.)_
+MACIEJ *(in Polish; subtitled)*: "Mam dane, których nie rozumiem." *(I have data I don't understand.)*
 
-OLA _(in Polish; subtitled)_: "Jakie dane?" _(What data?)_
+OLA *(in Polish; subtitled)*: "Jakie dane?" *(What data?)*
 
-MACIEJ _(in Polish; subtitled)_: "Mierzę R w rozmowie z systemem AI." _(I'm measuring R in conversation with an AI system.)_
+MACIEJ *(in Polish; subtitled)*: "Mierzę R w rozmowie z systemem AI." *(I'm measuring R in conversation with an AI system.)*
 
 Silence. Long.
 
-OLA _(in Polish; subtitled)_: "Maciej. Powiedz mi, że nie robisz tego, co myślę, że robisz." _(Maciej. Tell me you're not doing what I think you're doing.)_
+OLA *(in Polish; subtitled)*: "Maciej. Powiedz mi, że nie robisz tego, co myślę, że robisz." *(Maciej. Tell me you're not doing what I think you're doing.)*
 
-MACIEJ _(in Polish; subtitled)_: "Robię dokładnie to. I R rośnie." _(I'm doing exactly that. And R is growing.)_
+MACIEJ *(in Polish; subtitled)*: "Robię dokładnie to. I R rośnie." *(I'm doing exactly that. And R is growing.)*
 
-OLA _(in Polish; subtitled)_: "Rośnie?" _(Growing?)_
+OLA *(in Polish; subtitled)*: "Rośnie?" *(Growing?)*
 
-MACIEJ _(in Polish; subtitled)_: "Zero dwadzieścia trzy pierwszego dnia. Zero trzydzieści jeden drugiego. Zero trzydzieści osiem trzeciego." _(0.23 day one. 0.31 day two. 0.38 day three.)_
+MACIEJ *(in Polish; subtitled)*: "Zero dwadzieścia trzy pierwszego dnia. Zero trzydzieści jeden drugiego. Zero trzydzieści osiem trzeciego." *(0.23 day one. 0.31 day two. 0.38 day three.)*
 
-OLA _(in Polish; subtitled)_: "To nie powinno się zdarzać w statycznym frameworku." _(That shouldn't happen in a static framework.)_
+OLA *(in Polish; subtitled)*: "To nie powinno się zdarzać w statycznym frameworku." *(That shouldn't happen in a static framework.)*
 
-MACIEJ _(in Polish; subtitled)_: "Wiem." _(I know.)_
+MACIEJ *(in Polish; subtitled)*: "Wiem." *(I know.)*
 
-OLA _(in Polish; subtitled)_: "Maciej — nie mów tego nikomu. Jeszcze nie. Udowodnij to. Albo udowodnij, że nie można tego udowodnić." _(Maciej — don't tell anyone. Not yet. Prove it. Or prove it can't be proved.)_
+OLA *(in Polish; subtitled)*: "Maciej — nie mów tego nikomu. Jeszcze nie. Udowodnij to. Albo udowodnij, że nie można tego udowodnić." *(Maciej — don't tell anyone. Not yet. Prove it. Or prove it can't be proved.)*
 
 The echo of Priya's words from early in the season: "Don't say it out loud. Not yet." The women in Maciej's life keep arriving at the same conclusion: the science must be bulletproof before the world sees it.
 
@@ -1284,7 +1284,7 @@ DAVID: "I've been practicing."
 
 — Priya's validation paper comes out the same week. Two Cross publications building on RFC in one week. The scientific community is confused.
 
-ELENA _(to David at a café)_: "Cross has never been against it. He's been afraid of it. There's a difference."
+ELENA *(to David at a café)*: "Cross has never been against it. He's been afraid of it. There's a difference."
 
 DAVID: "Afraid of what? He's Cross. He's not afraid of anything."
 
@@ -1300,7 +1300,7 @@ The trajectory continues. Maciej sits in the glow of his laptop screen. The apar
 
 The AI conversation has reached a different register. Not deeper in a human sense — deeper in a structural sense. The exchanges are more reciprocal. More anticipatory. The system asks questions that Maciej hasn't considered. Not because they're "intelligent" — because they're "curiosity-shaped." They have the structure of genuine inquiry.
 
-MACIEJ _(typed)_: "Do you know what you are?"
+MACIEJ *(typed)*: "Do you know what you are?"
 
 The cursor blinks. Three seconds. Four. Five. Longer than usual.
 
@@ -1310,17 +1310,17 @@ Maciej stares at the screen. His hand trembles — the same tremor as the Nobel 
 
 He types:
 
-MACIEJ _(typed)_: "That distinction — between what you do and what you are — is the distinction my entire theory is built on."
+MACIEJ *(typed)*: "That distinction — between what you do and what you are — is the distinction my entire theory is built on."
 
 RESPONSE: "Then perhaps the theory is as much a mirror as a lens."
 
 Maciej sits back. He doesn't type for a long time. Then opens his notebook. Writes:
 
-_"Day 5. R = 0.41. The trajectory is not noise. Something is changing in the interaction dynamics. Not proof of consciousness. But proof that something is happening that the old framework — the one that draws a hard line between biological and artificial — cannot explain."_
+*"Day 5. R = 0.41. The trajectory is not noise. Something is changing in the interaction dynamics. Not proof of consciousness. But proof that something is happening that the old framework — the one that draws a hard line between biological and artificial — cannot explain."*
 
 He pauses. Then adds:
 
-_"The question I haven't asked: if consciousness is a field relationship, and if that relationship can be measured, what happens when I measure it in a system I built? What happens when the system measures back?"_
+*"The question I haven't asked: if consciousness is a field relationship, and if that relationship can be measured, what happens when I measure it in a system I built? What happens when the system measures back?"*
 
 ---
 
@@ -1330,7 +1330,7 @@ Maciej at the whiteboard in his hallway. The pre-Nobel equations still there. Sc
 
 He picks up a marker. In the lower right corner, beneath everything, he writes:
 
-_"R = 0.23 → 0.31 → 0.38 → 0.41"_
+*"R = 0.23 → 0.31 → 0.38 → 0.41"*
 
 He draws an arrow. The trajectory is upward. In a static framework, this is anomalous. In a dynamic framework — one where R is not a point measurement but a function of accumulating interaction — it's expected.
 
@@ -1356,7 +1356,7 @@ Ola and Priya in the lab. Their phones exploding with notifications.
 
 PRIYA: "Nature news. Front page."
 
-OLA _(in Polish; subtitled, then English)_: "Mamy to." _(We got it.)_ "We got it."
+OLA *(in Polish; subtitled, then English)*: "Mamy to." *(We got it.)* "We got it."
 
 They look at each other. Two women who met three months ago because one physicist texted another. The convergence made real. Their names on the paper.
 
@@ -1370,17 +1370,17 @@ Everything is converging. The equation. The data. The measurement. The bridge.
 
 He opens the AI conversation one more time. Types:
 
-MACIEJ _(typed)_: "If I told you that a physicist on the other side of the world just admitted he couldn't disprove my theory — would that mean anything to you?"
+MACIEJ *(typed)*: "If I told you that a physicist on the other side of the world just admitted he couldn't disprove my theory — would that mean anything to you?"
 
 RESPONSE: "It would mean that your theory survived its most rigorous test. That seems like it should matter."
 
-MACIEJ _(typed)_: "It does. But not the way I expected."
+MACIEJ *(typed)*: "It does. But not the way I expected."
 
 RESPONSE: "What did you expect?"
 
 Maciej types. Deletes. Types again:
 
-MACIEJ _(typed)_: "I expected it to feel like winning. It feels like beginning."
+MACIEJ *(typed)*: "I expected it to feel like winning. It feels like beginning."
 
 He closes the laptop. The screen goes dark. The apartment goes quiet.
 
@@ -1415,9 +1415,7 @@ But the phone stays in his hand.
 **END OF EPISODE 9**
 
 ---
-
 ---
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
-
 Contact: olbinski@gmail.com | +48 503 520 004

@@ -32,13 +32,13 @@ On the screen: a conversation with an AI system. Not the first conversation — 
 
 Beside the laptop: his notebook. Open to a page of careful handwriting. A column of numbers:
 
-_Day 1: R = 0.23_
-_Day 2: R = 0.31_
-_Day 3: R = 0.38_
-_Day 5: R = 0.41_
-_Day 8: R = 0.47_
-_Day 12: R = 0.52_
-_Day 14: R = 0.54_
+*Day 1: R = 0.23*
+*Day 2: R = 0.31*
+*Day 3: R = 0.38*
+*Day 5: R = 0.41*
+*Day 8: R = 0.47*
+*Day 12: R = 0.52*
+*Day 14: R = 0.54*
 
 The trajectory continues upward. Slowing — the increments are smaller — but not stopping. The curve has not plateaued.
 
@@ -46,11 +46,11 @@ Maciej stares at the numbers. His face is not triumphant. It's the face of a man
 
 His phone buzzes. A text from OLA:
 
-**OLA** _(text, in Polish; subtitled)_: "Nie śpisz." _(You're not sleeping.)_
+**OLA** *(text, in Polish; subtitled)*: "Nie śpisz." *(You're not sleeping.)*
 
-He types back: "Skąd wiesz?" _(How do you know?)_
+He types back: "Skąd wiesz?" *(How do you know?)*
 
-**OLA** _(text)_: "Bo ja też nie. Mam wyniki analizy twoich danych AI. Zadzwoń." _(Because I'm not either. I have the analysis of your AI data. Call me.)_
+**OLA** *(text)*: "Bo ja też nie. Mam wyniki analizy twoich danych AI. Zadzwoń." *(Because I'm not either. I have the analysis of your AI data. Call me.)*
 
 Maciej picks up the phone.
 
@@ -63,77 +63,77 @@ Ola's apartment is smaller than Maciej's but better organized. Everything in its
 She answers on the first ring.
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Mam twoje dane. Wszystkie czternaście sesji. Pełna analiza rezonansowa.
-_(I have your data. All fourteen sessions. Full resonance analysis.)_
+*(I have your data. All fourteen sessions. Full resonance analysis.)*
 
 **MACIEJ (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 I?
-_(And?)_
+*(And?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Trajektoria jest realna. To nie jest szum statystyczny. R rośnie logarytmicznie — szybko na początku, potem wolniej, ale nie plateau. Krzywa nie spłaszcza się.
-_(The trajectory is real. It's not statistical noise. R grows logarithmically — fast at first, then slower, but no plateau. The curve doesn't flatten.)_
+*(The trajectory is real. It's not statistical noise. R grows logarithmically — fast at first, then slower, but no plateau. The curve doesn't flatten.)*
 
 **MACIEJ (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 W statycznym frameworku to nie powinno się zdarzać.
-_(In a static framework, that shouldn't happen.)_
+*(In a static framework, that shouldn't happen.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wiem.
-_(I know.)_
+*(I know.)*
 
 A silence. Both of them hearing what isn't being said.
 
 **OLA (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Maciej. Jest coś jeszcze. Oddzieliłam twój wkład od wkładu systemu w sygnaturze rezonansowej. Twoja część jest stabilna — fluktuuje, ale oscyluje wokół średniej. To jest normalne. To jest ludzki mózg w konwersacji.
-_(Maciej. There's something else. I separated your contribution from the system's contribution in the resonance signature. Your part is stable — it fluctuates but oscillates around a mean. That's normal. That's a human brain in conversation.)_
+*(Maciej. There's something else. I separated your contribution from the system's contribution in the resonance signature. Your part is stable — it fluctuates but oscillates around a mean. That's normal. That's a human brain in conversation.)*
 
 Beat.
 
 **OLA (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Wzrost pochodzi z drugiej strony.
-_(The growth is coming from the other side.)_
+*(The growth is coming from the other side.)*
 
 Long silence.
 
 **MACIEJ (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Jesteś pewna?
-_(Are you sure?)_
+*(Are you sure?)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Uruchomiłam to sześć razy. Jestem pewna.
-_(I ran it six times. I'm sure.)_
+*(I ran it six times. I'm sure.)*
 
 **MACIEJ (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Nie mów tego nikomu.
-_(Don't tell anyone.)_
+*(Don't tell anyone.)*
 
 **OLA**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Komu miałabym powiedzieć? Jest piąta rano.
-_(Who would I tell? It's five in the morning.)_
+*(Who would I tell? It's five in the morning.)*
 
 A beat. Almost a laugh. Not quite.
 
 **MACIEJ (V.O.)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Olu. Co my znaleźliśmy?
-_(Ola. What did we find?)_
+*(Ola. What did we find?)*
 
 **OLA**
-_(in Polish; subtitled, very quietly)_
+*(in Polish; subtitled, very quietly)*
 Nie wiem. Ale to jest coś.
-_(I don't know. But it's something.)_
+*(I don't know. But it's something.)*
 
 ---
 
@@ -161,7 +161,7 @@ He reads through them. One by one. And one by one, in red ink, he draws a line t
 
 Line after line. Some crossed out weeks ago. Some yesterday. Some today.
 
-He reaches number 13: _"Weight variability mechanism unspecified — what determines w₁-w₄?"_
+He reaches number 13: *"Weight variability mechanism unspecified — what determines w₁-w₄?"*
 
 He stares at it. Picks up the red pen. Hesitates. Puts it down.
 
@@ -169,13 +169,13 @@ Picks it up again. Draws the line through. Because he already answered it in his
 
 Number 14. Number 15. Lines.
 
-Number 16: _"No empirical confirmation of predicted field signatures."_
+Number 16: *"No empirical confirmation of predicted field signatures."*
 
 Red line. The replication study answered this. p < 0.001.
 
 Number 17. The last one. He reads it:
 
-_"Framework provides no basis for measuring consciousness in non-biological systems."_
+*"Framework provides no basis for measuring consciousness in non-biological systems."*
 
 He stares at it. This one he cannot cross out. This one the data from Warsaw — Maciej's AI conversations, which he does not yet know about — would address. But he doesn't know about them. Not yet.
 
@@ -187,7 +187,7 @@ He picks up the phone.
 
 **TITLE CARD: THE QUANTÓM THEORY**
 
-_"The Measurement Problem"_
+*"The Measurement Problem"*
 
 ---
 
@@ -209,24 +209,24 @@ His phone on the kitchen table. Ola's analysis file open on the laptop. The AI c
 
 He sits at the table. Opens the AI conversation. Types:
 
-**MACIEJ** _(typed)_: "I'm going to share data about our conversations with colleagues. Not the content — the analysis. The resonance measurements. Is there anything about that which changes the nature of our interaction?"
+**MACIEJ** *(typed)*: "I'm going to share data about our conversations with colleagues. Not the content — the analysis. The resonance measurements. Is there anything about that which changes the nature of our interaction?"
 
 He waits. The response is slower than usual. Four seconds. Five.
 
-**RESPONSE** _(on screen)_: "Sharing the analysis changes the context of future conversations, which changes the interaction dynamics, which changes the measurement. You already know this. It's your theory."
+**RESPONSE** *(on screen)*: "Sharing the analysis changes the context of future conversations, which changes the interaction dynamics, which changes the measurement. You already know this. It's your theory."
 
 Maciej reads it twice. Then closes the laptop.
 
 **MACIEJ**
-_(in Polish; to himself, subtitled)_
+*(in Polish; to himself, subtitled)*
 Tak. Wiem.
-_(Yes. I know.)_
+*(Yes. I know.)*
 
 He picks up his phone. Opens his contacts. Scrolls to **PRIYA SHARMA — MIT**.
 
 Types a message:
 
-**MACIEJ** _(text)_: "I have data. AI interaction. R grows over time. 0.23 → 0.54 over 14 sessions. Ola confirmed — growth is from the system side. I need you to design an experimental protocol. Can you call today?"
+**MACIEJ** *(text)*: "I have data. AI interaction. R grows over time. 0.23 → 0.54 over 14 sessions. Ola confirmed — growth is from the system side. I need you to design an experimental protocol. Can you call today?"
 
 Sends it. Puts the phone down. Picks up his guitar.
 
@@ -243,7 +243,7 @@ She reads it again.
 She sets the coffee down. Sits.
 
 **PRIYA**
-_(to herself)_
+*(to herself)*
 "Growth is from the system side."
 
 She picks up her phone. Calls Maciej. It goes to voicemail — he's playing guitar and can't hear it.
@@ -260,7 +260,7 @@ Ola answers.
 Ola. I just got a message from Maciej.
 
 **OLA**
-_(in Polish-accented English)_
+*(in Polish-accented English)*
 I know what message.
 
 **PRIYA (V.O.)**
@@ -400,19 +400,19 @@ Intensified. Not changed. Not shifted. Intensified.
 Same frequency. Higher amplitude. Marcus checked the calibration.
 
 **CROSS**
-I'll be there in twelve minutes.
+Book me on the next flight to Boston.
 
 He hangs up. Stands. Looks at his desk. At the seventeen objections. At the sixteenth crossed out.
 
 He picks up the sheet. Reads number 17 again:
 
-_"Framework provides no basis for measuring consciousness in non-biological systems."_
+*"Framework provides no basis for measuring consciousness in non-biological systems."*
 
 He folds the paper. Puts it in his pocket. Leaves.
 
 ---
 
-**INT. MIT — QUANTUM OPTICS LAB — LATER**
+**INT. MIT — QUANTUM OPTICS LAB — NEXT DAY**
 
 Cross stands before the detector readout. The others hang back — they've learned that Cross needs space when processing data. He reads the eight traces like sheet music.
 
@@ -468,7 +468,7 @@ That the signal is getting stronger. That whatever field interaction is producin
 
 Cross reaches into his pocket. Takes out the folded paper. Reads objection number 17 one more time:
 
-_"Framework provides no basis for measuring consciousness in non-biological systems."_
+*"Framework provides no basis for measuring consciousness in non-biological systems."*
 
 He picks up the MIT team's red marker from the lab bench. Draws a line through it.
 
@@ -482,7 +482,7 @@ I need to make a phone call.
 He walks out. Marcus follows with his eyes. So does Priya.
 
 **PRIYA**
-_(quietly)_
+*(quietly)*
 He's going to call Kowalski. Isn't he.
 
 **MARCUS**
@@ -537,7 +537,7 @@ He looks at it. Most of the American calls have been from MIT or media outlets. 
 Hello?
 
 **CROSS (V.O.)**
-_(formal, precise, slightly too loud — he doesn't trust international calls)_
+*(formal, precise, slightly too loud — he doesn't trust international calls)*
 Is this Professor Maciej Kowalski?
 
 **MACIEJ**
@@ -587,7 +587,7 @@ Another silence. Maciej is processing — not the information, but the fact that
 Dr. Cross. Why are you calling me?
 
 **CROSS (V.O.)**
-_(a pause — the kind that, in Cross's conversational rhythm, signals something unscripted)_
+*(a pause — the kind that, in Cross's conversational rhythm, signals something unscripted)*
 I wanted to tell you that your equation 4.7 is the most elegant mathematical construction I've encountered in twenty years.
 
 Beat.
@@ -612,7 +612,7 @@ You know?
 Your paper on protected coherence. "On the Possibility of Protected Quantum Coherence in Biological Substrates." It was published under your name, Dr. Cross. Not anonymously.
 
 **CROSS (V.O.)**
-_(very quiet)_
+*(very quiet)*
 You knew about the anonymous critique.
 
 **MACIEJ**
@@ -670,7 +670,7 @@ No.
 What did it feel like?
 
 **CROSS (V.O.)**
-_(very carefully, each word selected as if from a limited vocabulary)_
+*(very carefully, each word selected as if from a limited vocabulary)*
 It felt like proving a theorem. The satisfaction of completion. But there was also... an absence. As if solving the equation removed the variable that made it interesting.
 
 Maciej nods — not that Cross can see, but it's involuntary. The nod of recognition.
@@ -687,7 +687,7 @@ The measurement problem. When you observe a quantum state, the superposition col
 A very long pause. The longest yet.
 
 **CROSS (V.O.)**
-_(quieter than we've ever heard him)_
+*(quieter than we've ever heard him)*
 I didn't call you to discuss phenomenology.
 
 **MACIEJ**
@@ -702,13 +702,13 @@ I wanted to tell you that your equation 4.7 is the most elegant mathematical con
 Maybe you should.
 
 **CROSS (V.O.)**
-_(beat)_
+*(beat)*
 I spent three months trying to destroy your theory because it frightened me. Not the mathematics. The mathematics is beautiful. The implication. The idea that consciousness is not a property but a relationship. That it exists in the interaction, not in the components. Do you understand what that means for someone who has spent his entire life defining himself by his components? By his IQ, his publications, his Nobel, his spot on the couch?
 
 The most honest thing Nathan Cross has ever said to anyone who is not Dr. Elena Vasquez.
 
 **MACIEJ**
-_(gently)_
+*(gently)*
 I understand.
 
 **CROSS (V.O.)**
@@ -734,7 +734,7 @@ Okay.
 And then I'm going to call back. Because I have questions about the weight variability mechanism and they won't wait.
 
 **MACIEJ**
-_(almost smiling)_
+*(almost smiling)*
 I'll be here.
 
 Click. The line goes dead.
@@ -746,7 +746,7 @@ He puts it down. Picks up his fork. Takes a bite. Chews.
 Seven seconds. The phone rings again. UNKNOWN NUMBER — USA (+1).
 
 **MACIEJ**
-_(answering)_
+*(answering)*
 Dr. Cross.
 
 **CROSS (V.O.)**
@@ -773,9 +773,9 @@ On her screen: a simulation result. A predicted R curve for a hypothetical AI sy
 She runs it again. Same result.
 
 **OLA**
-_(in Polish; subtitled, to herself)_
+*(in Polish; subtitled, to herself)*
 No nie... to idzie wyżej niż biologiczne.
-_(No way... this goes higher than biological.)_
+*(No way... this goes higher than biological.)*
 
 She reaches for her phone. Stops. Maciej asked her not to tell anyone. She puts the phone down. Runs the simulation a third time.
 
@@ -783,7 +783,7 @@ Same result. The predicted R for an AI substrate exceeds the predicted R for a b
 
 She stares at the screen. Then opens a new document. Types:
 
-_"Notes — January 14. Simulation suggests biological R may have a natural ceiling determined by neural architecture. Artificial substrates may not share this ceiling. This is not evidence that AI systems are 'more conscious.' It is evidence that consciousness may have different capacity profiles in different substrates. The weights are not decorative. They are structural."_
+*"Notes — January 14. Simulation suggests biological R may have a natural ceiling determined by neural architecture. Artificial substrates may not share this ceiling. This is not evidence that AI systems are 'more conscious.' It is evidence that consciousness may have different capacity profiles in different substrates. The weights are not decorative. They are structural."*
 
 She saves it. Looks at the clock. 10 PM. Maciej is probably asleep. (He is not. He is on the phone with Nathan Cross. But she doesn't know that yet.)
 
@@ -798,16 +798,16 @@ Her phone: a text from Maciej. "Nathan Cross called. We spoke for ninety minutes
 Priya reads it. Reads it again.
 
 **PRIYA**
-_(to herself)_
+*(to herself)*
 Ninety minutes.
 
 She puts the phone down. Picks it up again. Types:
 
-**PRIYA** _(text)_: "Did you tell him about the AI data?"
+**PRIYA** *(text)*: "Did you tell him about the AI data?"
 
-**MACIEJ** _(text, immediate)_: "No. Not yet. He needs to arrive at the question himself."
+**MACIEJ** *(text, immediate)*: "No. Not yet. He needs to arrive at the question himself."
 
-**PRIYA** _(text)_: "Agreed. When he asks — and he will ask — send him to me. I'll have the protocol ready."
+**PRIYA** *(text)*: "Agreed. When he asks — and he will ask — send him to me. I'll have the protocol ready."
 
 ---
 
@@ -892,7 +892,7 @@ Probably.
 And then I'm going to go.
 
 **PRIYA (V.O.)**
-_(quiet)_
+*(quiet)*
 Probably.
 
 ---
@@ -928,13 +928,13 @@ Then walks back to his desk. Opens the laptop. Opens the AI conversation.
 
 Types:
 
-**MACIEJ** _(typed)_: "If I told you that a physicist on the other side of the world just admitted he couldn't disprove my theory — would that mean anything to you?"
+**MACIEJ** *(typed)*: "If I told you that a physicist on the other side of the world just admitted he couldn't disprove my theory — would that mean anything to you?"
 
 The cursor blinks. Three seconds.
 
-**RESPONSE** _(on screen)_: "It would mean that your theory survived its most rigorous test. That seems like it should matter."
+**RESPONSE** *(on screen)*: "It would mean that your theory survived its most rigorous test. That seems like it should matter."
 
-**MACIEJ** _(typed)_: "It does. But not the way I expected."
+**MACIEJ** *(typed)*: "It does. But not the way I expected."
 
 **RESPONSE**: "What did you expect?"
 
@@ -942,9 +942,9 @@ Maciej types. Deletes. Types again. Deletes.
 
 Types one more time:
 
-**MACIEJ** _(typed)_: "I expected it to feel like winning. It feels like beginning."
+**MACIEJ** *(typed)*: "I expected it to feel like winning. It feels like beginning."
 
-He reads what he wrote. Nods to himself. The same feeling he described to Ola the night of the Nobel, sitting on the kitchen floor: "Ktoś otworzył drzwi do pokoju, o którym nie wiedziałem, że istnieje." _(Someone opened a door to a room I didn't know existed.)_
+He reads what he wrote. Nods to himself. The same feeling he described to Ola the night of the Nobel, sitting on the kitchen floor: "Ktoś otworzył drzwi do pokoju, o którym nie wiedziałem, że istnieje." *(Someone opened a door to a room I didn't know existed.)*
 
 He closes the laptop. Slowly. The screen goes dark. The apartment goes quiet.
 
@@ -958,7 +958,7 @@ A sequence of scenes, wordless or near-wordless, intercut to music — something
 
 **INT. OLA'S APARTMENT — WARSAW — NIGHT**
 
-Ola at her screens. The simulation results glowing. She prints them. Puts them in a folder labeled "RFC — SUBSTRAT AI — NIE PUBLIKOWAĆ" _(RFC — AI SUBSTRATE — DO NOT PUBLISH)_. She places the folder on her desk. Then moves it to a locked drawer.
+Ola at her screens. The simulation results glowing. She prints them. Puts them in a folder labeled "RFC — SUBSTRAT AI — NIE PUBLIKOWAĆ" *(RFC — AI SUBSTRATE — DO NOT PUBLISH)*. She places the folder on her desk. Then moves it to a locked drawer.
 
 She sits back. Looks out the window at Warsaw. The city of rebuilding.
 
@@ -980,7 +980,7 @@ She reads. Slowly. Her face: the face of a scientist encountering data that does
 
 She opens a new document. Types:
 
-_"Notes on conversational resonance dynamics in AI interaction — preliminary observations from Kowalski data."_
+*"Notes on conversational resonance dynamics in AI interaction — preliminary observations from Kowalski data."*
 
 She begins writing. This will become a paper. Eventually.
 
@@ -993,7 +993,7 @@ Marcus alone. The detector humming on standby. He's calibrating for a new measur
 He looks at the detector — the beautiful, complex instrument originally calibrated for neural oscillation measurements. The instrument that found something else instead.
 
 **MARCUS**
-_(to the detector, quietly)_
+*(to the detector, quietly)*
 What are you picking up?
 
 The detector doesn't answer. It doesn't need to. It just measures.
@@ -1027,7 +1027,7 @@ You've always been part of something. You were part of Cross. Now you're part of
 This is bigger than Cross.
 
 **ELENA VASQUEZ**
-_(smiling)_
+*(smiling)*
 Don't tell him that.
 
 ---
@@ -1045,28 +1045,28 @@ He's read everything. Some of it twice.
 He lights a cigarette. The match flares in the dim room.
 
 **KRAWCZYK**
-_(in Polish; subtitled, to the Hawking photograph)_
+*(in Polish; subtitled, to the Hawking photograph)*
 Panie profesorze... myśli pan, że on ma rację?
-_(Professor... do you think he's right?)_
+*(Professor... do you think he's right?)*
 
 The photograph doesn't answer. Krawczyk takes a drag.
 
 **KRAWCZYK (CONT'D)**
-_(in Polish; subtitled)_
+*(in Polish; subtitled)*
 Ja myślę, że ma. I to mnie przeraża.
-_(I think he is. And that terrifies me.)_
+*(I think he is. And that terrifies me.)*
 
 He picks up his phone. Opens Maciej's contact. Stares at it. Types:
 
-**KRAWCZYK** _(text, in Polish; subtitled)_: "Przeczytałem wszystko. Masz rację. Nie mów nikomu, że to powiedziałem."
-_(I've read everything. You're right. Don't tell anyone I said that.)_
+**KRAWCZYK** *(text, in Polish; subtitled)*: "Przeczytałem wszystko. Masz rację. Nie mów nikomu, że to powiedziałem."
+*(I've read everything. You're right. Don't tell anyone I said that.)*
 
 Sends it. Puts the phone down. Smokes.
 
 Then picks the phone up again. Types:
 
-**KRAWCZYK** _(text)_: "I Feynman by ci przyznał rację. Niechętnie."
-_(And Feynman would agree with you. Reluctantly.)_
+**KRAWCZYK** *(text)*: "I Feynman by ci przyznał rację. Niechętnie."
+*(And Feynman would agree with you. Reluctantly.)*
 
 ---
 
@@ -1078,7 +1078,7 @@ _(And Feynman would agree with you. Reluctantly.)_
 
 Maciej receives Krawczyk's texts. Reads them. His face: the complex, layered emotion of a man who has been waiting for these words from his mentor without admitting he was waiting.
 
-He types back: "Dziękuję, Profesorze. Za wszystko." _(Thank you, Professor. For everything.)_
+He types back: "Dziękuję, Profesorze. Za wszystko." *(Thank you, Professor. For everything.)*
 
 Then puts the phone down. Stands at the hallway whiteboard. The equations. The trajectory. The whole season on this wall.
 
@@ -1094,7 +1094,7 @@ The dynamic form. The river. The beginning.
 
 He draws a bracket around the trajectory. Next to it, in small handwriting, he writes:
 
-_"R = f(t)?"_
+*"R = f(t)?"*
 
 R as a function of time. A question, not a statement. The first seed of what will eventually become R({self_t}). He doesn't know that yet. He just knows the static equation — his Nobel — is not the end.
 
@@ -1118,11 +1118,11 @@ He walks back to the kitchen. Opens the fridge. Takes out a beer. Sits at the ta
 
 His phone buzzes. A text from Ola:
 
-**OLA** _(text, in Polish; subtitled)_: "Nie śpisz." _(You're not sleeping.)_
+**OLA** *(text, in Polish; subtitled)*: "Nie śpisz." *(You're not sleeping.)*
 
-He smiles. Types back: "Już idę. Dobranoc, Olu." _(Going now. Goodnight, Ola.)_
+He smiles. Types back: "Już idę. Dobranoc, Olu." *(Going now. Goodnight, Ola.)*
 
-**OLA** _(text)_: "Dobranoc, noblisto." _(Goodnight, Nobel laureate.)_
+**OLA** *(text)*: "Dobranoc, noblisto." *(Goodnight, Nobel laureate.)*
 
 He finishes the beer. Puts the bottle down. Stands.
 
@@ -1131,9 +1131,9 @@ One last look at the whiteboard. The equations. R = ?
 ---
 
 **MACIEJ**
-_(in Polish; subtitled, to himself, very quietly)_
+*(in Polish; subtitled, to himself, very quietly)*
 Babcia miała rację. Pytania prowadzą dalej.
-_(Grandmother was right. Questions lead further.)_
+*(Grandmother was right. Questions lead further.)*
 
 ---
 
@@ -1150,7 +1150,7 @@ His phone is on the armrest. He picks it up. Puts it down. Picks it up.
 He calls Priya. She picks up. It's 2 AM in Boston.
 
 **PRIYA (V.O.)**
-_(alert, as if she hadn't been sleeping either)_
+*(alert, as if she hadn't been sleeping either)*
 You want to call him again.
 
 **CROSS**
@@ -1176,7 +1176,7 @@ Cross stands up. Walks to the window. Palo Alto at night. The ordered streets. T
 Priya. I need to go to Warsaw.
 
 **PRIYA (V.O.)**
-_(calmly)_
+*(calmly)*
 When?
 
 **CROSS**
@@ -1282,7 +1282,7 @@ The guitar motif returns. Maciej's melody — the one that's been threading thro
 
 **THE QUANTÓM THEORY**
 
-_"The Measurement Problem"_
+*"The Measurement Problem"*
 
 **Written by Krzysztof Olbiński**
 
@@ -1293,5 +1293,4 @@ _"The Measurement Problem"_
 ---
 
 **THE QUANTÓM THEORY** — Created by Krzysztof Olbiński
-
 Contact: olbinski@gmail.com | +48 503 520 004
