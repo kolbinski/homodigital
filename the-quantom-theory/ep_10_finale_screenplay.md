@@ -511,9 +511,11 @@ I stand by my statement.
 
 ---
 
-**INT. STANFORD — HALLWAY OUTSIDE CROSS'S OFFICE — DAY**
+**INT. STANFORD — HALLWAY OUTSIDE CROSS'S OFFICE — THE FOLLOWING DAY**
 
-Cross walks to his office. Purpose in every step. He closes the door behind him.
+Cross is back. Six hours in the air. He didn't sleep — he spent the flight staring at the folded paper in his pocket. Seventeen objections. Seventeen lines.
+
+He walks to his office. Purpose in every step. He closes the door behind him.
 
 He sits at his desk. Opens his computer. Navigates to the Stanford physics directory. Types: KOWALSKI, MACIEJ. A University of Warsaw contact page appears: m.kowalski@uw.edu.pl. Phone: +48 22 XXX XXXX.
 
@@ -579,7 +581,7 @@ Silence. A long silence. Maciej leans back in his chair.
 Which one survived?
 
 **CROSS (V.O.)**
-None. I crossed out the last one twenty minutes ago. In Dr. Sharma's laboratory. Using her red marker, which I did not ask permission to use, but the circumstance seemed to warrant it.
+None. I crossed out the last one yesterday morning. In Dr. Sharma's laboratory at MIT. Using her red marker, which I did not ask permission to use, but the circumstance seemed to warrant it.
 
 Another silence. Maciej is processing — not the information, but the fact that Nathan Cross, the man who anonymously attacked his theory, is telling him this. Voluntarily. On the phone.
 
