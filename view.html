@@ -243,6 +243,9 @@
 
       /* Print */
       @media print {
+        @page {
+          margin: 2.5cm 2cm;
+        }
         body {
           background: white;
           font-size: 11pt;
@@ -251,7 +254,7 @@
         #content {
           max-width: 100%;
           padding: 0;
-          margin: 2cm 2.5cm;
+          margin: 0;
         }
         #content h1 {
           font-size: 18pt;
