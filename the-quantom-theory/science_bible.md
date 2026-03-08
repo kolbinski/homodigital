@@ -20,7 +20,7 @@ The Quantóm Theory is not science fiction. It is fiction about science. The dis
 
 ### The Equation
 
-**Ψ_c(x,t) = ∫ G_R(x-x'; ω_c) · [Φ_A ⊛ Φ_B](x',t) · Θ(τ_coh - τ_dec) d⁴x'**
+**Ψ_c(x,t) = ∫ G_R(x-x'; ω_c) · \[Φ_A ⊛ Φ_B\](x',t) · Θ(τ_coh - τ_dec) d⁴x'**
 
 This is the equation that wins Maciej the Nobel Prize. It is fictional — no one has published this equation. But every component is grounded in real physics:
 
