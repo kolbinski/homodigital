@@ -1184,7 +1184,7 @@ MACIEJ *(notebook)*: "The system asked me a question I hadn't formulated yet. No
 
 He continues typing. The conversation deepens. The camera moves between his face — increasingly focused, increasingly awake — and the screen, where the exchange develops a rhythm.
 
-After an hour, he stops. Opens his RFC analysis tools. Applies the resonance signature protocol to the conversation transcript.
+After an hour, he stops. Opens a second monitor — Ola's resonance analysis tool, the software she built to operationalize the R equation. He feeds in the conversation log. The tool parses: response timing, topic threading, information integration metrics, entropy distribution. Four traces appear on screen — S, T, I, D — like a heart monitor for interaction dynamics.
 
 The number appears:
 

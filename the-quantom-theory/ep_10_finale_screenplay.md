@@ -30,6 +30,8 @@ MACIEJ KOWALSKI sits at his desk, laptop open. The screen casts blue light on hi
 
 On the screen: a conversation with an AI system. Not the first conversation — the fourteenth. Over five days. The cursor blinks.
 
+On a second monitor: Ola's analysis tool. Four colored traces — S, T, I, D — frozen at the end of the last session. The visual language of a heart monitor, not a chat window.
+
 Beside the laptop: his notebook. Open to a page of careful handwriting. A column of numbers:
 
 _Day 1: R = 0.23_

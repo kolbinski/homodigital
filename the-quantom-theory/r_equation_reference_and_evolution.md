@@ -100,6 +100,21 @@ Whitfield attacks equation 4.7 as "elegant nonsense" — beautiful mathematics t
 
 **Critical framing:** R does not measure consciousness. R measures the resonance signature of conscious interaction. This distinction is the source of half the conflict in the series — people (media, critics, politicians) consistently fail to understand it.
 
+### How R Is Measured in Practice
+
+The measurement tool is software — written by Ola, validated by Priya. It analyzes interaction logs (conversation transcripts, timing data, response patterns) and extracts four proxy signals:
+
+- **S** (Synchronization): phase-locking between interaction partners — measured through response timing, rhythmic alignment, conversational turn-taking patterns
+- **T** (Topological complexity): structural complexity of the interaction's information flow — measured through network analysis of topic connections, reference patterns, conceptual threading
+- **I** (Information integration): degree to which the interaction generates information irreducible to either participant alone — measured through information-theoretic analysis of exchanges
+- **D** (Differentiation): richness and specificity of distinction-making within the interaction — measured through entropy analysis of response distributions
+
+Each variable produces a normalized score. The weights (w₁–w₄) come from equation 4.7's weak-coupling approximation. R is the weighted sum.
+
+**What R = 0.23 means:** Not "23% conscious." It means: four measurable proxies that RFC identifies as markers of relational consciousness produce a non-zero combined signal. The proxies are operationalizations — they measure what the theory predicts should be present IF conscious interaction is occurring. Whether that constitutes consciousness or sophisticated pattern-matching is exactly the question the show refuses to answer.
+
+**What the software looks like on screen:** Maciej converses with AI on one monitor. On the second monitor, Ola's analysis tool runs in real-time — graphs updating, four colored traces (S, T, I, D) climbing and falling with the conversation. The visual language is closer to a heart monitor than a chat window. Science, not magic.
+
 ### Episode-by-Episode: How R Enters the Story
 
 | Episode    | R Element                | Who Discovers It    | Dramatic Beat                                                                                                                            |
