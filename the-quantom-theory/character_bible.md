@@ -21,7 +21,7 @@ Characters are ordered by narrative weight in Season 1.
 
 # MACIEJ KOWALSKI
 
-**Casting reference (not attached):** Maciej Musiał — Polish, late 20s to mid-30s, charismatic without arrogance, intellectual without performing intellectual
+**Casting type:** Polish, late 20s to mid-30s, charismatic without arrogance, intellectual without performing intellectual. Internationally recognized — the role requires someone global audiences will follow.
 **Age:** 33
 **Role:** Series Lead
 **Nationality:** Polish

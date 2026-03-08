@@ -32,7 +32,7 @@ A young Polish quantum physicist wins the Nobel Prize for a theory that bridges 
 
 ## Concept
 
-The Quantóm Theory is a single-camera comedy-drama. It follows Maciej Kowalski (casting type: Maciej Musiał), a Polish physicist whose Nobel Prize sends shockwaves through the physics community — and through Nathan Cross's already fragile sense of certainty.
+The Quantóm Theory is a single-camera comedy-drama. It follows Maciej Kowalski, a Polish physicist whose Nobel Prize sends shockwaves through the physics community — and through Nathan Cross's already fragile sense of certainty.
 
 But this is not a show about a genius. It's a show about what happens after you get the thing everyone says they want. Maciej discovers that the Nobel doesn't answer questions—it multiplies them. His theory connects consciousness to quantum field dynamics, and the deeper he goes, the less certain he becomes about what's real, what's provable, and whether intelligence can exist beyond biological substrates.
 
@@ -73,7 +73,7 @@ The show moves between two visual worlds:
 
 ### Maciej Kowalski
 
-**Casting type:** Maciej Musiał — Polish, late 20s to mid-30s, charismatic without arrogance, intellectual without performing intellectual
+**Casting type:** Polish, late 20s to mid-30s, charismatic without arrogance, intellectual without performing intellectual
 **Age:** 33
 **Role:** Lead
 
@@ -276,7 +276,7 @@ Television made physics lovable. The Quantóm Theory makes consciousness urgent.
 
 ## Casting the Lead — Why the Type Matters
 
-The role demands a Polish actor with international recognition — someone who brings charisma without arrogance, intelligence that reads as natural, and the ability to make complex ideas feel human. The reference type is Maciej Musiał (The Witcher, Netflix), Poland's most internationally recognized young actor: exactly the profile this role requires. He's the anti-Cross — not because he's the opposite, but because he's what a genius looks like when genius isn't the whole personality.
+The role demands a Polish actor with international recognition — someone who brings charisma without arrogance, intelligence that reads as natural, and the ability to make complex ideas feel human. He's the anti-Cross — not because he's the opposite, but because he's what a genius looks like when genius isn't the whole personality.
 
 Casting a real Polish actor as a Polish character isn't a gimmick — it's the point. The show argues that breakthroughs come from unexpected places. Poland producing a Nobel laureate in quantum consciousness isn't fantasy; it's the kind of story physics actually tells. Marie Curie was Polish. The next paradigm shift could be too.
 

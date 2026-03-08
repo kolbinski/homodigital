@@ -380,7 +380,7 @@ The show should engage consultants from three domains:
 | R > 0 in AI interaction                 | FICTIONAL    | Show's central premise                                                |
 | R({self_t}) — temporally extended self  | FICTIONAL    | Show's Season 2-3 evolution                                           |
 | Nathan Cross                            | FICTIONAL    | Character                                                             |
-| Casting type: Maciej Musiał             | REAL         | Polish actor (The Witcher, Netflix) — casting reference, not attached |
+| Casting type: Polish actor, internationally recognized | REAL         | The role requires global profile — casting reference available on request |
 | University of Warsaw physics department | REAL         | Real institution                                                      |
 | MIT McGovern Institute                  | REAL         | Real institution                                                      |
 | Stanford                                | REAL         | Real institution                                                      |

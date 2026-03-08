@@ -135,7 +135,7 @@ This design means a major American dramatic actor can play Cross with minimal ti
 
 ### Lead — Maciej Kowalski
 
-**Casting reference (not attached): Maciej Musiał** — Poland's most internationally recognized young actor. Known for 1983 (Netflix's first Polish original), The Witcher (Netflix), and a significant Polish film career. Age-appropriate (born 1996). Fluent in English with a natural Polish accent. Guitar-playing ability (trainable if not already proficient).
+**Casting type:** Poland's most internationally recognized young actor profile. The role requires: Polish nationality, late 20s to mid-30s, fluent English with natural Polish accent, charisma without arrogance, and the ability to make complex ideas feel human. Guitar-playing ability (trainable if not already proficient). The lead must be someone global audiences will follow for four seasons — an actor whose presence says "this is not an American show, and that's the point."
 
 **Why this type:**
 
