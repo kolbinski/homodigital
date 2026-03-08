@@ -1199,6 +1199,8 @@ Ola at her screens. The simulation results glowing. She prints them. Puts them i
 
 She sits back. Looks out the window at Warsaw. The city of rebuilding.
 
+She picks up her phone to check the time. The lock screen: a photo of a small girl in a yellow raincoat, laughing. Ola looks at it for a moment longer than necessary. Puts the phone down.
+
 ---
 
 **INT. MIT — SHARMA LAB — EVENING**

@@ -244,6 +244,8 @@ SUPER: ONE WEEK LATER
 
 The experiment has been running for seven days. Ola sits alone in the analysis room. It's 11 PM. Everyone else has gone home.
 
+Her phone buzzes. A photo — a child's drawing of a rocket with "MAMA" written in crayon. She smiles, types back: "Śpij, kochanie. Wracam w piątek." *(Sleep, sweetheart. I'm back Friday.)* Puts the phone face-down.
+
 She shouldn't do this. The protocol is clear: no preliminary analysis until the full dataset is collected. Priya was explicit. The sealed predictions stay sealed until the official analysis.
 
 But Ola is a computational physicist. She sees patterns the way musicians hear melodies — involuntarily. And the raw data streaming across her screen for seven days has been whispering something.

@@ -35,7 +35,7 @@ _(to himself, in Polish; subtitled)_
 No dobra. To jest albo bardzo dobre, albo bardzo złe.
 _(Okay. This is either very good or very bad.)_
 
-His phone buzzes on the counter. He glances at it. A text from **OLA**: "Będę za 10 min. Mam wino. Czerwone. Nie dyskutuj." _(I'll be there in 10 min. I have wine. Red. Don't argue.)_
+His phone buzzes on the counter. He glances at it. A text from **OLA**: "Zostawiłam Hanię u mamy. Będę za 10 min. Mam wino. Czerwone. Nie dyskutuj." _(Left Hania at my mom's. I'll be there in 10 min. I have wine. Red. Don't argue.)_
 
 He smiles. Types back: "Drzwi otwarte." _(Door's open.)_
 
