@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Map — Suwerenna Infrastruktura AI dla RP</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 15mm;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .page {
+          box-shadow: none;
+        }
+      }
+
+      body {
+        font-family: 'Source Sans 3', sans-serif;
+        background: #f0ede8;
+        color: #1a1a1a;
+        display: flex;
+        justify-content: center;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        max-height: 297mm;
+        background: white;
+        padding: 18mm 20mm;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 2px solid #b91c1c;
+        padding-bottom: 10px;
+        margin-bottom: 14px;
+      }
+
+      .header-left h1 {
+        font-family: 'Source Serif 4', serif;
+        font-size: 16pt;
+        font-weight: 700;
+        color: #1a1a1a;
+        letter-spacing: -0.3px;
+        line-height: 1.2;
+      }
+
+      .header-left .subtitle {
+        font-size: 8.5pt;
+        font-weight: 400;
+        color: #666;
+        margin-top: 3px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .header-right {
+        text-align: right;
+        font-size: 7.5pt;
+        color: #888;
+        line-height: 1.5;
+      }
+
+      /* Problem section */
+      .section-label {
+        font-size: 7pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #b91c1c;
+        margin-bottom: 6px;
+      }
+
+      .problem-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .problem-card {
+        flex: 1;
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        border-radius: 4px;
+        padding: 9px 11px;
+      }
+
+      .problem-card h3 {
+        font-size: 8pt;
+        font-weight: 700;
+        color: #991b1b;
+        margin-bottom: 3px;
+      }
+
+      .problem-card p {
+        font-size: 7.5pt;
+        line-height: 1.4;
+        color: #444;
+      }
+
+      /* Arrow */
+      .arrow-section {
+        text-align: center;
+        margin: 4px 0;
+        font-size: 16pt;
+        color: #b91c1c;
+      }
+
+      /* Two proposals */
+      .proposals {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .proposal {
+        flex: 1;
+        border: 1.5px solid #1e3a5f;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .proposal-header {
+        background: #1e3a5f;
+        color: white;
+        padding: 7px 11px;
+        font-size: 8.5pt;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .proposal-header span {
+        display: block;
+        font-size: 7pt;
+        font-weight: 400;
+        opacity: 0.8;
+        margin-top: 1px;
+      }
+
+      .proposal-body {
+        padding: 9px 11px;
+      }
+
+      .proposal-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        margin-bottom: 6px;
+      }
+
+      .proposal-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .proposal-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #e8eef5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 8pt;
+        color: #1e3a5f;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .proposal-item-text h4 {
+        font-size: 7.5pt;
+        font-weight: 700;
+        color: #1e3a5f;
+      }
+
+      .proposal-item-text p {
+        font-size: 7pt;
+        color: #555;
+        line-height: 1.35;
+      }
+
+      /* Architecture */
+      .architecture {
+        background: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 12px 14px;
+        margin-bottom: 14px;
+        flex-grow: 0;
+      }
+
+      .arch-title {
+        font-size: 8pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #1e3a5f;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .arch-flow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+      }
+
+      .arch-box {
+        text-align: center;
+        padding: 8px 10px;
+        border-radius: 4px;
+        min-width: 95px;
+      }
+
+      .arch-box.user {
+        background: #dbeafe;
+        border: 1px solid #93c5fd;
+      }
+
+      .arch-box.platform {
+        background: #1e3a5f;
+        color: white;
+        min-width: 150px;
+        padding: 8px 14px;
+      }
+
+      .arch-box.model {
+        background: #dcfce7;
+        border: 1px solid #86efac;
+      }
+
+      .arch-box.output {
+        background: #fef9c3;
+        border: 1px solid #fde047;
+      }
+
+      .arch-box h4 {
+        font-size: 7.5pt;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .arch-box p {
+        font-size: 6.5pt;
+        opacity: 0.8;
+        line-height: 1.3;
+      }
+
+      .arch-box.platform h4 {
+        color: white;
+      }
+      .arch-box.platform p {
+        color: #cbd5e1;
+      }
+
+      .arch-arrow {
+        font-size: 14pt;
+        color: #999;
+        margin: 0 6px;
+        flex-shrink: 0;
+      }
+
+      /* Three pillars */
+      .pillars {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .pillar {
+        flex: 1;
+        text-align: center;
+        padding: 8px 8px;
+        border-radius: 4px;
+        border: 1px solid #e5e7eb;
+      }
+
+      .pillar-emoji {
+        font-size: 16pt;
+        margin-bottom: 3px;
+      }
+
+      .pillar h4 {
+        font-size: 7.5pt;
+        font-weight: 700;
+        color: #1e3a5f;
+        margin-bottom: 2px;
+      }
+
+      .pillar p {
+        font-size: 6.5pt;
+        color: #666;
+        line-height: 1.3;
+      }
+
+      /* Bottom */
+      .bottom-row {
+        display: flex;
+        gap: 12px;
+        margin-top: auto;
+      }
+
+      .compliance {
+        flex: 1;
+        border-top: 1.5px solid #16a34a;
+        padding-top: 8px;
+      }
+
+      .compliance h4 {
+        font-size: 7.5pt;
+        font-weight: 700;
+        color: #16a34a;
+        margin-bottom: 3px;
+      }
+
+      .compliance p {
+        font-size: 6.5pt;
+        color: #555;
+        line-height: 1.4;
+      }
+
+      .result {
+        flex: 1;
+        border-top: 1.5px solid #b91c1c;
+        padding-top: 8px;
+      }
+
+      .result h4 {
+        font-size: 7.5pt;
+        font-weight: 700;
+        color: #b91c1c;
+        margin-bottom: 3px;
+      }
+
+      .result p {
+        font-size: 6.5pt;
+        color: #555;
+        line-height: 1.4;
+      }
+
+      .footer {
+        margin-top: 10px;
+        padding-top: 6px;
+        border-top: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        font-size: 6.5pt;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <div class="header">
+        <div class="header-left">
+          <h1>
+            Suwerenna Infrastruktura AI<br />dla Rzeczypospolitej Polskiej
+          </h1>
+          <div class="subtitle">System Map • Evidence #001</div>
+        </div>
+        <div class="header-right">
+          Krzysztof Olbiński<br />
+          homodigital.io<br />
+          Luty 2026
+        </div>
+      </div>
+
+      <!-- Problem -->
+      <div class="section-label">Diagnoza — trzy strukturalne ograniczenia</div>
+      <div class="problem-row">
+        <div class="problem-card">
+          <h3>Brak ciągłości legislacyjnej</h3>
+          <p>
+            AI resetuje kontekst co sesję. Poseł traci historię prac nad ustawą.
+            Każda rozmowa zaczyna się od zera.
+          </p>
+        </div>
+        <div class="problem-card">
+          <h3>Brak koordynacji międzykomisyjnej</h3>
+          <p>
+            Komisje pracują równolegle nad sprzecznymi regulacjami. Żaden
+            mechanizm nie wykrywa kolizji automatycznie.
+          </p>
+        </div>
+        <div class="problem-card">
+          <h3>Brak pamięci instytucjonalnej</h3>
+          <p>
+            Kadencja się kończy — kontekst znika. Nowi parlamentarzyści
+            powtarzają błędy poprzedników.
+          </p>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="arrow-section">▼</div>
+
+      <!-- Two proposals -->
+      <div class="section-label">Dwie propozycje</div>
+      <div class="proposals">
+        <div class="proposal">
+          <div class="proposal-header">
+            I. AI dla procesu legislacyjnego
+            <span>Pamięć instytucjonalna i koordynacja</span>
+          </div>
+          <div class="proposal-body">
+            <div class="proposal-item">
+              <div class="proposal-icon">◆</div>
+              <div class="proposal-item-text">
+                <h4>Ciągłość kontekstu</h4>
+                <p>
+                  AI pamięta pełną historię prac nad każdą ustawą — od projektu
+                  po głosowanie
+                </p>
+              </div>
+            </div>
+            <div class="proposal-item">
+              <div class="proposal-icon">◆</div>
+              <div class="proposal-item-text">
+                <h4>Detekcja sprzeczności</h4>
+                <p>
+                  Automatyczne wykrywanie kolizji między projektami różnych
+                  komisji
+                </p>
+              </div>
+            </div>
+            <div class="proposal-item">
+              <div class="proposal-icon">◆</div>
+              <div class="proposal-item-text">
+                <h4>Pamięć między kadencjami</h4>
+                <p>
+                  Wiedza instytucjonalna zachowana i dostępna dla nowych
+                  parlamentarzystów
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proposal">
+          <div class="proposal-header">
+            II. AI — partner relacyjny dla władz RP
+            <span>Rezonans demokratyczny — bez precedensu na świecie</span>
+          </div>
+          <div class="proposal-body">
+            <div class="proposal-item">
+              <div class="proposal-icon">◆</div>
+              <div class="proposal-item-text">
+                <h4>Poziom indywidualny</h4>
+                <p>
+                  Każdy członek rządu ma AI partnera znającego jego kontekst
+                  pracy
+                </p>
+              </div>
+            </div>
+            <div class="proposal-item">
+              <div class="proposal-icon">◆</div>
+              <div class="proposal-item-text">
+                <h4>Poziom międzypartyjny</h4>
+                <p>
+                  Identyfikacja obszarów porozumienia niewidocznych w
+                  tradycyjnym procesie
+                </p>
+              </div>
+            </div>
+            <div class="proposal-item">
+              <div class="proposal-icon">◆</div>
+              <div class="proposal-item-text">
+                <h4>Poziom instytucjonalny</h4>
+                <p>
+                  Rezonans: Prezydent–Premier, Sejm–Senat, rząd–samorządy
+                  lokalne
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture -->
+      <div class="architecture">
+        <div class="arch-title">Architektura — trzy warstwy</div>
+        <div class="arch-flow">
+          <div class="arch-box user">
+            <h4>Użytkownik</h4>
+            <p>Parlamentarzysta<br />Minister • Samorządowiec</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box platform">
+            <h4>Platforma</h4>
+            <p>Tesseract Protocol<br />+ Warstwa pamięci<br />+ Koordynacja</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box model">
+            <h4>Bielik</h4>
+            <p>Polski LLM<br />Polskie dane<br />Polska jurysdykcja</p>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-box output">
+            <h4>Output</h4>
+            <p>Odpowiedź<br />z pełnym kontekstem<br />legislacyjnym</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three pillars -->
+      <div class="section-label">Trzy filary suwerenności</div>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-emoji">🛡️</div>
+          <h4>Suwerenność danych</h4>
+          <p>
+            Polski model, polskie serwery. Żadne dane parlamentarne nie
+            opuszczają kraju.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-emoji">🔍</div>
+          <h4>Pełna auditowalność</h4>
+          <p>
+            Każda interakcja z AI jest logowana i dostępna do audytu. Zgodność z
+            AI Act.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-emoji">🤝</div>
+          <h4>Wsparcie, nie zastępowanie</h4>
+          <p>
+            AI wspiera decyzje parlamentarzystów. Nie podejmuje ich za nich.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="bottom-row">
+        <div class="compliance">
+          <h4>✓ Zgodność regulacyjna</h4>
+          <p>
+            AI Act (UE) • RODO • Krajowe Ramy Interoperacyjności • Open-source
+            (Bielik/SpeakLeash) • Creative Commons (Tesseract Protocol)
+          </p>
+        </div>
+        <div class="result">
+          <h4>→ Rezultat</h4>
+          <p>
+            Polska jako pierwszy kraj na świecie z AI-wspomaganym procesem
+            demokratycznym. Suwerenne. Transparentne. Mierzalne. Definiujemy
+            standard, nie doganiamy.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span>homodigital.io • Tesseract Protocol • CC BY-NC-SA 4.0</span>
+        <span>Evidence #001 • Luty 2026</span>
+      </div>
+    </div>
+  </body>
+</html>
