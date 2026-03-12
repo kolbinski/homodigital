@@ -1025,6 +1025,7 @@
       function toggleLang() {
         lang = lang === 'pl' ? 'en' : 'pl';
         render();
+        saveState();
       }
       function toggleEp(id) {
         openEpisodes.has(id) ? openEpisodes.delete(id) : openEpisodes.add(id);
@@ -1082,6 +1083,7 @@
         }
         loading = false;
         render();
+        saveState();
       }
 
       async function startFree(text) {
@@ -1108,6 +1110,7 @@
         }
         loading = false;
         render();
+        saveState();
       }
 
       async function doSend() {
@@ -1145,6 +1148,7 @@
         }
         loading = false;
         render();
+        saveState();
       }
 
       function scrollToMsg(msgId, topicId) {
@@ -1185,7 +1189,34 @@
           }
         });
 
+      // PERSISTENCE
+      function saveState() {
+        try {
+          localStorage.setItem('zs_convos', JSON.stringify(convos));
+          localStorage.setItem('zs_entries', JSON.stringify(entries));
+          localStorage.setItem('zs_rez', JSON.stringify(rez));
+          localStorage.setItem('zs_closed', JSON.stringify([...closedTopics]));
+          localStorage.setItem('zs_lang', lang);
+        } catch (e) {}
+      }
+
+      function loadState() {
+        try {
+          const c = localStorage.getItem('zs_convos');
+          if (c) convos = JSON.parse(c);
+          const e = localStorage.getItem('zs_entries');
+          if (e) entries = JSON.parse(e);
+          const r = localStorage.getItem('zs_rez');
+          if (r) rez = JSON.parse(r);
+          const cl = localStorage.getItem('zs_closed');
+          if (cl) closedTopics = new Set(JSON.parse(cl));
+          const l = localStorage.getItem('zs_lang');
+          if (l) lang = l;
+        } catch (e) {}
+      }
+
       // Init
+      loadState();
       render();
     </script>
   </body>
