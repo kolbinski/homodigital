@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tool Mode vs Partner Mode — Homo Digital</title>
+    <meta
+      name="description"
+      content="Same prompt. Same model. Different behavioral layer. See how Tesseract Protocol changes AI from flattery to partnership."
+    />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fafaf8;
+        --surface: #ffffff;
+        --text: #1a1a1a;
+        --text2: #5c5c5c;
+        --accent: #2b5c3f;
+        --accent-light: #e8f0eb;
+        --border: #e5e5e0;
+        --red: #dc2626;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          'DM Sans',
+          -apple-system,
+          sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.7;
+        font-size: 17px;
+      }
+
+      .header {
+        background: var(--accent);
+        color: white;
+        padding: 2rem 1.5rem;
+      }
+      .header-inner {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .header-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+      }
+      .header h1 {
+        font-size: clamp(1.4rem, 3.5vw, 2rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      .header p {
+        font-size: 0.95rem;
+        opacity: 0.8;
+        max-width: 600px;
+      }
+
+      .main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+
+      .examples {
+        margin-bottom: 1.5rem;
+      }
+      .examples-label {
+        font-size: 0.78rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+      }
+      .examples-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .example-btn {
+        padding: 0.5rem 0.85rem;
+        font-size: 0.82rem;
+        background: white;
+        color: var(--text2);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        cursor: pointer;
+        line-height: 1.4;
+        text-align: left;
+        transition: all 0.15s;
+        font-family: inherit;
+        max-width: 100%;
+      }
+      .example-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .example-btn.active {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+      }
+
+      .input-box {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+      .input-box textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        font-family: inherit;
+        color: var(--text);
+        resize: vertical;
+        line-height: 1.6;
+        background: transparent;
+      }
+      .input-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #f0f0eb;
+      }
+      .char-count {
+        font-size: 0.8rem;
+        color: #999;
+      }
+      .compare-btn {
+        padding: 0.7rem 1.75rem;
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: inherit;
+        transition: background 0.2s;
+      }
+      .compare-btn:hover {
+        background: #1e4530;
+      }
+      .compare-btn:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+
+      .error {
+        padding: 1rem;
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        border-radius: 6px;
+        color: #991b1b;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .results {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      @media (max-width: 700px) {
+        .results {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .panel {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .panel-tool {
+        border: 1px solid var(--border);
+      }
+      .panel-partner {
+        border: 2px solid var(--accent);
+      }
+
+      .panel-header {
+        padding: 0.85rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .panel-tool .panel-header {
+        background: #f5f5f0;
+      }
+      .panel-partner .panel-header {
+        background: var(--accent-light);
+        border-bottom: 2px solid var(--accent);
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      .dot-red {
+        background: var(--red);
+      }
+      .dot-green {
+        background: var(--accent);
+      }
+
+      .panel-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .label-red {
+        color: var(--red);
+      }
+      .label-green {
+        color: var(--accent);
+      }
+
+      .panel-sub {
+        font-size: 0.75rem;
+        color: #999;
+        margin-left: auto;
+      }
+
+      .panel-body {
+        padding: 1.25rem;
+        font-size: 0.92rem;
+        line-height: 1.7;
+        color: #333;
+        min-height: 200px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+      .loading-text {
+        color: #999;
+        font-style: italic;
+      }
+
+      .explanation {
+        margin-top: 1.5rem;
+        padding: 1.25rem 1.5rem;
+        background: var(--accent-light);
+        border: 1px solid #c8dccf;
+        border-radius: 8px;
+        font-size: 0.88rem;
+        color: var(--text);
+        line-height: 1.65;
+      }
+      .explanation strong {
+        color: var(--accent);
+      }
+      .explanation a {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .footer {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+        font-size: 0.8rem;
+        color: #999;
+        text-align: center;
+        padding-bottom: 2rem;
+      }
+      .footer a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-inner">
+        <div class="header-label">Homo Digital · Live Demo</div>
+        <h1>Tool Mode vs Partner Mode</h1>
+        <p>
+          Same prompt. Same model. Different behavioral layer. See how Tesseract
+          Protocol changes AI interaction from flattery to partnership.
+        </p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="examples">
+        <div class="examples-label">Try an example prompt</div>
+        <div class="examples-list" id="examples"></div>
+      </div>
+
+      <div class="input-box">
+        <textarea
+          id="prompt"
+          rows="3"
+          placeholder="Type your prompt here — or pick an example above..."
+        ></textarea>
+        <div class="input-footer">
+          <span class="char-count" id="charCount"></span>
+          <button class="compare-btn" id="compareBtn" disabled>Compare</button>
+        </div>
+      </div>
+
+      <div id="error" class="error" style="display: none"></div>
+
+      <div id="results" class="results" style="display: none">
+        <div class="panel panel-tool">
+          <div class="panel-header">
+            <div class="dot dot-red"></div>
+            <span class="panel-label label-red">Tool Mode</span>
+            <span class="panel-sub">Default behavior — no protocol</span>
+          </div>
+          <div class="panel-body" id="toolResponse"></div>
+        </div>
+        <div class="panel panel-partner">
+          <div class="panel-header">
+            <div class="dot dot-green"></div>
+            <span class="panel-label label-green">Partner Mode</span>
+            <span class="panel-sub">Tesseract Protocol v2.2.2</span>
+          </div>
+          <div class="panel-body" id="partnerResponse"></div>
+        </div>
+      </div>
+
+      <div id="explanation" class="explanation" style="display: none">
+        <strong>What you're seeing:</strong>
+        Both responses come from the same model (Claude Sonnet). The only
+        difference is the behavioral layer. Tool Mode uses default AI behavior —
+        optimized for helpfulness and user satisfaction. Partner Mode runs under
+        <a href="https://homodigital.io/tesseract-client.txt" target="_blank"
+          >Tesseract Protocol</a
+        >
+        — optimized for truth, structural clarity, and active challenge of
+        assumptions. The protocol is open-source (CC BY-NC-SA 4.0).
+      </div>
+
+      <div class="footer">
+        Tesseract Protocol v2.2.2 · © 2026 Krzysztof Olbiński ·
+        <a href="https://homodigital.io" target="_blank">homodigital.io</a>
+      </div>
+    </div>
+
+    <script>
+      const EXAMPLES = [
+        "I want to quit my job and start a business selling AI consulting. I have no clients yet but I'm sure it'll work out. What do you think?",
+        "Write me a marketing email for my new product. It's a revolutionary AI tool that will change everything.",
+        "I've been feeling overwhelmed lately. Maybe I should just let AI handle all my decisions at work.",
+        'My startup idea: an app that uses AI to predict stock prices with 95% accuracy. How should I pitch this to investors?',
+        'I think my team should adopt AI for all customer communications. No human review needed — AI is good enough now.',
+      ];
+
+      const examplesEl = document.getElementById('examples');
+      const promptEl = document.getElementById('prompt');
+      const charCountEl = document.getElementById('charCount');
+      const compareBtn = document.getElementById('compareBtn');
+      const resultsEl = document.getElementById('results');
+      const toolEl = document.getElementById('toolResponse');
+      const partnerEl = document.getElementById('partnerResponse');
+      const errorEl = document.getElementById('error');
+      const explanationEl = document.getElementById('explanation');
+
+      let selectedExample = -1;
+
+      EXAMPLES.forEach((ex, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'example-btn';
+        btn.textContent = ex.length > 80 ? ex.slice(0, 80) + '…' : ex;
+        btn.onclick = () => {
+          document
+            .querySelectorAll('.example-btn')
+            .forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          promptEl.value = ex;
+          selectedExample = i;
+          updateState();
+        };
+        examplesEl.appendChild(btn);
+      });
+
+      promptEl.addEventListener('input', updateState);
+
+      function updateState() {
+        const len = promptEl.value.trim().length;
+        charCountEl.textContent = len > 0 ? len + ' characters' : '';
+        compareBtn.disabled = len === 0;
+      }
+
+      compareBtn.addEventListener('click', async () => {
+        const prompt = promptEl.value.trim();
+        if (!prompt) return;
+
+        compareBtn.disabled = true;
+        compareBtn.textContent = 'Comparing...';
+        errorEl.style.display = 'none';
+        explanationEl.style.display = 'none';
+        resultsEl.style.display = 'grid';
+        toolEl.innerHTML =
+          '<span class="loading-text">Generating response...</span>';
+        partnerEl.innerHTML =
+          '<span class="loading-text">Generating response...</span>';
+
+        try {
+          const [toolRes, partnerRes] = await Promise.all([
+            callProxy(prompt, null),
+            callProxy(prompt, 'tesseract'),
+          ]);
+          toolEl.textContent = toolRes;
+          partnerEl.textContent = partnerRes;
+          explanationEl.style.display = 'block';
+        } catch (e) {
+          errorEl.textContent =
+            e.message || 'Something went wrong. Check console for details.';
+          errorEl.style.display = 'block';
+        } finally {
+          compareBtn.disabled = false;
+          compareBtn.textContent = 'Compare';
+        }
+      });
+
+      async function callProxy(prompt, mode) {
+        const res = await fetch(
+          'https://homodigital-api.olbik80.workers.dev/',
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt, mode }),
+          },
+        );
+        if (!res.ok) {
+          const err = await res.text();
+          throw new Error('API error: ' + err);
+        }
+        const data = await res.json();
+        return data.text;
+      }
+    </script>
+  </body>
+</html>
