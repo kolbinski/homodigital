@@ -8,8 +8,74 @@
       name="description"
       content="Same prompt. Same model. Different behavioral layer. See how Tesseract Protocol changes AI from flattery to partnership."
     />
+    <meta
+      name="keywords"
+      content="Tesseract Protocol, AI interaction, Tool Mode, Partner Mode, automation bias, human oversight, AI Act, Homo Digital"
+    />
+    <meta name="author" content="Krzysztof Olbiński" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="canonical" href="https://homodigital.io/compare/" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="icon" type="image/png" href="../favicon.png" />
+    <link rel="shortcut icon" href="../favicon.png" />
+    <link rel="apple-touch-icon" href="../favicon.png" />
+    <link rel="icon" href="../favicon-32.png" sizes="32x32" />
+    <meta name="theme-color" content="#2B5C3F" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Tool Mode vs Partner Mode — See the difference Tesseract Protocol makes"
+    />
+    <meta
+      property="og:description"
+      content="Same prompt. Same model. Different behavioral layer. Live demo comparing default AI behavior with Tesseract Protocol."
+    />
+    <meta property="og:url" content="https://homodigital.io/compare/" />
+    <meta property="og:image" content="https://homodigital.io/og-image.png" />
+    <meta property="og:site_name" content="Homo Digital" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Tool Mode vs Partner Mode — Tesseract Protocol Live Demo"
+    />
+    <meta
+      name="twitter:description"
+      content="Same prompt. Same model. Different behavioral layer. See the difference live."
+    />
+    <meta name="twitter:image" content="https://homodigital.io/og-image.png" />
+    <meta name="twitter:creator" content="@HomoDigitalInf" />
+    <meta name="application-name" content="Homo Digital" />
+    <meta name="apple-mobile-web-app-title" content="Homo Digital" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Tool Mode vs Partner Mode",
+        "url": "https://homodigital.io/compare/",
+        "description": "Live comparison of default AI behavior vs Tesseract Protocol. Same model, different behavioral layer.",
+        "applicationCategory": "DemoApplication",
+        "creator": {
+          "@type": "Person",
+          "name": "Krzysztof Olbiński",
+          "url": "https://homodigital.io"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Homo Digital",
+          "url": "https://homodigital.io"
+        }
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
       rel="stylesheet"
@@ -383,7 +449,7 @@
       EXAMPLES.forEach((ex, i) => {
         const btn = document.createElement('button');
         btn.className = 'example-btn';
-        btn.textContent = ex.length > 80 ? ex.slice(0, 80) + '…' : ex;
+        btn.textContent = ex;
         btn.onclick = () => {
           document
             .querySelectorAll('.example-btn')
