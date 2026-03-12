@@ -74,9 +74,9 @@
         --red: #8e4444;
         --surprise-bg: #1e1c10;
         --surprise-border: #c4b44a;
-        --user-bg: #1a2a20;
-        --user-border: #2b5c3f44;
-        --user-text: #b0d4b8;
+        --user-bg: #1a2230;
+        --user-border: #2b4a6f44;
+        --user-text: #a8c4e0;
         --f:
           'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         --fd: 'Georgia', 'Times New Roman', serif;
@@ -175,6 +175,9 @@
         padding: 1.5rem;
         overflow-y: auto;
         flex: 1;
+        max-width: 720px;
+        margin: 0 auto;
+        width: 100%;
       }
       .ep-toggle {
         width: 100%;
@@ -207,7 +210,6 @@
         display: flex;
         flex-direction: column;
         gap: 0.45rem;
-        max-width: 520px;
       }
       .topic-btn {
         padding: 0.8rem 1rem;
@@ -255,7 +257,6 @@
       }
       .free-input {
         width: 100%;
-        max-width: 520px;
         padding: 0.7rem 0.9rem;
         background: var(--surface);
         color: var(--text);
@@ -285,6 +286,9 @@
         flex: 1;
         overflow-y: auto;
         padding: 1rem 1.25rem;
+        max-width: 720px;
+        margin: 0 auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 0.6rem;
@@ -328,6 +332,9 @@
       }
       .chat-input-bar {
         padding: 0.6rem 1rem;
+        max-width: 720px;
+        margin: 0 auto;
+        width: 100%;
         border-top: 1px solid var(--border3);
         display: flex;
         gap: 0.5rem;
@@ -337,9 +344,9 @@
       .chat-textarea {
         flex: 1;
         padding: 0.65rem 0.9rem;
-        background: var(--surface3);
+        background: #1c1c24;
         color: var(--text);
-        border: 1px solid var(--border2);
+        border: 1px solid #3a3a45;
         border-radius: 8px;
         font-family: var(--f);
         font-size: 0.9rem;
@@ -351,7 +358,7 @@
       }
       .send-btn {
         padding: 0.65rem 1.3rem;
-        background: var(--green);
+        background: #2b4a6f;
         color: #fff;
         border: none;
         border-radius: 8px;
@@ -435,6 +442,10 @@
         padding-bottom: 0.4rem;
         padding-top: 0.1rem;
         z-index: 2;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
       .tl-entries {
         display: flex;
@@ -537,6 +548,10 @@
       }
       .rez-overlay .timeline-sticky {
         background: var(--bg);
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
       }
 
       @keyframes slideUp {
