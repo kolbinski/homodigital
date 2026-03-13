@@ -786,10 +786,24 @@ Start from rez ~0.3.`;
         );
       }
       function ts() {
-        return new Date().toLocaleTimeString([], {
+        return new Date().toISOString();
+      }
+      function formatTs(isoStr) {
+        const d = new Date(isoStr);
+        const now = new Date();
+        const time = d.toLocaleTimeString([], {
           hour: '2-digit',
           minute: '2-digit',
         });
+        const sameDay =
+          d.getDate() === now.getDate() &&
+          d.getMonth() === now.getMonth() &&
+          d.getFullYear() === now.getFullYear();
+        if (sameDay) return time;
+        const dd = String(d.getDate()).padStart(2, '0');
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        if (d.getFullYear() === now.getFullYear()) return `${dd}/${mm} ${time}`;
+        return `${dd}/${mm}/${d.getFullYear()} ${time}`;
       }
       function rc(r) {
         return r >= 0.8
@@ -935,7 +949,7 @@ Start from rez ~0.3.`;
           .map((e, i) => {
             const isS = e.type === 'surprise';
             return `<div class="tl-entry ${isS ? 'surprise-entry' : 'rez-entry'}" style="border-left-color:${isS ? 'var(--surprise-border)' : rc(e.rez || 0)}" onclick="scrollToMsg(${e.msgId},'${e.topicId}')">
-      <div class="tl-top"><span class="${isS ? 'tl-surprise-label' : 'tl-rez-num'}" style="${isS ? '' : `color:${rc(e.rez)}`}">${isS ? '✦ zaskoczenie' : (e.rez || 0).toFixed(2)}</span><span class="tl-time">${e.time}</span></div>
+      <div class="tl-top"><span class="${isS ? 'tl-surprise-label' : 'tl-rez-num'}" style="${isS ? '' : `color:${rc(e.rez)}`}">${isS ? '✦ zaskoczenie' : (e.rez || 0).toFixed(2)}</span><span class="tl-time">${formatTs(e.time)}</span></div>
       <div class="tl-text">${isS ? e.text : e.reason}</div>
     </div>`;
           })
