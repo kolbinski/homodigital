@@ -1016,7 +1016,9 @@ Start from rez ~0.3.`;
           html += `<div class="topic-closed-msg">${closeMsg}</div>`;
         }
         cm.innerHTML = html;
-        cm.scrollTop = cm.scrollHeight;
+        requestAnimationFrame(() => {
+          cm.scrollTop = cm.scrollHeight;
+        });
 
         const ta = document.getElementById('chatInput');
         ta.placeholder = t().chatPlaceholder;
