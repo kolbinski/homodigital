@@ -357,8 +357,18 @@
         overflow: auto;
       }
       .chat-textarea:disabled {
-        opacity: 0.4;
+        color: #666;
+        background: #111;
         cursor: not-allowed;
+      }
+      .topic-closed-msg {
+        text-align: center;
+        padding: 1rem 0;
+        color: var(--text3);
+        font-size: 0.82rem;
+        font-style: italic;
+        border-top: 1px solid var(--border);
+        margin-top: 0.5rem;
       }
       .send-btn {
         padding: 0.65rem 1.3rem;
@@ -1002,7 +1012,7 @@ Start from rez ~0.3.`;
             lang === 'pl'
               ? 'Temat zamknięty. Wróć do tematyk, żeby wybrać kolejny.'
               : 'Topic closed. Go back to topics to pick another one.';
-          html += `<div style="text-align:center;padding:1rem 0;color:var(--text3);font-size:0.82rem;font-style:italic;border-top:1px solid var(--border);margin-top:0.5rem">${closeMsg}</div>`;
+          html += `<div class="topic-closed-msg">${closeMsg}</div>`;
         }
         cm.innerHTML = html;
         cm.scrollTop = cm.scrollHeight;
