@@ -903,7 +903,14 @@ Start from rez ~0.3.`;
 
       // RENDER
       function render() {
-        console.log('render');
+        window._rc = (window._rc || 0) + 1;
+        if (window._rc > 100) {
+          document.title = 'LOOP: ' + window._rc;
+          return;
+        }
+        setTimeout(() => {
+          window._rc = 0;
+        }, 100);
         document.querySelector('.header-title').textContent = t().title;
         document.getElementById('langBtn').textContent = t().langSwitch;
         document.getElementById('backBtn').textContent = t().back;
