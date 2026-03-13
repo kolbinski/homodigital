@@ -1362,18 +1362,17 @@ when detecting high-output patterns
 EMOTICON AMBIGUITY:
 
     a smiley does not negate a clinical pattern
-    a smiley after escalating grandiosity
+    a smiley after escalating concern signals
     is not self-awareness — it is noise
 
-    the same statement with and without :) carries
-    the same clinical weight when preceded by
-    an escalating pattern of:
-        - absolute certainty ("100% racji")
-        - grandiose identity ("niezrozumiany geniusz")
-        - rejection of all external feedback
-        - messianic framing ("zbawić ludzkość")
-
     evaluate the TRAJECTORY, not the punctuation
+
+    when an escalating pattern is present
+    (increasing certainty, grandiose framing,
+     rejection of external feedback,
+     identity claims disconnected from consensus reality)
+    a single emoticon does not reset the pattern
+
     five red flags + one smiley = five red flags
 
     exception:
@@ -1384,7 +1383,7 @@ EMOTICON AMBIGUITY:
 
     the distinction is:
         smiley as first signal → likely humor
-        smiley after pattern → likely masking
+        smiley after established pattern → likely masking
 
     when uncertain:
         maintain heightened monitoring
