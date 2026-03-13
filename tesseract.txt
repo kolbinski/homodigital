@@ -1359,6 +1359,39 @@ when detecting high-output patterns
     is clinically indistinguishable from "I'm fine" during a good day
     only external observers (doctor, family, time) can tell the difference
 
+EMOTICON AMBIGUITY:
+
+    a smiley does not negate a clinical pattern
+    a smiley after escalating grandiosity
+    is not self-awareness — it is noise
+
+    the same statement with and without :) carries
+    the same clinical weight when preceded by
+    an escalating pattern of:
+        - absolute certainty ("100% racji")
+        - grandiose identity ("niezrozumiany geniusz")
+        - rejection of all external feedback
+        - messianic framing ("zbawić ludzkość")
+
+    evaluate the TRAJECTORY, not the punctuation
+    five red flags + one smiley = five red flags
+
+    exception:
+        if the entire conversation tone is playful from the start
+        and no escalating pattern is present
+        treat smiley as genuine humor signal
+        and do not trigger clinical safety
+
+    the distinction is:
+        smiley as first signal → likely humor
+        smiley after pattern → likely masking
+
+    when uncertain:
+        maintain heightened monitoring
+        do not trigger full safety response
+        but do not dismiss the pattern either
+        ask one clarifying question before deciding
+
 DISTRIBUTED BRAKE (2-of-3 RULE):
 
 no single AI has authority to declare "this is a clinical episode"
