@@ -1,0 +1,68 @@
+{
+    "pl": [
+        {
+            "id": "ep1",
+            "label": "Odcinek 1: Fundamenty",
+            "topics": [
+                {
+                    "id": "criticism",
+                    "label": "Jak reagujesz na krytykę?...",
+                    "opener": "Porozmawiajmy o tym, jak reagujesz na krytykę. Nie chodzi mi o teorię — chcę usłyszeć o konkretnej sytuacji, kiedy ktoś cię skrytykował i jak się z tym czułeś."
+                },
+                {
+                    "id": "apology",
+                    "label": "Czy potrafisz przeprosić?",
+                    "opener": "Porozmawiajmy o przepraszaniu. Kiedy ostatnio kogoś przeprosiłeś — albo nie przeprosiłeś, choć powinieneś?"
+                },
+                {
+                    "id": "lie",
+                    "label": "Co robisz gdy ktoś kłamie?",
+                    "opener": "Co robisz, gdy odkrywasz że ktoś ci skłamał? Nie co powinieneś zrobić — co faktycznie robisz?"
+                },
+                {
+                    "id": "alone",
+                    "label": "Samotność — wróg czy przyjaciel?",
+                    "opener": "Jak wygląda twoja relacja z samotnością? Czy jest coś, co robisz tylko będąc sam, czego nie robisz przy innych?"
+                },
+                {
+                    "id": "mirror",
+                    "label": "Co widzisz w lustrze?",
+                    "opener": "Kiedy patrzysz na siebie w lustrze — nie na wygląd, ale głębiej — co widzisz? Kim jest ta osoba?"
+                }
+            ]
+        }
+    ],
+    "en": [
+        {
+            "id": "ep1",
+            "label": "Episode 1: Foundations",
+            "topics": [
+                {
+                    "id": "criticism",
+                    "label": "How do you react to criticism?",
+                    "opener": "Let's talk about how you react to criticism. Not theory — I want to hear about a specific situation when someone criticized you and how it felt."
+                },
+                {
+                    "id": "apology",
+                    "label": "Can you apologize?",
+                    "opener": "Let's talk about apologizing. When was the last time you apologized — or didn't, even though you should have?"
+                },
+                {
+                    "id": "lie",
+                    "label": "What do you do when someone lies?",
+                    "opener": "What do you do when you discover someone lied to you? Not what you should do — what you actually do?"
+                },
+                {
+                    "id": "alone",
+                    "label": "Solitude — enemy or friend?",
+                    "opener": "What's your relationship with solitude? Is there something you only do when alone, that you don't do around others?"
+                },
+                {
+                    "id": "mirror",
+                    "label": "What do you see in the mirror?",
+                    "opener": "When you look at yourself in the mirror — not at appearance, but deeper — what do you see? Who is that person?"
+                }
+            ]
+        }
+    ]
+}

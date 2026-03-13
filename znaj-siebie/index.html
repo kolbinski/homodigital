@@ -356,6 +356,10 @@
         line-height: 1.5;
         overflow: auto;
       }
+      .chat-textarea:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
       .send-btn {
         padding: 0.65rem 1.3rem;
         background: #2b4a6f;
@@ -692,44 +696,6 @@
           langSwitch: 'EN',
           continuing: '● kontynuacja',
           closePanel: 'Zamknij',
-          episodes: [
-            {
-              id: 'ep1',
-              label: 'Odcinek 1: Fundamenty',
-              topics: [
-                {
-                  id: 'criticism',
-                  label: 'Jak reagujesz na krytykę?',
-                  opener:
-                    'Porozmawiajmy o tym, jak reagujesz na krytykę. Nie chodzi mi o teorię — chcę usłyszeć o konkretnej sytuacji, kiedy ktoś cię skrytykował i jak się z tym czułeś.',
-                },
-                {
-                  id: 'apology',
-                  label: 'Czy potrafisz przeprosić?',
-                  opener:
-                    'Porozmawiajmy o przepraszaniu. Kiedy ostatnio kogoś przeprosiłeś — albo nie przeprosiłeś, choć powinieneś?',
-                },
-                {
-                  id: 'lie',
-                  label: 'Co robisz gdy ktoś kłamie?',
-                  opener:
-                    'Co robisz, gdy odkrywasz że ktoś ci skłamał? Nie co powinieneś zrobić — co faktycznie robisz?',
-                },
-                {
-                  id: 'alone',
-                  label: 'Samotność — wróg czy przyjaciel?',
-                  opener:
-                    'Jak wygląda twoja relacja z samotnością? Czy jest coś, co robisz tylko będąc sam, czego nie robisz przy innych?',
-                },
-                {
-                  id: 'mirror',
-                  label: 'Co widzisz w lustrze?',
-                  opener:
-                    'Kiedy patrzysz na siebie w lustrze — nie na wygląd, ale głębiej — co widzisz? Kim jest ta osoba?',
-                },
-              ],
-            },
-          ],
         },
         en: {
           title: 'Know Yourself',
@@ -747,44 +713,6 @@
           langSwitch: 'PL',
           continuing: '● continuing',
           closePanel: 'Close',
-          episodes: [
-            {
-              id: 'ep1',
-              label: 'Episode 1: Foundations',
-              topics: [
-                {
-                  id: 'criticism',
-                  label: 'How do you react to criticism?',
-                  opener:
-                    "Let's talk about how you react to criticism. Not theory — I want to hear about a specific situation when someone criticized you and how it felt.",
-                },
-                {
-                  id: 'apology',
-                  label: 'Can you apologize?',
-                  opener:
-                    "Let's talk about apologizing. When was the last time you apologized — or didn't, even though you should have?",
-                },
-                {
-                  id: 'lie',
-                  label: 'What do you do when someone lies?',
-                  opener:
-                    'What do you do when you discover someone lied to you? Not what you should do — what you actually do?',
-                },
-                {
-                  id: 'alone',
-                  label: 'Solitude — enemy or friend?',
-                  opener:
-                    "What's your relationship with solitude? Is there something you only do when alone, that you don't do around others?",
-                },
-                {
-                  id: 'mirror',
-                  label: 'What do you see in the mirror?',
-                  opener:
-                    'When you look at yourself in the mirror — not at appearance, but deeper — what do you see? Who is that person?',
-                },
-              ],
-            },
-          ],
         },
       };
 
@@ -800,6 +728,7 @@
       let entries = [];
       let closedTopics = new Set();
       let openEpisodes = new Set(['ep1']);
+      let episodesData = { pl: [], en: [] };
 
       function t() {
         return TEXTS[lang];
@@ -973,7 +902,7 @@
       function renderTopics() {
         const tv = document.getElementById('topicsView');
         let html = '';
-        t().episodes.forEach(ep => {
+        episodesData[lang].forEach(ep => {
           const isOpen = openEpisodes.has(ep.id);
           html += `<div style="margin-bottom:1rem"><button class="ep-toggle" onclick="toggleEp('${ep.id}')"><span class="ep-arrow ${isOpen ? 'open' : ''}">▶</span>${ep.label}</button>`;
           if (isOpen) {
@@ -1005,14 +934,28 @@
           )
           .join('');
         if (loading) html += `<div class="msg-thinking">${t().thinking}</div>`;
+        if (closedTopics.has(activeTopic) && !loading) {
+          const closeMsg =
+            lang === 'pl'
+              ? 'Temat zamknięty. Wróć do tematyk, żeby wybrać kolejny.'
+              : 'Topic closed. Go back to topics to pick another one.';
+          html += `<div style="text-align:center;padding:1rem 0;color:var(--text3);font-size:0.82rem;font-style:italic;border-top:1px solid var(--border);margin-top:0.5rem">${closeMsg}</div>`;
+        }
         cm.innerHTML = html;
         cm.scrollTop = cm.scrollHeight;
 
         const ta = document.getElementById('chatInput');
         ta.placeholder = t().chatPlaceholder;
         const sb = document.getElementById('sendBtn');
+        const topicIsClosed = closedTopics.has(activeTopic);
         sb.textContent = t().send;
-        sb.disabled = loading || !ta.value.trim();
+        sb.disabled = loading || !ta.value.trim() || topicIsClosed;
+        ta.disabled = topicIsClosed;
+        ta.placeholder = topicIsClosed
+          ? lang === 'pl'
+            ? 'Temat zamknięty'
+            : 'Topic closed'
+          : t().chatPlaceholder;
       }
 
       function escHtml(s) {
@@ -1044,7 +987,7 @@
       }
 
       function findTopic(topicId) {
-        for (const ep of t().episodes) {
+        for (const ep of episodesData[lang]) {
           const tp = ep.topics.find(x => x.id === topicId);
           if (tp) return tp;
         }
@@ -1216,8 +1159,17 @@
       }
 
       // Init
-      loadState();
-      render();
+      async function init() {
+        loadState();
+        try {
+          const res = await fetch('episodes.json');
+          episodesData = await res.json();
+        } catch (e) {
+          console.error('Failed to load episodes:', e);
+        }
+        render();
+      }
+      init();
     </script>
   </body>
 </html>
