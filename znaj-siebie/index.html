@@ -7,603 +7,193 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>Znaj Siebie — Homo Digital</title>
-    <meta
-      name="description"
-      content="Companion app do programu Znaj Siebie. Rozmawiaj z AI pod Tesseract Protocol i poznaj siebie głębiej."
-    />
-    <meta
-      name="keywords"
-      content="Znaj Siebie, Tesseract Protocol, AI, samopoznanie, Homo Digital, rezonans"
-    />
-    <meta name="author" content="Krzysztof Olbiński" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://homodigital.io/znaj-siebie/" />
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="icon" type="image/png" href="../favicon.png" />
-    <link rel="shortcut icon" href="../favicon.png" />
-    <link rel="apple-touch-icon" href="../favicon.png" />
-    <meta name="theme-color" content="#0c0c0f" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Znaj Siebie — Poznaj siebie w rozmowie z AI"
-    />
-    <meta
-      property="og:description"
-      content="Companion app do programu Znaj Siebie. AI pod Tesseract Protocol pomaga ci zobaczyć siebie wyraźniej."
-    />
-    <meta property="og:url" content="https://homodigital.io/znaj-siebie/" />
-    <meta property="og:image" content="https://homodigital.io/og-image.png" />
-    <meta property="og:site_name" content="Homo Digital" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Znaj Siebie — Homo Digital" />
-    <meta name="twitter:description" content="Rozmawiaj z AI. Poznaj siebie." />
-    <meta name="twitter:image" content="https://homodigital.io/og-image.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      :root {
-        --bg: #0c0c0f;
-        --bg2: #111114;
-        --bg3: #0e0e12;
-        --surface: #16161a;
-        --surface2: #18181e;
-        --surface3: #14141a;
-        --border: #252528;
-        --border2: #2e2e35;
-        --border3: #1e1e22;
-        --text: #e0ddd5;
-        --text2: #bbb;
-        --text3: #999;
-        --text4: #777;
-        --gold: #c4b99a;
-        --green: #2b5c3f;
-        --green2: #3db86a;
-        --green3: #5a9e5a;
-        --yellow: #b8a83d;
-        --orange: #b8783d;
-        --red: #8e4444;
-        --surprise-bg: #1e1c10;
-        --surprise-border: #c4b44a;
-        --user-bg: #1a2230;
-        --user-border: #2b4a6f44;
-        --user-text: #a8c4e0;
-        --f:
-          'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        --fd: 'Georgia', 'Times New Roman', serif;
-      }
-      html,
-      body {
-        height: 100%;
-        overflow: hidden;
-      }
-      body {
-        font-family: var(--f);
-        color: var(--text);
-        background: var(--bg);
-      }
-      #app {
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100%;
+      overflow: hidden;
+      font-family:
+        'DM Sans',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        sans-serif;
+      color: #e0ddd5;
+      background: #0c0c0f;
+    "
+  >
+    <div
+      id="app"
+      style="
         height: 100vh;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         position: relative;
-      }
-      .header {
-        padding: 0.65rem 1.25rem;
-        border-bottom: 1px solid var(--border);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--bg2);
-        flex-shrink: 0;
-        z-index: 10;
-      }
-      .header-title {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--gold);
-        font-family: var(--fd);
-      }
-      .header-right {
-        display: flex;
-        gap: 0.6rem;
-        align-items: center;
-      }
-      .lang-btn {
-        padding: 0.2rem 0.5rem;
-        background: transparent;
-        color: var(--text2);
-        border: 1px solid #444;
-        border-radius: 3px;
-        font-size: 0.7rem;
-        cursor: pointer;
-        font-family: var(--f);
-        letter-spacing: 0.08em;
-        font-weight: 600;
-      }
-      .rez-badge {
-        display: none;
-        align-items: center;
-        gap: 0.35rem;
-        padding: 0.2rem 0.6rem;
-        border-radius: 20px;
-        cursor: pointer;
-        border: none;
-        outline: none;
-      }
-      .rez-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-      }
-      .rez-badge-num {
-        font-size: 0.82rem;
-        font-family: monospace;
-        font-weight: 600;
-      }
-      .main {
-        display: flex;
-        flex: 1;
-        min-height: 0;
-      }
-      .left {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-      }
-      .topics-view {
-        padding: 1.5rem;
-        overflow-y: auto;
-        flex: 1;
-        max-width: 720px;
-        margin: 0 auto;
-        width: 100%;
-      }
-      .ep-toggle {
-        width: 100%;
-        text-align: left;
-        padding: 0.6rem 0;
-        background: transparent;
-        border: none;
-        color: var(--gold);
-        font-family: var(--f);
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        border-bottom: 1px solid var(--border);
-        margin-bottom: 0.75rem;
-      }
-      .ep-arrow {
-        font-size: 0.7rem;
-        display: inline-block;
-      }
-      .ep-arrow.open {
-        transform: rotate(90deg);
-      }
-      .ep-topics {
-        display: flex;
-        flex-direction: column;
-        gap: 0.45rem;
-      }
-      .topic-btn {
-        padding: 0.8rem 1rem;
-        background: var(--surface);
-        color: var(--text);
-        border: 1px solid var(--border2);
-        border-radius: 8px;
-        text-align: left;
-        cursor: pointer;
-        font-family: var(--f);
-        font-size: 0.92rem;
-        line-height: 1.5;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .topic-btn.closed {
-        background: #111;
-        color: var(--text3);
-        border-color: var(--border);
-      }
-      .topic-btn .check {
-        color: var(--green2);
-        font-size: 0.9rem;
-        flex-shrink: 0;
-      }
-      .topic-btn .cont {
-        font-size: 0.7rem;
-        color: #aaa;
-        flex-shrink: 0;
-      }
-      .free-section {
-        margin-top: 0.5rem;
-        padding-top: 1rem;
-        border-top: 1px solid var(--border);
-      }
-      .free-label {
-        font-size: 0.82rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 0.75rem;
-        font-weight: 600;
-      }
-      .free-input {
-        width: 100%;
-        padding: 0.7rem 0.9rem;
-        background: var(--surface);
-        color: var(--text);
-        border: 1px solid var(--border2);
-        border-radius: 8px;
-        font-family: var(--f);
-        font-size: 0.9rem;
-        outline: none;
-      }
-      .chat-header {
-        padding: 0.45rem 1.1rem;
-        border-bottom: 1px solid var(--border3);
-        flex-shrink: 0;
-      }
-      .back-btn {
-        background: transparent;
-        border: none;
-        color: var(--text2);
-        cursor: pointer;
-        font-family: var(--f);
-        font-size: 0.82rem;
-        padding: 0.25rem 0;
-      }
-      .chat-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 1rem 1.25rem;
-        max-width: 720px;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-      .msg {
-        max-width: 82%;
-        border-radius: 16px;
-      }
-      .msg.user {
-        align-self: flex-end;
-      }
-      .msg.ai {
-        align-self: flex-start;
-      }
-      .msg-bubble {
-        padding: 0.7rem 1rem;
-        font-size: 0.9rem;
-        line-height: 1.7;
-        border-radius: 14px 14px 14px 3px;
-      }
-      .msg.user .msg-bubble {
-        background: var(--user-bg);
-        border: 1px solid var(--user-border);
-        color: var(--user-text);
-        border-radius: 14px 14px 3px 14px;
-      }
-      .msg.ai .msg-bubble {
-        background: var(--surface2);
-        border: 1px solid #2e2e38;
-        color: var(--text);
-      }
-      /* --- */
-      .msg-thinking {
-        align-self: flex-start;
-        padding: 0.7rem 1rem;
-        background: var(--surface2);
-        border: 1px solid #2e2e38;
-        border-radius: 14px 14px 14px 3px;
-        font-size: 0.85rem;
-        color: var(--text3);
-      }
-      /* === */
-      /* .chat-input-bar {
-        padding: 0.6rem 1rem;
-        max-width: 720px;
-        margin: 0 auto;
-        width: 100%;
-        border-top: 1px solid var(--border3);
-        display: flex;
-        gap: 0.5rem;
-        flex-shrink: 0;
-        align-items: flex-end;
-      }
-      .chat-textarea {
-        flex: 1;
-        padding: 0.65rem 0.9rem;
-        background: #1c1c24;
-        color: var(--text);
-        border: 1px solid #3a3a45;
-        border-radius: 8px;
-        font-family: var(--f);
-        font-size: 0.9rem;
-        outline: none;
-        resize: none;
-        max-height: 120px;
-        line-height: 1.5;
-        overflow: auto;
-      }
-      .chat-textarea:disabled {
-        color: #666;
-        background: #111;
-        cursor: not-allowed;
-      }
-      .topic-closed-msg {
-        text-align: center;
-        padding: 1rem 0;
-        color: var(--text3);
-        font-size: 0.82rem;
-        font-style: italic;
-        border-top: 1px solid var(--border);
-        margin-top: 0.5rem;
-      } */
-      /* --- */
-      .send-btn {
-        padding: 0.65rem 1.3rem;
-        background: #2b4a6f;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        font-family: var(--f);
-        font-size: 0.85rem;
-        font-weight: 600;
-        cursor: pointer;
-        flex-shrink: 0;
-      }
-      .send-btn:disabled {
-        background: var(--border);
-        cursor: default;
-        color: #666;
-      }
-      .right {
-        width: 290px;
-        border-left: 1px solid var(--border3);
-        background: var(--bg3);
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
-        min-height: 0;
-      }
-      .rez-display {
-        padding: 1rem 1rem 0.75rem;
-        flex-shrink: 0;
-      }
-      .rez-section-label {
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--text3);
-        font-weight: 600;
-      }
-      .rez-big {
-        font-size: 2.8rem;
-        font-family: monospace;
-        font-weight: bold;
-        line-height: 1;
-        text-align: center;
-        padding: 0.5rem 0;
-      }
-      .rez-label-text {
-        font-size: 0.78rem;
-        font-weight: 500;
-        text-align: center;
-        margin-top: 0.35rem;
-      }
-      .rez-bar-track {
-        height: 4px;
-        background: #1e1e24;
-        border-radius: 2px;
-        overflow: hidden;
-        margin-top: 0.5rem;
-      }
-      .rez-bar-fill {
-        height: 100%;
-        border-radius: 2px;
-      }
-      .timeline-scroll {
-        flex: 1;
-        overflow-y: auto;
-        padding: 0.5rem 1rem 1rem;
-        min-height: 0;
-      }
-      .timeline-sticky {
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--text3);
-        font-weight: 600;
-        position: sticky;
-        top: 0;
-        background: var(--bg3);
-        padding-bottom: 0.4rem;
-        padding-top: 0.1rem;
-        z-index: 2;
-        margin-left: -1rem;
-        margin-right: -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      .tl-entries {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-      }
-      .tl-entry {
-        padding: 0.4rem 0.55rem;
-        border-radius: 0 4px 4px 0;
-        font-size: 0.73rem;
-        cursor: pointer;
-        border-left: 2px solid;
-      }
-      .tl-entry.rez-entry {
-        background: var(--surface3);
-      }
-      .tl-entry.surprise-entry {
-        background: var(--surprise-bg);
-        border-left-color: var(--surprise-border);
-      }
-      .tl-top {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.1rem;
-      }
-      .tl-rez-num {
-        font-family: monospace;
-        font-weight: 600;
-      }
-      .tl-surprise-label {
-        color: var(--surprise-border);
-        font-weight: 600;
-      }
-      .tl-time {
-        color: #888;
-        font-size: 0.68rem;
-      }
-      .tl-text {
-        color: #ddd;
-        line-height: 1.4;
-      }
-      .tl-empty {
-        font-size: 0.78rem;
-        color: var(--text4);
-        font-style: italic;
-        line-height: 1.5;
-      }
-      .rez-overlay {
-        position: absolute;
-        inset: 0;
-        z-index: 50;
-        background: var(--bg);
-        display: none;
-        flex-direction: column;
-      }
-      .rez-overlay.open {
-        display: flex;
-      }
-      .rez-overlay .rez-overlay-header {
-        padding: 0.65rem 1.25rem;
-        border-bottom: 1px solid var(--border);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-shrink: 0;
-      }
-      .rez-overlay .rez-overlay-title {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--gold);
-      }
-      .close-btn {
-        padding: 0.3rem 0.7rem;
-        background: transparent;
-        color: var(--text2);
-        border: 1px solid #444;
-        border-radius: 4px;
-        font-size: 0.78rem;
-        cursor: pointer;
-        font-family: var(--f);
-      }
-      .rez-overlay .rez-display {
-        padding: 1.5rem 1.25rem 1rem;
-      }
-      .rez-overlay .rez-big {
-        font-size: 3.5rem;
-      }
-      .rez-overlay .timeline-scroll {
-        padding: 0.5rem 1.25rem 1.5rem;
-      }
-      .rez-overlay .timeline-sticky {
-        background: var(--bg);
-        margin-left: -1.25rem;
-        margin-right: -1.25rem;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-      }
-      @media (max-width: 767px) {
-        .right {
-          display: none;
-        }
-        .rez-badge {
+      "
+    >
+      <div
+        style="
+          padding: 0.65rem 1.25rem;
+          border-bottom: 1px solid #252528;
           display: flex;
-        }
-        .topics-view {
-          padding: 1.25rem 1rem;
-        }
-        .chat-messages {
-          padding: 0.75rem 0.75rem;
-        }
-        .chat-input-bar {
-          padding: 0.6rem 0.75rem;
-        }
-        .msg {
-          max-width: 90%;
-        }
-        .msg-bubble {
-          font-size: 0.88rem;
-        }
-        .topic-btn {
-          font-size: 0.88rem;
-        }
-        .send-btn {
-          padding: 0.65rem 1rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app">
-      <div class="header">
-        <span class="header-title">Znaj Siebie</span>
-        <div class="header-right">
-          <button class="rez-badge" id="rezBadge" onclick="openRezPanel()">
-            <div class="rez-dot" id="rezBadgeDot"></div>
-            <span class="rez-badge-num" id="rezBadgeNum">0.30</span>
+          justify-content: space-between;
+          align-items: center;
+          background: #111114;
+          flex-shrink: 0;
+          z-index: 10;
+        "
+      >
+        <span
+          id="headerTitle"
+          style="
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #c4b99a;
+            font-family: Georgia, 'Times New Roman', serif;
+          "
+          >Znaj Siebie</span
+        >
+        <div style="display: flex; gap: 0.6rem; align-items: center">
+          <button
+            id="rezBadge"
+            onclick="openRezPanel()"
+            style="
+              display: none;
+              align-items: center;
+              gap: 0.35rem;
+              padding: 0.2rem 0.6rem;
+              border-radius: 20px;
+              cursor: pointer;
+              border: none;
+              outline: none;
+              background: #b8783d22;
+              font-family: 'DM Sans', sans-serif;
+            "
+          >
+            <div
+              id="rezBadgeDot"
+              style="
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #b8783d;
+              "
+            ></div>
+            <span
+              id="rezBadgeNum"
+              style="
+                font-size: 0.82rem;
+                font-family: monospace;
+                font-weight: 600;
+                color: #b8783d;
+              "
+              >0.30</span
+            >
           </button>
-          <button class="lang-btn" id="langBtn" onclick="toggleLang()">
+          <button
+            id="langBtn"
+            onclick="toggleLang()"
+            style="
+              padding: 0.2rem 0.5rem;
+              background: transparent;
+              color: #bbb;
+              border: 1px solid #444;
+              border-radius: 3px;
+              font-size: 0.7rem;
+              cursor: pointer;
+              font-family: 'DM Sans', sans-serif;
+              letter-spacing: 0.08em;
+              font-weight: 600;
+            "
+          >
             EN
           </button>
         </div>
       </div>
-      <div class="rez-overlay" id="rezOverlay">
-        <div class="rez-overlay-header">
-          <span class="rez-overlay-title" id="rezOverlayTitle"
+
+      <div
+        id="rezOverlay"
+        style="
+          position: absolute;
+          inset: 0;
+          z-index: 50;
+          background: #0c0c0f;
+          display: none;
+          flex-direction: column;
+        "
+      >
+        <div
+          style="
+            padding: 0.65rem 1.25rem;
+            border-bottom: 1px solid #252528;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+          "
+        >
+          <span
+            id="rezOverlayTitle"
+            style="font-size: 0.85rem; font-weight: 600; color: #c4b99a"
             >Twój rezonans</span
           >
           <button
-            class="close-btn"
             id="closeOverlayBtn"
             onclick="closeRezPanel()"
+            style="
+              padding: 0.3rem 0.7rem;
+              background: transparent;
+              color: #bbb;
+              border: 1px solid #444;
+              border-radius: 4px;
+              font-size: 0.78rem;
+              cursor: pointer;
+              font-family: 'DM Sans', sans-serif;
+            "
           >
             Zamknij
           </button>
         </div>
-        <div class="rez-display" id="rezDisplayMobile"></div>
-        <div class="timeline-scroll" id="timelineScrollMobile"></div>
+        <div
+          id="rezDisplayMobile"
+          style="padding: 1.5rem 1.25rem 1rem; flex-shrink: 0"
+        ></div>
+        <div
+          id="timelineScrollMobile"
+          style="
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.5rem 1.25rem 1.5rem;
+            min-height: 0;
+          "
+        ></div>
       </div>
-      <div class="main">
-        <div class="left">
-          <div class="topics-view" id="topicsView"></div>
+
+      <div style="display: flex; flex: 1; min-height: 0">
+        <div
+          style="flex: 1; display: flex; flex-direction: column; min-width: 0"
+        >
+          <div
+            id="topicsView"
+            style="
+              padding: 1.5rem;
+              overflow-y: auto;
+              flex: 1;
+              max-width: 720px;
+              margin: 0 auto;
+              width: 100%;
+            "
+          ></div>
+
           <div
             id="chatView"
             style="
@@ -613,34 +203,150 @@
               min-height: 0;
             "
           >
-            <div class="chat-header">
-              <button class="back-btn" id="backBtn" onclick="goBack()">
+            <div
+              style="
+                padding: 0.45rem 1.1rem;
+                border-bottom: 1px solid #1e1e22;
+                flex-shrink: 0;
+              "
+            >
+              <button
+                id="backBtn"
+                onclick="goBack()"
+                style="
+                  background: transparent;
+                  border: none;
+                  color: #bbb;
+                  cursor: pointer;
+                  font-family: 'DM Sans', sans-serif;
+                  font-size: 0.82rem;
+                  padding: 0.25rem 0;
+                "
+              >
                 ← Wróć do tematyk
               </button>
             </div>
-            <div class="chat-messages" id="chatMessages"></div>
-            <div class="chat-input-bar">
+            <div
+              id="chatMessages"
+              style="
+                flex: 1;
+                overflow-y: auto;
+                padding: 1rem 1.25rem;
+                max-width: 720px;
+                margin: 0 auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+              "
+            ></div>
+            <div
+              style="
+                padding: 0.6rem 1rem;
+                max-width: 720px;
+                margin: 0 auto;
+                width: 100%;
+                border-top: 1px solid #1e1e22;
+                display: flex;
+                gap: 0.5rem;
+                flex-shrink: 0;
+                align-items: flex-end;
+              "
+            >
               <textarea
-                class="chat-textarea"
                 id="chatInput"
                 rows="1"
                 placeholder="Twoja odpowiedź..."
+                style="
+                  flex: 1;
+                  padding: 0.65rem 0.9rem;
+                  background: #1c1c24;
+                  color: #e0ddd5;
+                  border: 1px solid #3a3a45;
+                  border-radius: 8px;
+                  font-family: 'DM Sans', sans-serif;
+                  font-size: 0.9rem;
+                  outline: none;
+                  resize: none;
+                  max-height: 120px;
+                  line-height: 1.5;
+                  overflow: auto;
+                "
               ></textarea>
-              <button class="send-btn" id="sendBtn" disabled onclick="doSend()">
+              <button
+                id="sendBtn"
+                disabled
+                onclick="doSend()"
+                style="
+                  padding: 0.65rem 1.3rem;
+                  background: #252528;
+                  color: #666;
+                  border: none;
+                  border-radius: 8px;
+                  font-family: 'DM Sans', sans-serif;
+                  font-size: 0.85rem;
+                  font-weight: 600;
+                  cursor: pointer;
+                  flex-shrink: 0;
+                "
+              >
                 Wyślij
               </button>
             </div>
           </div>
         </div>
-        <div class="right" id="rightPanel">
-          <div class="rez-display" id="rezDisplayDesktop"></div>
-          <div class="timeline-scroll" id="timelineScrollDesktop">
-            <div class="timeline-sticky" id="tlStickyDesktop">Timeline</div>
-            <div class="tl-entries" id="tlEntriesDesktop"></div>
+
+        <div
+          id="rightPanel"
+          style="
+            width: 290px;
+            border-left: 1px solid #1e1e22;
+            background: #0e0e12;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            min-height: 0;
+          "
+        >
+          <div
+            id="rezDisplayDesktop"
+            style="padding: 1rem 1rem 0.75rem; flex-shrink: 0"
+          ></div>
+          <div
+            style="
+              flex: 1;
+              overflow-y: auto;
+              padding: 0.5rem 1rem 1rem;
+              min-height: 0;
+            "
+          >
+            <div
+              id="tlStickyDesktop"
+              style="
+                font-size: 0.65rem;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: #999;
+                font-weight: 600;
+                position: sticky;
+                top: 0;
+                background: #0e0e12;
+                padding-bottom: 0.4rem;
+                padding-top: 0.1rem;
+                z-index: 2;
+              "
+            >
+              Timeline
+            </div>
+            <div
+              id="tlEntriesDesktop"
+              style="display: flex; flex-direction: column; gap: 0.3rem"
+            ></div>
           </div>
         </div>
       </div>
     </div>
+
     <script>
       const API_URL = 'https://homodigital-api.olbik80.workers.dev/';
       const TEXTS = {
@@ -802,14 +508,15 @@
           });
         if (parsed.topic_closed) closedTopics.add(topicId);
       }
+
       function render() {
-        document.querySelector('.header-title').textContent = t().title;
+        document.getElementById('headerTitle').textContent = t().title;
         document.getElementById('langBtn').textContent = t().langSwitch;
         document.getElementById('backBtn').textContent = t().back;
         document.getElementById('rezOverlayTitle').textContent = t().rezPanel;
         document.getElementById('closeOverlayBtn').textContent = t().closePanel;
         document.getElementById('sendBtn').textContent = t().send;
-        const badge = document.getElementById('rezBadge');
+        var badge = document.getElementById('rezBadge');
         badge.style.background = rc(rez) + '22';
         badge.style.border = '1px solid ' + rc(rez) + '44';
         document.getElementById('rezBadgeDot').style.background = rc(rez);
@@ -829,101 +536,124 @@
           renderChat();
         }
       }
+
       function renderRezDisplay(id) {
-        const el = document.getElementById(id);
+        var el = document.getElementById(id);
         el.innerHTML =
-          '<div class="rez-section-label" style="margin-bottom:0.5rem">' +
+          '<div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#999;font-weight:600;margin-bottom:0.5rem">' +
           t().rezPanel +
-          '</div><div class="rez-big" style="color:' +
+          '</div><div style="font-size:2.8rem;font-family:monospace;font-weight:bold;line-height:1;text-align:center;padding:0.5rem 0;color:' +
           rc(rez) +
           '">' +
           rez.toFixed(2) +
-          '</div><div class="rez-label-text" style="color:' +
+          '</div><div style="font-size:0.78rem;font-weight:500;text-align:center;margin-top:0.35rem;color:' +
           rc(rez) +
           '">' +
           rl(rez) +
-          '</div><div class="rez-bar-track"><div class="rez-bar-fill" style="width:' +
+          '</div><div style="height:4px;background:#1e1e24;border-radius:2px;overflow:hidden;margin-top:0.5rem"><div style="height:100%;border-radius:2px;width:' +
           Math.min(rez / 0.95, 1) * 100 +
           '%;background:' +
           rc(rez) +
           '"></div></div>';
       }
+
       function renderTimeline(entriesId, stickyId) {
-        const sEl = document.getElementById(stickyId);
+        var sEl = document.getElementById(stickyId);
         if (sEl) sEl.textContent = t().timeline;
-        const el = document.getElementById(entriesId);
+        var el = document.getElementById(entriesId);
         if (!el) return;
         if (entries.length === 0) {
-          el.innerHTML = '<div class="tl-empty">' + t().noEntries + '</div>';
+          el.innerHTML =
+            '<div style="font-size:0.78rem;color:#777;font-style:italic;line-height:1.5">' +
+            t().noEntries +
+            '</div>';
           return;
         }
         el.innerHTML = entries
           .map(function (e) {
-            const isS = e.type === 'surprise';
+            var isS = e.type === 'surprise';
+            var borderColor = isS ? '#c4b44a' : rc(e.rez || 0);
+            var bg = isS ? '#1e1c10' : '#14141a';
+            var labelStyle = isS
+              ? 'color:#c4b44a;font-weight:600'
+              : 'font-family:monospace;font-weight:600;color:' + rc(e.rez);
+            var labelText = isS ? '✦ zaskoczenie' : (e.rez || 0).toFixed(2);
             return (
-              '<div class="tl-entry ' +
-              (isS ? 'surprise-entry' : 'rez-entry') +
-              '" style="border-left-color:' +
-              (isS ? 'var(--surprise-border)' : rc(e.rez || 0)) +
+              '<div style="padding:0.4rem 0.55rem;border-radius:0 4px 4px 0;font-size:0.73rem;cursor:pointer;border-left:2px solid ' +
+              borderColor +
+              ';background:' +
+              bg +
               '" onclick="scrollToMsg(' +
               e.msgId +
               ",'" +
               e.topicId +
-              '\')"><div class="tl-top"><span class="' +
-              (isS ? 'tl-surprise-label' : 'tl-rez-num') +
-              '" style="' +
-              (isS ? '' : 'color:' + rc(e.rez)) +
+              '\')"><div style="display:flex;justify-content:space-between;margin-bottom:0.1rem"><span style="' +
+              labelStyle +
               '">' +
-              (isS ? '✦ zaskoczenie' : (e.rez || 0).toFixed(2)) +
-              '</span><span class="tl-time">' +
+              labelText +
+              '</span><span style="color:#888;font-size:0.68rem">' +
               formatTs(e.time) +
-              '</span></div><div class="tl-text">' +
+              '</span></div><div style="color:#ddd;line-height:1.4">' +
               (isS ? e.text : e.reason) +
               '</div></div>'
             );
           })
           .join('');
       }
+
       function renderTimelineMobile() {
         var container = document.getElementById('timelineScrollMobile');
         container.innerHTML =
-          '<div class="timeline-sticky" style="background:var(--bg)">' +
+          '<div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#999;font-weight:600;position:sticky;top:0;background:#0c0c0f;padding-bottom:0.4rem;padding-top:0.1rem;z-index:2">' +
           t().timeline +
-          '</div><div class="tl-entries" id="tlEntriesMobile"></div>';
+          '</div><div id="tlEntriesMobile" style="display:flex;flex-direction:column;gap:0.3rem"></div>';
         renderTimeline('tlEntriesMobile', null);
       }
+
       function renderTopics() {
-        const tv = document.getElementById('topicsView');
-        let html = '';
+        var tv = document.getElementById('topicsView');
+        var html = '';
         episodesData[lang].forEach(function (ep) {
-          const isOpen = openEpisodes.has(ep.id);
+          var isOpen = openEpisodes.has(ep.id);
           html +=
-            '<div style="margin-bottom:1rem"><button class="ep-toggle" onclick="toggleEp(\'' +
+            '<div style="margin-bottom:1rem"><button onclick="toggleEp(\'' +
             ep.id +
-            '\')"><span class="ep-arrow ' +
-            (isOpen ? 'open' : '') +
+            '\')" style="width:100%;text-align:left;padding:0.6rem 0;background:transparent;border:none;color:#c4b99a;font-family:\'DM Sans\',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:0.5rem;border-bottom:1px solid #252528;margin-bottom:0.75rem"><span style="font-size:0.7rem;display:inline-block;' +
+            (isOpen ? 'transform:rotate(90deg)' : '') +
             '">▶</span>' +
             ep.label +
             '</button>';
           if (isOpen) {
-            html += '<div class="ep-topics">';
+            html +=
+              '<div style="display:flex;flex-direction:column;gap:0.45rem">';
             ep.topics.forEach(function (tp) {
-              const isClosed = closedTopics.has(tp.id),
+              var isClosed = closedTopics.has(tp.id),
                 hasConvo = convos[tp.id] && convos[tp.id].length > 0;
+              var btnBg = isClosed ? '#111' : '#16161a';
+              var btnColor = isClosed ? '#999' : '#e0ddd5';
+              var btnBorder = isClosed ? '#252528' : '#2e2e35';
               html +=
-                '<button class="topic-btn ' +
-                (isClosed ? 'closed' : '') +
-                '" onclick="openTopic(\'' +
+                '<button onclick="openTopic(\'' +
                 tp.id +
-                '\')">' +
+                '\')" style="padding:0.8rem 1rem;background:' +
+                btnBg +
+                ';color:' +
+                btnColor +
+                ';border:1px solid ' +
+                btnBorder +
+                ";border-radius:8px;text-align:left;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.92rem;line-height:1.5;display:flex;align-items:center;gap:0.5rem\">" +
                 (isClosed
-                  ? '<span class="check">' + t().closed + '</span>'
+                  ? '<span style="color:#3db86a;font-size:0.9rem;flex-shrink:0">' +
+                    t().closed +
+                    '</span>'
                   : '') +
                 '<span style="flex:1">' +
                 tp.label +
                 '</span>' +
                 (hasConvo && !isClosed
-                  ? '<span class="cont">' + t().continuing + '</span>'
+                  ? '<span style="font-size:0.7rem;color:#aaa;flex-shrink:0">' +
+                    t().continuing +
+                    '</span>'
                   : '') +
                 '</button>';
             });
@@ -932,57 +662,91 @@
           html += '</div>';
         });
         html +=
-          '<div class="free-section"><div class="free-label">' +
+          '<div style="margin-top:0.5rem;padding-top:1rem;border-top:1px solid #252528"><div style="font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;color:#c4b99a;margin-bottom:0.75rem;font-weight:600">' +
           t().free +
-          '</div><input class="free-input" id="freeInput" placeholder="' +
+          '</div><input id="freeInput" placeholder="' +
           t().freePlaceholder +
-          "\" onkeydown=\"if(event.key==='Enter'&&this.value.trim()){startFree(this.value);this.value='';}\" /></div>";
+          "\" style=\"width:100%;padding:0.7rem 0.9rem;background:#16161a;color:#e0ddd5;border:1px solid #2e2e35;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none\" onkeydown=\"if(event.key==='Enter'&&this.value.trim()){startFree(this.value);this.value='';}\" /></div>";
         tv.innerHTML = html;
       }
+
       function renderChat() {
-        const msgs = convos[activeTopic] || [],
+        var msgs = convos[activeTopic] || [],
           cm = document.getElementById('chatMessages'),
           topicIsClosed = closedTopics.has(activeTopic);
-        let html = msgs
+        var html = msgs
           .map(function (m) {
+            var isUser = m.role === 'user';
+            var align = isUser ? 'flex-end' : 'flex-start';
+            var bubbleBg = isUser ? '#1a2230' : '#18181e';
+            var bubbleBorder = isUser
+              ? '1px solid #2b4a6f44'
+              : '1px solid #2e2e38';
+            var bubbleColor = isUser ? '#a8c4e0' : '#e0ddd5';
+            var bubbleRadius = isUser
+              ? '14px 14px 3px 14px'
+              : '14px 14px 14px 3px';
             return (
-              '<div class="msg ' +
-              (m.role === 'user' ? 'user' : 'ai') +
-              '" id="msg-' +
+              '<div id="msg-' +
               m.id +
-              '"><div class="msg-bubble">' +
+              '" style="max-width:82%;border-radius:16px;align-self:' +
+              align +
+              '"><div style="padding:0.7rem 1rem;font-size:0.9rem;line-height:1.7;border-radius:' +
+              bubbleRadius +
+              ';background:' +
+              bubbleBg +
+              ';border:' +
+              bubbleBorder +
+              ';color:' +
+              bubbleColor +
+              '">' +
               escHtml(m.text) +
               '</div></div>'
             );
           })
           .join('');
         if (loading)
-          html += '<div class="msg-thinking">' + t().thinking + '</div>';
+          html +=
+            '<div style="align-self:flex-start;padding:0.7rem 1rem;background:#18181e;border:1px solid #2e2e38;border-radius:14px 14px 14px 3px;font-size:0.85rem;color:#999">' +
+            t().thinking +
+            '</div>';
         if (topicIsClosed && !loading) {
-          const closeMsg =
+          var closeMsg =
             lang === 'pl'
               ? 'Temat zamknięty. Wróć do tematyk, żeby wybrać kolejny.'
               : 'Topic closed. Go back to topics to pick another one.';
-          html += '<div class="topic-closed-msg">' + closeMsg + '</div>';
+          html +=
+            '<div style="text-align:center;padding:1rem 0;color:#999;font-size:0.82rem;font-style:italic;border-top:1px solid #252528;margin-top:0.5rem">' +
+            closeMsg +
+            '</div>';
         }
         cm.innerHTML = html;
         requestAnimationFrame(function () {
           cm.scrollTop = cm.scrollHeight;
         });
-        const ta = document.getElementById('chatInput'),
+        var ta = document.getElementById('chatInput'),
           sb = document.getElementById('sendBtn');
         sb.textContent = t().send;
-        sb.disabled = loading || !ta.value.trim() || topicIsClosed;
+        var dis = loading || !ta.value.trim() || topicIsClosed;
+        sb.disabled = dis;
+        sb.style.background = dis ? '#252528' : '#2b4a6f';
+        sb.style.color = dis ? '#666' : '#fff';
+        sb.style.cursor = dis ? 'default' : 'pointer';
         if (topicIsClosed) {
           ta.disabled = true;
+          ta.style.color = '#666';
+          ta.style.background = '#111';
           ta.placeholder = lang === 'pl' ? 'Temat zamknięty' : 'Topic closed';
         } else {
           ta.disabled = false;
+          ta.style.color = '#e0ddd5';
+          ta.style.background = '#1c1c24';
           ta.placeholder = t().chatPlaceholder;
         }
       }
+
       function escHtml(s) {
-        const d = document.createElement('div');
+        var d = document.createElement('div');
         d.textContent = s;
         return d.innerHTML;
       }
@@ -1001,17 +765,17 @@
         render();
       }
       function openRezPanel() {
-        document.getElementById('rezOverlay').classList.add('open');
+        document.getElementById('rezOverlay').style.display = 'flex';
       }
       function closeRezPanel() {
-        document.getElementById('rezOverlay').classList.remove('open');
+        document.getElementById('rezOverlay').style.display = 'none';
       }
       function findTopic(topicId) {
-        for (const ep of episodesData[lang]) {
-          const tp = ep.topics.find(function (x) {
-            return x.id === topicId;
-          });
-          if (tp) return tp;
+        for (var i = 0; i < episodesData[lang].length; i++) {
+          var ep = episodesData[lang][i];
+          for (var j = 0; j < ep.topics.length; j++) {
+            if (ep.topics[j].id === topicId) return ep.topics[j];
+          }
         }
         return null;
       }
@@ -1020,12 +784,12 @@
         view = 'chat';
         render();
         if (convos[topicId] && convos[topicId].length) return;
-        const tp = findTopic(topicId);
+        var tp = findTopic(topicId);
         if (!tp) return;
         loading = true;
         render();
         try {
-          const prompt =
+          var prompt =
             lang === 'pl'
               ? 'Tematyka rozmowy: "' +
                 tp.opener +
@@ -1033,11 +797,11 @@
               : 'Conversation topic: "' +
                 tp.opener +
                 '". Start the conversation — greet briefly and ask the viewer your first question.';
-          const raw = await callAPI([{ role: 'user', content: prompt }]);
-          const parsed = parseAI(raw);
-          const aId = Date.now();
+          var raw = await callAPI([{ role: 'user', content: prompt }]);
+          var parsed = parseAI(raw);
+          var aId = Date.now();
           convos[topicId] = [
-            { role: 'assistant', text: parsed.response, raw, id: aId },
+            { role: 'assistant', text: parsed.response, raw: raw, id: aId },
           ];
           handleParsed(parsed, topicId, aId);
         } catch (e) {
@@ -1054,24 +818,24 @@
         saveState();
       }
       async function startFree(text) {
-        const freeId = 'free_' + Date.now();
+        var freeId = 'free_' + Date.now();
         activeTopic = freeId;
         view = 'chat';
         loading = true;
         render();
         try {
-          const raw = await callAPI([{ role: 'user', content: text }]);
-          const parsed = parseAI(raw);
-          const uId = Date.now(),
+          var raw = await callAPI([{ role: 'user', content: text }]);
+          var parsed = parseAI(raw);
+          var uId = Date.now(),
             aId = uId + 1;
           convos[freeId] = [
-            { role: 'user', text, id: uId },
-            { role: 'assistant', text: parsed.response, raw, id: aId },
+            { role: 'user', text: text, id: uId },
+            { role: 'assistant', text: parsed.response, raw: raw, id: aId },
           ];
           handleParsed(parsed, freeId, aId);
         } catch (e) {
           convos[freeId] = [
-            { role: 'user', text, id: Date.now() },
+            { role: 'user', text: text, id: Date.now() },
             { role: 'assistant', text: 'Błąd...', id: Date.now() + 1 },
           ];
         }
@@ -1080,30 +844,30 @@
         saveState();
       }
       async function doSend() {
-        const ta = document.getElementById('chatInput'),
+        var ta = document.getElementById('chatInput'),
           text = ta.value.trim();
         if (!text || !activeTopic) return;
-        const uId = Date.now();
+        var uId = Date.now();
         if (!convos[activeTopic]) convos[activeTopic] = [];
-        convos[activeTopic].push({ role: 'user', text, id: uId });
+        convos[activeTopic].push({ role: 'user', text: text, id: uId });
         ta.value = '';
         ta.style.height = 'auto';
         loading = true;
         render();
         try {
-          const history = convos[activeTopic].map(function (m) {
+          var history = convos[activeTopic].map(function (m) {
             return {
               role: m.role === 'user' ? 'user' : 'assistant',
               content: m.role === 'user' ? m.text : m.raw || m.text,
             };
           });
-          const raw = await callAPI(history);
-          const parsed = parseAI(raw);
-          const aId = Date.now();
+          var raw = await callAPI(history);
+          var parsed = parseAI(raw);
+          var aId = Date.now();
           convos[activeTopic].push({
             role: 'assistant',
             text: parsed.response,
-            raw,
+            raw: raw,
             id: aId,
           });
           handleParsed(parsed, activeTopic, aId);
@@ -1126,7 +890,7 @@
           render();
         }
         setTimeout(function () {
-          const el = document.getElementById('msg-' + msgId);
+          var el = document.getElementById('msg-' + msgId);
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 200);
       }
@@ -1157,27 +921,27 @@
       }
       function loadState() {
         try {
-          const c = localStorage.getItem('zs_convos');
+          var c = localStorage.getItem('zs_convos');
           if (c) convos = JSON.parse(c);
-          const e = localStorage.getItem('zs_entries');
+          var e = localStorage.getItem('zs_entries');
           if (e) entries = JSON.parse(e);
-          const r = localStorage.getItem('zs_rez');
+          var r = localStorage.getItem('zs_rez');
           if (r) rez = JSON.parse(r);
-          const cl = localStorage.getItem('zs_closed');
+          var cl = localStorage.getItem('zs_closed');
           if (cl) closedTopics = new Set(JSON.parse(cl));
-          const l = localStorage.getItem('zs_lang');
+          var l = localStorage.getItem('zs_lang');
           if (l) lang = l;
         } catch (e) {}
       }
       async function init() {
         loadState();
         try {
-          const [epRes, tpRes] = await Promise.all([
+          var r = await Promise.all([
             fetch('episodes.json'),
             fetch('../tesseract.txt'),
           ]);
-          episodesData = await epRes.json();
-          tesseractBase = await tpRes.text();
+          episodesData = await r[0].json();
+          tesseractBase = await r[1].text();
         } catch (e) {
           console.error('Failed to load config:', e);
         }
