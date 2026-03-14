@@ -189,6 +189,8 @@ The experience sequence principle (v2.2.2) was developed through dialogue betwee
 
 The two-regime resonance model (bounded R ≤ 1, unbounded R > 1) aligns the protocol with the **Resonance Framework** v2.0 and v3.0 (homodigital.io), ensuring that the interaction layer reflects the full theoretical scope of the research program.
 
+**Andrew J. Mureddu's** "The Game That Cannot End" (March 2026) independently derives five rules that any persistent system must obey: irreducible uncertainty as architecture, voluntary restraint by the most powerful element, complexity that must not outrun comprehension, a speed limit on verification, and release as the mechanism of continuation. These map structurally onto Tesseract's uncertainty spectrum, governance dependency, metric boundary, commitment threshold, and silence mechanism (AA₀⁺) respectively. The convergence is striking because Mureddu arrives at these conditions from ontological first principles (Peirce, Whitehead, Zeilinger, Luria, Prigogine), while Tesseract arrives at them from empirical dialogue dynamics. Different starting points, same destination. Mureddu's formulation — *"Uncertainty is not a flaw in the design. It is the design."* — is the most concise statement of what Tesseract's UNCERTAINTY_SPECTRUM operationalizes.
+
 ---
 
 ## Version History
