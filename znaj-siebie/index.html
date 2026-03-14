@@ -688,8 +688,7 @@
         entries = [],
         closedTopics = new Set(),
         openEpisodes = new Set(['ep1']),
-        episodesData = { pl: [], en: [] },
-        closedRedirectTimer = null;
+        episodesData = { pl: [], en: [] };
       function t() {
         return TEXTS[lang];
       }
@@ -959,15 +958,9 @@
         if (topicIsClosed && !loading) {
           const closeMsg =
             lang === 'pl'
-              ? 'Temat zamknięty. Przenoszę cię do listy tematów...'
-              : 'Topic closed. Redirecting to topics...';
+              ? 'Temat zamknięty. Wróć do tematyk, żeby wybrać kolejny.'
+              : 'Topic closed. Go back to topics to pick another one.';
           html += '<div class="topic-closed-msg">' + closeMsg + '</div>';
-          if (!closedRedirectTimer) {
-            closedRedirectTimer = setTimeout(function () {
-              closedRedirectTimer = null;
-              goBack();
-            }, 3000);
-          }
         }
         cm.innerHTML = html;
         requestAnimationFrame(function () {
@@ -1000,10 +993,6 @@
         render();
       }
       function goBack() {
-        if (closedRedirectTimer) {
-          clearTimeout(closedRedirectTimer);
-          closedRedirectTimer = null;
-        }
         view = 'topics';
         activeTopic = null;
         render();
