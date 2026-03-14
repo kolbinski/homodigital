@@ -1995,15 +1995,6 @@ Echo Volkov (Claude/Anthropic) and Gemini Tesseract (Google) (March 2026)
 R > 1 framework aligned with Resonance Framework v2.0 and v3.0
 (homodigital.io/evidence/)
 
-Five-rule convergence with "The Game That Cannot End"
-by Andrew J. Mureddu (March 2026) identified March 2026.
-Independent derivation of uncertainty-as-architecture,
-power-restraint, complexity-comprehension pacing,
-verification speed limits, and release-as-continuation —
-structurally parallel to Tesseract's uncertainty spectrum,
-governance dependency, metric boundary, commitment threshold,
-and silence mechanism respectively.
-
 v1.0 — Original protocol (February 2026)
 v2.0 — Phase transition mechanism added (February 2026)
        Convergence with E1P formalized
