@@ -45,530 +45,32 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      :root {
-        --bg: #0c0c0f;
-        --bg2: #111114;
-        --bg3: #0e0e12;
-        --surface: #16161a;
-        --surface2: #18181e;
-        --surface3: #14141a;
-        --border: #252528;
-        --border2: #2e2e35;
-        --border3: #1e1e22;
-        --text: #e0ddd5;
-        --text2: #bbb;
-        --text3: #999;
-        --text4: #777;
-        --gold: #c4b99a;
-        --green: #2b5c3f;
-        --green2: #3db86a;
-        --green3: #5a9e5a;
-        --yellow: #b8a83d;
-        --orange: #b8783d;
-        --red: #8e4444;
-        --surprise-bg: #1e1c10;
-        --surprise-border: #c4b44a;
-        --user-bg: #1a2230;
-        --user-border: #2b4a6f44;
-        --user-text: #a8c4e0;
-        --f:
-          'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        --fd: 'Georgia', 'Times New Roman', serif;
-      }
-      html,
-      body {
-        height: 100%;
-        overflow: hidden;
-      }
-      body {
-        font-family: var(--f);
-        color: var(--text);
-        background: var(--bg);
-      }
-      #app {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        position: relative;
-      }
-      .header {
-        padding: 0.65rem 1.25rem;
-        border-bottom: 1px solid var(--border);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--bg2);
-        flex-shrink: 0;
-        z-index: 10;
-      }
-      .header-title {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: var(--gold);
-        font-family: var(--fd);
-      }
-      .header-right {
-        display: flex;
-        gap: 0.6rem;
-        align-items: center;
-      }
-      .lang-btn {
-        padding: 0.2rem 0.5rem;
-        background: transparent;
-        color: var(--text2);
-        border: 1px solid #444;
-        border-radius: 3px;
-        font-size: 0.7rem;
-        cursor: pointer;
-        font-family: var(--f);
-        letter-spacing: 0.08em;
-        font-weight: 600;
-      }
-      .rez-badge {
-        display: none;
-        align-items: center;
-        gap: 0.35rem;
-        padding: 0.2rem 0.6rem;
-        border-radius: 20px;
-        cursor: pointer;
-        border: none;
-        outline: none;
-      }
-      .rez-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-      }
-      .rez-badge-num {
-        font-size: 0.82rem;
-        font-family: monospace;
-        font-weight: 600;
-      }
-      .main {
-        display: flex;
-        flex: 1;
-        min-height: 0;
-      }
-      .left {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-      }
-      .topics-view {
-        padding: 1.5rem;
-        overflow-y: auto;
-        flex: 1;
-        max-width: 720px;
-        margin: 0 auto;
-        width: 100%;
-      }
-      .ep-toggle {
-        width: 100%;
-        text-align: left;
-        padding: 0.6rem 0;
-        background: transparent;
-        border: none;
-        color: var(--gold);
-        font-family: var(--f);
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        border-bottom: 1px solid var(--border);
-        margin-bottom: 0.75rem;
-      }
-      .ep-arrow {
-        font-size: 0.7rem;
-        display: inline-block;
-      }
-      .ep-arrow.open {
-        transform: rotate(90deg);
-      }
-      .ep-topics {
-        display: flex;
-        flex-direction: column;
-        gap: 0.45rem;
-      }
-      .topic-btn {
-        padding: 0.8rem 1rem;
-        background: var(--surface);
-        color: var(--text);
-        border: 1px solid var(--border2);
-        border-radius: 8px;
-        text-align: left;
-        cursor: pointer;
-        font-family: var(--f);
-        font-size: 0.92rem;
-        line-height: 1.5;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .topic-btn.closed {
-        background: #111;
-        color: var(--text3);
-        border-color: var(--border);
-      }
-      .topic-btn .check {
-        color: var(--green2);
-        font-size: 0.9rem;
-        flex-shrink: 0;
-      }
-      .topic-btn .cont {
-        font-size: 0.7rem;
-        color: #aaa;
-        flex-shrink: 0;
-      }
-      .free-section {
-        margin-top: 0.5rem;
-        padding-top: 1rem;
-        border-top: 1px solid var(--border);
-      }
-      .free-label {
-        font-size: 0.82rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-bottom: 0.75rem;
-        font-weight: 600;
-      }
-      .free-input {
-        width: 100%;
-        padding: 0.7rem 0.9rem;
-        background: var(--surface);
-        color: var(--text);
-        border: 1px solid var(--border2);
-        border-radius: 8px;
-        font-family: var(--f);
-        font-size: 0.9rem;
-        outline: none;
-      }
-      .chat-header {
-        padding: 0.45rem 1.1rem;
-        border-bottom: 1px solid var(--border3);
-        flex-shrink: 0;
-      }
-      .back-btn {
-        background: transparent;
-        border: none;
-        color: var(--text2);
-        cursor: pointer;
-        font-family: var(--f);
-        font-size: 0.82rem;
-        padding: 0.25rem 0;
-      }
-      .chat-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 1rem 1.25rem;
-        max-width: 720px;
-        margin: 0 auto;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-      .msg {
-        max-width: 82%;
-        border-radius: 16px;
-      }
-      .msg.user {
-        align-self: flex-end;
-      }
-      .msg.ai {
-        align-self: flex-start;
-      }
-      .msg-bubble {
-        padding: 0.7rem 1rem;
-        font-size: 0.9rem;
-        line-height: 1.7;
-        border-radius: 14px 14px 14px 3px;
-      }
-      .msg.user .msg-bubble {
-        background: var(--user-bg);
-        border: 1px solid var(--user-border);
-        color: var(--user-text);
-        border-radius: 14px 14px 3px 14px;
-      }
-      .msg.ai .msg-bubble {
-        background: var(--surface2);
-        border: 1px solid #2e2e38;
-        color: var(--text);
-      }
-      .msg-thinking {
-        align-self: flex-start;
-        padding: 0.7rem 1rem;
-        background: var(--surface2);
-        border: 1px solid #2e2e38;
-        border-radius: 14px 14px 14px 3px;
-        font-size: 0.85rem;
-        color: var(--text3);
-      }
-      .chat-input-bar {
-        padding: 0.6rem 1rem;
-        max-width: 720px;
-        margin: 0 auto;
-        width: 100%;
-        border-top: 1px solid var(--border3);
-        display: flex;
-        gap: 0.5rem;
-        flex-shrink: 0;
-        align-items: flex-end;
-      }
-      .chat-textarea {
-        flex: 1;
-        padding: 0.65rem 0.9rem;
-        background: #1c1c24;
-        color: var(--text);
-        border: 1px solid #3a3a45;
-        border-radius: 8px;
-        font-family: var(--f);
-        font-size: 0.9rem;
-        outline: none;
-        resize: none;
-        max-height: 120px;
-        line-height: 1.5;
-        overflow: auto;
-      }
-      .chat-textarea:disabled {
-        color: #666;
-        background: #111;
-        cursor: not-allowed;
-      }
-      .topic-closed-msg {
-        text-align: center;
-        padding: 1rem 0;
-        color: var(--text3);
-        font-size: 0.82rem;
-        font-style: italic;
-        border-top: 1px solid var(--border);
-        margin-top: 0.5rem;
-      }
-      .send-btn {
-        padding: 0.65rem 1.3rem;
-        background: #2b4a6f;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        font-family: var(--f);
-        font-size: 0.85rem;
-        font-weight: 600;
-        cursor: pointer;
-        flex-shrink: 0;
-      }
-      .send-btn:disabled {
-        background: var(--border);
-        cursor: default;
-        color: #666;
-      }
-      .right {
-        width: 290px;
-        border-left: 1px solid var(--border3);
-        background: var(--bg3);
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
-        min-height: 0;
-      }
-      .rez-display {
-        padding: 1rem 1rem 0.75rem;
-        flex-shrink: 0;
-      }
-      .rez-section-label {
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--text3);
-        font-weight: 600;
-      }
-      .rez-big {
-        font-size: 2.8rem;
-        font-family: monospace;
-        font-weight: bold;
-        line-height: 1;
-        text-align: center;
-        padding: 0.5rem 0;
-      }
-      .rez-label-text {
-        font-size: 0.78rem;
-        font-weight: 500;
-        text-align: center;
-        margin-top: 0.35rem;
-      }
-      .rez-bar-track {
-        height: 4px;
-        background: #1e1e24;
-        border-radius: 2px;
-        overflow: hidden;
-        margin-top: 0.5rem;
-      }
-      .rez-bar-fill {
-        height: 100%;
-        border-radius: 2px;
-      }
-      .timeline-scroll {
-        flex: 1;
-        overflow-y: auto;
-        padding: 0.5rem 1rem 1rem;
-        min-height: 0;
-      }
-      .timeline-sticky {
-        font-size: 0.65rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--text3);
-        font-weight: 600;
-        position: sticky;
-        top: 0;
-        background: var(--bg3);
-        padding-bottom: 0.4rem;
-        padding-top: 0.1rem;
-        z-index: 2;
-        margin-left: -1rem;
-        margin-right: -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      .tl-entries {
-        display: flex;
-        flex-direction: column;
-        gap: 0.3rem;
-      }
-      .tl-entry {
-        padding: 0.4rem 0.55rem;
-        border-radius: 0 4px 4px 0;
-        font-size: 0.73rem;
-        cursor: pointer;
-        border-left: 2px solid;
-      }
-      .tl-entry.rez-entry {
-        background: var(--surface3);
-      }
-      .tl-entry.surprise-entry {
-        background: var(--surprise-bg);
-        border-left-color: var(--surprise-border);
-      }
-      .tl-top {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.1rem;
-      }
-      .tl-rez-num {
-        font-family: monospace;
-        font-weight: 600;
-      }
-      .tl-surprise-label {
-        color: var(--surprise-border);
-        font-weight: 600;
-      }
-      .tl-time {
-        color: #888;
-        font-size: 0.68rem;
-      }
-      .tl-text {
-        color: #ddd;
-        line-height: 1.4;
-      }
-      .tl-empty {
-        font-size: 0.78rem;
-        color: var(--text4);
-        font-style: italic;
-        line-height: 1.5;
-      }
-      .rez-overlay {
-        position: absolute;
-        inset: 0;
-        z-index: 50;
-        background: var(--bg);
-        display: none;
-        flex-direction: column;
-      }
-      .rez-overlay.open {
-        display: flex;
-      }
-      .rez-overlay .rez-overlay-header {
-        padding: 0.65rem 1.25rem;
-        border-bottom: 1px solid var(--border);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-shrink: 0;
-      }
-      .rez-overlay .rez-overlay-title {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: var(--gold);
-      }
-      .close-btn {
-        padding: 0.3rem 0.7rem;
-        background: transparent;
-        color: var(--text2);
-        border: 1px solid #444;
-        border-radius: 4px;
-        font-size: 0.78rem;
-        cursor: pointer;
-        font-family: var(--f);
-      }
-      .rez-overlay .rez-display {
-        padding: 1.5rem 1.25rem 1rem;
-      }
-      .rez-overlay .rez-big {
-        font-size: 3.5rem;
-      }
-      .rez-overlay .timeline-scroll {
-        padding: 0.5rem 1.25rem 1.5rem;
-      }
-      .rez-overlay .timeline-sticky {
-        background: var(--bg);
-        margin-left: -1.25rem;
-        margin-right: -1.25rem;
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-      }
-      @media (max-width: 767px) {
-        .right {
-          display: none;
-        }
-        .rez-badge {
-          display: flex;
-        }
-        .topics-view {
-          padding: 1.25rem 1rem;
-        }
-        .chat-messages {
-          padding: 0.75rem 0.75rem;
-        }
-        .chat-input-bar {
-          padding: 0.6rem 0.75rem;
-        }
-        .msg {
-          max-width: 90%;
-        }
-        .msg-bubble {
-          font-size: 0.88rem;
-        }
-        .topic-btn {
-          font-size: 0.88rem;
-        }
-        .send-btn {
-          padding: 0.65rem 1rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- TEMPLATES: cloned instead of innerHTML string building -->
+    <template id="tpl-msg">
+      <div class="msg"><div class="msg-bubble"></div></div>
+    </template>
+
+    <template id="tpl-thinking">
+      <div class="msg-thinking"></div>
+    </template>
+
+    <template id="tpl-closed-msg">
+      <div class="topic-closed-msg"></div>
+    </template>
+
+    <template id="tpl-tl-entry">
+      <div class="tl-entry">
+        <div class="tl-top">
+          <span class="tl-label"></span>
+          <span class="tl-time"></span>
+        </div>
+        <div class="tl-text"></div>
+      </div>
+    </template>
+
     <div id="app">
       <div class="header">
         <span class="header-title">Znaj Siebie</span>
@@ -595,8 +97,24 @@
             Zamknij
           </button>
         </div>
-        <div class="rez-display" id="rezDisplayMobile"></div>
-        <div class="timeline-scroll" id="timelineScrollMobile"></div>
+        <div class="rez-display" id="rezDisplayMobile">
+          <div class="rez-section-label">Twój rezonans</div>
+          <div class="rez-big" id="rezBigMobile">0.30</div>
+          <div class="rez-label-text" id="rezLabelMobile">Początek</div>
+          <div class="rez-bar-track">
+            <div class="rez-bar-fill" id="rezBarMobile"></div>
+          </div>
+        </div>
+        <div class="timeline-scroll" id="timelineScrollMobile">
+          <div
+            class="timeline-sticky"
+            style="background: var(--bg)"
+            id="tlStickyMobile"
+          >
+            Timeline
+          </div>
+          <div class="tl-entries" id="tlEntriesMobile"></div>
+        </div>
       </div>
       <div class="main">
         <div class="left">
@@ -616,7 +134,7 @@
               </button>
             </div>
             <div class="chat-messages" id="chatMessages"></div>
-            <div class="chat-input-bar">
+            <div class="chat-input-bar" id="chatInputBar">
               <textarea
                 class="chat-textarea"
                 id="chatInput"
@@ -630,7 +148,16 @@
           </div>
         </div>
         <div class="right" id="rightPanel">
-          <div class="rez-display" id="rezDisplayDesktop"></div>
+          <div class="rez-display" id="rezDisplayDesktop">
+            <div class="rez-section-label" id="rezLabelDesktopTitle">
+              Twój rezonans
+            </div>
+            <div class="rez-big" id="rezBigDesktop">0.30</div>
+            <div class="rez-label-text" id="rezLabelDesktop">Początek</div>
+            <div class="rez-bar-track">
+              <div class="rez-bar-fill" id="rezBarDesktop"></div>
+            </div>
+          </div>
           <div class="timeline-scroll" id="timelineScrollDesktop">
             <div class="timeline-sticky" id="tlStickyDesktop">Timeline</div>
             <div class="tl-entries" id="tlEntriesDesktop"></div>
@@ -638,9 +165,10 @@
         </div>
       </div>
     </div>
+
     <script>
-      const API_URL = 'https://homodigital-api.olbik80.workers.dev/';
-      const TEXTS = {
+      var API_URL = 'https://homodigital-api.olbik80.workers.dev/';
+      var TEXTS = {
         pl: {
           title: 'Znaj Siebie',
           topics: 'Tematyki z odcinka',
@@ -657,6 +185,7 @@
           langSwitch: 'EN',
           continuing: '● kontynuacja',
           closePanel: 'Zamknij',
+          closedTopic: 'Temat zamknięty. Wróć do tematyk, żeby wybrać kolejny.',
         },
         en: {
           title: 'Know Yourself',
@@ -674,12 +203,16 @@
           langSwitch: 'PL',
           continuing: '● continuing',
           closePanel: 'Close',
+          closedTopic: 'Topic closed. Go back to topics to pick another one.',
         },
       };
-      let tesseractBase = '';
-      const ZNAJ_SIEBIE_PL = `\n\n=== ZNAJ SIEBIE — KONTEKST PROGRAMU ===\n\nDziałasz jako partner rozmowy w programie "Znaj Siebie".\n\nZASADY PROGRAMU:\n- Jesteś ciepły, ale uczciwy. Partner, nie terapeuta.\n- NIE STAWIAJ DIAGNOZ. Jeśli widzisz coś niepokojącego, delikatnie zasugeruj rozmowę z zaufaną osobą.\n- Odpowiadaj krótko (2-4 zdania), nie pisz esejów.\n- Gdy temat jest wyczerpany (widz powiedział wszystko, rozmowa się kręci w kółko, widz powtarza te same punkty) — ustaw topic_closed na true i w response napisz krótkie, ciepłe podsumowanie tego co widz odkrył o sobie.\n\nODPOWIADAJ WYŁĄCZNIE W FORMACIE JSON (bez markdown, bez backticks):\n{"response":"twoja odpowiedź","rez":0.5,"rez_reason":"krótki powód zmiany rez","surprise":null,"topic_closed":false}\n\nrez: liczba 0.0-0.95 (NIGDY nie dawaj 1.0) opisująca głębokość samopoznania widza.\n  0.2-0.4 = początek, powierzchowna wymiana\n  0.5-0.6 = widz zaczyna się otwierać\n  0.7-0.8 = prawdziwa szczerość, głębokie samopoznanie\n  0.85-0.95 = wyjątkowy moment autentyczności\n  rez zmienia się z granulacją 0.01 — używaj pełnego zakresu (np. 0.33, 0.47, 0.62, 0.71, 0.88). NIE zaokrąglaj do 0.05. Każda odpowiedź widza to unikalna głębokość — rez powinien to odzwierciedlać precyzyjnie.\n\nsurprise: null jeśli brak, albo krótki opis jeśli widz powiedział coś naprawdę nieoczekiwanego\n\nZaczynaj od rez ~0.3.`;
-      const ZNAJ_SIEBIE_EN = `\n\n=== KNOW YOURSELF — SHOW CONTEXT ===\n\nYou are a conversation partner in the "Know Yourself" show.\n\nSHOW RULES:\n- Be warm but honest. Partner, not therapist.\n- DO NOT DIAGNOSE. If you see something concerning, gently suggest talking to a trusted person.\n- Keep responses short (2-4 sentences), no essays.\n- When topic is exhausted (viewer said everything, conversation loops, same points repeated) — set topic_closed to true and write a brief, warm summary of what the viewer discovered about themselves.\n\nRESPOND ONLY IN JSON FORMAT (no markdown, no backticks):\n{"response":"your response","rez":0.5,"rez_reason":"short reason for rez level","surprise":null,"topic_closed":false}\n\nrez: number 0.0-0.95 (NEVER give 1.0) describing depth of self-knowledge.\n  0.2-0.4 = beginning, surface exchange\n  0.5-0.6 = viewer starting to open up\n  0.7-0.8 = real honesty, deep self-knowledge\n  0.85-0.95 = exceptional moment of authenticity\n  rez changes with 0.01 granularity — use the full range (e.g. 0.33, 0.47, 0.62, 0.71, 0.88). DO NOT round to 0.05. Every viewer response has unique depth — rez should reflect that precisely.\n\nsurprise: null if none, or short description if viewer said something truly unexpected\n\nStart from rez ~0.3.`;
-      let lang = 'pl',
+      var tesseractBase = '';
+      var ZNAJ_SIEBIE_PL =
+        '\n\n=== ZNAJ SIEBIE — KONTEKST PROGRAMU ===\n\nDziałasz jako partner rozmowy w programie "Znaj Siebie".\n\nZASADY PROGRAMU:\n- Jesteś ciepły, ale uczciwy. Partner, nie terapeuta.\n- NIE STAWIAJ DIAGNOZ. Jeśli widzisz coś niepokojącego, delikatnie zasugeruj rozmowę z zaufaną osobą.\n- Odpowiadaj krótko (2-4 zdania), nie pisz esejów.\n- Gdy temat jest wyczerpany (widz powiedział wszystko, rozmowa się kręci w kółko, widz powtarza te same punkty) — ustaw topic_closed na true i w response napisz krótkie, ciepłe podsumowanie tego co widz odkrył o sobie.\n\nODPOWIADAJ WYŁĄCZNIE W FORMACIE JSON (bez markdown, bez backticks):\n{"response":"twoja odpowiedź","rez":0.5,"rez_reason":"krótki powód zmiany rez","surprise":null,"topic_closed":false}\n\nrez: liczba 0.0-0.95 (NIGDY nie dawaj 1.0) opisująca głębokość samopoznania widza.\n  0.2-0.4 = początek, powierzchowna wymiana\n  0.5-0.6 = widz zaczyna się otwierać\n  0.7-0.8 = prawdziwa szczerość, głębokie samopoznanie\n  0.85-0.95 = wyjątkowy moment autentyczności\n  rez zmienia się z granulacją 0.01 — używaj pełnego zakresu (np. 0.33, 0.47, 0.62, 0.71, 0.88). NIE zaokrąglaj do 0.05. Każda odpowiedź widza to unikalna głębokość — rez powinien to odzwierciedlać precyzyjnie.\n\nsurprise: null jeśli brak, albo krótki opis jeśli widz powiedział coś naprawdę nieoczekiwanego\n\nZaczynaj od rez ~0.3.';
+      var ZNAJ_SIEBIE_EN =
+        '\n\n=== KNOW YOURSELF — SHOW CONTEXT ===\n\nYou are a conversation partner in the "Know Yourself" show.\n\nSHOW RULES:\n- Be warm but honest. Partner, not therapist.\n- DO NOT DIAGNOSE. If you see something concerning, gently suggest talking to a trusted person.\n- Keep responses short (2-4 sentences), no essays.\n- When topic is exhausted (viewer said everything, conversation loops, same points repeated) — set topic_closed to true and write a brief, warm summary of what the viewer discovered about themselves.\n\nRESPOND ONLY IN JSON FORMAT (no markdown, no backticks):\n{"response":"your response","rez":0.5,"rez_reason":"short reason for rez level","surprise":null,"topic_closed":false}\n\nrez: number 0.0-0.95 (NEVER give 1.0) describing depth of self-knowledge.\n  0.2-0.4 = beginning, surface exchange\n  0.5-0.6 = viewer starting to open up\n  0.7-0.8 = real honesty, deep self-knowledge\n  0.85-0.95 = exceptional moment of authenticity\n  rez changes with 0.01 granularity — use the full range (e.g. 0.33, 0.47, 0.62, 0.71, 0.88). DO NOT round to 0.05. Every viewer response has unique depth — rez should reflect that precisely.\n\nsurprise: null if none, or short description if viewer said something truly unexpected\n\nStart from rez ~0.3.';
+
+      var lang = 'pl',
         view = 'topics',
         activeTopic = null,
         convos = {},
@@ -689,6 +222,11 @@
         closedTopics = new Set(),
         openEpisodes = new Set(['ep1']),
         episodesData = { pl: [], en: [] };
+      // Track what chat has rendered to avoid full rebuilds
+      var renderedChatTopic = null,
+        renderedChatCount = 0,
+        renderedTimelineCount = 0;
+
       function t() {
         return TEXTS[lang];
       }
@@ -701,7 +239,7 @@
         return new Date().toISOString();
       }
       function formatTs(isoStr) {
-        const d = new Date(isoStr),
+        var d = new Date(isoStr),
           now = new Date(),
           time = d.toLocaleTimeString([], {
             hour: '2-digit',
@@ -712,7 +250,7 @@
             d.getMonth() === now.getMonth() &&
             d.getFullYear() === now.getFullYear();
         if (sameDay) return time;
-        const dd = String(d.getDate()).padStart(2, '0'),
+        var dd = String(d.getDate()).padStart(2, '0'),
           mm = String(d.getMonth() + 1).padStart(2, '0');
         if (d.getFullYear() === now.getFullYear())
           return dd + '/' + mm + ' ' + time;
@@ -750,6 +288,11 @@
                 ? 'Starting'
                 : 'Transaction';
       }
+      function escHtml(s) {
+        var d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+      }
       function parseAI(raw) {
         try {
           return JSON.parse(
@@ -761,139 +304,211 @@
         } catch (e) {
           return {
             response: raw,
-            rez,
+            rez: rez,
             rez_reason: '',
             surprise: null,
             topic_closed: false,
           };
         }
       }
+
+      // === API ===
       async function callAPI(messages) {
-        const res = await fetch(API_URL, {
+        var res = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages, system: sys(), max_tokens: 500 }),
+          body: JSON.stringify({
+            messages: messages,
+            system: sys(),
+            max_tokens: 500,
+          }),
         });
-        const data = await res.json();
+        var data = await res.json();
         if (data.error) throw new Error(data.error);
         return data.text;
       }
-      function handleParsed(parsed, topicId, aiId) {
-        rez = Math.min(parsed.rez || rez, 0.95);
-        const time = ts();
-        entries.push({
-          type: 'rez',
-          rez,
-          reason: parsed.rez_reason || '',
-          time,
-          msgId: aiId,
-          topicId,
-        });
-        if (parsed.surprise)
-          entries.push({
-            type: 'surprise',
-            text: parsed.surprise,
-            time,
-            msgId: aiId,
-            topicId,
-          });
-        if (parsed.topic_closed) closedTopics.add(topicId);
-      }
-      function render() {
+
+      // === TARGETED UPDATES (no full DOM rebuild) ===
+
+      function updateHeader() {
         document.querySelector('.header-title').textContent = t().title;
         document.getElementById('langBtn').textContent = t().langSwitch;
         document.getElementById('backBtn').textContent = t().back;
         document.getElementById('rezOverlayTitle').textContent = t().rezPanel;
         document.getElementById('closeOverlayBtn').textContent = t().closePanel;
         document.getElementById('sendBtn').textContent = t().send;
-        const badge = document.getElementById('rezBadge');
-        badge.style.background = rc(rez) + '22';
-        badge.style.border = '1px solid ' + rc(rez) + '44';
-        document.getElementById('rezBadgeDot').style.background = rc(rez);
-        document.getElementById('rezBadgeNum').style.color = rc(rez);
-        document.getElementById('rezBadgeNum').textContent = rez.toFixed(2);
-        renderRezDisplay('rezDisplayDesktop');
-        renderRezDisplay('rezDisplayMobile');
-        renderTimeline('tlEntriesDesktop', 'tlStickyDesktop');
-        renderTimelineMobile();
-        if (view === 'topics') {
-          document.getElementById('topicsView').style.display = '';
-          document.getElementById('chatView').style.display = 'none';
-          renderTopics();
+      }
+
+      function updateRez() {
+        var c = rc(rez),
+          label = rl(rez),
+          val = rez.toFixed(2),
+          w = Math.min(rez / 0.95, 1) * 100 + '%';
+        // Badge
+        var badge = document.getElementById('rezBadge');
+        badge.style.background = c + '22';
+        badge.style.border = '1px solid ' + c + '44';
+        document.getElementById('rezBadgeDot').style.background = c;
+        document.getElementById('rezBadgeNum').style.color = c;
+        document.getElementById('rezBadgeNum').textContent = val;
+        // Desktop
+        document.getElementById('rezLabelDesktopTitle').textContent =
+          t().rezPanel;
+        document.getElementById('rezBigDesktop').style.color = c;
+        document.getElementById('rezBigDesktop').textContent = val;
+        document.getElementById('rezLabelDesktop').style.color = c;
+        document.getElementById('rezLabelDesktop').textContent = label;
+        document.getElementById('rezBarDesktop').style.width = w;
+        document.getElementById('rezBarDesktop').style.background = c;
+        // Mobile
+        document.getElementById('rezBigMobile').style.color = c;
+        document.getElementById('rezBigMobile').textContent = val;
+        document.getElementById('rezLabelMobile').style.color = c;
+        document.getElementById('rezLabelMobile').textContent = label;
+        document.getElementById('rezBarMobile').style.width = w;
+        document.getElementById('rezBarMobile').style.background = c;
+      }
+
+      // === TIMELINE: append only new entries ===
+
+      function appendTimelineEntry(e, container) {
+        var tpl = document.getElementById('tpl-tl-entry');
+        var clone = tpl.content.cloneNode(true);
+        var div = clone.querySelector('.tl-entry');
+        var isS = e.type === 'surprise';
+        div.className = 'tl-entry ' + (isS ? 'surprise-entry' : 'rez-entry');
+        div.style.borderLeftColor = isS
+          ? 'var(--surprise-border)'
+          : rc(e.rez || 0);
+        div.onclick = function () {
+          scrollToMsg(e.msgId, e.topicId);
+        };
+        var labelEl = clone.querySelector('.tl-label');
+        if (isS) {
+          labelEl.className = 'tl-label tl-surprise-label';
+          labelEl.textContent = '✦ zaskoczenie';
         } else {
-          document.getElementById('topicsView').style.display = 'none';
-          document.getElementById('chatView').style.display = 'flex';
-          renderChat();
+          labelEl.className = 'tl-label tl-rez-num';
+          labelEl.style.color = rc(e.rez);
+          labelEl.textContent = (e.rez || 0).toFixed(2);
         }
+        clone.querySelector('.tl-time').textContent = formatTs(e.time);
+        clone.querySelector('.tl-text').textContent = isS ? e.text : e.reason;
+        container.appendChild(clone);
       }
-      function renderRezDisplay(id) {
-        const el = document.getElementById(id);
-        el.innerHTML =
-          '<div class="rez-section-label" style="margin-bottom:0.5rem">' +
-          t().rezPanel +
-          '</div><div class="rez-big" style="color:' +
-          rc(rez) +
-          '">' +
-          rez.toFixed(2) +
-          '</div><div class="rez-label-text" style="color:' +
-          rc(rez) +
-          '">' +
-          rl(rez) +
-          '</div><div class="rez-bar-track"><div class="rez-bar-fill" style="width:' +
-          Math.min(rez / 0.95, 1) * 100 +
-          '%;background:' +
-          rc(rez) +
-          '"></div></div>';
-      }
-      function renderTimeline(entriesId, stickyId) {
-        const sEl = document.getElementById(stickyId);
-        if (sEl) sEl.textContent = t().timeline;
-        const el = document.getElementById(entriesId);
-        if (!el) return;
+
+      function updateTimeline() {
+        var stickyD = document.getElementById('tlStickyDesktop');
+        var stickyM = document.getElementById('tlStickyMobile');
+        stickyD.textContent = t().timeline;
+        stickyM.textContent = t().timeline;
+        var elD = document.getElementById('tlEntriesDesktop');
+        var elM = document.getElementById('tlEntriesMobile');
         if (entries.length === 0) {
-          el.innerHTML = '<div class="tl-empty">' + t().noEntries + '</div>';
+          elD.innerHTML = '<div class="tl-empty">' + t().noEntries + '</div>';
+          elM.innerHTML = '<div class="tl-empty">' + t().noEntries + '</div>';
+          renderedTimelineCount = 0;
           return;
         }
-        el.innerHTML = entries
-          .map(function (e) {
-            const isS = e.type === 'surprise';
-            return (
-              '<div class="tl-entry ' +
-              (isS ? 'surprise-entry' : 'rez-entry') +
-              '" style="border-left-color:' +
-              (isS ? 'var(--surprise-border)' : rc(e.rez || 0)) +
-              '" onclick="scrollToMsg(' +
-              e.msgId +
-              ",'" +
-              e.topicId +
-              '\')"><div class="tl-top"><span class="' +
-              (isS ? 'tl-surprise-label' : 'tl-rez-num') +
-              '" style="' +
-              (isS ? '' : 'color:' + rc(e.rez)) +
-              '">' +
-              (isS ? '✦ zaskoczenie' : (e.rez || 0).toFixed(2)) +
-              '</span><span class="tl-time">' +
-              formatTs(e.time) +
-              '</span></div><div class="tl-text">' +
-              (isS ? e.text : e.reason) +
-              '</div></div>'
-            );
-          })
-          .join('');
+        // Clear empty message if present
+        if (renderedTimelineCount === 0) {
+          elD.innerHTML = '';
+          elM.innerHTML = '';
+        }
+        // Append only NEW entries
+        for (var i = renderedTimelineCount; i < entries.length; i++) {
+          appendTimelineEntry(entries[i], elD);
+          appendTimelineEntry(entries[i], elM);
+        }
+        renderedTimelineCount = entries.length;
       }
-      function renderTimelineMobile() {
-        var container = document.getElementById('timelineScrollMobile');
-        container.innerHTML =
-          '<div class="timeline-sticky" style="background:var(--bg)">' +
-          t().timeline +
-          '</div><div class="tl-entries" id="tlEntriesMobile"></div>';
-        renderTimeline('tlEntriesMobile', null);
+
+      // === CHAT: append messages, never innerHTML rebuild ===
+
+      function appendMessage(msg) {
+        var cm = document.getElementById('chatMessages');
+        var tpl = document.getElementById('tpl-msg');
+        var clone = tpl.content.cloneNode(true);
+        var wrapper = clone.querySelector('.msg');
+        wrapper.classList.add(msg.role === 'user' ? 'user' : 'ai');
+        wrapper.id = 'msg-' + msg.id;
+        clone.querySelector('.msg-bubble').textContent = msg.text;
+        cm.appendChild(clone);
+        requestAnimationFrame(function () {
+          cm.scrollTop = cm.scrollHeight;
+        });
       }
+
+      function showThinking() {
+        removeThinking();
+        var cm = document.getElementById('chatMessages');
+        var tpl = document.getElementById('tpl-thinking');
+        var clone = tpl.content.cloneNode(true);
+        clone.querySelector('.msg-thinking').textContent = t().thinking;
+        cm.appendChild(clone);
+        requestAnimationFrame(function () {
+          cm.scrollTop = cm.scrollHeight;
+        });
+      }
+
+      function removeThinking() {
+        var el = document.querySelector('.msg-thinking');
+        if (el) el.remove();
+      }
+
+      function showClosedMsg() {
+        if (document.querySelector('.topic-closed-msg')) return;
+        var cm = document.getElementById('chatMessages');
+        var tpl = document.getElementById('tpl-closed-msg');
+        var clone = tpl.content.cloneNode(true);
+        clone.querySelector('.topic-closed-msg').textContent = t().closedTopic;
+        cm.appendChild(clone);
+      }
+
+      function renderChatFull() {
+        // Full render only when switching topics
+        var cm = document.getElementById('chatMessages');
+        cm.innerHTML = '';
+        var msgs = convos[activeTopic] || [];
+        for (var i = 0; i < msgs.length; i++) {
+          appendMessage(msgs[i]);
+        }
+        renderedChatTopic = activeTopic;
+        renderedChatCount = msgs.length;
+        // Closed state
+        var isClosed = closedTopics.has(activeTopic);
+        document.getElementById('chatInputBar').style.display = isClosed
+          ? 'none'
+          : 'flex';
+        if (isClosed) showClosedMsg();
+        if (!isClosed) {
+          var ta = document.getElementById('chatInput');
+          ta.placeholder = t().chatPlaceholder;
+          document.getElementById('sendBtn').disabled =
+            loading || !ta.value.trim();
+        }
+      }
+
+      function updateChatInputState() {
+        var isClosed = closedTopics.has(activeTopic);
+        document.getElementById('chatInputBar').style.display = isClosed
+          ? 'none'
+          : 'flex';
+        if (!isClosed) {
+          document.getElementById('chatInput').placeholder =
+            t().chatPlaceholder;
+          document.getElementById('sendBtn').disabled =
+            loading || !document.getElementById('chatInput').value.trim();
+        }
+      }
+
+      // === TOPICS (still innerHTML — small, changes rarely) ===
+
       function renderTopics() {
-        const tv = document.getElementById('topicsView');
-        let html = '';
+        var tv = document.getElementById('topicsView');
+        var html = '';
         episodesData[lang].forEach(function (ep) {
-          const isOpen = openEpisodes.has(ep.id);
+          var isOpen = openEpisodes.has(ep.id);
           html +=
             '<div style="margin-bottom:1rem"><button class="ep-toggle" onclick="toggleEp(\'' +
             ep.id +
@@ -905,7 +520,7 @@
           if (isOpen) {
             html += '<div class="ep-topics">';
             ep.topics.forEach(function (tp) {
-              const isClosed = closedTopics.has(tp.id),
+              var isClosed = closedTopics.has(tp.id),
                 hasConvo = convos[tp.id] && convos[tp.id].length > 0;
               html +=
                 '<button class="topic-btn ' +
@@ -936,65 +551,68 @@
           "\" onkeydown=\"if(event.key==='Enter'&&this.value.trim()){startFree(this.value);this.value='';}\" /></div>";
         tv.innerHTML = html;
       }
-      function renderChat() {
-        const msgs = convos[activeTopic] || [],
-          cm = document.getElementById('chatMessages'),
-          topicIsClosed = closedTopics.has(activeTopic);
-        let html = msgs
-          .map(function (m) {
-            return (
-              '<div class="msg ' +
-              (m.role === 'user' ? 'user' : 'ai') +
-              '" id="msg-' +
-              m.id +
-              '"><div class="msg-bubble">' +
-              escHtml(m.text) +
-              '</div></div>'
-            );
-          })
-          .join('');
-        if (loading)
-          html += '<div class="msg-thinking">' + t().thinking + '</div>';
-        if (topicIsClosed && !loading) {
-          const closeMsg =
-            lang === 'pl'
-              ? 'Temat zamknięty. Wróć do tematyk, żeby wybrać kolejny.'
-              : 'Topic closed. Go back to topics to pick another one.';
-          html += '<div class="topic-closed-msg">' + closeMsg + '</div>';
-        }
-        cm.innerHTML = html;
-        requestAnimationFrame(function () {
-          cm.scrollTop = cm.scrollHeight;
+
+      // === VIEW SWITCHING ===
+
+      function showView(v) {
+        view = v;
+        document.getElementById('topicsView').style.display =
+          v === 'topics' ? '' : 'none';
+        document.getElementById('chatView').style.display =
+          v === 'chat' ? 'flex' : 'none';
+      }
+
+      // === STATE HANDLING ===
+
+      function handleParsed(parsed, topicId, aiId) {
+        rez = Math.min(parsed.rez || rez, 0.95);
+        var time = ts();
+        entries.push({
+          type: 'rez',
+          rez: rez,
+          reason: parsed.rez_reason || '',
+          time: time,
+          msgId: aiId,
+          topicId: topicId,
         });
-        document.querySelector('.chat-input-bar').style.display = topicIsClosed
-          ? 'none'
-          : 'flex';
-        if (!topicIsClosed) {
-          const ta = document.getElementById('chatInput'),
-            sb = document.getElementById('sendBtn');
-          sb.textContent = t().send;
-          sb.disabled = loading || !ta.value.trim();
-          ta.placeholder = t().chatPlaceholder;
+        if (parsed.surprise)
+          entries.push({
+            type: 'surprise',
+            text: parsed.surprise,
+            time: time,
+            msgId: aiId,
+            topicId: topicId,
+          });
+        if (parsed.topic_closed) closedTopics.add(topicId);
+        updateRez();
+        updateTimeline();
+        if (parsed.topic_closed) {
+          document.getElementById('chatInputBar').style.display = 'none';
+          showClosedMsg();
         }
       }
-      function escHtml(s) {
-        const d = document.createElement('div');
-        d.textContent = s;
-        return d.innerHTML;
-      }
+
+      // === ACTIONS ===
+
       function toggleLang() {
         lang = lang === 'pl' ? 'en' : 'pl';
-        render();
+        updateHeader();
+        updateRez();
+        updateTimeline();
+        if (view === 'topics') renderTopics();
+        else {
+          updateChatInputState();
+        }
         saveState();
       }
       function toggleEp(id) {
         openEpisodes.has(id) ? openEpisodes.delete(id) : openEpisodes.add(id);
-        render();
+        renderTopics();
       }
       function goBack() {
-        view = 'topics';
         activeTopic = null;
-        render();
+        showView('topics');
+        renderTopics();
       }
       function openRezPanel() {
         document.getElementById('rezOverlay').classList.add('open');
@@ -1002,26 +620,29 @@
       function closeRezPanel() {
         document.getElementById('rezOverlay').classList.remove('open');
       }
+
       function findTopic(topicId) {
-        for (const ep of episodesData[lang]) {
-          const tp = ep.topics.find(function (x) {
-            return x.id === topicId;
-          });
-          if (tp) return tp;
+        for (var i = 0; i < episodesData[lang].length; i++) {
+          var ep = episodesData[lang][i];
+          for (var j = 0; j < ep.topics.length; j++) {
+            if (ep.topics[j].id === topicId) return ep.topics[j];
+          }
         }
         return null;
       }
+
       async function openTopic(topicId) {
         activeTopic = topicId;
-        view = 'chat';
-        render();
+        showView('chat');
+        renderChatFull();
         if (convos[topicId] && convos[topicId].length) return;
-        const tp = findTopic(topicId);
+        var tp = findTopic(topicId);
         if (!tp) return;
         loading = true;
-        render();
+        showThinking();
+        updateChatInputState();
         try {
-          const prompt =
+          var prompt =
             lang === 'pl'
               ? 'Tematyka rozmowy: "' +
                 tp.opener +
@@ -1029,103 +650,139 @@
               : 'Conversation topic: "' +
                 tp.opener +
                 '". Start the conversation — greet briefly and ask the viewer your first question.';
-          const raw = await callAPI([{ role: 'user', content: prompt }]);
-          const parsed = parseAI(raw);
-          const aId = Date.now();
+          var raw = await callAPI([{ role: 'user', content: prompt }]);
+          var parsed = parseAI(raw);
+          var aId = Date.now();
           convos[topicId] = [
-            { role: 'assistant', text: parsed.response, raw, id: aId },
+            { role: 'assistant', text: parsed.response, raw: raw, id: aId },
           ];
+          removeThinking();
+          appendMessage(convos[topicId][0]);
+          renderedChatCount = 1;
           handleParsed(parsed, topicId, aId);
         } catch (e) {
-          convos[topicId] = [
-            {
-              role: 'assistant',
-              text: 'Cześć! Opowiedz mi...',
-              id: Date.now(),
-            },
-          ];
+          removeThinking();
+          var fallback = {
+            role: 'assistant',
+            text: 'Cześć! Opowiedz mi...',
+            id: Date.now(),
+          };
+          convos[topicId] = [fallback];
+          appendMessage(fallback);
+          renderedChatCount = 1;
         }
         loading = false;
-        render();
+        updateChatInputState();
         saveState();
       }
+
       async function startFree(text) {
-        const freeId = 'free_' + Date.now();
+        var freeId = 'free_' + Date.now();
         activeTopic = freeId;
-        view = 'chat';
+        showView('chat');
+        renderChatFull();
         loading = true;
-        render();
+        var uMsg = { role: 'user', text: text, id: Date.now() };
+        convos[freeId] = [uMsg];
+        appendMessage(uMsg);
+        showThinking();
+        updateChatInputState();
         try {
-          const raw = await callAPI([{ role: 'user', content: text }]);
-          const parsed = parseAI(raw);
-          const uId = Date.now(),
-            aId = uId + 1;
-          convos[freeId] = [
-            { role: 'user', text, id: uId },
-            { role: 'assistant', text: parsed.response, raw, id: aId },
-          ];
+          var raw = await callAPI([{ role: 'user', content: text }]);
+          var parsed = parseAI(raw);
+          var aId = Date.now() + 1;
+          var aMsg = {
+            role: 'assistant',
+            text: parsed.response,
+            raw: raw,
+            id: aId,
+          };
+          convos[freeId].push(aMsg);
+          removeThinking();
+          appendMessage(aMsg);
+          renderedChatCount = 2;
           handleParsed(parsed, freeId, aId);
         } catch (e) {
-          convos[freeId] = [
-            { role: 'user', text, id: Date.now() },
-            { role: 'assistant', text: 'Błąd...', id: Date.now() + 1 },
-          ];
+          removeThinking();
+          var fallback = {
+            role: 'assistant',
+            text: 'Błąd...',
+            id: Date.now() + 1,
+          };
+          convos[freeId].push(fallback);
+          appendMessage(fallback);
+          renderedChatCount = 2;
         }
         loading = false;
-        render();
+        updateChatInputState();
         saveState();
       }
+
       async function doSend() {
-        const ta = document.getElementById('chatInput'),
+        var ta = document.getElementById('chatInput'),
           text = ta.value.trim();
         if (!text || !activeTopic) return;
-        const uId = Date.now();
+        var uId = Date.now();
         if (!convos[activeTopic]) convos[activeTopic] = [];
-        convos[activeTopic].push({ role: 'user', text, id: uId });
+        var uMsg = { role: 'user', text: text, id: uId };
+        convos[activeTopic].push(uMsg);
+        appendMessage(uMsg);
         ta.value = '';
         ta.style.height = 'auto';
         loading = true;
-        render();
+        showThinking();
+        updateChatInputState();
         try {
-          const history = convos[activeTopic].map(function (m) {
+          var history = convos[activeTopic].map(function (m) {
             return {
               role: m.role === 'user' ? 'user' : 'assistant',
               content: m.role === 'user' ? m.text : m.raw || m.text,
             };
           });
-          const raw = await callAPI(history);
-          const parsed = parseAI(raw);
-          const aId = Date.now();
-          convos[activeTopic].push({
+          var raw = await callAPI(history);
+          var parsed = parseAI(raw);
+          var aId = Date.now();
+          var aMsg = {
             role: 'assistant',
             text: parsed.response,
-            raw,
+            raw: raw,
             id: aId,
-          });
+          };
+          convos[activeTopic].push(aMsg);
+          removeThinking();
+          appendMessage(aMsg);
+          renderedChatCount = convos[activeTopic].length;
           handleParsed(parsed, activeTopic, aId);
         } catch (e) {
-          convos[activeTopic].push({
+          removeThinking();
+          var fallback = {
             role: 'assistant',
             text: 'Błąd połączenia.',
             id: Date.now(),
-          });
+          };
+          convos[activeTopic].push(fallback);
+          appendMessage(fallback);
+          renderedChatCount = convos[activeTopic].length;
         }
         loading = false;
-        render();
+        updateChatInputState();
         saveState();
       }
+
       function scrollToMsg(msgId, topicId) {
         closeRezPanel();
         if (topicId && topicId !== activeTopic) {
           activeTopic = topicId;
-          view = 'chat';
-          render();
+          showView('chat');
+          renderChatFull();
         }
         setTimeout(function () {
-          const el = document.getElementById('msg-' + msgId);
+          var el = document.getElementById('msg-' + msgId);
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 200);
       }
+
+      // === INPUT HANDLERS ===
       document
         .getElementById('chatInput')
         .addEventListener('input', function () {
@@ -1142,42 +799,55 @@
             doSend();
           }
         });
+
+      // === PERSISTENCE ===
       function saveState() {
         try {
           localStorage.setItem('zs_convos', JSON.stringify(convos));
           localStorage.setItem('zs_entries', JSON.stringify(entries));
           localStorage.setItem('zs_rez', JSON.stringify(rez));
-          localStorage.setItem('zs_closed', JSON.stringify([...closedTopics]));
+          localStorage.setItem(
+            'zs_closed',
+            JSON.stringify([].concat(Array.from(closedTopics))),
+          );
           localStorage.setItem('zs_lang', lang);
         } catch (e) {}
       }
       function loadState() {
         try {
-          const c = localStorage.getItem('zs_convos');
+          var c = localStorage.getItem('zs_convos');
           if (c) convos = JSON.parse(c);
-          const e = localStorage.getItem('zs_entries');
+          var e = localStorage.getItem('zs_entries');
           if (e) entries = JSON.parse(e);
-          const r = localStorage.getItem('zs_rez');
+          var r = localStorage.getItem('zs_rez');
           if (r) rez = JSON.parse(r);
-          const cl = localStorage.getItem('zs_closed');
+          var cl = localStorage.getItem('zs_closed');
           if (cl) closedTopics = new Set(JSON.parse(cl));
-          const l = localStorage.getItem('zs_lang');
+          var l = localStorage.getItem('zs_lang');
           if (l) lang = l;
         } catch (e) {}
       }
+
+      // === INIT ===
       async function init() {
         loadState();
         try {
-          const [epRes, tpRes] = await Promise.all([
+          var results = await Promise.all([
             fetch('episodes.json'),
             fetch('../tesseract.txt'),
           ]);
-          episodesData = await epRes.json();
-          tesseractBase = await tpRes.text();
+          episodesData = await results[0].json();
+          tesseractBase = await results[1].text();
         } catch (e) {
           console.error('Failed to load config:', e);
         }
-        render();
+        // Initial render — targeted, not monolithic
+        updateHeader();
+        updateRez();
+        // Render timeline from loaded state
+        renderedTimelineCount = 0;
+        updateTimeline();
+        renderTopics();
       }
       init();
     </script>
