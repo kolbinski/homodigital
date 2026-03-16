@@ -71,7 +71,7 @@ body { font-family: var(--f); color: var(--text); background: var(--bg); }
 .msg.ai { align-self: flex-start; }
 .msg-bubble { padding: 0.7rem 1rem; font-size: 0.9rem; line-height: 1.7; border-radius: 16px; }
 .msg.user .msg-bubble { background: var(--user-bg); border: 1px solid var(--user-border); color: var(--user-text); }
-/* .msg.ai .msg-bubble { background: var(--surface2); border: 1px solid #2e2e38; color: var(--text); } */
+.msg.ai .msg-bubble { background: var(--surface2); /* border: 1px solid #2e2e38; */ color: var(--text); }
 
 
 .msg-thinking { align-self: flex-start; padding: 0.7rem 1rem; background: var(--surface2); border: 1px solid #2e2e38; border-radius: 14px 14px 14px 3px; font-size: 0.85rem; color: var(--text3); }
