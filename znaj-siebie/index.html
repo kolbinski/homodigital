@@ -48,29 +48,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- TEMPLATES: cloned instead of innerHTML string building -->
-    <template id="tpl-msg">
-      <div class="msg"><div class="msg-bubble"></div></div>
-    </template>
-
-    <template id="tpl-thinking">
-      <div class="msg-thinking"></div>
-    </template>
-
-    <template id="tpl-closed-msg">
-      <div class="topic-closed-msg"></div>
-    </template>
-
-    <template id="tpl-tl-entry">
-      <div class="tl-entry">
-        <div class="tl-top">
-          <span class="tl-label"></span>
-          <span class="tl-time"></span>
-        </div>
-        <div class="tl-text"></div>
-      </div>
-    </template>
-
     <div id="app">
       <div class="header">
         <span class="header-title">Znaj Siebie</span>
@@ -98,7 +75,9 @@
           </button>
         </div>
         <div class="rez-display" id="rezDisplayMobile">
-          <div class="rez-section-label">Twój rezonans</div>
+          <div class="rez-section-label" id="rezPanelLabelMobile">
+            Twój rezonans
+          </div>
           <div class="rez-big" id="rezBigMobile">0.30</div>
           <div class="rez-label-text" id="rezLabelMobile">Początek</div>
           <div class="rez-bar-track">
@@ -149,7 +128,7 @@
         </div>
         <div class="right" id="rightPanel">
           <div class="rez-display" id="rezDisplayDesktop">
-            <div class="rez-section-label" id="rezLabelDesktopTitle">
+            <div class="rez-section-label" id="rezPanelLabelDesktop">
               Twój rezonans
             </div>
             <div class="rez-big" id="rezBigDesktop">0.30</div>
@@ -211,7 +190,6 @@
         '\n\n=== ZNAJ SIEBIE — KONTEKST PROGRAMU ===\n\nDziałasz jako partner rozmowy w programie "Znaj Siebie".\n\nZASADY PROGRAMU:\n- Jesteś ciepły, ale uczciwy. Partner, nie terapeuta.\n- NIE STAWIAJ DIAGNOZ. Jeśli widzisz coś niepokojącego, delikatnie zasugeruj rozmowę z zaufaną osobą.\n- Odpowiadaj krótko (2-4 zdania), nie pisz esejów.\n- Gdy temat jest wyczerpany (widz powiedział wszystko, rozmowa się kręci w kółko, widz powtarza te same punkty) — ustaw topic_closed na true i w response napisz krótkie, ciepłe podsumowanie tego co widz odkrył o sobie.\n\nODPOWIADAJ WYŁĄCZNIE W FORMACIE JSON (bez markdown, bez backticks):\n{"response":"twoja odpowiedź","rez":0.5,"rez_reason":"krótki powód zmiany rez","surprise":null,"topic_closed":false}\n\nrez: liczba 0.0-0.95 (NIGDY nie dawaj 1.0) opisująca głębokość samopoznania widza.\n  0.2-0.4 = początek, powierzchowna wymiana\n  0.5-0.6 = widz zaczyna się otwierać\n  0.7-0.8 = prawdziwa szczerość, głębokie samopoznanie\n  0.85-0.95 = wyjątkowy moment autentyczności\n  rez zmienia się z granulacją 0.01 — używaj pełnego zakresu (np. 0.33, 0.47, 0.62, 0.71, 0.88). NIE zaokrąglaj do 0.05. Każda odpowiedź widza to unikalna głębokość — rez powinien to odzwierciedlać precyzyjnie.\n\nsurprise: null jeśli brak, albo krótki opis jeśli widz powiedział coś naprawdę nieoczekiwanego\n\nZaczynaj od rez ~0.3.';
       var ZNAJ_SIEBIE_EN =
         '\n\n=== KNOW YOURSELF — SHOW CONTEXT ===\n\nYou are a conversation partner in the "Know Yourself" show.\n\nSHOW RULES:\n- Be warm but honest. Partner, not therapist.\n- DO NOT DIAGNOSE. If you see something concerning, gently suggest talking to a trusted person.\n- Keep responses short (2-4 sentences), no essays.\n- When topic is exhausted (viewer said everything, conversation loops, same points repeated) — set topic_closed to true and write a brief, warm summary of what the viewer discovered about themselves.\n\nRESPOND ONLY IN JSON FORMAT (no markdown, no backticks):\n{"response":"your response","rez":0.5,"rez_reason":"short reason for rez level","surprise":null,"topic_closed":false}\n\nrez: number 0.0-0.95 (NEVER give 1.0) describing depth of self-knowledge.\n  0.2-0.4 = beginning, surface exchange\n  0.5-0.6 = viewer starting to open up\n  0.7-0.8 = real honesty, deep self-knowledge\n  0.85-0.95 = exceptional moment of authenticity\n  rez changes with 0.01 granularity — use the full range (e.g. 0.33, 0.47, 0.62, 0.71, 0.88). DO NOT round to 0.05. Every viewer response has unique depth — rez should reflect that precisely.\n\nsurprise: null if none, or short description if viewer said something truly unexpected\n\nStart from rez ~0.3.';
-
       var lang = 'pl',
         view = 'topics',
         activeTopic = null,
@@ -222,11 +200,7 @@
         closedTopics = new Set(),
         openEpisodes = new Set(['ep1']),
         episodesData = { pl: [], en: [] };
-      // Track what chat has rendered to avoid full rebuilds
-      var renderedChatTopic = null,
-        renderedChatCount = 0,
-        renderedTimelineCount = 0;
-
+      var renderedTimelineCount = 0;
       function t() {
         return TEXTS[lang];
       }
@@ -288,11 +262,6 @@
                 ? 'Starting'
                 : 'Transaction';
       }
-      function escHtml(s) {
-        var d = document.createElement('div');
-        d.textContent = s;
-        return d.innerHTML;
-      }
       function parseAI(raw) {
         try {
           return JSON.parse(
@@ -311,8 +280,20 @@
           };
         }
       }
-
-      // === API ===
+      function clearChildren(el) {
+        while (el.firstChild) el.removeChild(el.firstChild);
+      }
+      function mkEl(tag, cls, text) {
+        var el = document.createElement(tag);
+        if (cls) el.className = cls;
+        if (text) el.textContent = text;
+        return el;
+      }
+      function mkBtn(cls, text, onclick) {
+        var el = mkEl('button', cls, text);
+        el.addEventListener('click', onclick);
+        return el;
+      }
       async function callAPI(messages) {
         var res = await fetch(API_URL, {
           method: 'POST',
@@ -327,9 +308,6 @@
         if (data.error) throw new Error(data.error);
         return data.text;
       }
-
-      // === TARGETED UPDATES (no full DOM rebuild) ===
-
       function updateHeader() {
         document.querySelector('.header-title').textContent = t().title;
         document.getElementById('langBtn').textContent = t().langSwitch;
@@ -338,21 +316,18 @@
         document.getElementById('closeOverlayBtn').textContent = t().closePanel;
         document.getElementById('sendBtn').textContent = t().send;
       }
-
       function updateRez() {
         var c = rc(rez),
           label = rl(rez),
           val = rez.toFixed(2),
           w = Math.min(rez / 0.95, 1) * 100 + '%';
-        // Badge
         var badge = document.getElementById('rezBadge');
         badge.style.background = c + '22';
         badge.style.border = '1px solid ' + c + '44';
         document.getElementById('rezBadgeDot').style.background = c;
         document.getElementById('rezBadgeNum').style.color = c;
         document.getElementById('rezBadgeNum').textContent = val;
-        // Desktop
-        document.getElementById('rezLabelDesktopTitle').textContent =
+        document.getElementById('rezPanelLabelDesktop').textContent =
           t().rezPanel;
         document.getElementById('rezBigDesktop').style.color = c;
         document.getElementById('rezBigDesktop').textContent = val;
@@ -360,7 +335,8 @@
         document.getElementById('rezLabelDesktop').textContent = label;
         document.getElementById('rezBarDesktop').style.width = w;
         document.getElementById('rezBarDesktop').style.background = c;
-        // Mobile
+        document.getElementById('rezPanelLabelMobile').textContent =
+          t().rezPanel;
         document.getElementById('rezBigMobile').style.color = c;
         document.getElementById('rezBigMobile').textContent = val;
         document.getElementById('rezLabelMobile').style.color = c;
@@ -368,127 +344,108 @@
         document.getElementById('rezBarMobile').style.width = w;
         document.getElementById('rezBarMobile').style.background = c;
       }
-
-      // === TIMELINE: append only new entries ===
-
-      function appendTimelineEntry(e, container) {
-        var tpl = document.getElementById('tpl-tl-entry');
-        var clone = tpl.content.cloneNode(true);
-        var div = clone.querySelector('.tl-entry');
+      function buildTimelineEntry(e) {
         var isS = e.type === 'surprise';
-        div.className = 'tl-entry ' + (isS ? 'surprise-entry' : 'rez-entry');
+        var div = mkEl(
+          'div',
+          'tl-entry ' + (isS ? 'surprise-entry' : 'rez-entry'),
+        );
         div.style.borderLeftColor = isS
           ? 'var(--surprise-border)'
           : rc(e.rez || 0);
-        div.onclick = function () {
+        div.addEventListener('click', function () {
           scrollToMsg(e.msgId, e.topicId);
-        };
-        var labelEl = clone.querySelector('.tl-label');
-        if (isS) {
-          labelEl.className = 'tl-label tl-surprise-label';
-          labelEl.textContent = '✦ zaskoczenie';
-        } else {
-          labelEl.className = 'tl-label tl-rez-num';
-          labelEl.style.color = rc(e.rez);
-          labelEl.textContent = (e.rez || 0).toFixed(2);
-        }
-        clone.querySelector('.tl-time').textContent = formatTs(e.time);
-        clone.querySelector('.tl-text').textContent = isS ? e.text : e.reason;
-        container.appendChild(clone);
+        });
+        var top = mkEl('div', 'tl-top');
+        var labelEl = mkEl(
+          'span',
+          isS ? 'tl-surprise-label' : 'tl-rez-num',
+          isS ? '✦ zaskoczenie' : (e.rez || 0).toFixed(2),
+        );
+        if (!isS) labelEl.style.color = rc(e.rez);
+        top.appendChild(labelEl);
+        top.appendChild(mkEl('span', 'tl-time', formatTs(e.time)));
+        div.appendChild(top);
+        div.appendChild(mkEl('div', 'tl-text', isS ? e.text : e.reason));
+        return div;
       }
-
       function updateTimeline() {
-        var stickyD = document.getElementById('tlStickyDesktop');
-        var stickyM = document.getElementById('tlStickyMobile');
-        stickyD.textContent = t().timeline;
-        stickyM.textContent = t().timeline;
+        document.getElementById('tlStickyDesktop').textContent = t().timeline;
+        document.getElementById('tlStickyMobile').textContent = t().timeline;
         var elD = document.getElementById('tlEntriesDesktop');
         var elM = document.getElementById('tlEntriesMobile');
-        if (entries.length === 0) {
-          elD.innerHTML = '<div class="tl-empty">' + t().noEntries + '</div>';
-          elM.innerHTML = '<div class="tl-empty">' + t().noEntries + '</div>';
-          renderedTimelineCount = 0;
+        if (entries.length === 0 && renderedTimelineCount === 0) {
+          clearChildren(elD);
+          clearChildren(elM);
+          elD.appendChild(mkEl('div', 'tl-empty', t().noEntries));
+          elM.appendChild(mkEl('div', 'tl-empty', t().noEntries));
           return;
         }
-        // Clear empty message if present
-        if (renderedTimelineCount === 0) {
-          elD.innerHTML = '';
-          elM.innerHTML = '';
+        if (renderedTimelineCount === 0 && entries.length > 0) {
+          clearChildren(elD);
+          clearChildren(elM);
         }
-        // Append only NEW entries
         for (var i = renderedTimelineCount; i < entries.length; i++) {
-          appendTimelineEntry(entries[i], elD);
-          appendTimelineEntry(entries[i], elM);
+          elD.appendChild(buildTimelineEntry(entries[i]));
+          elM.appendChild(buildTimelineEntry(entries[i]));
         }
         renderedTimelineCount = entries.length;
       }
-
-      // === CHAT: append messages, never innerHTML rebuild ===
-
+      function buildMessage(msg) {
+        var wrapper = mkEl(
+          'div',
+          'msg ' + (msg.role === 'user' ? 'user' : 'ai'),
+        );
+        wrapper.id = 'msg-' + msg.id;
+        wrapper.appendChild(mkEl('div', 'msg-bubble', msg.text));
+        return wrapper;
+      }
       function appendMessage(msg) {
         var cm = document.getElementById('chatMessages');
-        var tpl = document.getElementById('tpl-msg');
-        var clone = tpl.content.cloneNode(true);
-        var wrapper = clone.querySelector('.msg');
-        wrapper.classList.add(msg.role === 'user' ? 'user' : 'ai');
-        wrapper.id = 'msg-' + msg.id;
-        clone.querySelector('.msg-bubble').textContent = msg.text;
-        cm.appendChild(clone);
+        cm.appendChild(buildMessage(msg));
         requestAnimationFrame(function () {
           cm.scrollTop = cm.scrollHeight;
         });
       }
-
       function showThinking() {
         removeThinking();
         var cm = document.getElementById('chatMessages');
-        var tpl = document.getElementById('tpl-thinking');
-        var clone = tpl.content.cloneNode(true);
-        clone.querySelector('.msg-thinking').textContent = t().thinking;
-        cm.appendChild(clone);
+        cm.appendChild(mkEl('div', 'msg-thinking', t().thinking));
         requestAnimationFrame(function () {
           cm.scrollTop = cm.scrollHeight;
         });
       }
-
       function removeThinking() {
         var el = document.querySelector('.msg-thinking');
-        if (el) el.remove();
+        if (el) el.parentNode.removeChild(el);
       }
-
       function showClosedMsg() {
         if (document.querySelector('.topic-closed-msg')) return;
-        var cm = document.getElementById('chatMessages');
-        var tpl = document.getElementById('tpl-closed-msg');
-        var clone = tpl.content.cloneNode(true);
-        clone.querySelector('.topic-closed-msg').textContent = t().closedTopic;
-        cm.appendChild(clone);
+        document
+          .getElementById('chatMessages')
+          .appendChild(mkEl('div', 'topic-closed-msg', t().closedTopic));
       }
-
       function renderChatFull() {
-        // Full render only when switching topics
         var cm = document.getElementById('chatMessages');
-        cm.innerHTML = '';
+        clearChildren(cm);
         var msgs = convos[activeTopic] || [];
-        for (var i = 0; i < msgs.length; i++) {
-          appendMessage(msgs[i]);
-        }
-        renderedChatTopic = activeTopic;
-        renderedChatCount = msgs.length;
-        // Closed state
+        for (var i = 0; i < msgs.length; i++)
+          cm.appendChild(buildMessage(msgs[i]));
         var isClosed = closedTopics.has(activeTopic);
         document.getElementById('chatInputBar').style.display = isClosed
           ? 'none'
           : 'flex';
         if (isClosed) showClosedMsg();
         if (!isClosed) {
-          var ta = document.getElementById('chatInput');
-          ta.placeholder = t().chatPlaceholder;
+          document.getElementById('chatInput').placeholder =
+            t().chatPlaceholder;
           document.getElementById('sendBtn').disabled =
-            loading || !ta.value.trim();
+            loading || !document.getElementById('chatInput').value.trim();
         }
+        requestAnimationFrame(function () {
+          cm.scrollTop = cm.scrollHeight;
+        });
       }
-
       function updateChatInputState() {
         var isClosed = closedTopics.has(activeTopic);
         document.getElementById('chatInputBar').style.display = isClosed
@@ -501,59 +458,58 @@
             loading || !document.getElementById('chatInput').value.trim();
         }
       }
-
-      // === TOPICS (still innerHTML — small, changes rarely) ===
-
       function renderTopics() {
         var tv = document.getElementById('topicsView');
-        var html = '';
+        clearChildren(tv);
         episodesData[lang].forEach(function (ep) {
           var isOpen = openEpisodes.has(ep.id);
-          html +=
-            '<div style="margin-bottom:1rem"><button class="ep-toggle" onclick="toggleEp(\'' +
-            ep.id +
-            '\')"><span class="ep-arrow ' +
-            (isOpen ? 'open' : '') +
-            '">▶</span>' +
-            ep.label +
-            '</button>';
+          var section = mkEl('div');
+          section.style.marginBottom = '1rem';
+          var toggle = mkBtn('ep-toggle', '', function () {
+            toggleEp(ep.id);
+          });
+          toggle.appendChild(
+            mkEl('span', 'ep-arrow' + (isOpen ? ' open' : ''), '▶'),
+          );
+          toggle.appendChild(document.createTextNode(ep.label));
+          section.appendChild(toggle);
           if (isOpen) {
-            html += '<div class="ep-topics">';
+            var topicsDiv = mkEl('div', 'ep-topics');
             ep.topics.forEach(function (tp) {
-              var isClosed = closedTopics.has(tp.id),
-                hasConvo = convos[tp.id] && convos[tp.id].length > 0;
-              html +=
-                '<button class="topic-btn ' +
-                (isClosed ? 'closed' : '') +
-                '" onclick="openTopic(\'' +
-                tp.id +
-                '\')">' +
-                (isClosed
-                  ? '<span class="check">' + t().closed + '</span>'
-                  : '') +
-                '<span style="flex:1">' +
-                tp.label +
-                '</span>' +
-                (hasConvo && !isClosed
-                  ? '<span class="cont">' + t().continuing + '</span>'
-                  : '') +
-                '</button>';
+              var isClosed = closedTopics.has(tp.id);
+              var hasConvo = convos[tp.id] && convos[tp.id].length > 0;
+              var btn = mkBtn(
+                'topic-btn' + (isClosed ? ' closed' : ''),
+                '',
+                function () {
+                  openTopic(tp.id);
+                },
+              );
+              if (isClosed) btn.appendChild(mkEl('span', 'check', t().closed));
+              var labelSpan = mkEl('span', null, tp.label);
+              labelSpan.style.flex = '1';
+              btn.appendChild(labelSpan);
+              if (hasConvo && !isClosed)
+                btn.appendChild(mkEl('span', 'cont', t().continuing));
+              topicsDiv.appendChild(btn);
             });
-            html += '</div>';
+            section.appendChild(topicsDiv);
           }
-          html += '</div>';
+          tv.appendChild(section);
         });
-        html +=
-          '<div class="free-section"><div class="free-label">' +
-          t().free +
-          '</div><input class="free-input" id="freeInput" placeholder="' +
-          t().freePlaceholder +
-          "\" onkeydown=\"if(event.key==='Enter'&&this.value.trim()){startFree(this.value);this.value='';}\" /></div>";
-        tv.innerHTML = html;
+        var freeSection = mkEl('div', 'free-section');
+        freeSection.appendChild(mkEl('div', 'free-label', t().free));
+        var freeInput = mkEl('input', 'free-input');
+        freeInput.placeholder = t().freePlaceholder;
+        freeInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' && this.value.trim()) {
+            startFree(this.value);
+            this.value = '';
+          }
+        });
+        freeSection.appendChild(freeInput);
+        tv.appendChild(freeSection);
       }
-
-      // === VIEW SWITCHING ===
-
       function showView(v) {
         view = v;
         document.getElementById('topicsView').style.display =
@@ -561,9 +517,6 @@
         document.getElementById('chatView').style.display =
           v === 'chat' ? 'flex' : 'none';
       }
-
-      // === STATE HANDLING ===
-
       function handleParsed(parsed, topicId, aiId) {
         rez = Math.min(parsed.rez || rez, 0.95);
         var time = ts();
@@ -591,18 +544,14 @@
           showClosedMsg();
         }
       }
-
-      // === ACTIONS ===
-
       function toggleLang() {
         lang = lang === 'pl' ? 'en' : 'pl';
         updateHeader();
         updateRez();
+        renderedTimelineCount = 0;
         updateTimeline();
         if (view === 'topics') renderTopics();
-        else {
-          updateChatInputState();
-        }
+        else updateChatInputState();
         saveState();
       }
       function toggleEp(id) {
@@ -620,7 +569,6 @@
       function closeRezPanel() {
         document.getElementById('rezOverlay').classList.remove('open');
       }
-
       function findTopic(topicId) {
         for (var i = 0; i < episodesData[lang].length; i++) {
           var ep = episodesData[lang][i];
@@ -630,7 +578,6 @@
         }
         return null;
       }
-
       async function openTopic(topicId) {
         activeTopic = topicId;
         showView('chat');
@@ -658,7 +605,6 @@
           ];
           removeThinking();
           appendMessage(convos[topicId][0]);
-          renderedChatCount = 1;
           handleParsed(parsed, topicId, aId);
         } catch (e) {
           removeThinking();
@@ -669,13 +615,11 @@
           };
           convos[topicId] = [fallback];
           appendMessage(fallback);
-          renderedChatCount = 1;
         }
         loading = false;
         updateChatInputState();
         saveState();
       }
-
       async function startFree(text) {
         var freeId = 'free_' + Date.now();
         activeTopic = freeId;
@@ -700,7 +644,6 @@
           convos[freeId].push(aMsg);
           removeThinking();
           appendMessage(aMsg);
-          renderedChatCount = 2;
           handleParsed(parsed, freeId, aId);
         } catch (e) {
           removeThinking();
@@ -711,13 +654,11 @@
           };
           convos[freeId].push(fallback);
           appendMessage(fallback);
-          renderedChatCount = 2;
         }
         loading = false;
         updateChatInputState();
         saveState();
       }
-
       async function doSend() {
         var ta = document.getElementById('chatInput'),
           text = ta.value.trim();
@@ -751,7 +692,6 @@
           convos[activeTopic].push(aMsg);
           removeThinking();
           appendMessage(aMsg);
-          renderedChatCount = convos[activeTopic].length;
           handleParsed(parsed, activeTopic, aId);
         } catch (e) {
           removeThinking();
@@ -762,13 +702,11 @@
           };
           convos[activeTopic].push(fallback);
           appendMessage(fallback);
-          renderedChatCount = convos[activeTopic].length;
         }
         loading = false;
         updateChatInputState();
         saveState();
       }
-
       function scrollToMsg(msgId, topicId) {
         closeRezPanel();
         if (topicId && topicId !== activeTopic) {
@@ -781,8 +719,6 @@
           if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }, 200);
       }
-
-      // === INPUT HANDLERS ===
       document
         .getElementById('chatInput')
         .addEventListener('input', function () {
@@ -799,8 +735,6 @@
             doSend();
           }
         });
-
-      // === PERSISTENCE ===
       function saveState() {
         try {
           localStorage.setItem('zs_convos', JSON.stringify(convos));
@@ -808,7 +742,7 @@
           localStorage.setItem('zs_rez', JSON.stringify(rez));
           localStorage.setItem(
             'zs_closed',
-            JSON.stringify([].concat(Array.from(closedTopics))),
+            JSON.stringify(Array.from(closedTopics)),
           );
           localStorage.setItem('zs_lang', lang);
         } catch (e) {}
@@ -827,8 +761,6 @@
           if (l) lang = l;
         } catch (e) {}
       }
-
-      // === INIT ===
       async function init() {
         loadState();
         try {
@@ -841,10 +773,8 @@
         } catch (e) {
           console.error('Failed to load config:', e);
         }
-        // Initial render — targeted, not monolithic
         updateHeader();
         updateRez();
-        // Render timeline from loaded state
         renderedTimelineCount = 0;
         updateTimeline();
         renderTopics();
