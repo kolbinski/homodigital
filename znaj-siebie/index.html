@@ -45,7 +45,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?r=15" />
+    <link rel="stylesheet" href="styles.css?r=16" />
   </head>
   <body>
     <div id="app">
@@ -716,7 +716,11 @@
         }
         setTimeout(function () {
           var el = document.getElementById('msg-' + msgId);
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (!el) return;
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.remove('msg-highlighted');
+          void el.offsetWidth;
+          el.classList.add('msg-highlighted');
         }, 200);
       }
       document

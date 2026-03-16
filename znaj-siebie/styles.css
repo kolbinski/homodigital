@@ -120,3 +120,11 @@ body { font-family: var(--f); color: var(--text); background: var(--bg); }
   .topic-btn { font-size: 0.88rem; }
   .send-btn { padding: 0.65rem 1rem; }
 }
+
+@keyframes msg-highlight {
+  0% { color: var(--surprise-border); }
+  100% { color: var(--text); }
+}
+.msg-highlighted .msg-bubble {
+  animation: msg-highlight 2s ease-out forwards;
+}
