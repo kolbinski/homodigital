@@ -76,7 +76,7 @@ body { font-family: var(--f); color: var(--text); background: var(--bg); }
 .send-btn { padding: 0.65rem 1.3rem; background: #2b4a6f; color: #fff; border: none; border-radius: 8px; font-family: var(--f); font-size: 0.85rem; font-weight: 600; cursor: pointer; flex-shrink: 0; }
 .send-btn:disabled { background: var(--border); cursor: default; color: #666; }
 
-.right { width: 290px; border-left: 1px solid var(--border3); background: var(--bg3); display: flex; flex-direction: column; flex-shrink: 0; min-height: 0; }
+/* .right { width: 290px; border-left: 1px solid var(--border3); background: var(--bg3); display: flex; flex-direction: column; flex-shrink: 0; min-height: 0; }
 .rez-display { padding: 1rem 1rem 0.75rem; flex-shrink: 0; }
 .rez-section-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text3); font-weight: 600; }
 .rez-big { font-size: 2.8rem; font-family: monospace; font-weight: bold; line-height: 1; text-align: center; padding: 0.5rem 0; }
@@ -117,4 +117,4 @@ body { font-family: var(--f); color: var(--text); background: var(--bg); }
   .msg-bubble { font-size: 0.88rem; }
   .topic-btn { font-size: 0.88rem; }
   .send-btn { padding: 0.65rem 1rem; }
-}
+} */
