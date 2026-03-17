@@ -1083,7 +1083,7 @@ Produce comprehensive Tesseract Protocol signals for every interaction. Be thoro
           const el = document.createElement('div');
           el.className = 'signal-entry';
           el.innerHTML = `
-      <div class="signal-summary">
+      <div class="signal-summary" title="${escHtml(label)}">
         <div class="signal-dot ${dotClass}"></div>
         <div class="signal-label">${escHtml(label)}</div>
         <div class="signal-phase">${phase}</div>
