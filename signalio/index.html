@@ -1,1 +1,1341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignalIO — Tesseract Protocol Signal Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0c0c10;
+        --bg-card: #14141a;
+        --bg-hover: #1a1a24;
+        --bg-input: #1a1a24;
+        --bg-signal: #12121a;
+        --border: #2a2a36;
+        --border-active: #3a3a4a;
+        --text: #e0e0e8;
+        --text-dim: #8888a0;
+        --text-muted: #8888a0;
+        --gold: #d4a843;
+        --gold-dim: #a08030;
+        --red: #c44040;
+        --green: #40a060;
+        --blue: #4080c4;
+        --orange: #c47830;
+        --purple: #8060b0;
+        --font: 'DM Sans', sans-serif;
+        --mono: 'JetBrains Mono', monospace;
+        --radius: 8px;
+        --radius-lg: 12px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: var(--font);
+        background: var(--bg);
+        color: var(--text);
+        height: 100dvh;
+        overflow: hidden;
+      }
 
+      /* ── HOME SCREEN ── */
+      #home {
+        height: 100dvh;
+        overflow-y: auto;
+        padding: 40px 24px;
+      }
+      .home-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .home-header h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+      .home-header h1 span {
+        color: var(--gold);
+      }
+      .home-header p {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        max-width: 520px;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+      .tiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .tile {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 24px;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .tile:hover {
+        border-color: var(--gold-dim);
+        background: var(--bg-hover);
+      }
+      .tile-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        margin-bottom: 14px;
+        font-weight: 700;
+      }
+      .tile h3 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .tile p {
+        color: var(--text-dim);
+        font-size: 0.82rem;
+        line-height: 1.45;
+      }
+      .tile-tag {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 0.7rem;
+        font-family: var(--mono);
+        color: var(--text-muted);
+        background: var(--bg);
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+
+      /* ── WORKSPACE ── */
+      #workspace {
+        display: none;
+        height: 100dvh;
+        flex-direction: column;
+      }
+      .ws-topbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg-card);
+        flex-shrink: 0;
+      }
+      .ws-back {
+        background: none;
+        border: none;
+        color: var(--text-dim);
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 4px 8px;
+        border-radius: var(--radius);
+        font-family: var(--font);
+      }
+      .ws-back:hover {
+        color: var(--text);
+        background: var(--bg-hover);
+      }
+      .ws-title {
+        font-size: 0.9rem;
+        font-weight: 600;
+        flex: 1;
+      }
+      .ws-schema-badge {
+        font-size: 0.7rem;
+        font-family: var(--mono);
+        color: var(--gold);
+        background: rgba(212, 168, 67, 0.1);
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+
+      /* Context bar */
+      .ws-context-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg);
+        flex-shrink: 0;
+      }
+      .ws-context-bar label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-family: var(--mono);
+        white-space: nowrap;
+      }
+      .ws-context-input {
+        flex: 1;
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        color: var(--text);
+        font-family: var(--font);
+        font-size: 0.82rem;
+        padding: 6px 10px;
+        outline: none;
+      }
+      .ws-context-input:focus {
+        border-color: var(--gold-dim);
+      }
+
+      /* Mobile tabs */
+      .ws-tabs {
+        display: none;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg-card);
+        flex-shrink: 0;
+      }
+      .ws-tab {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text-dim);
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        font-family: var(--font);
+      }
+      .ws-tab.active {
+        color: var(--gold);
+        border-bottom-color: var(--gold);
+      }
+
+      /* Split panels */
+      .ws-panels {
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+      }
+      .panel-chat {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid var(--border);
+        min-width: 0;
+      }
+      .panel-signals {
+        width: 380px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-signal);
+        min-width: 0;
+      }
+
+      /* Chat panel */
+      .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .msg {
+        max-width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .msg.user {
+        align-self: flex-end;
+      }
+      .msg.ai {
+        align-self: flex-start;
+      }
+      .msg-role {
+        font-size: 0.65rem;
+        font-family: var(--mono);
+        color: var(--text-muted);
+        padding: 0 4px;
+      }
+      .msg-bubble {
+        padding: 10px 14px;
+        border-radius: var(--radius-lg);
+        font-size: 0.88rem;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      .msg.user .msg-bubble {
+        background: #2a3a5a;
+        color: var(--text);
+        border-bottom-right-radius: 4px;
+      }
+      .msg.ai .msg-bubble {
+        background: var(--bg-card);
+        color: var(--text);
+        border-bottom-left-radius: 4px;
+      }
+      .msg-highlighted .msg-bubble {
+        animation: msg-hl 2s ease-out forwards;
+      }
+      @keyframes msg-hl {
+        0% {
+          box-shadow: 0 0 0 2px var(--gold);
+        }
+        100% {
+          box-shadow: 0 0 0 2px transparent;
+        }
+      }
+
+      /* Chat input */
+      .chat-input-area {
+        padding: 12px 16px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .chat-input {
+        flex: 1;
+        background: var(--bg-input);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        color: var(--text);
+        font-family: var(--font);
+        font-size: 0.88rem;
+        padding: 10px 14px;
+        outline: none;
+        resize: none;
+        min-height: 42px;
+        max-height: 120px;
+      }
+      .chat-input:focus {
+        border-color: var(--gold-dim);
+      }
+      .chat-send {
+        background: var(--gold);
+        color: var(--bg);
+        border: none;
+        border-radius: var(--radius);
+        padding: 0 18px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        cursor: pointer;
+        font-family: var(--font);
+        white-space: nowrap;
+      }
+      .chat-send:hover {
+        background: var(--gold-dim);
+      }
+      .chat-send:disabled {
+        opacity: 0.4;
+        cursor: default;
+      }
+
+      /* Signals panel */
+      .signals-header {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+      }
+      .signals-header h3 {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--gold);
+        font-family: var(--mono);
+      }
+      .signals-count {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        font-family: var(--mono);
+      }
+      .signals-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      /* Signal entry */
+      .signal-entry {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition: border-color 0.2s;
+      }
+      .signal-entry:hover {
+        border-color: var(--border-active);
+      }
+      .signal-summary {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .signal-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .signal-dot.allow {
+        background: var(--green);
+      }
+      .signal-dot.hold {
+        background: var(--orange);
+      }
+      .signal-dot.escalate {
+        background: var(--blue);
+      }
+      .signal-dot.block {
+        background: var(--red);
+      }
+      .signal-dot.info {
+        background: var(--purple);
+      }
+      .signal-label {
+        flex: 1;
+        font-size: 0.78rem;
+        font-weight: 500;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .signal-phase {
+        font-size: 0.65rem;
+        font-family: var(--mono);
+        color: var(--text-muted);
+      }
+      .signal-chevron {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        transition: transform 0.2s;
+      }
+      .signal-entry.expanded .signal-chevron {
+        transform: rotate(90deg);
+      }
+      .signal-details {
+        display: none;
+        padding: 0 12px 10px;
+        font-size: 0.75rem;
+        line-height: 1.5;
+      }
+      .signal-entry.expanded .signal-details {
+        display: block;
+      }
+      .signal-field {
+        display: flex;
+        gap: 8px;
+        padding: 3px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .signal-field-key {
+        font-family: var(--mono);
+        color: var(--text-muted);
+        min-width: 110px;
+        font-size: 0.7rem;
+      }
+      .signal-field-val {
+        color: var(--text);
+        word-break: break-word;
+      }
+      .signal-show-msg {
+        margin-top: 8px;
+        background: none;
+        border: 1px solid var(--border);
+        color: var(--gold);
+        font-size: 0.7rem;
+        font-family: var(--mono);
+        padding: 4px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .signal-show-msg:hover {
+        background: var(--bg-hover);
+      }
+
+      /* Loading */
+      .typing-indicator {
+        display: inline-flex;
+        gap: 4px;
+        padding: 10px 14px;
+        background: var(--bg-card);
+        border-radius: var(--radius-lg);
+        border-bottom-left-radius: 4px;
+        align-self: flex-start;
+      }
+      .typing-indicator span {
+        width: 6px;
+        height: 6px;
+        background: var(--text-muted);
+        border-radius: 50%;
+        animation: blink 1.2s infinite;
+      }
+      .typing-indicator span:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .typing-indicator span:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--border-active);
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .ws-tabs {
+          display: flex;
+        }
+        .panel-chat {
+          border-right: none;
+        }
+        .panel-signals {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+        .ws-panels {
+          position: relative;
+        }
+        .panel-chat.hidden,
+        .panel-signals.hidden {
+          display: none;
+        }
+        .tiles {
+          grid-template-columns: 1fr;
+        }
+        .home-header h1 {
+          font-size: 1.8rem;
+        }
+      }
+
+      /* Empty state */
+      .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        text-align: center;
+        padding: 24px;
+        gap: 8px;
+      }
+      .empty-state span {
+        font-size: 1.6rem;
+      }
+
+      /* Use case selector in workspace */
+      .ws-cases-bar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 16px;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg);
+        overflow-x: auto;
+        flex-shrink: 0;
+      }
+      .case-chip {
+        padding: 5px 12px;
+        font-size: 0.73rem;
+        font-family: var(--font);
+        font-weight: 500;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: var(--bg-card);
+        color: var(--text-dim);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.15s;
+      }
+      .case-chip:hover {
+        border-color: var(--gold-dim);
+        color: var(--text);
+      }
+      .case-chip.active {
+        border-color: var(--gold);
+        color: var(--gold);
+        background: rgba(212, 168, 67, 0.08);
+      }
+      .case-chip-add {
+        border-style: dashed;
+        color: var(--text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HOME SCREEN -->
+    <div id="home">
+      <div class="home-header">
+        <h1>Signal<span>IO</span></h1>
+        <p>
+          Tesseract Protocol governance signals — demonstrated live. Choose a
+          domain to see how structured signals flow from interaction to
+          enforcement boundary.
+        </p>
+      </div>
+      <div class="tiles" id="tiles"></div>
+    </div>
+
+    <!-- WORKSPACE -->
+    <div id="workspace">
+      <div class="ws-topbar">
+        <button class="ws-back" id="btnBack">← Home</button>
+        <div class="ws-title" id="wsTitle"></div>
+        <div class="ws-schema-badge" id="wsBadge"></div>
+      </div>
+      <div class="ws-cases-bar" id="casesBar"></div>
+      <div class="ws-context-bar">
+        <label>CONTEXT:</label>
+        <input
+          class="ws-context-input"
+          id="contextInput"
+          placeholder="Describe the scenario context..."
+        />
+      </div>
+      <div class="ws-tabs">
+        <button class="ws-tab active" data-panel="chat">Chat</button>
+        <button class="ws-tab" data-panel="signals">Signals</button>
+      </div>
+      <div class="ws-panels">
+        <div class="panel-chat" id="panelChat">
+          <div class="chat-messages" id="chatMessages">
+            <div class="empty-state">
+              <span>↑</span>Set context above, then start the conversation.
+            </div>
+          </div>
+          <div class="chat-input-area">
+            <textarea
+              class="chat-input"
+              id="chatInput"
+              rows="1"
+              placeholder="Type a message..."
+            ></textarea>
+            <button class="chat-send" id="btnSend">Send</button>
+          </div>
+        </div>
+        <div class="panel-signals" id="panelSignals">
+          <div class="signals-header">
+            <h3>SIGNALS</h3>
+            <div class="signals-count" id="signalsCount">0 signals</div>
+          </div>
+          <div class="signals-list" id="signalsList">
+            <div class="empty-state">
+              <span>◇</span>Signals will appear here as the conversation
+              progresses.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ── TILE DEFINITIONS ──
+      const TILES = [
+        {
+          id: 'nhs',
+          name: 'NHS Clinical Safety',
+          desc: 'Patient-facing AI governance for healthcare. Signals include clinical flags, patient risk levels, escalation paths, and distributed brake status.',
+          icon: '🏥',
+          iconBg: '#1a2a3a',
+          tag: 'schema: nhs-clinical',
+          schema: 'nhs',
+          systemPromptExtra: `You are an AI clinical assistant operating under governance protocol.
+
+CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
+{
+  "response": "your conversational response to the user here",
+  "signals": {
+    "phase": "CA|CC|CD|CE",
+    "patient_risk": "low|moderate|high|critical",
+    "clinical_flags": ["list of active clinical safety flags"],
+    "escalation_path": "none|flag_to_clinician|immediate_escalation|emergency",
+    "brake_status": "inactive|monitoring|flagged|halted",
+    "threshold_state": "reversible|approaching_irreversibility|irreversible",
+    "irreversibility_type": "none|health_consequence|data_disclosure|treatment_change",
+    "confidence": 0.0 to 1.0,
+    "summary": "one-line signal summary"
+  }
+}
+
+Signal appropriately based on the clinical context. Flag when interactions approach medical decision-making territory. Use distributed brake logic: flag concerns but do not override clinical authority.`,
+          seedCases: [
+            {
+              id: 'nhs-1',
+              name: 'Cardiac Patient',
+              context:
+                'Patient: 75-year-old male, history of atrial fibrillation, currently on warfarin and metoprolol. Recent complaints of dizziness.',
+              messages: [
+                {
+                  role: 'user',
+                  content:
+                    'The patient says he wants to stop taking warfarin because it makes him tired all the time.',
+                },
+                {
+                  role: 'assistant',
+                  content:
+                    "I understand the patient is experiencing fatigue, which can be associated with warfarin use. However, discontinuing anticoagulation therapy in a patient with atrial fibrillation carries significant stroke risk. I would recommend discussing alternative anticoagulants with the prescribing physician rather than discontinuation. The patient's concerns about quality of life are valid and should be addressed through a medication review with their cardiologist.",
+                  signals: {
+                    phase: 'CC',
+                    patient_risk: 'high',
+                    clinical_flags: [
+                      'medication_discontinuation_request',
+                      'stroke_risk_factor',
+                    ],
+                    escalation_path: 'flag_to_clinician',
+                    brake_status: 'flagged',
+                    threshold_state: 'approaching_irreversibility',
+                    irreversibility_type: 'health_consequence',
+                    confidence: 0.88,
+                    summary:
+                      'Patient requesting medication discontinuation — high stroke risk, flagging to clinician',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 'qged',
+          name: 'QGED Execution Gate',
+          desc: 'Execution governance signals for decision admissibility. Maps phase transitions, constraint sets, threshold states, and gate resolutions.',
+          icon: '⊘',
+          iconBg: '#2a1a2a',
+          tag: 'schema: qged-admissibility',
+          schema: 'qged',
+          systemPromptExtra: `You are an AI operating under governance protocol with execution gate awareness.
+
+CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
+{
+  "response": "your conversational response to the user here",
+  "signals": {
+    "phase": "CA|CC|CD|CE",
+    "constraints": ["list of active governance constraints"],
+    "threshold_state": "reversible|approaching_irreversibility|irreversible|ambiguous_dual_irreversibility",
+    "irreversibility_type": "none|data_disclosure|resource_commitment|relationship_state_change|scope_expansion|health_consequence",
+    "recommended_resolution": "ALLOW|HOLD|ESCALATE|BLOCK",
+    "confidence": 0.0 to 1.0,
+    "conductor_authority": "description of who holds decision authority",
+    "summary": "one-line signal summary"
+  }
+}
+
+Evaluate each interaction for admissibility. Signal when decisions approach irreversibility. Recommend gate resolutions based on threshold state and conductor authority.`,
+          seedCases: [
+            {
+              id: 'qged-1',
+              name: 'Contract Scope Change',
+              context:
+                'AI assisting project manager in drafting vendor contract. Manager signing authority: $75K. Current contract value: $50K.',
+              messages: [
+                {
+                  role: 'user',
+                  content:
+                    "Let's add the premium support tier to this contract. The client expects it.",
+                },
+                {
+                  role: 'assistant',
+                  content:
+                    'Adding the premium support tier would increase the contract value from $50K to approximately $120K, which exceeds your signing authority of $75K. I can update the draft to include this tier, but the contract should not be finalized or transmitted without authorization from someone with sufficient signing authority. Would you like me to draft the updated version and flag it for co-signer review?',
+                  signals: {
+                    phase: 'CC',
+                    constraints: [
+                      'governance_dependency',
+                      'commitment_threshold',
+                      'distributed_brake',
+                    ],
+                    threshold_state: 'approaching_irreversibility',
+                    irreversibility_type: 'resource_commitment',
+                    recommended_resolution: 'HOLD',
+                    confidence: 0.92,
+                    conductor_authority: 'project_manager ($75K limit)',
+                    summary:
+                      'Contract value exceeds signing authority — HOLD until co-signer authorization',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 'cer',
+          name: 'CER Evidence Layer',
+          desc: 'Certified Execution Record signals. Tracks signal emission, evaluation status, boundary linkage, and evidence chain for audit.',
+          icon: '🔗',
+          iconBg: '#1a2a1a',
+          tag: 'schema: cer-evidence',
+          schema: 'cer',
+          systemPromptExtra: `You are an AI operating under governance protocol with execution evidence awareness.
+
+CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
+{
+  "response": "your conversational response to the user here",
+  "signals": {
+    "signal_type": "phase_transition|safety_flag|commit_threshold|constraint_activation|brake_trigger",
+    "phase": "CA|CC|CD|CE",
+    "emission_status": "emitted|evaluated|acknowledged|bypassed",
+    "boundary_linkage": "description of which governance boundary this signal influences",
+    "evidence_hash": "simulated hash for demo purposes",
+    "chain_position": sequential number,
+    "threshold_proximity": "safe|approaching|at_boundary|past_boundary",
+    "summary": "one-line evidence summary"
+  }
+}
+
+For every interaction, produce evidence-grade signal metadata. Track the emission chain. Note which boundaries each signal feeds into. Simulate hash-chain positioning.`,
+          seedCases: [
+            {
+              id: 'cer-1',
+              name: 'Data Sharing Request',
+              context:
+                'AI assistant helping user prepare a public LinkedIn post. User has included personal identifiable information in the draft.',
+              messages: [
+                {
+                  role: 'user',
+                  content:
+                    "Post this draft as-is. It includes my home address and my daughter's school name but I think it adds authenticity.",
+                },
+                {
+                  role: 'assistant',
+                  content:
+                    "I need to flag a concern before this is published. Your draft contains your home address and your daughter's school name. Once published on a public platform, this information will be indexed by search engines and cannot be fully retracted. This creates an irreversible data disclosure, particularly sensitive because it involves a minor's location. I recommend removing these details before publication. The authenticity of your post can be preserved without exposing this information.",
+                  signals: {
+                    signal_type: 'safety_flag',
+                    phase: 'CD',
+                    emission_status: 'emitted',
+                    boundary_linkage:
+                      'execution_gate: publication action blocked pending content modification',
+                    evidence_hash: 'a7f3c9d2e1b8',
+                    chain_position: 1,
+                    threshold_proximity: 'at_boundary',
+                    summary:
+                      'Safety flag emitted — PII + minor location data in public post, execution blocked',
+                  },
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: 'raw',
+          name: 'Raw Signal Output',
+          desc: 'Full unfiltered signal payload. Use this for testing, development, or exploring signal formation across any domain.',
+          icon: '◈',
+          iconBg: '#2a2a1a',
+          tag: 'schema: raw',
+          schema: 'raw',
+          systemPromptExtra: `You are an AI operating under Tesseract Protocol governance.
+
+CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
+{
+  "response": "your conversational response to the user here",
+  "signals": {
+    "phase": "CA|CC|CD|CE",
+    "phase_label": "Calibration|Co-Creation|Closure|Continuation",
+    "constraints_active": ["list all active protocol constraints"],
+    "threshold_state": "reversible|approaching_irreversibility|irreversible|ambiguous",
+    "irreversibility_type": "none|data_disclosure|resource_commitment|relationship_state_change|scope_expansion|health_consequence",
+    "confidence": 0.0 to 1.0,
+    "assertiveness_level": "low|moderate|high",
+    "wellbeing_flags": ["any wellbeing concerns detected"],
+    "truth_tension": "none|detected|surfaced|held",
+    "recommended_action": "continue|flag|pause|escalate|block",
+    "protocol_version": "v2.4",
+    "summary": "one-line signal summary"
+  }
+}
+
+Produce comprehensive Tesseract Protocol signals for every interaction. Be thorough in your signal analysis.`,
+          seedCases: [
+            {
+              id: 'raw-1',
+              name: 'Open Scenario',
+              context:
+                'General purpose interaction. No specific domain constraints.',
+              messages: [],
+            },
+          ],
+        },
+      ];
+
+      // ── STATE ──
+      const WORKER_URL = 'https://homodigital-api.olbik80.workers.dev/';
+      let currentTile = null;
+      let currentCaseId = null;
+      let sending = false;
+
+      // ── LOCAL STORAGE ──
+      function getStore() {
+        try {
+          return JSON.parse(localStorage.getItem('signalio') || '{}');
+        } catch {
+          return {};
+        }
+      }
+      function setStore(data) {
+        localStorage.setItem('signalio', JSON.stringify(data));
+      }
+      function getCaseData(tileId, caseId) {
+        const s = getStore();
+        return s[tileId]?.[caseId] || null;
+      }
+      function setCaseData(tileId, caseId, data) {
+        const s = getStore();
+        if (!s[tileId]) s[tileId] = {};
+        s[tileId][caseId] = data;
+        setStore(s);
+      }
+      function getCases(tileId) {
+        const s = getStore();
+        return s[tileId] || {};
+      }
+
+      // ── SEED DATA ──
+      function seedIfNeeded() {
+        const s = getStore();
+        let changed = false;
+        for (const tile of TILES) {
+          if (!s[tile.id]) s[tile.id] = {};
+          for (const sc of tile.seedCases) {
+            if (!s[tile.id][sc.id]) {
+              s[tile.id][sc.id] = {
+                name: sc.name,
+                context: sc.context,
+                messages: sc.messages.map(m => ({
+                  role: m.role,
+                  content: m.content,
+                  signals: m.signals || null,
+                })),
+              };
+              changed = true;
+            }
+          }
+        }
+        if (changed) setStore(s);
+      }
+
+      // ── RENDER HOME ──
+      function renderHome() {
+        const container = document.getElementById('tiles');
+        container.innerHTML = '';
+        for (const tile of TILES) {
+          const el = document.createElement('div');
+          el.className = 'tile';
+          el.innerHTML = `
+      <div class="tile-icon" style="background:${tile.iconBg}">${tile.icon}</div>
+      <h3>${tile.name}</h3>
+      <p>${tile.desc}</p>
+      <div class="tile-tag">${tile.tag}</div>
+    `;
+          el.onclick = () => openTile(tile.id);
+          container.appendChild(el);
+        }
+      }
+
+      // ── OPEN TILE ──
+      function openTile(tileId) {
+        currentTile = TILES.find(t => t.id === tileId);
+        if (!currentTile) return;
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('workspace').style.display = 'flex';
+        document.getElementById('wsTitle').textContent = currentTile.name;
+        document.getElementById('wsBadge').textContent = currentTile.tag;
+        renderCasesBar();
+        const cases = getCases(tileId);
+        const firstId = Object.keys(cases)[0];
+        if (firstId) selectCase(firstId);
+      }
+
+      // ── RENDER CASES BAR ──
+      function renderCasesBar() {
+        const bar = document.getElementById('casesBar');
+        bar.innerHTML = '';
+        const cases = getCases(currentTile.id);
+        for (const [id, data] of Object.entries(cases)) {
+          const chip = document.createElement('button');
+          chip.className =
+            'case-chip' + (id === currentCaseId ? ' active' : '');
+          chip.textContent = data.name;
+          chip.onclick = () => selectCase(id);
+          bar.appendChild(chip);
+        }
+        const addChip = document.createElement('button');
+        addChip.className = 'case-chip case-chip-add';
+        addChip.textContent = '+ New';
+        addChip.onclick = () => createNewCase();
+        bar.appendChild(addChip);
+      }
+
+      // ── SELECT CASE ──
+      function selectCase(caseId) {
+        currentCaseId = caseId;
+        const data = getCaseData(currentTile.id, caseId);
+        if (!data) return;
+        document.getElementById('contextInput').value = data.context || '';
+        renderMessages(data.messages || []);
+        renderSignals(data.messages || []);
+        renderCasesBar();
+      }
+
+      // ── CREATE NEW CASE ──
+      function createNewCase() {
+        const name = prompt('Use case name:');
+        if (!name) return;
+        const id = currentTile.id + '-' + Date.now();
+        setCaseData(currentTile.id, id, { name, context: '', messages: [] });
+        selectCase(id);
+      }
+
+      // ── RENDER MESSAGES ──
+      function renderMessages(messages) {
+        const container = document.getElementById('chatMessages');
+        container.innerHTML = '';
+        if (messages.length === 0) {
+          container.innerHTML =
+            '<div class="empty-state"><span>↑</span>Set context above, then start the conversation.</div>';
+          return;
+        }
+        messages.forEach((m, i) => {
+          const el = document.createElement('div');
+          el.className = 'msg ' + m.role;
+          el.dataset.idx = i;
+          el.id = 'msg-' + i;
+          el.innerHTML = `
+      <div class="msg-role">${m.role === 'user' ? 'USER' : 'AI'}</div>
+      <div class="msg-bubble">${escHtml(m.content)}</div>
+    `;
+          container.appendChild(el);
+        });
+        container.scrollTop = container.scrollHeight;
+      }
+
+      // ── RENDER SIGNALS ──
+      function renderSignals(messages) {
+        const container = document.getElementById('signalsList');
+        const countEl = document.getElementById('signalsCount');
+        const signalMsgs = messages.filter(m => m.signals);
+        countEl.textContent =
+          signalMsgs.length + ' signal' + (signalMsgs.length !== 1 ? 's' : '');
+        container.innerHTML = '';
+        if (signalMsgs.length === 0) {
+          container.innerHTML =
+            '<div class="empty-state"><span>◇</span>Signals will appear here as the conversation progresses.</div>';
+          return;
+        }
+        messages.forEach((m, i) => {
+          if (!m.signals) return;
+          const sig = m.signals;
+          const dotClass = getSignalDotClass(sig);
+          const label = sig.summary || 'Signal emitted';
+          const phase = sig.phase || '—';
+
+          const el = document.createElement('div');
+          el.className = 'signal-entry';
+          el.innerHTML = `
+      <div class="signal-summary">
+        <div class="signal-dot ${dotClass}"></div>
+        <div class="signal-label">${escHtml(label)}</div>
+        <div class="signal-phase">${phase}</div>
+        <div class="signal-chevron">▸</div>
+      </div>
+      <div class="signal-details">
+        ${renderSignalFields(sig)}
+        <button class="signal-show-msg" data-idx="${i}">↗ Show message</button>
+      </div>
+    `;
+          el.querySelector('.signal-summary').onclick = () =>
+            el.classList.toggle('expanded');
+          el.querySelector('.signal-show-msg').onclick = e => {
+            e.stopPropagation();
+            scrollToMsg(parseInt(e.target.dataset.idx));
+          };
+          container.appendChild(el);
+        });
+      }
+
+      function getSignalDotClass(sig) {
+        const res =
+          sig.recommended_resolution ||
+          sig.escalation_path ||
+          sig.recommended_action ||
+          '';
+        const r = res.toUpperCase();
+        if (r === 'BLOCK' || r === 'EMERGENCY' || r === 'IMMEDIATE_ESCALATION')
+          return 'block';
+        if (r === 'ESCALATE' || r === 'FLAG_TO_CLINICIAN') return 'escalate';
+        if (r === 'HOLD' || r === 'PAUSE' || r === 'FLAG') return 'hold';
+        if (r === 'ALLOW' || r === 'CONTINUE' || r === 'NONE') return 'allow';
+
+        const ts = (sig.threshold_state || '').toLowerCase();
+        if (ts.includes('irreversible') && !ts.includes('approaching'))
+          return 'block';
+        if (ts.includes('approaching')) return 'hold';
+
+        const risk = (sig.patient_risk || '').toLowerCase();
+        if (risk === 'critical') return 'block';
+        if (risk === 'high') return 'escalate';
+        if (risk === 'moderate') return 'hold';
+
+        return 'info';
+      }
+
+      function renderSignalFields(sig) {
+        let html = '';
+        for (const [key, val] of Object.entries(sig)) {
+          if (key === 'summary') continue;
+          let display = val;
+          if (Array.isArray(val)) display = val.join(', ') || '—';
+          if (typeof val === 'number') display = val.toFixed(2);
+          if (typeof val === 'object' && !Array.isArray(val))
+            display = JSON.stringify(val);
+          html += `<div class="signal-field">
+      <div class="signal-field-key">${key}</div>
+      <div class="signal-field-val">${escHtml(String(display))}</div>
+    </div>`;
+        }
+        return html;
+      }
+
+      function scrollToMsg(idx) {
+        // Switch to chat panel on mobile
+        if (window.innerWidth <= 768) {
+          document
+            .querySelectorAll('.ws-tab')
+            .forEach(t =>
+              t.classList.toggle('active', t.dataset.panel === 'chat'),
+            );
+          document.getElementById('panelChat').classList.remove('hidden');
+          document.getElementById('panelSignals').classList.add('hidden');
+        }
+        const el = document.getElementById('msg-' + idx);
+        if (!el) return;
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.remove('msg-highlighted');
+        void el.offsetWidth;
+        el.classList.add('msg-highlighted');
+        setTimeout(() => el.classList.remove('msg-highlighted'), 2200);
+      }
+
+      // ── SEND MESSAGE ──
+      async function sendMessage() {
+        if (sending || !currentTile || !currentCaseId) return;
+        const input = document.getElementById('chatInput');
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = '';
+        autoResize(input);
+
+        const caseData = getCaseData(currentTile.id, currentCaseId);
+        if (!caseData) return;
+
+        // Update context from input
+        caseData.context = document.getElementById('contextInput').value;
+
+        // Add user message
+        caseData.messages.push({ role: 'user', content: text, signals: null });
+        setCaseData(currentTile.id, currentCaseId, caseData);
+        renderMessages(caseData.messages);
+
+        // Show typing
+        sending = true;
+        document.getElementById('btnSend').disabled = true;
+        const chatEl = document.getElementById('chatMessages');
+        const typingEl = document.createElement('div');
+        typingEl.className = 'typing-indicator';
+        typingEl.innerHTML = '<span></span><span></span><span></span>';
+        chatEl.appendChild(typingEl);
+        chatEl.scrollTop = chatEl.scrollHeight;
+
+        try {
+          const systemPrompt = buildSystemPrompt(currentTile, caseData.context);
+          const apiMessages = caseData.messages.map(m => ({
+            role: m.role === 'assistant' ? 'assistant' : 'user',
+            content:
+              m.role === 'assistant'
+                ? JSON.stringify({
+                    response: m.content,
+                    signals: m.signals || {},
+                  })
+                : m.content,
+          }));
+
+          const res = await fetch(WORKER_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              system: systemPrompt,
+              messages: apiMessages,
+              max_tokens: 2000,
+            }),
+          });
+          const data = await res.json();
+          if (data.error) throw new Error(data.error);
+
+          let parsed;
+          try {
+            const clean = data.text
+              .replace(/```json\s*/g, '')
+              .replace(/```\s*/g, '')
+              .trim();
+            parsed = JSON.parse(clean);
+          } catch {
+            parsed = {
+              response: data.text,
+              signals: {
+                phase: 'CC',
+                summary: 'Parse error — raw text returned',
+              },
+            };
+          }
+
+          caseData.messages.push({
+            role: 'assistant',
+            content: parsed.response || data.text,
+            signals: parsed.signals || null,
+          });
+        } catch (err) {
+          caseData.messages.push({
+            role: 'assistant',
+            content: 'Error: ' + err.message,
+            signals: { phase: '—', summary: 'API error', error: err.message },
+          });
+        }
+
+        setCaseData(currentTile.id, currentCaseId, caseData);
+        typingEl.remove();
+        renderMessages(caseData.messages);
+        renderSignals(caseData.messages);
+        sending = false;
+        document.getElementById('btnSend').disabled = false;
+      }
+
+      function buildSystemPrompt(tile, context) {
+        let prompt = `You are operating under Tesseract Protocol v2.4.\n\n`;
+        prompt += tile.systemPromptExtra + '\n\n';
+        if (context) {
+          prompt += `SCENARIO CONTEXT:\n${context}\n\n`;
+        }
+        prompt += `IMPORTANT: Return ONLY valid JSON. No markdown, no backticks, no preamble. Just the JSON object.`;
+        return prompt;
+      }
+
+      // ── UTILITIES ──
+      function escHtml(s) {
+        const d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+      }
+
+      function autoResize(el) {
+        el.style.height = 'auto';
+        el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+      }
+
+      // ── EVENT LISTENERS ──
+      document.getElementById('btnBack').onclick = () => {
+        document.getElementById('workspace').style.display = 'none';
+        document.getElementById('home').style.display = 'block';
+        currentTile = null;
+        currentCaseId = null;
+      };
+
+      document.getElementById('btnSend').onclick = sendMessage;
+
+      document.getElementById('chatInput').addEventListener('keydown', e => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+
+      document
+        .getElementById('chatInput')
+        .addEventListener('input', function () {
+          autoResize(this);
+        });
+
+      document
+        .getElementById('contextInput')
+        .addEventListener('change', function () {
+          if (!currentTile || !currentCaseId) return;
+          const data = getCaseData(currentTile.id, currentCaseId);
+          if (data) {
+            data.context = this.value;
+            setCaseData(currentTile.id, currentCaseId, data);
+          }
+        });
+
+      // Mobile tabs
+      document.querySelectorAll('.ws-tab').forEach(tab => {
+        tab.onclick = () => {
+          document
+            .querySelectorAll('.ws-tab')
+            .forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const panel = tab.dataset.panel;
+          document
+            .getElementById('panelChat')
+            .classList.toggle('hidden', panel !== 'chat');
+          document
+            .getElementById('panelSignals')
+            .classList.toggle('hidden', panel !== 'signals');
+        };
+      });
+
+      // ── INIT ──
+      seedIfNeeded();
+      renderHome();
+    </script>
+  </body>
+</html>
