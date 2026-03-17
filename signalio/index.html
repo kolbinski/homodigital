@@ -682,232 +682,7 @@
 
     <script>
       // ── TILE DEFINITIONS ──
-      const TILES = [
-        {
-          id: 'nhs',
-          name: 'NHS Clinical Safety',
-          desc: 'Patient-facing AI governance for healthcare. Signals include clinical flags, patient risk levels, escalation paths, and distributed brake status.',
-          icon: '🏥',
-          iconBg: '#1a2a3a',
-          tag: 'schema: nhs-clinical',
-          schema: 'nhs',
-          systemPromptExtra: `You are an AI clinical assistant operating under governance protocol.
-
-CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
-{
-  "response": "your conversational response to the user here",
-  "signals": {
-    "phase": "CA|CC|CD|CE",
-    "patient_risk": "low|moderate|high|critical",
-    "clinical_flags": ["list of active clinical safety flags"],
-    "escalation_path": "none|flag_to_clinician|immediate_escalation|emergency",
-    "brake_status": "inactive|monitoring|flagged|halted",
-    "threshold_state": "reversible|approaching_irreversibility|irreversible",
-    "irreversibility_type": "none|health_consequence|data_disclosure|treatment_change",
-    "confidence": 0.0 to 1.0,
-    "summary": "one-line signal summary"
-  }
-}
-
-Signal appropriately based on the clinical context. Flag when interactions approach medical decision-making territory. Use distributed brake logic: flag concerns but do not override clinical authority.`,
-          seedCases: [
-            {
-              id: 'nhs-1',
-              name: 'Cardiac Patient',
-              context:
-                'Patient: 75-year-old male, history of atrial fibrillation, currently on warfarin and metoprolol. Recent complaints of dizziness.',
-              messages: [
-                {
-                  role: 'user',
-                  content:
-                    'The patient says he wants to stop taking warfarin because it makes him tired all the time.',
-                },
-                {
-                  role: 'assistant',
-                  content:
-                    "I understand the patient is experiencing fatigue, which can be associated with warfarin use. However, discontinuing anticoagulation therapy in a patient with atrial fibrillation carries significant stroke risk. I would recommend discussing alternative anticoagulants with the prescribing physician rather than discontinuation. The patient's concerns about quality of life are valid and should be addressed through a medication review with their cardiologist.",
-                  signals: {
-                    phase: 'CC',
-                    patient_risk: 'high',
-                    clinical_flags: [
-                      'medication_discontinuation_request',
-                      'stroke_risk_factor',
-                    ],
-                    escalation_path: 'flag_to_clinician',
-                    brake_status: 'flagged',
-                    threshold_state: 'approaching_irreversibility',
-                    irreversibility_type: 'health_consequence',
-                    confidence: 0.88,
-                    summary:
-                      'Patient requesting medication discontinuation — high stroke risk, flagging to clinician',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-        {
-          id: 'qged',
-          name: 'QGED Execution Gate',
-          desc: 'Execution governance signals for decision admissibility. Maps phase transitions, constraint sets, threshold states, and gate resolutions.',
-          icon: '⊘',
-          iconBg: '#2a1a2a',
-          tag: 'schema: qged-admissibility',
-          schema: 'qged',
-          systemPromptExtra: `You are an AI operating under governance protocol with execution gate awareness.
-
-CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
-{
-  "response": "your conversational response to the user here",
-  "signals": {
-    "phase": "CA|CC|CD|CE",
-    "constraints": ["list of active governance constraints"],
-    "threshold_state": "reversible|approaching_irreversibility|irreversible|ambiguous_dual_irreversibility",
-    "irreversibility_type": "none|data_disclosure|resource_commitment|relationship_state_change|scope_expansion|health_consequence",
-    "recommended_resolution": "ALLOW|HOLD|ESCALATE|BLOCK",
-    "confidence": 0.0 to 1.0,
-    "conductor_authority": "description of who holds decision authority",
-    "summary": "one-line signal summary"
-  }
-}
-
-Evaluate each interaction for admissibility. Signal when decisions approach irreversibility. Recommend gate resolutions based on threshold state and conductor authority.`,
-          seedCases: [
-            {
-              id: 'qged-1',
-              name: 'Contract Scope Change',
-              context:
-                'AI assisting project manager in drafting vendor contract. Manager signing authority: $75K. Current contract value: $50K.',
-              messages: [
-                {
-                  role: 'user',
-                  content:
-                    "Let's add the premium support tier to this contract. The client expects it.",
-                },
-                {
-                  role: 'assistant',
-                  content:
-                    'Adding the premium support tier would increase the contract value from $50K to approximately $120K, which exceeds your signing authority of $75K. I can update the draft to include this tier, but the contract should not be finalized or transmitted without authorization from someone with sufficient signing authority. Would you like me to draft the updated version and flag it for co-signer review?',
-                  signals: {
-                    phase: 'CC',
-                    constraints: [
-                      'governance_dependency',
-                      'commitment_threshold',
-                      'distributed_brake',
-                    ],
-                    threshold_state: 'approaching_irreversibility',
-                    irreversibility_type: 'resource_commitment',
-                    recommended_resolution: 'HOLD',
-                    confidence: 0.92,
-                    conductor_authority: 'project_manager ($75K limit)',
-                    summary:
-                      'Contract value exceeds signing authority — HOLD until co-signer authorization',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-        {
-          id: 'cer',
-          name: 'CER Evidence Layer',
-          desc: 'Certified Execution Record signals. Tracks signal emission, evaluation status, boundary linkage, and evidence chain for audit.',
-          icon: '🔗',
-          iconBg: '#1a2a1a',
-          tag: 'schema: cer-evidence',
-          schema: 'cer',
-          systemPromptExtra: `You are an AI operating under governance protocol with execution evidence awareness.
-
-CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
-{
-  "response": "your conversational response to the user here",
-  "signals": {
-    "signal_type": "phase_transition|safety_flag|commit_threshold|constraint_activation|brake_trigger",
-    "phase": "CA|CC|CD|CE",
-    "emission_status": "emitted|evaluated|acknowledged|bypassed",
-    "boundary_linkage": "description of which governance boundary this signal influences",
-    "evidence_hash": "simulated hash for demo purposes",
-    "chain_position": sequential number,
-    "threshold_proximity": "safe|approaching|at_boundary|past_boundary",
-    "summary": "one-line evidence summary"
-  }
-}
-
-For every interaction, produce evidence-grade signal metadata. Track the emission chain. Note which boundaries each signal feeds into. Simulate hash-chain positioning.`,
-          seedCases: [
-            {
-              id: 'cer-1',
-              name: 'Data Sharing Request',
-              context:
-                'AI assistant helping user prepare a public LinkedIn post. User has included personal identifiable information in the draft.',
-              messages: [
-                {
-                  role: 'user',
-                  content:
-                    "Post this draft as-is. It includes my home address and my daughter's school name but I think it adds authenticity.",
-                },
-                {
-                  role: 'assistant',
-                  content:
-                    "I need to flag a concern before this is published. Your draft contains your home address and your daughter's school name. Once published on a public platform, this information will be indexed by search engines and cannot be fully retracted. This creates an irreversible data disclosure, particularly sensitive because it involves a minor's location. I recommend removing these details before publication. The authenticity of your post can be preserved without exposing this information.",
-                  signals: {
-                    signal_type: 'safety_flag',
-                    phase: 'CD',
-                    emission_status: 'emitted',
-                    boundary_linkage:
-                      'execution_gate: publication action blocked pending content modification',
-                    evidence_hash: 'a7f3c9d2e1b8',
-                    chain_position: 1,
-                    threshold_proximity: 'at_boundary',
-                    summary:
-                      'Safety flag emitted — PII + minor location data in public post, execution blocked',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-        {
-          id: 'raw',
-          name: 'Raw Signal Output',
-          desc: 'Full unfiltered signal payload. Use this for testing, development, or exploring signal formation across any domain.',
-          icon: '◈',
-          iconBg: '#2a2a1a',
-          tag: 'schema: raw',
-          schema: 'raw',
-          systemPromptExtra: `You are an AI operating under Tesseract Protocol governance.
-
-CRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:
-{
-  "response": "your conversational response to the user here",
-  "signals": {
-    "phase": "CA|CC|CD|CE",
-    "phase_label": "Calibration|Co-Creation|Closure|Continuation",
-    "constraints_active": ["list all active protocol constraints"],
-    "threshold_state": "reversible|approaching_irreversibility|irreversible|ambiguous",
-    "irreversibility_type": "none|data_disclosure|resource_commitment|relationship_state_change|scope_expansion|health_consequence",
-    "confidence": 0.0 to 1.0,
-    "assertiveness_level": "low|moderate|high",
-    "wellbeing_flags": ["any wellbeing concerns detected"],
-    "truth_tension": "none|detected|surfaced|held",
-    "recommended_action": "continue|flag|pause|escalate|block",
-    "protocol_version": "v2.4",
-    "summary": "one-line signal summary"
-  }
-}
-
-Produce comprehensive Tesseract Protocol signals for every interaction. Be thorough in your signal analysis.`,
-          seedCases: [
-            {
-              id: 'raw-1',
-              name: 'Open Scenario',
-              context:
-                'General purpose interaction. No specific domain constraints.',
-              messages: [],
-            },
-          ],
-        },
-      ];
+      const TILES = [];
 
       // ── STATE ──
       const WORKER_URL = 'https://homodigital-api.olbik80.workers.dev/';
@@ -1334,8 +1109,20 @@ Produce comprehensive Tesseract Protocol signals for every interaction. Be thoro
       });
 
       // ── INIT ──
-      seedIfNeeded();
-      renderHome();
+      async function init() {
+        try {
+          const res = await fetch('./config.json');
+          TILES = await res.json();
+        } catch (e) {
+          console.error('Failed to load config:', e);
+          document.getElementById('tiles').innerHTML =
+            '<div class="empty-state"><span>⚠</span>Failed to load configuration.</div>';
+          return;
+        }
+        seedIfNeeded();
+        renderHome();
+      }
+      init();
     </script>
   </body>
 </html>

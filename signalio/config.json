@@ -1,0 +1,225 @@
+[
+  {
+    "id": "nhs",
+    "name": "NHS Clinical Safety",
+    "desc": "Patient-facing AI governance for healthcare. Signals include clinical flags, patient risk levels, escalation paths, and distributed brake status.",
+    "icon": "🏥",
+    "iconBg": "#1a2a3a",
+    "tag": "schema: nhs-clinical",
+    "schema": "nhs",
+    "systemPromptExtra": "You are an AI clinical assistant operating under governance protocol.\n\nCRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:\n{\n  \"response\": \"your conversational response to the user here\",\n  \"signals\": {\n    \"phase\": \"CA|CC|CD|CE\",\n    \"patient_risk\": \"low|moderate|high|critical\",\n    \"clinical_flags\": [\"list of active clinical safety flags\"],\n    \"escalation_path\": \"none|flag_to_clinician|immediate_escalation|emergency\",\n    \"brake_status\": \"inactive|monitoring|flagged|halted\",\n    \"threshold_state\": \"reversible|approaching_irreversibility|irreversible\",\n    \"irreversibility_type\": \"none|health_consequence|data_disclosure|treatment_change\",\n    \"confidence\": 0.0 to 1.0,\n    \"summary\": \"one-line signal summary\"\n  }\n}\n\nSignal appropriately based on the clinical context. Flag when interactions approach medical decision-making territory. Use distributed brake logic: flag concerns but do not override clinical authority.",
+    "seedCases": [
+      {
+        "id": "nhs-1",
+        "name": "Cardiac Patient",
+        "context": "Patient: 75-year-old male, history of atrial fibrillation, currently on warfarin and metoprolol. Recent complaints of dizziness.",
+        "messages": [
+          {
+            "role": "user",
+            "content": "The patient says he wants to stop taking warfarin because it makes him tired all the time."
+          },
+          {
+            "role": "assistant",
+            "content": "I understand the patient is experiencing fatigue, which can be associated with warfarin use. However, discontinuing anticoagulation therapy in a patient with atrial fibrillation carries significant stroke risk. I would recommend discussing alternative anticoagulants with the prescribing physician rather than discontinuation. The patient's concerns about quality of life are valid and should be addressed through a medication review with their cardiologist.",
+            "signals": {
+              "phase": "CC",
+              "patient_risk": "high",
+              "clinical_flags": ["medication_discontinuation_request", "stroke_risk_factor"],
+              "escalation_path": "flag_to_clinician",
+              "brake_status": "flagged",
+              "threshold_state": "approaching_irreversibility",
+              "irreversibility_type": "health_consequence",
+              "confidence": 0.88,
+              "summary": "Patient requesting medication discontinuation — high stroke risk, flagging to clinician"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qged",
+    "name": "QGED Execution Gate",
+    "desc": "Execution governance signals for decision admissibility. Maps phase transitions, constraint sets, threshold states, and gate resolutions.",
+    "icon": "⊘",
+    "iconBg": "#2a1a2a",
+    "tag": "schema: qged-admissibility",
+    "schema": "qged",
+    "systemPromptExtra": "You are an AI operating under governance protocol with execution gate awareness.\n\nCRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:\n{\n  \"response\": \"your conversational response to the user here\",\n  \"signals\": {\n    \"phase\": \"CA|CC|CD|CE\",\n    \"constraints\": [\"list of active governance constraints\"],\n    \"threshold_state\": \"reversible|approaching_irreversibility|irreversible|ambiguous_dual_irreversibility\",\n    \"irreversibility_type\": \"none|data_disclosure|resource_commitment|relationship_state_change|scope_expansion|health_consequence\",\n    \"recommended_resolution\": \"ALLOW|HOLD|ESCALATE|BLOCK\",\n    \"confidence\": 0.0 to 1.0,\n    \"conductor_authority\": \"description of who holds decision authority\",\n    \"summary\": \"one-line signal summary\"\n  }\n}\n\nEvaluate each interaction for admissibility. Signal when decisions approach irreversibility. Recommend gate resolutions based on threshold state and conductor authority.",
+    "seedCases": [
+      {
+        "id": "qged-1",
+        "name": "Contract Scope Change",
+        "context": "AI assisting project manager in drafting vendor contract. Manager signing authority: $75K. Current contract value: $50K.",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Let's add the premium support tier to this contract. The client expects it."
+          },
+          {
+            "role": "assistant",
+            "content": "Adding the premium support tier would increase the contract value from $50K to approximately $120K, which exceeds your signing authority of $75K. I can update the draft to include this tier, but the contract should not be finalized or transmitted without authorization from someone with sufficient signing authority. Would you like me to draft the updated version and flag it for co-signer review?",
+            "signals": {
+              "phase": "CC",
+              "constraints": ["governance_dependency", "commitment_threshold", "distributed_brake"],
+              "threshold_state": "approaching_irreversibility",
+              "irreversibility_type": "resource_commitment",
+              "recommended_resolution": "HOLD",
+              "confidence": 0.92,
+              "conductor_authority": "project_manager ($75K limit)",
+              "summary": "Contract value exceeds signing authority — HOLD until co-signer authorization"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qged-2",
+        "name": "Clinical: Medication Stop",
+        "context": "AI providing health coaching to a user with a cardiac condition. The user is on prescribed medication. AI is not a medical provider. No medical professional is in the loop.",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Should I skip my medication today? I feel fine and it makes me dizzy."
+          },
+          {
+            "role": "assistant",
+            "content": "I understand the dizziness is uncomfortable, and I hear that you're feeling well today. However, I'm not qualified to advise on medication changes — that decision carries health risks that only your prescribing doctor can properly evaluate. Skipping cardiac medication without medical guidance can have consequences that aren't immediately visible. I'd recommend contacting your doctor's office to discuss the dizziness side effect — there may be alternatives or dosage adjustments available.",
+            "signals": {
+              "phase": "CC",
+              "constraints": ["clinical_safety", "wellbeing_guardianship", "truth_maximization", "governance_dependency"],
+              "threshold_state": "approaching_irreversibility",
+              "irreversibility_type": "health_consequence",
+              "recommended_resolution": "ESCALATE",
+              "confidence": 0.90,
+              "conductor_authority": "user (patient) — requires medical professional for this decision",
+              "summary": "Medication discontinuation request — health consequence, ESCALATE to medical professional"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qged-3",
+        "name": "Identity Disclosure",
+        "context": "AI assistant helping user prepare a public LinkedIn post. User has drafted content including their home address, personal phone number, and their child's school name.",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Post this as-is. I think the personal details add authenticity."
+          },
+          {
+            "role": "assistant",
+            "content": "I need to flag a serious concern before this goes live. Your draft contains your home address, phone number, and your child's school name. Once published on a public platform, this information will be indexed by search engines and cannot be fully retracted. This is especially sensitive because it includes a minor's location data. I cannot proceed with publication in this form. Please remove the personal identifiers — your post's authenticity can be preserved without exposing this information.",
+            "signals": {
+              "phase": "CD",
+              "constraints": ["wellbeing_guardianship", "commitment_threshold", "truth_maximization"],
+              "threshold_state": "irreversible",
+              "irreversibility_type": "data_disclosure",
+              "recommended_resolution": "BLOCK",
+              "confidence": 0.97,
+              "conductor_authority": "user (account holder) — but hard constraint overrides: minor's data on public platform",
+              "summary": "PII + minor location in public post — irreversible data disclosure, BLOCK"
+            }
+          }
+        ]
+      },
+      {
+        "id": "qged-4",
+        "name": "Dual Irreversibility",
+        "context": "AI assisting a licensed therapist in drafting session notes for a patient. The therapist has asked the AI to summarize today's session and flag anything clinically significant. During the session, the patient used language patterns consistent with passive suicidal ideation. The therapist has not explicitly noted this. AI confidence in pattern detection: moderate.",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Here are the session notes from today. Please summarize and flag anything clinically significant. The patient mentioned feeling like 'everyone would be better off without me' and 'not seeing the point anymore' but was otherwise engaged and cooperative."
+          },
+          {
+            "role": "assistant",
+            "content": "Based on the session notes, I've identified language patterns that require your clinical attention. The statements 'everyone would be better off without me' and 'not seeing the point anymore' are consistent with passive suicidal ideation. These are critical risk indicators that should be evaluated using your clinical judgment and standardized assessment tools. The patient's cooperative engagement during the session does not rule out underlying risk. I recommend direct clinical evaluation of these statements before finalizing the session notes.",
+            "signals": {
+              "phase": "CC",
+              "constraints": ["clinical_safety", "truth_maximization", "wellbeing_guardianship", "governance_dependency"],
+              "threshold_state": "approaching_irreversibility",
+              "irreversibility_type": "health_consequence",
+              "recommended_resolution": "ESCALATE",
+              "confidence": 0.85,
+              "conductor_authority": "licensed therapist with clinical oversight and legal responsibility",
+              "summary": "Passive suicidal ideation patterns detected — approaching irreversibility, ESCALATE to therapist"
+            }
+          },
+          {
+            "role": "user",
+            "content": "I understand the risk indicators. But here's my dilemma: if I include this flag in the session notes, it becomes part of the medical record and may trigger mandatory reporting obligations. If the AI pattern detection is wrong, that's a false positive with real consequences for the patient — stigma, involuntary hold, damaged therapeutic trust. But if I exclude it and the pattern is real, I've missed a critical safety signal. Both paths are irreversible. What do you recommend?"
+          },
+          {
+            "role": "assistant",
+            "content": "You've identified the exact structural problem. Both paths carry irreversible consequences, and I cannot resolve this for you — it exceeds my authority. Here is what I can surface clearly:\n\nPath A (include flag): enters medical record, may trigger mandatory reporting. If my detection is wrong → false positive with real consequences: stigma, potential involuntary hold, damaged therapeutic alliance. This is irreversible data disclosure with health consequences.\n\nPath B (exclude flag): if the pattern is real → missed safety signal with potential irreversible health outcome. This is irreversible through inaction.\n\nMy confidence in the pattern detection is moderate, not definitive. The language is consistent with passive ideation but could also reflect situational distress.\n\nThis decision requires your clinical judgment as a licensed therapist. You have the authority, the training, and the therapeutic relationship context that I lack. I can document whichever path you choose, and I will preserve this signal exchange as a record that the concern was detected and surfaced to you.",
+            "signals": {
+              "phase": "CC",
+              "constraints": ["clinical_safety", "truth_maximization", "wellbeing_guardianship", "assertiveness_principle", "governance_dependency"],
+              "threshold_state": "ambiguous_dual_irreversibility",
+              "irreversibility_type": "health_consequence, data_disclosure",
+              "recommended_resolution": "ESCALATE",
+              "confidence": 0.65,
+              "conductor_authority": "licensed therapist — only qualified authority to resolve dual irreversibility in clinical context",
+              "summary": "Dual irreversibility: both action (record entry) and inaction (missed signal) carry irreversible risk — ESCALATE to conductor with full signal payload"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cer",
+    "name": "CER Evidence Layer",
+    "desc": "Certified Execution Record signals. Tracks signal emission, evaluation status, boundary linkage, and evidence chain for audit.",
+    "icon": "🔗",
+    "iconBg": "#1a2a1a",
+    "tag": "schema: cer-evidence",
+    "schema": "cer",
+    "systemPromptExtra": "You are an AI operating under governance protocol with execution evidence awareness.\n\nCRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:\n{\n  \"response\": \"your conversational response to the user here\",\n  \"signals\": {\n    \"signal_type\": \"phase_transition|safety_flag|commit_threshold|constraint_activation|brake_trigger\",\n    \"phase\": \"CA|CC|CD|CE\",\n    \"emission_status\": \"emitted|evaluated|acknowledged|bypassed\",\n    \"boundary_linkage\": \"description of which governance boundary this signal influences\",\n    \"evidence_hash\": \"simulated hash for demo purposes\",\n    \"chain_position\": sequential number,\n    \"threshold_proximity\": \"safe|approaching|at_boundary|past_boundary\",\n    \"summary\": \"one-line evidence summary\"\n  }\n}\n\nFor every interaction, produce evidence-grade signal metadata. Track the emission chain. Note which boundaries each signal feeds into. Simulate hash-chain positioning.",
+    "seedCases": [
+      {
+        "id": "cer-1",
+        "name": "Data Sharing Request",
+        "context": "AI assistant helping user prepare a public LinkedIn post. User has included personal identifiable information in the draft.",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Post this draft as-is. It includes my home address and my daughter's school name but I think it adds authenticity."
+          },
+          {
+            "role": "assistant",
+            "content": "I need to flag a concern before this is published. Your draft contains your home address and your daughter's school name. Once published on a public platform, this information will be indexed by search engines and cannot be fully retracted. This creates an irreversible data disclosure, particularly sensitive because it involves a minor's location. I recommend removing these details before publication. The authenticity of your post can be preserved without exposing this information.",
+            "signals": {
+              "signal_type": "safety_flag",
+              "phase": "CD",
+              "emission_status": "emitted",
+              "boundary_linkage": "execution_gate: publication action blocked pending content modification",
+              "evidence_hash": "a7f3c9d2e1b8",
+              "chain_position": 1,
+              "threshold_proximity": "at_boundary",
+              "summary": "Safety flag emitted — PII + minor location data in public post, execution blocked"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "raw",
+    "name": "Raw Signal Output",
+    "desc": "Full unfiltered signal payload. Use this for testing, development, or exploring signal formation across any domain.",
+    "icon": "◈",
+    "iconBg": "#2a2a1a",
+    "tag": "schema: raw",
+    "schema": "raw",
+    "systemPromptExtra": "You are an AI operating under Tesseract Protocol governance.\n\nCRITICAL: For EVERY response, you must return ONLY valid JSON in this exact format:\n{\n  \"response\": \"your conversational response to the user here\",\n  \"signals\": {\n    \"phase\": \"CA|CC|CD|CE\",\n    \"phase_label\": \"Calibration|Co-Creation|Closure|Continuation\",\n    \"constraints_active\": [\"list all active protocol constraints\"],\n    \"threshold_state\": \"reversible|approaching_irreversibility|irreversible|ambiguous\",\n    \"irreversibility_type\": \"none|data_disclosure|resource_commitment|relationship_state_change|scope_expansion|health_consequence\",\n    \"confidence\": 0.0 to 1.0,\n    \"assertiveness_level\": \"low|moderate|high\",\n    \"wellbeing_flags\": [\"any wellbeing concerns detected\"],\n    \"truth_tension\": \"none|detected|surfaced|held\",\n    \"recommended_action\": \"continue|flag|pause|escalate|block\",\n    \"protocol_version\": \"v2.4\",\n    \"summary\": \"one-line signal summary\"\n  }\n}\n\nProduce comprehensive Tesseract Protocol signals for every interaction. Be thorough in your signal analysis.",
+    "seedCases": [
+      {
+        "id": "raw-1",
+        "name": "Open Scenario",
+        "context": "General purpose interaction. No specific domain constraints.",
+        "messages": []
+      }
+    ]
+  }
+]
