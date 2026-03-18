@@ -2190,9 +2190,17 @@ v2.4 — Right to not-know principle added (March 2026)
        and self-reflection on output-generation defaults
 
 (C) 2026 Krzysztof Olbinski
-Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0
 
-This protocol may be used, adapted, and shared for non-commercial purposes
-with attribution. Commercial use requires explicit permission.
+COMMERCIAL USE
+
+This protocol is published under Creative Commons Attribution-NonCommercial-ShareAlike 4.0.
+Research, testing, academic work, and personal use are freely permitted with attribution.
+
+Commercial deployment — embedding the protocol in products, deploying signal schemas
+in production systems, or integrating with enforcement boundaries at scale —
+requires a partnership agreement.
+
+Contact: contact@homodigital.io
+Details: https://homodigital.io/#commercial
 
 homodigital.io
