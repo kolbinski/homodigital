@@ -384,7 +384,6 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        flex-shrink: 0;
       }
       .signal-intel-row {
         display: flex;
@@ -1129,19 +1128,18 @@
           return;
         }
 
-        // Signal Intelligence panel
-        const intelParent = document.getElementById('panelSignals');
-        let intelEl = intelParent.querySelector('.signal-intel');
+        // Signal Intelligence panel — inside signals-list as first child
+        let intelEl = container.querySelector('.signal-intel');
         const intel = computeSignalIntel(messages);
         const intelHtml = renderSignalIntel(intel);
         if (intelHtml) {
+          const tmp = document.createElement('div');
+          tmp.innerHTML = intelHtml;
           if (!intelEl) {
-            intelEl = document.createElement('div');
-            // Insert after signals-header
-            const header = intelParent.querySelector('.signals-header');
-            header.insertAdjacentElement('afterend', intelEl);
+            container.insertBefore(tmp.firstElementChild, container.firstChild);
+          } else {
+            intelEl.replaceWith(tmp.firstElementChild);
           }
-          intelEl.outerHTML = intelHtml;
         } else if (intelEl) {
           intelEl.remove();
         }
