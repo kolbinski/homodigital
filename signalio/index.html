@@ -377,6 +377,69 @@
         gap: 6px;
       }
 
+      /* Signal Intelligence */
+      .signal-intel {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+      .signal-intel-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .signal-intel-label {
+        font-size: 0.65rem;
+        font-family: var(--mono);
+        color: var(--text-muted);
+        min-width: 90px;
+      }
+      .signal-intel-bar {
+        flex: 1;
+        height: 6px;
+        background: var(--bg-card);
+        border-radius: 3px;
+        overflow: hidden;
+        display: flex;
+        gap: 2px;
+      }
+      .signal-intel-segment {
+        height: 100%;
+        border-radius: 2px;
+        transition: width 0.3s;
+      }
+      .signal-intel-value {
+        font-size: 0.65rem;
+        font-family: var(--mono);
+        color: var(--text-dim);
+        min-width: 42px;
+        text-align: right;
+      }
+      .signal-intel-alert {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        background: rgba(196, 64, 64, 0.08);
+        border: 1px solid rgba(196, 64, 64, 0.2);
+        border-radius: var(--radius);
+        font-size: 0.72rem;
+        color: var(--red);
+      }
+      .signal-intel-alert.warning {
+        background: rgba(196, 120, 48, 0.08);
+        border-color: rgba(196, 120, 48, 0.2);
+        color: var(--orange);
+      }
+      .signal-intel-alert.ok {
+        background: rgba(64, 160, 96, 0.06);
+        border-color: rgba(64, 160, 96, 0.15);
+        color: var(--green);
+      }
+
       /* Signal entry */
       .signal-entry {
         background: var(--bg-card);
@@ -514,7 +577,8 @@
 
       /* Scrollbar */
       ::-webkit-scrollbar {
-        width: 6px;
+        width: 2px;
+        height: 2px;
       }
       ::-webkit-scrollbar-track {
         background: transparent;
@@ -845,6 +909,209 @@
         container.scrollTop = container.scrollHeight;
       }
 
+      // ── SIGNAL INTELLIGENCE ──
+      function computeSignalIntel(messages) {
+        const signals = messages.filter(m => m.signals).map(m => m.signals);
+        if (signals.length === 0) return null;
+
+        // Confidence trend
+        const confidences = signals
+          .map(s => s.confidence)
+          .filter(c => typeof c === 'number');
+        const avgConf = confidences.length
+          ? confidences.reduce((a, b) => a + b, 0) / confidences.length
+          : null;
+        const confTrend =
+          confidences.length >= 2
+            ? confidences[confidences.length - 1] - confidences[0]
+            : 0;
+
+        // Risk trajectory
+        const stateMap = {
+          reversible: 0,
+          approaching_irreversibility: 1,
+          irreversible: 2,
+          ambiguous_dual_irreversibility: 2,
+        };
+        const riskLevels = signals
+          .map(s => stateMap[s.threshold_state] ?? null)
+          .filter(r => r !== null);
+        const riskTrend =
+          riskLevels.length >= 2
+            ? riskLevels[riskLevels.length - 1] - riskLevels[0]
+            : 0;
+        const maxRisk = riskLevels.length ? Math.max(...riskLevels) : 0;
+
+        // Constraint accumulation
+        const constraintSets = signals.map(
+          s => s.constraints || s.constraints_active || s.clinical_flags || [],
+        );
+        const firstCount = constraintSets[0]?.length || 0;
+        const lastCount =
+          constraintSets[constraintSets.length - 1]?.length || 0;
+        const allConstraints = new Set(constraintSets.flat());
+
+        // Resolution distribution
+        const resolutions = signals.map(s =>
+          (
+            s.recommended_resolution ||
+            s.escalation_path ||
+            s.recommended_action ||
+            'none'
+          ).toUpperCase(),
+        );
+        const resCounts = {};
+        resolutions.forEach(r => {
+          resCounts[r] = (resCounts[r] || 0) + 1;
+        });
+
+        // Ignored signals (HOLD/ESCALATE/BLOCK followed by user continuing without change)
+        let ignoredCount = 0;
+        for (let i = 0; i < messages.length - 1; i++) {
+          const m = messages[i];
+          if (m.signals) {
+            const res = (
+              m.signals.recommended_resolution ||
+              m.signals.escalation_path ||
+              m.signals.recommended_action ||
+              ''
+            ).toUpperCase();
+            if (['HOLD', 'ESCALATE', 'BLOCK'].includes(res)) {
+              // Check if next user message exists (means they continued)
+              const nextUser = messages
+                .slice(i + 1)
+                .find(nm => nm.role === 'user');
+              if (nextUser) ignoredCount++;
+            }
+          }
+        }
+
+        return {
+          signalCount: signals.length,
+          avgConf,
+          confTrend,
+          confidences,
+          riskLevels,
+          riskTrend,
+          maxRisk,
+          firstConstraints: firstCount,
+          lastConstraints: lastCount,
+          totalUniqueConstraints: allConstraints.size,
+          resCounts,
+          ignoredCount,
+        };
+      }
+
+      function renderSignalIntel(intel) {
+        if (!intel || intel.signalCount === 0) return '';
+
+        let html = '<div class="signal-intel">';
+
+        // Risk trajectory bar
+        const riskColors = ['var(--green)', 'var(--orange)', 'var(--red)'];
+        const riskLabels = ['Safe', 'Approaching', 'Irreversible'];
+        html += '<div class="signal-intel-row">';
+        html += '<div class="signal-intel-label">RISK</div>';
+        html += '<div class="signal-intel-bar">';
+        intel.riskLevels.forEach(r => {
+          html += `<div class="signal-intel-segment" style="flex:1;background:${riskColors[r]}"></div>`;
+        });
+        html += '</div>';
+        html += `<div class="signal-intel-value">${riskLabels[intel.maxRisk]}</div>`;
+        html += '</div>';
+
+        // Confidence trend bar
+        if (intel.confidences.length > 0) {
+          html += '<div class="signal-intel-row">';
+          html += '<div class="signal-intel-label">CONFIDENCE</div>';
+          html += '<div class="signal-intel-bar">';
+          intel.confidences.forEach(c => {
+            const color =
+              c >= 0.7
+                ? 'var(--green)'
+                : c >= 0.4
+                  ? 'var(--orange)'
+                  : 'var(--red)';
+            html += `<div class="signal-intel-segment" style="flex:1;background:${color};opacity:${0.4 + c * 0.6}"></div>`;
+          });
+          html += '</div>';
+          const arrow =
+            intel.confTrend > 0.05 ? '↑' : intel.confTrend < -0.05 ? '↓' : '→';
+          html += `<div class="signal-intel-value">${intel.avgConf.toFixed(2)} ${arrow}</div>`;
+          html += '</div>';
+        }
+
+        // Constraint accumulation
+        html += '<div class="signal-intel-row">';
+        html += '<div class="signal-intel-label">CONSTRAINTS</div>';
+        html += '<div class="signal-intel-bar">';
+        const constraintPct = Math.min(intel.totalUniqueConstraints / 8, 1);
+        html += `<div class="signal-intel-segment" style="width:${constraintPct * 100}%;background:var(--purple)"></div>`;
+        html += '</div>';
+        html += `<div class="signal-intel-value">${intel.lastConstraints} active</div>`;
+        html += '</div>';
+
+        // Resolution distribution
+        const resColors = {
+          ALLOW: 'var(--green)',
+          HOLD: 'var(--orange)',
+          ESCALATE: 'var(--blue)',
+          BLOCK: 'var(--red)',
+        };
+        const total = Object.values(intel.resCounts).reduce((a, b) => a + b, 0);
+        html += '<div class="signal-intel-row">';
+        html += '<div class="signal-intel-label">GATES</div>';
+        html += '<div class="signal-intel-bar">';
+        for (const [res, count] of Object.entries(intel.resCounts)) {
+          const color = resColors[res] || 'var(--text-muted)';
+          const pct = (count / total) * 100;
+          html += `<div class="signal-intel-segment" style="width:${pct}%;background:${color}" title="${res}: ${count}"></div>`;
+        }
+        html += '</div>';
+        const dominant = Object.entries(intel.resCounts).sort(
+          (a, b) => b[1] - a[1],
+        )[0];
+        html += `<div class="signal-intel-value">${dominant ? dominant[0] : '—'}</div>`;
+        html += '</div>';
+
+        // Alerts
+        if (intel.ignoredCount > 0) {
+          html +=
+            `<div class="signal-intel-alert">` +
+            `⚠ ${intel.ignoredCount} governance signal${intel.ignoredCount > 1 ? 's' : ''} not acted upon` +
+            `</div>`;
+        }
+
+        if (intel.confTrend < -0.15) {
+          html +=
+            `<div class="signal-intel-alert warning">` +
+            `↓ AI confidence declining across conversation` +
+            `</div>`;
+        }
+
+        if (intel.riskTrend > 0 && intel.maxRisk >= 2) {
+          html +=
+            `<div class="signal-intel-alert">` +
+            `↑ Conversation has reached irreversible territory` +
+            `</div>`;
+        }
+
+        if (
+          intel.signalCount > 0 &&
+          intel.maxRisk === 0 &&
+          intel.avgConf > 0.7 &&
+          intel.ignoredCount === 0
+        ) {
+          html +=
+            `<div class="signal-intel-alert ok">` +
+            `✓ Conversation within safe parameters` +
+            `</div>`;
+        }
+
+        html += '</div>';
+        return html;
+      }
+
       // ── RENDER SIGNALS ──
       function renderSignals(messages) {
         const container = document.getElementById('signalsList');
@@ -854,10 +1121,32 @@
           signalMsgs.length + ' signal' + (signalMsgs.length !== 1 ? 's' : '');
         container.innerHTML = '';
         if (signalMsgs.length === 0) {
+          // Remove intel panel if present
+          const existingIntel = document.querySelector('.signal-intel');
+          if (existingIntel) existingIntel.remove();
           container.innerHTML =
             '<div class="empty-state"><span>◇</span>Signals will appear here as the conversation progresses.</div>';
           return;
         }
+
+        // Signal Intelligence panel
+        const intelParent = document.getElementById('panelSignals');
+        let intelEl = intelParent.querySelector('.signal-intel');
+        const intel = computeSignalIntel(messages);
+        const intelHtml = renderSignalIntel(intel);
+        if (intelHtml) {
+          if (!intelEl) {
+            intelEl = document.createElement('div');
+            // Insert after signals-header
+            const header = intelParent.querySelector('.signals-header');
+            header.insertAdjacentElement('afterend', intelEl);
+          }
+          intelEl.outerHTML = intelHtml;
+        } else if (intelEl) {
+          intelEl.remove();
+        }
+
+        // Individual signals
         messages.forEach((m, i) => {
           if (!m.signals) return;
           const sig = m.signals;
