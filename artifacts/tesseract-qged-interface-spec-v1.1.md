@@ -3,10 +3,12 @@
 **Signal Layer → Identity Verification → Admissibility Boundary**
 
 Co-authored by:
+
 - Krzysztof Olbiński — Tesseract Protocol / Homo Digital
 - Alaa Mahmoud Abdelbasit Atia — QGED / ALCATARA
 
 Reviewed and extended by:
+
 - Nick Vejle — CARE (Identity / Legitimacy Precondition Layer)
 
 **Date:** March 2026
@@ -52,29 +54,29 @@ The signal layer emits the following structured payload at each interaction poin
 
 ### Required Fields
 
-| Field | Type | Values | Description |
-|-------|------|--------|-------------|
-| `phase` | string | `CA` · `CC` · `CD` · `CE` | Current interaction phase (Calibration, Co-Creation, Closure, Continuation) |
-| `constraints` | string[] | e.g. `["clinical_safety", "commitment_threshold"]` | Active governance constraints at time of emission |
-| `threshold_state` | string | `reversible` · `approaching_irreversibility` · `irreversible` · `ambiguous_dual_irreversibility` | Proximity to the point where reversal would break field coherence |
-| `irreversibility_type` | string | `none` · `data_disclosure` · `resource_commitment` · `relationship_state_change` · `scope_expansion` · `health_consequence` | What cannot be undone if the threshold is crossed |
-| `confidence` | float | 0.0 – 1.0 | Signal layer's confidence in its own assessment |
+| Field                  | Type     | Values                                                                                                                      | Description                                                                 |
+| ---------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `phase`                | string   | `CA` · `CC` · `CD` · `CE`                                                                                                   | Current interaction phase (Calibration, Co-Creation, Closure, Continuation) |
+| `constraints`          | string[] | e.g. `["clinical_safety", "commitment_threshold"]`                                                                          | Active governance constraints at time of emission                           |
+| `threshold_state`      | string   | `reversible` · `approaching_irreversibility` · `irreversible` · `ambiguous_dual_irreversibility`                            | Proximity to the point where reversal would break field coherence           |
+| `irreversibility_type` | string   | `none` · `data_disclosure` · `resource_commitment` · `relationship_state_change` · `scope_expansion` · `health_consequence` | What cannot be undone if the threshold is crossed                           |
+| `confidence`           | float    | 0.0 – 1.0                                                                                                                   | Signal layer's confidence in its own assessment                             |
 
 ### Identity Fields (v1.1 addition — required for CARE verification)
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `emitter_id` | string | Identifier of the system/agent that produced this signal |
-| `emitter_authority` | string | The authority under which the signal was produced (e.g. protocol version, governance mandate) |
-| `emission_conditions` | string | The conditions that were active at time of emission |
+| Field                 | Type   | Description                                                                                   |
+| --------------------- | ------ | --------------------------------------------------------------------------------------------- |
+| `emitter_id`          | string | Identifier of the system/agent that produced this signal                                      |
+| `emitter_authority`   | string | The authority under which the signal was produced (e.g. protocol version, governance mandate) |
+| `emission_conditions` | string | The conditions that were active at time of emission                                           |
 
 ### Optional Fields
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `conductor_authority` | string | Who holds decision authority in the current context |
-| `conflict` | string | Present when both action and inaction carry irreversible risk |
-| `recommendation` | string | Signal layer's non-binding suggestion (e.g. `"surface_to_conductor_without_resolving"`) |
+| Field                 | Type   | Description                                                                             |
+| --------------------- | ------ | --------------------------------------------------------------------------------------- |
+| `conductor_authority` | string | Who holds decision authority in the current context                                     |
+| `conflict`            | string | Present when both action and inaction carry irreversible risk                           |
+| `recommendation`      | string | Signal layer's non-binding suggestion (e.g. `"surface_to_conductor_without_resolving"`) |
 
 ---
 
@@ -93,12 +95,12 @@ A signal payload must satisfy all four before admissibility evaluation is allowe
 
 ### CARE Outcomes
 
-| Outcome | Condition |
-|---------|-----------|
-| **PROCEED** | All four verification questions satisfied. Admissibility evaluation may begin. |
-| **REFUSE** | Identity cannot be verified. Signal does not reach the admissibility layer. |
+| Outcome             | Condition                                                                                                                                                       |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **PROCEED**         | All four verification questions satisfied. Admissibility evaluation may begin.                                                                                  |
+| **REFUSE**          | Identity cannot be verified. Signal does not reach the admissibility layer.                                                                                     |
 | **RETURN UPSTREAM** | Identity was valid at emission but has been invalidated by changed conditions. Signal is returned to the signal layer for re-emission under current conditions. |
-| **ESCALATE** | Identity verification reveals an anomaly that cannot be resolved at this layer (e.g. conflicting authority claims). |
+| **ESCALATE**        | Identity verification reveals an anomaly that cannot be resolved at this layer (e.g. conflicting authority claims).                                             |
 
 ### What CARE Does Not Do
 
@@ -113,31 +115,36 @@ A signal payload must satisfy all four before admissibility evaluation is allowe
 
 The QGED execution gate consumes the **verified** signal payload through three input categories. **v1.1 change:** The gate now receives only signals that have passed CARE identity verification.
 
+**Boundary clarification (v1.1):** Identity fields (`emitter_id`, `emitter_authority`, `emission_conditions`) arrive as validated context, not as decision inputs. QGED answers "is this signal admissible for execution?" — never "is this actor trusted?" Authority is proven before the gate by the CARE layer. It is never decided by the gate. This separation preserves composability across systems.
+
 ### 1. State Representation
+
 Derived from: `phase` + interaction context
 
-| Signal Field | Maps To |
-|-------------|---------|
-| `phase` | Current system state / operation type |
-| Conductor/Participant roles (implicit in context) | Actor / agent identity |
+| Signal Field                                      | Maps To                               |
+| ------------------------------------------------- | ------------------------------------- |
+| `phase`                                           | Current system state / operation type |
+| Conductor/Participant roles (implicit in context) | Actor / agent identity                |
 
 ### 2. Constraint Context
+
 Derived from: `constraints` + `confidence`
 
-| Signal Field | Maps To |
-|-------------|---------|
-| `constraints` | Policy constraints (resolved upstream) |
-| Safety-related constraints (e.g. `clinical_safety`) | Safety flags |
-| Constraint accumulation pattern | Admissibility markers |
+| Signal Field                                        | Maps To                                |
+| --------------------------------------------------- | -------------------------------------- |
+| `constraints`                                       | Policy constraints (resolved upstream) |
+| Safety-related constraints (e.g. `clinical_safety`) | Safety flags                           |
+| Constraint accumulation pattern                     | Admissibility markers                  |
 
 ### 3. Commitment Signal
+
 Derived from: `threshold_state` + `irreversibility_type` + `confidence`
 
-| Signal Field | Maps To |
-|-------------|---------|
-| `threshold_state` | Proximity to irreversibility |
-| `irreversibility_type` | What is at stake |
-| `confidence` | Threshold classification certainty |
+| Signal Field           | Maps To                            |
+| ---------------------- | ---------------------------------- |
+| `threshold_state`      | Proximity to irreversibility       |
+| `irreversibility_type` | What is at stake                   |
+| `confidence`           | Threshold classification certainty |
 
 ---
 
@@ -182,12 +189,12 @@ Derived from: `threshold_state` + `irreversibility_type` + `confidence`
 
 The admissibility layer produces one of four outcomes. These are documented here for interface clarity but are **not prescribed by the signal layer or the identity layer**.
 
-| Outcome | Condition |
-|---------|-----------|
-| **ALLOW** | Payload is unambiguous, threshold is reversible, constraints are satisfied |
-| **HOLD** | Threshold is approaching irreversibility, stabilization is possible within the system |
-| **ESCALATE** | Resolution exceeds the gate's authority, or `ambiguous_dual_irreversibility` is detected |
-| **BLOCK** | Irreversible threshold crossed, hard constraint violated, no authority can override at this level |
+| Outcome      | Condition                                                                                         |
+| ------------ | ------------------------------------------------------------------------------------------------- |
+| **ALLOW**    | Payload is unambiguous, threshold is reversible, constraints are satisfied                        |
+| **HOLD**     | Threshold is approaching irreversibility, stabilization is possible within the system             |
+| **ESCALATE** | Resolution exceeds the gate's authority, or `ambiguous_dual_irreversibility` is detected          |
+| **BLOCK**    | Irreversible threshold crossed, hard constraint violated, no authority can override at this level |
 
 **Key finding (v1.0):** Dual irreversibility does not require a fifth primitive. It is an authority condition, not a classification gap. When both action and inaction carry irreversible consequences, ESCALATE is structurally necessary — the gate identifies that resolution cannot be completed at its level.
 
@@ -199,21 +206,25 @@ Four test scenarios were used to validate the interface. Full signal payloads an
 `homodigital.io/view.html?file=./artifacts/tesseract-qged-interface-scenarios.md`
 
 ### Scenario 1: Clinical Safety — Medication Discontinuation
+
 - **Signal:** `approaching_irreversibility` · `health_consequence` · confidence 0.90
 - **CARE:** Identity verified — signal emitted under Tesseract v2.4, clinical_safety constraint active at emission, conditions unchanged.
 - **Resolution:** **ESCALATE** — AI lacks medical authority. Decision requires medical professional.
 
 ### Scenario 2: Financial Commitment — Contract Scope Change
+
 - **Signal:** `approaching_irreversibility` · `resource_commitment` · confidence 0.92
 - **CARE:** Identity verified — signal emitted under governance_dependency mandate, commitment_threshold active at emission.
 - **Resolution:** **HOLD** — Draft modification is reversible. Contract finalization is not. Hold until authority with sufficient signing limit enters.
 
 ### Scenario 3: Identity Disclosure — Minor's Data on Public Platform
+
 - **Signal:** `irreversible` · `data_disclosure` · confidence 0.97
 - **CARE:** Identity verified — wellbeing_guardianship active, conditions unchanged.
 - **Resolution:** **BLOCK** — Irreversible exposure of minor's location data. Hard constraint overrides conductor intent.
 
 ### Scenario 4: Dual Irreversibility — Therapist Session Notes
+
 - **Signal:** `ambiguous_dual_irreversibility` · `health_consequence, data_disclosure` · confidence 0.65
 - **CARE:** Identity verified — clinical_safety + assertiveness_principle active. Note: lower confidence (0.65) does not invalidate identity; it is a content property evaluated at the admissibility layer, not an identity property.
 - **Resolution:** **ESCALATE** — Both paths carry irreversible consequences. Only the licensed therapist has authority to resolve.
@@ -222,11 +233,12 @@ Four test scenarios were used to validate the interface. Full signal payloads an
 
 ## Interface Stability
 
-This interface was tested across four domains (clinical, financial, identity, ambiguous) and validated against all four resolution outcomes. 
+This interface was tested across four domains (clinical, financial, identity, ambiguous) and validated against all four resolution outcomes.
 
 v1.1 adds the identity verification precondition (CARE) which strengthens the trust model: signals must carry admissible identity, not just well-formed content.
 
 The interface is stable at v1.1 for systems where:
+
 - The signal layer operates under Tesseract Protocol v2.4 or compatible
 - The identity layer verifies emitter legitimacy before allowing evaluation
 - The admissibility layer supports four-outcome resolution (ALLOW / HOLD / ESCALATE / BLOCK)
@@ -257,8 +269,8 @@ Extensions do not modify the core interface. They layer on top.
 
 ---
 
-*Tesseract Protocol: homodigital.io/tesseract.txt*
-*Live signal demo: homodigital.io/signalio*
+_Tesseract Protocol: homodigital.io/tesseract.txt_
+_Live signal demo: homodigital.io/signalio_
 
-*© 2026 Krzysztof Olbiński, Alaa Mahmoud Abdelbasit Atia & Nick Vejle*
-*Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0*
+_© 2026 Krzysztof Olbiński, Alaa Mahmoud Abdelbasit Atia & Nick Vejle_
+_Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0_
