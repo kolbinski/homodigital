@@ -970,66 +970,162 @@
             border-radius: 10px;
             padding: 2.5rem 3rem;
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1.5rem;
           "
         >
-          <div style="max-width: 520px">
-            <div
-              style="
-                font-size: 0.72rem;
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: 0.12em;
-                color: rgba(255, 255, 255, 0.8);
-                margin-bottom: 0.5rem;
-              "
-            >
-              SignalIO
-            </div>
-            <h3
-              style="
-                font-family: var(--font-display);
-                font-size: 1.4rem;
-                color: white;
-                margin-bottom: 0.5rem;
-              "
-            >
-              Governance signals you can see
-            </h3>
-            <p
-              style="
-                font-size: 0.95rem;
-                color: rgba(255, 255, 255, 0.8);
-                line-height: 1.6;
-                margin: 0;
-              "
-            >
-              Four domain profiles — clinical safety, execution gates, evidence
-              records, raw protocol output. Pre-loaded scenarios including a
-              dual irreversibility edge case where both action and inaction
-              carry irreversible risk. Try it live.
-            </p>
-          </div>
-          <a
-            href="./signalio/"
+          <div
             style="
-              display: inline-block;
-              padding: 0.85rem 2rem;
-              background: white;
-              color: var(--color-accent);
-              text-decoration: none;
-              font-weight: 600;
-              font-size: 0.95rem;
-              border-radius: 6px;
-              transition: background 0.2s;
-              white-space: nowrap;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              gap: 1.5rem;
+              margin-bottom: 2rem;
             "
-            >Launch SignalIO →</a
           >
+            <div style="max-width: 520px">
+              <div
+                style="
+                  font-size: 0.72rem;
+                  font-weight: 500;
+                  text-transform: uppercase;
+                  letter-spacing: 0.12em;
+                  color: rgba(255, 255, 255, 0.8);
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Signalio
+              </div>
+              <h3
+                style="
+                  font-family: var(--font-display);
+                  font-size: 1.4rem;
+                  color: white;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Governance signals you can see
+              </h3>
+              <p
+                style="
+                  font-size: 0.95rem;
+                  color: rgba(255, 255, 255, 0.8);
+                  line-height: 1.6;
+                  margin: 0;
+                "
+              >
+                Four domain profiles — clinical safety, execution gates,
+                evidence records, raw protocol output. Pre-loaded scenarios
+                including a dual irreversibility edge case where both action and
+                inaction carry irreversible risk. Try it live.
+              </p>
+            </div>
+            <a
+              href="./signalio/"
+              style="
+                display: inline-block;
+                padding: 0.85rem 2rem;
+                background: white;
+                color: var(--color-accent);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.95rem;
+                border-radius: 6px;
+                white-space: nowrap;
+              "
+              >Launch Signalio →</a
+            >
+          </div>
+          <div
+            style="
+              border-top: 1px solid rgba(255, 255, 255, 0.15);
+              padding-top: 2rem;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 2rem;
+              align-items: center;
+            "
+          >
+            <div style="display: flex; gap: 2rem; justify-content: center">
+              <div style="text-align: center">
+                <div
+                  style="
+                    font-family: var(--font-display);
+                    font-size: 3rem;
+                    color: white;
+                    line-height: 1;
+                  "
+                >
+                  4
+                </div>
+                <div
+                  style="
+                    font-size: 0.85rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    margin-top: 0.5rem;
+                  "
+                >
+                  Domain profiles
+                </div>
+              </div>
+              <div style="text-align: center">
+                <div
+                  style="
+                    font-family: var(--font-display);
+                    font-size: 3rem;
+                    color: white;
+                    line-height: 1;
+                  "
+                >
+                  14
+                </div>
+                <div
+                  style="
+                    font-size: 0.85rem;
+                    color: rgba(255, 255, 255, 0.7);
+                    margin-top: 0.5rem;
+                  "
+                >
+                  Signal dimensions
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3
+                style="
+                  font-family: var(--font-display);
+                  font-size: 1.2rem;
+                  color: white;
+                  margin-bottom: 0.75rem;
+                "
+              >
+                Signal layer → Enforcement boundary
+              </h3>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: rgba(255, 255, 255, 0.8);
+                  line-height: 1.7;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Tesseract Protocol produces structured signals at runtime.
+                Signalio makes them visible — so enforcement layers, evidence
+                systems, and human operators can see exactly what the governance
+                layer detected, when, and why.
+              </p>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: rgba(255, 255, 255, 0.8);
+                  line-height: 1.7;
+                "
+              >
+                Each domain profile shapes the signal envelope for a specific
+                downstream consumer: NHS clinical governance, QGED execution
+                gates, Certified Execution Records, or raw protocol output.
+              </p>
+            </div>
+          </div>
         </div>
         <div
           style="
@@ -1096,34 +1192,6 @@
             "
             >Try Tool vs Partner →</a
           >
-        </div>
-        <div class="case-study-box">
-          <div>
-            <div class="case-metrics-row">
-              <div class="case-metric">
-                <div class="number">4</div>
-                <div class="label">Domain profiles</div>
-              </div>
-              <div class="case-metric">
-                <div class="number">14</div>
-                <div class="label">Signal dimensions</div>
-              </div>
-            </div>
-          </div>
-          <div class="case-details">
-            <h3>Signal layer → Enforcement boundary</h3>
-            <p>
-              Tesseract Protocol produces structured signals at runtime.
-              SignalIO makes them visible — so enforcement layers, evidence
-              systems, and human operators can see exactly what the governance
-              layer detected, when, and why.
-            </p>
-            <p>
-              Each domain profile shapes the signal envelope for a specific
-              downstream consumer: NHS clinical governance, QGED execution
-              gates, Certified Execution Records, or raw protocol output.
-            </p>
-          </div>
         </div>
       </section>
 
