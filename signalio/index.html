@@ -532,6 +532,9 @@
         .ws-tabs {
           display: flex;
         }
+        .ws-schema-badge {
+          display: none;
+        }
         .panel-chat {
           border-right: none;
         }
@@ -631,7 +634,7 @@
     <!-- WORKSPACE -->
     <div id="workspace">
       <div class="ws-topbar">
-        <button class="ws-back" id="btnBack">← Home</button>
+        <button class="ws-back" id="btnBack">←</button>
         <div class="ws-title" id="wsTitle"></div>
         <div class="ws-schema-badge" id="wsBadge"></div>
       </div>
@@ -766,6 +769,13 @@
         document.getElementById('workspace').style.display = 'flex';
         document.getElementById('wsTitle').textContent = currentTile.name;
         document.getElementById('wsBadge').textContent = currentTile.tag;
+        document
+          .querySelectorAll('.ws-tab')
+          .forEach(t =>
+            t.classList.toggle('active', t.dataset.panel === 'chat'),
+          );
+        document.getElementById('panelChat').classList.remove('hidden');
+        document.getElementById('panelSignals').classList.add('hidden');
         renderCasesBar();
         const cases = getCases(tileId);
         const firstId = Object.keys(cases)[0];
