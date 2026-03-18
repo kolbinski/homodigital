@@ -1045,7 +1045,7 @@
         html += '<div class="signal-intel-row">';
         html += '<div class="signal-intel-label">CONSTRAINTS</div>';
         html += '<div class="signal-intel-bar">';
-        const constraintPct = Math.min(intel.totalUniqueConstraints / 8, 1);
+        const constraintPct = Math.min(intel.lastConstraints / 8, 1);
         html += `<div class="signal-intel-segment" style="width:${constraintPct * 100}%;background:var(--purple)"></div>`;
         html += '</div>';
         html += `<div class="signal-intel-value">${intel.lastConstraints} active</div>`;
