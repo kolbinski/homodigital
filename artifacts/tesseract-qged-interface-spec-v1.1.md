@@ -11,8 +11,8 @@ Reviewed and extended by:
 
 - Nick Vejle — CARE (Identity / Legitimacy Precondition Layer)
 
-**Date:** March 2026
-**Status:** Draft v1.1 — incorporating CARE identity layer review
+**Date:** 19 March 2026
+**Status:** Locked v1.1 — confirmed by all three architects
 
 ---
 
