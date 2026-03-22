@@ -117,6 +117,8 @@ The QGED execution gate consumes the **verified** signal payload through three i
 
 **Boundary clarification (v1.1):** Identity fields (`emitter_id`, `emitter_authority`, `emission_conditions`) arrive as validated context, not as decision inputs. QGED answers "is this signal admissible for execution?" — never "is this actor trusted?" Authority is proven before the gate by the CARE layer. It is never decided by the gate. This separation preserves composability across systems.
 
+**Boundary clarification (v1.1, pilot-derived):** The signal layer describes ambiguity — it does not resolve it. Resolution paths, suggestions, or shaping of admissibility within the signal payload constitute authority leakage. A descriptive layer that starts shaping admissibility is no longer describing the system — it is silently governing it. HOLD exists to protect this boundary: it is an execution denial state, not a resolution construct. The gate alone defines whether ambiguity is acceptable for execution.
+
 ### 1. State Representation
 
 Derived from: `phase` + interaction context
@@ -266,6 +268,8 @@ Extensions do not modify the core interface. They layer on top.
 **v1.0 (March 17, 2026):** Initial interface specification. Signal schema, input mapping, boundary contract, four-outcome resolution model, four reference scenarios. Co-authored by Krzysztof Olbiński and Alaa Mahmoud Abdelbasit Atia.
 
 **v1.1 (March 18, 2026):** Identity / legitimacy verification precondition (CARE) inserted between signal formation and admissibility evaluation. Three identity fields added to signal schema. CARE verification questions, outcomes, and boundary commitments formalized. Reference scenarios annotated with CARE verification step. Implicit trust assumption identified and resolved. Based on written review by Nick Vejle.
+
+**v1.1 addendum (March 22, 2026):** Second boundary clarification added: signal layer describes ambiguity, does not resolve it. Resolution paths in signal payloads identified as authority leakage. Derived from CARSHUNTER pilot (Case 3 — ambiguous offer). Identified by Alaa Mahmoud Abdelbasit Atia during live pilot review.
 
 ---
 
