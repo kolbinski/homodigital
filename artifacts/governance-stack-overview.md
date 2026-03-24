@@ -47,6 +47,11 @@ All other positions are based on active conversations and published work by the 
 │  identity still holds at point of evaluation            │
 │  Nick Vejle — CARE                                 ◄── LOCKED
 ├─────────────────────────────────────────────────────────┤
+│  AUTHORITY LIFECYCLE                                    │
+│  Revalidates authority against current conditions       │
+│  without reopening it to mutation                       │
+│  James Davis                                            │
+├─────────────────────────────────────────────────────────┤
 │  ADMISSIBILITY EVALUATION                               │
 │  Resolves ALLOW / HOLD / ESCALATE / BLOCK               │
 │  Alaa Mahmoud Abdelbasit Atia — QGED / ALCATARA   ◄── LOCKED
@@ -73,7 +78,7 @@ What conditions the interpretive field before a structured signal is even formed
 
 **Key question:** Is the signal layer independent of the probabilistic dynamics it observes, or does it co-evolve with them?
 
-**Status:** Active conversation. No interface defined.
+**Status:** Active conversation. Committed to review dual-snapshot instrumentation design for collapse invariance detection. No interface defined.
 
 ### 2. Decision Space Constraint — DAI (George-Adrian Caboc)
 
@@ -115,7 +120,17 @@ Before admissibility evaluation proceeds, the CARE layer verifies that the signa
 
 **Status:** Locked in [Tesseract–QGED Interface Spec v1.1](https://homodigital.io/view.html?file=artifacts/tesseract-qged-interface-spec-v1.1.md). Confirmed by Nick Vejle.
 
-### 7. Admissibility Evaluation — QGED (Alaa Mahmoud Abdelbasit Atia, ALCATARA)
+### 7. Authority Lifecycle (James Davis)
+
+Authority that is structurally non-overridable solves mutation. But it introduces a second failure mode: authority that remains formally valid while the conditions it was authored against have drifted. Authority staleness is as dangerous as authority drift — one is unstable, the other is misaligned but still enforced.
+
+The mechanism: authority must not be redefined at runtime, but it must be revalidated before each commit. Not as a policy layer — as a runtime condition for execution itself. This extends CARE's fourth question ("does identity still hold at the point of evaluation?") from signals to authority: does the authority anchor still align with the conditions it was authored to govern?
+
+**Key distinction:** Two competing failure modes — authority drift (unstable) vs authority staleness (misaligned but enforced). Revalidation without mutation addresses both.
+
+**Status:** Active conversation. Structured artifact in development.
+
+### 8. Admissibility Evaluation — QGED (Alaa Mahmoud Abdelbasit Atia, ALCATARA)
 
 The gate consumes identity-verified signal payloads and resolves: ALLOW, HOLD, ESCALATE, or BLOCK. QGED answers one question: "is this signal admissible for execution?" Identity is validated context, not decision input. Authority is proven before the gate — never decided by it.
 
@@ -123,15 +138,15 @@ The gate consumes identity-verified signal payloads and resolves: ALLOW, HOLD, E
 
 **Status:** Locked in spec v1.1. Live pilot producing cases. Co-author of interface spec. Two boundary clarifications derived from pilot.
 
-### 8. Non-Cognitive Transport & Audit — GOPEL (Basil C. Puglisi, HAIA-RECCLIN)
+### 9. Non-Cognitive Transport & Audit — GOPEL (Basil C. Puglisi, HAIA-RECCLIN)
 
 Seven deterministic operations: dispatch, collect, route, log, pause, hash, report. Zero cognitive work. GOPEL transports signals without evaluating them. The non-cognitive constraint is enforced by static analysis of its own codebase. 171 tests, eight adversarial review rounds across seven independent platforms.
 
-**Key contribution:** "AI cannot approve another AI" — constitutional constraint enforced in code. CICE v1.1 extension produced from Tesseract structural review, with joint mapping of signal fields to RECCLIN structured fields as defined collaboration target.
+**Key contribution:** "AI cannot approve another AI" — constitutional constraint enforced in code. CICE v1.2 extension produced from Tesseract structural review, with joint mapping of signal fields to RECCLIN structured fields as active collaboration.
 
-**Status:** Published. Code at [github.com/basilpuglisi/HAIA](https://github.com/basilpuglisi/HAIA). CICE v1.1 credits Tesseract review as catalyst. Section 8 defines convergence deliverable.
+**Status:** Published. Code at [github.com/basilpuglisi/HAIA](https://github.com/basilpuglisi/HAIA). CICE v1.2 credits Tesseract review as catalyst. Section 8 defines convergence with locked signal schema. Joint DMC mapping document delivered.
 
-### 9. Evidence Certification — CER (Jeremy Bouedo, NexArt)
+### 10. Evidence Certification — CER (Jeremy Bouedo, NexArt)
 
 Proof that signals were emitted, evaluated, acknowledged, or bypassed. The fourth state — bypassed — is the one nobody tracks. Tamper-evident execution records that prove governance actually happened, not just that governance infrastructure existed.
 
@@ -157,8 +172,8 @@ Only one interface is currently locked and validated:
 **Tesseract × GOPEL** (Signal metadata as RECCLIN transport fields)
 
 - Architectural compatibility confirmed by Basil C. Puglisi
-- Joint mapping of signal fields to RECCLIN structured fields identified as collaboration deliverable
-- Documented in CICE v1.1, Section 8
+- Documented in CICE v1.2, Section 8
+- Joint DMC mapping document delivered: [tesseract-recclin-dmc-mapping.md](https://homodigital.io/view.html?file=artifacts/tesseract-recclin-dmc-mapping.md)
 
 All other layer relationships are observed convergences, not validated contracts.
 
@@ -185,8 +200,9 @@ These principles emerged from the conversations that produced this stack:
 - **Reference sovereignty:** What does the system do when it cannot guarantee that its reference is still what it was about? (Identified by Alaa, public thread)
 - **Coherence model:** How does the system maintain alignment across evolving state, shifting constraints, changing authority, and decaying temporal validity? (Identified by John Wright)
 - **Collapse invariance:** Is the signal layer independent of the probabilistic dynamics it observes, or does it co-evolve? (Identified by Jeff Borneman)
-- **Constitutional wall at scale:** How does the human checkpoint avoid silent conversion from governance to rubber-stamping under production volume? (Identified by Basil C. Puglisi, CICE v1.1)
+- **Constitutional wall at scale:** How does the human checkpoint avoid silent conversion from governance to rubber-stamping under production volume? (Identified by Basil C. Puglisi, CICE v1.2)
 - **Provable prevention:** Can we certify that certain actions were structurally impossible, not just blocked? (Identified by Jose Jubera)
+- **Authority lifecycle:** Authority anchored once solves mutation — but what happens when conditions drift while authority stays fixed? Revalidation without redefinition may be required before each commit. (Identified by James Davis)
 
 ---
 
@@ -194,9 +210,9 @@ These principles emerged from the conversations that produced this stack:
 
 No committee designed this. No funding produced it. No institution organized it.
 
-Nine independent builders, working on different problems in different countries, identified layers that converge on the same architecture. Each conversation surfaced a gap the previous ones hadn't seen. The stack grew organically from LinkedIn DMs, public comment threads, structural reviews, and a live pilot.
+Ten independent builders, working on different problems in different countries, identified layers that converge on the same architecture. Each conversation surfaced a gap the previous ones hadn't seen. The stack grew organically from LinkedIn DMs, public comment threads, structural reviews, and a live pilot.
 
-The only coordination is one person talking to all nine. From Sieradz, Poland.
+The only coordination is one person talking to all ten. From Sieradz, Poland.
 
 ---
 
