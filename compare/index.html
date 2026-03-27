@@ -283,6 +283,7 @@
         width: 8px;
         height: 8px;
         border-radius: 50%;
+        flex-shrink: 0;
       }
       .dot-red {
         background: var(--red);
@@ -310,18 +311,131 @@
         margin-left: auto;
       }
 
+      .copy-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.15s;
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+      }
+      .copy-btn:hover {
+        background: rgba(0, 0, 0, 0.06);
+      }
+      .copy-btn svg {
+        width: 16px;
+        height: 16px;
+        stroke: #999;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: stroke 0.15s;
+      }
+      .copy-btn:hover svg {
+        stroke: var(--text);
+      }
+      .copy-btn.copied svg {
+        stroke: var(--accent);
+      }
+
       .panel-body {
         padding: 1.25rem;
         font-size: 0.92rem;
         line-height: 1.7;
         color: #333;
         min-height: 200px;
-        white-space: pre-wrap;
         word-wrap: break-word;
       }
       .loading-text {
         color: #999;
         font-style: italic;
+      }
+
+      /* ── Markdown content styles ── */
+      .panel-body h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--text);
+        margin: 1.25rem 0 0.5rem 0;
+        line-height: 1.3;
+      }
+      .panel-body h1:first-child {
+        margin-top: 0;
+      }
+      .panel-body h2 {
+        font-size: 1.08rem;
+        font-weight: 700;
+        color: var(--text);
+        margin: 1.15rem 0 0.4rem 0;
+        line-height: 1.35;
+      }
+      .panel-body h2:first-child {
+        margin-top: 0;
+      }
+      .panel-body h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--text2);
+        margin: 1rem 0 0.35rem 0;
+        line-height: 1.4;
+      }
+      .panel-body h3:first-child {
+        margin-top: 0;
+      }
+      .panel-body p {
+        margin: 0.4rem 0;
+      }
+      .panel-body strong {
+        font-weight: 700;
+        color: var(--text);
+      }
+      .panel-body em {
+        font-style: italic;
+      }
+      .panel-body ul,
+      .panel-body ol {
+        margin: 0.4rem 0 0.4rem 1.4rem;
+      }
+      .panel-body li {
+        margin: 0.2rem 0;
+      }
+      .panel-body code {
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        font-size: 0.85em;
+        background: #f3f3ee;
+        padding: 0.15em 0.35em;
+        border-radius: 3px;
+      }
+      .panel-body pre {
+        background: #f3f3ee;
+        padding: 0.85rem 1rem;
+        border-radius: 6px;
+        overflow-x: auto;
+        margin: 0.6rem 0;
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+      .panel-body pre code {
+        background: none;
+        padding: 0;
+      }
+      .panel-body blockquote {
+        border-left: 3px solid var(--border);
+        padding-left: 0.85rem;
+        margin: 0.6rem 0;
+        color: var(--text2);
+        font-style: italic;
+      }
+      .panel-body hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 1rem 0;
       }
 
       .explanation {
@@ -394,6 +508,9 @@
             <div class="dot dot-red"></div>
             <span class="panel-label label-red">Tool Mode</span>
             <span class="panel-sub">Default behavior — no protocol</span>
+            <button class="copy-btn" id="copyTool" title="Copy to clipboard" style="display:none;">
+              <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
           </div>
           <div class="panel-body" id="toolResponse"></div>
         </div>
@@ -402,6 +519,9 @@
             <div class="dot dot-green"></div>
             <span class="panel-label label-green">Partner Mode</span>
             <span class="panel-sub">Tesseract Protocol</span>
+            <button class="copy-btn" id="copyPartner" title="Copy to clipboard" style="display:none;">
+              <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
           </div>
           <div class="panel-body" id="partnerResponse"></div>
         </div>
@@ -441,8 +561,12 @@
       const partnerEl = document.getElementById('partnerResponse');
       const errorEl = document.getElementById('error');
       const explanationEl = document.getElementById('explanation');
+      const copyToolBtn = document.getElementById('copyTool');
+      const copyPartnerBtn = document.getElementById('copyPartner');
 
       let selectedExample = -1;
+      let rawToolText = '';
+      let rawPartnerText = '';
 
       EXAMPLES.forEach((ex, i) => {
         const btn = document.createElement('button');
@@ -468,6 +592,172 @@
         compareBtn.disabled = len === 0;
       }
 
+      /* ── Markdown to HTML parser ── */
+      function mdToHtml(md) {
+        let html = md;
+
+        // Code blocks (``` ... ```)
+        html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) => {
+          return '<pre><code>' + escapeHtml(code.trim()) + '</code></pre>';
+        });
+
+        // Inline code
+        html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+        // Split into lines for block-level processing
+        const lines = html.split('\n');
+        let result = [];
+        let inList = false;
+        let listType = '';
+
+        for (let i = 0; i < lines.length; i++) {
+          let line = lines[i];
+
+          // Skip if inside pre block
+          if (line.includes('<pre>')) {
+            let preBlock = line;
+            while (!line.includes('</pre>') && i < lines.length - 1) {
+              i++;
+              line = lines[i];
+              preBlock += '\n' + line;
+            }
+            if (inList) { result.push(listType === 'ul' ? '</ul>' : '</ol>'); inList = false; }
+            result.push(preBlock);
+            continue;
+          }
+
+          // Headings
+          if (line.match(/^### /)) {
+            if (inList) { result.push(listType === 'ul' ? '</ul>' : '</ol>'); inList = false; }
+            result.push('<h3>' + inlineFormat(line.slice(4)) + '</h3>');
+            continue;
+          }
+          if (line.match(/^## /)) {
+            if (inList) { result.push(listType === 'ul' ? '</ul>' : '</ol>'); inList = false; }
+            result.push('<h2>' + inlineFormat(line.slice(3)) + '</h2>');
+            continue;
+          }
+          if (line.match(/^# /)) {
+            if (inList) { result.push(listType === 'ul' ? '</ul>' : '</ol>'); inList = false; }
+            result.push('<h1>' + inlineFormat(line.slice(2)) + '</h1>');
+            continue;
+          }
+
+          // Horizontal rule
+          if (line.match(/^(-{3,}|\*{3,}|_{3,})$/)) {
+            if (inList) { result.push(listType === 'ul' ? '</ul>' : '</ol>'); inList = false; }
+            result.push('<hr>');
+            continue;
+          }
+
+          // Blockquote
+          if (line.match(/^>\s?/)) {
+            if (inList) { result.push(listType === 'ul' ? '</ul>' : '</ol>'); inList = false; }
+            result.push('<blockquote>' + inlineFormat(line.replace(/^>\s?/, '')) + '</blockquote>');
+            continue;
+          }
+
+          // Unordered list
+          if (line.match(/^[\s]*[-*]\s/)) {
+            const content = line.replace(/^[\s]*[-*]\s/, '');
+            if (!inList || listType !== 'ul') {
+              if (inList) result.push(listType === 'ul' ? '</ul>' : '</ol>');
+              result.push('<ul>');
+              inList = true;
+              listType = 'ul';
+            }
+            result.push('<li>' + inlineFormat(content) + '</li>');
+            continue;
+          }
+
+          // Ordered list
+          if (line.match(/^[\s]*\d+[.)]\s/)) {
+            const content = line.replace(/^[\s]*\d+[.)]\s/, '');
+            if (!inList || listType !== 'ol') {
+              if (inList) result.push(listType === 'ul' ? '</ul>' : '</ol>');
+              result.push('<ol>');
+              inList = true;
+              listType = 'ol';
+            }
+            result.push('<li>' + inlineFormat(content) + '</li>');
+            continue;
+          }
+
+          // Close list if we hit a non-list line
+          if (inList && line.trim() === '') {
+            result.push(listType === 'ul' ? '</ul>' : '</ol>');
+            inList = false;
+            continue;
+          }
+          if (inList && line.trim() !== '') {
+            result.push(listType === 'ul' ? '</ul>' : '</ol>');
+            inList = false;
+          }
+
+          // Empty line
+          if (line.trim() === '') {
+            continue;
+          }
+
+          // Regular paragraph
+          result.push('<p>' + inlineFormat(line) + '</p>');
+        }
+
+        if (inList) {
+          result.push(listType === 'ul' ? '</ul>' : '</ol>');
+        }
+
+        return result.join('\n');
+      }
+
+      function inlineFormat(text) {
+        // Bold + italic
+        text = text.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+        // Bold
+        text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        // Italic
+        text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+        // Inline code (already handled but just in case)
+        // Links
+        text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+        return text;
+      }
+
+      function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      }
+
+      /* ── Copy to clipboard ── */
+      function setupCopy(btn, getRawText) {
+        btn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(getRawText());
+            btn.classList.add('copied');
+            btn.title = 'Copied!';
+            setTimeout(() => {
+              btn.classList.remove('copied');
+              btn.title = 'Copy to clipboard';
+            }, 2000);
+          } catch (e) {
+            // Fallback
+            const ta = document.createElement('textarea');
+            ta.value = getRawText();
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            btn.classList.add('copied');
+            setTimeout(() => btn.classList.remove('copied'), 2000);
+          }
+        });
+      }
+
+      setupCopy(copyToolBtn, () => rawToolText);
+      setupCopy(copyPartnerBtn, () => rawPartnerText);
+
+      /* ── Compare action ── */
       compareBtn.addEventListener('click', async () => {
         const prompt = promptEl.value.trim();
         if (!prompt) return;
@@ -477,22 +767,30 @@
         errorEl.style.display = 'none';
         explanationEl.style.display = 'none';
         resultsEl.style.display = 'grid';
-        toolEl.innerHTML =
-          '<span class="loading-text">Generating response...</span>';
-        partnerEl.innerHTML =
-          '<span class="loading-text">Generating response...</span>';
+        toolEl.innerHTML = '<span class="loading-text">Generating response...</span>';
+        partnerEl.innerHTML = '<span class="loading-text">Generating response...</span>';
+        copyToolBtn.style.display = 'none';
+        copyPartnerBtn.style.display = 'none';
+        rawToolText = '';
+        rawPartnerText = '';
 
         try {
           const [toolRes, partnerRes] = await Promise.all([
             callProxy(prompt, null),
             callProxy(prompt, 'tesseract'),
           ]);
-          toolEl.textContent = toolRes;
-          partnerEl.textContent = partnerRes;
+
+          rawToolText = toolRes;
+          rawPartnerText = partnerRes;
+
+          toolEl.innerHTML = mdToHtml(toolRes);
+          partnerEl.innerHTML = mdToHtml(partnerRes);
+
+          copyToolBtn.style.display = 'flex';
+          copyPartnerBtn.style.display = 'flex';
           explanationEl.style.display = 'block';
         } catch (e) {
-          errorEl.textContent =
-            e.message || 'Something went wrong. Check console for details.';
+          errorEl.textContent = e.message || 'Something went wrong. Check console for details.';
           errorEl.style.display = 'block';
         } finally {
           compareBtn.disabled = false;
