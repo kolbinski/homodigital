@@ -180,4 +180,4 @@ _"Jaka forma współpracy — pilotaż, doradztwo architektoniczne, udział w sp
 
 ---
 
-_Krzysztof Olbiński · Homo Digital · contact@homodigital.io · +48 503 520 004 · homodigital.io_
+_Krzysztof Olbiński · Homo Digital · olbinski@gmail.com · +48 503 520 004 · homodigital.io_

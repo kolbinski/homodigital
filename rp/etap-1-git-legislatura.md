@@ -244,7 +244,7 @@ Ta sama architektura, różne instancje.
 
 **Samorząd:** budżet gminy jako kod (każdy aneks widoczny z datą i autorem),
 zamówienia publiczne jako issues z trackerem statusu,
-MPZP — koniec z "skąd ta wieżowiec się wzięła."
+Miejscowy plan zagospodarowania przestrzennego — koniec z pytaniami "skąd ten wieżowiec się wziął?"
 
 **Szkoły:** curriculum jako repozytorium (dobra lekcja forkowana między nauczycielami),
 ocena procesu ucznia a nie tylko produktu,
@@ -269,4 +269,4 @@ Partnerstwo po dowodzie koncepcji.
 
 ---
 
-_Krzysztof Olbiński · Homo Digital · contact@homodigital.io · +48 503 520 004 · homodigital.io_
+_Krzysztof Olbiński · Homo Digital · olbinski@gmail.com · +48 503 520 004 · homodigital.io_
