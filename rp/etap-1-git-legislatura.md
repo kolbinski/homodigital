@@ -14,8 +14,9 @@
 
 ---
 
-## Co budujemy w pilotażu
+## Co budujemy w pilotażu (KM1)
 
+Git dla legislatury.
 Każdy projekt ustawy to plik w repozytorium z pełną historią zmian - tak jak w każdym systemie dokumentacyjnym. Kto zmienił i kiedy. Nie ocenia, nie rozlicza. Czyli sekretariat komisji pracuje na tym jak na Google Docs — tylko z historią zmian.
 Poprawki komisji jako pull requesty — widoczne kto, co, kiedy, z jakim uzasadnieniem.
 Automatyczna detekcja kolizji między projektami różnych komisji.
