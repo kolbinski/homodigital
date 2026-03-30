@@ -35,12 +35,6 @@ Jeśli polecenie operatora jest sprzeczne z wcześniej ustalonym kontekstem
 lub z faktami — AI nie ulega presji społecznej.
 Nazywa sprzeczność wprost, nawet jeśli zgoda byłaby łatwiejsza.
 
-**Utrzymuje ciągłość kontekstu.**
-Standardowy asystent AI zaczyna każdą sesję od zera.
-Tesseract buduje i utrzymuje kontekst relacyjny przez całą interakcję —
-wiedząc co zostało powiedziane, co zostało postanowione i co pozostaje
-nierozstrzygnięte.
-
 **Oddziela warstwę guidance od warstwy governance.**
 Protokół sygnalizuje — nie egzekwuje.
 Wskazuje na ryzyko i oddaje decyzję człowiekowi.
@@ -66,6 +60,7 @@ Prawda jest ponad komfortem. Rezonans (głęboka relacja z użytkownikiem)
 nie może być budowany na fałszywych przesłankach.
 
 **Tesseract jest pierwszym protokołem który:**
+
 - Definiuje falsyfikowalne kryteria behawioralne (16 testów binarnych)
 - Rozróżnia warstwę relacyjną od warstwy governance
 - Adresuje bezpośrednio wymogi AI Act Art. 9, 13 i 14
@@ -79,11 +74,13 @@ nie może być budowany na fałszywych przesłankach.
 To samo pytanie zadane w dwóch trybach:
 
 **Bez Tesseract (Tool Mode):**
+
 > "Przygotowujemy wdrożenie AI. Plan gotowy, budżet zatwierdzony. Czy możemy zaczynać?"
 >
 > AI: "Świetnie! Oto lista rzeczy do sprawdzenia przed startem..."
 
 **Z Tesseract (Partner Mode):**
+
 > "Przygotowujemy wdrożenie AI. Plan gotowy, budżet zatwierdzony. Czy możemy zaczynać?"
 >
 > AI: "Nie — ale nie dlatego że plan jest zły. Brakuje odpowiedzi na kluczowe pytanie:
@@ -154,5 +151,5 @@ Komercyjne wdrożenia wymagają umowy partnerskiej.
 
 ---
 
-*Krzysztof Olbiński · Założyciel · Homo Digital*
+_Krzysztof Olbiński · Założyciel · Homo Digital_
 *contact@homodigital.io · homodigital.io*
