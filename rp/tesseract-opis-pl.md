@@ -146,7 +146,6 @@ Komercyjne wdrożenia wymagają umowy partnerskiej.
 ## Dokumentacja
 
 - Pełny protokół: homodigital.io/tesseract.txt
-- Demo Tool Mode vs Partner Mode: homodigital.io/compare
 - Specyfikacja integracji NHS: homodigital.io/rp
 
 ---

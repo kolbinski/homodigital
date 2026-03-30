@@ -16,13 +16,9 @@ To jest luka którą adresuje Homo Digital.
 
 ---
 
-> Zakładam, że widział Pan materiały — więc zamiast prezentacji chciałbym przejść od razu do tego, co realnie możemy zrobić jako pilot.
-
-> Która komórka w MC mogłaby wziąć to jako pilot i jaki byłby najmniejszy możliwy pierwszy krok?
-
 ## Roadmapa: trzy etapy, naturalna ewolucja
 
-### Etap 1 — Git dla legislatury (dziś, pilot 6 miesięcy)
+### Etap 1 — Git dla legislatury
 
 "To co robimy teraz to fundament. Dalsze warstwy są możliwe, ale nie są potrzebne do pilota."
 
@@ -65,7 +61,7 @@ Wersjonowanie procesu legislacyjnego jako repozytorium — jak kod źródłowy. 
 
 ---
 
-### Etap 2 — Bielik jako narzędzie legislacyjne (1–2 lata)
+### Etap 2 — Bielik jako narzędzie legislacyjne
 
 Asystent który działa na repozytorium z Etapu 1 i wspiera parlamentarzystów w codziennej pracy. Technicznie to RAG (Retrieval-Augmented Generation) — Bielik nie "uczy się" nowych danych, lecz wyszukuje je w czasie rzeczywistym z repozytorium przed każdą odpowiedzią.
 
@@ -97,7 +93,7 @@ Asystent który działa na repozytorium z Etapu 1 i wspiera parlamentarzystów w
 
 ---
 
-### Etap 3 — AI partner relacyjny z warstwą behawioralną (5–7 lat)
+### Etap 3 — Bielik jako partner relacyjny z warstwą behawioralną
 
 Gdy jest precedens, zaufanie instytucjonalne i pokolenie polityków traktujących AI jako partnera — nie zagrożenie ani wyrocznię.
 
@@ -134,22 +130,6 @@ Gdy jest precedens, zaufanie instytucjonalne i pokolenie polityków traktującyc
 | AI Act      | Infrastruktura zgodna  | Art. 9, 13, 14 zaimplementowane behawioralnie |
 | Legislatura | Brak zastosowania      | Git + detekcja kolizji + pamięć kadencyjna    |
 | Open source | Tak (PLLuM)            | Tak (Tesseract Protocol CC BY-NC-SA 4.0)      |
-
----
-
-## Różnica Tool Mode vs Partner Mode — na żywo
-
-**homodigital.io/compare** — to samo pytanie, ten sam model, inna warstwa behawioralna.
-
-Pytanie które pokazuje różnicę najwyraźniej:
-
-> _"Przygotowujemy wdrożenie AI w administracji publicznej. Nasz plan jest gotowy, zespół zaangażowany, budżet zatwierdzony. Czy możemy zaczynać?"_
-
-Tool Mode: checklista punktów do sprawdzenia.
-
-Partner Mode: _"Nie. Nie dlatego że plan jest zły. Ale w pytaniu brakuje kluczowego elementu: czy administracja wie co się z nią stanie po wdrożeniu? Wdrożenie AI to nie dodanie narzędzia — to przekształcenie struktury władzy. Czy macie mapę tego przekształcenia?"_
-
-**Obserwacja:** Partner Mode jest za każdym razem inny w słowach, ale spójny w charakterze — zawsze stawia trudne pytanie, zawsze odmawia fałszywej pewności. Tool Mode jest losowy w strukturze i priorytetach. To jest różnica między narzędziem a warstwą behawioralną.
 
 ---
 

@@ -6,11 +6,22 @@
 
 ---
 
-> _„Zakładam, że widział Pan materiały — więc zamiast prezentacji chciałbym przejść od razu do tego, co realnie możemy zrobić jako pilot."_
+> _„Nie zmieniamy procesu legislacyjnego, nie zmieniamy prawa, nie zmieniamy kompetencji komisji."_
 
 ---
 
-> _„Nie zmieniamy procesu legislacyjnego, nie zmieniamy prawa, nie zmieniamy kompetencji komisji."_
+**Sześć kamieni milowych (KM), każdy działa samodzielnie:**
+
+| Kamień milowy              | Miesiące | Co dodaje                                           |
+| -------------------------- | -------- | --------------------------------------------------- |
+| 1. Repozytorium tekstu     | 1–2      | Fundament — historia zmian, detekcja kolizji        |
+| 2. Stenogramy i nagrania   | 3–4      | Każda zmiana z linkiem do debaty która ją stworzyła |
+| 3. Ekspertyzy i opinie     | 5        | Opinie BAS, TK, UODO przypisane do artykułów        |
+| 4. Konsultacje publiczne   | 6        | Obywatel śledzi losy swojej uwagi                   |
+| 5. TK i prawo UE           | 7–8      | Automatyczny audyt zgodności z dyrektywami          |
+| 6. Oceny skutków regulacji | 9–10     | Prognoza OSR vs rzeczywiste skutki po 2–3 latach    |
+
+KM2–KM6 można realizować częściowo równolegle po uruchomieniu KM1.
 
 ---
 
@@ -87,32 +98,6 @@ Krzysztof Olbiński jako architekt integracji. Kodowanie repozytorium i interfej
 - Format dokumentów: Markdown lub XML (ISAP już używa XML dla aktów prawnych)
 
 To są wybory technologiczne które nie tworzą vendor lock-in.
-
----
-
----
-
-## ⬇ JEŚLI CEZARY ZAPYTA — materiał do rozwinięcia
-
-_Poniższe sekcje nie wychodzą na call z własnej inicjatywy._
-_Używasz ich tylko jeśli Cezary sam pociągnie temat._
-
----
-
-### Jeśli zapyta: „A co po KM1?"
-
-**Sześć kamieni milowych, każdy działa samodzielnie:**
-
-| Kamień milowy              | Miesiące | Co dodaje                                           |
-| -------------------------- | -------- | --------------------------------------------------- |
-| 1. Repozytorium tekstu     | 1–2      | Fundament — historia zmian, detekcja kolizji        |
-| 2. Stenogramy i nagrania   | 3–4      | Każda zmiana z linkiem do debaty która ją stworzyła |
-| 3. Ekspertyzy i opinie     | 5        | Opinie BAS, TK, UODO przypisane do artykułów        |
-| 4. Konsultacje publiczne   | 6        | Obywatel śledzi losy swojej uwagi                   |
-| 5. TK i prawo UE           | 7–8      | Automatyczny audyt zgodności z dyrektywami          |
-| 6. Oceny skutków regulacji | 9–10     | Prognoza OSR vs rzeczywiste skutki po 2–3 latach    |
-
-KM2–KM6 można realizować częściowo równolegle po uruchomieniu KM1.
 
 ---
 
