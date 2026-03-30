@@ -1,6 +1,8 @@
 # Git dla legislatury — Pilot
 
-### Spotkanie z Cezarym Wujcińskim | 30 marca 2026, 13:00
+## Spotkanie z Cezarym Wujcińskim, Departament Badań i Innowacji, MC
+
+### 30 marca 2026, 13:00–13:30 | Nr sprawy: DWS.WNP.161.427.2026
 
 ---
 
