@@ -57,7 +57,7 @@ Wersjonowanie procesu legislacyjnego jako repozytorium — jak kod źródłowy. 
 
 **Mierzalne rezultaty:** liczba wykrytych kolizji, czas analizy projektu ustawy przed vs po, ciągłość kontekstu między sesjami.
 
-**Dlaczego teraz:** pilot na jednej komisji może zmieścić się poniżej progu zamówień publicznych (130k EUR). Nie wymaga przetargu — wymaga decyzji.
+**Dlaczego teraz:** pilot na jednej komisji może zmieścić się poniżej progu zamówień publicznych (170 000 zł netto). Nie wymaga przetargu — wymaga decyzji.
 
 **Dlaczego to jest odporne na zmianę rządu:** git dla legislatury jest użyteczny dla każdej partii. Fundament budowany dziś przeżyje kolejne wybory.
 

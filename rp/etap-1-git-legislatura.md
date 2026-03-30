@@ -46,7 +46,7 @@ Rekomendacja: Komisja Cyfryzacji, Innowacyjności i Nowoczesnych Technologii.
 - 4 miesiące operacji: codzienna praca komisji z repozytorium
 - Mierzalne rezultaty po 6 miesiącach: decyzja o rozszerzeniu
 
-**Poniżej progu przetargowego (130k EUR).**
+**Poniżej progu przetargowego (170 000 zł netto).**
 Nie wymaga przetargu — wymaga decyzji. Ale decyzja nie musi być dziś — chciałem tylko pokazać że próg wejścia jest niski.
 
 **Odporne na zmianę rządu.**
