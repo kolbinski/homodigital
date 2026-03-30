@@ -151,5 +151,4 @@ Komercyjne wdrożenia wymagają umowy partnerskiej.
 
 ---
 
-_Krzysztof Olbiński · Założyciel · Homo Digital_
-*contact@homodigital.io · homodigital.io*
+_Krzysztof Olbiński · Homo Digital · olbinski@gmail.com · +48 503 520 004 · homodigital.io_
