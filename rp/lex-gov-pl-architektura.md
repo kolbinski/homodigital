@@ -326,7 +326,7 @@ Instytucje nie płacą za korzystanie — to jest infrastruktura publiczna
 jak drogi, nie usługa komercyjna.
 
 **Wdrożenie pilotażowe (KM1, jedna komisja):**
-Poniżej progu przetargowego (130k EUR).
+Poniżej progu przetargowego .
 Nie wymaga przetargu — wymaga decyzji.
 
 **Skalowanie:**
