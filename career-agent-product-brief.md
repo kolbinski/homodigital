@@ -442,7 +442,7 @@ Paradoksalnie: platforma której klientami są pracownicy zagrożeni przez AI, s
 
 ## Harmonogram
 
-Start budowania platformy uzależniony od pozyskania co-foundera (Artur).
+Start budowania platformy uzależniony od pozyskania co-foundera (Artur?).
 
 **Przed pierwszą rozmową z Arturem:**
 
