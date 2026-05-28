@@ -1,4 +1,4 @@
-# Career Agent Platform — Product Brief
+# Homo Digital Platform — Product Brief
 
 ---
 
@@ -505,15 +505,6 @@ Start budowania platformy uzależniony od pozyskania co-foundera (Artur?).
 - Rejestracja działalności + umowy prawne
 
 **Zasada:** ASAP, ale nie przed walidacją. Kod piszemy gdy wiemy że ktoś za to zapłaci.
-
----
-
-## Następny krok
-
-Zanim powstanie pierwsza linia kodu — zwalidować popyt:
-**Porozmawiać z 5 specjalistami IT** (znajomymi lub LinkedIn) i zapytać: _"Czy zapłaciłbyś 200-400 zł/miesiąc za osobistego agenta kariery który aktywnie szuka dla ciebie ofert, buduje twój personal brand i doradza strategicznie?"_
-
-Jeśli 3 z 5 powie "tak" — zaczynamy budować.
 
 ---
 
