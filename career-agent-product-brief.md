@@ -1,7 +1,5 @@
 # Career Agent Platform — Product Brief
 
-_Dokument roboczy, wygenerowany: 27 maja 2026_
-
 ---
 
 ## Koncepcja
