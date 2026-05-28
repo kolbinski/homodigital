@@ -1,5 +1,6 @@
-# Career Agent Platform — Product Brief v1.1
-*Dokument roboczy, wygenerowany: 27 maja 2026*
+# Career Agent Platform — Product Brief
+
+_Dokument roboczy, wygenerowany: 27 maja 2026_
 
 ---
 
@@ -20,11 +21,13 @@ Specjaliści IT w erze AI stoją przed bezprecedensową zmianą rynku pracy. Ist
 ## Docelowi użytkownicy
 
 ### Strona pracownika (popyt)
+
 - Specjaliści IT szukający pracy lub planujący zmianę
 - Osoby których praca jest zagrożona przez AI i potrzebują reorientacji
 - Docelowo: rynek globalny (matching językowy i krajowy)
 
 ### Strona agenta (podaż)
+
 - Osoby z doświadczeniem w IT i/lub rynku pracy
 - Używają AI i dostępnych narzędzi jako swojego warsztatu
 - Działają w określonych krajach i językach
@@ -61,13 +64,14 @@ To jeden z najmocniejszych argumentów sprzedażowych platformy: "nie musisz sam
 
 Pracownik IT w Polsce zarabia średnio 15,000–25,000 zł brutto miesięcznie. Zmiana pracy z pomocą agenta może oznaczać podwyżkę rzędu 2,000–5,000 zł/miesiąc — wartość usługi jest więc mierzalna i realna.
 
-| | Kwota |
-|---|---|
-| Subskrypcja pracownika | 200–400 zł/miesiąc |
-| Udział agenta (65%) | 130–260 zł/klient/miesiąc |
-| Udział platformy (35%) | 70–140 zł/klient/miesiąc |
+|                        | Kwota                     |
+| ---------------------- | ------------------------- |
+| Subskrypcja pracownika | 200–400 zł/miesiąc        |
+| Udział agenta (65%)    | 130–260 zł/klient/miesiąc |
+| Udział platformy (35%) | 70–140 zł/klient/miesiąc  |
 
 Jeden agent obsługuje realistycznie **15–25 klientów** jednocześnie:
+
 - Przychód agenta: **1,950–6,500 zł/miesiąc** (atrakcyjny side income)
 - Przychód platformy (10 agentów × 20 klientów = 200 klientów): **~16,000–28,000 zł/miesiąc**
 
@@ -75,7 +79,7 @@ Jeden agent obsługuje realistycznie **15–25 klientów** jednocześnie:
 
 Jednorazowy bonus gdy klient zmieni pracę przez platformę: **50% miesięcznego przyrostu wynagrodzenia**.
 
-*Przykład: klient skoczył z 15,000 zł na 18,000 zł → success fee = 1,500 zł, podział 65/35 między agenta i platformę.*
+_Przykład: klient skoczył z 15,000 zł na 18,000 zł → success fee = 1,500 zł, podział 65/35 między agenta i platformę._
 
 Success fee mocno motywuje agenta do realnej pracy — nie tylko "bycia dostępnym."
 
@@ -85,7 +89,7 @@ Success fee mocno motywuje agenta do realnej pracy — nie tylko "bycia dostępn
 - **Agent:** uczciwe wynagrodzenie proporcjonalne do wysiłku i wyników
 - **Platforma:** marża która pokrywa koszty techniczne i finansuje rozwój
 
-*Do walidacji z pierwszymi użytkownikami — szczególnie akceptowalny poziom ceny subskrypcji.*
+_Do walidacji z pierwszymi użytkownikami — szczególnie akceptowalny poziom ceny subskrypcji._
 
 ---
 
@@ -93,11 +97,11 @@ Success fee mocno motywuje agenta do realnej pracy — nie tylko "bycia dostępn
 
 ### Ile czasu wymaga jeden klient miesięcznie
 
-| Aktywność | Czas |
-|---|---|
-| Monitorowanie ofert i wysyłanie dopasowanych | 2–4 godz/miesiąc |
-| Raport miesięczny | 30–45 minut |
-| Rozmowy telefoniczne / WhatsApp | 30–60 minut |
+| Aktywność                                         | Czas                 |
+| ------------------------------------------------- | -------------------- |
+| Monitorowanie ofert i wysyłanie dopasowanych      | 2–4 godz/miesiąc     |
+| Raport miesięczny                                 | 30–45 minut          |
+| Rozmowy telefoniczne / WhatsApp                   | 30–60 minut          |
 | Przygotowanie do rozmowy rekrutacyjnej (gdy jest) | 1–2 godz jednorazowo |
 
 Szacunek: **2–4 godziny miesięcznie na aktywnego klienta.**
@@ -105,10 +109,10 @@ Szacunek: **2–4 godziny miesięcznie na aktywnego klienta.**
 ### Optimum dla agenta side-income
 
 | Liczba klientów | Czas/miesiąc | Przychód agenta |
-|---|---|---|
-| 10 klientów | 20–40 godz | ~1,950 zł |
-| 15 klientów | 30–60 godz | ~2,925 zł |
-| 20 klientów | 40–80 godz | ~3,900 zł |
+| --------------- | ------------ | --------------- |
+| 10 klientów     | 20–40 godz   | ~1,950 zł       |
+| 15 klientów     | 30–60 godz   | ~2,925 zł       |
+| 20 klientów     | 40–80 godz   | ~3,900 zł       |
 
 **Optimum: 10–15 klientów** — atrakcyjny side income bez ryzyka wypalenia. 20 klientów to już prawie drugi etat, możliwe tylko z dobrymi narzędziami AI które skracają czas researchu.
 
@@ -117,8 +121,6 @@ Szacunek: **2–4 godziny miesięcznie na aktywnego klienta.**
 Agent który używa AI do monitorowania ofert, draftu raportów i analizy rynku może obsłużyć 2–3x więcej klientów w tym samym czasie. To kluczowy argument dla agentów przy onboardingu — platforma nie tylko daje klientów, ale też narzędzia które sprawiają że praca jest efektywna.
 
 ---
-
-
 
 - **Frontend:** React (już znany)
 - **Backend:** Node.js + Express (do nauki)
@@ -157,6 +159,7 @@ To jest przewaga nad automatycznymi konkurentami jak Navii: klient dzwoni do cz�
 **Klientów:** 2-5 pierwszych użytkowników pozyskanych ręcznie
 
 ### Co musi działać w v1:
+
 - Profil pracownika (doświadczenie, cele, preferencje)
 - Profil agenta
 - Matching pracownik ↔ agent
@@ -165,6 +168,7 @@ To jest przewaga nad automatycznymi konkurentami jak Navii: klient dzwoni do cz�
 - Płatność (choćby prosta, przez Stripe)
 
 ### Co odpada w v1:
+
 - Wielojęzyczność
 - Matching krajowy
 - Automatyczne AI narzędzia dla agentów
@@ -183,12 +187,12 @@ To jest przewaga nad automatycznymi konkurentami jak Navii: klient dzwoni do cz�
 
 ## Kluczowe ryzyka
 
-| Ryzyko | Mitygacja |
-|--------|-----------|
-| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent |
-| Jakość agentów trudna do kontroli | Certyfikacja / onboarding agentów |
-| Konkurencja z Navii i podobnymi | Przewaga: prawdziwy człowiek, nie AI |
-| Skalowalność modelu ludzkiego | Narzędzia AI które mnożą produktywność agenta |
+| Ryzyko                                            | Mitygacja                                     |
+| ------------------------------------------------- | --------------------------------------------- |
+| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent                |
+| Jakość agentów trudna do kontroli                 | Certyfikacja / onboarding agentów             |
+| Konkurencja z Navii i podobnymi                   | Przewaga: prawdziwy człowiek, nie AI          |
+| Skalowalność modelu ludzkiego                     | Narzędzia AI które mnożą produktywność agenta |
 
 ---
 
@@ -307,10 +311,11 @@ Założyciele piszą regularnie na LinkedIn o problemie, nie o produkcie. Tematy
 **Faza 2 — launch (PR)**
 
 Brief prasowy do mediów technologicznych:
+
 - Polska: Antyweb, Spider's Web, Benchmark.pl
 - Globalne: TechCrunch, Product Hunt
 
-Historia jest gotowa: *"Polacy budują platformę która działa jak agent aktora — dla programistów zagrożonych przez AI."*
+Historia jest gotowa: _"Polacy budują platformę która działa jak agent aktora — dla programistów zagrożonych przez AI."_
 
 **Faza 3 — growth (social proof)**
 
@@ -336,15 +341,19 @@ Temat łączy dwa gorące wątki medialne: kryzys rynku pracy IT i AI. Platforma
 ## Roadmapa techniczna
 
 ### v1 — fundament
+
 Profil pracownika i agenta, matching, komunikacja, raporty, płatności Stripe. Ręczny proces bez automatyzacji.
 
 ### v2 — agregator ofert
+
 Platforma wywołuje API popularnych jobboardów (JustJoin.it, No Fluff Jobs, LinkedIn, Pracuj.pl) i agreguje oferty w jednym miejscu dla agentów. Zamiast ręcznego przeszukiwania 5 serwisów — jedno narzędzie. Znaczący mnożnik produktywności agenta.
 
 ### v3 — narzędzia AI dla agentów
+
 Automatyczne dopasowanie ofert do profilu klienta, sugestie działań, analiza rynku wynagrodzeń, draft wiadomości do rekruterów. Agent skupia się na relacji i strategii — AI robi research.
 
 ### v4 — własne API
+
 Gdy platforma osiągnie znaczącą bazę kandydatów — możliwość udostępnienia własnego API dla partnerów zewnętrznych. Wymaga pozycji rynkowej, nie do zbudowania na starcie.
 
 ---
@@ -354,23 +363,28 @@ Gdy platforma osiągnie znaczącą bazę kandydatów — możliwość udostępni
 Platforma startuje w IT, ale model jest replikowalny w każdej niszy gdzie brakuje osobistych agentów kariery. Kluczowa zasada: **dominuj jedną niszę zanim przejdziesz do następnej.**
 
 ### Faza 1 — IT (v1, rynek polski → globalny)
+
 Programiści, inżynierowie, DevOps, QA. Naturalna nisza startowa — założyciel zna ją od środka, sieć kontaktów gotowa, najwyższe success fee.
 
 ### Faza 2 — Rozszerzenie w obrębie tech
+
 UI/UX designerzy, Product Managerowie, Data Scientists, AI specjaliści. Podobny profil klienta, ta sama sieć rekruterów, minimalne koszty wejścia.
 
 ### Faza 3 — Sektory z niedoborem kadrowym
+
 Opieka zdrowotna (pielęgniarki, fizjoterapeuci, diagności) — dramatyczny niedobór kadr w całej Europie, zero narzędzi kariery. Marketing i content — freelancerzy zdezorientowani przez AI. Finanse i księgowość — duży sektor z rosnącą presją automatyzacji.
 
 ### Faza 4 — Najbardziej niedoceniana nisza
+
 Wyspecjalizowani pracownicy fizyczni: elektrycy, spawacze, technicy CNC. Ogromny niedobór w Polsce i Europie, zero platform myślących o ich karierze strategicznie. Wysoka bariera wejścia — ale ogromna wartość społeczna i praktyczny brak konkurencji.
 
 ### Faza 5 — C-level i executive
+
 CEO, CFO, CTO i inni liderzy organizacji. Zupełnie inny profil agenta — bardziej executive coach i strategiczny doradca niż career advisor. Agent monitoruje reputację klienta w branży, doradza kiedy odejść zanim firma zacznie tonąć, buduje relacje z boardami, pozycjonuje klienta jako thought leadera, negocjuje pakiety equity. Aktywnie umieszcza klienta na konferencjach, w wywiadach, publikacjach i radach nadzorczych we właściwym czasie.
 
 Najwyższy możliwy success fee na platformie — podwyżka CEO z 500k na 800k rocznie oznacza kilkanaście tysięcy złotych jednorazowej prowizji. Wymaga ugruntowanej marki platformy i udowodnionego modelu na niższych poziomach.
 
-*Każda nowa nisza wymaga dedykowanego agenta który zna ten rynek od środka — model platformy pozostaje ten sam.*
+_Każda nowa nisza wymaga dedykowanego agenta który zna ten rynek od środka — model platformy pozostaje ten sam._
 
 ---
 
@@ -378,21 +392,24 @@ Najwyższy możliwy success fee na platformie — podwyżka CEO z 500k na 800k r
 
 ### Infrastruktura techniczna (miesięcznie)
 
-| Pozycja | Koszt |
-|---|---|
-| Hosting (Vercel + Supabase) | 0–100 zł (darmowy tier na start) |
-| Email agentów (Google Workspace) | 25–50 zł/agent/miesiąc |
-| Stripe (płatności) | ~2.9% + 1.50 zł od transakcji, brak stałego kosztu |
-| AI API (Anthropic/OpenAI) | 50–200 zł/miesiąc na początku |
+| Pozycja                          | Koszt                                              |
+| -------------------------------- | -------------------------------------------------- |
+| Hosting (Vercel + Supabase)      | 0–100 zł (darmowy tier na start)                   |
+| Email agentów (Google Workspace) | 25–50 zł/agent/miesiąc                             |
+| Stripe (płatności)               | ~2.9% + 1.50 zł od transakcji, brak stałego kosztu |
+| AI API (Anthropic/OpenAI)        | 50–200 zł/miesiąc na początku                      |
 
 ### Koszt v1 (1 agent, 5 klientów)
+
 **~200–400 zł/miesiąc** — marginalny wobec przychodu 1,000–2,000 zł/miesiąc.
 
 ### Koszty jednorazowe (przed pierwszym płacącym klientem)
+
 - Prawnik (regulamin, umowy, RODO): **1,500–3,000 zł**
 - Rejestracja działalności + księgowość: zależnie od formy prawnej
 
 ### Co rośnie ze skalą
+
 Email i AI API skalują się liniowo z liczbą agentów i klientów. Infrastruktura techniczna praktycznie nie rośnie do dziesiątek agentów.
 
 **Wniosek:** Bardzo niskie koszty stałe. Nie potrzeba kapitału startowego — potrzeba pierwszych klientów.
@@ -428,15 +445,18 @@ Paradoksalnie: platforma której klientami są pracownicy zagrożeni przez AI, s
 Start budowania platformy uzależniony od pozyskania co-foundera (Artur).
 
 **Przed pierwszą rozmową z Arturem:**
+
 - Walidacja popytu: 5 rozmów z IT specjalistami
 - Przygotowanie krótkiego pitch deck na bazie tego dokumentu
 
 **Po dołączeniu Artura — sprint walidacyjny (4–6 tygodni):**
+
 - Pierwsi 2–3 klienci pozyskani ręcznie
 - Założyciel jako pierwszy agent — testuje model na sobie i klientach
 - Weryfikacja ceny subskrypcji i success fee
 
 **Po walidacji modelu — budowa v1 (8–12 tygodni):**
+
 - React frontend (Krzysiek) + Node.js backend (Artur)
 - Profil pracownika i agenta, matching, komunikacja, płatności
 - Rejestracja działalności + umowy prawne
@@ -445,15 +465,13 @@ Start budowania platformy uzależniony od pozyskania co-foundera (Artur).
 
 ---
 
-
-
 ## Następny krok
 
 Zanim powstanie pierwsza linia kodu — zwalidować popyt:
-**Porozmawiać z 5 specjalistami IT** (znajomymi lub LinkedIn) i zapytać: *"Czy zapłaciłbyś 200-400 zł/miesiąc za osobistego agenta kariery który aktywnie szuka dla ciebie ofert, buduje twój personal brand i doradza strategicznie?"*
+**Porozmawiać z 5 specjalistami IT** (znajomymi lub LinkedIn) i zapytać: _"Czy zapłaciłbyś 200-400 zł/miesiąc za osobistego agenta kariery który aktywnie szuka dla ciebie ofert, buduje twój personal brand i doradza strategicznie?"_
 
 Jeśli 3 z 5 powie "tak" — zaczynamy budować.
 
 ---
 
-*Wersja: 1.9 — dokument żywy, do aktualizacji w miarę walidacji*
+_Wersja: 1.9 — dokument żywy, do aktualizacji w miarę walidacji_
