@@ -8,6 +8,8 @@ Marketplace który łączy pracowników IT z osobistymi agentami kariery — lud
 
 **Metafora pozycjonowania:** Agent aktora, nie job board.
 
+**Nazwa branżowa:** Reverse recruiting — usługa w której pracownik zatrudnia agenta który pracuje dla niego, a nie dla pracodawcy. Rynek reverse recruitingu istnieje i rośnie, ale jest dostępny wyłącznie dla senior professionals zarabiających $80K-$300K+ w USA. Nasza platforma demokratyzuje tę usługę dla zwykłych programistów IT w Polsce i globalnie.
+
 ---
 
 ## Problem
@@ -185,12 +187,12 @@ To jest przewaga nad automatycznymi konkurentami jak Navii: klient dzwoni do cz�
 
 ## Kluczowe ryzyka
 
-| Ryzyko                                            | Mitygacja                                     |
-| ------------------------------------------------- | --------------------------------------------- |
-| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent                |
-| Jakość agentów trudna do kontroli                 | Certyfikacja / onboarding agentów             |
-| Konkurencja z Navii i podobnymi                   | Przewaga: prawdziwy człowiek, nie AI          |
-| Skalowalność modelu ludzkiego                     | Narzędzia AI które mnożą produktywność agenta |
+| Ryzyko                                            | Mitygacja                                            |
+| ------------------------------------------------- | ---------------------------------------------------- |
+| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent                       |
+| Jakość agentów trudna do kontroli                 | Certyfikacja / onboarding agentów                    |
+| Konkurencja z zachodnimi reverse recruiters       | Przewaga cenowa (16x taniej) i geograficzna (Europa) |
+| Skalowalność modelu ludzkiego                     | Narzędzia AI które mnożą produktywność agenta        |
 
 ---
 
@@ -272,15 +274,58 @@ Ryzyka nie da się wyeliminować w 100%, ale można je ograniczyć do akceptowal
 
 ## Analiza konkurencji
 
-### Polska — praktycznie wolna nisza
+### Nazewnictwo branżowe
 
-Istniejące rozwiązania pracują **dla pracodawcy**, nie dla pracownika: TeamQuest, HRlink, agencje rekrutacyjne. Job boardy (JustJoin.it, No Fluff Jobs, Pracuj.pl) to pasywne narzędzia — klient szuka sam. Nikt nie robi "osobistego agenta po stronie kandydata" w Polsce.
+To co budujemy ma już nazwę na rynku globalnym: **reverse recruiting**. Zamiast pracodawca szuka kandydata — kandydat zatrudnia agenta który szuka dla niego pracy. Rynek istnieje, rośnie i jest udowodniony. Nasza przewaga: wszyscy gracze obsługują wyłącznie rynek angloamerykański i wyłącznie senior professionals. My demokratyzujemy tę usługę.
 
-### Globalnie
+W kontekście reverse recruitingu "senior professionals" to nie oznacza Senior Developer czy Senior Engineer. Chodzi o poziom kariery i wynagrodzenia, a konkretnie:
 
-Jedynym bliskim konkurentem jest **Navii** (heynavii.ai) — ale model w pełni zautomatyzowany (AI, bez człowieka). Pozostałe narzędzia (Jobright, Careerflow, Teal) to reaktywne aplikacje do CV i aplikowania, nie proaktywni agenci kariery.
+Osoby na stanowiskach managerskich lub wyższych — Director, VP, C-level. Zarabiające zazwyczaj $80,000-$300,000+ rocznie. Z wieloletnim doświadczeniem (10-20+ lat) w korporacjach. Które robią poufną zmianę pracy i nie chcą żeby pracodawca wiedział że szukają.
 
-**Wniosek:** nisza jest wolna zarówno w Polsce jak i globalnie w modelu human-assisted.
+To jest klasyczny klient reverse recruitingu w USA — ktoś komu "opłaca się" zapłacić $5,000-$15,000 za usługę bo jeden miesiąc szukania pracy mniej to $10,000-$25,000 zaoszczędzonego czasu i stresów.
+
+Dlaczego to ważne dla naszej platformy:
+Zwykły programista w Polsce zarabiający 12,000-20,000 zł miesięcznie nigdy nie zapłaci $5,000 za reverse recruiting — to byłoby 2-3 miesięczne wynagrodzenie. Ale za 190 zł/miesiąc? To jeden obiad w restauracji.
+
+Nasza platforma demokratyzuje usługę która dotąd była dostępna tylko dla najbogatszych profesjonalistów na rynku. To jest serce waszego pozycjonowania.
+
+---
+
+### Polska — wolna nisza
+
+Istniejące rozwiązania pracują **dla pracodawcy**, nie dla pracownika: TeamQuest, HRlink, agencje rekrutacyjne. Job boardy (JustJoin.it, No Fluff Jobs, Pracuj.pl) to pasywne narzędzia — klient szuka sam. Nikt nie robi "osobistego agenta po stronie kandydata" w Polsce. **Nisza wolna.**
+
+---
+
+### Globalnie — mapa konkurencji
+
+**Navii** (heynavii.ai) — model w pełni zautomatyzowany (AI, bez człowieka). Bezpłatny dla profesjonalistów, zarabia po stronie pracodawców. Skupiony wyłącznie na rynku amerykańskim, praktycznie nieznany w Europie. 333 followersów na Instagramie — bardzo wczesny etap.
+
+**Find My Profession** — lider rynku reverse recruitingu. 1,000+ opinii 5-star na Trustpilot, ponad 10,000 obsłużonych klientów. Tylko certyfikowani reverse recruiters w USA. Cena: $2,000-$4,500 pierwszego miesiąca, $1,500-$4,000 kolejne. Wyłącznie rynek angloamerykański, senior professionals.
+
+**Career Agents** (careeragents.org) — prowadzony przez Stevena Mostyna (były rekruter Amazon/Deloitte/TD Bank, 20+ lat doświadczenia, bestsellowy autor). Cena: Starter $999 jednorazowo, Pro $999/miesiąc przez 7 miesięcy ($6,993 łącznie), Executive $1,667/miesiąc przez 9 miesięcy ($15,003 łącznie). Gwarancja oferty pracy w 7 miesięcy lub 50% zwrotu. 23 opinie na Trustpilot (4.7/5). Wyłącznie rynek angloamerykański.
+
+**WeAreCareer** — łączy reverse recruiting z career coachingiem, ponad 3,000 klientów. Cena: $5,000 + 4% success fee od pierwszorocznej pensji. Gwarancja: 10 rozmów kwalifikacyjnych lub kontynuacja za darmo. Wyłącznie USA.
+
+**My Personal Recruiter** — najtańszy gracz na rynku zachodnim, model subskrypcyjny. Cena: $799-$1,999/miesiąc. Założony 2023, mniejsza baza klientów. Wyłącznie USA.
+
+**AI-powered alternatives** (Sprout, LoopCV, JobCopilot) — automatyzacja aplikowania za ułamek ceny, bez ludzkiego agenta. Konkurują ceną, nie jakością relacji.
+
+---
+
+### Nasza przewaga konkurencyjna
+
+| Wymiar     | Konkurencja                  | My                        |
+| ---------- | ---------------------------- | ------------------------- |
+| Cena       | $800–$4,500/miesiąc          | ~190 zł/miesiąc (~$48)    |
+| Dostępność | Senior professionals $80K+   | Każdy programista IT      |
+| Rynek      | Wyłącznie USA                | Polska → globalnie        |
+| Model      | Jeden agent/zespół na firmę  | Marketplace wielu agentów |
+| Agent      | Człowiek bez AI lub pełne AI | Człowiek wspomagany AI    |
+
+**Kluczowy argument:** Career Agents bierze $7,000-$15,000 za program. My bierzemy 190 zł/miesiąc. Ta sama idea — dostępna dla każdego, nie tylko dla executive zarabiających $200K+.
+
+**Geograficzna luka:** wszyscy zachodni gracze ignorują Europę. Polska, Niemcy, Holandia, kraje nordyckie — zero lokalnego reverse recruitingu. To jest nasza pierwsza fala ekspansji.
 
 ---
 
@@ -472,4 +517,4 @@ Jeśli 3 z 5 powie "tak" — zaczynamy budować.
 
 ---
 
-_Wersja: 1.9 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.0 — dokument żywy, do aktualizacji w miarę walidacji_
