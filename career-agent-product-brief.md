@@ -329,12 +329,6 @@ Istniejące rozwiązania pracują **dla pracodawcy**, nie dla pracownika: TeamQu
 
 ---
 
-## Rola założyciela
-
-**Długoterminowo: CEO.** Założyciel pełni rolę pierwszego agenta wyłącznie na etapie walidacji modelu (v1). Po udowodnieniu że model działa i pozyskaniu pierwszych niezależnych agentów — przechodzi w rolę CEO który buduje platformę i zespół.
-
----
-
 ## Strategia marketingowa
 
 ### Seed funding — nie na tym etapie
@@ -485,14 +479,14 @@ Paradoksalnie: platforma której klientami są pracownicy zagrożeni przez AI, s
 
 ## Harmonogram
 
-Start budowania platformy uzależniony od pozyskania co-foundera (Artur?).
+Start budowania platformy uzależniony od pozyskania co-foundera.
 
-**Przed pierwszą rozmową z Arturem:**
+**Przed pierwszą rozmową z co-founderem:**
 
 - Walidacja popytu: 5 rozmów z IT specjalistami
 - Przygotowanie krótkiego pitch deck na bazie tego dokumentu
 
-**Po dołączeniu Artura — sprint walidacyjny (4–6 tygodni):**
+**Po dołączeniu co-foundera — sprint walidacyjny (4–6 tygodni):**
 
 - Pierwsi 2–3 klienci pozyskani ręcznie
 - Założyciel jako pierwszy agent — testuje model na sobie i klientach
@@ -500,7 +494,7 @@ Start budowania platformy uzależniony od pozyskania co-foundera (Artur?).
 
 **Po walidacji modelu — budowa v1 (8–12 tygodni):**
 
-- React frontend (Krzysiek) + Node.js backend (Artur)
+- React frontend + Node.js backend
 - Profil pracownika i agenta, matching, komunikacja, płatności
 - Rejestracja działalności + umowy prawne
 
