@@ -595,30 +595,34 @@ Agent zachęca klienta do wykonania testów na platformach takich jak HackerRank
 
 ---
 
-## Agent jako full time job — przy jakich parametrach
+## Dwa segmenty agentów — modele zarobkowe
 
-### Cel: 8,000 zł netto miesięcznie
+Platforma obsługuje dwa różne profile agentów z różnymi motivacjami i modelami finansowymi.
 
-Przy subskrypcji 190 zł agent dostaje 65% = 123.50 zł/klient. Potrzebuje ~65 klientów — nierealne bez bardzo mocnych narzędzi AI (130-260h miesięcznie pracy).
+### Segment 1 — Senior developer jako agent side income
 
-### Trzy realistyczne scenariusze
+Senior developer zarabia 15,000-25,000 zł netto miesięcznie na głównej pracy. Agentowanie nigdy nie zastąpi jego podstawowego dochodu — i nie powinno. Wartość dla seniora to uczciwy dodatek przy minimalnym nakładzie czasu dzięki AI.
 
-**Scenariusz 1 — wyższa subskrypcja (300 zł):**
-Agent dostaje 195 zł/klient. Potrzebuje 41 klientów. Przy AI skracającym czas do 30-60 min/klient = ~35h miesięcznie. Wykonalne.
+| Klientów | Czas/miesiąc (z AI) | Przychód agenta |
+|---|---|---|
+| 10 | ~10-15h | ~1,235 zł |
+| 15 | ~15-25h | ~1,850 zł |
 
-**Scenariusz 2 — subskrypcja + success fee:**
-30 klientów × 123.50 zł = 3,705 zł + 4-5 udanych zmian pracy miesięcznie × ~525 zł = ~2,600 zł. Razem ~6,300 zł — prawie full time.
+Motywacja seniora: lubi pomagać innym, zna rynek IT od środka, side income jest premią a nie koniecznością.
 
-**Scenariusz 3 — specjalizacja globalna (USA/Zachód):**
-Agent obsługuje klientów szukających pracy zagranicznie. Wyższy success fee (podwyżka $2,000/miesiąc = success fee ~3,500 zł jednorazowo). 20 klientów subskrypcja + 2-3 success fee miesięcznie = pełny etat.
+### Segment 2 — Career specialist jako full time agent
+
+Inny profil osoby: career coach, były rekruter który zmienił stronę, osoba z kilku latami doświadczenia IT szukająca alternatywy zawodowej. Dla nich agentowanie może być głównym źródłem dochodu.
+
+**Przy subskrypcji 300 zł i 35-45 klientach z AI:**
+Agent dostaje 195 zł/klient × 40 klientów = **7,800 zł/miesiąc** + success fee. Przy AI skracającym czas do 30-60 min/klient = ~35h miesięcznie. Realne jako full time.
+
+**Specjalizacja globalna (USA/Zachód):**
+Subskrypcja 400-500 zł dla klientów szukających pracy zagranicznie. Success fee przy podwyżce $2,000/miesiąc = ~3,500 zł jednorazowo. 20 klientów + 2-3 success fee miesięcznie = pełny etat z wyższymi zarobkami.
 
 ### Wyższy tier subskrypcji dla rynku globalnego
 
-Platforma powinna oferować dwa poziomy subskrypcji: **~190 zł dla rynku polskiego** i **400-500 zł dla rynku zachodniego** (USA, UK, Niemcy). Klient płaci proporcjonalnie do potencjalnej nagrody — zmiana pracy w USA to +$2,000-$5,000 miesięcznie, więc wyższa subskrypcja jest uzasadniona. Agent zarabia więcej, platforma zarabia więcej, klient dostaje wyspecjalizowanego agenta znającego rynek docelowy.
-
-### Kluczowy warunek
-
-Full time agent przy obecnym modelu 190 zł jest trudny bez AI. Przy AI skracającym czas obsługi o 50-70%, subskrypcji 300 zł lub specjalizacji globalnej — realny przy 35-45 klientach.
+Platforma oferuje dwa poziomy: **~190 zł dla rynku polskiego** i **400-500 zł dla rynku zachodniego** (USA, UK, Niemcy). Klient płaci proporcjonalnie do potencjalnej nagrody — zmiana pracy w USA to +$2,000-$5,000 miesięcznie. Agent zarabia więcej, platforma zarabia więcej, klient dostaje wyspecjalizowanego agenta znającego rynek docelowy.
 
 ---
 
@@ -647,4 +651,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.5 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.6 — dokument żywy, do aktualizacji w miarę walidacji_
