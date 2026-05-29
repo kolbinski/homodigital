@@ -595,6 +595,33 @@ Agent zachęca klienta do wykonania testów na platformach takich jak HackerRank
 
 ---
 
+## Agent jako full time job — przy jakich parametrach
+
+### Cel: 8,000 zł netto miesięcznie
+
+Przy subskrypcji 190 zł agent dostaje 65% = 123.50 zł/klient. Potrzebuje ~65 klientów — nierealne bez bardzo mocnych narzędzi AI (130-260h miesięcznie pracy).
+
+### Trzy realistyczne scenariusze
+
+**Scenariusz 1 — wyższa subskrypcja (300 zł):**
+Agent dostaje 195 zł/klient. Potrzebuje 41 klientów. Przy AI skracającym czas do 30-60 min/klient = ~35h miesięcznie. Wykonalne.
+
+**Scenariusz 2 — subskrypcja + success fee:**
+30 klientów × 123.50 zł = 3,705 zł + 4-5 udanych zmian pracy miesięcznie × ~525 zł = ~2,600 zł. Razem ~6,300 zł — prawie full time.
+
+**Scenariusz 3 — specjalizacja globalna (USA/Zachód):**
+Agent obsługuje klientów szukających pracy zagranicznie. Wyższy success fee (podwyżka $2,000/miesiąc = success fee ~3,500 zł jednorazowo). 20 klientów subskrypcja + 2-3 success fee miesięcznie = pełny etat.
+
+### Wyższy tier subskrypcji dla rynku globalnego
+
+Platforma powinna oferować dwa poziomy subskrypcji: **~190 zł dla rynku polskiego** i **400-500 zł dla rynku zachodniego** (USA, UK, Niemcy). Klient płaci proporcjonalnie do potencjalnej nagrody — zmiana pracy w USA to +$2,000-$5,000 miesięcznie, więc wyższa subskrypcja jest uzasadniona. Agent zarabia więcej, platforma zarabia więcej, klient dostaje wyspecjalizowanego agenta znającego rynek docelowy.
+
+### Kluczowy warunek
+
+Full time agent przy obecnym modelu 190 zł jest trudny bez AI. Przy AI skracającym czas obsługi o 50-70%, subskrypcji 300 zł lub specjalizacji globalnej — realny przy 35-45 klientach.
+
+---
+
 ## Harmonogram
 
 Start budowania platformy uzależniony od pozyskania co-foundera.
@@ -620,4 +647,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.4 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.5 — dokument żywy, do aktualizacji w miarę walidacji_
