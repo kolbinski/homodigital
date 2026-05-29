@@ -509,7 +509,7 @@ To jest profil który pozwala obsłużyć 10–15 klientów miesięcznie bez wyp
 AI agreguje oferty z wielu źródeł (JustJoin, No Fluff Jobs, LinkedIn, Pracuj.pl) i automatycznie filtruje pod profil klienta. Agent zamiast ręcznie przeglądać 5 serwisów dostaje przefiltrowaną listę 10–15 najlepiej dopasowanych ofert. Eliminuje ~80% manualnej pracy.
 
 **Warstwa 2 — scoring i ranking**
-AI ocenia dopasowanie każdej oferty: technologie, poziom seniority, widełki płacowe, lokalizacja, kultura firmy. Agent dostaje listę posortowaną od najlepszego dopasowania — nie musi samodzielnie oceniać każdej oferty.
+AI ocenia dopasowanie każdej oferty: technologie, poziom seniority, widełki płacowe, lokalizacja, kultura firmy. Agent dostaje listę posortowaną od najlepszego dopasowania.
 
 **Warstwa 3 — draft komunikacji**
 AI przygotowuje draft wiadomości do rekrutera na podstawie profilu klienta i konkretnej oferty. Agent przegląda, personalizuje i wysyła. Oszczędność: ~70% czasu na komunikację.
@@ -529,15 +529,54 @@ Rozmowa telefoniczna gdy klient jest zestresowany. Negocjacje z rekruterem — w
 | Draft raportów i komunikacji | ~$0.30–0.50 |
 | **Łącznie** | **~$1–2 (~4–8 zł)** |
 
-Przy subskrypcji 190 zł platforma dostaje 66.50 zł (35%). Koszt AI: ~8 zł. **Marża po AI: ~58 zł/klient/miesiąc** — AI zjada ~12% marży platformy. Akceptowalne i liniowo skalowalne.
+Przy subskrypcji 190 zł platforma dostaje 66.50 zł (35%). Koszt AI: ~8 zł. **Marża po AI: ~58 zł/klient/miesiąc.** AI zjada ~12% marży platformy — akceptowalne i liniowo skalowalne.
 
 ### Strategie kontroli kosztów
 
-**Cachowanie** — te same oferty nie są analizowane wielokrotnie. **Batching** — przetwarzanie ofert hurtowo raz dziennie, nie w czasie rzeczywistym. **Dobór modelu do zadania** — tańszy model (np. Claude Haiku) do scoringu ofert, mocniejszy tylko do draftu komunikacji wymagającej kontekstu.
+**Cachowanie** — te same oferty nie są analizowane wielokrotnie. **Batching** — przetwarzanie ofert hurtowo raz dziennie. **Dobór modelu do zadania** — tańszy model (np. Claude Haiku) do scoringu ofert, mocniejszy tylko do draftu komunikacji.
 
-### Wniosek
+---
 
-Przy obecnym modelu AI jest opłacalne i skalowalne. Marża na klienta pozostaje stała przy wzroście — brak efektu skali w górę. Kluczem jest świadomy dobór modelu do każdego zadania i unikanie zbędnych wywołań API.
+## Workflow operacyjny agenta
+
+### Dedykowany email dla każdego klienta
+
+Przy onboardingu nowego klienta agent tworzy dedykowane konto Gmail (np. jan-kowalski-it@gmail.com) które jest współdzielone między agentem a klientem. Obaj mają pełny dostęp — agent aplikuje na oferty, klient widzi wszystkie odpowiedzi od pracodawców w czasie rzeczywistym.
+
+**Zalety modelu współdzielonego maila:**
+Jeden wspólny inbox dla wszystkich aplikacji — agent i klient widzą odpowiedzi jednocześnie. Formularz aplikacyjny wygląda jak normalny kandydat (imię, nazwisko, dedykowany mail) — żadnych pytań o agenta. Klient może sam aplikować tym mailem gdy znajdzie ofertę — spójność. Kalendarz Google automatycznie synchronizuje zaproszenia na interview.
+
+**Logowanie z różnych IP:** przy dodaniu telefonu agenta i klienta jako zaufanych urządzeń zwykły Gmail działa bez problemów. Start na darmowym Gmail — przejście na Google Workspace dopiero gdy pojawi się realny problem.
+
+### Maile agentów
+
+Agenci używają służbowego maila w domenie platformy (np. jan.nowak@nazwaplatformy.com) do komunikacji z pracodawcami w imieniu klientów. Wygląda profesjonalnie i buduje brand platformy.
+
+### Google Drive — folder klienta
+
+Przy onboardingu agent tworzy strukturę folderów w Google Drive klienta:
+- CV (różne wersje pod różne oferty)
+- List motywacyjny (szablony)
+- Certyfikaty i portfolio
+- Arkusz aplikacji (live raport)
+
+Agent ma wszystko pod ręką przy aplikowaniu — bez proszenia klienta o pliki za każdym razem.
+
+### Arkusz Google Sheets — live raport aplikacji
+
+Platforma dostarcza gotowy szablon arkusza z kolumnami: data aplikacji, firma, stanowisko, link do oferty, status (aplikowane / umówiony meeting / negocjacja / zatrudnienie / odmowa), następny krok, notatki. Agent uzupełnia na bieżąco — klient widzi postępy w czasie rzeczywistym bez czekania na miesięczny raport.
+
+### Google Alerts
+
+Agent ustawia alerty Google na imię i nazwisko klienta — monitoruje co pojawia się w sieci i wykorzystuje to przy budowaniu personal brand.
+
+### Google Meet — sesje przygotowawcze
+
+Przed ważną rozmową rekrutacyjną agent prowadzi 30-minutową sesję przygotowawczą przez Google Meet. Cały workflow w jednym ekosystemie Google.
+
+### Wniosek operacyjny
+
+Gmail + Drive + Sheets + Calendar + Meet = kompletne narzędzie pracy agenta za **0 zł dodatkowych kosztów.** To nieoczekiwana przewaga operacyjna — pełny workflow bez żadnej dodatkowej subskrypcji.
 
 ---
 
@@ -566,4 +605,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.2 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.3 — dokument żywy, do aktualizacji w miarę walidacji_
