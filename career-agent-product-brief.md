@@ -626,6 +626,40 @@ Platforma oferuje dwa poziomy: **~190 zł dla rynku polskiego** i **400-500 zł 
 
 ---
 
+## Dywersyfikacja przychodów
+
+Oprócz subskrypcji i success fee platforma może budować dodatkowe źródła przychodów w trzech horyzontach czasowych.
+
+### Krótkoterminowe — od razu możliwe
+
+**Prowizje afiliacyjne od kursów i szkoleń**
+Agent rekomenduje klientowi kursy na Udemy, Coursera, HackerRank, Codility. Platforma bierze prowizję afiliacyjną od zakupu (5-15% ceny kursu). Zero kosztów wdrożenia, naturalnie wpisuje się w rolę agenta który wzmacnia profil klienta.
+
+**Prowizje od narzędzi kariery**
+LinkedIn Premium, Grammarly, Canva (CV), Notion. Programy afiliacyjne istnieją — agent rekomenduje, platforma zarabia bez dodatkowej pracy.
+
+### Średnioterminowe — po walidacji modelu
+
+**Dostęp dla pracodawców (B2B)**
+Firmy płacą za dostęp do bazy kandydatów którzy wyrazili zgodę na bycie znajdywanym. Model zbliżony do LinkedIn Recruiter w miniaturze. Wymaga odpowiedniej liczby użytkowników i zgód RODO.
+
+**Raport rynkowy B2B**
+Anonimowe dane agregowane o rynku IT — stawki, trendy, rotacja, popularność technologii — sprzedawane firmom HR i pracodawcom. Platforma naturalnie zbiera te dane przy codziennej pracy agentów. Zero dodatkowych kosztów zbierania danych.
+
+### Długoterminowe
+
+**Ubezpieczenie kariery**
+Partnerstwo z ubezpieczycielem — "ubezpieczenie od bezrobocia" dla klientów platformy z niższą składką dzięki udowodnionej skuteczności agentów (krótszy czas bezrobocia = niższe ryzyko dla ubezpieczyciela).
+
+**API dla innych platform**
+Gdy platforma osiągnie znaczącą bazę kandydatów i danych rynkowych — udostępnienie API partnerom zewnętrznym.
+
+### Najszybszy do wdrożenia
+
+Program afiliacyjny od kursów — agent i tak rekomenduje Codility i HackerRank jako element onboardingu klienta. Warto żeby platforma na tym zarabiała od pierwszego dnia.
+
+---
+
 ## Harmonogram
 
 Start budowania platformy uzależniony od pozyskania co-foundera.
@@ -651,4 +685,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.6 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.7 — dokument żywy, do aktualizacji w miarę walidacji_
