@@ -176,6 +176,24 @@ Sekcja About, słowa kluczowe pod algorytm LinkedIn, opisy doświadczeń języki
 **Scoring kompetencji jako atut w aplikacji**
 Agent zachęca klienta do wykonania testów na platformach takich jak HackerRank, Codility, LeetCode lub CodinGame. Wynik scoringu (np. "top 15% HackerRank") ląduje w CV i profilu LinkedIn jako sekcja "Verified Skills" — szczególnie wartościowe dla juniorów bez dużego doświadczenia komercyjnego. Scoring nie jest progiem wejścia na platformę — jest narzędziem które agent aktywnie buduje razem z klientem w trakcie współpracy.
 
+**Demo-skill project — dowód architektury**
+
+Opcjonalnie klient może zbudować i publicznie udostępnić projekt demonstracyjny (GitHub + live demo na Vercel/Netlify) który pokazuje zdolność myślenia architektonicznego — w erze AI to ważniejsze niż samo pisanie kodu. Projekt budowany z pomocą AI (vibe coding), co jest świadomym wyborem: liczy się architektura i decyzje projektowe, nie syntax.
+
+Klient wybiera jeden z pięciu projektów:
+
+**1. Mini Job Board** — platforma ogłoszeń z auth, bazą danych, REST API i filtrowaniem. Testuje: relacyjna baza danych, autoryzacja, CRUD, podstawowe UX.
+
+**2. Personal Finance Tracker** — śledzenie wydatków z kategoriami, wykresami miesięcznymi i eksportem CSV. Testuje: data modeling, charting, CSV processing, state management.
+
+**3. AI-powered CV Analyzer** — user wrzuca PDF, aplikacja parsuje przez AI API i zwraca listę technologii, sugestie poprawek i scoring. Testuje: AI integracja, file handling, async processing — bardzo aktualne kompetencje.
+
+**4. Real-time Collaboration Tool** — prosta tablica Kanban z jednoczesną edycją przez kilka osób. Testuje: architektura real-time, WebSockets, distributed state.
+
+**5. Multi-tenant SaaS Starter** — fundament aplikacji SaaS: rejestracja, organizacje, role użytkowników (admin/member), billing przez Stripe sandbox, podstawowy dashboard. Testuje: multi-tenancy, RBAC, integracja płatności — złożona architektura doceniana przez rekruterów.
+
+Link do projektu ląduje w profilu klienta i jest dołączany do aplikacji przez agenta. Szczególnie wartościowy gdy klient nie ma dużego portfolio publicznych projektów.
+
 ---
 
 ## Workflow operacyjny agenta
@@ -871,4 +889,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 3.8 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 3.9 — dokument żywy, do aktualizacji w miarę walidacji_
