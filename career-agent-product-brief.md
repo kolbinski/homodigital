@@ -580,6 +580,21 @@ Gmail + Drive + Sheets + Calendar + Meet = kompletne narzędzie pracy agenta za 
 
 ---
 
+## Onboarding klienta — wzmacnianie profilu
+
+Zanim agent zacznie aplikować, przygotowuje klienta do rynku. Trzy obszary:
+
+**CV w stylu achievera, nie dooera**
+Agent przeprowadza rozmowę "co osiągnąłeś w tej pracy?" i przerabia odpowiedzi na język wyników. Formuła: *czasownik akcji + co zrobiłem + jaki był efekt (liczba jeśli możliwa).* Przykład: "Zoptymalizowałem zapytania SQL → czas odpowiedzi API skrócił się z 2s do 200ms."
+
+**LinkedIn zoptymalizowany pod algorytm**
+Sekcja About, słowa kluczowe pod algorytm LinkedIn, opisy doświadczeń językiem wyników, widoczność dla rekruterów.
+
+**Scoring kompetencji jako atut w aplikacji**
+Agent zachęca klienta do wykonania testów na platformach takich jak HackerRank, Codility, LeetCode lub CodinGame. Wynik scoringu (np. "top 15% HackerRank") ląduje w CV i profilu LinkedIn jako sekcja "Verified Skills" — szczególnie wartościowe dla juniorów bez dużego doświadczenia komercyjnego. Scoring nie jest progiem wejścia na platformę — jest narzędziem które agent aktywnie buduje razem z klientem w trakcie współpracy.
+
+---
+
 ## Harmonogram
 
 Start budowania platformy uzależniony od pozyskania co-foundera.
@@ -605,4 +620,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.3 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.4 — dokument żywy, do aktualizacji w miarę walidacji_
