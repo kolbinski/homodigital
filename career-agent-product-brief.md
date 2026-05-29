@@ -571,6 +571,34 @@ Najtańszy możliwy kanał pozyskania klientów. Działa szczególnie dobrze w b
 
 ---
 
+## Strategia retencji — jak zatrzymać klienta po znalezieniu pracy
+
+Prawdopodobieństwo rezygnacji po znalezieniu pracy: **60-80%.** Ból znika, po co płacić? To naturalne zachowanie. Rozwiązaniem nie jest obniżka ceny — to zmiana pozycjonowania.
+
+**Kluczowy insight:** churn po znalezieniu pracy to problem pozycjonowania, nie ceny. Jeśli klient myśli "agent = szukanie pracy" — odejdzie. Jeśli myśli "agent = opieka nad karierą" — zostaje.
+
+### Zmiana narracji od onboardingu
+
+Od pierwszego dnia komunikuj że agent to "długoterminowy partner kariery", nie "szukacz pracy." Najlepszy moment na szukanie pracy to gdy jej nie potrzebujesz. Klient który to internalizuje nie myśli o rezygnacji gdy znajdzie pracę.
+
+### Konkretna wartość co miesiąc bez szukania
+
+Agent monitoruje rynek i raz w miesiącu wysyła: "pojawiły się 3 oferty które pasują do twojego profilu — chcesz żebym sprawdził?" Klient czuje że dostaje wartość za 190 zł nawet gdy jest zatrudniony.
+
+### Negocjacja podwyżki jako nowa usługa
+
+Po 6-12 miesiącach w nowej pracy agent proaktywnie mówi: "czas na rozmowę o podwyżce — pomogę ci się przygotować i negocjować." Konkretna wartość której klient sam by nie zainicjował.
+
+### Quarterly career health check
+
+Co kwartał agent przygotowuje raport: jak rozwinął się profil klienta, co się zmieniło na rynku, co warto zrobić w następnych 3 miesiącach. Klient widzi wartość długoterminową, nie tylko reaktywną.
+
+### Oferty pasywne jako "luxury service"
+
+"Nie szukam aktywnie, ale jeśli pojawi się coś wyjątkowego — chcę wiedzieć." Agent staje się filtrem przez który przechodzą tylko najlepsze okazje. Dla ambitnych programistów bardzo atrakcyjne pozycjonowanie.
+
+---
+
 # CZĘŚĆ 7: RYZYKA I KOSZTY
 
 ## Koszty operacyjne
@@ -703,4 +731,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 3.1 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 3.2 — dokument żywy, do aktualizacji w miarę walidacji_
