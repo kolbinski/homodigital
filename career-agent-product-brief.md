@@ -56,13 +56,13 @@ Istniejące rozwiązania pracują **dla pracodawcy**, nie dla pracownika: TeamQu
 
 ### Nasza przewaga konkurencyjna
 
-| Wymiar | Konkurencja | My |
-|---|---|---|
-| Cena | $800–$4,500/miesiąc | ~190 zł/miesiąc (~$48) |
-| Dostępność | Senior professionals $80K+ | Każdy programista IT |
-| Rynek | Wyłącznie USA | Polska → globalnie |
-| Model | Jeden agent/zespół na firmę | Marketplace wielu agentów |
-| Agent | Człowiek bez AI lub pełne AI | Człowiek wspomagany AI |
+| Wymiar     | Konkurencja                  | My                        |
+| ---------- | ---------------------------- | ------------------------- |
+| Cena       | $800–$4,500/miesiąc          | ~190 zł/miesiąc (~$48)    |
+| Dostępność | Senior professionals $80K+   | Każdy programista IT      |
+| Rynek      | Wyłącznie USA                | Polska → globalnie        |
+| Model      | Jeden agent/zespół na firmę  | Marketplace wielu agentów |
+| Agent      | Człowiek bez AI lub pełne AI | Człowiek wspomagany AI    |
 
 **Kluczowy argument:** Career Agents bierze $7,000-$15,000 za program. My bierzemy 190 zł/miesiąc. Ta sama idea — dostępna dla każdego, nie tylko dla executive zarabiających $200K+.
 
@@ -110,12 +110,65 @@ To jeden z najmocniejszych argumentów sprzedażowych platformy: "nie musisz sam
 
 ---
 
-## Onboarding klienta — wzmacnianie profilu
+## Onboarding użytkownika — formularz profilu
+
+Onboarding to fundament całej platformy. Im lepiej agent zna klienta, tym precyzyjniej może działać. Cztery kroki:
+
+### Krok 1 — upload CV
+
+User wrzuca PDF. AI parsuje automatycznie i wypełnia formularz: imię, nazwisko, obecne stanowisko, lata doświadczenia, poprzednie firmy, technologie, wykształcenie. User weryfikuje i poprawia błędy.
+
+### Krok 2 — historia zawodowa: pracodawcy i projekty
+
+Hierarchia danych która pozwala agentowi opowiedzieć historię klienta rekruterowi:
+
+```
+Pracodawca (np. Firma X, 2021-2024)
+  ├── Wielkość firmy: startup / scale-up / korporacja
+  ├── Typ: product / outsourcing / consulting / agencja
+  ├── Branża
+  ├── Model pracy: zdalny / hybrydowy / stacjonarny
+  ├── Przyczyna zatrudnienia: aktywne szukanie / podejście rekrutera /
+  │   polecenie znajomego / cold apply / powrót do byłego pracodawcy / pierwsza praca
+  ├── Przyczyna zakończenia: koniec projektu/kontraktu / lepsza oferta /
+  │   restrukturyzacja / wypalenie / własna decyzja / inne
+  └── Projekt 1 (np. System płatności)
+        ├── Technologie: React, Node.js, Stripe (z autocomplete z bazy)
+        ├── Zespół: liczba osób, rola klienta (lider / członek)
+        ├── Metodologia: Scrum / Kanban / inne
+        ├── Typ: wewnętrzny / dla klienta zewnętrznego
+        ├── Opis: co zbudowałem (język achievera)
+        ├── Osiągnięcie: konkretny wynik z liczbą
+        ├── Przyczyna rozpoczęcia projektu
+        └── Przyczyna zakończenia projektu
+```
+
+**Ważne:** przyczyny zatrudnienia i zakończenia są widoczne **wyłącznie dla agenta** — nigdy nie trafiają do CV ani profilu publicznego. Wyraźny komunikat przy wypełnianiu: *"Te informacje widzi tylko Twój agent — nigdy nie są udostępniane pracodawcom."*
+
+### Krok 3 — technologie z oceną znajomości
+
+AI sugeruje listę technologii na podstawie CV i projektów. User ocenia każdą: podstawowy / średniozaawansowany / zaawansowany / ekspert. Autocomplete z bazy ~300-500 technologii (zasilona Stack Overflow Developer Survey + tagi z job boardów). Możliwość dodania własnej technologii spoza listy.
+
+### Krok 4 — preferencje i czerwone flagi
+
+Pytania których AI nie wyczyta z CV — ale które są złotem dla agenta:
+
+**Preferencje:** typ firmy (startup/korporacja/product/outsourcing), preferowany model pracy (remote/hybrid/onsite), preferowana wielkość zespołu (samodzielnie / mały zespół / duży zespół), branże które interesują, docelowe wynagrodzenie, rynek geograficzny (Polska / Europa / USA / dowolny), szukam aktywnie / pasywnie.
+
+**Czerwone flagi** — rzeczy których klient absolutnie nie chce: "nigdy więcej outsourcingu", "nie chcę open space", "nie chcę mikrozarządzania", "nie chcę legacy code bez testów". Dowolny tekst — agent czyta i filtruje oferty zgodnie z tym.
+
+### Krok 5 — "Oto Twój potencjał"
+
+Po wypełnieniu profilu agent wysyła welcome email z danymi rynkowymi (patrz sekcja Strategia retencji). Klient od razu widzi konkretną wartość.
+
+---
+
+
 
 Zanim agent zacznie aplikować, przygotowuje klienta do rynku. Trzy obszary:
 
 **CV w stylu achievera, nie dooera**
-Agent przeprowadza rozmowę "co osiągnąłeś w tej pracy?" i przerabia odpowiedzi na język wyników. Formuła: *czasownik akcji + co zrobiłem + jaki był efekt (liczba jeśli możliwa).* Przykład: "Zoptymalizowałem zapytania SQL → czas odpowiedzi API skrócił się z 2s do 200ms."
+Agent przeprowadza rozmowę "co osiągnąłeś w tej pracy?" i przerabia odpowiedzi na język wyników. Formuła: _czasownik akcji + co zrobiłem + jaki był efekt (liczba jeśli możliwa)._ Przykład: "Zoptymalizowałem zapytania SQL → czas odpowiedzi API skrócił się z 2s do 200ms."
 
 **LinkedIn zoptymalizowany pod algorytm**
 Sekcja About, słowa kluczowe pod algorytm LinkedIn, opisy doświadczeń językiem wyników, widoczność dla rekruterów.
@@ -173,11 +226,11 @@ Gmail + Drive + Sheets + Calendar + Meet = kompletne narzędzie pracy agenta za 
 
 Pracownik IT w Polsce zarabia średnio 15,000–25,000 zł brutto miesięcznie. Zmiana pracy z pomocą agenta może oznaczać podwyżkę rzędu 2,000–5,000 zł/miesiąc — wartość usługi jest więc mierzalna i realna.
 
-| | Kwota |
-|---|---|
-| Subskrypcja pracownika | 200–400 zł/miesiąc |
-| Udział agenta (65%) | 130–260 zł/klient/miesiąc |
-| Udział platformy (35%) | 70–140 zł/klient/miesiąc |
+|                        | Kwota                     |
+| ---------------------- | ------------------------- |
+| Subskrypcja pracownika | 200–400 zł/miesiąc        |
+| Udział agenta (65%)    | 130–260 zł/klient/miesiąc |
+| Udział platformy (35%) | 70–140 zł/klient/miesiąc  |
 
 Jeden agent obsługuje realistycznie **15–25 klientów** jednocześnie:
 
@@ -198,7 +251,7 @@ Success fee mocno motywuje agenta do realnej pracy — nie tylko "bycia dostępn
 - **Agent:** uczciwe wynagrodzenie proporcjonalne do wysiłku i wyników
 - **Platforma:** marża która pokrywa koszty techniczne i finansuje rozwój
 
-_Do walidacji z pierwszymi użytkownikami — szczególnie akceptowalny poziom ceny subskrypcji._
+_Do walidacji z pierwszymi użytkownikami — szczególnie akceptowalny poziom ceny subskrypcji. Jedyna zebrana do tej pory próbka (Bartek, programista) wskazuje na 190 zł jako akceptowalną kwotę przy warunku "efektowności" usługi. To sygnał, nie decyzja — docelowa cena wyklaruje się po wynikach ankiety Reddit._
 
 ---
 
@@ -240,11 +293,11 @@ Program afiliacyjny od kursów — agent i tak rekomenduje Codility i HackerRank
 
 ### Ile czasu wymaga jeden klient miesięcznie
 
-| Aktywność | Czas |
-|---|---|
-| Monitorowanie ofert i wysyłanie dopasowanych | 2–4 godz/miesiąc |
-| Raport miesięczny | 30–45 minut |
-| Rozmowy telefoniczne / WhatsApp | 30–60 minut |
+| Aktywność                                         | Czas                 |
+| ------------------------------------------------- | -------------------- |
+| Monitorowanie ofert i wysyłanie dopasowanych      | 2–4 godz/miesiąc     |
+| Raport miesięczny                                 | 30–45 minut          |
+| Rozmowy telefoniczne / WhatsApp                   | 30–60 minut          |
 | Przygotowanie do rozmowy rekrutacyjnej (gdy jest) | 1–2 godz jednorazowo |
 
 Szacunek: **2–4 godziny miesięcznie na aktywnego klienta.**
@@ -252,10 +305,10 @@ Szacunek: **2–4 godziny miesięcznie na aktywnego klienta.**
 ### Optimum dla agenta side-income
 
 | Liczba klientów | Czas/miesiąc | Przychód agenta |
-|---|---|---|
-| 10 klientów | 20–40 godz | ~1,950 zł |
-| 15 klientów | 30–60 godz | ~2,925 zł |
-| 20 klientów | 40–80 godz | ~3,900 zł |
+| --------------- | ------------ | --------------- |
+| 10 klientów     | 20–40 godz   | ~1,950 zł       |
+| 15 klientów     | 30–60 godz   | ~2,925 zł       |
+| 20 klientów     | 40–80 godz   | ~3,900 zł       |
 
 **Optimum: 10–15 klientów** — atrakcyjny side income bez ryzyka wypalenia. 20 klientów to już prawie drugi etat, możliwe tylko z dobrymi narzędziami AI które skracają czas researchu.
 
@@ -298,9 +351,9 @@ Platforma obsługuje dwa różne profile agentów z różnymi motywacjami i mode
 Senior developer zarabia 15,000-25,000 zł netto miesięcznie na głównej pracy. Agentowanie nigdy nie zastąpi jego podstawowego dochodu — i nie powinno. Wartość dla seniora to uczciwy dodatek przy minimalnym nakładzie czasu dzięki AI.
 
 | Klientów | Czas/miesiąc (z AI) | Przychód agenta |
-|---|---|---|
-| 10 | ~10-15h | ~1,235 zł |
-| 15 | ~15-25h | ~1,850 zł |
+| -------- | ------------------- | --------------- |
+| 10       | ~10-15h             | ~1,235 zł       |
+| 15       | ~15-25h             | ~1,850 zł       |
 
 Motywacja seniora: lubi pomagać innym, zna rynek IT od środka, side income jest premią a nie koniecznością.
 
@@ -413,11 +466,11 @@ Rozmowa telefoniczna gdy klient jest zestresowany. Negocjacje z rekruterem — w
 
 ### Koszty AI per klient miesięcznie
 
-| Zadanie | Koszt szacunkowy |
-|---|---|
-| Agregacja i scoring ofert (~50 ofert/miesiąc) | ~$0.50–1.00 |
-| Draft raportów i komunikacji | ~$0.30–0.50 |
-| **Łącznie** | **~$1–2 (~4–8 zł)** |
+| Zadanie                                       | Koszt szacunkowy    |
+| --------------------------------------------- | ------------------- |
+| Agregacja i scoring ofert (~50 ofert/miesiąc) | ~$0.50–1.00         |
+| Draft raportów i komunikacji                  | ~$0.30–0.50         |
+| **Łącznie**                                   | **~$1–2 (~4–8 zł)** |
 
 Przy subskrypcji 190 zł platforma dostaje 66.50 zł (35%). Koszt AI: ~8 zł. **Marża po AI: ~58 zł/klient/miesiąc.** AI zjada ~12% marży platformy — akceptowalne i liniowo skalowalne.
 
@@ -497,7 +550,7 @@ Inwestor seed oczekuje trakcji: pierwszych płacących klientów i dowodu że mo
 Założyciele piszą regularnie na LinkedIn o problemie, nie o produkcie. Tematy: "Dlaczego rynek pracy IT się zmienia", "Jak AI wpływa na karierę programisty", "Czego brakuje obecnym narzędziom." Cel: zbudować audiencję zanim cokolwiek zostanie uruchomione.
 
 **Faza 2 — launch (PR)**
-Brief prasowy do mediów technologicznych: Antyweb, Spider's Web, Benchmark.pl (Polska); TechCrunch, Product Hunt (globalnie). Historia: *"Polacy demokratyzują reverse recruiting — usługę która dotąd kosztowała $15,000, teraz za 190 zł/miesiąc."*
+Brief prasowy do mediów technologicznych: Antyweb, Spider's Web, Benchmark.pl (Polska); TechCrunch, Product Hunt (globalnie). Historia: _"Polacy demokratyzują reverse recruiting — usługę która dotąd kosztowała $15,000, teraz za 190 zł/miesiąc."_
 
 **Faza 3 — growth (social proof)**
 Case studies pierwszych klientów którzy zmienili pracę dzięki platformie. Dwie perspektywy na landing page: pracownik ("zmienił pracę, podwyżka o X zł") i agent ("zarabiam 2,000 zł miesięcznie pomagając innym"). Nic nie sprzedaje lepiej niż prawdziwa historia prawdziwego człowieka.
@@ -577,7 +630,33 @@ Prawdopodobieństwo rezygnacji po znalezieniu pracy: **60-80%.** Ból znika, po 
 
 **Kluczowy insight:** churn po znalezieniu pracy to problem pozycjonowania, nie ceny. Jeśli klient myśli "agent = szukanie pracy" — odejdzie. Jeśli myśli "agent = opieka nad karierą" — zostaje.
 
-### Zmiana narracji od onboardingu
+### Welcome email po onboardingu — "Oto Twój potencjał"
+
+Zaraz po onboardingu, gdy agent poznał klienta i przeanalizował jego profil, wysyła pierwszy spersonalizowany mail. To "moment wow" który sprawia że klient czuje że podjął właściwą decyzję — i który psychologicznie zamyka ewentualne wątpliwości czy warto płacić.
+
+Struktura maila:
+
+---
+
+_Cześć [imię],_
+
+_Przeanalizowałem Twój profil i mam dla Ciebie pierwsze dane:_
+
+_🎯 Twój potencjał rynkowy_
+_• [X] aktywnych ofert pasuje do Twojego profilu_
+_• Top 3 technologie w popycie dla Ciebie: [technologie]_
+_• Twoja stawka [X] zł mieści się w top [X]% dla [rola] w Polsce_
+_• Rynek zdalny otwiera dla Ciebie dodatkowo [X] ofert z UK i Niemiec_
+
+_✅ Co robimy w pierwszym tygodniu_
+_Aplikujemy na [X] najlepiej dopasowanych ofert, optymalizujemy Twój LinkedIn i umawiamy się na rozmowę przygotowawczą._
+
+_Zaczynamy. 🤝_
+_[Imię agenta]_
+
+---
+
+Dlaczego to działa: klient widzi że agent już pracuje, dostaje konkretne liczby które uzasadniają subskrypcję i czuje ekscytację na początku współpracy. Klient który dostał taki mail będzie chciał obserwować jak te liczby zmieniają się w kolejnych miesięcznych digestach — co bezpośrednio wspiera retencję.
 
 Od pierwszego dnia komunikuj że agent to "długoterminowy partner kariery", nie "szukacz pracy." Najlepszy moment na szukanie pracy to gdy jej nie potrzebujesz. Klient który to internalizuje nie myśli o rezygnacji gdy znajdzie pracę.
 
@@ -589,9 +668,23 @@ Agent monitoruje rynek i raz w miesiącu wysyła: "pojawiły się 3 oferty któr
 
 Po 6-12 miesiącach w nowej pracy agent proaktywnie mówi: "czas na rozmowę o podwyżce — pomogę ci się przygotować i negocjować." Konkretna wartość której klient sam by nie zainicjował.
 
-### Quarterly career health check
+### Miesięczny spersonalizowany market digest
 
-Co kwartał agent przygotowuje raport: jak rozwinął się profil klienta, co się zmieniło na rynku, co warto zrobić w następnych 3 miesiącach. Klient widzi wartość długoterminową, nie tylko reaktywną.
+Co miesiąc klient dostaje mail który nie wygląda jak newsletter — wygląda jak raport przygotowany specjalnie dla niego. Pięć elementów:
+
+**Sytuacja rynkowa dla jego profilu** — "W tym miesiącu na rynku React pojawiło się 340 ofert, wzrost o 12% vs poprzedni miesiąc. Twój profil pasuje do 23 z nich."
+
+**Technologie warte nauki** — agent widzi jakie skille pojawiają się najczęściej w ofertach dla profilu klienta: "warto rozważyć TypeScript — pojawia się w 60% ofert dla seniorów React w Twojej stawce."
+
+**Rekomendowane szkolenia** — konkretne kursy z linkami (z prowizją afiliacyjną platformy). Naturalne połączenie retencji z dywersyfikacją przychodów.
+
+**Benchmark wynagrodzenia** — "Twoja obecna stawka 18,000 zł plasuje Cię w medianie dla seniora React w Polsce. Top 25% zarabia 23,000+."
+
+**Jedna konkretna rekomendacja od agenta** — krótki osobisty komentarz: "Widzę że rośnie popyt na AI integracje w React — warto to obserwować."
+
+Technicznie: większość contentu generuje AI automatycznie na podstawie profilu klienta i danych z agregatora ofert. Agent przegląda, personalizuje komentarz i wysyła. Koszt: kilka groszy per mail. Wartość dla klienta: poczucie że ktoś aktywnie myśli o jego karierze nawet gdy nie szuka pracy.
+
+To jest najsilniejszy argument przeciwko rezygnacji: klient który co miesiąc dostaje konkretne dane o swoim rynku nie chce tracić tego widoku.
 
 ### Oferty pasywne jako "luxury service"
 
@@ -605,12 +698,12 @@ Co kwartał agent przygotowuje raport: jak rozwinął się profil klienta, co si
 
 ### Infrastruktura techniczna (miesięcznie)
 
-| Pozycja | Koszt |
-|---|---|
-| Hosting (Vercel + Supabase) | 0–100 zł (darmowy tier na start) |
-| Email agentów (Google Workspace) | 25–50 zł/agent/miesiąc |
-| Stripe (płatności) | ~2.9% + 1.50 zł od transakcji, brak stałego kosztu |
-| AI API (Anthropic/OpenAI) | 50–200 zł/miesiąc na początku |
+| Pozycja                          | Koszt                                              |
+| -------------------------------- | -------------------------------------------------- |
+| Hosting (Vercel + Supabase)      | 0–100 zł (darmowy tier na start)                   |
+| Email agentów (Google Workspace) | 25–50 zł/agent/miesiąc                             |
+| Stripe (płatności)               | ~2.9% + 1.50 zł od transakcji, brak stałego kosztu |
+| AI API (Anthropic/OpenAI)        | 50–200 zł/miesiąc na początku                      |
 
 ### Koszt v1 (1 agent, 5 klientów)
 
@@ -631,12 +724,12 @@ Email i AI API skalują się liniowo z liczbą agentów i klientów. Infrastrukt
 
 ## Kluczowe ryzyka
 
-| Ryzyko | Mitygacja |
-|---|---|
-| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent |
-| Jakość agentów trudna do kontroli | Certyfikacja / onboarding agentów |
-| Konkurencja z zachodnimi reverse recruiters | Przewaga cenowa (16x taniej) i geograficzna (Europa) |
-| Skalowalność modelu ludzkiego | Narzędzia AI które mnożą produktywność agenta |
+| Ryzyko                                            | Mitygacja                                            |
+| ------------------------------------------------- | ---------------------------------------------------- |
+| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent                       |
+| Jakość agentów trudna do kontroli                 | Certyfikacja / onboarding agentów                    |
+| Konkurencja z zachodnimi reverse recruiters       | Przewaga cenowa (16x taniej) i geograficzna (Europa) |
+| Skalowalność modelu ludzkiego                     | Narzędzia AI które mnożą produktywność agenta        |
 
 ---
 
@@ -684,6 +777,16 @@ Warunki: udokumentowana skuteczność agentów, kapitał rezerwowy na wypłaty, 
 
 Trzy modele udostępniania danych: reputacja za zgodą pracownika (opcjonalna funkcja "otwórz mój profil dla rekruterów"), anonimowe dane agregowane przez API ("agenci pomagają klientom zwiększyć wynagrodzenie średnio o X%"), API dla pracodawców (tylko klienci którzy wyrazili zgodę). Upublicznianie danych bez zgody jest nielegalne w świetle RODO.
 
+### Produkty inhouse — programiści między projektami
+
+Gdy platforma działa stabilnie i generuje regularny przychód, użytkownicy którzy aktualnie nie mają pracy mogą angażować się w budowanie produktów inhouse platformy — np. webappowego IDE monitorowanego przez AI lub innych narzędzi technologicznych.
+
+Dwa modele współpracy: normalny zarobek (platforma płaci za czas pracy) lub udział w zyskach z produktu (bez wynagrodzenia na starcie, w zamian za equity w konkretnym projekcie).
+
+Korzyści dla platformy: dostęp do zweryfikowanych talentów bez kosztów rekrutacji, budowanie własnego ekosystemu produktowego. Korzyści dla programisty: produktywne wypełnienie czasu między projektami, potencjalny długoterminowy udział w zyskach, budowanie portfolio na realnym projekcie.
+
+_Faza 6 — wymaga stabilnego modelu kariery jako fundamentu. Nie przed osiągnięciem product-market fit na core platformie._
+
 ---
 
 ## Wersja 1 — zakres MVP
@@ -709,20 +812,57 @@ Trzy modele udostępniania danych: reputacja za zgodą pracownika (opcjonalna fu
 
 ---
 
+## Propozycja dla co-foundera
+
+### Podział udziałów
+
+**50/50** — równy podział firmy między dwóch założycieli.
+
+Uzasadnienie: obie strony wnoszą komplementarne i równorzędne kompetencje. Założyciel wnosi pomysł, wizję, research, walidację rynkową, frontend i rolę pierwszego agenta. Co-founder wnosi backend, infrastrukturę techniczną i równorzędne zaangażowanie operacyjne.
+
+### Vesting schedule
+
+Udziały "zarabiają się" przez **2 lata** w równych miesięcznych ratach. Jeśli któraś ze stron odejdzie przed upływem 2 lat — otrzymuje proporcjonalną część udziałów. Chroni obie strony przed scenariuszem gdzie jeden founder odpada po miesiącu i zatrzymuje połowę firmy.
+
+Standardowy mechanizm w branży startupowej — nie wyraz braku zaufania, tylko uczciwa ochrona dla każdego.
+
+### Rola co-foundera
+
+**CTO** — odpowiedzialność za całość architektury technicznej: backend (Node.js + Express), baza danych (PostgreSQL/Supabase), integracja Stripe Connect, API dla agregatora ofert, infrastruktura AI. Pełna decyzyjność w sprawach technicznych.
+
+### Oczekiwany nakład czasu
+
+**Sprint walidacyjny (pierwsze 4-6 tygodni):** minimum 10-15 godzin tygodniowo — budowa podstawowego MVP równolegle z ręczną walidacją modelu przez założyciela jako pierwszego agenta.
+
+**Faza wzrostu:** do uzgodnienia w miarę jak platforma generuje przychody i można określić realne potrzeby.
+
+### Kiedy pojawiają się pierwsze przychody
+
+Pierwsze 3 osoby beta za 99 zł — przed napisaniem pierwszej linii kodu, przez ręczny model (WhatsApp + Google Sheets + Stripe). Pierwsze przychody z platformy po walidacji modelu i zbudowaniu v1 (8-12 tygodni). Podział przychodów zgodnie z udziałami od pierwszej faktury.
+
+### Dlaczego teraz jest dobry moment
+
+Rynek reverse recruitingu w Polsce jest wolny — nikt tego nie robi. Globalnie najbliżsi konkurenci kosztują $800-$15,000/miesiąc, my celujemy w 190 zł. Koszty startowe są minimalne — nie potrzeba inwestora żeby zacząć. Model można zwalidować w tygodnie, nie lata.
+
+---
+
 ## Harmonogram
 
 Start budowania platformy uzależniony od pozyskania co-foundera.
 
 **Przed pierwszą rozmową z co-founderem:**
+
 - Walidacja popytu: 5 rozmów z IT specjalistami
 - Przygotowanie krótkiego pitch deck na bazie tego dokumentu
 
 **Po dołączeniu co-foundera — sprint walidacyjny (4–6 tygodni):**
+
 - Pierwsi 2–3 klienci pozyskani ręcznie
 - Założyciel jako pierwszy agent — testuje model na sobie i klientach
 - Weryfikacja ceny subskrypcji i success fee
 
 **Po walidacji modelu — budowa v1 (8–12 tygodni):**
+
 - React frontend + Node.js backend
 - Profil pracownika i agenta, matching, komunikacja, płatności
 - Rejestracja działalności + umowy prawne
@@ -731,4 +871,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 3.2 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 3.8 — dokument żywy, do aktualizacji w miarę walidacji_
