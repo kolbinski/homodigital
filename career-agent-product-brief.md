@@ -477,6 +477,30 @@ Paradoksalnie: platforma której klientami są pracownicy zagrożeni przez AI, s
 
 ---
 
+## Profil idealnego agenta
+
+### Kto NIE jest idealnym agentem
+
+Rekruterzy HR — paradoksalnie nie najlepszy wybór. Przez całą karierę pracowali dla pracodawcy ("jak znaleźć kandydata dla firmy"), nie dla pracownika ("jak wywalczyć najlepsze warunki"). To fundamentalnie odwrócona perspektywa której trudno się oduczyć.
+
+### Kto jest idealnym agentem
+
+**Doświadczeni programiści którzy wielokrotnie zmieniali pracę.** Rozumieją techniczny profil klienta, mówią jego językiem, znają realia rynku IT od środka.
+
+**Osoby które niedawno same przeszły udany career transition.** Świeże doświadczenie, wysoka empatia, dokładnie wiedzą co boli w procesie.
+
+**Tech leads i managerowie którzy rekrutowali do swoich zespołów.** Znają obie strony procesu — wiedzą czego szukają pracodawcy i jak myśli kandydat.
+
+**Career coachowie z backgroundem w IT.** Już robią część tej pracy — platforma daje im infrastrukturę i gotowych klientów.
+
+### Złoty profil agenta
+
+Senior developer lub tech lead, 35–45 lat, który chce side income (1,950–3,250 zł/miesiąc przy 10–15 klientach), ma szeroką sieć kontaktów w branży i lubi pomagać innym. Posiada własną działalność gospodarczą.
+
+To jest profil który pozwala obsłużyć 10–15 klientów miesięcznie bez wypalenia, używając AI jako narzędzia które mnoży produktywność.
+
+---
+
 ## Harmonogram
 
 Start budowania platformy uzależniony od pozyskania co-foundera.
@@ -502,4 +526,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.0 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.1 — dokument żywy, do aktualizacji w miarę walidacji_
