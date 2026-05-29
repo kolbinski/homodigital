@@ -340,11 +340,17 @@ Raporty budują zaufanie klienta, dyscyplinują agenta i dostarczają platformie
 
 ## Matching pracownik ↔ agent
 
-**Model v1 (ręczny):** nowy klient wypełnia profil (doświadczenie, cele, preferencje, rynek). Platforma (założyciel) dobiera 2–3 najlepiej dopasowanych agentów. Klient wybiera z kim chce pracować.
+**Model v1 (ręczny):** nowy klient wypełnia profil (doświadczenie, cele, preferencje, rynek docelowy, język). Platforma (założyciel) dobiera 2–3 najlepiej dopasowanych agentów. Klient wybiera z kim chce pracować.
 
 Model "kto pierwszy ten lepszy" odrzucony — nagradza szybkość, nie dopasowanie, co obniża jakość usługi.
 
-Docelowo: algorytm matchingu oparty na danych historycznych (skuteczność agenta w danej specjalizacji, kraju, poziomie seniority).
+### Matching wielojęzyczny
+
+Agent może obsługiwać klientów z różnych krajów jednocześnie — decyduje liczba znanych mu języków i znajomość rynków. Agent który mówi po polsku i angielsku może obsługiwać polskich klientów szukających pracy w UK lub USA — i pobierać wyższy tier subskrypcji (400-500 zł) za te przypadki. Jeden agent, dwa rynki, wyższe zarobki.
+
+Profil agenta na platformie zawiera: języki, rynki geograficzne, specjalizacje technologiczne. Matching uwzględnia wszystkie trzy wymiary.
+
+Docelowo: algorytm matchingu oparty na danych historycznych (skuteczność agenta w danej specjalizacji, kraju, poziomie seniority i języku).
 
 ---
 
@@ -541,6 +547,30 @@ _Każda nowa nisza wymaga dedykowanego agenta który zna ten rynek od środka �
 
 ---
 
+## Agent Report Card
+
+Co miesiąc klient ocenia agenta w trzech wymiarach: aktywność (czy agent regularnie działał), komunikacja (czy był dostępny i responsywny), wyniki (czy zbliżył klienta do celu). Oceny są widoczne dla nowych klientów przy wyborze agenta.
+
+Report card rozwiązuje największe ryzyko platformy — quality control — bez potrzeby budowania skomplikowanego systemu monitoringu. Klienci sami weryfikują jakość agentów.
+
+---
+
+## Certyfikat zmiany pracy
+
+Gdy klient znajdzie pracę przez platformę, dostaje "Career Agent Success Certificate" który może wrzucić na LinkedIn jako post lub badge. Zawiera: nowe stanowisko, procentowy wzrost wynagrodzenia (opcjonalnie), czas współpracy z agentem.
+
+Darmowy marketing wirusowy — każdy certyfikat to organiczny post na LinkedIn widoczny dla sieci kontaktów klienta. Buduje reputację platformy bez kosztów reklamowych.
+
+---
+
+## Referral program
+
+Klient który poleci znajomego i ten zapłaci pierwszy miesiąc subskrypcji — dostaje miesiąc za darmo. Agent który poleci nowego agenta który onboarduje 3 klientów — dostaje premię.
+
+Najtańszy możliwy kanał pozyskania klientów. Działa szczególnie dobrze w branży IT gdzie programiści mają silne sieci zawodowych znajomych.
+
+---
+
 # CZĘŚĆ 7: RYZYKA I KOSZTY
 
 ## Koszty operacyjne
@@ -673,4 +703,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 3.0 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 3.1 — dokument żywy, do aktualizacji w miarę walidacji_
