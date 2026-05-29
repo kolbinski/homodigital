@@ -501,6 +501,46 @@ To jest profil który pozwala obsłużyć 10–15 klientów miesięcznie bez wyp
 
 ---
 
+## Strategia AI dla agentów
+
+### Cztery warstwy automatyzacji
+
+**Warstwa 1 — agregacja i filtrowanie ofert**
+AI agreguje oferty z wielu źródeł (JustJoin, No Fluff Jobs, LinkedIn, Pracuj.pl) i automatycznie filtruje pod profil klienta. Agent zamiast ręcznie przeglądać 5 serwisów dostaje przefiltrowaną listę 10–15 najlepiej dopasowanych ofert. Eliminuje ~80% manualnej pracy.
+
+**Warstwa 2 — scoring i ranking**
+AI ocenia dopasowanie każdej oferty: technologie, poziom seniority, widełki płacowe, lokalizacja, kultura firmy. Agent dostaje listę posortowaną od najlepszego dopasowania — nie musi samodzielnie oceniać każdej oferty.
+
+**Warstwa 3 — draft komunikacji**
+AI przygotowuje draft wiadomości do rekrutera na podstawie profilu klienta i konkretnej oferty. Agent przegląda, personalizuje i wysyła. Oszczędność: ~70% czasu na komunikację.
+
+**Warstwa 4 — raport miesięczny**
+AI automatycznie generuje draft raportu na podstawie aktywności w miesiącu. Agent uzupełnia i wysyła. Czas: z 45 minut do ~10 minut.
+
+### Gdzie AI nie zastąpi agenta
+
+Rozmowa telefoniczna gdy klient jest zestresowany. Negocjacje z rekruterem — wyczucie momentu i tonu. Ocena kultury organizacyjnej firmy na podstawie subtelnych sygnałów.
+
+### Koszty AI per klient miesięcznie
+
+| Zadanie | Koszt szacunkowy |
+|---|---|
+| Agregacja i scoring ofert (~50 ofert/miesiąc) | ~$0.50–1.00 |
+| Draft raportów i komunikacji | ~$0.30–0.50 |
+| **Łącznie** | **~$1–2 (~4–8 zł)** |
+
+Przy subskrypcji 190 zł platforma dostaje 66.50 zł (35%). Koszt AI: ~8 zł. **Marża po AI: ~58 zł/klient/miesiąc** — AI zjada ~12% marży platformy. Akceptowalne i liniowo skalowalne.
+
+### Strategie kontroli kosztów
+
+**Cachowanie** — te same oferty nie są analizowane wielokrotnie. **Batching** — przetwarzanie ofert hurtowo raz dziennie, nie w czasie rzeczywistym. **Dobór modelu do zadania** — tańszy model (np. Claude Haiku) do scoringu ofert, mocniejszy tylko do draftu komunikacji wymagającej kontekstu.
+
+### Wniosek
+
+Przy obecnym modelu AI jest opłacalne i skalowalne. Marża na klienta pozostaje stała przy wzroście — brak efektu skali w górę. Kluczem jest świadomy dobór modelu do każdego zadania i unikanie zbędnych wywołań API.
+
+---
+
 ## Harmonogram
 
 Start budowania platformy uzależniony od pozyskania co-foundera.
@@ -526,4 +566,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.1 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 2.2 — dokument żywy, do aktualizacji w miarę walidacji_
