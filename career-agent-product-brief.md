@@ -1,6 +1,8 @@
-# Homo Digital Platform — Product Brief
+# Career Agent Platform — Product Brief
 
 ---
+
+# CZĘŚĆ 1: PROBLEM I SZANSA
 
 ## Koncepcja
 
@@ -17,6 +19,58 @@ Marketplace który łączy pracowników IT z osobistymi agentami kariery — lud
 Specjaliści IT w erze AI stoją przed bezprecedensową zmianą rynku pracy. Istniejące narzędzia są reaktywne (pomagają aplikować) — brakuje kogoś kto myśli strategicznie o karierze długoterminowo i proaktywnie działa w imieniu pracownika.
 
 ---
+
+## Analiza konkurencji
+
+### Nazewnictwo branżowe
+
+To co budujemy ma już nazwę na rynku globalnym: **reverse recruiting**. Zamiast pracodawca szuka kandydata — kandydat zatrudnia agenta który szuka dla niego pracy. Rynek istnieje, rośnie i jest udowodniony. Nasza przewaga: wszyscy gracze obsługują wyłącznie rynek angloamerykański i wyłącznie senior professionals. My demokratyzujemy tę usługę.
+
+W kontekście reverse recruitingu "senior professionals" to nie oznacza Senior Developer czy Senior Engineer. Chodzi o poziom kariery i wynagrodzenia: osoby na stanowiskach managerskich lub wyższych (Director, VP, C-level), zarabiające $80,000-$300,000+ rocznie, z wieloletnim doświadczeniem w korporacjach, które robią poufną zmianę pracy.
+
+Zwykły programista w Polsce zarabiający 12,000-20,000 zł miesięcznie nigdy nie zapłaci $5,000 za reverse recruiting — to byłoby 2-3 miesięczne wynagrodzenie. Ale za 190 zł/miesiąc? To jeden obiad w restauracji. Nasza platforma demokratyzuje usługę która dotąd była dostępna tylko dla najbogatszych profesjonalistów na rynku.
+
+---
+
+### Polska — wolna nisza
+
+Istniejące rozwiązania pracują **dla pracodawcy**, nie dla pracownika: TeamQuest, HRlink, agencje rekrutacyjne. Job boardy (JustJoin.it, No Fluff Jobs, Pracuj.pl) to pasywne narzędzia — klient szuka sam. Nikt nie robi "osobistego agenta po stronie kandydata" w Polsce. **Nisza wolna.**
+
+---
+
+### Globalnie — mapa konkurencji
+
+**Navii** (heynavii.ai) — model w pełni zautomatyzowany (AI, bez człowieka). Bezpłatny dla profesjonalistów, zarabia po stronie pracodawców. Skupiony wyłącznie na rynku amerykańskim, praktycznie nieznany w Europie. 333 followersów na Instagramie — bardzo wczesny etap.
+
+**Find My Profession** — lider rynku reverse recruitingu. 1,000+ opinii 5-star na Trustpilot, ponad 10,000 obsłużonych klientów. Tylko certyfikowani reverse recruiters w USA. Cena: $2,000-$4,500 pierwszego miesiąca, $1,500-$4,000 kolejne. Wyłącznie rynek angloamerykański, senior professionals.
+
+**Career Agents** (careeragents.org) — prowadzony przez Stevena Mostyna (były rekruter Amazon/Deloitte/TD Bank, 20+ lat doświadczenia). Cena: Starter $999 jednorazowo, Pro $999/miesiąc przez 7 miesięcy ($6,993 łącznie), Executive $1,667/miesiąc przez 9 miesięcy ($15,003 łącznie). Gwarancja oferty pracy w 7 miesięcy lub 50% zwrotu. 23 opinie na Trustpilot (4.7/5). Wyłącznie rynek angloamerykański.
+
+**WeAreCareer** — łączy reverse recruiting z career coachingiem, ponad 3,000 klientów. Cena: $5,000 + 4% success fee od pierwszorocznej pensji. Gwarancja: 10 rozmów kwalifikacyjnych lub kontynuacja za darmo. Wyłącznie USA.
+
+**My Personal Recruiter** — najtańszy gracz na rynku zachodnim, model subskrypcyjny. Cena: $799-$1,999/miesiąc. Założony 2023. Wyłącznie USA.
+
+**AI-powered alternatives** (Sprout, LoopCV, JobCopilot) — automatyzacja aplikowania za ułamek ceny, bez ludzkiego agenta. Konkurują ceną, nie jakością relacji.
+
+---
+
+### Nasza przewaga konkurencyjna
+
+| Wymiar | Konkurencja | My |
+|---|---|---|
+| Cena | $800–$4,500/miesiąc | ~190 zł/miesiąc (~$48) |
+| Dostępność | Senior professionals $80K+ | Każdy programista IT |
+| Rynek | Wyłącznie USA | Polska → globalnie |
+| Model | Jeden agent/zespół na firmę | Marketplace wielu agentów |
+| Agent | Człowiek bez AI lub pełne AI | Człowiek wspomagany AI |
+
+**Kluczowy argument:** Career Agents bierze $7,000-$15,000 za program. My bierzemy 190 zł/miesiąc. Ta sama idea — dostępna dla każdego, nie tylko dla executive zarabiających $200K+.
+
+**Geograficzna luka:** wszyscy zachodni gracze ignorują Europę. Polska, Niemcy, Holandia, kraje nordyckie — zero lokalnego reverse recruitingu.
+
+---
+
+# CZĘŚĆ 2: ROZWIĄZANIE
 
 ## Docelowi użytkownicy
 
@@ -56,6 +110,61 @@ To jeden z najmocniejszych argumentów sprzedażowych platformy: "nie musisz sam
 
 ---
 
+## Onboarding klienta — wzmacnianie profilu
+
+Zanim agent zacznie aplikować, przygotowuje klienta do rynku. Trzy obszary:
+
+**CV w stylu achievera, nie dooera**
+Agent przeprowadza rozmowę "co osiągnąłeś w tej pracy?" i przerabia odpowiedzi na język wyników. Formuła: *czasownik akcji + co zrobiłem + jaki był efekt (liczba jeśli możliwa).* Przykład: "Zoptymalizowałem zapytania SQL → czas odpowiedzi API skrócił się z 2s do 200ms."
+
+**LinkedIn zoptymalizowany pod algorytm**
+Sekcja About, słowa kluczowe pod algorytm LinkedIn, opisy doświadczeń językiem wyników, widoczność dla rekruterów.
+
+**Scoring kompetencji jako atut w aplikacji**
+Agent zachęca klienta do wykonania testów na platformach takich jak HackerRank, Codility, LeetCode lub CodinGame. Wynik scoringu (np. "top 15% HackerRank") ląduje w CV i profilu LinkedIn jako sekcja "Verified Skills" — szczególnie wartościowe dla juniorów bez dużego doświadczenia komercyjnego. Scoring nie jest progiem wejścia na platformę — jest narzędziem które agent aktywnie buduje razem z klientem w trakcie współpracy.
+
+---
+
+## Workflow operacyjny agenta
+
+### Dedykowany email dla każdego klienta
+
+Przy onboardingu agent tworzy dedykowane konto Gmail (np. jan-kowalski-it@gmail.com) współdzielone między agentem a klientem. Obaj mają pełny dostęp — agent aplikuje na oferty, klient widzi wszystkie odpowiedzi od pracodawców w czasie rzeczywistym. Klient może używać tego maila również na innych platformach (Navii, job boardy) — jedno miejsce dla całej aktywności kariery.
+
+**Logowanie z różnych IP:** przy dodaniu telefonu agenta i klienta jako zaufanych urządzeń zwykły Gmail działa bez problemów. Start na darmowym Gmail — przejście na Google Workspace gdy pojawi się realny problem.
+
+### Maile agentów
+
+Agenci używają służbowego maila w domenie platformy (np. jan.nowak@nazwaplatformy.com) do komunikacji z pracodawcami w imieniu klientów. Wygląda profesjonalnie i buduje brand platformy.
+
+### Google Drive — folder klienta
+
+Przy onboardingu agent tworzy strukturę folderów: CV (różne wersje pod różne oferty), list motywacyjny (szablony), certyfikaty i portfolio, arkusz aplikacji. Agent ma wszystko pod ręką — bez proszenia klienta o pliki za każdym razem.
+
+### Arkusz Google Sheets — live raport aplikacji
+
+Platforma dostarcza gotowy szablon arkusza z kolumnami: data aplikacji, firma, stanowisko, link do oferty, status (aplikowane / umówiony meeting / negocjacja / zatrudnienie / odmowa), następny krok, notatki. Agent uzupełnia na bieżąco — klient widzi postępy w czasie rzeczywistym bez czekania na miesięczny raport.
+
+### Google Alerts
+
+Agent ustawia alerty Google na imię i nazwisko klienta — monitoruje co pojawia się w sieci i wykorzystuje to przy budowaniu personal brand.
+
+### Google Meet — sesje przygotowawcze
+
+Przed ważną rozmową rekrutacyjną agent prowadzi 30-minutową sesję przygotowawczą przez Google Meet.
+
+### Komunikacja agent-klient
+
+Pracownik i agent wymieniają się numerami telefonów i komunikują bezpośrednio — telefon, SMS, WhatsApp. Platforma nie zarządza komunikacją. To jest przewaga nad automatycznymi konkurentami: klient dzwoni do człowieka który zna jego sytuację, nie pisze do chatbota.
+
+### Wniosek operacyjny
+
+Gmail + Drive + Sheets + Calendar + Meet = kompletne narzędzie pracy agenta za **0 zł dodatkowych kosztów.**
+
+---
+
+# CZĘŚĆ 3: BIZNES
+
 ## Model biznesowy
 
 ### Dwa filary przychodu
@@ -64,11 +173,11 @@ To jeden z najmocniejszych argumentów sprzedażowych platformy: "nie musisz sam
 
 Pracownik IT w Polsce zarabia średnio 15,000–25,000 zł brutto miesięcznie. Zmiana pracy z pomocą agenta może oznaczać podwyżkę rzędu 2,000–5,000 zł/miesiąc — wartość usługi jest więc mierzalna i realna.
 
-|                        | Kwota                     |
-| ---------------------- | ------------------------- |
-| Subskrypcja pracownika | 200–400 zł/miesiąc        |
-| Udział agenta (65%)    | 130–260 zł/klient/miesiąc |
-| Udział platformy (35%) | 70–140 zł/klient/miesiąc  |
+| | Kwota |
+|---|---|
+| Subskrypcja pracownika | 200–400 zł/miesiąc |
+| Udział agenta (65%) | 130–260 zł/klient/miesiąc |
+| Udział platformy (35%) | 70–140 zł/klient/miesiąc |
 
 Jeden agent obsługuje realistycznie **15–25 klientów** jednocześnie:
 
@@ -93,15 +202,49 @@ _Do walidacji z pierwszymi użytkownikami — szczególnie akceptowalny poziom c
 
 ---
 
+## Dywersyfikacja przychodów
+
+Oprócz subskrypcji i success fee platforma może budować dodatkowe źródła przychodów w trzech horyzontach czasowych.
+
+### Krótkoterminowe — od razu możliwe
+
+**Prowizje afiliacyjne od kursów i szkoleń**
+Agent rekomenduje klientowi kursy na Udemy, Coursera, HackerRank, Codility. Platforma bierze prowizję afiliacyjną od zakupu (5-15% ceny kursu). Zero kosztów wdrożenia, naturalnie wpisuje się w rolę agenta który wzmacnia profil klienta.
+
+**Prowizje od narzędzi kariery**
+LinkedIn Premium, Grammarly, Canva (CV), Notion. Programy afiliacyjne istnieją — agent rekomenduje, platforma zarabia bez dodatkowej pracy.
+
+### Średnioterminowe — po walidacji modelu
+
+**Dostęp dla pracodawców (B2B)**
+Firmy płacą za dostęp do bazy kandydatów którzy wyrazili zgodę na bycie znajdywanym. Model zbliżony do LinkedIn Recruiter w miniaturze. Wymaga odpowiedniej liczby użytkowników i zgód RODO.
+
+**Raport rynkowy B2B**
+Anonimowe dane agregowane o rynku IT — stawki, trendy, rotacja, popularność technologii — sprzedawane firmom HR i pracodawcom. Platforma naturalnie zbiera te dane przy codziennej pracy agentów. Zero dodatkowych kosztów zbierania danych.
+
+### Długoterminowe
+
+**Ubezpieczenie kariery**
+Partnerstwo z ubezpieczycielem — "ubezpieczenie od bezrobocia" dla klientów platformy z niższą składką dzięki udowodnionej skuteczności agentów.
+
+**API dla innych platform**
+Gdy platforma osiągnie znaczącą bazę kandydatów i danych rynkowych — udostępnienie API partnerom zewnętrznym.
+
+### Najszybszy do wdrożenia
+
+Program afiliacyjny od kursów — agent i tak rekomenduje Codility i HackerRank jako element onboardingu klienta. Warto żeby platforma na tym zarabiała od pierwszego dnia.
+
+---
+
 ## Ekonomika pracy agenta
 
 ### Ile czasu wymaga jeden klient miesięcznie
 
-| Aktywność                                         | Czas                 |
-| ------------------------------------------------- | -------------------- |
-| Monitorowanie ofert i wysyłanie dopasowanych      | 2–4 godz/miesiąc     |
-| Raport miesięczny                                 | 30–45 minut          |
-| Rozmowy telefoniczne / WhatsApp                   | 30–60 minut          |
+| Aktywność | Czas |
+|---|---|
+| Monitorowanie ofert i wysyłanie dopasowanych | 2–4 godz/miesiąc |
+| Raport miesięczny | 30–45 minut |
+| Rozmowy telefoniczne / WhatsApp | 30–60 minut |
 | Przygotowanie do rozmowy rekrutacyjnej (gdy jest) | 1–2 godz jednorazowo |
 
 Szacunek: **2–4 godziny miesięcznie na aktywnego klienta.**
@@ -109,10 +252,10 @@ Szacunek: **2–4 godziny miesięcznie na aktywnego klienta.**
 ### Optimum dla agenta side-income
 
 | Liczba klientów | Czas/miesiąc | Przychód agenta |
-| --------------- | ------------ | --------------- |
-| 10 klientów     | 20–40 godz   | ~1,950 zł       |
-| 15 klientów     | 30–60 godz   | ~2,925 zł       |
-| 20 klientów     | 40–80 godz   | ~3,900 zł       |
+|---|---|---|
+| 10 klientów | 20–40 godz | ~1,950 zł |
+| 15 klientów | 30–60 godz | ~2,925 zł |
+| 20 klientów | 40–80 godz | ~3,900 zł |
 
 **Optimum: 10–15 klientów** — atrakcyjny side income bez ryzyka wypalenia. 20 klientów to już prawie drugi etat, możliwe tylko z dobrymi narzędziami AI które skracają czas researchu.
 
@@ -122,113 +265,58 @@ Agent który używa AI do monitorowania ofert, draftu raportów i analizy rynku 
 
 ---
 
-- **Frontend:** React (już znany)
-- **Backend:** Node.js + Express (do nauki)
-- **Baza danych:** PostgreSQL lub Supabase
-- **AI integracje:** Anthropic API / OpenAI — narzędzia dla agentów
-- **Auth:** Supabase Auth lub Clerk
-- **Płatności:** Stripe + Stripe Connect Express (patrz niżej)
-- **Komunikacja:** Slack (patrz niżej)
+# CZĘŚĆ 4: AGENCI
 
-### Stripe Connect Express
+## Profil idealnego agenta
 
-Stripe Connect to rozszerzenie Stripe stworzone dla marketplace'ów gdzie pieniądze przepływają przez platformę do innych osób.
+### Kto NIE jest idealnym agentem
 
-**Jak działa:** pracownik płaci subskrypcję 300 zł → pieniądze trafiają na konto platformy → Stripe automatycznie dzieli i wypłaca 195 zł agentowi (65%) i 105 zł platformie (35%). Bez ręcznych przelewów.
+Rekruterzy HR — paradoksalnie nie najlepszy wybór. Przez całą karierę pracowali dla pracodawcy ("jak znaleźć kandydata dla firmy"), nie dla pracownika ("jak wywalczyć najlepsze warunki"). To fundamentalnie odwrócona perspektywa której trudno się oduczyć.
 
-**Trzy modele — wybieramy Express:** agent przechodzi przez uproszczony onboarding Stripe (ok. 10 minut), platforma widzi jego zarobki w dashboardzie. Najlepszy balans prostoty i kontroli dla v1.
+### Kto jest idealnym agentem
 
-**Koszt:** 0.25% + ~1 zł od każdej wypłaty dla agenta — marginalny.
+**Doświadczeni programiści którzy wielokrotnie zmieniali pracę.** Rozumieją techniczny profil klienta, mówią jego językiem, znają realia rynku IT od środka.
 
-**Ważne:** każdy agent musi przejść weryfikację tożsamości (KYC) przez Stripe zanim dostanie pierwszą wypłatę. Wymóg prawny, nie opcja. W Polsce trwa 1–2 dni.
+**Osoby które niedawno same przeszły udany career transition.** Świeże doświadczenie, wysoka empatia, dokładnie wiedzą co boli w procesie.
 
-### Komunikacja — poza platformą
+**Tech leads i managerowie którzy rekrutowali do swoich zespołów.** Znają obie strony procesu — wiedzą czego szukają pracodawcy i jak myśli kandydat.
 
-Pracownik i agent wymieniają się numerami telefonów i komunikują bezpośrednio — telefon, SMS, WhatsApp, cokolwiek im odpowiada. Platforma nie zarządza komunikacją i nie musi jej budować.
+**Career coachowie z backgroundem w IT.** Już robią część tej pracy — platforma daje im infrastrukturę i gotowych klientów.
 
-To jest przewaga nad automatycznymi konkurentami jak Navii: klient dzwoni do człowieka który zna jego sytuację — nie pisze do chatbota przez interfejs.
+### Złoty profil agenta
 
-**Rola platformy ogranicza się do czterech rzeczy:** matching, płatności, raporty i reputacja. To znacznie upraszcza v1 technicznie i przyspiesza budowę.
+Senior developer lub tech lead, 35–45 lat, który chce side income (1,950–3,250 zł/miesiąc przy 10–15 klientach), ma szeroką sieć kontaktów w branży i lubi pomagać innym. Posiada własną działalność gospodarczą.
 
 ---
 
-## Wersja 1 — zakres MVP
+## Dwa segmenty agentów — modele zarobkowe
 
-**Rynek:** Polska  
-**Agentów:** 1 (założyciel = pierwszy agent)  
-**Klientów:** 2-5 pierwszych użytkowników pozyskanych ręcznie
+Platforma obsługuje dwa różne profile agentów z różnymi motywacjami i modelami finansowymi.
 
-### Co musi działać w v1:
+### Segment 1 — Senior developer jako agent side income
 
-- Profil pracownika (doświadczenie, cele, preferencje)
-- Profil agenta
-- Matching pracownik ↔ agent
-- Komunikacja wewnątrz platformy
-- Podstawowy dashboard dla agenta (lista klientów, notatki, zadania)
-- Płatność (choćby prosta, przez Stripe)
+Senior developer zarabia 15,000-25,000 zł netto miesięcznie na głównej pracy. Agentowanie nigdy nie zastąpi jego podstawowego dochodu — i nie powinno. Wartość dla seniora to uczciwy dodatek przy minimalnym nakładzie czasu dzięki AI.
 
-### Co odpada w v1:
+| Klientów | Czas/miesiąc (z AI) | Przychód agenta |
+|---|---|---|
+| 10 | ~10-15h | ~1,235 zł |
+| 15 | ~15-25h | ~1,850 zł |
 
-- Wielojęzyczność
-- Matching krajowy
-- Automatyczne AI narzędzia dla agentów
-- Mobile app
+Motywacja seniora: lubi pomagać innym, zna rynek IT od środka, side income jest premią a nie koniecznością.
 
----
+### Segment 2 — Career specialist jako full time agent
 
-## Go-to-market v1
+Inny profil osoby: career coach, były rekruter który zmienił stronę, osoba z kilku latami doświadczenia IT szukająca alternatywy zawodowej. Dla nich agentowanie może być głównym źródłem dochodu.
 
-1. Założyciel = pierwszy agent, pierwsi klienci = znajomi z branży IT
-2. Case study: założyciel używa własnej platformy do znalezienia pracy
-3. Po walidacji modelu — rekrutacja kolejnych agentów (networking LinkedIn)
-4. Skalowanie na rynek anglojęzyczny gdy model udowodniony
+**Przy subskrypcji 300 zł i 35-45 klientach z AI:**
+Agent dostaje 195 zł/klient × 40 klientów = **7,800 zł/miesiąc** + success fee. Przy AI skracającym czas do 30-60 min/klient = ~35h miesięcznie. Realne jako full time.
 
----
+**Specjalizacja globalna (USA/Zachód):**
+Subskrypcja 400-500 zł dla klientów szukających pracy zagranicznie. Success fee przy podwyżce $2,000/miesiąc = ~3,500 zł jednorazowo. 20 klientów + 2-3 success fee miesięcznie = pełny etat z wyższymi zarobkami.
 
-## Kluczowe ryzyka
+### Wyższy tier subskrypcji dla rynku globalnego
 
-| Ryzyko                                            | Mitygacja                                            |
-| ------------------------------------------------- | ---------------------------------------------------- |
-| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent                       |
-| Jakość agentów trudna do kontroli                 | Certyfikacja / onboarding agentów                    |
-| Konkurencja z zachodnimi reverse recruiters       | Przewaga cenowa (16x taniej) i geograficzna (Europa) |
-| Skalowalność modelu ludzkiego                     | Narzędzia AI które mnożą produktywność agenta        |
-
----
-
-## Wizja długoterminowa
-
-**Gwarancja dochodu dla bezrobotnych.**
-
-Docelowo platforma mogłaby oferować pracownikom IT którzy aktualnie nie mają pracy gwarancję minimalnego dochodu przez czas poszukiwań — w zamian za wyższy success fee przy zatrudnieniu.
-
-Jest to model zbliżony do Income Share Agreement stosowanego przez bootcampy programistyczne.
-
-Warunki które muszą być spełnione zanim to będzie możliwe: udokumentowana skuteczność agentów (dane historyczne), kapitał rezerwowy na wypłaty oraz precyzyjny profil klientów którym platforma jest w stanie zagwarantować zatrudnienie w określonym czasie.
-
-### Kto mógłby finansować gwarancję
-
-**Pracodawcy jako mecenasi.** Firmy płacą platformie za dostęp do pre-zweryfikowanych kandydatów — analogicznie do LinkedIn Recruiter. Im więcej firm płaci za dostęp do talentów, tym większa pula na gwarancje dla bezrobotnych.
-
-**Państwo i fundusze UE.** Programy aktywizacji zawodowej dla osób zwolnionych przez automatyzację AI są już finansowane publicznie. Platforma może aplikować o granty jako narzędzie reintegracji zawodowej — szczególnie wiarygodnie w kontekście wcześniejszych kontaktów instytucjonalnych.
-
-**Ubezpieczyciele.** Gwarancja dochodu to w istocie produkt ubezpieczeniowy. Partner ubezpieczeniowy oferuje "ubezpieczenie kariery" przez platformę — klient płaci małą składkę miesięcznie, przy utracie pracy otrzymuje wypłatę przez czas poszukiwań. Najbardziej realistyczny model na średni termin — ryzyko jest policzone i podzielone.
-
-Prywatne ubezpieczenia od bezrobocia już istnieją na świecie (UK, USA) — wypłacają 50–70% wynagrodzenia przez maksymalnie 12 miesięcy, ale są drogie i generyczne. Platforma ma kluczową przewagę negocjacyjną wobec ubezpieczyciela: klienci z aktywnym agentem kariery wracają do pracy szybciej niż średnia rynkowa — co oznacza niższe ryzyko wypłat dla ubezpieczyciela i możliwość zaoferowania niższych składek. To win-win który żaden obecny ubezpieczyciel nie może zaoferować bez partnera takiego jak ta platforma.
-
-**Inwestorzy.** Seed fund który finansuje gwarancje jako koszt pozyskania klienta — zamiast wydawać na reklamy, platforma daje ludziom realną wartość finansową.
-
-**Reputacja pracowników i API (zgodnie z RODO).**
-
-Platforma gromadzi dane o skuteczności współpracy agent-klient. Długoterminowo możliwe są trzy modele udostępniania tych danych:
-
-Reputacja za zgodą pracownika — klient świadomie decyduje że chce upublicznić swój profil i oceny aby być widocznym dla pracodawców. Opcjonalna funkcja "otwórz mój profil dla rekruterów" — dokładnie model LinkedIn.
-
-Anonimowe dane agregowane przez API — "agenci na platformie pomagają klientom zwiększyć wynagrodzenie średnio o X% przy zmianie pracy." Dane bez identyfikacji osobowej, mocny argument marketingowy i potencjalne źródło przychodów B2B.
-
-API dla pracodawców — pracodawca szuka kandydatów, platforma udostępnia profil tylko tych klientów którzy wyrazili zgodę. Legalny i już działający model na rynku.
-
-**Ważne:** upublicznianie danych osobowych pracownika bez jego wyraźnej zgody jest nielegalne w świetle RODO — niezależnie od formy technicznej. Zgoda musi być świadoma i opcjonalna, nie domyślna.
+Platforma oferuje dwa poziomy: **~190 zł dla rynku polskiego** i **400-500 zł dla rynku zachodniego** (USA, UK, Niemcy). Klient płaci proporcjonalnie do potencjalnej nagrody — zmiana pracy w USA to +$2,000-$5,000 miesięcznie. Agent zarabia więcej, platforma zarabia więcej, klient dostaje wyspecjalizowanego agenta znającego rynek docelowy.
 
 ---
 
@@ -272,232 +360,28 @@ Ryzyka nie da się wyeliminować w 100%, ale można je ograniczyć do akceptowal
 
 ---
 
-## Analiza konkurencji
+# CZĘŚĆ 5: TECHNOLOGIA
 
-### Nazewnictwo branżowe
+## Stack technologiczny
 
-To co budujemy ma już nazwę na rynku globalnym: **reverse recruiting**. Zamiast pracodawca szuka kandydata — kandydat zatrudnia agenta który szuka dla niego pracy. Rynek istnieje, rośnie i jest udowodniony. Nasza przewaga: wszyscy gracze obsługują wyłącznie rynek angloamerykański i wyłącznie senior professionals. My demokratyzujemy tę usługę.
+- **Frontend:** React (już znany)
+- **Backend:** Node.js + Express (do nauki)
+- **Baza danych:** PostgreSQL lub Supabase
+- **AI integracje:** Anthropic API / OpenAI — narzędzia dla agentów
+- **Auth:** Supabase Auth lub Clerk
+- **Płatności:** Stripe + Stripe Connect Express (patrz niżej)
 
-W kontekście reverse recruitingu "senior professionals" to nie oznacza Senior Developer czy Senior Engineer. Chodzi o poziom kariery i wynagrodzenia, a konkretnie:
+### Stripe Connect Express
 
-Osoby na stanowiskach managerskich lub wyższych — Director, VP, C-level. Zarabiające zazwyczaj $80,000-$300,000+ rocznie. Z wieloletnim doświadczeniem (10-20+ lat) w korporacjach. Które robią poufną zmianę pracy i nie chcą żeby pracodawca wiedział że szukają.
+Stripe Connect to rozszerzenie Stripe stworzone dla marketplace'ów gdzie pieniądze przepływają przez platformę do innych osób.
 
-To jest klasyczny klient reverse recruitingu w USA — ktoś komu "opłaca się" zapłacić $5,000-$15,000 za usługę bo jeden miesiąc szukania pracy mniej to $10,000-$25,000 zaoszczędzonego czasu i stresów.
+**Jak działa:** pracownik płaci subskrypcję 300 zł → pieniądze trafiają na konto platformy → Stripe automatycznie dzieli i wypłaca 195 zł agentowi (65%) i 105 zł platformie (35%). Bez ręcznych przelewów.
 
-Dlaczego to ważne dla naszej platformy:
-Zwykły programista w Polsce zarabiający 12,000-20,000 zł miesięcznie nigdy nie zapłaci $5,000 za reverse recruiting — to byłoby 2-3 miesięczne wynagrodzenie. Ale za 190 zł/miesiąc? To jeden obiad w restauracji.
+**Trzy modele — wybieramy Express:** agent przechodzi przez uproszczony onboarding Stripe (ok. 10 minut), platforma widzi jego zarobki w dashboardzie. Najlepszy balans prostoty i kontroli dla v1.
 
-Nasza platforma demokratyzuje usługę która dotąd była dostępna tylko dla najbogatszych profesjonalistów na rynku. To jest serce waszego pozycjonowania.
+**Koszt:** 0.25% + ~1 zł od każdej wypłaty dla agenta — marginalny.
 
----
-
-### Polska — wolna nisza
-
-Istniejące rozwiązania pracują **dla pracodawcy**, nie dla pracownika: TeamQuest, HRlink, agencje rekrutacyjne. Job boardy (JustJoin.it, No Fluff Jobs, Pracuj.pl) to pasywne narzędzia — klient szuka sam. Nikt nie robi "osobistego agenta po stronie kandydata" w Polsce. **Nisza wolna.**
-
----
-
-### Globalnie — mapa konkurencji
-
-**Navii** (heynavii.ai) — model w pełni zautomatyzowany (AI, bez człowieka). Bezpłatny dla profesjonalistów, zarabia po stronie pracodawców. Skupiony wyłącznie na rynku amerykańskim, praktycznie nieznany w Europie. 333 followersów na Instagramie — bardzo wczesny etap.
-
-**Find My Profession** — lider rynku reverse recruitingu. 1,000+ opinii 5-star na Trustpilot, ponad 10,000 obsłużonych klientów. Tylko certyfikowani reverse recruiters w USA. Cena: $2,000-$4,500 pierwszego miesiąca, $1,500-$4,000 kolejne. Wyłącznie rynek angloamerykański, senior professionals.
-
-**Career Agents** (careeragents.org) — prowadzony przez Stevena Mostyna (były rekruter Amazon/Deloitte/TD Bank, 20+ lat doświadczenia, bestsellowy autor). Cena: Starter $999 jednorazowo, Pro $999/miesiąc przez 7 miesięcy ($6,993 łącznie), Executive $1,667/miesiąc przez 9 miesięcy ($15,003 łącznie). Gwarancja oferty pracy w 7 miesięcy lub 50% zwrotu. 23 opinie na Trustpilot (4.7/5). Wyłącznie rynek angloamerykański.
-
-**WeAreCareer** — łączy reverse recruiting z career coachingiem, ponad 3,000 klientów. Cena: $5,000 + 4% success fee od pierwszorocznej pensji. Gwarancja: 10 rozmów kwalifikacyjnych lub kontynuacja za darmo. Wyłącznie USA.
-
-**My Personal Recruiter** — najtańszy gracz na rynku zachodnim, model subskrypcyjny. Cena: $799-$1,999/miesiąc. Założony 2023, mniejsza baza klientów. Wyłącznie USA.
-
-**AI-powered alternatives** (Sprout, LoopCV, JobCopilot) — automatyzacja aplikowania za ułamek ceny, bez ludzkiego agenta. Konkurują ceną, nie jakością relacji.
-
----
-
-### Nasza przewaga konkurencyjna
-
-| Wymiar     | Konkurencja                  | My                        |
-| ---------- | ---------------------------- | ------------------------- |
-| Cena       | $800–$4,500/miesiąc          | ~190 zł/miesiąc (~$48)    |
-| Dostępność | Senior professionals $80K+   | Każdy programista IT      |
-| Rynek      | Wyłącznie USA                | Polska → globalnie        |
-| Model      | Jeden agent/zespół na firmę  | Marketplace wielu agentów |
-| Agent      | Człowiek bez AI lub pełne AI | Człowiek wspomagany AI    |
-
-**Kluczowy argument:** Career Agents bierze $7,000-$15,000 za program. My bierzemy 190 zł/miesiąc. Ta sama idea — dostępna dla każdego, nie tylko dla executive zarabiających $200K+.
-
-**Geograficzna luka:** wszyscy zachodni gracze ignorują Europę. Polska, Niemcy, Holandia, kraje nordyckie — zero lokalnego reverse recruitingu. To jest nasza pierwsza fala ekspansji.
-
----
-
-## Strategia marketingowa
-
-### Seed funding — nie na tym etapie
-
-Inwestor seed oczekuje trakcji: pierwszych płacących klientów i dowodu że model działa. Bez tego oddaje się 15–25% firmy za pieniądze których jeszcze nie potrzeba — koszty operacyjne v1 są minimalne. Najpierw walidacja, potem ewentualnie kapitał na skalowanie.
-
-### Strategia: content + PR, nie reklamy płatne
-
-Najskuteczniejsza i najtańsza strategia na start. Temat jest naturalnie nośny i viralowy: AI zabiera miejsca pracy programistom, a platforma im pomaga. To narracja którą dziennikarze technologiczni chętnie podchwycą.
-
----
-
-**Faza 1 — przed launchem (budowanie audiencji)**
-
-Założyciele piszą regularnie na LinkedIn o problemie, nie o produkcie. Tematy: "Dlaczego rynek pracy IT się zmienia", "Jak AI wpływa na karierę programisty", "Czego brakuje obecnym narzędziom do szukania pracy." Cel: zbudować audiencję zanim cokolwiek zostanie uruchomione.
-
-**Faza 2 — launch (PR)**
-
-Brief prasowy do mediów technologicznych:
-
-- Polska: Antyweb, Spider's Web, Benchmark.pl
-- Globalne: TechCrunch, Product Hunt
-
-Historia jest gotowa: _"Polacy budują platformę która działa jak agent aktora — dla programistów zagrożonych przez AI."_
-
-**Faza 3 — growth (social proof)**
-
-Case studies pierwszych klientów którzy zmienili pracę dzięki platformie. Konkretne liczby: "zmienił pracę, podwyżka o X zł." Nic nie sprzedaje lepiej niż prawdziwa historia prawdziwego człowieka.
-
-**Success stories na landing page — dwie perspektywy:**
-
-- Pracownik: "Dzięki agentowi przeszedłem z 15k na 22k i znalazłem pracę w 6 tygodni"
-- Agent: "Pomagam innym i zarabiam dodatkowe 3k miesięcznie"
-
-Obie historie przyciągają odpowiednią stronę rynku i budują wiarygodność marketplace'u.
-
-**Ważne:** pierwsze success stories muszą być prawdziwe. Fałszywe testimoniale są łatwe do zdemaskowania i niszczą zaufanie na starcie. Kolejność jest kluczowa: najpierw ręczna praca z pierwszymi klientami → zbieranie prawdziwych historii → dopiero wtedy landing page z case studies.
-
----
-
-### Dlaczego brief dla mediów to dobry pomysł
-
-Temat łączy dwa gorące wątki medialne: kryzys rynku pracy IT i AI. Platforma ma konkretną, zrozumiałą metaforę (agent aktora) którą dziennikarz może wytłumaczyć w jednym zdaniu. To rzadkość i duża przewaga PR-owa.
-
----
-
-## Roadmapa techniczna
-
-### v1 — fundament
-
-Profil pracownika i agenta, matching, komunikacja, raporty, płatności Stripe. Ręczny proces bez automatyzacji.
-
-### v2 — agregator ofert
-
-Platforma wywołuje API popularnych jobboardów (JustJoin.it, No Fluff Jobs, LinkedIn, Pracuj.pl) i agreguje oferty w jednym miejscu dla agentów. Zamiast ręcznego przeszukiwania 5 serwisów — jedno narzędzie. Znaczący mnożnik produktywności agenta.
-
-### v3 — narzędzia AI dla agentów
-
-Automatyczne dopasowanie ofert do profilu klienta, sugestie działań, analiza rynku wynagrodzeń, draft wiadomości do rekruterów. Agent skupia się na relacji i strategii — AI robi research.
-
-### v4 — własne API
-
-Gdy platforma osiągnie znaczącą bazę kandydatów — możliwość udostępnienia własnego API dla partnerów zewnętrznych. Wymaga pozycji rynkowej, nie do zbudowania na starcie.
-
----
-
-## Roadmapa wertykalna
-
-Platforma startuje w IT, ale model jest replikowalny w każdej niszy gdzie brakuje osobistych agentów kariery. Kluczowa zasada: **dominuj jedną niszę zanim przejdziesz do następnej.**
-
-### Faza 1 — IT (v1, rynek polski → globalny)
-
-Programiści, inżynierowie, DevOps, QA. Naturalna nisza startowa — założyciel zna ją od środka, sieć kontaktów gotowa, najwyższe success fee.
-
-### Faza 2 — Rozszerzenie w obrębie tech
-
-UI/UX designerzy, Product Managerowie, Data Scientists, AI specjaliści. Podobny profil klienta, ta sama sieć rekruterów, minimalne koszty wejścia.
-
-### Faza 3 — Sektory z niedoborem kadrowym
-
-Opieka zdrowotna (pielęgniarki, fizjoterapeuci, diagności) — dramatyczny niedobór kadr w całej Europie, zero narzędzi kariery. Marketing i content — freelancerzy zdezorientowani przez AI. Finanse i księgowość — duży sektor z rosnącą presją automatyzacji.
-
-### Faza 4 — Najbardziej niedoceniana nisza
-
-Wyspecjalizowani pracownicy fizyczni: elektrycy, spawacze, technicy CNC. Ogromny niedobór w Polsce i Europie, zero platform myślących o ich karierze strategicznie. Wysoka bariera wejścia — ale ogromna wartość społeczna i praktyczny brak konkurencji.
-
-### Faza 5 — C-level i executive
-
-CEO, CFO, CTO i inni liderzy organizacji. Zupełnie inny profil agenta — bardziej executive coach i strategiczny doradca niż career advisor. Agent monitoruje reputację klienta w branży, doradza kiedy odejść zanim firma zacznie tonąć, buduje relacje z boardami, pozycjonuje klienta jako thought leadera, negocjuje pakiety equity. Aktywnie umieszcza klienta na konferencjach, w wywiadach, publikacjach i radach nadzorczych we właściwym czasie.
-
-Najwyższy możliwy success fee na platformie — podwyżka CEO z 500k na 800k rocznie oznacza kilkanaście tysięcy złotych jednorazowej prowizji. Wymaga ugruntowanej marki platformy i udowodnionego modelu na niższych poziomach.
-
-_Każda nowa nisza wymaga dedykowanego agenta który zna ten rynek od środka — model platformy pozostaje ten sam._
-
----
-
-## Koszty operacyjne
-
-### Infrastruktura techniczna (miesięcznie)
-
-| Pozycja                          | Koszt                                              |
-| -------------------------------- | -------------------------------------------------- |
-| Hosting (Vercel + Supabase)      | 0–100 zł (darmowy tier na start)                   |
-| Email agentów (Google Workspace) | 25–50 zł/agent/miesiąc                             |
-| Stripe (płatności)               | ~2.9% + 1.50 zł od transakcji, brak stałego kosztu |
-| AI API (Anthropic/OpenAI)        | 50–200 zł/miesiąc na początku                      |
-
-### Koszt v1 (1 agent, 5 klientów)
-
-**~200–400 zł/miesiąc** — marginalny wobec przychodu 1,000–2,000 zł/miesiąc.
-
-### Koszty jednorazowe (przed pierwszym płacącym klientem)
-
-- Prawnik (regulamin, umowy, RODO): **1,500–3,000 zł**
-- Rejestracja działalności + księgowość: zależnie od formy prawnej
-
-### Co rośnie ze skalą
-
-Email i AI API skalują się liniowo z liczbą agentów i klientów. Infrastruktura techniczna praktycznie nie rośnie do dziesiątek agentów.
-
-**Wniosek:** Bardzo niskie koszty stałe. Nie potrzeba kapitału startowego — potrzeba pierwszych klientów.
-
----
-
-## Zagrożenie ze strony AI
-
-Uczciwa odpowiedź: **tak, zagrożenie istnieje — ale jest mniejsze niż się wydaje i jest zarządzalne.**
-
-### Dlaczego AI zagraża modelowi
-
-Narzędzia takie jak Navii już dziś automatyzują część tego co robią ludzcy agenci: matching ofert, przygotowanie do rozmów, optymalizacja CV. Za 2-3 lata AI agenty będą robiły to sprawniej i taniej niż człowiek.
-
-### Dlaczego model ludzki ma trwałą przewagę
-
-Relacja i zaufanie są trudne do zautomatyzowania. Klient który traci pracę i jest przestraszony potrzebuje człowieka, nie chatbota. Agent który zna klienta od miesięcy, rozumie jego rodzinną sytuację i dzwoni z dobrą nowiną — tego AI nie zastąpi w przewidywalnej przyszłości.
-
-Negocjacje wynagrodzenia, networking oparty na relacjach, wyczucie kultury organizacyjnej firmy — to obszary gdzie człowiek wciąż wygrywa.
-
-### Strategia obrony
-
-Platforma powinna traktować AI jako narzędzie które **mnoży produktywność agenta**, nie jako zagrożenie. Agent który używa AI obsłuży 3x więcej klientów niż bez AI — i jest przez to tańszy dla klienta końcowego.
-
-Paradoksalnie: platforma której klientami są pracownicy zagrożeni przez AI, sama musi być odporna na AI. To wymaga ciągłego inwestowania w jakość relacji i ludzki wymiar usługi.
-
-**Horyzont ryzyka:** niski w ciągu 2–3 lat, średni w ciągu 5 lat. Wystarczająco dużo czasu żeby zbudować markę i lojalność użytkowników zanim AI dogoni model ludzki.
-
----
-
-## Profil idealnego agenta
-
-### Kto NIE jest idealnym agentem
-
-Rekruterzy HR — paradoksalnie nie najlepszy wybór. Przez całą karierę pracowali dla pracodawcy ("jak znaleźć kandydata dla firmy"), nie dla pracownika ("jak wywalczyć najlepsze warunki"). To fundamentalnie odwrócona perspektywa której trudno się oduczyć.
-
-### Kto jest idealnym agentem
-
-**Doświadczeni programiści którzy wielokrotnie zmieniali pracę.** Rozumieją techniczny profil klienta, mówią jego językiem, znają realia rynku IT od środka.
-
-**Osoby które niedawno same przeszły udany career transition.** Świeże doświadczenie, wysoka empatia, dokładnie wiedzą co boli w procesie.
-
-**Tech leads i managerowie którzy rekrutowali do swoich zespołów.** Znają obie strony procesu — wiedzą czego szukają pracodawcy i jak myśli kandydat.
-
-**Career coachowie z backgroundem w IT.** Już robią część tej pracy — platforma daje im infrastrukturę i gotowych klientów.
-
-### Złoty profil agenta
-
-Senior developer lub tech lead, 35–45 lat, który chce side income (1,950–3,250 zł/miesiąc przy 10–15 klientach), ma szeroką sieć kontaktów w branży i lubi pomagać innym. Posiada własną działalność gospodarczą.
-
-To jest profil który pozwala obsłużyć 10–15 klientów miesięcznie bez wypalenia, używając AI jako narzędzia które mnoży produktywność.
+**Ważne:** każdy agent musi przejść weryfikację tożsamości (KYC) przez Stripe zanim dostanie pierwszą wypłatę. Wymóg prawny, nie opcja. W Polsce trwa 1–2 dni.
 
 ---
 
@@ -537,126 +421,233 @@ Przy subskrypcji 190 zł platforma dostaje 66.50 zł (35%). Koszt AI: ~8 zł. **
 
 ---
 
-## Workflow operacyjny agenta
+## AI Shadow Learning — roadmapa
 
-### Dedykowany email dla każdego klienta
+System który uczy się od agentów i stopniowo automatyzuje ich rutynowe zadania bez zastępowania ludzkiej relacji.
 
-Przy onboardingu nowego klienta agent tworzy dedykowane konto Gmail (np. jan-kowalski-it@gmail.com) które jest współdzielone między agentem a klientem. Obaj mają pełny dostęp — agent aplikuje na oferty, klient widzi wszystkie odpowiedzi od pracodawców w czasie rzeczywistym.
+### Jak działa
 
-**Zalety modelu współdzielonego maila:**
-Jeden wspólny inbox dla wszystkich aplikacji — agent i klient widzą odpowiedzi jednocześnie. Formularz aplikacyjny wygląda jak normalny kandydat (imię, nazwisko, dedykowany mail) — żadnych pytań o agenta. Klient może sam aplikować tym mailem gdy znajdzie ofertę — spójność. Kalendarz Google automatycznie synchronizuje zaproszenia na interview.
+**Warstwa 1 — zbieranie danych (od dnia pierwszego)**
+Każda akcja agenta jest logowana w bazie: które oferty odrzucił i dlaczego, które wybrał i co je wyróżniało, jakie wiadomości do rekruterów miały wyższy response rate, które działania prowadziły do rozmów kwalifikacyjnych. To surowe dane treningowe — bez nich shadow learning jest niemożliwe.
 
-**Logowanie z różnych IP:** przy dodaniu telefonu agenta i klienta jako zaufanych urządzeń zwykły Gmail działa bez problemów. Start na darmowym Gmail — przejście na Google Workspace dopiero gdy pojawi się realny problem.
+**Warstwa 2 — pattern recognition (po 3-6 miesiącach)**
+System rozpoznaje wzorce decyzji konkretnego agenta i klienta: "Jan zawsze odrzuca oferty poniżej 15k i bez remote" → filtruj automatycznie. "Agent X preferuje firmy product-based" → priorytetyzuj w rankingu.
 
-### Maile agentów
+**Warstwa 3 — LLM jako mózg agenta**
+Agent tworzy "profil klienta" w naturalnym języku — nie formularz, ale opis: "Jan to senior React developer, 8 lat doświadczenia, chce przejść do product company, priorytet to remote i widełki 20k+, stresuje się negocjacjami." Profil trafia do kontekstu LLM przy każdym zadaniu. Agent aktualizuje profil po każdej rozmowie.
 
-Agenci używają służbowego maila w domenie platformy (np. jan.nowak@nazwaplatformy.com) do komunikacji z pracodawcami w imieniu klientów. Wygląda profesjonalnie i buduje brand platformy.
+**Warstwa 4 — feedback loop**
+System uczy się z wyników: oferta → rozmowa → zatrudnienie. Wzmacnia wzorce które prowadziły do sukcesu.
 
-### Google Drive — folder klienta
+### Trzy poziomy automatyzacji
 
-Przy onboardingu agent tworzy strukturę folderów w Google Drive klienta:
-- CV (różne wersje pod różne oferty)
-- List motywacyjny (szablony)
-- Certyfikaty i portfolio
-- Arkusz aplikacji (live raport)
+**Poziom 1 — sugestie:** AI proponuje, agent zatwierdza jednym kliknięciem. Oszczędność ~50% czasu.
 
-Agent ma wszystko pod ręką przy aplikowaniu — bez proszenia klienta o pliki za każdym razem.
+**Poziom 2 — autopilot z wyjątkami:** AI działa automatycznie, agent dostaje alert tylko gdy coś jest niestandardowe. Oszczędność ~80% czasu.
 
-### Arkusz Google Sheets — live raport aplikacji
+**Poziom 3 — pełna automatyzacja rutyny:** agent skupia się wyłącznie na relacji, negocjacjach i strategii.
 
-Platforma dostarcza gotowy szablon arkusza z kolumnami: data aplikacji, firma, stanowisko, link do oferty, status (aplikowane / umówiony meeting / negocjacja / zatrudnienie / odmowa), następny krok, notatki. Agent uzupełnia na bieżąco — klient widzi postępy w czasie rzeczywistym bez czekania na miesięczny raport.
+### Co nigdy nie zostanie zautomatyzowane
 
-### Google Alerts
+Rozmowa gdy klient jest zestresowany po odrzuceniu. Negocjacje wynagrodzenia. Intuicja "ta firma ma toksyczną kulturę mimo świetnej oferty."
 
-Agent ustawia alerty Google na imię i nazwisko klienta — monitoruje co pojawia się w sieci i wykorzystuje to przy budowaniu personal brand.
+### Rekomendacja dla v1
 
-### Google Meet — sesje przygotowawcze
-
-Przed ważną rozmową rekrutacyjną agent prowadzi 30-minutową sesję przygotowawczą przez Google Meet. Cały workflow w jednym ekosystemie Google.
-
-### Wniosek operacyjny
-
-Gmail + Drive + Sheets + Calendar + Meet = kompletne narzędzie pracy agenta za **0 zł dodatkowych kosztów.** To nieoczekiwana przewaga operacyjna — pełny workflow bez żadnej dodatkowej subskrypcji.
+Nie buduj shadow learning od razu. Ale zaprojektuj bazę danych tak żeby każda akcja agenta była logowana od pierwszego dnia. To inwestycja 2-3 dni pracy na starcie, która za rok da dane treningowe.
 
 ---
 
-## Onboarding klienta — wzmacnianie profilu
+## Roadmapa techniczna
 
-Zanim agent zacznie aplikować, przygotowuje klienta do rynku. Trzy obszary:
+### v1 — fundament
 
-**CV w stylu achievera, nie dooera**
-Agent przeprowadza rozmowę "co osiągnąłeś w tej pracy?" i przerabia odpowiedzi na język wyników. Formuła: *czasownik akcji + co zrobiłem + jaki był efekt (liczba jeśli możliwa).* Przykład: "Zoptymalizowałem zapytania SQL → czas odpowiedzi API skrócił się z 2s do 200ms."
+Profil pracownika i agenta, matching, komunikacja, raporty, płatności Stripe. Ręczny proces bez automatyzacji.
 
-**LinkedIn zoptymalizowany pod algorytm**
-Sekcja About, słowa kluczowe pod algorytm LinkedIn, opisy doświadczeń językiem wyników, widoczność dla rekruterów.
+### v2 — agregator ofert
 
-**Scoring kompetencji jako atut w aplikacji**
-Agent zachęca klienta do wykonania testów na platformach takich jak HackerRank, Codility, LeetCode lub CodinGame. Wynik scoringu (np. "top 15% HackerRank") ląduje w CV i profilu LinkedIn jako sekcja "Verified Skills" — szczególnie wartościowe dla juniorów bez dużego doświadczenia komercyjnego. Scoring nie jest progiem wejścia na platformę — jest narzędziem które agent aktywnie buduje razem z klientem w trakcie współpracy.
+Platforma wywołuje API popularnych jobboardów (JustJoin.it, No Fluff Jobs, LinkedIn, Pracuj.pl) i agreguje oferty w jednym miejscu dla agentów. Zamiast ręcznego przeszukiwania 5 serwisów — jedno narzędzie. Znaczący mnożnik produktywności agenta.
 
----
+### v3 — narzędzia AI dla agentów
 
-## Dwa segmenty agentów — modele zarobkowe
+Automatyczne dopasowanie ofert do profilu klienta, sugestie działań, analiza rynku wynagrodzeń, draft wiadomości do rekruterów. Agent skupia się na relacji i strategii — AI robi research.
 
-Platforma obsługuje dwa różne profile agentów z różnymi motivacjami i modelami finansowymi.
+### v4 — własne API
 
-### Segment 1 — Senior developer jako agent side income
-
-Senior developer zarabia 15,000-25,000 zł netto miesięcznie na głównej pracy. Agentowanie nigdy nie zastąpi jego podstawowego dochodu — i nie powinno. Wartość dla seniora to uczciwy dodatek przy minimalnym nakładzie czasu dzięki AI.
-
-| Klientów | Czas/miesiąc (z AI) | Przychód agenta |
-|---|---|---|
-| 10 | ~10-15h | ~1,235 zł |
-| 15 | ~15-25h | ~1,850 zł |
-
-Motywacja seniora: lubi pomagać innym, zna rynek IT od środka, side income jest premią a nie koniecznością.
-
-### Segment 2 — Career specialist jako full time agent
-
-Inny profil osoby: career coach, były rekruter który zmienił stronę, osoba z kilku latami doświadczenia IT szukająca alternatywy zawodowej. Dla nich agentowanie może być głównym źródłem dochodu.
-
-**Przy subskrypcji 300 zł i 35-45 klientach z AI:**
-Agent dostaje 195 zł/klient × 40 klientów = **7,800 zł/miesiąc** + success fee. Przy AI skracającym czas do 30-60 min/klient = ~35h miesięcznie. Realne jako full time.
-
-**Specjalizacja globalna (USA/Zachód):**
-Subskrypcja 400-500 zł dla klientów szukających pracy zagranicznie. Success fee przy podwyżce $2,000/miesiąc = ~3,500 zł jednorazowo. 20 klientów + 2-3 success fee miesięcznie = pełny etat z wyższymi zarobkami.
-
-### Wyższy tier subskrypcji dla rynku globalnego
-
-Platforma oferuje dwa poziomy: **~190 zł dla rynku polskiego** i **400-500 zł dla rynku zachodniego** (USA, UK, Niemcy). Klient płaci proporcjonalnie do potencjalnej nagrody — zmiana pracy w USA to +$2,000-$5,000 miesięcznie. Agent zarabia więcej, platforma zarabia więcej, klient dostaje wyspecjalizowanego agenta znającego rynek docelowy.
+Gdy platforma osiągnie znaczącą bazę kandydatów — możliwość udostępnienia własnego API dla partnerów zewnętrznych. Wymaga pozycji rynkowej, nie do zbudowania na starcie.
 
 ---
 
-## Dywersyfikacja przychodów
+# CZĘŚĆ 6: GO TO MARKET
 
-Oprócz subskrypcji i success fee platforma może budować dodatkowe źródła przychodów w trzech horyzontach czasowych.
+## Strategia marketingowa
 
-### Krótkoterminowe — od razu możliwe
+### Seed funding — nie na tym etapie
 
-**Prowizje afiliacyjne od kursów i szkoleń**
-Agent rekomenduje klientowi kursy na Udemy, Coursera, HackerRank, Codility. Platforma bierze prowizję afiliacyjną od zakupu (5-15% ceny kursu). Zero kosztów wdrożenia, naturalnie wpisuje się w rolę agenta który wzmacnia profil klienta.
+Inwestor seed oczekuje trakcji: pierwszych płacących klientów i dowodu że model działa. Bez tego oddaje się 15–25% firmy za pieniądze których jeszcze nie potrzeba. Najpierw walidacja, potem ewentualnie kapitał na skalowanie.
 
-**Prowizje od narzędzi kariery**
-LinkedIn Premium, Grammarly, Canva (CV), Notion. Programy afiliacyjne istnieją — agent rekomenduje, platforma zarabia bez dodatkowej pracy.
+### Strategia: content + PR, nie reklamy płatne
 
-### Średnioterminowe — po walidacji modelu
+**Faza 1 — przed launchem (budowanie audiencji)**
+Założyciele piszą regularnie na LinkedIn o problemie, nie o produkcie. Tematy: "Dlaczego rynek pracy IT się zmienia", "Jak AI wpływa na karierę programisty", "Czego brakuje obecnym narzędziom." Cel: zbudować audiencję zanim cokolwiek zostanie uruchomione.
 
-**Dostęp dla pracodawców (B2B)**
-Firmy płacą za dostęp do bazy kandydatów którzy wyrazili zgodę na bycie znajdywanym. Model zbliżony do LinkedIn Recruiter w miniaturze. Wymaga odpowiedniej liczby użytkowników i zgód RODO.
+**Faza 2 — launch (PR)**
+Brief prasowy do mediów technologicznych: Antyweb, Spider's Web, Benchmark.pl (Polska); TechCrunch, Product Hunt (globalnie). Historia: *"Polacy demokratyzują reverse recruiting — usługę która dotąd kosztowała $15,000, teraz za 190 zł/miesiąc."*
 
-**Raport rynkowy B2B**
-Anonimowe dane agregowane o rynku IT — stawki, trendy, rotacja, popularność technologii — sprzedawane firmom HR i pracodawcom. Platforma naturalnie zbiera te dane przy codziennej pracy agentów. Zero dodatkowych kosztów zbierania danych.
+**Faza 3 — growth (social proof)**
+Case studies pierwszych klientów którzy zmienili pracę dzięki platformie. Dwie perspektywy na landing page: pracownik ("zmienił pracę, podwyżka o X zł") i agent ("zarabiam 2,000 zł miesięcznie pomagając innym"). Nic nie sprzedaje lepiej niż prawdziwa historia prawdziwego człowieka.
 
-### Długoterminowe
+**Ważne:** pierwsze success stories muszą być prawdziwe. Fałszywe testimoniale są łatwe do zdemaskowania i niszczą zaufanie na starcie.
 
-**Ubezpieczenie kariery**
-Partnerstwo z ubezpieczycielem — "ubezpieczenie od bezrobocia" dla klientów platformy z niższą składką dzięki udowodnionej skuteczności agentów (krótszy czas bezrobocia = niższe ryzyko dla ubezpieczyciela).
+### Dlaczego brief dla mediów to dobry pomysł
 
-**API dla innych platform**
-Gdy platforma osiągnie znaczącą bazę kandydatów i danych rynkowych — udostępnienie API partnerom zewnętrznym.
+Temat łączy dwa gorące wątki medialne: kryzys rynku pracy IT i AI. Platforma ma konkretną, zrozumiałą metaforę (agent aktora) którą dziennikarz może wytłumaczyć w jednym zdaniu.
 
-### Najszybszy do wdrożenia
+---
 
-Program afiliacyjny od kursów — agent i tak rekomenduje Codility i HackerRank jako element onboardingu klienta. Warto żeby platforma na tym zarabiała od pierwszego dnia.
+## Go-to-market v1
+
+1. Założyciel = pierwszy agent, pierwsi klienci = znajomi z branży IT
+2. Case study: założyciel używa własnej platformy do znalezienia pracy
+3. Po walidacji modelu — rekrutacja kolejnych agentów (networking LinkedIn)
+4. Skalowanie na rynek anglojęzyczny gdy model udowodniony
+
+---
+
+## Roadmapa wertykalna
+
+Platforma startuje w IT, ale model jest replikowalny w każdej niszy gdzie brakuje osobistych agentów kariery. Kluczowa zasada: **dominuj jedną niszę zanim przejdziesz do następnej.**
+
+### Faza 1 — IT (v1, rynek polski → globalny)
+
+Programiści, inżynierowie, DevOps, QA. Naturalna nisza startowa — założyciel zna ją od środka, sieć kontaktów gotowa, najwyższe success fee.
+
+### Faza 2 — Rozszerzenie w obrębie tech
+
+UI/UX designerzy, Product Managerowie, Data Scientists, AI specjaliści. Podobny profil klienta, ta sama sieć rekruterów, minimalne koszty wejścia.
+
+### Faza 3 — Sektory z niedoborem kadrowym
+
+Opieka zdrowotna (pielęgniarki, fizjoterapeuci, diagności) — dramatyczny niedobór kadr w całej Europie, zero narzędzi kariery. Marketing i content — freelancerzy zdezorientowani przez AI. Finanse i księgowość — duży sektor z rosnącą presją automatyzacji.
+
+### Faza 4 — Najbardziej niedoceniana nisza
+
+Wyspecjalizowani pracownicy fizyczni: elektrycy, spawacze, technicy CNC. Ogromny niedobór w Polsce i Europie, zero platform myślących o ich karierze strategicznie.
+
+### Faza 5 — C-level i executive
+
+CEO, CFO, CTO i inni liderzy organizacji. Agent jako executive coach i strategiczny doradca — monitoruje reputację klienta, buduje relacje z boardami, negocjuje pakiety equity, pozycjonuje klienta jako thought leadera. Najwyższy możliwy success fee na platformie. Wymaga ugruntowanej marki i udowodnionego modelu na niższych poziomach.
+
+_Każda nowa nisza wymaga dedykowanego agenta który zna ten rynek od środka — model platformy pozostaje ten sam._
+
+---
+
+# CZĘŚĆ 7: RYZYKA I KOSZTY
+
+## Koszty operacyjne
+
+### Infrastruktura techniczna (miesięcznie)
+
+| Pozycja | Koszt |
+|---|---|
+| Hosting (Vercel + Supabase) | 0–100 zł (darmowy tier na start) |
+| Email agentów (Google Workspace) | 25–50 zł/agent/miesiąc |
+| Stripe (płatności) | ~2.9% + 1.50 zł od transakcji, brak stałego kosztu |
+| AI API (Anthropic/OpenAI) | 50–200 zł/miesiąc na początku |
+
+### Koszt v1 (1 agent, 5 klientów)
+
+**~200–400 zł/miesiąc** — marginalny wobec przychodu 1,000–2,000 zł/miesiąc.
+
+### Koszty jednorazowe (przed pierwszym płacącym klientem)
+
+- Prawnik (regulamin, umowy, RODO): **1,500–3,000 zł**
+- Rejestracja działalności + księgowość: zależnie od formy prawnej
+
+### Co rośnie ze skalą
+
+Email i AI API skalują się liniowo z liczbą agentów i klientów. Infrastruktura techniczna praktycznie nie rośnie do dziesiątek agentów.
+
+**Wniosek:** Bardzo niskie koszty stałe. Nie potrzeba kapitału startowego — potrzeba pierwszych klientów.
+
+---
+
+## Kluczowe ryzyka
+
+| Ryzyko | Mitygacja |
+|---|---|
+| Cold start (brak agentów i klientów jednocześnie) | Założyciel jako pierwszy agent |
+| Jakość agentów trudna do kontroli | Certyfikacja / onboarding agentów |
+| Konkurencja z zachodnimi reverse recruiters | Przewaga cenowa (16x taniej) i geograficzna (Europa) |
+| Skalowalność modelu ludzkiego | Narzędzia AI które mnożą produktywność agenta |
+
+---
+
+## Zagrożenie ze strony AI
+
+Uczciwa odpowiedź: **tak, zagrożenie istnieje — ale jest mniejsze niż się wydaje i jest zarządzalne.**
+
+### Dlaczego AI zagraża modelowi
+
+Narzędzia takie jak Navii już dziś automatyzują część tego co robią ludzcy agenci: matching ofert, przygotowanie do rozmów, optymalizacja CV. Za 2-3 lata AI agenty będą robiły to sprawniej i taniej niż człowiek.
+
+### Dlaczego model ludzki ma trwałą przewagę
+
+Relacja i zaufanie są trudne do zautomatyzowania. Klient który traci pracę i jest przestraszony potrzebuje człowieka, nie chatbota. Agent który zna klienta od miesięcy, rozumie jego rodzinną sytuację i dzwoni z dobrą nowiną — tego AI nie zastąpi w przewidywalnej przyszłości.
+
+### Strategia obrony
+
+Platforma powinna traktować AI jako narzędzie które **mnoży produktywność agenta**, nie jako zagrożenie. Paradoksalnie: platforma której klientami są pracownicy zagrożeni przez AI, sama musi być odporna na AI — przez ciągłe inwestowanie w jakość relacji i ludzki wymiar usługi.
+
+**Horyzont ryzyka:** niski w ciągu 2–3 lat, średni w ciągu 5 lat. Wystarczająco dużo czasu żeby zbudować markę i lojalność użytkowników.
+
+---
+
+# CZĘŚĆ 8: WIZJA I AKCJA
+
+## Wizja długoterminowa
+
+**Gwarancja dochodu dla bezrobotnych.**
+
+Docelowo platforma mogłaby oferować pracownikom IT którzy aktualnie nie mają pracy gwarancję minimalnego dochodu przez czas poszukiwań — w zamian za wyższy success fee przy zatrudnieniu. Model zbliżony do Income Share Agreement stosowanego przez bootcampy programistyczne.
+
+Warunki: udokumentowana skuteczność agentów, kapitał rezerwowy na wypłaty, precyzyjny profil klientów którym platforma jest w stanie zagwarantować zatrudnienie w określonym czasie.
+
+### Kto mógłby finansować gwarancję
+
+**Pracodawcy jako mecenasi** — płacą za dostęp do pre-zweryfikowanych kandydatów, finansując przy okazji pulę gwarancji.
+
+**Państwo i fundusze UE** — programy aktywizacji zawodowej dla osób zwolnionych przez automatyzację AI są już finansowane publicznie.
+
+**Ubezpieczyciele** — gwarancja dochodu to produkt ubezpieczeniowy. Kluczowa przewaga negocjacyjna: klienci z aktywnym agentem wracają do pracy szybciej niż średnia rynkowa — niższe ryzyko dla ubezpieczyciela, niższe składki dla klienta.
+
+**Inwestorzy** — seed fund który finansuje gwarancje jako koszt pozyskania klienta zamiast reklam.
+
+### Reputacja pracowników i API (zgodnie z RODO)
+
+Trzy modele udostępniania danych: reputacja za zgodą pracownika (opcjonalna funkcja "otwórz mój profil dla rekruterów"), anonimowe dane agregowane przez API ("agenci pomagają klientom zwiększyć wynagrodzenie średnio o X%"), API dla pracodawców (tylko klienci którzy wyrazili zgodę). Upublicznianie danych bez zgody jest nielegalne w świetle RODO.
+
+---
+
+## Wersja 1 — zakres MVP
+
+**Rynek:** Polska
+**Agentów:** 1 (założyciel = pierwszy agent)
+**Klientów:** 2-5 pierwszych użytkowników pozyskanych ręcznie
+
+### Co musi działać w v1
+
+- Profil pracownika (doświadczenie, cele, preferencje)
+- Profil agenta
+- Matching pracownik ↔ agent
+- Podstawowy dashboard dla agenta (lista klientów, notatki, zadania)
+- Płatność przez Stripe
+
+### Co odpada w v1
+
+- Wielojęzyczność
+- Matching krajowy
+- Automatyczne AI narzędzia dla agentów
+- Mobile app
 
 ---
 
@@ -665,18 +656,15 @@ Program afiliacyjny od kursów — agent i tak rekomenduje Codility i HackerRank
 Start budowania platformy uzależniony od pozyskania co-foundera.
 
 **Przed pierwszą rozmową z co-founderem:**
-
 - Walidacja popytu: 5 rozmów z IT specjalistami
 - Przygotowanie krótkiego pitch deck na bazie tego dokumentu
 
 **Po dołączeniu co-foundera — sprint walidacyjny (4–6 tygodni):**
-
 - Pierwsi 2–3 klienci pozyskani ręcznie
 - Założyciel jako pierwszy agent — testuje model na sobie i klientach
 - Weryfikacja ceny subskrypcji i success fee
 
 **Po walidacji modelu — budowa v1 (8–12 tygodni):**
-
 - React frontend + Node.js backend
 - Profil pracownika i agenta, matching, komunikacja, płatności
 - Rejestracja działalności + umowy prawne
@@ -685,4 +673,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 2.7 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 3.0 — dokument żywy, do aktualizacji w miarę walidacji_
