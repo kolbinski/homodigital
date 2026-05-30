@@ -707,6 +707,76 @@
           padding: 3rem 1.5rem;
         }
       }
+
+      /* 30 DAYS */
+      .days-section {
+        position: relative;
+        z-index: 1;
+        padding: 6rem 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        border-top: 1px solid var(--border);
+      }
+      .days-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 3.5rem;
+        text-align: center;
+      }
+      .days-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 0;
+        border: 1px solid var(--border);
+      }
+      .days-item {
+        padding: 2rem;
+        border-right: 1px solid var(--border);
+        transition: background 0.3s;
+      }
+      .days-item:last-child {
+        border-right: none;
+      }
+      .days-item:hover {
+        background: var(--bg2);
+      }
+      .days-num {
+        display: block;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.75rem;
+      }
+      .days-item h4 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: var(--text);
+      }
+      .days-item p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      @media (max-width: 600px) {
+        .days-section {
+          padding: 3rem 1.5rem;
+        }
+        .days-grid {
+          grid-template-columns: 1fr;
+        }
+        .days-item {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        .days-item:last-child {
+          border-bottom: none;
+        }
+      }
       /* FAQ */
       .faq-section {
         position: relative;
@@ -820,9 +890,10 @@
       <p class="eyebrow">For IT professionals</p>
       <h1>Your personal<br /><em>career agent</em></h1>
       <p class="hero-sub">
-        Actors have agents who fight for their careers. Now you can too. A human
-        powered by AI, who finds opportunities, applies on your behalf,
-        negotiates and thinks strategically about your future — not you.
+        Actors have agents who fight for their careers. Now you can too.
+        Europe's first boutique career agent service for IT — a human powered by
+        AI who finds opportunities, applies on your behalf and negotiates your
+        terms.
       </p>
       <div class="hero-ctas">
         <a
@@ -872,6 +943,18 @@
           </p>
         </div>
       </div>
+      <p
+        style="
+          font-size: 0.72rem;
+          color: var(--muted);
+          text-align: center;
+          margin-top: 2rem;
+          letter-spacing: 0.05em;
+        "
+      >
+        * Estimates based on industry reports: Glassdoor, LinkedIn Talent
+        Trends, Harvard Business Review salary negotiation research.
+      </p>
     </section>
 
     <!-- VALUE PROPS -->
@@ -995,10 +1078,54 @@
       </div>
     </section>
 
+    <!-- 30 DAYS -->
+    <section class="days-section">
+      <p class="days-label">Your first 30 days</p>
+      <div class="days-grid">
+        <div class="days-item">
+          <span class="days-num">Week 1</span>
+          <h4>Audit &amp; strategy</h4>
+          <p>
+            Onboarding call, CV and LinkedIn analysis, identification of target
+            companies and market rates, setting priorities and red flags.
+          </p>
+        </div>
+        <div class="days-item">
+          <span class="days-num">Week 2</span>
+          <h4>Profile preparation</h4>
+          <p>
+            Rewriting your CV into achiever language, LinkedIn optimisation for
+            the algorithm and recruiters, setup of your dedicated applications
+            account.
+          </p>
+        </div>
+        <div class="days-item">
+          <span class="days-num">Week 3–4</span>
+          <h4>Active outreach</h4>
+          <p>
+            First applications sent on your behalf, direct recruiter contact,
+            preparation session before every interview.
+          </p>
+        </div>
+        <div class="days-item">
+          <span class="days-num">End of month</span>
+          <h4>Report &amp; feedback</h4>
+          <p>
+            Full activity report: how many opportunities, applications,
+            responses, next steps. Your rating of the agent and a plan for the
+            next month.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- FINAL CTA -->
     <section class="final-cta">
       <h2>Ready for <em>your agent</em>?</h2>
-      <p>Platform is in preparation. Join as one of the first.</p>
+      <p>
+        The first boutique career agent service for IT professionals in Europe.
+        Beta spots are limited.
+      </p>
       <div class="hero-ctas">
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeCu6nK8L0HlQsCD6T51ZUgQHQ4HrEcZW3hRbkwezBFVaU-XA/viewform?usp=dialog"
@@ -1046,7 +1173,7 @@
           <div class="about-text">
             <h3>Your future agent</h3>
             <p class="about-role">
-              Senior Developer · Tech Lead · Career Mentor
+              Senior Developer · Tech Lead · IT Market Operator
             </p>
             <p>
               The ideal agent is someone like you — an experienced developer who
