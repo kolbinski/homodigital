@@ -200,9 +200,9 @@ Link do projektu ląduje w profilu klienta i jest dołączany do aplikacji przez
 
 ### Dedykowany email dla każdego klienta
 
-Przy onboardingu agent tworzy dedykowane konto Gmail (np. jan-kowalski-it@gmail.com) współdzielone między agentem a klientem. Obaj mają pełny dostęp — agent aplikuje na oferty, klient widzi wszystkie odpowiedzi od pracodawców w czasie rzeczywistym. Klient może używać tego maila również na innych platformach (Navii, job boardy) — jedno miejsce dla całej aktywności kariery.
+Przy onboardingu klient tworzy dedykowane konto Gmail (np. jan-kowalski-it@gmail.com) przeznaczone wyłącznie do spraw kariery. Klient używa tego maila na job boardach, platformach takich jak Navii, i przy aplikowaniu — jedno miejsce dla całej aktywności kariery.
 
-**Logowanie z różnych IP:** przy dodaniu telefonu agenta i klienta jako zaufanych urządzeń zwykły Gmail działa bez problemów. Start na darmowym Gmail — przejście na Google Workspace gdy pojawi się realny problem.
+**Dostęp agenta przez Gmail Delegation:** zamiast współdzielenia hasła (które łamałoby regulamin Google), klient nadaje agentowi dostęp przez wbudowaną funkcję Gmail Delegation — wpisuje adres Gmail agenta w ustawieniach konta. Agent może czytać i wysyłać wiadomości w imieniu klienta bez znajomości hasła. Klient widzi kto ma dostęp i może go odebrać jednym kliknięciem w dowolnym momencie. W pełni zgodne z regulaminem Google, bezpieczniejsze niż współdzielone hasło.
 
 ### Maile agentów
 
@@ -210,7 +210,9 @@ Agenci używają służbowego maila w domenie platformy (np. jan.nowak@nazwaplat
 
 ### Google Drive — folder klienta
 
-Przy onboardingu agent tworzy strukturę folderów: CV (różne wersje pod różne oferty), list motywacyjny (szablony), certyfikaty i portfolio, arkusz aplikacji. Agent ma wszystko pod ręką — bez proszenia klienta o pliki za każdym razem.
+Klient tworzy folder "Moja Kariera" w swoim Google Drive i udostępnia go agentowi przez standardową funkcję "Udostępnij" — z prawami Edytora. Agent tworzy strukturę folderów: CV (różne wersje pod różne oferty), list motywacyjny (szablony), certyfikaty i portfolio, arkusz aplikacji.
+
+**Zaleta natywnego udostępniania:** historia zmian w Google Drive i Sheets jest automatycznie logowana — klient zawsze widzi co agent robił i kiedy. Naturalny mechanizm transparentności i accountability bez budowania czegokolwiek od zera. Klient może odebrać dostęp jednym kliknięciem.
 
 ### Arkusz Google Sheets — live raport aplikacji
 
@@ -230,7 +232,7 @@ Pracownik i agent wymieniają się numerami telefonów i komunikują bezpośredn
 
 ### Wniosek operacyjny
 
-Gmail + Drive + Sheets + Calendar + Meet = kompletne narzędzie pracy agenta za **0 zł dodatkowych kosztów.**
+Gmail Delegation + Google Drive Sharing + Sheets + Calendar + Meet = kompletny, legalny, darmowy i bezpieczny system współpracy agenta z klientem. Zero własnej infrastruktury, zero ryzyka regulaminowego, **0 zł dodatkowych kosztów.**
 
 ---
 
@@ -889,4 +891,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 3.9 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 4.0 — dokument żywy, do aktualizacji w miarę walidacji_
