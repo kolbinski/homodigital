@@ -48,7 +48,7 @@ The Service Provider makes every effort to deliver the most effective service po
 
 ## 5. Fees
 
-**Monthly subscription:** PLN 99 gross — payable in advance by bank transfer against an invoice issued by the Service Provider.
+**Monthly subscription:** PLN 150 gross — payable in advance by bank transfer against an invoice issued by the Service Provider.
 
 **Success fee:** a one-off payment upon changing jobs — equal to 50% of the Participant's net monthly salary increase. Payable within 14 days of starting the new role.
 

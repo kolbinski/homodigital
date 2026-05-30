@@ -48,7 +48,7 @@ Usługodawca dokłada wszelkich starań aby usługa była jak najbardziej efekty
 
 ## 5. Wynagrodzenie
 
-**Subskrypcja miesięczna:** 99 zł brutto — płatna z góry, przelewem bankowym na podstawie faktury wystawionej przez usługodawcę.
+**Subskrypcja miesięczna:** 150 zł brutto — płatna z góry, przelewem bankowym na podstawie faktury wystawionej przez usługodawcę.
 
 **Success fee:** jednorazowa opłata przy zmianie pracy — równowartość 50% miesięcznego przyrostu wynagrodzenia netto uczestnika. Płatna w ciągu 14 dni od rozpoczęcia nowej pracy.
 
