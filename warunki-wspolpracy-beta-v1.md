@@ -105,7 +105,7 @@ Uczestnik zobowiązuje się że przez 12 miesięcy od zakończenia współpracy 
 
 ## 11. Ochrona danych osobowych (RODO)
 
-Administratorem danych osobowych uczestnika jest Krzysztof Olbiński. Dane są przetwarzane wyłącznie w celu świadczenia usługi i nie są przekazywane osobom trzecim bez zgody uczestnika. Uczestnik ma prawo do wglądu, poprawienia i usunięcia swoich danych — w tym celu należy skontaktować się pod adresem: [email].
+Administratorem danych osobowych uczestnika jest firma Source Krzysztof Olbiński. Dane są przetwarzane wyłącznie w celu świadczenia usługi i nie są przekazywane osobom trzecim bez zgody uczestnika. Uczestnik ma prawo do wglądu, poprawienia i usunięcia swoich danych — w tym celu należy skontaktować się pod adresem: olbinski@gmail.com.
 
 ---
 
@@ -116,9 +116,3 @@ Wszelkie spory rozstrzygane są polubownie. W przypadku braku porozumienia wła�
 W sprawach nieuregulowanych niniejszymi warunkami zastosowanie mają przepisy Kodeksu Cywilnego.
 
 Warunki wchodzą w życie z dniem dokonania pierwszej płatności przez uczestnika.
-
----
-
-_Dokument do uzupełnienia przed wysłaniem: [nazwa działalności], [NIP], [adres], [email kontaktowy]_
-
-_Przed użyciem z pierwszymi klientami zalecana konsultacja z prawnikiem lub księgowym._
