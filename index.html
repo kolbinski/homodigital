@@ -575,6 +575,43 @@
         }
       }
 
+
+      /* EMOTIONAL PUNCH */
+      .punch-section {
+        position: relative;
+        z-index: 1;
+        padding: 5rem 2rem;
+        text-align: center;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(to bottom, var(--bg), rgba(201,168,76,0.03), var(--bg));
+      }
+      .punch-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .punch-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 600;
+        line-height: 1.3;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+      }
+      .punch-text--gold {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .punch-sub {
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-top: 2rem;
+        font-weight: 300;
+      }
+      @media (max-width: 600px) {
+        .punch-section { padding: 3rem 1.5rem; }
+      }
       /* MARKET SECTION */
       .market-section {
         position: relative;
@@ -910,6 +947,15 @@
       <div class="divider-line"></div>
     </section>
 
+    <!-- EMOTIONAL PUNCH -->
+    <section class="punch-section">
+      <div class="punch-inner">
+        <p class="punch-text">Rekruterzy używają AI.<br/>Firmy używają AI.<br/>ATS-y odrzucają CV zanim dotrą do człowieka.</p>
+        <p class="punch-text punch-text--gold">Większość developerów nadal walczy z tym samotnie.</p>
+        <p class="punch-sub">W 2026 rynek IT to gra na dwóch poziomach — ci którzy mają kogoś po swojej stronie i wszyscy pozostali. My jesteśmy po Twojej stronie.</p>
+      </div>
+    </section>
+
     <!-- MARKET CONTEXT -->
     <section class="market-section">
       <p class="market-label">Rynek się zmienił</p>
@@ -1203,12 +1249,13 @@
           </button>
           <div class="faq-a">
             <p>
-              Dla każdego specjalisty IT — niezależnie od tego czy aktywnie
-              szukasz pracy, czy po prostu chcesz zmienić ją na lepszych
-              warunkach. Często najlepsze oferty trafiają do tych którzy nie
-              szukają, ale są gotowi. Agent pracuje dla ciebie na co dzień —
-              buduje twoją widoczność, monitoruje rynek i informuje gdy pojawi
-              się coś wartego uwagi. Zmiana pracy to Twoja decyzja, nie przymus.
+              Dla mid i senior developerów z doświadczeniem komercyjnym — niezależnie od tego czy aktywnie szukasz pracy, czy chcesz zmienić ją na lepszych warunkach. Często najlepsze oferty trafiają do tych którzy nie szukają, ale są gotowi.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Nie jesteśmy bootcampem ani kursem wejścia do IT. Największą wartość dajemy osobom które już mają coś do sprzedania na rynku i chcą zrobić to skuteczniej.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Każdy agent pracuje z ograniczoną liczbą klientów równolegle — żeby jakość nie spadła. Zmiana pracy to Twoja decyzja, nie przymus.
             </p>
           </div>
         </div>

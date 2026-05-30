@@ -575,6 +575,43 @@
         }
       }
 
+
+      /* EMOTIONAL PUNCH */
+      .punch-section {
+        position: relative;
+        z-index: 1;
+        padding: 5rem 2rem;
+        text-align: center;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(to bottom, var(--bg), rgba(201,168,76,0.03), var(--bg));
+      }
+      .punch-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .punch-text {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        font-weight: 600;
+        line-height: 1.3;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+      }
+      .punch-text--gold {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .punch-sub {
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.7;
+        margin-top: 2rem;
+        font-weight: 300;
+      }
+      @media (max-width: 600px) {
+        .punch-section { padding: 3rem 1.5rem; }
+      }
       /* MARKET SECTION */
       .market-section {
         position: relative;
@@ -910,6 +947,15 @@
       <div class="divider-line"></div>
     </section>
 
+    <!-- EMOTIONAL PUNCH -->
+    <section class="punch-section">
+      <div class="punch-inner">
+        <p class="punch-text">Recruiters use AI.<br/>Companies use AI.<br/>ATS systems reject CVs before any human sees them.</p>
+        <p class="punch-text punch-text--gold">Most developers are still fighting this alone.</p>
+        <p class="punch-sub">In 2026 the IT market is a two-tier game — those who have someone in their corner, and everyone else. We're in your corner.</p>
+      </div>
+    </section>
+
     <!-- MARKET CONTEXT -->
     <section class="market-section">
       <p class="market-label">The market has changed</p>
@@ -1201,12 +1247,13 @@
           </button>
           <div class="faq-a">
             <p>
-              For every IT professional — whether you're actively looking or
-              simply want to move to better conditions. Often the best
-              opportunities reach those who aren't looking but are ready. Your
-              agent works for you daily — building your visibility, monitoring
-              the market and alerting you when something worthwhile appears.
-              Changing jobs is your decision, not a requirement.
+              For mid and senior developers with commercial experience — whether you're actively looking or simply want to move to better conditions. Often the best opportunities reach those who aren't looking but are ready.
+            </p>
+            <p style="margin-top:0.75rem;">
+              We're not a bootcamp or an entry-into-IT course. We deliver the most value to people who already have something to sell on the market and want to do it more effectively.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Each agent works with a limited number of clients at a time — to ensure quality never drops. Changing jobs is your decision, not a requirement.
             </p>
           </div>
         </div>
