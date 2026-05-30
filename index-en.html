@@ -574,6 +574,142 @@
           padding: 2rem 1.5rem;
         }
       }
+
+      /* MARKET SECTION */
+      .market-section {
+        position: relative;
+        z-index: 1;
+        padding: 5rem 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        border-top: 1px solid var(--border);
+      }
+      .market-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+      .market-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+      }
+      .market-item {
+        text-align: center;
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+      }
+      .market-num {
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+      .market-item p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      /* ABOUT SECTION */
+      .about-section {
+        position: relative;
+        z-index: 1;
+        padding: 6rem 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .about-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 3.5rem;
+        text-align: center;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+        gap: 2rem;
+      }
+      .about-card {
+        display: flex;
+        gap: 1.5rem;
+        padding: 2rem;
+        border: 1px solid var(--border);
+        background: var(--bg2);
+      }
+      .about-photo {
+        flex-shrink: 0;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid var(--border);
+      }
+      .about-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .about-photo--placeholder {
+        opacity: 0.4;
+      }
+      .about-text h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .about-role {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        color: var(--gold);
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+      }
+      .about-text p {
+        font-size: 0.87rem;
+        line-height: 1.7;
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+      .about-linkedin {
+        font-size: 0.8rem;
+        color: var(--gold);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+      }
+      .about-linkedin:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .market-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .about-card {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .market-section {
+          padding: 3rem 1.5rem;
+        }
+        .about-section {
+          padding: 3rem 1.5rem;
+        }
+      }
       /* FAQ */
       .faq-section {
         position: relative;
@@ -696,7 +832,7 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLSeCu6nK8L0HlQsCD6T51ZUgQHQ4HrEcZW3hRbkwezBFVaU-XA/viewform?usp=dialog"
           class="btn btn-primary"
         >
-          Join as an IT professional
+          Join the first beta group
         </a>
         <button class="btn btn-secondary" disabled>
           Become an agent
@@ -706,13 +842,48 @@
       <div class="divider-line"></div>
     </section>
 
+    <!-- MARKET CONTEXT -->
+    <section class="market-section">
+      <p class="market-label">The market has changed</p>
+      <div class="market-grid">
+        <div class="market-item">
+          <span class="market-num">250+</span>
+          <p>
+            applications per job posting in 2026 — most filtered by AI before
+            any human sees them
+          </p>
+        </div>
+        <div class="market-item">
+          <span class="market-num">75%</span>
+          <p>
+            of jobs never reach job boards — filled through networks and direct
+            outreach
+          </p>
+        </div>
+        <div class="market-item">
+          <span class="market-num">$1M+</span>
+          <p>
+            the average developer loses over their career by not negotiating
+            their first offer
+          </p>
+        </div>
+        <div class="market-item">
+          <span class="market-num">0</span>
+          <p>
+            European platforms working on the candidate's side, not the
+            employer's — until now
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- VALUE PROPS -->
     <section class="props">
       <p class="props-label">What your agent does</p>
       <div class="props-grid">
         <div class="prop">
           <span class="prop-num">01</span>
-          <h3>Finds opportunities and applies for you</h3>
+          <h3>Finds opportunities and runs outreach on your behalf</h3>
           <p>
             Not just through job boards. Your agent uses their network, direct
             outreach and AI tools to find opportunities you'd never see — and
@@ -836,12 +1007,62 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLSeCu6nK8L0HlQsCD6T51ZUgQHQ4HrEcZW3hRbkwezBFVaU-XA/viewform?usp=dialog"
           class="btn btn-primary"
         >
-          Join as an IT professional
+          Join the first beta group
         </a>
         <button class="btn btn-secondary" disabled>
           Become an agent
           <span class="btn-soon">— Coming soon —</span>
         </button>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section">
+      <p class="about-label">Who is behind this</p>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-photo">
+            <img src="krzysztof-olbinski.png" alt="Krzysztof Olbiński" />
+          </div>
+          <div class="about-text">
+            <h3>Krzysztof Olbiński</h3>
+            <p class="about-role">Founder · Frontend Developer · First Agent</p>
+            <p>
+              15+ years as a developer — in Poland and globally through Toptal.
+              I've been through many recruitment processes myself and seen how
+              brutal the IT market became in 2026. I decided to stand on the
+              developer's side. I am the first agent on the platform and
+              personally handle the first beta clients.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/olbinski/"
+              target="_blank"
+              class="about-linkedin"
+              >LinkedIn →</a
+            >
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="about-photo about-photo--placeholder">
+            <img src="agent-blank.png" alt="Your agent" />
+          </div>
+          <div class="about-text">
+            <h3>Your future agent</h3>
+            <p class="about-role">
+              Senior Developer · Tech Lead · Career Mentor
+            </p>
+            <p>
+              The ideal agent is someone like you — an experienced developer who
+              has been through many recruitment processes on both sides of the
+              table. They know the IT market from the inside, speak your
+              language and understand what employers are looking for. We're
+              recruiting our first agents — coming soon.
+            </p>
+            <span class="about-linkedin" style="cursor: default"
+              >Agent profile — coming soon</span
+            >
+          </div>
+        </div>
       </div>
     </section>
 
@@ -889,9 +1110,9 @@
           <div class="faq-a">
             <p>
               The model is based on a monthly subscription plus a success fee
-              when you change jobs. Pricing details will be available at launch.
-              One thing is certain: you pay for real value — not access to
-              another dashboard.
+              when you change jobs. We're targeting pricing comparable to a
+              single career coaching session per month. One thing is certain:
+              you pay for real value — not access to another dashboard.
               <a
                 href="https://homodigital.io/view.html?file=warunki-wspolpracy-beta-v1.md"
                 style="color: var(--gold); text-decoration: underline"
