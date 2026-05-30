@@ -576,6 +576,27 @@
       }
 
 
+
+      /* HERO BADGES */
+      .hero-badges {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem;
+        opacity: 0;
+        animation: fadeIn 1s 1.2s forwards;
+      }
+      .hero-badge {
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        opacity: 0.8;
+      }
+      @media (max-width: 600px) {
+        .hero-badges { flex-direction: column; align-items: center; gap: 0.5rem; }
+      }
       /* EMOTIONAL PUNCH */
       .punch-section {
         position: relative;
@@ -944,6 +965,10 @@
           <span class="btn-soon">— Coming soon —</span>
         </button>
       </div>
+      <div class="hero-badges">
+        <span class="hero-badge">✦ First pilot conversations under way</span>
+        <span class="hero-badge">✦ Only 3 beta spots</span>
+      </div>
       <div class="divider-line"></div>
     </section>
 
@@ -982,10 +1007,10 @@
           </p>
         </div>
         <div class="market-item">
-          <span class="market-num">0</span>
+          <span class="market-num">~0</span>
           <p>
-            European platforms working on the candidate's side, not the
-            employer's — until now
+            The European recruitment market is built mainly around employer
+            needs — not candidates'
           </p>
         </div>
       </div>
@@ -1170,7 +1195,7 @@
       <h2>Ready for <em>your agent</em>?</h2>
       <p>
         The first boutique career agent service for IT professionals in Europe.
-        Beta spots are limited.
+        We're starting with just 3 beta clients — to keep quality at the highest level.
       </p>
       <div class="hero-ctas">
         <a
@@ -1196,13 +1221,13 @@
           </div>
           <div class="about-text">
             <h3>Krzysztof Olbiński</h3>
-            <p class="about-role">Founder · Frontend Developer · First Agent</p>
+            <p class="about-role">Founder · Senior Software Engineer · 20+ years in the IT market</p>
             <p>
               20+ years as a developer — in Poland and globally through Toptal.
               I've been through many recruitment processes myself and seen how
               brutal the IT market became in 2026. I decided to stand on the
-              developer's side. I am the first agent on the platform and
-              personally handle the first beta clients.
+              developer's side. First pilot conversations already under way —
+              I handle early clients personally.
             </p>
             <a
               href="https://www.linkedin.com/in/olbinski/"
@@ -1282,8 +1307,9 @@
             <p>
               The model is based on a monthly subscription plus a success fee
               when you change jobs. We're targeting pricing comparable to a
-              single career coaching session per month. One thing is certain:
-              you pay for real value — not access to another dashboard.
+              single career coaching session per month. A 15–20% salary increase
+              when changing jobs often covers the cost many times over — one
+              well-negotiated offer changes your earnings trajectory for years.
               <a
                 href="https://homodigital.io/view.html?file=warunki-wspolpracy-beta-v1.md"
                 style="color: var(--gold); text-decoration: underline"

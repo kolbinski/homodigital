@@ -576,6 +576,27 @@
       }
 
 
+
+      /* HERO BADGES */
+      .hero-badges {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem;
+        opacity: 0;
+        animation: fadeIn 1s 1.2s forwards;
+      }
+      .hero-badge {
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--gold);
+        opacity: 0.8;
+      }
+      @media (max-width: 600px) {
+        .hero-badges { flex-direction: column; align-items: center; gap: 0.5rem; }
+      }
       /* EMOTIONAL PUNCH */
       .punch-section {
         position: relative;
@@ -944,6 +965,10 @@
           <span class="btn-soon">— Wkrótce —</span>
         </button>
       </div>
+      <div class="hero-badges">
+        <span class="hero-badge">✦ Pierwsze rozmowy pilotażowe w toku</span>
+        <span class="hero-badge">✦ Tylko 3 miejsca beta</span>
+      </div>
       <div class="divider-line"></div>
     </section>
 
@@ -982,10 +1007,9 @@
           </p>
         </div>
         <div class="market-item">
-          <span class="market-num">0</span>
+          <span class="market-num">~0</span>
           <p>
-            europejskich platform które działają po stronie kandydata, nie
-            pracodawcy — do teraz
+            Europejski rynek rekrutacyjny zbudowany jest głównie wokół potrzeb pracodawców — nie kandydatów
           </p>
         </div>
       </div>
@@ -1170,8 +1194,8 @@
     <section class="final-cta">
       <h2>Gotowy na <em>swojego agenta</em>?</h2>
       <p>
-        Pierwsza butikowa usługa agentów kariery dla IT w Polsce. Miejsca beta
-        są limitowane.
+        Pierwsza butikowa usługa agentów kariery dla IT w Polsce. Startujemy
+        z zaledwie 3 osobami beta — żeby jakość pozostała na najwyższym poziomie.
       </p>
       <div class="hero-ctas">
         <a
@@ -1198,14 +1222,13 @@
           <div class="about-text">
             <h3>Krzysztof Olbiński</h3>
             <p class="about-role">
-              Founder · Frontend Developer · Pierwszy Agent
+              Founder · Senior Software Engineer · 20+ lat w rynku IT
             </p>
             <p>
               20+ lat jako developer — w Polsce i globalnie przez Toptal. Sam
               przeszedłem przez wiele procesów rekrutacyjnych i widziałem jak
               trudny stał się rynek IT w 2026. Postanowiłem stanąć po stronie
-              programistów. Jestem pierwszym agentem na platformie i obsługuję
-              pierwsze osoby beta osobiście.
+              programistów. Pierwsze rozmowy pilotażowe już w toku — obsługuję pierwsze osoby osobiście.
             </p>
             <a
               href="https://www.linkedin.com/in/olbinski/"
@@ -1290,8 +1313,11 @@
                 współpracy.</strong
               >
               Docelowo planujemy cennik porównywalny z kosztem jednej
-              konsultacji career coacha miesięcznie. Płacisz za realną wartość —
-              nie za dostęp do kolejnego dashboardu.
+              konsultacji career coacha miesięcznie. Podwyżka o 15–20% przy
+              zmianie pracy często pokrywa koszt usługi wielokrotnie — jedna
+              dobrze wynegocjowana oferta zmienia trajektorię wynagrodzenia na
+              lata. Płacisz za realną wartość — nie za dostęp do kolejnego
+              dashboardu.
               <a
                 href="https://homodigital.io/view.html?file=warunki-wspolpracy-beta-v1.md"
                 style="color: var(--gold); text-decoration: underline"
