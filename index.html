@@ -171,6 +171,7 @@
         display: inline-flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 0.3rem;
         padding: 1rem 2.2rem;
         border-radius: 2px;
@@ -178,23 +179,25 @@
         font-size: 0.88rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        cursor: not-allowed;
         transition: all 0.3s;
         border: 1px solid;
+        text-decoration: none;
+      }
+
+      .btn:disabled {
+        cursor: not-allowed;
       }
 
       .btn-primary {
         background: var(--gold);
         color: #0a0a0a;
         border-color: var(--gold);
-        opacity: 0.45;
       }
 
       .btn-secondary {
         background: transparent;
         color: var(--gold);
         border-color: var(--border);
-        opacity: 0.45;
       }
 
       .btn-soon {
@@ -265,7 +268,7 @@
         font-family: 'Cormorant Garamond', serif;
         font-size: 3rem;
         font-weight: 700;
-        color: var(--border);
+        color: var(--gold);
         line-height: 1;
         margin-bottom: 1.2rem;
         display: block;
@@ -300,7 +303,7 @@
         font-size: clamp(1.6rem, 3.5vw, 2.8rem);
         font-weight: 400;
         font-style: italic;
-        max-width: 800px;
+        max-width: 910px;
         margin: 0 auto;
         line-height: 1.4;
         color: var(--text);
@@ -561,10 +564,12 @@
         strategicznie o twojej przyszłości — nie ty.
       </p>
       <div class="hero-ctas">
-        <button class="btn btn-primary" disabled>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeCu6nK8L0HlQsCD6T51ZUgQHQ4HrEcZW3hRbkwezBFVaU-XA/viewform?usp=dialog"
+          class="btn btn-primary"
+        >
           Dołącz jako pracownik IT
-          <span class="btn-soon">— Wkrótce —</span>
-        </button>
+        </a>
         <button class="btn btn-secondary" disabled>
           Zostań agentem
           <span class="btn-soon">— Wkrótce —</span>
@@ -698,10 +703,12 @@
       <h2>Gotowy na <em>swojego agenta</em>?</h2>
       <p>Platforma jest w przygotowaniu. Dołącz jako jeden z pierwszych.</p>
       <div class="hero-ctas">
-        <button class="btn btn-primary" disabled>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeCu6nK8L0HlQsCD6T51ZUgQHQ4HrEcZW3hRbkwezBFVaU-XA/viewform?usp=dialog"
+          class="btn btn-primary"
+        >
           Dołącz jako pracownik IT
-          <span class="btn-soon">— Wkrótce —</span>
-        </button>
+        </a>
         <button class="btn btn-secondary" disabled>
           Zostań agentem
           <span class="btn-soon">— Wkrótce —</span>
