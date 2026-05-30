@@ -575,8 +575,6 @@
         }
       }
 
-
-
       /* HERO BADGES */
       .hero-badges {
         display: flex;
@@ -595,7 +593,11 @@
         opacity: 0.8;
       }
       @media (max-width: 600px) {
-        .hero-badges { flex-direction: column; align-items: center; gap: 0.5rem; }
+        .hero-badges {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        }
       }
       /* EMOTIONAL PUNCH */
       .punch-section {
@@ -605,7 +607,12 @@
         text-align: center;
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
-        background: linear-gradient(to bottom, var(--bg), rgba(201,168,76,0.03), var(--bg));
+        background: linear-gradient(
+          to bottom,
+          var(--bg),
+          rgba(201, 168, 76, 0.03),
+          var(--bg)
+        );
       }
       .punch-inner {
         max-width: 700px;
@@ -631,7 +638,9 @@
         font-weight: 300;
       }
       @media (max-width: 600px) {
-        .punch-section { padding: 3rem 1.5rem; }
+        .punch-section {
+          padding: 3rem 1.5rem;
+        }
       }
       /* MARKET SECTION */
       .market-section {
@@ -908,7 +917,7 @@
       }
 
       .faq-a.open {
-        max-height: 300px;
+        max-height: 1300px;
         padding-bottom: 1.5rem;
       }
 
@@ -975,9 +984,17 @@
     <!-- EMOTIONAL PUNCH -->
     <section class="punch-section">
       <div class="punch-inner">
-        <p class="punch-text">Recruiters use AI.<br/>Companies use AI.<br/>ATS systems reject CVs before any human sees them.</p>
-        <p class="punch-text punch-text--gold">Most developers are still fighting this alone.</p>
-        <p class="punch-sub">In 2026 the IT market is a two-tier game — those who have someone in their corner, and everyone else. We're in your corner.</p>
+        <p class="punch-text">
+          Recruiters use AI.<br />Companies use AI.<br />ATS systems reject CVs
+          before any human sees them.
+        </p>
+        <p class="punch-text punch-text--gold">
+          Most developers are still fighting this alone.
+        </p>
+        <p class="punch-sub">
+          In 2026 the IT market is a two-tier game — those who have someone in
+          their corner, and everyone else. We're in your corner.
+        </p>
       </div>
     </section>
 
@@ -1031,7 +1048,18 @@
     <!-- VALUE PROPS -->
     <section class="props">
       <p class="props-label">What your agent does</p>
-      <p style="text-align:center;font-size:0.85rem;color:var(--muted);margin-bottom:2.5rem;margin-top:-2rem;">The scope of cooperation depends on your situation and the action plan agreed with your agent.</p>
+      <p
+        style="
+          text-align: center;
+          font-size: 0.85rem;
+          color: var(--muted);
+          margin-bottom: 2.5rem;
+          margin-top: -2rem;
+        "
+      >
+        The scope of cooperation depends on your situation and the action plan
+        agreed with your agent.
+      </p>
       <div class="props-grid">
         <div class="prop">
           <span class="prop-num">01</span>
@@ -1196,7 +1224,8 @@
       <h2>Ready for <em>your agent</em>?</h2>
       <p>
         The first boutique career agent service for IT professionals in Europe.
-        We're starting with just 3 beta clients — to keep quality at the highest level.
+        We're starting with just 3 beta clients — to keep quality at the highest
+        level.
       </p>
       <div class="hero-ctas">
         <a
@@ -1222,13 +1251,15 @@
           </div>
           <div class="about-text">
             <h3>Krzysztof Olbiński</h3>
-            <p class="about-role">Founder · Senior Software Engineer · 20+ years in the IT market</p>
+            <p class="about-role">
+              Founder · Senior Software Engineer · 20+ years in the IT market
+            </p>
             <p>
               20+ years as a developer — in Poland and globally through Toptal.
               I've been through many recruitment processes myself and seen how
               brutal the IT market became in 2026. I decided to stand on the
-              developer's side. First pilot conversations already under way —
-              I handle early clients personally.
+              developer's side. First pilot conversations already under way — I
+              handle early clients personally.
             </p>
             <a
               href="https://www.linkedin.com/in/olbinski/"
@@ -1273,13 +1304,20 @@
           </button>
           <div class="faq-a">
             <p>
-              For mid and senior developers with commercial experience — whether you're actively looking or simply want to move to better conditions. Often the best opportunities reach those who aren't looking but are ready.
+              For mid and senior developers with commercial experience — whether
+              you're actively looking or simply want to move to better
+              conditions. Often the best opportunities reach those who aren't
+              looking but are ready.
             </p>
-            <p style="margin-top:0.75rem;">
-              We're not a bootcamp or an entry-into-IT course. We deliver the most value to people who already have something to sell on the market and want to do it more effectively.
+            <p style="margin-top: 0.75rem">
+              We're not a bootcamp or an entry-into-IT course. We deliver the
+              most value to people who already have something to sell on the
+              market and want to do it more effectively.
             </p>
-            <p style="margin-top:0.75rem;">
-              Each agent works with a limited number of clients at a time — to ensure quality never drops. Changing jobs is your decision, not a requirement.
+            <p style="margin-top: 0.75rem">
+              Each agent works with a limited number of clients at a time — to
+              ensure quality never drops. Changing jobs is your decision, not a
+              requirement.
             </p>
           </div>
         </div>
@@ -1308,7 +1346,13 @@
             <p>
               The model is based on a monthly subscription plus a success fee
               when you change jobs. We're targeting pricing comparable to a
-              <strong style="color:var(--gold)">Beta programme: 150 PLN/month + success fee.</strong> Target pricing comparable to a single career coaching session per month. A 15–20% salary increase when changing jobs often covers the cost many times over — one well-negotiated offer changes your earnings trajectory for years.
+              <strong style="color: var(--gold)"
+                >Beta programme: 150 PLN/month + success fee.</strong
+              >
+              Target pricing comparable to a single career coaching session per
+              month. A 15–20% salary increase when changing jobs often covers
+              the cost many times over — one well-negotiated offer changes your
+              earnings trajectory for years.
               <a
                 href="https://homodigital.io/view.html?file=warunki-wspolpracy-beta-v1.md"
                 style="color: var(--gold); text-decoration: underline"
