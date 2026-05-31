@@ -538,21 +538,75 @@ Nie buduj shadow learning od razu. Ale zaprojektuj bazę danych tak żeby każda
 
 ## Roadmapa techniczna
 
-### v1 — fundament
+### v1 — fundament (3-4 tygodnie, vibe-coding)
 
 Profil pracownika i agenta, matching, komunikacja, raporty, płatności Stripe. Ręczny proces bez automatyzacji.
 
-### v2 — agregator ofert
+### v2 — agregator ofert + AI pipeline (2-3 tygodnie po v1)
 
-Platforma wywołuje API popularnych jobboardów (JustJoin.it, No Fluff Jobs, LinkedIn, Pracuj.pl) i agreguje oferty w jednym miejscu dla agentów. Zamiast ręcznego przeszukiwania 5 serwisów — jedno narzędzie. Znaczący mnożnik produktywności agenta.
+Platforma wywołuje API popularnych jobboardów (JustJoin.it, No Fluff Jobs, LinkedIn, Pracuj.pl) i agreguje oferty w jednym miejscu dla agentów. Automatyczne dopasowanie ofert do profilu klienta przez AI, scoring i ranking, draft wiadomości do rekruterów.
 
-### v3 — narzędzia AI dla agentów
+**CV generator pipeline:** agent uploaduje profil klienta (Google Docs) + treść oferty → Claude API analizuje oba dokumenty → generuje spersonalizowane CV → backend renderuje do PDF → plik trafia automatycznie na Google Drive klienta. Koszt API: ~1-2 grosze za jedno CV.
 
-Automatyczne dopasowanie ofert do profilu klienta, sugestie działań, analiza rynku wynagrodzeń, draft wiadomości do rekruterów. Agent skupia się na relacji i strategii — AI robi research.
+**Google Drive API:** platforma pobiera profil klienta z Google Docs, dane aplikacji z Google Sheets i zapisuje wygenerowane dokumenty z powrotem na Drive. Autoryzacja przez Google OAuth 2.0, API bezpłatne w standardowym użyciu.
 
-### v4 — własne API
+### v3 — wtyczka Chrome (1 tydzień, równolegle z v2)
 
-Gdy platforma osiągnie znaczącą bazę kandydatów — możliwość udostępnienia własnego API dla partnerów zewnętrznych. Wymaga pozycji rynkowej, nie do zbudowania na starcie.
+Chrome Extension dla agentów która radykalnie przyspiesza aplikowanie:
+
+- Wykrywa że agent jest na stronie z formularzem aplikacyjnym
+- Automatycznie wyciąga treść ogłoszenia ze strony
+- Wysyła do API → generuje spersonalizowane CV i cover letter pod konkretną ofertę
+- Autouzupełnia pola formularza danymi klienta
+- Dodaje aplikację do arkusza Google Sheets automatycznie
+- Agent klika tylko "wyślij" na końcu
+
+Przewaga nad Playwright/Puppeteer: działa w normalnej przeglądarce agenta — nie wygląda jak bot, trudna do wykrycia przez anty-botowe systemy. Koszt publikacji w Chrome Web Store: $5 jednorazowo.
+
+**Browser automation (Playwright/Puppeteer):** dla platform z otwartym API lub prostymi formularzami (~60-70% ofert) — pełna automatyzacja bez udziału agenta. Platformy z captchą i wieloetapową autoryzacją (Workday, SAP, Taleo) wymagają półautomatycznego podejścia — bot wypełnia, agent zatwierdza.
+
+### v4 — aplikacja mobilna (3-4 tygodnie po v2)
+
+React Native + Expo — jeden kod na iOS i Android, naturalne rozszerzenie dla Artura znającego React.
+
+Agent na mobile: powiadomienia push o nowych dopasowanych ofertach, zatwierdzanie aplikacji jednym tapnięciem, podgląd live statusu wszystkich klientów.
+
+Klient na mobile: live raport aplikacji, chat z agentem, powiadomienia o zaproszeniach na rozmowy.
+
+Wtyczka Chrome pozostaje narzędziem desktopowym dla agenta — aplikacja mobilna współpracuje z nią przez backend API. Backend projektowany od v1 tak żeby obsługiwał web i mobile bez refaktoryzacji.
+
+### v5 — AI shadow learning (4-6 tygodni, po 6 miesiącach danych)
+
+System który uczy się od agentów i stopniowo automatyzuje rutynowe zadania. Wymaga minimum 3-6 miesięcy logów decyzji agentów zanim rozpocznie się trening. Szczegóły w sekcji "AI Shadow Learning — roadmapa."
+
+### v6 — model freemium (po walidacji modelu premium)
+
+Dwa tiery produktu:
+
+**Basic (self-service + AI):** klient sam używa narzędzi AI platformy — agregator ofert, generator CV, tracker aplikacji. Abonament ~50-80 zł/miesiąc. Obniża barierę wejścia, buduje bazę użytkowników. Dane z basic zasilają shadow learning i dostarczają kontekst dla agentów premium.
+
+**Premium (agent):** pełna obsługa przez człowieka — negocjacje wynagrodzenia, prep do rozmów, długoterminowa strategia kariery, outreach do rekruterów. Abonament 200-400 zł + success fee. Celowo zostawia negocjacje i strategię wyłącznie dla agenta — to jest linia podziału której AI nie przekracza.
+
+Natural upsell: klient basic dostaje zaproszenie na rozmowę → nagle potrzebuje kogoś do negocjacji → przechodzi na premium. Moment bólu jest naturalnym triggerem konwersji.
+
+### v7 — własne API (gdy znacząca baza kandydatów)
+
+Udostępnienie API dla partnerów zewnętrznych. Wymaga pozycji rynkowej, nie do zbudowania na starcie.
+
+---
+
+### Szacowany timeline (vibe-coding z AI)
+
+| Faza | Zakres | Czas |
+|---|---|---|
+| v1 MVP | Fundament platformy | 3-4 tygodnie |
+| v2 AI pipeline | Agregator + CV generator + Drive API | 2-3 tygodnie |
+| v3 Wtyczka Chrome | Browser automation | 1 tydzień |
+| v4 Aplikacja mobilna | React Native iOS/Android | 3-4 tygodnie |
+| v5 Shadow learning | AI uczy się od agentów | 4-6 tygodni (po 6 mc danych) |
+| v6 Freemium | Basic + Premium tiers | do ustalenia |
+
+**Pełna automatyzacja bez shadow learning: ~3 miesiące od startu.** Przy klasycznym developmencie (bez vibe-coding): 18-24 miesiące.
 
 ---
 
@@ -891,4 +945,4 @@ Start budowania platformy uzależniony od pozyskania co-foundera.
 
 ---
 
-_Wersja: 4.0 — dokument żywy, do aktualizacji w miarę walidacji_
+_Wersja: 4.1 — dokument żywy, do aktualizacji w miarę walidacji_
