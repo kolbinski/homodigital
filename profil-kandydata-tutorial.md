@@ -4,7 +4,7 @@
 
 ---
 
-> Ten dokument to Twój najważniejszy wkład w pracę z agentem kariery. Im lepiej go wypełnisz, tym skuteczniej agent będzie działać w Twoim imieniu — dobierać oferty, pisać CV, prowadzić outreach i negocjować wynagrodzenie.
+> Ten dokument to Twój najważniejszy wkład w pracę z agentem kariery. Im lepiej go wypełnisz, tym skuteczniej agent będzie działać — dobierać oferty, pisać CV, prowadzić outreach i wspierać negocjacje wynagrodzenia w uzgodnionym z Tobą zakresie.
 >
 > Nie szukamy idealnego kandydata — szukamy prawdziwego obrazu Twojej pracy. Pisz szczerze, nie pod "dobre wrażenie". Agent i tak wyciągnie resztę podczas współpracy.
 
@@ -23,7 +23,7 @@ Sekcje 2, 3 i 6: cele zawodowe, styl pracy i technologie. Zarezerwuj chwilę spo
 **Sesja 3 — Uzupełnienia (15 min)**
 Sekcje 7–10: kompetencje miękkie, projekty własne, certyfikaty, preferencje. Weryfikacja i doprecyzowanie.
 
-> Przykładowy profil Marka Wiśniewskiego pokazuje jak może wyglądać wypełniony dokument. Nie musisz pisać tak szczegółowo — każdy profil jest inny i agent pomoże dopracować szczegóły podczas współpracy.
+> Przykładowy profil Marka Wiśniewskiego pokazuje jak może wyglądać wypełniony dokument. Nie musisz pisać tak szczegółowo — każdy profil jest inny i profil będzie dopracowywany wspólnie z agentem podczas współpracy.
 
 ---
 
@@ -77,7 +77,7 @@ Bez jasno zdefiniowanego celu agent nie wie czy dana oferta jest dla Ciebie krok
 
 ---
 
-## Sekcja 3 — Styl pracy i profil psychologiczny
+## Sekcja 3 — Styl pracy i preferowane środowisko
 
 **Co wpisać:** jak pracujesz najlepiej, co Cię frustruje, jakim jesteś współpracownikiem.
 
@@ -331,12 +331,63 @@ Projekty własne pokazują że programujesz z pasji, nie tylko z obowiązku. Dzi
 - Czy contributujesz do open source?
 - Czy masz bloga technicznego lub nagrania z prezentacji?
 
+**Nagraj swoją sesję vibe-codingową:**
+Jeśli budujesz projekt z pomocą AI — nagraj sesję (OBS, Cursor/VS Code mają wbudowane nagrywanie). Timelapse z kilku dni skompresowany do 2-3 minut to wyjątkowy element portfolio. "Zbudowałem tę appkę w 5 dni z AI" + link do nagrania na YouTube = coś czego 99% kandydatów nie ma. Agent może go używać przy outreachu do rekruterów.
+
 **Jeśli nie masz projektów własnych:**
 Wpisz wprost "brak aktywnych projektów własnych". To nie dyskwalifikuje — szczególnie u seniorów z bogatą historią zawodową. Ale jeśli masz cokolwiek — nawet prosty skrypt który używasz prywatnie — warto go opisać.
 
 ---
 
-## Sekcja 9 — Certyfikaty i kursy
+## Sekcja 9 — Video pitch (opcjonalnie, ale skuteczne)
+
+**Co to jest:** krótkie nagranie 60-90 sekund gdzie przedstawiasz siebie, swoje największe osiągnięcie i czego szukasz. Link trafia na YouTube (unlisted) i do sekcji Featured na LinkedIn.
+
+**Dlaczego warto:**
+99% developerów tego nie robi. Video w 90 sekund pokazuje to czego CV nie pokaże — pewność siebie, umiejętność komunikacji, angielski w mowie, osobowość. Rekruter który widział Twoje video pamięta Cię inaczej niż kolejne PDF.
+
+**Struktura (90 sekund):**
+```
+0:00 – 0:30  Kim jestem i co buduję
+             "Cześć, jestem Marek — Senior Fullstack Engineer
+              z 10 latami w fintechowej produkcji."
+
+0:30 – 1:00  Jedno konkretne osiągnięcie
+             "W PayFlow przeprojektowałem architekturę systemu
+              płatności — zredukowałem czas transakcji z 4 sekund
+              do 380ms przy zerowych incydentach przez 18 miesięcy."
+
+1:00 – 1:20  Czego szukam
+             "Szukam roli Senior lub Staff Engineer w product
+              company — gdzie mogę prowadzić architekturę,
+              nie tylko implementować tickety."
+
+1:20 – 1:30  CTA
+             "Link do mojego profilu i CV poniżej."
+```
+
+**Techniczne minimum:**
+- Dobre oświetlenie (naturalne lub ring light) — brak tego dyskwalifikuje video
+- Czysty dźwięk (słuchawki z mikrofonem lub ciche pomieszczenie)
+- Stabilny obraz (statyw lub oparty telefon/laptop)
+- Tło: ściana, regał z książkami, biurko — nie łazienka, nie balkon z widokiem na bloki
+- Nagranie jednym ujęciem — montaż nie jest potrzebny
+
+**Ważne:** słabe video działa gorzej niż brak video. Jeśli dźwięk jest zły lub tło nieodpowiednie — lepiej poczekać na lepsze warunki niż nagrać i wrzucić.
+
+**Gdzie umieścić:**
+- YouTube jako "Unlisted" (widoczne tylko przez link, nie pojawia się w wyszukiwarce)
+- Sekcja Featured na LinkedIn jako pierwszy element
+- Link w profilu kandydata dla agenta — agent może go podsyłać rekruterom przy outreachu
+
+**Pytania pomocnicze do przygotowania:**
+- Jak opiszesz siebie i swoją specjalizację w jednym zdaniu?
+- Które jedno osiągnięcie najlepiej pokazuje Twój wpływ?
+- Co chcesz robić w kolejnej roli i dlaczego?
+
+---
+
+## Sekcja 10 — Certyfikaty i kursy
 
 Wpisz wszystkie formalne certyfikaty (AWS, Google Cloud, Azure, Kubernetes, Scrum, itp.) z datami uzyskania. Jeśli planujesz certyfikat — też wpisz z datą planowaną.
 
@@ -344,7 +395,7 @@ Jeśli nie masz żadnych — wpisz wprost "brak formalnych certyfikatów". Nie j
 
 ---
 
-## Sekcja 9 — Preferencje i czerwone flagi
+## Sekcja 11 — Preferencje i czerwone flagi
 
 ### Preferencje
 ```
@@ -377,7 +428,7 @@ Nie chcę open space bez stref ciszy
 
 ---
 
-## Sekcja 10 — Mocne strony
+## Sekcja 12 — Mocne strony
 
 3-6 zdań o tym co robisz lepiej niż większość. Każde zdanie powinno być poparte dowodem z historii zawodowej.
 
@@ -411,6 +462,19 @@ Nigdy. Sekcje oznaczone [TYLKO DLA AGENTA] są objęte klauzulą poufności w um
 
 **"Jak długo powinno to zająć?"**
 Większość osób wypełnia profil w 2-3 sesjach. Pierwsza sesja (historia zatrudnienia) — ok. 45 minut. Druga (technologie + cele) — ok. 30 minut. Trzecia (weryfikacja i uzupełnienia) — ok. 15 minut.
+
+---
+
+## Czego agent nie robi
+
+Równie ważne jak to co robimy — jest to czego nie robimy. Kilka granic które warto znać od początku:
+
+- **Nie wysyła aplikacji bez Twojej wiedzy** — każda aplikacja jest uzgadniana z Tobą przed wysłaniem
+- **Nie podejmuje decyzji za Ciebie** — agent rekomenduje, Ty decydujesz
+- **Nie kontaktuje Twojego obecnego pracodawcy** — wszystkie działania są skierowane wyłącznie na zewnątrz
+- **Nie udostępnia informacji prywatnych** — sekcje [TYLKO DLA AGENTA] nigdy nie trafiają do rekruterów ani firm
+- **Nie manipuluje procesem rekrutacyjnym** — reprezentujemy Cię uczciwie, nie tworzymy fałszywego obrazu
+- **Nie jest terapeutą kariery** — jeśli potrzebujesz głębszego wsparcia zawodowego, możemy polecić specjalistów
 
 ---
 

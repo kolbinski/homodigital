@@ -1,10 +1,10 @@
 # Optymalizacja LinkedIn — przewodnik krok po kroku
 
-**Homo Digital / Career Agent Platform**
-
 ---
 
-> LinkedIn to Twoje okno wystawowe dla rekruterów. 87% rekruterów używa LinkedIn do weryfikacji kandydatów — zanim odczytają CV. Wypełniony profil Homo Digital daje agentowi wszystko czego potrzeba do optymalizacji Twojego LinkedIn. Ten tutorial pokazuje jak z profilu kandydata przełożyć dane na każdą sekcję LinkedIn.
+> LinkedIn to pierwsze miejsce gdzie rekruter weryfikuje kandydata — zanim odczyta CV. Zadbany profil oznacza więcej zaproszeń na rozmowy, lepsze pozycjonowanie w wynikach wyszukiwania i silniejszy sygnał dla algorytmu.
+>
+> Ten tutorial pokazuje jak przełożyć dane z profilu kandydata na każdą sekcję LinkedIn. Twój agent pomoże doprecyzować narrację, wydobyć osiągnięcia których możesz nie pamiętać i dostosować profil pod konkretne oferty — to nie jest praca którą robisz raz i zostawiasz.
 
 ---
 
@@ -16,8 +16,8 @@ Przed edycją profilu ustaw:
 Ustawienia → Widoczność → Udostępniaj aktualizacje profilu obserwatorom → **Wyłącz**
 Zapobiega to zasypaniu sieci kontaktów powiadomieniami "X zaktualizował profil" podczas gdy edytujesz.
 
-**Włącz "Open to Work":**
-Jeśli szukasz aktywnie — włącz tryb "Open to Work" widoczny tylko dla rekruterów (nie dla pracodawców). Ustawienia → Otwórz na możliwości → widoczne tylko dla rekruterów.
+**"Open to Work" (opcjonalnie):**
+Jeśli aktywnie szukasz pracy, rozważ włączenie trybu widocznego tylko dla rekruterów (nie dla pracodawców). Ustawienia → Otwórz na możliwości → widoczne tylko dla rekruterów. Jeśli nie chcesz sygnalizować szukania pracy — zostaw wyłączone, agent poradzi sobie bez tego.
 
 **Adres URL:**
 Ustaw własny URL: linkedin.com/in/imie-nazwisko — bez losowych cyfr na końcu.
@@ -100,7 +100,7 @@ Jedno konkretne, zmierzone. Wywodzi się z sekcji MOCNE STRONY lub KOMPETENCJE M
 Krótko — typ firmy, branża, rola. Z sekcji CELE ZAWODOWE (tylko publiczna część — bez stawek i krytycznych uwag).
 
 **Akapit 4 — CTA:**
-Jak się skontaktować. Email lub "Napisz wiadomość na LinkedIn."
+Jak się skontaktować. Email lub "Napisz wiadomość na LinkedIn." Jeśli masz video pitch — dodaj link tu jako drugi element.
 
 **Przykład (Marek):**
 
@@ -116,8 +116,11 @@ I'm looking for a Senior or Staff Engineer role at a product company in
 fintech, SaaS or developer tools — where I can own architecture, not just
 implement tickets. Preferably remote or max 2 days/week in Warsaw.
 
-Open to interesting conversations: marek.wisniewski.it@gmail.com
+📹 90-second intro: youtu.be/xxxxx
+Open to conversations: marek.wisniewski.it@gmail.com
 ```
+
+> Przykład Marka jest celowo rozbudowany — nie musisz pisać tak szczegółowo. Nawet 3 zdania z jednym konkretnym osiągnięciem są lepsze niż nic. Agent pomoże dopracować narrację podczas współpracy.
 
 **Wskazówki:**
 - Pisz po angielsku jeśli celujesz w rynek zachodni, po polsku jeśli tylko PL
@@ -148,6 +151,8 @@ Lokalizacja + tryb pracy (Remote / Hybrid / On-site)
 Identyczna jak w CV: *czasownik akcji + co + wynik z liczbą*
 
 Limit znaków na opis: 2000. Celuj w 200-400 znaków.
+
+> Nie pamiętasz dokładnych liczb? Podaj przybliżenie lub opisz skalę słowami ("duża platforma e-commerce", "kilkuset użytkowników dziennie"). Agent pomoże oszacować realny wpływ Twojej pracy na podstawie rozmowy — nie musisz tego robić sam.
 
 **Przykład (Marek — PayFlow):**
 
@@ -211,7 +216,8 @@ Tech: Next.js · TypeScript · GraphQL · Storybook · Algolia · Material UI
 Użyj sekcji **Featured** (Polecane) na górze profilu lub sekcji **Projects** do pokazania side projektów z linkami.
 
 **Featured section — co umieścić:**
-- Link do działającego projektu (najlepiej)
+- **Video pitch (najsilniejszy element)** — link do YouTube Unlisted, 60-90 sekund o sobie
+- Link do działającego projektu
 - Link do repozytorium GitHub z dobrym README
 - Post LinkedIn który osiągnął dobre zasięgi
 - Artykuł techniczny który napisałeś
@@ -219,11 +225,14 @@ Użyj sekcji **Featured** (Polecane) na górze profilu lub sekcji **Projects** d
 **Przykład (Marek):**
 ```
 Featured:
-1. BudgetFlow — Personal Finance Tracker
+1. 📹 "Who I am and what I build" — 90-second intro
+   youtu.be/xxxxx
+
+2. BudgetFlow — Personal Finance Tracker
    budgetflow.app | github.com/marek-wisniewski/budgetflow
    "AI-powered expense tracking with bank integration via Plaid API"
 
-2. pg-migrate-cli — PostgreSQL Migration Tool
+3. pg-migrate-cli — PostgreSQL Migration Tool
    npmjs.com/package/pg-migrate-cli
    "Open source CLI tool, 180+ GitHub stars"
 ```
@@ -313,23 +322,11 @@ i bardzo by mi pomogło w szukaniu pracy."
 
 ---
 
-## Sekcja 11 — Aktywność i strategia publikacji
+## Sekcja 11 — Aktywność
 
-Aktywny LinkedIn (posty, komentarze) zwiększa widoczność w algorytmie i buduje sieć kontaktów z rekruterami.
+Nie musisz być LinkedIn influencerem żeby skutecznie szukać pracy. Minimum to uzupełniony profil i połączenia z rekruterami z docelowych firm — resztą zajmuje się agent.
 
-**Minimum wymagane:**
-- Uzupełniony profil (wszystkie sekcje powyżej)
-- Połączenia z rekruterami z docelowych firm
-
-**Opcjonalnie (zwiększa zasięg):**
-- Post raz na 1-2 tygodnie: techniczna obserwacja, krótkie case study, komentarz do trendu rynkowego
-- Komentarze pod postami rekruterów i hiring managerów z docelowych firm
-- Udostępnienie artykułu z krótkim własnym komentarzem
-
-**Czego unikać:**
-- Posty "jestem otwarty na nowe możliwości" bez kontekstu
-- Motywacyjne cytaty bez wartości technicznej
-- Zbyt częste posty (codziennie) — algorytm obniża zasięg
+Jeśli chcesz zwiększyć organiczny zasięg: komentarz pod postem technicznym lub udostępnienie artykułu z własnym zdaniem raz na 1-2 tygodnie wystarczy. Unikaj postów motywacyjnych i "szukam pracy" bez kontekstu — to działa odwrotnie niż zamierzono.
 
 ---
 
@@ -358,6 +355,7 @@ Przed pierwszą rozmową z rekruterem sprawdź:
 - [ ] Headline — zawiera tytuł + kluczowe technologie
 - [ ] URL — własny (bez losowych cyfr)
 - [ ] About — 300-500 znaków, hook w pierwszym zdaniu, CTA na końcu
+- [ ] Video pitch — YouTube Unlisted, link w About i Featured (opcjonalnie, ale skuteczne)
 - [ ] Każde doświadczenie — z opisem i bullet pointami achiever
 - [ ] Każde doświadczenie — z przypisanymi skillami
 - [ ] Projekty własne — w Featured lub sekcji Projects z linkami
@@ -369,5 +367,4 @@ Przed pierwszą rozmową z rekruterem sprawdź:
 
 ---
 
-*Homo Digital — Twój osobisty agent kariery*
-*homodigital.io | kontakt: contact@homodigital.io*
+*homodigital.io*
