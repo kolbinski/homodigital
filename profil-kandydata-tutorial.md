@@ -272,7 +272,52 @@ zidentyfikował problem, zaproponował, zbudował, wdrożył
 
 ---
 
-## Sekcja 8 — Certyfikaty i kursy
+## Sekcja 8 — Projekty własne
+
+**Co wpisać:** projekty hobbystyczne, side projekty, open source — cokolwiek co zbudowałeś poza pracą etatową. Szczególnie wartościowe jeśli masz link do działającego produktu lub repozytorium.
+
+**Przykłady (Marek):**
+```
+1. BudgetFlow — osobisty tracker finansów
+   GitHub: github.com/marek-wisniewski/budgetflow
+   Demo: budgetflow.app
+   Stack: Next.js, TypeScript, PostgreSQL, Plaid API
+   Opis: Aplikacja do śledzenia wydatków z automatyczną
+   kategoryzacją transakcji przez AI i integracją z bankami przez Plaid.
+   Status: aktywnie używana, ~40 użytkowników
+
+2. JobRadar — aggregator ofert pracy dla developerów
+   GitHub: github.com/marek-wisniewski/jobradar
+   Stack: Node.js, TypeScript, Puppeteer, Telegram Bot API
+   Opis: Bot który scrapuje JustJoin.it, NoFluffJobs i LinkedIn,
+   filtruje po stacku i wysyła dopasowane oferty na Telegram.
+   Status: używam prywatnie od 6 miesięcy
+
+3. pg-migrate-cli — narzędzie do migracji schematów PostgreSQL
+   GitHub: github.com/marek-wisniewski/pg-migrate-cli
+   npm: npmjs.com/package/pg-migrate-cli
+   Stack: Node.js, TypeScript
+   Opis: CLI tool do zarządzania migracjami bazy danych
+   z obsługą rollback i dry-run.
+   Status: open source, 180 gwiazdek na GitHub
+```
+
+**Dlaczego to ważne:**
+Projekty własne pokazują że programujesz z pasji, nie tylko z obowiązku. Działający produkt jest silniejszym sygnałem niż certyfikat. GitHub z regularną aktywnością (nawet 1-2 commity tygodniowo) buduje wiarygodność.
+
+**Pytania pomocnicze:**
+- Czy masz jakieś repozytoria na GitHubie które regularnie rozwijasz?
+- Czy rozwiązałeś kiedyś swój własny problem pisząc narzędzie?
+- Czy próbowałeś budować własny produkt, nawet jeśli nie wypaliło?
+- Czy contributujesz do open source?
+- Czy masz bloga technicznego lub nagrania z prezentacji?
+
+**Jeśli nie masz projektów własnych:**
+Wpisz wprost "brak aktywnych projektów własnych". To nie dyskwalifikuje — szczególnie u seniorów z bogatą historią zawodową. Ale jeśli masz cokolwiek — nawet prosty skrypt który używasz prywatnie — warto go opisać.
+
+---
+
+## Sekcja 9 — Certyfikaty i kursy
 
 Wpisz wszystkie formalne certyfikaty (AWS, Google Cloud, Azure, Kubernetes, Scrum, itp.) z datami uzyskania. Jeśli planujesz certyfikat — też wpisz z datą planowaną.
 
