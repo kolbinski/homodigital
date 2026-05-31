@@ -6,7 +6,24 @@
 
 > Ten dokument to Twój najważniejszy wkład w pracę z agentem kariery. Im lepiej go wypełnisz, tym skuteczniej agent będzie działać w Twoim imieniu — dobierać oferty, pisać CV, prowadzić outreach i negocjować wynagrodzenie.
 >
-> Nie spiesz się. Masz na to tyle czasu ile potrzebujesz — większość osób wypełnia profil w 2-3 sesjach po 30-45 minut. Warto mieć pod ręką swoje CV, LinkedIn i historię zatrudnienia.
+> Nie szukamy idealnego kandydata — szukamy prawdziwego obrazu Twojej pracy. Pisz szczerze, nie pod "dobre wrażenie". Agent i tak wyciągnie resztę podczas współpracy.
+
+---
+
+## Jak podejść do wypełniania — 3 sesje
+
+Nie musisz wypełniać wszystkiego naraz. Profil jest celowo głęboki — to inwestycja która procentuje przez całą współpracę z agentem. Podziel ją na trzy sesje:
+
+**Sesja 1 — Historia (45 min)**
+Sekcje 4 i 5: wykształcenie i historia zatrudnienia. Miej pod ręką CV, LinkedIn i stare maile z datami. To najważniejsza i najbardziej wymagająca część.
+
+**Sesja 2 — Kim jesteś zawodowo (30 min)**
+Sekcje 2, 3 i 6: cele zawodowe, styl pracy i technologie. Zarezerwuj chwilę spokoju — ta część wymaga refleksji, nie wyszukiwania faktów.
+
+**Sesja 3 — Uzupełnienia (15 min)**
+Sekcje 7–10: kompetencje miękkie, projekty własne, certyfikaty, preferencje. Weryfikacja i doprecyzowanie.
+
+> Przykładowy profil Marka Wiśniewskiego pokazuje jak może wyglądać wypełniony dokument. Nie musisz pisać tak szczegółowo — każdy profil jest inny i agent pomoże dopracować szczegóły podczas współpracy.
 
 ---
 
@@ -202,6 +219,8 @@ Zero incydentów przez 18 miesięcy.
 
 To najczęstszy błąd w CV. Rekruterzy widzą setki "odpowiadałem za" i "brałem udział w". Chcą wiedzieć co **osiągnąłeś**, nie co **robiłeś**.
 
+> **Ważne:** pisz prawdziwe osiągnięcia, nie idealne. Jeśli zaczniesz koloryzować, agent wyjdzie na tym podczas rozmowy z rekruterem — a to szkodzi bardziej niż skromne CV. Przybliżenia są lepsze niż zmyślone liczby.
+
 **Formuła:** *czasownik akcji + co zrobiłem + jaki był wynik (liczba)*
 
 | Źle (doer) | Dobrze (achiever) |
@@ -392,6 +411,27 @@ Nigdy. Sekcje oznaczone [TYLKO DLA AGENTA] są objęte klauzulą poufności w um
 
 **"Jak długo powinno to zająć?"**
 Większość osób wypełnia profil w 2-3 sesjach. Pierwsza sesja (historia zatrudnienia) — ok. 45 minut. Druga (technologie + cele) — ok. 30 minut. Trzecia (weryfikacja i uzupełnienia) — ok. 15 minut.
+
+---
+
+## Co dzieje się dalej?
+
+Gdy wyślesz gotowy profil do agenta, zaczyna się właściwa praca:
+
+**Dzień 1-2 — Analiza profilu**
+Agent czyta profil w całości, identyfikuje mocne strony, gaps i potencjalne pytania rekruterów. Przygotowuje wstępną mapę docelowych firm i ról.
+
+**Dzień 3-5 — Strategia i CV**
+Agent tworzy warianty CV dopasowane do różnych typów ofert (product company, scale-up, rynek zachodni). Każde CV jest optymalizowane pod konkretny stack i branżę.
+
+**Tydzień 2 — Aktywny outreach**
+Pierwsze aplikacje wysłane w Twoim imieniu. Bezpośredni kontakt z rekruterami i hiring managerami. Wszystko trafia do live raportu w Google Sheets — widzisz każdy krok w czasie rzeczywistym.
+
+**Na bieżąco**
+Przed każdą rozmową kwalifikacyjną dostajesz briefing od agenta: co wiemy o firmie, jakich pytań się spodziewać, jak opowiedzieć o swoim odejściu z poprzedniej pracy. Agent jest dostępny przez WhatsApp na każdy pilny temat.
+
+**Koniec miesiąca**
+Pełny raport z działań: ile ofert, ile aplikacji, ile odpowiedzi, co działa a co nie. Twoja ocena jakości współpracy i plan na kolejny miesiąc.
 
 ---
 
