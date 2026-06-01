@@ -24,9 +24,22 @@
 - [ ] Przygotuj arkusz Google Sheets (live raport aplikacji) z kolumnami:
   - Data | Firma | Stanowisko | Link do oferty | Źródło | Status | Następny krok | Notatki
 - [ ] Udostępnij arkusz klientowi z prawami widoku
-- [ ] Wyślij klientowi link do tutorialu profilu i poproś o wypełnienie przed rozmową weryfikacyjną
+- [ ] Wyślij email powitalny z video wizytówką agenta (link YouTube Unlisted) + link do tutorialu profilu
 - [ ] Wyślij klientowi link do tutorialu LinkedIn
 - [ ] Umów rozmowę weryfikacyjną (30-45 min) na po wypełnieniu profilu
+
+**Email powitalny — struktura:**
+Temat: `Witaj w Homo Digital — zaczynamy`
+
+Treść: link do video wizytówki agenta (60-90 sek) + link do tutorialu profilu kandydata + link do tutorialu LinkedIn + link do live trackera aplikacji (Google Sheets) + numer WhatsApp agenta.
+
+**Video wizytówka agenta — struktura 60-90 sekund:**
+- Kim jestem i jak działam (20 sek): "Cześć, jestem [imię] — Twój agent kariery w Homo Digital. Przez najbliższe tygodnie będę Cię reprezentował na rynku pracy."
+- Co zrobimy razem (30 sek): "Szukam ofert, aplikuję, przygotowuję Cię przed rozmowami i negocjuję warunki — Ty skupiasz się na pracy i rozmowach technicznych."
+- Pierwszy krok (20 sek): "Zacznij od wypełnienia profilu kandydata — to Twój najważniejszy wkład w naszą współpracę. Link w tym mailu."
+- Kontakt (10 sek): "Pytania? Pisz na WhatsApp. Zaczynamy."
+
+**Wymagania techniczne video:** dobre oświetlenie, czysty dźwięk, spokojne tło. Bez tych trzech — lepiej nie nagrywać, złe video obniża credibility bardziej niż brak video.
 
 ---
 
@@ -208,7 +221,63 @@ Gdy klient dostanie zaproszenie na rozmowę:
 
 ---
 
-### 4b. Negocjacje wynagrodzenia
+### 4b. Initial screening przez agenta
+
+Gdy pracodawca odezwie się na aplikację — agent jest pierwszym punktem kontaktu, nie klient.
+
+**CV zawiera notę:** *"Reprezentowany przez Homo Digital | kontakt: krzysztof.olbinski@homodigital.io"*
+
+**Cel rozmowy screeningowej agenta z pracodawcą:**
+- Zebranie informacji których klient sam by nie zapytał
+- Weryfikacja red flags z profilu klienta zanim zmarnuje czas na rozmowę
+- Ustalenie widełek budżetowych i elastyczności w górę
+- Ocena kultury organizacyjnej i stylu zarządzania
+- Wstępne pozycjonowanie klienta jako kandydata premium
+
+**Pytania które agent zadaje pracodawcy:**
+- Jaki jest zakres odpowiedzialności technicznej w tej roli — ownership czy wykonywanie ticketów?
+- Jak wygląda kultura code review i testów automatycznych?
+- Jaki jest model pracy (remote/hybrid) i jak wygląda codzienna komunikacja zespołu?
+- Jakie są widełki budżetowe i czy jest elastyczność powyżej podanego zakresu?
+- Dlaczego ta rola jest otwarta — nowy headcount czy zastępstwo?
+- Jak wygląda onboarding i oczekiwany czas do samodzielności?
+- Czy proces rekrutacyjny zawiera zadanie domowe (take-home assignment)? Jeśli tak — jaki jest szacowany czas i zakres?
+
+> **[TYLKO DLA AGENTA]** Take-home assignments są jedną z głównych przyczyn rezygnacji seniorów z procesów rekrutacyjnych. Zadania powyżej 2 godzin są przez wielu doświadczonych developerów traktowane jako sygnał złej kultury organizacyjnej lub próba pozyskania darmowej pracy. Agent informuje klienta o tym z wyprzedzeniem i ustala wspólnie czy kontynuować proces.
+
+**Po rozmowie screeningowej:**
+Agent wysyła klientowi pisemny brief:
+- Wyniki weryfikacji red flags (czy firma bezpieczna do aplikowania)
+- Informacje o kulturze i stylu zarządzania
+- Widełki budżetowe i przestrzeń do negocjacji
+- Rekomendacja: aplikujemy dalej / odpuszczamy / aplikujemy z zastrzeżeniami
+- Jeśli dalej — briefing przed rozmową techniczną klienta
+
+**Jeśli pracodawca pyta "dlaczego nie mówię bezpośrednio z kandydatem":**
+*"Marek jest dostępny na rozmowę techniczną i kulturową — reprezentuję go na etapie wstępnej kwalifikacji i negocjacji warunków. To standard w reprezentacji talent agentowej."*
+
+---
+
+### 4c. Przygotowanie do rozmowy kwalifikacyjnej klienta
+
+Gdy klient dostanie zaproszenie na rozmowę techniczną/kulturową (po screeningu agenta):
+
+**Briefing (1-2 dni przed):**
+- Wyniki screeningu agenta + dodatkowy research firmy
+- Skład zespołu rekrutacyjnego (LinkedIn research)
+- Typowe pytania dla tej roli i firmy
+- 5 pytań technicznych których się spodziewać (na podstawie oferty i stacku firmy)
+- Jak opowiedzieć o odejściu z poprzedniej firmy — dyplomatyczna wersja uzgodniona wcześniej
+- Rekomendowana stawka na pytanie "jakie są Twoje oczekiwania finansowe"
+
+**Po rozmowie (do 24h):**
+- Zadzwoń lub napisz do klienta — jak poszło?
+- Zanotuj feedback dla agenta: co pytali, co było trudne
+- Zaktualizuj arkusz → status: "po rozmowie"
+
+---
+
+### 4d. Negocjacje wynagrodzenia
 
 Gdy klient dostaje ofertę:
 
@@ -217,12 +286,13 @@ Gdy klient dostaje ofertę:
    - Benchmark rynkowy dla tej roli i firmy (salary intelligence z platformy)
    - Skrypt negocjacji: pierwsze zdanie, argumenty, kontrpropozycja
    - Dolna granica akceptacji (ustalona z klientem wcześniej)
-3. Klient negocjuje sam — agent jest dostępny na WhatsApp w czasie rzeczywistym
-4. Po negocjacjach: zanotuj wynik (wyjściowa oferta, finalna kwota) do bazy salary intelligence
+3. Agent prowadzi negocjacje finansowe bezpośrednio z pracodawcą — usuwa emocje z rozmowy o pieniądzach
+4. Klient jest informowany na bieżąco przez WhatsApp
+5. Po negocjacjach: zanotuj wynik (wyjściowa oferta, finalna kwota) do bazy salary intelligence
 
 ---
 
-### 4c. Post-mortem odmowy
+### 4e. Post-mortem odmowy
 
 Gdy klient dostaje odmowę:
 

@@ -291,6 +291,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 - Nie chcę open space bez stref ciszy
 
 - Nie chcę firm gdzie sprint planning to fikcja a deadline to yesterday
+- Nie chcę wielogodzinnych zadań domowych (take-home) jako elementu rekrutacji — akceptowalne max 1-2 godziny
 
 **MOCNE STRONY**
 
