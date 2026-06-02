@@ -12,6 +12,28 @@ Projekt open source — każdy developer może go użyć samodzielnie. Homo Digi
 
 ---
 
+## Model biznesowy — Open Core
+
+**Open source (MIT):**
+Core matching engine dostępny publicznie na GitHub. Każdy developer może pobrać, uruchomić lokalnie i contribuować. Zawiera: parsowanie profilu MD, JustJoin.it API, podstawowy scoring technologiczny bez AI.
+
+**Produkt płatny — JobMatcher API ($0.10/wywołanie):**
+Hosted version z pełnymi możliwościami. Bez konfiguracji, bez własnego serwera, bez klucza Claude API.
+
+Co dostaje płatny użytkownik ponad open source:
+
+- AI scoring z uzasadnieniami i missing_skills (Claude API)
+- Wszystkie źródła ofert — NoFluffJobs, RemoteOK, globalne job boardy
+- Wyższe limity i SLA
+- Filtrowanie per kraj i waluta
+- Historia wywołań i analytics
+
+Cena: **$0.10 za pojedyncze wywołanie API** — pay-per-use, bez subskrypcji.
+
+Homo Digital używa płatnej wersji jako część workflow agenta.
+
+---
+
 ## Input
 
 Plik MD z profilem kandydata (format zgodny z Homo Digital candidate profile):
@@ -210,28 +232,6 @@ JUSTJOIN_API_URL=https://justjoin.it/api/offers
 - Prosty interfejs webowy
 - Upload profilu MD
 - Przeglądarka wyników z filtrowaniem
-
----
-
-## Model biznesowy — Open Core
-
-**Open source (MIT):**
-Core matching engine dostępny publicznie na GitHub. Każdy developer może pobrać, uruchomić lokalnie i contribuować. Zawiera: parsowanie profilu MD, JustJoin.it API, podstawowy scoring technologiczny bez AI.
-
-**Produkt płatny — JobMatcher API ($0.10/wywołanie):**
-Hosted version z pełnymi możliwościami. Bez konfiguracji, bez własnego serwera, bez klucza Claude API.
-
-Co dostaje płatny użytkownik ponad open source:
-
-- AI scoring z uzasadnieniami i missing_skills (Claude API)
-- Wszystkie źródła ofert — NoFluffJobs, RemoteOK, globalne job boardy
-- Wyższe limity i SLA
-- Filtrowanie per kraj i waluta
-- Historia wywołań i analytics
-
-Cena: **$0.10 za pojedyncze wywołanie API** — pay-per-use, bez subskrypcji.
-
-Homo Digital używa płatnej wersji jako część workflow agenta.
 
 ---
 
