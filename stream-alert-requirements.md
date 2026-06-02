@@ -1,4 +1,4 @@
-# StreamAlert — Wymagania produktu i tech stack
+# StreaMe — Wymagania produktu i tech stack
 
 ## Pomysł
 
