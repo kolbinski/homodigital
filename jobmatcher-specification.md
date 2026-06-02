@@ -1,14 +1,14 @@
-# JobMatcher — Job Matching Tool
+# JobMatcher — Open Source Job Matching Tool
 
-**Homo Digital**
+**Homo Digital / Open Source Project**
 
 ---
 
 ## Cel projektu
 
-Narzędzie CLI które na podstawie profilu kandydata w formacie MD automatycznie pobiera oferty z job boardów, ocenia dopasowanie i zwraca posortowaną listę najlepszych ofert z uzasadnieniem.
+REST API które na podstawie profilu kandydata w formacie MD automatycznie pobiera oferty z job boardów, ocenia dopasowanie i zwraca posortowaną listę najlepszych ofert z uzasadnieniem.
 
-Projekt jako produkt płatny, np. $0.10 za każde wywołanie. Homo Digital używa go jako część swojego workflow agenta.
+Projekt open source — każdy developer może go użyć samodzielnie. Homo Digital używa go jako część swojego workflow agenta.
 
 ---
 
@@ -33,34 +33,22 @@ jobmatcher --profile ./marek-wisniewski-profil.md
 Lista zmatchowanych ofert posortowana po score dopasowania:
 
 ```
-{
-  "matched": [
-    {
-      "score": 94,
-      "title": "Senior Node.js Engineer",
-      "company": "PaymentX",
-      "salary": "24-30k PLN B2B",
-      "match_reasons": ["TypeScript", "Node.js", "fintech", "remote"],
-      "red_flags": [],
-      "url": "justjoin.it/offers/..."
-    }
-  ],
-  "unmatched": [
-    {
-      "score": 0,
-      "title": "Senior Dev",
-      "company": "BodyLease",
-      "rejection_reasons": ["outsourcing", "brak widełek"],
-      "url": "justjoin.it/offers/..."
-    }
-  ],
-  "stats": {
-    "total_fetched": 120,
-    "matched": 8,
-    "unmatched": 112,
-    "generated_at": "2026-06-02T20:00:00Z"
-  }
-}
+✓ 94% — PaymentX / Senior Node.js Engineer
+         Warszawa / Remote | 24-30k PLN B2B
+         Match: TypeScript ✓, Node.js ✓, fintech ✓, remote ✓
+         Red flags: brak ✓
+         Link: justjoin.it/offers/paymentx-senior-node-js
+
+✓ 87% — CloudBase / Fullstack Engineer
+         Remote | 20-28k PLN B2B
+         Match: React ✓, TypeScript ✓, SaaS ✓
+         Red flags: brak ✓
+         Link: justjoin.it/offers/cloudbase-fullstack
+
+✗ 23% — BodyLease / Senior Dev
+         Warszawa | 18-22k PLN B2B
+         Red flags: outsourcing ✗, brak widełek ✗
+         → Odrzucono automatycznie
 ```
 
 ---
@@ -83,7 +71,7 @@ jobmatcher/
 │   │   └── aiScorer.ts           # Claude API — scoring i uzasadnienie
 │   ├── output/
 │   │   └── formatter.ts          # Formatowanie wyników (CLI / JSON / MD)
-│   └── index.ts                  # CLI entry point
+│   └── index.ts                  # REST API entry point (Express)
 ├── package.json
 ├── tsconfig.json
 └── README.md
@@ -94,9 +82,13 @@ jobmatcher/
 ## Tech stack
 
 - **Node.js + TypeScript** — CLI tool
-- **JustJoin.it API** — publiczne, darmowe, bez klucza API
+- **JustJoin.it API** — publiczne, darmowe, bez klucza API (V1)
+- **NoFluffJobs** — scraping (V2)
+- **RemoteOK API** — publiczne, darmowe, globalny remote market (V3)
+- **We Work Remotely** — scraping, USA/globalny (V3)
+- **Wellfound (AngelList)** — startupy USA, scraping (V4)
 - **Claude API** — scoring dopasowania i uzasadnienie (wymaga klucza)
-- **commander.js** — CLI interface
+- **Express.js** — REST API framework
 - **zod** — walidacja schematów profilu i ofert
 
 ---
@@ -163,24 +155,29 @@ Claude API analizuje top 10 ofert i generuje krótkie uzasadnienie dla każdej:
 
 ---
 
-## CLI interface
+## REST API interface
 
-```bash
-# Podstawowe użycie
-jobmatcher --profile ./profil.md
-
-# Z filtrem minimalnego score
-jobmatcher --profile ./profil.md --min-score 70
-
-# Output do pliku JSON
-jobmatcher --profile ./profil.md --output json > oferty.json
-
-# Bez AI scoringu (szybsze, bez kosztów API)
-jobmatcher --profile ./profil.md --no-ai
-
-# Limit wyników
-jobmatcher --profile ./profil.md --limit 20
 ```
+POST /match
+Content-Type: application/json
+
+{
+  "profile": "<treść pliku MD profilu kandydata>",
+  "options": {
+    "min_score": 70,
+    "limit": 20,
+    "ai_scoring": true,
+    "sources": ["justjoin", "nofluffjobs"],
+    "country": "PL"
+  }
+}
+```
+
+**Przykładowe endpointy:**
+
+- `POST /match` — główne matchowanie
+- `GET /sources` — lista dostępnych job boardów
+- `GET /health` — status API
 
 ---
 
@@ -216,7 +213,27 @@ JUSTJOIN_API_URL=https://justjoin.it/api/offers
 
 ---
 
-## Licencja
+## Model biznesowy — Open Core
+
+**Open source (MIT):**
+Core matching engine dostępny publicznie na GitHub. Każdy developer może pobrać, uruchomić lokalnie i contribuować. Zawiera: parsowanie profilu MD, JustJoin.it API, podstawowy scoring technologiczny bez AI.
+
+**Produkt płatny — JobMatcher API ($0.10/wywołanie):**
+Hosted version z pełnymi możliwościami. Bez konfiguracji, bez własnego serwera, bez klucza Claude API.
+
+Co dostaje płatny użytkownik ponad open source:
+
+- AI scoring z uzasadnieniami i missing_skills (Claude API)
+- Wszystkie źródła ofert — NoFluffJobs, RemoteOK, globalne job boardy
+- Wyższe limity i SLA
+- Filtrowanie per kraj i waluta
+- Historia wywołań i analytics
+
+Cena: **$0.10 za pojedyncze wywołanie API** — pay-per-use, bez subskrypcji.
+
+Homo Digital używa płatnej wersji jako część workflow agenta.
+
+---
 
 MIT — open source, każdy może używać i rozwijać.
 
