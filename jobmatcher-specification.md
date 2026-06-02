@@ -1,6 +1,6 @@
-# JobMatcher — Open Source Job Matching Tool
+# JobMatcher — Job Matching Tool
 
-**Homo Digital / Open Source Project**
+**Homo Digital**
 
 ---
 
