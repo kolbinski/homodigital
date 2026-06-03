@@ -650,7 +650,7 @@
       }
       .market-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
       }
       .market-item {
@@ -691,7 +691,7 @@
       }
       .about-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
       }
       .about-card {
@@ -745,7 +745,7 @@
 
       @media (max-width: 600px) {
         .market-grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 1fr); /* already 2col */
           gap: 1rem;
         }
         .about-grid {
@@ -914,6 +914,20 @@
         font-size: 0.9rem;
         line-height: 1.8;
         color: var(--muted);
+      }
+
+      .services-grid {
+        max-width: 860px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      @media (max-width: 480px) {
+        .market-grid { grid-template-columns: 1fr; }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -1212,7 +1226,7 @@
     <!-- SERVICES -->
     <section class="days-section">
       <p class="days-label">Co dokładnie robi Twój agent kariery</p>
-      <div style="max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div class="services-grid">
 
         <div class="days-item">
           <h4>🔍 Optymalizacja LinkedIn i CV</h4>
