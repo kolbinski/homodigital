@@ -2,7 +2,7 @@
 
 **Marek Wiśniewski — Senior Fullstack Engineer**
 
-*Dokument poufny. Sekcje [TYLKO DLA AGENTA] są objęte klauzulą poufności i nie mogą być udostępniane pracodawcom ani osobom trzecim.*
+_Dokument poufny. Sekcje [TYLKO DLA AGENTA] są objęte klauzulą poufności i nie mogą być udostępniane pracodawcom ani osobom trzecim._
 
 **DANE PODSTAWOWE**
 
@@ -23,8 +23,6 @@
 **Szukam:** aktywnie
 
 **CELE ZAWODOWE I DEFINICJA SUKCESU**
-
-*[TYLKO DLA AGENTA] centralne dla strategii agenta*
 
 **Cel krótkoterminowy (6-12 miesięcy)**
 
@@ -48,8 +46,6 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **STYL PRACY I PROFIL PSYCHOLOGICZNY**
 
-*[TYLKO DLA AGENTA] kluczowe dla dopasowania kulturowego*
-
 **Środowisko pracy**
 
 - Struktura vs chaos: preferuje jasno zdefiniowane procesy i przewidywalny rytm pracy — nie lubi firefightingu jako trybu domyślnego
@@ -72,11 +68,11 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **Red flags kulturowe**
 
-*[TYLKO DLA AGENTA] Poprzednie odejście z PayFlow było częściowo kulturowe — zmiana CTO zmieniła dynamikę decyzji technicznych, zaczął być overruled bez uzasadnienia*
+_[TYLKO DLA AGENTA] Poprzednie odejście z PayFlow było częściowo kulturowe — zmiana CTO zmieniła dynamikę decyzji technicznych, zaczął być overruled bez uzasadnienia_
 
-*[TYLKO DLA AGENTA] W SoftHouse frustrował go brak ownership — budował rzeczy dla klientów których nigdy nie zobaczył w użyciu*
+_[TYLKO DLA AGENTA] W SoftHouse frustrował go brak ownership — budował rzeczy dla klientów których nigdy nie zobaczył w użyciu_
 
-*[TYLKO DLA AGENTA] Wrażliwy na fake agile — sprints bez planowania, retrospektywy pro forma, velocity jako metryka*
+_[TYLKO DLA AGENTA] Wrażliwy na fake agile — sprints bez planowania, retrospektywy pro forma, velocity jako metryka_
 
 **WYKSZTAŁCENIE**
 
@@ -90,7 +86,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **Średnia ocen:** 4.3 / 5.0
 
-*[TYLKO DLA AGENTA] Praca magisterska bezpośrednio związana z obecną specjalizacją — świetny punkt do rozmowy rekrutacyjnej*
+_Praca magisterska bezpośrednio związana z obecną specjalizacją — świetny punkt do rozmowy rekrutacyjnej_
 
 **HISTORIA ZATRUDNIENIA**
 
@@ -166,7 +162,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **PROJEKTY WŁASNE**
 
-*Projekty hobbystyczne i side projekty — pokazują pasję do programowania poza etatem*
+_Projekty hobbystyczne i side projekty — pokazują pasję do programowania poza etatem_
 
 **1. BudgetFlow — osobisty tracker finansów**
 
@@ -180,7 +176,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **Status:** aktywnie rozwijana | ~40 aktywnych użytkowników | ostatni commit 2 tygodnie temu
 
-*[TYLKO DLA AGENTA] Dobry przykład myślenia produktowego — identyfikacja własnego problemu, zbudowanie rozwiązania, iteracja na podstawie feedbacku użytkowników*
+_Dobry przykład myślenia produktowego — identyfikacja własnego problemu, zbudowanie rozwiązania, iteracja na podstawie feedbacku użytkowników_
 
 **2. JobRadar — aggregator ofert dla developerów**
 
@@ -192,7 +188,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **Status:** używam prywatnie od 8 miesięcy | planuję open source po refactorze
 
-*[TYLKO DLA AGENTA] Pokazuje znajomość web scraping i automatyzacji — transferowalny skill na platformy rekrutacyjne i outreach*
+_Pokazuje znajomość web scraping i automatyzacji — transferowalny skill na platformy rekrutacyjne i outreach_
 
 **3. pg-migrate-cli — narzędzie do migracji PostgreSQL**
 
@@ -206,35 +202,35 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **Status:** open source | 180+ gwiazdek na GitHub | 3 zewnętrznych contributorów
 
-*[TYLKO DLA AGENTA] 180 gwiazdek to dobry sygnał dla rekruterów — pokazuje że kod jest na tyle dobry że inni go używają i rozwijają*
+_180 gwiazdek to dobry sygnał dla rekruterów — pokazuje że kod jest na tyle dobry że inni go używają i rozwijają_
 
 **TECHNOLOGIE — DOŚWIADCZENIE KOMERCYJNE**
 
-*Konkretny kontekst użycia zamiast subiektywnej samooceny*
+_Konkretny kontekst użycia zamiast subiektywnej samooceny_
 
-| **TypeScript** | 6 lat komercyjnie │ wszystkie ostatnie projekty │ expert-level patterns |
-| --- | --- |
-| **React / Next.js** | 8 lat komercyjnie │ production scale │ Tech Lead │ portal 47 partnerów |
-| **Node.js / Express** | 6 lat komercyjnie │ mikroserwisy w PayFlow │ 12k tx/min |
-| **Nest.js** | 3 lata │ architektura mikroserwisów │ production fintech |
-| **GraphQL** | 4 lata │ Developer Portal + API design │ schema-first |
-| **PostgreSQL** | 8 lat │ design, optimization, transactions │ fintech + e-commerce |
-| **REST API** | 10 lat │ design + implementation │ dokumentacja + onboarding |
-| **Docker / Kubernetes** | 3 lata │ konteneryzacja PayFlow + SoftHouse │ AWS + GCP |
-| **AWS (Lambda, S3, EC2)** | 3 lata │ serverless │ wdrożenie Lambda w 3 tygodnie od zera |
-| **Elasticsearch** | 3 lata │ e-commerce 2M SKU │ +34% relevance |
-| **Redux** | 4 lata │ state management │ duże aplikacje React |
-| **React Native** | 2 lata │ mobile app w PayFlow │ partner monitoring |
-| **Vue.js** | 3 lata │ e-commerce frontend w SoftHouse |
-| **Redis / NoSQL** | 4 lata │ caching + sessions │ fintech scale |
-| **Bootstrap / Material UI** | 5 lat │ UI systems │ Developer Portal |
-| **Fastify** | 1 rok │ eksperymentalnie w PayFlow |
-| **GCP** | 2 lata │ SoftHouse projekty │ podstawy |
-| **PHP / Laravel** | 2 lata (2014-2016) │ nie chcę rozwijać |
+| **TypeScript**              | 6 lat komercyjnie │ wszystkie ostatnie projekty │ expert-level patterns |
+| --------------------------- | ----------------------------------------------------------------------- |
+| **React / Next.js**         | 8 lat komercyjnie │ production scale │ Tech Lead │ portal 47 partnerów  |
+| **Node.js / Express**       | 6 lat komercyjnie │ mikroserwisy w PayFlow │ 12k tx/min                 |
+| **Nest.js**                 | 3 lata │ architektura mikroserwisów │ production fintech                |
+| **GraphQL**                 | 4 lata │ Developer Portal + API design │ schema-first                   |
+| **PostgreSQL**              | 8 lat │ design, optimization, transactions │ fintech + e-commerce       |
+| **REST API**                | 10 lat │ design + implementation │ dokumentacja + onboarding            |
+| **Docker / Kubernetes**     | 3 lata │ konteneryzacja PayFlow + SoftHouse │ AWS + GCP                 |
+| **AWS (Lambda, S3, EC2)**   | 3 lata │ serverless │ wdrożenie Lambda w 3 tygodnie od zera             |
+| **Elasticsearch**           | 3 lata │ e-commerce 2M SKU │ +34% relevance                             |
+| **Redux**                   | 4 lata │ state management │ duże aplikacje React                        |
+| **React Native**            | 2 lata │ mobile app w PayFlow │ partner monitoring                      |
+| **Vue.js**                  | 3 lata │ e-commerce frontend w SoftHouse                                |
+| **Redis / NoSQL**           | 4 lata │ caching + sessions │ fintech scale                             |
+| **Bootstrap / Material UI** | 5 lat │ UI systems │ Developer Portal                                   |
+| **Fastify**                 | 1 rok │ eksperymentalnie w PayFlow                                      |
+| **GCP**                     | 2 lata │ SoftHouse projekty │ podstawy                                  |
+| **PHP / Laravel**           | 2 lata (2014-2016) │ nie chcę rozwijać                                  |
 
 **KOMPETENCJE MIĘKKIE — DOWODY**
 
-*Behavioral evidence — każde twierdzenie ma konkretne potwierdzenie w historii*
+_Behavioral evidence — każde twierdzenie ma konkretne potwierdzenie w historii_
 
 - Mentoring: rozwinął 2 mid-level developerów do samodzielności senior w PayFlow; prowadził pair programming i code review dla 6-osobowego zespołu
 
@@ -250,7 +246,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **CERTYFIKATY I KURSY**
 
-*[DO UZUPEŁNIENIA — certyfikaty AWS, GCP, Kubernetes itp.]*
+_[DO UZUPEŁNIENIA — certyfikaty AWS, GCP, Kubernetes itp.]_
 
 - Brak formalnych certyfikatów na ten moment
 
@@ -258,7 +254,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **SCORING KOMPETENCJI (opcjonalnie)**
 
-*Agent może zachęcić klienta do wykonania testów dla wzmocnienia profilu*
+_Agent może zachęcić klienta do wykonania testów dla wzmocnienia profilu_
 
 - HackerRank — Node.js / TypeScript
 
@@ -280,7 +276,7 @@ Pracuję w firmie gdzie moje decyzje architektoniczne mają realny wpływ, zarab
 
 **Rynek:** Polska + Europa Zachodnia (remote)
 
-**Czerwone flagi [TYLKO DLA AGENTA]:** - Nie chcę outsourcingu ani body leasingu
+**Czerwone flagi:** - Nie chcę outsourcingu ani body leasingu
 
 - Nie chcę środowisk bez code review i testów automatycznych
 
