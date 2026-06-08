@@ -930,7 +930,9 @@
         gap: 2rem;
       }
       @media (max-width: 480px) {
-        .market-grid { grid-template-columns: 1fr; }
+        .market-grid {
+          grid-template-columns: 1fr;
+        }
         .services-grid {
           grid-template-columns: 1fr;
         }
@@ -972,20 +974,13 @@
         terms.
       </p>
       <div class="hero-ctas">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeCu6nK8L0HlQsCD6T51ZUgQHQ4HrEcZW3hRbkwezBFVaU-XA/viewform?usp=dialog"
-          class="btn btn-primary"
-        >
+        <button class="btn btn-primary" onclick="openModal()">
           Join the first beta group
-        </a>
+        </button>
         <button class="btn btn-secondary" disabled>
           Become an agent
           <span class="btn-soon">— Coming soon —</span>
         </button>
-      </div>
-      <div class="hero-badges">
-        <span class="hero-badge">✦ First pilot conversations under way</span>
-        <span class="hero-badge">✦ Only 3 beta spots</span>
       </div>
       <div class="divider-line"></div>
     </section>
@@ -1232,47 +1227,81 @@
     <section class="days-section">
       <p class="days-label">What your career agent actually does</p>
       <div class="services-grid">
-
         <div class="days-item">
           <h4>🔍 LinkedIn & CV Optimization</h4>
-          <p>Your career agent builds a LinkedIn profile that attracts recruiters and rewrites your CV in the language of results — achiever, not doer. This service alone costs as much as a monthly subscription elsewhere.</p>
+          <p>
+            Your career agent builds a LinkedIn profile that attracts recruiters
+            and rewrites your CV in the language of results — achiever, not
+            doer. This service alone costs as much as a monthly subscription
+            elsewhere.
+          </p>
         </div>
 
         <div class="days-item">
           <h4>📋 Active Job Search & Outreach</h4>
-          <p>Your agent reviews dozens of offers weekly, sends personalized CVs for each application after your approval, and reaches out directly to recruiters and hiring managers at target companies.</p>
+          <p>
+            Your agent reviews dozens of offers weekly, sends personalized CVs
+            for each application after your approval, and reaches out directly
+            to recruiters and hiring managers at target companies.
+          </p>
         </div>
 
         <div class="days-item">
           <h4>📞 Employer Screening Before You</h4>
-          <p>Before your interview — your career agent talks to the employer first. Checks company culture, catches red flags (e.g. micromanagement, no code review), asks if salary is flexible upward. You get a full brief.</p>
+          <p>
+            Before your interview — your career agent talks to the employer
+            first. Checks company culture, catches red flags (e.g.
+            micromanagement, no code review), asks if salary is flexible upward.
+            You get a full brief.
+          </p>
         </div>
 
         <div class="days-item">
           <h4>💼 Interview Preparation</h4>
-          <p>Before every interview you get a briefing: company research, typical technical questions, how to talk about your previous departure. Salary negotiations are handled by your agent — you focus on the technical conversation.</p>
+          <p>
+            Before every interview you get a briefing: company research, typical
+            technical questions, how to talk about your previous departure.
+            Salary negotiations are handled by your agent — you focus on the
+            technical conversation.
+          </p>
         </div>
 
         <div class="days-item">
           <h4>💰 Salary Negotiation</h4>
-          <p>Your career agent conducts financial negotiations directly with the employer — you focus on the technical conversation, your agent talks about money. No emotions, with arguments and market benchmarks.</p>
+          <p>
+            Your career agent conducts financial negotiations directly with the
+            employer — you focus on the technical conversation, your agent talks
+            about money. No emotions, with arguments and market benchmarks.
+          </p>
         </div>
 
         <div class="days-item">
           <h4>📈 Long-term Career Development</h4>
-          <p>Your agent doesn't disappear when you find a job. They identify which skills, certifications and tech trends — including AI and vibe-coding — will increase your market value and make sure you don't wake up in the same situation a year from now.</p>
+          <p>
+            Your agent doesn't disappear when you find a job. They identify
+            which skills, certifications and tech trends — including AI and
+            vibe-coding — will increase your market value and make sure you
+            don't wake up in the same situation a year from now.
+          </p>
         </div>
 
         <div class="days-item">
           <h4>📊 Live Tracker & Monthly Report</h4>
-          <p>You see every step in real time — live tracker in Google Sheets. At the end of each month you get a full report: how many offers reviewed, how many rejected and why, what was applied to and the plan for next month.</p>
+          <p>
+            You see every step in real time — live tracker in Google Sheets. At
+            the end of each month you get a full report: how many offers
+            reviewed, how many rejected and why, what was applied to and the
+            plan for next month.
+          </p>
         </div>
 
         <div class="days-item">
           <h4>💬 WhatsApp Access</h4>
-          <p>You have direct access to your career agent via WhatsApp. Response within 24 hours — no bots, no forms, no tickets.</p>
+          <p>
+            You have direct access to your career agent via WhatsApp. Response
+            within 24 hours — no bots, no forms, no tickets.
+          </p>
         </div>
-
       </div>
     </section>
 
@@ -1285,12 +1314,9 @@
         level.
       </p>
       <div class="hero-ctas">
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeCu6nK8L0HlQsCD6T51ZUgQHQ4HrEcZW3hRbkwezBFVaU-XA/viewform?usp=dialog"
-          class="btn btn-primary"
-        >
+        <button class="btn btn-primary" onclick="openModal()">
           Join the first beta group
-        </a>
+        </button>
         <button class="btn btn-secondary" disabled>
           Become an agent
           <span class="btn-soon">— Coming soon —</span>
@@ -1499,6 +1525,233 @@
       </p>
     </footer>
 
+    <!-- JOIN MODAL -->
+    <div
+      id="joinModal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(6px);
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+      "
+    >
+      <div
+        style="
+          background: #111111;
+          border: 1px solid rgba(201, 168, 76, 0.25);
+          border-radius: 4px;
+          padding: 2.5rem;
+          max-width: 480px;
+          width: 100%;
+          position: relative;
+        "
+      >
+        <button
+          onclick="closeModal()"
+          style="
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #b0aca6;
+            font-size: 1.4rem;
+            cursor: pointer;
+            line-height: 1;
+          "
+        >
+          ×
+        </button>
+
+        <div id="modalForm">
+          <h3
+            style="
+              font-family: 'Cormorant Garamond', serif;
+              font-size: 1.6rem;
+              font-weight: 700;
+              color: #f0ece4;
+              margin-bottom: 0.5rem;
+            "
+          >
+            Join Homo Digital
+          </h3>
+          <p style="color: #b0aca6; font-size: 0.9rem; margin-bottom: 1.5rem">
+            Your personal career agent in IT. We scan thousands of job offers
+            daily and apply on your behalf.
+          </p>
+
+          <ul
+            style="
+              list-style: none;
+              margin-bottom: 1.5rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.6rem;
+            "
+          >
+            <li
+              style="
+                color: #f0ece4;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.6rem;
+              "
+            >
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> We scan
+              thousands of job offers every day
+            </li>
+            <li
+              style="
+                color: #f0ece4;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.6rem;
+              "
+            >
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> AI matches
+              offers to your exact profile
+            </li>
+            <li
+              style="
+                color: #f0ece4;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.6rem;
+              "
+            >
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> Your agent
+              applies with a tailored CV
+            </li>
+            <li
+              style="
+                color: #f0ece4;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.6rem;
+              "
+            >
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> Your agent
+              negotiate salary on your behalf
+            </li>
+          </ul>
+
+          <div style="margin-bottom: 1rem">
+            <label
+              style="
+                display: block;
+                font-size: 0.8rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #b0aca6;
+                margin-bottom: 0.4rem;
+              "
+              >Email *</label
+            >
+            <input
+              id="modalEmail"
+              type="email"
+              placeholder="your@email.com"
+              style="
+                width: 100%;
+                background: #0a0a0a;
+                border: 1px solid rgba(201, 168, 76, 0.25);
+                border-radius: 2px;
+                padding: 0.75rem 1rem;
+                color: #f0ece4;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 0.95rem;
+                outline: none;
+              "
+            />
+            <p
+              id="emailError"
+              style="
+                color: #e05252;
+                font-size: 0.8rem;
+                margin-top: 0.3rem;
+                display: none;
+              "
+            >
+              Please enter a valid email address.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem">
+            <label
+              style="
+                display: block;
+                font-size: 0.8rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #b0aca6;
+                margin-bottom: 0.4rem;
+              "
+              >Tell us about yourself
+              <span style="opacity: 0.5">(optional)</span></label
+            >
+            <textarea
+              id="modalNotes"
+              rows="3"
+              placeholder="Experience, stack, what you're looking for..."
+              style="
+                width: 100%;
+                background: #0a0a0a;
+                border: 1px solid rgba(201, 168, 76, 0.25);
+                border-radius: 2px;
+                padding: 0.75rem 1rem;
+                color: #f0ece4;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 0.95rem;
+                outline: none;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+
+          <button
+            id="submitBtn"
+            onclick="submitJoin()"
+            class="btn btn-primary"
+            style="width: 100%; font-size: 0.88rem"
+          >
+            Request access
+          </button>
+        </div>
+
+        <div
+          id="modalSuccess"
+          style="display: none; text-align: center; padding: 1rem 0"
+        >
+          <div style="font-size: 3rem; margin-bottom: 1rem">✦</div>
+          <h3
+            style="
+              font-family: 'Cormorant Garamond', serif;
+              font-size: 1.8rem;
+              color: #c9a84c;
+              margin-bottom: 0.75rem;
+            "
+          >
+            Thank you!
+          </h3>
+          <p style="color: #b0aca6; margin-bottom: 1.5rem">
+            We will contact you soon.
+          </p>
+          <button onclick="closeModal()" class="btn btn-secondary">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
       const nav = document.getElementById('nav');
       window.addEventListener('scroll', () => {
@@ -1516,6 +1769,66 @@
           btn.classList.add('open');
           answer.classList.add('open');
         }
+      }
+
+      function openModal() {
+        const modal = document.getElementById('joinModal');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        document.getElementById('modalForm').style.display = 'block';
+        document.getElementById('modalSuccess').style.display = 'none';
+        document.getElementById('modalEmail').value = '';
+        document.getElementById('modalNotes').value = '';
+        document.getElementById('emailError').style.display = 'none';
+      }
+
+      function closeModal() {
+        document.getElementById('joinModal').style.display = 'none';
+        document.body.style.overflow = '';
+      }
+
+      document
+        .getElementById('joinModal')
+        .addEventListener('click', function (e) {
+          if (e.target === this) closeModal();
+        });
+
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+      }
+
+      async function submitJoin() {
+        const email = document.getElementById('modalEmail').value.trim();
+        const notes = document.getElementById('modalNotes').value.trim();
+        const btn = document.getElementById('submitBtn');
+        const errorEl = document.getElementById('emailError');
+
+        if (!validateEmail(email)) {
+          errorEl.style.display = 'block';
+          return;
+        }
+        errorEl.style.display = 'none';
+
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        try {
+          await fetch(
+            'https://job-matcher-api-production.up.railway.app/v1/prospects',
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email,
+                notes: notes || null,
+                role: 'client',
+              }),
+            },
+          );
+        } catch (e) {}
+
+        document.getElementById('modalForm').style.display = 'none';
+        document.getElementById('modalSuccess').style.display = 'block';
       }
     </script>
   </body>
