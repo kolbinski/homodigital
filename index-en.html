@@ -977,9 +977,8 @@
         <button class="btn btn-primary" onclick="openModal()">
           Join the first beta group
         </button>
-        <button class="btn btn-secondary" disabled>
+        <button class="btn btn-secondary" onclick="openAgentModal()">
           Become an agent
-          <span class="btn-soon">— Coming soon —</span>
         </button>
       </div>
       <div class="divider-line"></div>
@@ -1317,9 +1316,8 @@
         <button class="btn btn-primary" onclick="openModal()">
           Join the first beta group
         </button>
-        <button class="btn btn-secondary" disabled>
+        <button class="btn btn-secondary" onclick="openAgentModal()">
           Become an agent
-          <span class="btn-soon">— Coming soon —</span>
         </button>
       </div>
     </section>
@@ -1752,6 +1750,196 @@
       </div>
     </div>
 
+    <!-- Agent Modal -->
+    <div
+      id="agentModal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(6px);
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+      "
+    >
+      <div
+        style="
+          background: #111111;
+          border: 1px solid rgba(201, 168, 76, 0.25);
+          border-radius: 4px;
+          padding: 2.5rem;
+          max-width: 480px;
+          width: 100%;
+          position: relative;
+        "
+      >
+        <button
+          onclick="closeAgentModal()"
+          style="
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #b0aca6;
+            font-size: 1.4rem;
+            cursor: pointer;
+            line-height: 1;
+          "
+        >
+          ×
+        </button>
+
+        <div id="agentModalForm">
+          <h3
+            style="
+              font-family: 'Cormorant Garamond', serif;
+              font-size: 1.6rem;
+              font-weight: 700;
+              color: #f0ece4;
+              margin-bottom: 0.5rem;
+            "
+          >
+            Become a career agent
+          </h3>
+          <p style="color: #b0aca6; font-size: 0.9rem; margin-bottom: 1.5rem">
+            Help senior developers find better jobs — and earn doing it. Flexible, remote, AI-powered.
+          </p>
+
+          <ul
+            style="
+              list-style: none;
+              margin-bottom: 1.5rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.6rem;
+            "
+          >
+            <li style="color: #f0ece4; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.6rem;">
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> Work with multiple clients in parallel — you decide how many
+            </li>
+            <li style="color: #f0ece4; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.6rem;">
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> AI scans and matches offers — you focus on the client relationship
+            </li>
+            <li style="color: #f0ece4; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.6rem;">
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> Earn 50% of the client's first-month salary increase
+            </li>
+            <li style="color: #f0ece4; font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.6rem;">
+              <span style="color: #c9a84c; flex-shrink: 0">✦</span> Ideal for experienced developers who know the IT market
+            </li>
+          </ul>
+
+          <div style="margin-bottom: 1rem">
+            <label
+              style="
+                display: block;
+                font-size: 0.8rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #b0aca6;
+                margin-bottom: 0.4rem;
+              "
+              >Email *</label
+            >
+            <input
+              id="agentModalEmail"
+              type="email"
+              placeholder="your@email.com"
+              style="
+                width: 100%;
+                background: #0a0a0a;
+                border: 1px solid rgba(201, 168, 76, 0.25);
+                border-radius: 2px;
+                padding: 0.75rem 1rem;
+                color: #f0ece4;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 0.95rem;
+                outline: none;
+              "
+            />
+            <p
+              id="agentEmailError"
+              style="
+                color: #e05252;
+                font-size: 0.8rem;
+                margin-top: 0.3rem;
+                display: none;
+              "
+            >
+              Please enter a valid email address.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem">
+            <label
+              style="
+                display: block;
+                font-size: 0.8rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #b0aca6;
+                margin-bottom: 0.4rem;
+              "
+              >Your experience in IT or recruitment
+              <span style="opacity: 0.5">(optional)</span></label
+            >
+            <textarea
+              id="agentModalNotes"
+              rows="3"
+              placeholder="Stack, years of experience, how you know the IT market..."
+              style="
+                width: 100%;
+                background: #0a0a0a;
+                border: 1px solid rgba(201, 168, 76, 0.25);
+                border-radius: 2px;
+                padding: 0.75rem 1rem;
+                color: #f0ece4;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 0.95rem;
+                outline: none;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+
+          <button
+            id="agentSubmitBtn"
+            onclick="submitAgentJoin()"
+            class="btn btn-primary"
+            style="width: 100%; font-size: 0.88rem"
+          >
+            Request access
+          </button>
+        </div>
+
+        <div
+          id="agentModalSuccess"
+          style="display: none; text-align: center; padding: 1rem 0"
+        >
+          <div style="font-size: 3rem; margin-bottom: 1rem">✦</div>
+          <h3
+            style="
+              font-family: 'Cormorant Garamond', serif;
+              font-size: 1.8rem;
+              color: #c9a84c;
+              margin-bottom: 0.75rem;
+            "
+          >
+            Thank you!
+          </h3>
+          <p style="color: #b0aca6; margin-bottom: 1.5rem">
+            We'll be in touch soon.
+          </p>
+          <button onclick="closeAgentModal()" class="btn btn-secondary">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
       const nav = document.getElementById('nav');
       window.addEventListener('scroll', () => {
@@ -1829,6 +2017,62 @@
 
         document.getElementById('modalForm').style.display = 'none';
         document.getElementById('modalSuccess').style.display = 'block';
+      }
+
+      function openAgentModal() {
+        const modal = document.getElementById('agentModal');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        document.getElementById('agentModalForm').style.display = 'block';
+        document.getElementById('agentModalSuccess').style.display = 'none';
+        document.getElementById('agentModalEmail').value = '';
+        document.getElementById('agentModalNotes').value = '';
+        document.getElementById('agentEmailError').style.display = 'none';
+      }
+
+      function closeAgentModal() {
+        document.getElementById('agentModal').style.display = 'none';
+        document.body.style.overflow = '';
+      }
+
+      document
+        .getElementById('agentModal')
+        .addEventListener('click', function (e) {
+          if (e.target === this) closeAgentModal();
+        });
+
+      async function submitAgentJoin() {
+        const email = document.getElementById('agentModalEmail').value.trim();
+        const notes = document.getElementById('agentModalNotes').value.trim();
+        const btn = document.getElementById('agentSubmitBtn');
+        const errorEl = document.getElementById('agentEmailError');
+
+        if (!validateEmail(email)) {
+          errorEl.style.display = 'block';
+          return;
+        }
+        errorEl.style.display = 'none';
+
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        try {
+          await fetch(
+            'https://job-matcher-api-production.up.railway.app/v1/prospects',
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                email,
+                notes: notes || null,
+                role: 'agent',
+              }),
+            },
+          );
+        } catch (e) {}
+
+        document.getElementById('agentModalForm').style.display = 'none';
+        document.getElementById('agentModalSuccess').style.display = 'block';
       }
     </script>
   </body>
