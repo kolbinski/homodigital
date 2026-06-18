@@ -1,6 +1,6 @@
 # homo-digital-extension (R) — Feature Specification
 
-Last updated: 2026-06-10
+Last updated: 2026-06-12
 
 ## Business Model
 
@@ -12,15 +12,6 @@ R (Chrome extension) is the core tool available to **all tiers** (Free, Pro, Pre
 - **Pro**: unlimited offers
 - **Premium**: unlimited offers + agent works on behalf of client
 
-### Planned for R
-
-- Self-service onboarding wizard (Basic Info / Work Experience / Preferences tabs)
-- AI-assisted profile prefill from pasted CV text
-- AI feedback after each profile Save Draft
-- Social login for Free/Pro users (Supabase Auth: Google, GitHub, Microsoft, Facebook)
-- Agent login remains email/password with @homodigital.io addresses
-- LinkedIn Profile Analyzer: user opens their LinkedIn profile, clicks "Analyze this page" in R, content script reads DOM and auto-clicks all "Show more" expanders, sends content to Claude API, returns AI report (headline strength, achievements with numbers, missing sections, summary quality, consistency with Homo Digital profile JSON)
-
 ---
 
 ## Stack
@@ -31,132 +22,232 @@ R (Chrome extension) is the core tool available to **all tiers** (Free, Pro, Pre
 - Side Panel (chrome.sidePanel)
 - Phosphor Icons
 - Tailwind CSS
-- babel-plugin-transform-remove-console (production builds via esbuild drop)
 
 ## Auth
 
-- Login screen with agent credentials
-- POST /v1/auth/login → JWT stored in chrome.storage.local
-- Role: agent only
-- Session persists across browser restarts
+### Agent login
+- Email/password (@homodigital.io addresses)
+- POST /v1/auth/login → internal JWT stored in chrome.storage.local under 'jwt'
+
+### Client login (Free/Pro)
+- Social login via Supabase OAuth: Google ✅, GitHub ✅, Microsoft (UI only), Facebook (removed permanently)
+- chrome.identity.launchWebAuthFlow → Supabase → internal JWT from POST /v1/auth/social-login
+- Internal JWT stored in chrome.storage.local under 'jwt'
+- Supabase JWT stored under 'supabase_jwt' (used for /v1/profile and /v1/onboarding/* endpoints)
+- OAuth user data (name, email, photo) stored under 'oauth_data'
+- Role stored under 'role' ('agent' | 'client')
+
+### CONFIG flags (src/config.ts)
+```typescript
+export const CONFIG = {
+  auth: {
+    google: true,
+    facebook: false,
+    microsoft: false,
+    github: true,
+  },
+  use_template_cv: true,
+}
+```
 
 ## Login Screen
 
-- Logo (public/icons/logo.png) + "Homo Digital" title
-- Hero text: "Help senior developers find better jobs. Earn doing it."
-- 4 benefit bullets (✦ green)
-- Box with "Login to your account" label
-- Email + password inputs
-- "Log in" button (green #16a34a)
-- OR separator
-- "Join" button (blue #2563eb) → Join view
-- Email validation
+- Logo + "Homo Digital" title
+- Hero: "Stop searching for jobs. Start getting hired."
+- 4 benefit bullets
+- "Sign in" section:
+  - Continue with Google (logo + label)
+  - Continue with Microsoft (logo + label, CONFIG.auth.microsoft)
+  - Continue with GitHub (logo + label)
+  - Social login error shown below last button
+- OR divider
+- "Login as agent" section: email + password + Log in button
+- "Join as agent" button
 
-## Join View
+## Client Onboarding Flow
 
-- Back arrow + "Become an agent"
-- Hero text + 4 benefit bullets
-- Email + "Your experience in IT / recruitment" textarea
-- "Request access" button (green)
-- POST /v1/prospects { email, notes, role: 'agent' }
-- Thank you success screen + Go back button
+### Routing after login
+1. GET /v1/profile → profile=null → Kickstart screen
+2. profile≠null AND profile_ready=false → Wizard (tabs)
+3. profile≠null AND profile_ready=true → Main client view (Explore & Apply)
 
-## Tabs
+### Kickstart Screen
+- Title: "Let's get you started"
+- Subtitle: "Drop your CV below and we'll build your profile in seconds. No forms, no hassle."
+- Drag & drop / browse PDF upload area
+- "Prepare my profile" button (green):
+  - If CV uploaded: POST /v1/onboarding/prepare-profile → saves profile → wizard
+  - If no CV: shows error "Please upload your CV first"
+  - Loading: animated progress list (Reading basic data → work experience → own projects → education → certifications → skills → preferences → red flags), each item 4s
+  - During loading: title → "Analyzing your CV...", gray subtitle about profile value, hide upload/skip/prepare button
+- "Skip" button (hidden during loading): → wizard with OAuth pre-fill (name/email from oauth_data)
+- Topbar: Gear icon (opens Settings drawer, disabled during loading)
 
-### Explore Tab
+### Onboarding Wizard
+8 tabs with completion indicators:
+- Green CheckCircle: tab complete
+- Red badge with count: number of invalid/missing required fields
+- Gray CircleDashed: optional tab, empty
 
-Main agent workflow tab.
+Tab order: Basic Info / Work Exp / Skills / Preferences / Education / Own Projects / Certifications / Red Flags
 
-**Filters (sticky top):**
+**Required tabs:**
+- Basic Info: first_name, last_name, email, gender, experience_level, job_search_status, languages (min 1 with name+level)
+- Work Experience: min 1 entry (title, company, date_from, work_model); projects: role + min 1 achievement per project; date format YYYY-MM
+- Skills: min 1 skill with 'since' year
+- Preferences: salary (min 1 with min amount), work_model (min 1), target_role (min 1), employment_type (min 1)
 
-- Sort by: Score / Salary delta (chrome.storage.local)
-- Status filter (chrome.storage.local)
-- Source filter (server-side via offers.source)
-- Min score slider (default 75, chrome.storage.local)
+**Optional tabs:** Education, Own Projects, Certifications, Red Flags
 
-**Dynamic sections based on statusFilter:**
+**Auto-save:** debounce 2s after any change → PATCH /v1/profile
+**Bottom bar:** [red error count] ←space-between→ [Saving.../Saved  Review by AI  Submit]
+- Review by AI: disabled when error count > 0; calls POST /v1/onboarding/review-profile; opens HTML in tab (reuses 'review_tab_id' from chrome.storage)
+- Submit: disabled when error count > 0 or saving; PATCH /v1/profile { profile_ready: true } → POST /v1/profile/trigger-sync → main client view
+- During Review by AI or Submit: close icon disabled, all inputs disabled
 
-- pending_apply → "Worth applying" + "Level up & earn more"
-- other statuses → single gray section
+**Topbar:** Gear icon (Settings drawer)
 
-**Offer Cards:**
-Header: source icon + score badge + title + company
-Tags: work_model, city (gray tags below title)
-Salary: "PLN b2b 21 840 – 30 240 +34 594 (30 835 PLN)" — delta orange
-Role fit text
-Missing skills: merged claude_missing_skills + skills_to_learn (red badges)
+### Tab: Basic Info
+Fields: first_name*, last_name*, email* (blur validation), phone, github, linkedin, gender* (Male/Female chips), location (city, country select from settings.countries, max_distance slider KM/Miles), experience_level* (chips from settings.experience_levels), experience_since, job_search_status* (Seeking/Open/Passive chips), languages* (name from settings.languages, level from settings.language_levels), experience_in_industry (chips from settings.industries + custom), experience_in_country_markets (chips from settings.markets), soft_skills (textarea list with drag-drop), cv_summary_bullets (textarea list with drag-drop)
 
-Score badge colors:
-≥70: green, ≥50: orange, <50: gray
+### Tab: Work Experience
+Fields per entry: title*, company*, date_from* (YYYY-MM), date_to (YYYY-MM, hidden when currently_working=true), currently_working checkbox*, work_model* (Remote/Hybrid/Office chips), company_type (chips from settings.company_types), industry (chips from settings.industries + custom), location
+Projects (min 1 per experience): name (required if 2+ projects), role*, skills (autocomplete from GET /v1/skills/search), team_size (select: 1/2-5/6-10/11-20/21-50/51-200/201-1000/1000+), achievements* (min 1, textarea with drag-drop)
+Drag-drop reordering: experiences + projects within experience
 
-**Actions per offer:**
+### Tab: Skills
+Categories from GET /v1/skill-categories (market=IT, ordered by sort_order)
+Per category: skill chips with 'since' year (required), autocomplete from GET /v1/skills?category=&q= (startsWith first)
+Drag-drop: categories + skills within category
 
-- Change status dropdown (custom, not native select)
-  All statuses: applied, agent_withdrawn, recruiter_rejected,
-  offer_received, accepted, client_withdrawn
-  Optimistic update: card disappears immediately, reappears on error
-  During API call: "Changing status..." label
-  While loading: hide CV language select and Generate CV button
+### Tab: Preferences
+Salary: type (Contract/Permanent chips), currency (settings.currencies), min amount*
+Work model: Remote/Hybrid/Office chips*
+Employment type: Contract/Permanent/Part-time chips*
+Target role: textarea list with drag-drop*
+Company type preferred/excluded: chips from settings.company_types
+Industries: chips from settings.industries + custom
+Markets: chips from settings.markets
+Learning & skill goals: autocomplete from GET /v1/skills/search
+Max office days: slider 0-7 (shown only when hybrid/office selected)
+Office location cities: tag input (shown only when hybrid/office selected)
 
-- CV Language select: pl / en
-- Generate CV button → POST /v1/cv/generate → opens HTML in new tab
+### Tab: Education
+Fields: institution*, degree, field, thesis, gpa (text), date_from/to (YYYY-MM in one row)
+Drag-drop reordering
 
-**Tab reuse for offer URLs:**
-openOfferUrl(url): 1. If active tab is job board → update active tab URL 2. Elif any tab starts with justjoin.it or nofluffjobs.com → update that tab 3. Else → new tab
-JOB_BOARD_DOMAINS = ['https://justjoin.it', 'https://nofluffjobs.com']
+### Tab: Own Projects
+Fields: name*, urls (list of {label, url} pairs), skills (autocomplete GET /v1/skills/search), achievements* (min 1, textarea with drag-drop)
+Drag-drop reordering (projects + achievements within project)
 
-**Scroll-to-top button:** ArrowCircleUp (Phosphor), bottom right
+### Tab: Certifications
+Fields: name* (textarea), issuer* (textarea), date (YYYY-MM validated), url (URL validated)
+Drag-drop reordering
+
+### Tab: Red Flags
+Three fixed sections:
+- Company type: multiselect chips from settings.company_types
+- Skills to avoid: chip + autocomplete from GET /v1/skills/search + X to remove
+- Other: predefined chips + custom chip input
+
+## Main Client View (after onboarding)
+
+Same Explore & Apply layout as agent view.
+Single ClientAccordion for the logged-in user (GET /v1/clients returns own data).
+Offers fetched from GET /v1/user-offers (no client_id param).
+Empty state: "No offers yet. Your profile has been submitted and matches will appear here after the next sync."
+
+## Agent View
+
+### Explore & Apply Tab
+
+**Filters (sticky):**
+- Min score slider (default 75)
+- Status filter
+- Source filter (All/JustJoin/NoFluffJobs)
+- Sort by (Score/Salary delta)
+- Generated: CV/CL checkboxes
+
+**Client accordions:**
+- Header: avatar/initials + name + address book icon + refresh icon + collapse arrow
+- Address book: opens profile wizard overlay (agent can edit client profile)
+- Offers inside: offer cards with actions
+
+**Offer card actions:**
+- Change status dropdown
+- CV Language select (pl/en)
+- Generate CV → POST /v1/cv/generate → opens HTML in new tab
+- Generate CL → POST /v1/cl/generate
 
 ### Sync Tab
+Visible when settings.show_sync_tab_in_extension=true
+- "Sync job offers" button → POST /v1/sync
+- "Notify clients" button → POST /v1/notifications/send
 
-Visible only when settings.show_sync_tab_in_extension === true
-(fetched from GET /v1/settings on load, default false until endpoint responds)
+## Profile Wizard Overlay (address book icon)
+- Opens for both agent (editing client) and client (editing own profile)
+- Fetches fresh GET /v1/profile on open
+- Shows loading spinner while fetching
+- Auto-save with PATCH /v1/profile (agent sends client_id in body)
+- Close button (disabled during saving)
+- No Submit button (profile_ready already true)
+- Initial save status: "Saved"
 
-- "Sync job offers & send report to client" button (blue)
-  POST /v1/sync
-  Shows loading state during sync
-- "Notify clients about new applications" button
-  POST /v1/notifications/send
-  Shows "Sending notifications..." during call
-  Shows result message after call
+## Settings Drawer
+Opened via Gear icon in topbar (all views).
+Sections:
+- Feedback: textarea + Send button → POST /v1/feedback
+- Account: Log out button (gray), Delete account button (red) with confirmation
+- During delete: close icon + page disabled
 
-### CV Tab (if exists)
-
-CV generation history or preview.
-
-## Settings Fetch
-
-On load: GET /v1/settings
-
-- show_sync_tab_in_extension: controls Sync tab visibility
-- Fail silently, default false
+## General Settings Cache
+Fetched from GET /v1/general-settings on login, cached in chrome.storage.local with 24h TTL.
+Contains: currencies, industries, markets, company_types, countries, languages, language_levels, experience_levels
 
 ## Chrome Permissions
-
-- tabs (for tab reuse feature)
-- sidePanel
-- storage (chrome.storage.local for filter preferences)
-
-## Tab State
-
-- Tab state preserved via CSS display toggling (not unmount/remount)
-- Filter preferences persisted in chrome.storage.local:
-  sort_by, status_filter, source_filter, min_score
+- tabs, sidePanel, storage, identity, notifications (planned)
 
 ## Build
-
-- npm run build → dist/ folder
-- Production: esbuild drops console.\* and debugger
-- manifest.json version: keep updated before Chrome Web Store submission
+- npm run build → dist/
+- Production: esbuild drops console.* and debugger
 
 ## Chrome Web Store
-
-- Status: pending verification
-- Privacy Policy: https://homodigital.io/view.html?file=app-privacy-policy.md
-- Description: see store listing copy
-- Screenshots: 1+ prepared
+- Status: APPROVED AND LIVE ✅
+- URL: https://chromewebstore.google.com/detail/homo-digital/ababdciakfnmllianckpkdnhkhgnagkm
+- Extension ID: chjdjblpkfcngbjkphbjpnekekffjlli
 
 ## Known Issues / Deferred
+- Microsoft social login (UI only, not wired)
+- Dark mode (deferred)
+- Chrome Notifications API after sync (TODO)
+- Geocoding for location coordinates (deferred, Google Maps API)
+- LinkedIn Profile Analyzer (planned)
+- "Scan this page for job offer" feature (planned)
 
-- Client view not in R (handled by A)
-- Agent dashboard/statistics not yet implemented
+## Recent Changes (2026-06-12/13)
+
+- Social login: Google ✅, GitHub ✅ (supabase_jwt + refresh_token stored)
+- Onboarding wizard: all 8 tabs complete with full validation
+- Auto-save: debounce 2s → PATCH /v1/profile
+- Review by AI: POST /v1/onboarding/review-profile → HTML tab (reuses tab by ID)
+- Profile wizard overlay via address book icon (agent + client)
+- Settings drawer: Feedback + Logout + Delete account
+- claude_matched_reasons: pros (green CheckCircle) + cons (orange WarningCircle)
+- Blue dot notification on reload icon when new pending_apply offers arrive (polling 30s)
+- Empty state for pending_apply (client): "We're scanning thousands of offers for you. Your matches will appear here after the next sync."
+- Client accordion: expanded by default, avatar/initials in header
+- Supabase Realtime attempted but blocked (user_id text type issue) — using polling
+
+## Known Issues / TODO
+
+- Microsoft social login (UI only, not wired)
+- Dark mode (deferred)
+- Chrome Notifications API after sync
+- Geocoding for location coordinates (deferred)
+- LinkedIn Profile Analyzer (planned)
+- "Scan this page for job offer" (planned, Free: 5/mo, Pro: unlimited)
+- Replace polling with in-memory SSE manager (API-side, post-INSERT notification)
+- Tooltips throughout onboarding wizard ("UX dla idiotów")
+- Cover letter generation flow in R
+- Stripe Pro tier self-service
+- Settings drawer tabs: Usage, Billing, notification hours, utc_offset

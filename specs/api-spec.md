@@ -1,14 +1,14 @@
 # job-matcher-api — Feature Specification
 
-Last updated: 2026-06-11
+Last updated: 2026-06-12
 
 ## Business Model
 
 ### Tiers
 
 - **Free** — access to R only, max 3 matched offers per month
-- **Pro** — access to R, unlimited offers, ~49-79 PLN/month via Stripe
-- **Premium** — Pro + human agent, pay-per-action pricing, access to A
+- **Pro** — access to R + A (push notifications), unlimited offers, ~49-79 PLN/month via Stripe
+- **Premium** — Pro + human agent, pay-per-action pricing
 
 ### Premium Pay-Per-Action (planned)
 
@@ -21,21 +21,21 @@ Last updated: 2026-06-11
 ### App Access
 
 - R (Chrome extension): Free + Pro + Premium
-- A (mobile app): Premium only
+- A (mobile app): Pro (push notifications) + Premium (full agent workflow)
 
 ### Implementation Status
 
-- Free/Pro: planned (next milestone)
+- Free/Pro: in progress
 - Premium: planned after Free/Pro launch
 - Stripe integration: planned for Pro tier
 
 ### Geographic Expansion
 
-- 🇵🇱 Poland: active (NoFluffJobs approved, JustJoin pending, theprotocol.it pending)
+- 🇵🇱 Poland: active (NoFluffJobs approved ✅, JustJoin pending, theprotocol.it pending)
 - 🇺🇸 USA: active expansion plan
-  - Indeed: partnership request sent (marketplacesupport@indeed.com)
-  - Dice: partnership request sent (max.foster@dice.com)
-  - Wellfound: partnership request sent (talent@wellfound.com)
+  - Indeed: re-evaluation submitted (rejected ATS path)
+  - Dice: call scheduled with Max Foster (max.foster@dice.com) — postponed until Free/Pro ready
+  - Wellfound: email sent (talent@wellfound.com)
   - LinkedIn: not viable (requires incorporated company + long partner process)
   - Glassdoor: API discontinued
   - MVP path: accept US users with manual offer paste before job board integrations are ready
@@ -49,6 +49,7 @@ Last updated: 2026-06-11
 - Zod validation
 - Claude API (Anthropic)
 - Railway (production)
+- Gotenberg (PDF generation, same Railway project)
 
 ## Database Schema
 
@@ -56,6 +57,8 @@ Last updated: 2026-06-11
 
 - id, email, password (nullable — null for social login users)
 - profile Json? (full candidate profile JSON — null until onboarding complete)
+- profile_ready Boolean @default(false)
+- profile_synced_at DateTime? (null = needs sync; set to NOW() after sync)
 - photo_url String? (populated from OAuth provider on social login)
 - jobmatcher_api_key String? (null for Free/Pro until activated)
 - show_agent_info_in_cv Boolean @default(true)
@@ -125,7 +128,7 @@ Note: first_name, last_name, gender removed — stored in profile.basic_info ins
 
 - key, value
 - Keys: max_level_up=40, show_sync_tab_in_extension=true,
-  fetch_offers_after_build=true
+  fetch_offers_after_build=true, general_settings (JSON)
 
 ### skill_categories
 
@@ -160,125 +163,158 @@ Note: first_name, last_name, gender removed — stored in profile.basic_info ins
   Response: { token, role: 'agent'|'client', user_id?, agent_id? }
   Logic: checks agents table first, then users table
 
+- POST /v1/auth/social-login (Supabase JWT)
+  Upserts user in public.users, issues internal JWT
+  Response: { token, role: 'client', user_id }
+
 ### Offers
 
 - GET /v1/user-offers
   Auth: agent JWT (requires client_id param) or client JWT (uses own user_id)
-  Params: client_id, status, source, date_from, date_to
+  Params: client_id, status, source, date_from, date_to, has_learning_skills_goals
   Response: { client_id, status, count, offers[] }
-  Offer fields: user_offer_id, offer_title, offer_company, offer_url,
-  claude_score, claude_role_fit, claude_matched_reasons, claude_missing_skills,
-  salary[], source, cv_language, work_model, city, applied_at, status
 
 - PATCH /v1/user-offers/:id/status
   Auth: agent JWT
   Body: { status }
-  All statuses supported including agent_withdrawn
 
-### CV Generation
+### CV & Cover Letter Generation
 
-- POST /v1/cv/generate
-  Auth: agent JWT
+- POST /v1/cv/generate (agent JWT)
   Body: { client_id, offer_text, cv_language, job_title, company_name, user_offer_id }
   Response: { cv_url, cv_status }
-  Features:
-  - Dynamic PL/EN section labels
-  - Month names PL/EN
-  - project.name="" → skip project header
-  - Summary in first person
-  - Skills: highlighted for role first, then categories
-  - Certifications section (hide if empty)
-  - Own projects with URL
-  - Page margins: @page { margin: 15mm 10mm }
-  - Agent info footer (if show_agent_info_in_cv)
-  - GDPR clause footer (always)
-  - Gender-aware PL text (M/F) from profile.basic_info.gender
-  - {{FOOTER_NOTES}} placeholder in cv.html template
-  - PDF generated via Gotenberg (Railway internal: gotenberg.railway.internal:3000)
-  - PDF stored in Supabase Storage bucket 'homo-digital' at cvs/{email}/{filename}.pdf
-  - cv_status: null | 'generating' | 'done' | 'error' (stored in user_offers.cv_status)
-  - cv_url: public Supabase Storage URL (stored in user_offers.cv_url)
+  PDF via Gotenberg → Supabase Storage bucket 'homo-digital' at cvs/{email}/{filename}.pdf
 
-- POST /v1/cl/generate
-  Auth: agent JWT
+- POST /v1/cl/generate (agent JWT)
   Body: { client_id, offer_text, cl_language, job_title, company_name, user_offer_id }
   Response: { cl_url, cl_status }
-  Features: same as CV generation but for cover letters
-  - Template: src/templates/cover_letter.html
-  - PDF stored at cls/{email}/{filename}.pdf
-  - cl_status, cl_url stored in user_offers
+  PDF stored at cls/{email}/{filename}.pdf
 
 ### Sync
 
 - POST /v1/sync (agent JWT)
   Runs full sync for all agent clients
-  Steps: scrape → pre-filter → Claude batch evaluation → save to DB
-  After sync: saves to user_syncs, sends push notifications
-  Push body: "Your agent {name} scanned {x} new offers. {y} are worth applying
-  and {z} look promising for level up."
+
+- POST /v1/profile/trigger-sync (client JWT)
+  Immediately triggers async sync for authenticated user (fire and forget, 202 Accepted)
+  Sets profile_synced_at = null before starting
+
+### Profile
+
+- GET /v1/profile (internal JWT)
+  Auth: client JWT (own profile) or agent JWT with ?client_id param
+  Response: { profile: Json | null, profile_ready: boolean }
+
+- PATCH /v1/profile (internal JWT)
+  Auth: client JWT (own) or agent JWT with client_id in body
+  Body: { profile?: Json, profile_ready?: boolean, client_id?: string }
+  Sets profile_synced_at = null after save
+  Deletes user_offers with status IN ('pending_apply', 'ai_rejected') on profile change
+
+### Onboarding
+
+- POST /v1/onboarding/prepare-profile (internal JWT)
+  Body: multipart/form-data, field: cv (PDF)
+  Extracts PDF text → Claude API → returns { profile: Json }
+  Normalizes work_model values: onsite/on-site → office
+
+- POST /v1/onboarding/review-profile (internal JWT)
+  Body: { profile: Json }
+  Claude returns JSON → Node builds HTML report
+  Response: HTML string with Tailwind CDN
+  Tab title: "Homo Digital - Profile Review"
+
+### Skills
+
+- GET /v1/skill-categories (public)
+  Returns { categories: string[] } filtered by market='IT', ordered by sort_order
+
+- GET /v1/skills (public)
+  Params: category (required), q (optional)
+  Returns { skills: string[] } — startsWith first, then contains, limit 20
+
+- GET /v1/skills/search (public)
+  Params: q (required)
+  Returns { skills: [{ name, category }] } across all IT categories — startsWith first, then contains, limit 20
+  Empty q → []
+
+### General Settings
+
+- GET /v1/general-settings (public)
+  Returns parsed general_settings JSON:
+  { currencies, industries, markets, company_types, countries, languages, language_levels, experience_levels }
 
 ### User Syncs
 
 - GET /v1/user-syncs (client JWT)
-  Returns list of sync reports for authenticated client
-  Params: limit=20
+  Returns list of sync reports, Params: limit=20
 - GET /v1/user-syncs/:id (client JWT)
-  Returns single sync report
 
 ### Notifications
 
 - POST /v1/notifications/send (agent JWT)
-  Manual trigger: sends push to all clients with client_notified=false applied offers
-  Marks client_notified=true after sending
-
 - POST /v1/push-tokens (client JWT)
   Body: { token, platform }
-  Upserts push token for user
 
 ### Agent
 
 - GET /v1/agent/me (client JWT)
-  Returns agent data for authenticated client:
-  { id, first_name, last_name, email, phone, photo_url }
+  Returns { id, first_name, last_name, email, phone, photo_url }
+
+### Clients
+
+- GET /v1/clients (agent JWT or client JWT)
+  Agent: returns list of agent's clients
+  Client: returns own user data as single-item array (with first_name/last_name from profile.basic_info)
 
 ### Prospects
 
-- POST /v1/prospects (public)
-  Body: { email, notes?, role: 'client'|'agent' }
-  Upserts by email
+- POST /v1/prospects (public) — upserts by email
 - GET /v1/prospects (agent JWT)
-  Returns all prospects ordered by created_at desc
 
 ### Settings
 
 - GET /v1/settings (agent JWT)
-  Returns all settings as key-value object
+
+### Subscription
+
+- GET /v1/subscription/status (client JWT)
+  Returns { subscribed_to: Date | null }
+
+### Feedback
+
+- POST /v1/feedback (client or agent JWT)
+  Body: { message: string, source: 'app' | 'extension' }
+
+### Account
+
+- DELETE /v1/account (client or agent JWT)
+  Hard delete: auth.users + public.users + push_tokens + agent_clients
 
 ---
 
 ## Scraping
 
 - Sources: JustJoin.it, NoFluffJobs
-- NoFluffJobs: official approval to use public API ✅
+- NoFluffJobs: official approval ✅
 - JustJoin: awaiting approval
-- Schedule: 6:45 AM + hourly 7:00-15:00 on weekdays
-- Exchange rates: open.er-api.com for salary normalization to PLN
+- Schedule: 6:45 AM + hourly 7:00-15:00 weekdays
+- Normalization: b2b → contract, onsite/on-site → office
 
 ## Matching (Claude API)
 
-- Pre-filter: workplace, employment_type, salary, seniority, language,
-  red_flags, city, skill_excluded
-- Claude batch processing: chunks of 100 offers
+- Pre-filter: workplace, employment_type, salary, seniority, language, red_flags, city, skill_excluded
+- Claude batch: chunks of 100 offers
 - Scoring: 0-100
 - Fields: score, role_fit, matched_reasons, missing_skills, recommended, skills_to_learn
-- max_level_up: 40 (from settings table)
+- max_level_up: 40 (from settings)
 
 ## Scheduled Jobs
 
 - Fetch offers: 6:45 AM + hourly 7:00-15:00 weekdays
-- Hourly notification job: sends job applied push per user.send_job_applied_notifications_hour
-- Hourly sync report job: runs sync per user.send_sync_report_notifications_hour
-  Guard: only once per day (checks user_syncs.created_at::date = today)
+- Profile sync queue: every 15 minutes — syncs users where profile_ready=true AND profile_synced_at IS NULL
+- Hourly notification job: per user.send_job_applied_notifications_hour
+- Hourly sync report job: per user.send_sync_report_notifications_hour (once per day guard)
 
 ## Push Notifications
 
@@ -291,8 +327,44 @@ Note: first_name, last_name, gender removed — stored in profile.basic_info ins
 
 - CV template: src/templates/cv.html
 - Cover letter template: src/templates/cover_letter.html
-- CV Placeholders: {{SUMMARY}}, {{WORK_EXPERIENCE}}, {{SKILLS}}, {{EDUCATION}}, {{CERTIFICATIONS_SECTION}}, {{FOOTER_NOTES}}
-- CL Placeholders: {{LANG}}, {{CL_TITLE}}, {{FULL_NAME}}, {{TARGET_ROLE}}, {{CONTACTS}}, {{CITY}}, {{DATE}}, {{JOB_TITLE}}, {{COMPANY_NAME}}, {{BODY}}, {{LABEL_REGARDS}}, {{FOOTER_NOTES}}
-- Languages: pl, en (cv_language / cl_language field)
-- PDF: Gotenberg on Railway (gotenberg.railway.internal:3000) ✅
+- Languages: pl, en
+- PDF: Gotenberg (gotenberg.railway.internal:3000) ✅
 - Storage: Supabase Storage bucket 'homo-digital'
+- Email path sanitization: @→_at_, .→_, +→_
+
+## Supabase DB Trigger
+
+handle_new_user() — fires on INSERT OR UPDATE to auth.users:
+- Upserts public.users with id, email, photo_url (from OAuth metadata)
+- ON CONFLICT (id) DO UPDATE email, photo_url, updated_at
+
+## Recent Changes (2026-06-12/13)
+
+- claude_matched_reasons changed from string[] to { pros: string[], cons: string[] }
+- Claude batch size: configurable via settings.claude_batch_size (default 50)
+- Claude batches run 3 in parallel (CONCURRENCY=3)
+- Claude evaluation uses tool_use (structured output) — eliminates JSON parse errors
+- profile_synced_at: null triggers re-sync; set to NOW() after sync completes
+- PATCH /v1/profile deletes user_offers with status IN ('pending_apply', 'ai_rejected') on save
+- DELETE /v1/account: explicit batch delete of related records before user deletion
+- CandidateProfileSchema: all optional fields accept null (nullable().optional())
+- experience_level enum: junior|mid|senior|lead|principal|staff|architect|c_level
+- work_model normalization: onsite/on-site → office in scraper and prepare-profile
+- Supabase DB trigger: fires on INSERT OR UPDATE auth.users
+- RLS enabled on user_offers: "Users can view own offers" policy (TO authenticated)
+- Indexes added: idx_user_offer_statuses_user_offer_id, idx_user_offers_user_id
+- settings.claude_batch_size added (value: '50')
+- gender values: 'M'/'F' → 'Male'/'Female' in profile JSON
+
+## Known Issues / TODO
+
+- Supabase Realtime not working for user_offers (text type user_id issue)
+- Current workaround: polling every 30s for new pending_apply offers (blue dot in R)
+- Better fix: in-memory SSE manager in API — notify connected clients after Prisma INSERT in sync pipeline (zero Supabase dependency, works with 1 Railway replica)
+- Ghosting Detector: cron at 3am, applied > 21 days → ghosted_by_recruiter status
+- Micro-feedback loop: user_offer_feedback table, popup on client_withdrawn from pending_apply
+- profile_calibrated_at timestamp for Profile Review tracking
+- user_id columns: migrate from text to uuid across all tables (user_offers, push_tokens, agent_clients, feedbacks, user_syncs, api_calls)
+- Stripe integration for Pro tier
+- Free tier: enforce max 3 offers/month limit
+- homodigital.io rewrite for Free/Pro/Premium model
