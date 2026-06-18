@@ -1,6 +1,6 @@
 # job-matcher-api — Feature Specification
 
-Last updated: 2026-06-12
+Last updated: 2026-06-13
 
 ## Business Model
 
@@ -338,7 +338,41 @@ handle_new_user() — fires on INSERT OR UPDATE to auth.users:
 - Upserts public.users with id, email, photo_url (from OAuth metadata)
 - ON CONFLICT (id) DO UPDATE email, photo_url, updated_at
 
-## Recent Changes (2026-06-12/13)
+## Recent Changes (2026-06-13)
+
+### Plans & Subscriptions
+- New Prisma models: Plan, Subscription
+- Plan.limits Json: { max_apply_now, max_level_up } (null = unlimited)
+- Plan.features Json: {} (to be filled incrementally)
+- Seeded plans: free (max_apply_now:15, max_level_up:10), pro (unlimited), premium (unlimited)
+- All existing users auto-assigned to Free plan on migration
+- GET /v1/user-offers: applies plan limits — pending_apply capped to max_apply_now, ai_rejected capped to max_level_up
+- GET /v1/user-offers: response now includes apply_now_count and level_up_count (totals before limit)
+- GET /v1/user-offers: supports pipe-separated status param (e.g. status=pending_apply|ai_rejected) → returns grouped response { count, pending_apply: { count, offers, status }, ai_rejected: { count, offers, status } }
+- GET /v1/user-offers: client_id param only used when role=agent; candidates always use own userId from JWT
+- Stripe integration: STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET added to Railway env vars
+- POST /v1/subscriptions/checkout: creates Stripe Checkout Session, returns { url }
+- POST /v1/webhooks/stripe: handles checkout.session.completed (upgrade to Pro) and customer.subscription.deleted (downgrade to Free)
+
+### Matching
+- sync_started_at DateTime? added to users table
+- processBatch checks sync_started_at before INSERT — skips if sync superseded by newer trigger-sync
+- Overlap ratio scoring rule added to Claude prompt: <0.30→max45, <0.50→max65, ≥0.50→up to100
+- Pros/cons prompt simplified — fewer CRITICALs, more positive instructions
+- Matching model: claude-haiku-4-5-20251001 (set via settings.claude_models)
+- Batch log: "[match] Batch N: inserted X rows — Y pending_apply (Z apply now, W level up)"
+
+### Profile wizard flow
+- profile_editing_snapshot Json? added to users table
+- PATCH /v1/profile with profile_ready=false: saves current profile as profile_editing_snapshot
+- PATCH /v1/profile with profile_ready=true: compares snapshot vs new profile using stableStringify on 12 matching-relevant fields, returns matching_relevant_change: boolean, clears snapshot
+- POST /v1/profile/trigger-sync: batched deletion of pending_apply/ai_rejected (1000 rows at a time), clears notification_locks sync:{userId}, clears sync lock before starting new sync
+- sync_started_at used to cancel stale batches when trigger-sync fires mid-sync
+
+### Settings
+- settings.general_settings: added show_source_filter: false
+
+## Recent Changes (2026-06-12)
 
 - claude_matched_reasons changed from string[] to { pros: string[], cons: string[] }
 - Claude batch size: configurable via settings.claude_batch_size (default 50)
@@ -368,3 +402,16 @@ handle_new_user() — fires on INSERT OR UPDATE to auth.users:
 - Stripe integration for Pro tier
 - Free tier: enforce max 3 offers/month limit
 - homodigital.io rewrite for Free/Pro/Premium model
+
+## Known Issues / TODO (updated 2026-06-13)
+
+- Supabase Realtime not working for user_offers (text type user_id issue)
+- Current workaround: polling every 30s for new pending_apply offers (blue dot in R)
+- Better fix: in-memory SSE manager in API
+- Ghosting Detector: cron at 3am, applied > 21 days → ghosted_by_recruiter status
+- Micro-feedback loop: user_offer_feedback table, popup on client_withdrawn from pending_apply
+- profile_calibrated_at timestamp for Profile Review tracking
+- user_id columns: migrate from text to uuid across all tables
+- homodigital.io rewrite for Free/Pro/Premium model
+- Free "Frozen offers": free users see only offers from registration; new matches shown as "You have X new matches — upgrade to see them"
+- claude_recommended field: redundant with status, consider removing in future cleanup

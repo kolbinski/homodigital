@@ -1,6 +1,6 @@
 # homo-digital-extension (R) — Feature Specification
 
-Last updated: 2026-06-12
+Last updated: 2026-06-13
 
 ## Business Model
 
@@ -224,7 +224,44 @@ Contains: currencies, industries, markets, company_types, countries, languages, 
 - LinkedIn Profile Analyzer (planned)
 - "Scan this page for job offer" feature (planned)
 
-## Recent Changes (2026-06-12/13)
+## Recent Changes (2026-06-13)
+
+### Free/Pro tier UI
+- GET /v1/user-offers now uses single combined call: status=pending_apply|ai_rejected
+- Response: { count, pending_apply: { count, offers, status }, ai_rejected: { count, offers, status } }
+- Apply now badge: shows pending_apply.count (total before limit)
+- Level up badge: shows ai_rejected.count (total before limit)
+- Locked box shown at bottom of Apply now / Level up when offers.length < section count
+- Locked box: lock icon + "You've reached your free plan limit. Upgrade to unlock X more matches." + green "Upgrade to Pro" button
+- Upgrade to Pro button: opens Stripe Checkout URL (POST /v1/subscriptions/checkout → { url })
+- client_id NOT sent for candidate users (only for agent)
+
+### Offer card
+- Required skills: green tags (candidate has) + red tags (missing), sorted green first
+- Nice to have skills: same coloring logic
+- Removed separate "Missing:" section
+- claude_matched_reasons: cons (orange WarningCircle) first, pros (green CheckCircle) after
+
+### Profile wizard
+- profile_ready=false set on wizard open (PATCH /v1/profile)
+- Close icon: if validation errors → close with profile_ready=false (work in progress); if no errors → PATCH profile_ready=true, if matching_relevant_change=true → POST trigger-sync + reset knownCountRef to 0
+- Close icon shows loader spinner while auto-save in progress
+- Submit button: shown ONLY during onboarding (hidden post-onboarding)
+- ClientAccordion: when profile_ready=false → hide offers, show "You left your profile mid-edit. Complete it to start receiving matches." + "Continue editing" button
+
+### Polling / blue dot
+- Polling starts only after initial fetchOffers resolves (knownCountRef initialized)
+- knownCountRef reset to 0 after trigger-sync
+- Blue dot fires when count > knownCountRef
+
+### Other
+- Source filter hidden (show_source_filter=false in general_settings)
+- Generated and Sort by filters on same line
+- Second loader screen vertically centered
+- ClientAccordion: always expanded, collapse arrow hidden (selfMode)
+- Refresh icon shows loader on initial offers load
+
+## Recent Changes (2026-06-12)
 
 - Social login: Google ✅, GitHub ✅ (supabase_jwt + refresh_token stored)
 - Onboarding wizard: all 8 tabs complete with full validation
@@ -251,3 +288,17 @@ Contains: currencies, industries, markets, company_types, countries, languages, 
 - Cover letter generation flow in R
 - Stripe Pro tier self-service
 - Settings drawer tabs: Usage, Billing, notification hours, utc_offset
+
+## Known Issues / TODO (updated 2026-06-13)
+
+- Microsoft social login (UI only, not wired)
+- Dark mode (deferred)
+- Chrome Notifications API after sync
+- Geocoding for location coordinates (deferred)
+- LinkedIn Profile Analyzer (planned)
+- "Scan this page for job offer" (planned, Free: 5/mo, Pro: unlimited)
+- Replace polling with in-memory SSE manager
+- Tooltips throughout onboarding wizard
+- Cover letter generation flow in R
+- Settings drawer tabs: Usage, Billing, notification hours, utc_offset
+- Free "Frozen offers" UI: banner "You have X new matches — upgrade to see them"

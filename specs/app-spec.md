@@ -1,6 +1,6 @@
 # homo-digital-app (A) — Feature Specification
 
-Last updated: 2026-06-12
+Last updated: 2026-06-13
 
 ## Business Model
 
