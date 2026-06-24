@@ -1,6 +1,6 @@
 # homo-digital-extension (R) — Feature Specification
 
-Last updated: 2026-06-19
+Last updated: 2026-06-24
 
 ## Business Model
 
@@ -8,9 +8,9 @@ R (Chrome extension) is the core tool available to **all tiers** (Free, Pro, Pre
 
 ### Tier Limits in R
 
-- **Free**: max 15 apply_now + 10 level_up offers (enforced by API free_plan_snapshot)
-- **Pro**: unlimited offers
-- **Premium**: unlimited offers + agent works on behalf of client
+- **Free**: max 30 status changes total (no monthly reset), enforced by API (status_change_counter / status_change_counter_max)
+- **Pro**: unlimited status changes, unlimited offers
+- **Premium**: unlimited + agent works on behalf of client
 
 ---
 
@@ -36,6 +36,7 @@ R (Chrome extension) is the core tool available to **all tiers** (Free, Pro, Pre
 - Supabase JWT stored under 'supabase_jwt'
 - OAuth user data (name, email, photo) stored under 'oauth_data'
 - Role stored under 'role' ('agent' | 'client')
+- OAuth cancel (user closes login window): silently ignored — no error shown
 
 ### CONFIG flags (src/config.ts)
 ```typescript
@@ -59,7 +60,7 @@ export const CONFIG = {
   - Continue with Google (logo + label)
   - Continue with Microsoft (logo + label, CONFIG.auth.microsoft)
   - Continue with GitHub (logo + label)
-  - Social login error shown below last button
+  - Social login error shown below last button (not shown on user cancel)
 - OR divider
 - "Login as agent" section: email + password + Log in button
 - "Join as agent" button
@@ -74,8 +75,8 @@ export const CONFIG = {
 ### Kickstart Screen
 - Title: "Let's get you started"
 - Subtitle: "Drop your CV below and we'll build your profile in seconds. No forms, no hassle."
-- Drag & drop / browse PDF upload area
-- "Prepare my profile" button (green)
+- Drag & drop / browse PDF upload area — always shows "Drag & drop or browse" text (no filename shown)
+- On file drop/select: immediately triggers prepare-profile action (no separate button needed)
 - "Skip" button
 - Topbar: Gear icon (opens Settings drawer, disabled during loading)
 
@@ -84,7 +85,6 @@ export const CONFIG = {
   - profile_ready=false AND profile_editing_snapshot=null → **onboarding mode** (Submit button, no Cancel/Re-match)
   - profile_ready=true OR profile_editing_snapshot≠null → **post-onboarding mode** (Cancel changes + Re-match offers, no Submit)
 - wizard_was_open flag in chrome.storage.local: wizard auto-reopens on R reopen in post-onboarding mode
-- When R is closed and reopened while wizard was open: wizard reopens in correct mode (post-onboarding)
 
 ### Onboarding Wizard
 8 tabs with completion indicators:
@@ -111,6 +111,8 @@ Tab order: Basic Info / Work Exp / Skills / Preferences / Education / Own Projec
 **Cancel changes** (post-onboarding): closes wizard, restores snapshot
 **Re-match offers** (post-onboarding): see Re-match flow below
 
+**Salary input (min amount):** type="text" with digit-only filter; onBlur normalizes value; Submit/Re-match disabled while salary input has focus
+
 **Wizard loading overlay:** white semi-transparent div with pointer-events:none covers entire wizard during:
 - PATCH /v1/profile calls
 - GET /v1/profile/has-relevant-changes
@@ -121,63 +123,120 @@ Tab order: Basic Info / Work Exp / Skills / Preferences / Education / Own Projec
 1. Click Re-match offers
 2. Wizard immediately disabled (overlay)
 3. GET /v1/profile/has-relevant-changes
-   - Error → red box in place of status box: "Something went wrong. Please try again."
-   - has_relevant_changes=false → PATCH profile, close wizard (no box shown, no sync triggered)
+   - Error → red box: "Something went wrong. Please try again."
+   - has_relevant_changes=false → PATCH profile, close wizard
    - has_relevant_changes=true → continue
-4. Set rematching=true (with requestAnimationFrame yield before clearing wizardLoading)
-5. PATCH /v1/profile { profile_ready: true, profile_editing_snapshot: null }
-6. POST /v1/profile/trigger-sync
-   - 402 → show limit reached UI
-   - success → close wizard
-7. White status box shown during step 5-6: "Re-matching was initialized. First, we're deleting your previous job offers."
+4. PATCH /v1/profile { profile_ready: true, profile_editing_snapshot: null }
+5. POST /v1/profile/trigger-sync → close wizard
+6. Status box: "Re-matching was initialized. First, we're deleting your previous job offers."
 
 ### Tab: Preferences
 Salary: type (Contract/Permanent chips), currency (settings.currencies), min amount*
 Work model: Remote/Hybrid/Office chips*
 Target role: textarea list with drag-drop*
 Company type preferred/excluded: chips from settings.company_types
-Industries: chips from settings.industries + custom
-Markets: chips from settings.markets
-Learning & skill goals: autocomplete from GET /v1/skills/search
-Max office days: slider 0-7 (shown only when hybrid/office selected)
-Office location cities: tag input (shown only when hybrid/office selected)
+Industries, Markets, Learning & skill goals, Max office days, Office location cities
 
-Note: Employment type chips (Contract/Permanent/Part-time) **removed** — contract/permanent preference is now expressed only via salary preferences (preferences.salary[].type)
+Note: Employment type chips removed — contract/permanent via salary preferences only
 
 ### Tab: Skills
-Categories from GET /v1/skill-categories (market=IT, ordered by sort_order)
-Per category: skill chips with 'since' year (required), autocomplete from GET /v1/skills?category=&q=
-**Offer skills (orange chips):** when wizard opens on Skills tab, orange chips shown above existing skills per category
-- Chips show: skill name + count badge + trash icon (dismiss)
-- Clicking chip: adds skill to category with year-since input
-- Trash icon: POST /v1/profile/dismiss-skill → removes chip
-- Category accordions auto-expand for categories with offer_skills
-- Only skills with was_categorized=true shown (properly categorized)
+Categories from GET /v1/skill-categories
+Per category: skill chips with 'since' year, autocomplete from GET /v1/skills
+**Offer skills (orange chips):** when wizard opens on Skills tab
+- Only skills with was_categorized=true shown
+- Clicking chip adds skill; trash icon dismisses
 
 ## Main Client View (after onboarding)
 
 ### Topbar
 - Left: user avatar + name + email
 - Right: address-book icon (blue dot when new_skills_count > knownNewSkillsCount) + gear icon
-- Clicking address-book with blue dot: opens wizard on Skills tab
-- Filters row: refresh icon (gray border) + Sort by (space-between)
+
+### Filters Row
+- Status select (options: Pending apply [default], Applied, Withdrawn, Recruiter rejected, Offer received, Accepted, All)
+  - status=pending_apply sends status=pending_apply|ai_rejected to API
+- Min score slider (default 0) — triggers user-offers only on mouseUp/touchEnd (not onChange)
+- Sort by select (persisted in chrome.storage.local)
+- With salary checkbox (persisted under 'hd_with_salary')
+- Only starred checkbox (persisted under 'hd_only_starred')
+- Generated CV checkbox (persisted under 'hd_generated_cv')
+- Generated CL checkbox (persisted under 'hd_generated_cl')
+- Debounce 300ms on filter changes + AbortController to cancel in-flight requests
+- Exception: "Show more" and per-section refresh fire immediately (no debounce)
+
+### Section Accordions
+Always shown regardless of offer count. Order: Apply now, Level up, Applied, Withdrawn, Recruiter rejected, Offer received, Accepted.
+
+Accordion open/closed state persisted in chrome.storage.local under 'accordion_state'. Default: all open.
+
+**Accordion header:**
+- Section name
+- Badge: [{count_after_filters}/{count}] — when count_after_filters === count: show [{count}]
+- Refresh icon (right side) — clicking any section's refresh re-fetches that section only:
+  - Apply now / Level up refresh → status=pending_apply|ai_rejected
+  - Other sections → status={that section's status}
+  - Shows loader inside that section's content only (other sections unchanged)
+  - Blue dot on refresh icon when section.count differs from last known_*_count
+
+**Pagination:** each section has own "Show more" + page counter (page_apply_now, page_level_up, etc.). All counters reset on refresh.
+
+**known_*_count params:** always sent in every GET /v1/user-offers call:
+known_apply_count, known_level_up_count, known_applied_count, known_withdrawn_count,
+known_recruiter_rejected_count, known_offer_received_count, known_accepted_count
+Updated after each response. Used for blue dot logic (compare against section.count, not count_after_filters).
+
+**setInterval polling (30s):** reads all params from refs (not state) to avoid stale closure. Params include: status, min_score, sort_by, is_starred, with_salary, generated_cv, generated_cl, page_size, all page_* counters, all known_*_count values.
 
 ### Apply now section
-- Offers with status=pending_apply
-- Count badge: total pending_apply count (before plan limit)
-- Free plan: locked box at bottom when offers.length < total count
+- status=pending_apply offers
+- Empty state: apply_now.count === 0 → "We're scanning thousands of offers for you. Your matches will appear here shortly."
+- Empty state: apply_now.count > 0 but offers empty (filters active) → "No offers found."
 
-### Level up & earn more section
-- Offers with status=ai_rejected AND claude_missing_skills not empty AND salary_delta IS NOT NULL
-- Count badge: total level_up count (before plan limit)
-- ALL offers in this section have salary information (enforced by API)
-- Free plan: locked box at bottom when offers.length < total count
+### Level up section
+- status=ai_rejected AND missing_skills not empty AND salary_delta IS NOT NULL
+
+### Status change limit (Free plan)
+- status_change_counter and status_change_counter_max from GET /v1/user-offers response
+- When counter >= max (and max not null): show "Upgrade to Pro" box in Apply now section
+- On status change attempt → 402 → show box in "Offer on this page" card under Set status select
+- Box includes green "Upgrade to Pro" button → opens Stripe checkout directly (no drawer)
+- After successful upgrade: auto-retry the blocked status change
 
 ### Offer card
-- Required skills: green tags (candidate has) + red tags (missing), sorted green first
-- Nice to have skills: same coloring logic
-- claude_matched_reasons: cons (orange WarningCircle) first, pros (green CheckCircle) after
-- Salary always shown in Level up section (API guarantees salary_delta IS NOT NULL)
+- Row: star icon (★/☆) + work model tag + city + copy icon (copies offer_url to clipboard, shows Check icon for 1.5s)
+- "Published X days ago" / "Published today" / "Published yesterday" — between salary and required skills
+- Required skills: green (have) + red (missing), sorted green first
+- Nice to have skills: same coloring
+- claude_matched_reasons: cons (orange) first, pros (green) after
+- Star toggle: shows spinner during PATCH /v1/user-offers/:id/star; each card independent
+- When "Only starred" filter active and star toggled to false → offer immediately removed from section, count/count_after_filters decremented
+
+### is_starred sync
+- Star toggle in "Offer on this page" → updates matching offer in all section listings (by user_offer_id)
+- Star toggle in section listing → updates "Offer on this page" if same user_offer_id
+
+## Offer on this page
+
+Always visible when offer page is open, regardless of offer status or active filters.
+
+- "Published X days ago" / "Published today" / "Published yesterday" shown between salary and required skills
+- Star icon — same behavior as in offer card (spinner during call, synced with listings)
+- is_starred returned from GET /v1/user-offers/by-url (includes is_starred field)
+
+### Set status select
+- Shows "curr. {status}" label — special cases:
+  - ai_rejected → "curr. pending apply" (visual only, status not changed)
+  - client_withdrawn → "curr. withdrawn"
+- Options hidden dynamically: option matching current status not shown
+- ai_rejected offers: "Pending apply" option not shown
+- During status change call: select disabled, label replaced with spinner
+- Error box directly below select (inside card):
+  - Generic error: "Failed to update status. Please try again."
+  - 402 error: "You've used all {status_change_counter_max} free status changes. Upgrade to Pro to continue." + green "Upgrade to Pro" button
+
+### Status change → optimistic update
+- On success: offer removed from old section's offers array, count/count_after_filters decremented
+- Blue dot shown on target section's refresh icon (known_*_count decremented for target section)
 
 ## Agent View
 
@@ -196,7 +255,7 @@ Per category: skill chips with 'since' year (required), autocomplete from GET /v
 
 **Offer card actions:**
 - Change status dropdown
-- CV Language select (pl/en/25 languages)
+- CV Language select (25 languages)
 - Generate CV → POST /v1/cv/generate
 - Generate CL → POST /v1/cl/generate
 
@@ -204,28 +263,37 @@ Per category: skill chips with 'since' year (required), autocomplete from GET /v
 Visible when settings.show_sync_tab_in_extension=true
 
 ## Profile Wizard Overlay (address book icon)
-- Opens for both agent (editing client) and client (editing own profile)
-- Fetches fresh GET /v1/profile on open (wizard disabled during fetch)
+- Opens for both agent and client
+- Fetches fresh GET /v1/profile on open
 - Auto-save with PATCH /v1/profile
 - Close button (disabled during saving)
-- No Submit button post-onboarding
 
 ## Settings Drawer
-Sections:
-- Feedback: textarea + Send button → POST /v1/feedback
-- Account: Log out button (gray), Delete account button (red)
+
+### Usage section
+- Shows counters for: CV, Cover Letter, AI Profile Reviews, Change status
+- Change status stat: shown only when status_change_counter_max is not null (Free plan)
+- Data sourced from GET /v1/subscription/status (not from user-offers response)
+
+### Account section
+- Log out, Delete account
 
 ### Delete Account Flow
-1. Click Delete account → storage cleared → offboarding screen shown
-2. DELETE /v1/account called (fire and forget)
-3. Offboarding: checkboxes from settings.delete_reasons
-   - "Other" or "Technical issues" → textarea appears
+1. Click Delete account → storage cleared → offboarding screen
+2. DELETE /v1/account (fire and forget)
+3. Offboarding: checkboxes (settings.delete_reasons) + feedback textarea always visible
 4. Submit → POST /v1/account/delete-reasons + POST /v1/account/delete-feedback
-5. Green checkmark: "Your account was deleted" + "Go to login screen" button (no auto-redirect)
-6. account_deletion_in_progress flag in chrome.storage blocks 401 redirect during deletion
+5. "Your account was deleted" + "Go to login screen" button
 
 ## General Settings Cache
 Fetched from GET /v1/general-settings on login, cached in chrome.storage.local with 24h TTL.
+
+## Chrome Storage Keys
+- jwt, supabase_jwt, oauth_data, role
+- hd_sort_by, hd_min_score, hd_with_salary, hd_only_starred, hd_generated_cv, hd_generated_cl
+- accordion_state (object: { apply_now, level_up, applied, client_withdrawn, recruiter_rejected, offer_received, accepted } — all default true)
+- wizard_was_open
+- account_deletion_in_progress
 
 ## Chrome Permissions
 - tabs, sidePanel, storage, identity, notifications (planned)
@@ -238,72 +306,73 @@ Fetched from GET /v1/general-settings on login, cached in chrome.storage.local w
 - Status: APPROVED AND LIVE ✅
 - Extension ID: chjdjblpkfcngbjkphbjpnekekffjlli
 
-## Recent Changes (2026-06-19)
+## Recent Changes (2026-06-24)
 
-### Wizard mode detection fix
-- Mode derived from profile_editing_snapshot (not chrome.storage state)
-- wizard_was_open in chrome.storage → auto-reopen wizard in correct mode after R restart
-- profileLoading prop: wizard disabled during GET /v1/profile fetch on open
+### Starred offers
+- is_starred Boolean on user_offer — star icon (★/☆) on offer card row
+- Spinner during PATCH /v1/user-offers/:id/star call (per card)
+- "Only starred" checkbox filter (persisted: hd_only_starred)
+- Star toggled to false while filter active → offer immediately removed from section
+- is_starred synced bidirectionally between section listings and "Offer on this page"
 
-### Re-match flow overhaul
-- GET /v1/profile/has-relevant-changes called before trigger-sync
-- No status box shown when has_relevant_changes=false
-- Red error box on has-relevant-changes failure
-- wizardLoading=true during has-relevant-changes + PATCH profile + trigger-sync
-- requestAnimationFrame yield between setRematching(true) and setWizardLoading(false)
+### Section accordions refactor
+- Always shown regardless of offer count
+- Per-section badge: [{count_after_filters}/{count}]
+- Per-section refresh icon (blue dot based on count, not count_after_filters)
+- Accordion state persisted in chrome.storage.local (default: all open)
+- Per-section refresh fetches only that section's status
+- Per-section loading state (only refreshed section shows loader)
 
-### Employment type removed from Preferences tab
-- Contract/Permanent/Part-time chips removed
-- Preference now expressed only via salary expectations (type: contract/permanent)
+### Filters improvements
+- Status select restored with "All" option; default: Pending apply
+- status=pending_apply → API param status=pending_apply|ai_rejected
+- Min score slider: triggers only on mouseUp/touchEnd (no onChange trigger)
+- Debounce 300ms on all filter changes + AbortController for in-flight cancellation
+- generated_cv, generated_cl persisted in chrome.storage.local
+- Global refresh icon removed (replaced by per-section refresh)
 
-### Offer skills (orange chips) in Skills tab
-- Orange chips above existing skills per category
-- Only skills with was_categorized=true shown
-- Blue dot on address-book icon when new_skills_count increases
-- Auto-expand category accordions with offer_skills
+### Status change limit UI
+- 402 → "You've used all X free status changes. Upgrade to Pro to continue." box inside "Offer on this page" card
+- Green "Upgrade to Pro" button → Stripe checkout directly (no drawer)
+- After upgrade: auto-retry blocked status change
+- Settings / Usage: "Change status" stat for Free plan users (from GET /v1/subscription/status)
 
-### Level up section
-- Only shows offers with salary (API guarantees salary_delta IS NOT NULL)
-- "Salary not disclosed" can no longer appear in Level up
+### Offer on this page improvements
+- Always visible regardless of offer status or filters
+- "curr. ai_rejected" → "curr. pending apply" (visual label)
+- "curr. client_withdrawn" → "curr. withdrawn"
+- Options hidden dynamically (current status not shown)
+- ai_rejected offers: no "Pending apply" option
+- Spinner + disabled select during status change call
+- Error box inside card, directly below Set status select
+- Star icon with same behavior as offer card
+- "Published X days ago" label between salary and required skills
+- On status change success: offer removed from old section, blue dot on target section
 
-### Deduplication
-- Duplicate offers no longer shown (dedupKey applied in API snapshot)
+### Offer card improvements
+- Copy icon after city — copies offer_url, shows Check icon 1.5s
+- "Published X days ago" / "Published today" / "Published yesterday" between salary and required skills
 
-## Recent Changes (2026-06-13)
+### Kickstart screen
+- Drag & drop triggers prepare-profile immediately on file select (no button)
+- Always shows "Drag & drop or browse" (no filename displayed)
+- "Prepare my profile" button removed
 
-### Free/Pro tier UI
-- Combined call: status=pending_apply|ai_rejected
-- Apply now / Level up badges show totals before plan limit
-- Locked box when plan limit reached
-
-### Offer card
-- Required/nice-to-have skills: green (have) + red (missing), sorted green first
-- Removed separate "Missing:" section
-- claude_matched_reasons: cons first, pros after
-
-### Profile wizard
-- profile_ready=false set on wizard open
-- Close icon behavior based on validation errors
-- Submit button only during onboarding
-
-## Recent Changes (2026-06-12)
-
-- Social login: Google ✅, GitHub ✅
-- Onboarding wizard: all 8 tabs complete
-- Auto-save, Review by AI, Profile wizard overlay
-- Blue dot polling 30s
+### Polling fix
+- All params read from refs in setInterval callback (no stale closures)
+- known_*_count params always sent; never suppress offers[] (blue dot only)
 
 ## Known Issues / TODO
 
 - Microsoft social login (UI only, not wired)
 - Dark mode (deferred)
-- Chrome Notifications API after sync
+- Chrome Notifications API after sync (notify when new offers arrive)
 - Geocoding for location coordinates (deferred)
 - LinkedIn Profile Analyzer (planned)
 - "Scan this page for job offer" (planned, Free: 5/mo, Pro: unlimited)
 - Replace polling with in-memory SSE manager
 - Tooltips throughout onboarding wizard
 - Cover letter generation flow in R
-- Settings drawer tabs: Usage, Billing, notification hours, utc_offset
-- Free "Frozen offers" UI: banner "You have X new matches — upgrade to see them"
+- Settings drawer: Billing tab, notification hours, utc_offset
+- Free "Frozen offers" banner: "You have X new matches — upgrade to see them"
 - Interview recording feedback (Premium, GDPR-constrained)

@@ -1,12 +1,12 @@
 # job-matcher-api — Feature Specification
 
-Last updated: 2026-06-20
+Last updated: 2026-06-24
 
 ## Business Model
 
 ### Tiers
 
-- **Free** — access to R only, max 3 matched offers per month
+- **Free** — access to R only, max 30 status changes (no reset)
 - **Pro** — access to R + A (push notifications), unlimited offers, ~49-79 PLN/month via Stripe
 - **Premium** — Pro + human agent, pay-per-action pricing
 
@@ -27,7 +27,7 @@ Last updated: 2026-06-20
 
 - Free/Pro: in progress
 - Premium: planned after Free/Pro launch
-- Stripe integration: planned for Pro tier
+- Stripe integration: active (checkout + webhooks)
 
 ### Geographic Expansion
 
@@ -60,8 +60,8 @@ Last updated: 2026-06-20
 - profile_ready Boolean @default(false)
 - profile_editing_snapshot Json? (snapshot of profile saved when wizard opens for editing)
 - profile_synced_at DateTime? (null = needs sync; set to NOW() after sync)
-- sync_started_at DateTime? (set when sync begins; used to cancel stale batches)
-- pending_rematch Boolean @default(false) (deprecated — no longer used; trigger-sync now cancels and restarts immediately)
+- sync_started_at DateTime? (set when sync begins; used to cancel stale batches + optimistic lock for snapshot writes)
+- pending_rematch Boolean @default(false) (deprecated — no longer used; can be removed)
 - offer_skills Json? (array of { name, count, category_name, dismissed } — missing skills from ai_rejected offers)
 - photo_url String? (populated from OAuth provider on social login)
 - jobmatcher_api_key String? (null for Free/Pro until activated)
@@ -70,9 +70,12 @@ Last updated: 2026-06-20
 - send_sync_report_notifications_hour Int @default(9)
 - utc_offset Int @default(1)
 - subscribed_to DateTime? (Pro subscription expiry)
+- status_change_counter Int @default(0) — incremented on every status change (Free plan only)
+- status_change_counter_max Int? — max allowed status changes; null = unlimited (Pro/Premium); set from plans.max_status_change on account creation
 - created_at, updated_at
 
 Note: first_name, last_name, gender removed — stored in profile.basic_info instead
+Note: free_plan_snapshot removed — replaced by status_change_counter limit; all users now served from real DB
 
 ### agents
 
@@ -113,11 +116,12 @@ Note: first_name, last_name, gender removed — stored in profile.basic_info ins
 - cv_url String?
 - cl_status String? (null|'generating'|'done'|'error')
 - cl_url String?
+- is_starred Boolean @default(false)
 - matched_at DateTime
 - created_at, updated_at
 - ON DELETE CASCADE on user_id
 
-Note: salary_min, salary_max, salary_type, claude_salary_comparison removed — never read from DB (response recomputes from offer.employment_types)
+Note: salary_min, salary_max, salary_type, claude_salary_comparison removed
 
 ### Status assignment rules (at match time)
 
@@ -135,8 +139,8 @@ Note: salary_min, salary_max, salary_type, claude_salary_comparison removed — 
 ### user_offer_statuses tracking
 
 Only action-based status changes are tracked (not initial assignment):
-- Tracked: applied, agent_withdrawn, recruiter_rejected, offer_received, accepted, client_withdrawn
-- NOT tracked: pre_filter_rejected, ai_rejected, pending_apply (set once at match time, no history needed)
+- Tracked: applied, agent_withdrawn, recruiter_rejected, offer_received, accepted, client_withdrawn, pending_apply (when manually set by user)
+- NOT tracked: pre_filter_rejected, ai_rejected (set once at match time, no history needed)
 
 ### user_offer_statuses
 
@@ -216,7 +220,9 @@ Only action-based status changes are tracked (not initial assignment):
 
 ### plans
 
-- id, name, limits Json { max_apply_now, max_level_up } (null = unlimited)
+- id, name
+- limits Json { max_apply_now, max_level_up } (null = unlimited)
+- max_status_change Int? (null = unlimited; 30 for free)
 - features Json
 
 ### ai_usage
@@ -237,23 +243,53 @@ Only action-based status changes are tracked (not initial assignment):
 
 - POST /v1/auth/social-login (Supabase JWT)
   Upserts user in public.users, issues internal JWT
+  Sets status_change_counter_max from plans.max_status_change (free plan) on create
   Response: { token, role: 'client', user_id }
 
 ### Offers
 
 - GET /v1/user-offers
   Auth: agent JWT (requires client_id param) or client JWT (uses own user_id)
-  Params: client_id, status (pipe-separated), source, date_from, date_to, has_learning_skills_goals
-  Response (single status): { client_id, status, count, offers[] }
-  Response (pipe-separated): { count, new_skills_count, apply_now: { count, offers, status }, level_up: { count, offers, status } }
-  Free plan: returns from free_plan_snapshot (deduplicated, capped to plan limits)
-  Pro plan: live query, deduplicated via dedupKey fingerprint
-  Level up offers: status=ai_rejected AND claude_missing_skills not empty AND salary_delta IS NOT NULL
-  new_skills_count: count of offer_skills with dismissed=false and was_categorized=true
+  Params:
+    status (pipe-separated; 'all' returns all sections)
+    min_score, sort_by, page_size
+    page_apply_now, page_level_up, page_applied, page_client_withdrawn,
+    page_recruiter_rejected, page_offer_received, page_accepted (all default 1)
+    with_salary (boolean), is_starred (boolean), generated_cv (boolean), generated_cl (boolean)
+    known_apply_count, known_level_up_count, known_applied_count, known_withdrawn_count,
+    known_recruiter_rejected_count, known_offer_received_count, known_accepted_count
+  Response structure (always):
+    {
+      client_id,
+      new_skills_count,
+      status_change_counter,
+      status_change_counter_max,
+      [section_key]: {
+        count,              // total without filters, without plan limits
+        count_after_filters, // after with_salary/is_starred/generated_cv/cl filters, without limits
+        offers[],           // paginated
+        has_more
+      }
+    }
+  Sections returned depend on status param:
+    status=pending_apply|ai_rejected → apply_now, level_up
+    status=all → apply_now, level_up, applied, client_withdrawn, recruiter_rejected, offer_received, accepted
+    status={single} → {single section}
+  All users served from real DB (no snapshot); single unified code path
+  Accordion order in R: Apply now, Level up, Applied, Withdrawn, Recruiter rejected, Offer received, Accepted
 
 - PATCH /v1/user-offers/:id/status
-  Auth: agent JWT
+  Auth: agent JWT or client JWT
   Body: { status }
+  Allowed statuses: pending_apply, applied, agent_withdrawn, recruiter_rejected, offer_received, accepted, client_withdrawn
+  Free plan limit: if status_change_counter >= status_change_counter_max → 402 { error: 'free_limit_reached' }
+  If status_change_counter_max IS NULL → no limit, counter not incremented
+  Otherwise: increment status_change_counter after successful change
+
+- PATCH /v1/user-offers/:id/star
+  Auth: client JWT
+  Toggles is_starred on the user_offer
+  Response: { is_starred: boolean }
 
 ### CV & Cover Letter Generation
 
@@ -274,92 +310,68 @@ Only action-based status changes are tracked (not initial assignment):
 
 - POST /v1/profile/trigger-sync (client JWT)
   Triggers async sync for authenticated user (202 Accepted)
+  Sets free_plan_snapshot=null immediately on matchingRelevantChange=true (before any Claude work)
+  sync_started_at used as optimistic lock: buildAndSaveFreePlanSnapshot checks sync_started_at hasn't changed before writing
   If sync already in progress: cancels current sync (sets sync_started_at=null) and restarts immediately with latest profile
   Smart salary-only re-sync:
-  - If ONLY preferences.salary changed AND all new minimums >= old minimums (salary increase): partial re-sync without Claude — recalculate salary_contract_delta/permanent_delta, mark offers below new minimum as pre_filter_rejected, rebuild snapshot
-  - If ONLY preferences.salary changed AND any new minimum < old minimum (salary decrease): partial re-sync — keep existing pending_apply/ai_rejected, run Claude only for newly qualifying pre_filter_rejected offers
-  - If salary decreased but no existing offers to preserve: fall through to full sync
+  - Salary increase (all new minimums >= old): partial re-sync without Claude — recalculate deltas, reject below new minimum
+  - Salary decrease (any new minimum < old): partial re-sync — keep existing offers, run Claude for newly qualifying pre_filter_rejected
   - All other changes: full re-sync (delete stale offers, run Claude matching)
-  Log: salary-only change detected with old→new values
 
 - GET /v1/profile/has-relevant-changes (client JWT)
-  Compares current profile vs profile_editing_snapshot using same stableStringify logic as trigger-sync
   Response: { has_relevant_changes: boolean }
-  Used by R before showing Re-match confirmation box
 
-- GET /v1/profile (internal JWT)
-  Auth: client JWT (own profile) or agent JWT with ?client_id param
-  Response: { profile: Json | null, profile_ready: boolean, profile_editing_snapshot: Json | null, offer_skills: OfferSkill[] }
-  offer_skills filtered to dismissed=false only
+- GET /v1/profile (client or agent JWT)
+  Response: { profile, profile_ready, profile_editing_snapshot, offer_skills }
 
-- PATCH /v1/profile (internal JWT)
-  Auth: client JWT (own) or agent JWT with client_id in body
-  Body: { profile?: Json, profile_ready?: boolean, profile_editing_snapshot?: Json | null, client_id?: string }
-  Sets profile_synced_at = null after save
+- PATCH /v1/profile (client or agent JWT)
+  Body: { profile?, profile_ready?, profile_editing_snapshot?, client_id? }
 
 - POST /v1/profile/dismiss-skill (client JWT)
   Body: { name: string }
-  Sets offer_skills[name].dismissed = true
 
 ### Onboarding
 
-- POST /v1/onboarding/prepare-profile (internal JWT)
+- POST /v1/onboarding/prepare-profile (client JWT)
   Body: multipart/form-data, field: cv (PDF)
-  Extracts PDF text → Claude API → returns { profile: Json }
-  Normalizes work_model values: onsite/on-site → office
+  Response: { profile: Json }
 
-- POST /v1/onboarding/review-profile (internal JWT)
+- POST /v1/onboarding/review-profile (client JWT)
   Body: { profile: Json }
-  Claude returns JSON → Node builds HTML report
-  Response: HTML string with Tailwind CDN
-  Tab title: "Homo Digital - Profile Review"
+  Response: HTML string
 
 ### Skills
 
 - GET /v1/skill-categories (public)
-  Returns { categories: string[] } filtered by market='IT', ordered by sort_order
-
-- GET /v1/skills (public)
-  Params: category (required), q (optional)
-  Returns { skills: string[] } — startsWith first, then contains, limit 20
-
-- GET /v1/skills/search (public)
-  Params: q (required)
-  Returns { skills: [{ name, category }] } across all IT categories — startsWith first, then contains, limit 20
-  Empty q → []
+- GET /v1/skills (public) — Params: category, q
+- GET /v1/skills/search (public) — Params: q
 
 ### General Settings
 
 - GET /v1/general-settings (public)
-  Returns parsed general_settings JSON:
-  { currencies, industries, markets, company_types, countries, languages, language_levels, experience_levels }
+  Returns: { currencies, industries, markets, company_types, countries, languages (25 ISO 639-1 codes), language_levels, experience_levels }
 
 ### User Syncs
 
 - GET /v1/user-syncs (client JWT)
-  Returns list of sync reports, Params: limit=20
 - GET /v1/user-syncs/:id (client JWT)
 
 ### Notifications
 
 - POST /v1/notifications/send (agent JWT)
 - POST /v1/push-tokens (client JWT)
-  Body: { token, platform }
 
 ### Agent
 
 - GET /v1/agent/me (client JWT)
-  Returns { id, first_name, last_name, email, phone, photo_url }
 
 ### Clients
 
-- GET /v1/clients (agent JWT or client JWT)
-  Agent: returns list of agent's clients
-  Client: returns own user data as single-item array (with first_name/last_name from profile.basic_info)
+- GET /v1/clients (agent or client JWT)
 
 ### Prospects
 
-- POST /v1/prospects (public) — upserts by email
+- POST /v1/prospects (public)
 - GET /v1/prospects (agent JWT)
 
 ### Settings
@@ -369,36 +381,21 @@ Only action-based status changes are tracked (not initial assignment):
 ### Subscription
 
 - GET /v1/subscription/status (client JWT)
-  Returns { subscribed_to: Date | null }
+  Returns { subscribed_to, status_change_counter, status_change_counter_max }
 - POST /v1/subscriptions/checkout (client JWT)
-  Creates Stripe Checkout Session, returns { url }
+  Returns { url }
 - POST /v1/webhooks/stripe
-  Handles checkout.session.completed (upgrade to Pro) and customer.subscription.deleted (downgrade to Free)
 
 ### Feedback
 
 - POST /v1/feedback (client or agent JWT)
-  Body: { message: string, source: 'app' | 'extension' }
 
 ### Account
 
 - DELETE /v1/account (client or agent JWT)
-  Staged deletion to avoid timeout:
-  1. Supabase auth.users deletion
-  2. Batched delete user_offer_statuses (1000 rows at a time via $executeRaw)
-  3. Batched delete user_offers (1000 rows at a time via $executeRaw)
-  4. deleteMany: agent_clients, subscriptions, push_tokens, user_syncs
-  5. prisma.user.delete (CASCADE handles any remaining FKs)
-  6. CV/CL files deleted from Supabase Storage (best-effort)
-  Note: ai_usage rows intentionally NOT deleted (anonymized cost records)
-
+  Staged batched deletion (1000 rows at a time)
 - POST /v1/account/delete-reasons (client JWT)
-  Body: { user_id, delete_reasons: string[] }
-  Saves to user_deleted table
-
 - POST /v1/account/delete-feedback (client JWT)
-  Body: { user_id, feedback: string }
-  Saves to user_deleted table
 
 ---
 
@@ -409,221 +406,162 @@ Only action-based status changes are tracked (not initial assignment):
 - JustJoin: awaiting approval
 - Schedule: 6:45 AM + hourly 7:00-15:00 weekdays
 - Normalization: b2b → contract, onsite/on-site → office
-- After each offer upsert: required_skills + nice_to_have_skills upserted into skills table (was_categorized=false for new entries)
+- After each offer upsert: required_skills + nice_to_have_skills upserted into skills table
 - At start of each scrape: offers with expired_at < NOW() marked is_active=false
-- JustJoin: expired_at from API response
-- NoFluffJobs: expired_at = offer.posted + 30 days
-- offer_fetches: one row per page per source, only when new_inserts_count > 0
-- Single scrape run guaranteed (startup calls routed through runSync() to honor syncInProgress flag)
-- drop_offers_after_build setting: when true, clears all offers/user_offers/offer_fetches on startup, resets user sync state
 
 ## Matching (Claude API)
 
-- Pre-filter: workplace, salary type (derived from preferences.salary[].type), salary amount, seniority, language, red_flags, city, skill_excluded
-- Employment type filter: offer rejected if none of its employment_types match any type in user's preferences.salary[].type
+- Pre-filter: workplace, salary type (from preferences.salary[].type), salary amount, seniority, language, red_flags, city, skill_excluded
 - Claude batch: chunks configurable via settings.claude_batch_size (default 50), 3 parallel batches
-- Scoring: 0-100
-- Fields from Claude: score, role_fit, matched_reasons { pros, cons }, recommended
-- missing_skills: computed locally from (required_skills + nice_to_have_skills) minus user skills — NOT from Claude
+- Fields from Claude: score, role_fit, matched_reasons { pros, cons }, recommended, offer_language (ISO 639-1, all 25 supported)
+- missing_skills: computed locally — NOT from Claude
 - Status assignment: recommended=true OR missing_skills=[] → pending_apply; recommended=false AND missing_skills not empty → ai_rejected
-- Matching completion log: input tokens, output tokens, estimated cost (from settings.anthropic_pricing)
+- offer_language: Claude detects from offer text, supports all 25 ISO 639-1 codes (not limited to pl/en); used as cv_language on user_offer
 
 ## Offer Skills (offer_skills on users table)
 
-- Populated during matching: for ai_rejected offers, missing required/nice-to-have skills upserted to users.offer_skills
-- Only skills with was_categorized=true (real category assigned) are added
-- Schema per entry: { name, count, category_name, dismissed }
-- count: incremented each time skill appears in a new ai_rejected offer
-- dismissed: user can dismiss a skill chip (POST /v1/profile/dismiss-skill)
-- Used in R Skills tab: orange chips above existing skills, per category
+- Populated during matching for ai_rejected offers
+- Only skills with was_categorized=true added
+- Schema: { name, count, category_name, dismissed }
 
 ## Skill Categorization System
 
-- skills table auto-populated from offers on each scrape (was_categorized=false for new entries)
-- Cronjob every hour: reads up to 500 was_categorized=false skills, calls Claude API (model: settings.claude_models.skill_categorization = claude-haiku-4-5-20251001), assigns category_id + sets was_categorized=true
-- Non-matched skills also get was_categorized=true (to avoid infinite loop), category_id remains null
-- One-time script: scripts/runSkillCategorization.ts — processes all uncategorized skills immediately
-- ai_usage saved for each categorization batch
+- Cronjob every hour: up to 500 was_categorized=false skills → Claude API (claude-haiku-4-5-20251001) → assigns category
+- One-time script: scripts/runSkillCategorization.ts
 
 ## Deduplication
 
-- dedupKey fingerprint: source, title, company_name, experience_level, workplace_type, working_time, required_skills (sorted), nice_to_have_skills (sorted), employment_types (sorted), city
-- Applied in: GET /v1/user-offers (multi-status and single-status paths), buildAndSaveFreePlanSnapshot
-- Tie-break: keep highest claude_score; if equal, keep most recent matched_at
+- dedupKey: title, company_name, experience_level, workplace_type, required_skills (sorted), nice_to_have_skills (sorted), city (context-aware)
+- source and employment_types removed from key
+- city context-aware: remote-only users → city=null; hybrid/office → matched against office_location_cities
+- Tie-break: dedup_source_preference (default 'justjoin') → highest claude_score → most recent matched_at
+- Dedup before Claude: ~70% fewer Claude API calls
 
-## Free Plan Snapshot
+## Free Plan — Status Change Limit
 
-- Built at end of each sync: buildAndSaveFreePlanSnapshot in syncService.ts
-- apply_now: all pending_apply, deduplicated, capped to plan.limits.max_apply_now
-- level_up: ai_rejected AND missing_skills not empty AND (salary_contract_delta IS NOT NULL OR salary_permanent_delta IS NOT NULL), deduplicated, capped to plan.limits.max_level_up
-- counts reflect snapshot totals (already deduplicated)
-- Stored in users.free_plan_snapshot Json?
+- Replaces the old free_plan_snapshot system (removed)
+- All users served from real DB — single unified GET /v1/user-offers path
+- Free plan limit: 30 status changes total (no monthly reset)
+- Tracked via users.status_change_counter (incremented) and users.status_change_counter_max (set from plans.max_status_change on account creation)
+- status_change_counter_max=null → no limit (Pro/Premium)
+- 402 { error: 'free_limit_reached' } returned when counter >= max
+
+## CV & Cover Letter Templates
+
+- CV template: src/templates/cv.html — lang="{{LANG}}" dir="{{TEXT_DIRECTION}}" (both dynamic)
+- Cover letter template: src/templates/cover_letter.html — lang="{{LANG}}"
+- Languages: 25 languages with RTL support (Arabic, Hebrew)
+- PDF: Gotenberg ✅
 
 ## Scheduled Jobs
 
 - Fetch offers: 6:45 AM + hourly 7:00-15:00 weekdays
-- Profile sync queue: every 15 minutes — syncs users where profile_ready=true AND profile_synced_at IS NULL
-- Hourly notification job: per user.send_job_applied_notifications_hour
-- Hourly sync report job: per user.send_sync_report_notifications_hour (once per day guard)
-- Skill categorizer: every hour — categorizes up to 500 was_categorized=false skills via Claude API
+- Profile sync queue: every 15 minutes
+- Hourly notification job, hourly sync report job
+- Skill categorizer: every hour
 
 ## Push Notifications
 
-- Provider: Expo Push API (free)
-- FCM V1 with Service Account JSON configured in EAS
-- Types: sync_complete (with user_sync_id), applied
-- Token registration: POST /v1/push-tokens after login
-
-## CV & Cover Letter Templates
-
-- CV template: src/templates/cv.html
-- Cover letter template: src/templates/cover_letter.html
-- Languages: 25 languages with RTL support (Arabic, Hebrew)
-- Each language entry includes: locale, gdpr text, best_regards, cv_labels, present_label, native_label, language_names, rtl boolean
-- PDF: Gotenberg (gotenberg.railway.internal:3000) ✅
-- Storage: Supabase Storage bucket 'homo-digital'
-- Email path sanitization: @→_at_, .→_, +→_
+- Provider: Expo Push API
+- FCM V1 with Service Account JSON
+- Types: sync_complete, applied
 
 ## Supabase DB Trigger
 
 handle_new_user() — fires on INSERT OR UPDATE to auth.users:
-- Upserts public.users with id, email, photo_url (from OAuth metadata)
-- ON CONFLICT (id) DO UPDATE email, photo_url, updated_at
+- Upserts public.users with id, email, photo_url
+
+## Recent Changes (2026-06-24)
+
+### Starred offers
+- is_starred Boolean @default(false) added to user_offers
+- PATCH /v1/user-offers/:id/star — toggles is_starred, returns { is_starred }
+- is_starred returned in all user_offers responses including GET /v1/user-offers/by-url
+- GET /v1/user-offers: is_starred filter param — filters all sections to starred offers only (counts toward count_after_filters, not count)
+
+### Free plan snapshot removed
+- users.free_plan_snapshot column removed
+- buildAndSaveFreePlanSnapshot() deleted
+- All users now served from real DB — single unified GET /v1/user-offers path
+- Replaced by status_change_counter / status_change_counter_max limit system
+
+### Status change limit (Free plan)
+- plans.max_status_change Int? added (free=30, pro/premium=null)
+- users.status_change_counter Int @default(0) added
+- users.status_change_counter_max Int? added — set from plans.max_status_change on account creation
+- PATCH /v1/user-offers/:id/status enforces limit: 402 when counter >= max
+- pending_apply now allowed as a target status in PATCH /v1/user-offers/:id/status
+- GET /v1/subscription/status returns status_change_counter, status_change_counter_max
+
+### GET /v1/user-offers refactor
+- New response structure: per-section objects with count, count_after_filters, offers[], has_more
+- count = total without any filters or plan limits
+- count_after_filters = after with_salary, is_starred, generated_cv, generated_cl filters; without limits
+- status=all returns all 7 sections; status=pending_apply|ai_rejected returns apply_now+level_up
+- Per-section pagination: page_apply_now, page_level_up, page_applied, page_client_withdrawn, page_recruiter_rejected, page_offer_received, page_accepted
+- known_*_count params accepted but never suppress offers[] (used by R for blue dot logic only)
+- Filters: with_salary, is_starred, generated_cv, generated_cl, min_score, sort_by
+
+### offer_language — all 25 languages
+- Claude tool schema: enum ['pl','en'] removed → type: string, ISO 639-1
+- TypeScript type 'pl'|'en' → string throughout
+- Parser: any valid 2+ char string → lowercased; fallback 'en'
+- coverLetterGenerator.ts and cvGenerator.ts: binary pl/en check replaced with dynamic language lookup
+- cv.html: lang="pl" → lang="{{LANG}}" (dynamic, same as cover_letter.html)
+
+### sync_started_at as optimistic lock
+- buildAndSaveFreePlanSnapshot (now removed) used sync_started_at to prevent stale syncs from overwriting newer snapshots
+- sync_started_at still used for cancel/restart logic in trigger-sync
+
+## Recent Changes (2026-06-23)
+
+### free_plan_snapshot = null on matchingRelevantChange
+- trigger-sync sets free_plan_snapshot=null immediately after matchingRelevantChange=true confirmed, before any Claude work or salary branches
+- Prevents R from showing stale snapshot during re-sync
+- sync_started_at updated simultaneously as optimistic lock token
+
+### status_change_counter_max fix
+- upsert update block in POST /v1/auth/social-login now sets status_change_counter_max when null (same pattern as cv_counter_max)
+- max_status_change field name corrected (was mistakenly referenced as max_status_change on User model)
+
+## Recent Changes (2026-06-22)
+
+### Race condition fix (snapshot writes)
+- buildAndSaveFreePlanSnapshot checks sync_started_at before writing: if mismatch → skip (newer sync took over)
+- Prevents old sync from overwriting null snapshot set by newer trigger-sync
 
 ## Recent Changes (2026-06-20)
 
 ### Smart salary-only re-sync
-- POST /v1/profile/trigger-sync now detects salary-only profile changes
-- Salary increase (all new minimums >= old): partial re-sync without Claude — recalculates deltas, rejects offers below new minimum, rebuilds snapshot
-- Salary decrease (any new minimum < old): partial re-sync — keeps existing offers, runs Claude only for newly qualifying pre_filter_rejected offers
-- If salary decreased but user_offers empty: falls through to full sync
-- Concurrent trigger-sync now cancels current sync and restarts immediately (no more pending_rematch queue)
+- Salary increase: partial re-sync without Claude
+- Salary decrease: partial re-sync with Claude for newly qualifying offers
+- Concurrent trigger-sync: cancels and restarts immediately
 
 ### missing_skills computed locally
-- Removed missing_skills from Claude tool schema — Claude no longer determines missing skills
-- missing_skills computed locally: (required_skills + nice_to_have_skills) − user profile skills (case-insensitive)
+- Removed from Claude tool schema
 - Column renamed: claude_missing_skills → missing_skills
-- Claude prompt strengthened: recommended=false when required skills are from completely different domain
 
 ### Salary columns refactor
-- Removed: salary_min, salary_max, salary_type, claude_salary_comparison (never read from DB)
-- Added: salary_contract_delta Float?, salary_permanent_delta Float?
-- salary_currency remains (one currency per offer)
-- Response salary[] array: up to 2 entries (contract and/or permanent)
-- Backfill script: scripts/backfill-salary-deltas.ts
-
-### user_offer_statuses cleanup
-- No longer inserting status rows for: pre_filter_rejected, ai_rejected, pending_apply
-- Only action-based transitions tracked: applied, agent_withdrawn, recruiter_rejected, offer_received, accepted, client_withdrawn
+- Removed: salary_min, salary_max, salary_type, claude_salary_comparison
+- Added: salary_contract_delta, salary_permanent_delta
 
 ### Offer expiry
-- offers.expired_at DateTime? added
-- JustJoin: expired_at from API
-- NoFluffJobs: expired_at = posted + 30 days
-- At start of each scrape: expired offers marked is_active=false
-
-### offer_fetches improvements
-- Renamed new_upserts_count → new_inserts_count
-- Only inserted when new_inserts_count > 0
-- One row per page per source
-
-### Scraping improvements
-- Single scrape run guaranteed (startup calls route through runSync())
-- [offerSync][source] prefix in all per-source logs
-- Raw API count logged per page
-- drop_offers_after_build setting for clean DB reset
-
-### anthropic_pricing refactor
-- Keyed by exact model name: { "claude-haiku-4-5-20251001": { input: 1.0, output: 5.0 }, ... }
-- Matching completion log: input tokens, output tokens, estimated cost
-
-## Recent Changes (2026-06-19)
-
-### Offer status taxonomy
-- New status assignment rules at match time (see Status assignment rules above)
-- Level up redefined: ai_rejected + missing_skills not empty + salary_delta IS NOT NULL
-- Offers with ai_rejected + missing_skills=[] now get status=pending_apply (apply now, user decides)
-- Hidden offers: ai_rejected + salary_delta IS NULL (not shown in any section)
-
-### Employment type filter
-- Removed preferences.employment_type from profile schema and pre-filter
-- Pre-filter now derives accepted employment types from preferences.salary[].type
-- Offer rejected if none of its employment_types match any type in preferences.salary[].type
-- Employment type chips removed from wizard Preferences tab
-
-### Skill categorization
-- skills.was_categorized Boolean column added
-- Backfill: skills with real (non-Other IT/other) categories marked was_categorized=true
-- offerSync.ts: upserts skills from each offer into skills table after offer upsert
-- Cronjob every hour: categorizes uncategorized skills via Claude API (model: skill_categorization)
-- offer_skills only includes skills with was_categorized=true
-- One-time script scripts/runSkillCategorization.ts for immediate backfill
-
-### Deduplication fix
-- Dedup (dedupKey) now applied in buildAndSaveFreePlanSnapshot (was missing)
-- Dedup applied in single-status path of GET /v1/user-offers (aligned with multi-status)
-
-### Re-match flow improvements
-- GET /v1/profile/has-relevant-changes: fast check before trigger-sync
-- R calls has-relevant-changes before showing Re-match box and calling trigger-sync
-- wizard loading overlay covers full wizard during PATCH profile, has-relevant-changes, and trigger-sync calls
-
-### Wizard mode detection
-- ClientView.tsx derives onboarding vs post-onboarding mode from profile_editing_snapshot
-- profile_editing_snapshot not null OR profile_ready=true → post-onboarding (Cancel + Re-match)
-- profile_editing_snapshot null AND profile_ready=false → onboarding (Submit)
-- wizard_was_open flag in chrome.storage: wizard auto-reopens on R reopen in post-onboarding mode
-
-### Account deletion fix
-- DELETE /v1/account now uses staged batched deletion (see Account endpoint above)
-- Prevents statement timeout on users with large user_offers counts
-- Post-deletion: user_deleted table records reasons and feedback
-- Idempotency guard: second concurrent call returns 200 without re-deleting
-
-## Recent Changes (2026-06-13)
-
-### Plans & Subscriptions
-- New Prisma models: Plan, Subscription
-- Seeded plans: free (max_apply_now:15, max_level_up:10), pro (unlimited), premium (unlimited)
-- GET /v1/user-offers: applies plan limits, returns grouped response with pipe-separated status
-- Stripe: POST /v1/subscriptions/checkout, POST /v1/webhooks/stripe
-
-### Matching
-- sync_started_at added to users table
-- Overlap ratio scoring rule, pros/cons prompt simplified
-- Matching model configurable via settings.claude_models
-
-### Profile wizard flow
-- profile_editing_snapshot added
-- PATCH /v1/profile with profile_ready=true: returns matching_relevant_change boolean
-- POST /v1/profile/trigger-sync: batched deletion, clears locks
-
-## Recent Changes (2026-06-12)
-
-- claude_matched_reasons: { pros: string[], cons: string[] }
-- Claude batch size configurable, 3 parallel batches, tool_use structured output
-- DELETE /v1/account: explicit batch delete
-- RLS on user_offers, indexes added
+- offers.expired_at added
 
 ## Known Issues / TODO
 
-- Supabase Realtime not working for user_offers (text type user_id issue)
-- Current workaround: polling every 30s in R
-- Better fix: in-memory SSE manager in API
-- Ghosting Detector: cron at 3am, applied > 21 days → ghosted_by_recruiter
+- Supabase Realtime not working for user_offers — workaround: polling every 30s; better fix: in-memory SSE manager
+- Ghosting Detector: cron at 3am, applied > 21 days → ghosted_by_recruiter status
 - Micro-feedback loop: popup on client_withdrawn from pending_apply
 - profile_calibrated_at timestamp for Profile Review tracking
 - user_id columns: migrate from text to uuid across all tables
 - homodigital.io rewrite for Free/Pro/Premium model
-- Free "Frozen offers": banner "You have X new matches — upgrade to see them"
-- claude_recommended field: redundant with status, consider removing in future cleanup
+- claude_recommended field: redundant with status, consider removing
 - Chrome Notifications API in R for new-offer alerts
-- "Scan this page for job offer" feature in R
-- Interview recording feedback feature (Premium, GDPR-constrained)
+- "Scan this page for job offer" feature in R (Free: 5/mo, Pro: unlimited)
+- Interview recording feedback (Premium, GDPR-constrained)
 - Homo Digital employer API (long-term)
-- Starred offers feature (★ toggle on offer card, filter by starred, always visible regardless of plan)
-- Email to NoFluffJobs requesting faster API response times
 - Weekly digest email: "You have X new matches"
-- Ghosting detector: applied > 21 days without response → ghosted_by_recruiter status
 - Salary negotiation hints based on market data
 - pending_rematch column: can be removed (no longer used)
+- Email to NoFluffJobs requesting faster API response times
