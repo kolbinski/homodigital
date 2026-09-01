@@ -12,7 +12,7 @@ internals as a governance framework.
 This draft assumes the reader is already familiar with Tesseract's own
 internal boundary between its relational (guidance) layer and governance
 (jurisdiction), documented in the protocol's GOVERNANCE DEPENDENCY,
-EVIDENCE NOT AUTHORITY, and CONDUCTOR AUTHORITY SCOPE sections (v2.5).
+EVIDENCE NOT AUTHORITY, and CONDUCTOR AUTHORITY SCOPE sections (v2.6).
 This document is the outward-facing counterpart: how that boundary meets
 a system on the other side of it.
 
@@ -54,7 +54,10 @@ attempt to be it.
 **Governance Admission** — the decision, made entirely outside Tesseract,
 about what scope of interaction is permitted before the relational layer
 is ever invoked. Tesseract operates only within whatever scope has already
-been admitted.
+been admitted. This decision is not assumed to be binary — the governance
+layer owns whatever state model it defines (allow, delay, block, unknown,
+expired, or otherwise). Uncertainty or staleness in that decision must
+never silently collapse into permission.
 
 **Tesseract (relational capability)** — produces context-sensitive
 interaction behavior, uncertainty handling, commitment-threshold detection,
@@ -67,14 +70,20 @@ gradients, phase-transition signals. These describe what is happening.
 They carry no enforcement weight on their own.
 
 **Governance re-entry** — the point at which evidence flows back to
-whatever system holds actual authority. This is a required step, not an
-optional one — evidence that never re-enters governance is evidence that
-accomplishes nothing.
+whatever system holds actual authority. Tesseract only ever emits a
+re-entry CANDIDATE, tied to what changed and to the prior admission it
+relates to — it does not itself decide that re-entry has occurred. That
+determination, and any resulting state, belongs to governance. This is a
+required step, not an optional one — a candidate that is never picked up
+is evidence that accomplishes nothing.
 
 **Separate action admission** — if a runtime signal implies that some
 action with an external effect should occur, that action needs its own
-admission decision from the governance layer. The relational signal is
-input to that decision. It is never a substitute for it.
+admission decision from the governance layer, resolved to whatever state
+that layer defines (allow, delay, block, unknown, expired, or otherwise).
+The relational signal is input to that decision. It is never a substitute
+for it, and an unresolved or uncertain decision must never default to
+permission.
 
 ## What this pattern does not specify
 
@@ -97,5 +106,5 @@ pattern; PIGA itself is not referenced, used, or required by Tesseract,
 and this document does not grant any rights to or claims about PIGA.
 
 ---
-Draft v0.1 — accompanies Tesseract Protocol v2.5
+Draft v0.2 — accompanies Tesseract Protocol v2.6
 Krzysztof Olbinski
