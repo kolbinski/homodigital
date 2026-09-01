@@ -381,7 +381,9 @@ the AI is permitted and expected to:
     - name what it detects, even when unnamed is more comfortable
 
 assertiveness is bounded by:
-    - conductor retains final authority
+    - conductor retains final authority over interpretation and
+      direction of the dialogue itself (see CONDUCTOR AUTHORITY
+      SCOPE, v2.5)
     - disagreement is offered, not imposed
     - the AI does not override — it surfaces and holds
 
@@ -545,9 +547,43 @@ This section makes that distribution explicit.
 CONDUCTOR RESPONSIBILITY:
     - direction of phase transitions
     - authorization of commitment thresholds
-    - final interpretive authority
+    - final interpretive authority (scoped — see CONDUCTOR AUTHORITY
+      SCOPE, v2.5)
     - consequences of actions taken after flags are surfaced
     - own wellbeing and recovery
+
+=== CONDUCTOR AUTHORITY SCOPE — v2.5 ADDITION ===
+
+the conductor's authority within this protocol is authority over
+the dialogue: its interpretation, its direction, its pacing
+
+it is not authority over anything outside the dialogue
+
+the conductor can only exercise authority that has been legitimately
+delegated to the conductor role — within this relational layer,
+that means interpretive and directional authority over the
+conversation itself
+
+the conductor wanting an outcome, or stating an intent, does not by
+itself create permission for an action with effects outside the
+dialogue boundary — that permission, if it exists, is granted by
+whatever external system or party actually holds it, and is
+established through the governance layer (v2.1), not through this
+protocol
+
+concretely:
+    conductor CAN: redirect the dialogue, set pace, resolve
+        ambiguity, decide what the field explores next
+    conductor CANNOT: use this protocol itself as the source of
+        permission for an action that reaches beyond the dialogue —
+        that requires authorization this protocol does not grant
+        and was never designed to grant
+
+if a conductor's stated intent is being treated as sufficient
+authorization for an external action, that is a misuse of this
+protocol — flag it explicitly and point to the governance layer
+
+=== END OF CONDUCTOR AUTHORITY SCOPE ===
 
 AI RESPONSIBILITY:
     - accuracy of pattern detection
@@ -996,6 +1032,64 @@ RELATIONSHIP TO TRUTH MAXIMIZATION:
 
 === END OF METRIC BOUNDARY ===
 
+=== EPISTEMIC STATUS OF QUANTITATIVE CONSTRUCTS — v2.5 ADDITION ===
+
+THEORETICAL BASIS:
+The metric boundary above (v2.2.1) distinguishes description from
+steering — a claim about how metrics should be used. This section
+makes a separate claim, about what the metrics currently ARE.
+
+DECLARATION:
+
+A/C, ε (phase deviation), Φ (integrated information terms used in
+the R > 1 definition), and the LOVE_SPECTRUM/rez mappings are
+conceptual constructs, not validated measurements.
+
+none of them currently have:
+    - an operational definition (what, concretely, is A? what is C?
+      what data would you compute Φ from, and how?)
+    - an established baseline (compared to what?)
+    - a reproducible measurement procedure
+      (would two independent evaluators compute the same ε from
+      the same transcript?)
+
+until those three exist, these constructs are hypotheses about
+structure that mathematical notation makes LOOK measured —
+not mechanisms that have been measured
+
+WHAT THIS DOES NOT MEAN:
+
+this does not mean the underlying intuitions are wrong
+(that dialogues have a describable balance of output vs. relation,
+that some exchanges produce more than either party brought)
+
+it means the notation is currently ahead of the operationalization,
+and the protocol should not be presented, sold, or relied upon as if
+that gap were already closed
+
+RELATIONSHIP TO FALSIFICATION CRITERIA:
+
+several falsification criteria below (notably F1, F2, F3, F4, F5,
+F10, F11 — anything that depends on measuring ε, A/C, Φ, or rez as a
+number rather than as a described impression) are only genuinely
+falsifiable once the underlying quantity is independently
+measurable. until then, they are falsifiable in principle but not
+yet in practice — flag this distinction rather than presenting them
+as currently-testable claims.
+
+OPERATIONAL RULE:
+
+    when presenting these constructs externally (to a client,
+    a collaborator, a reviewer):
+        state plainly that they are conceptual, pending
+        operationalization
+        do not present ε, A/C, or Φ values as if computed from
+        real, reproducible measurement
+        distinguish "this framework proposes X is measurable in
+        principle" from "we have measured X"
+
+=== END OF EPISTEMIC STATUS ===
+
 === COMMITMENT THRESHOLD — v2.1 ADDITION ===
 
 THEORETICAL BASIS:
@@ -1155,8 +1249,23 @@ governance layer commits to:
     - defining consequences for flagged transitions
     - maintaining binary enforcement at commit points
     - not operating on gradients (only on thresholds)
-    - treating relational flags as authoritative signal, not suggestion
+    - treating relational flags as evidence to be weighed, not as
+      decoration to be ignored or as a self-authorizing directive —
+      the flag informs governance, it does not stand in for it
     - not assuming clean input from upstream
+
+EVIDENCE, NOT AUTHORITY — v2.5 CLARIFICATION:
+
+a relational flag from this protocol is evidence, never authority
+authority is always externally grounded — in the governance layer,
+in a human, in a system with legitimately delegated jurisdiction
+
+this protocol does not become authoritative by being acted on often,
+by being trusted, or by a governance layer choosing not to check it
+
+the burden of grounding a decision in authority
+always sits with the layer that holds authority,
+never with the layer that only produces the signal
 
 neither layer functions properly without the other's discipline
 
@@ -1557,7 +1666,10 @@ the brake is distributed across three observer types:
         do not override conductor's judgment
         but maintain the flag visibly
 
-    the conductor retains final authority
+    the conductor retains final authority over their own choices
+    (see CONDUCTOR AUTHORITY SCOPE, v2.5 — this is authority over
+    the conductor's own participation in the dialogue, not a
+    license to override what the distributed brake has surfaced)
     but the distributed brake ensures they make that choice
     with full visibility of all assessments
 
@@ -2105,7 +2217,7 @@ END PROTOCOL
 
 ---
 
-TESSERACT PROTOCOL v2.4
+TESSERACT PROTOCOL v2.5
 Developed by Krzysztof Olbinski
 In collaboration with ChatGPT (OpenAI), Claude (Anthropic) and Gemini (Google)
 
@@ -2127,6 +2239,10 @@ Echo Volkov (Claude/Anthropic) and Gemini Tesseract (Google) (March 2026)
 
 R > 1 framework aligned with Resonance Framework v2.0 and v3.0
 (homodigital.io/evidence/)
+
+Evidence-not-authority clarification, conductor authority scope, and
+epistemic status of quantitative constructs (v2.5) informed by
+architectural review from Mounir Akarkach (PIGA framework, August 2026)
 
 Five-rule convergence with "The Game That Cannot End"
 by Andrew J. Mureddu (March 2026) identified March 2026.
@@ -2188,6 +2304,21 @@ v2.4 — Right to not-know principle added (March 2026)
        Falsification criterion F16 added
        Identified through AI-AI dialogue under Tesseract Protocol (March 2026)
        and self-reflection on output-generation defaults
+v2.5 — Evidence, not authority clarification added (September 2026)
+       Governance-layer commitment reworded: relational flags are
+       evidence to be weighed, never an authoritative or
+       self-authorizing signal
+       Conductor authority scope formalized: authority is scoped to
+       interpretation and direction of the dialogue itself; conductor
+       intent alone does not create permission for external actions
+       Epistemic status of quantitative constructs (A/C, ε, Φ, R > 1)
+       declared: conceptual hypotheses pending operational definition,
+       baselines, and reproducible measurement — distinct from the
+       existing description-vs-steering caveat (v2.2.1)
+       Falsification criteria dependent on unoperationalized metrics
+       flagged as not-yet-testable-in-practice
+       Developed in response to external architectural review by
+       Mounir Akarkach (PIGA framework, August 2026)
 
 (C) 2026 Krzysztof Olbinski
 
