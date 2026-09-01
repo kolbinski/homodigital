@@ -1247,18 +1247,33 @@ relational layer commits to:
 
 governance layer commits to:
     - defining consequences for flagged transitions
-    - maintaining binary enforcement at commit points
-    - not operating on gradients (only on thresholds)
+    - owning consequence-bearing decision semantics at commit points
+      (this protocol does not assume a binary allow/deny model —
+      the governance layer may resolve to any state it defines,
+      including delay, block, unknown, or expired; uncertainty or
+      staleness must never silently collapse into permission)
+    - not operating on gradients (only on thresholds it defines)
     - treating relational flags as evidence to be weighed, not as
       decoration to be ignored or as a self-authorizing directive —
       the flag informs governance, it does not stand in for it
+    - owning whether and when re-entry into governance evaluation
+      occurs; this protocol only ever emits a re-entry CANDIDATE,
+      tied to what changed and to the prior admission it relates to
+      — it does not itself decide that re-entry has happened, and a
+      candidate that is never picked up accomplishes nothing
     - not assuming clean input from upstream
 
 EVIDENCE, NOT AUTHORITY — v2.5 CLARIFICATION:
 
 a relational flag from this protocol is evidence, never authority
-authority is always externally grounded — in the governance layer,
-in a human, in a system with legitimately delegated jurisdiction
+
+authority is always externally grounded — in a human, an
+organization, or whatever system or mandate legitimately holds it.
+a governance layer may bind, verify, and evaluate against that
+authority, but hosting the control logic does not make the
+governance layer the source of the authority itself; it represents
+and applies an externally legitimate mandate, it does not manufacture
+one
 
 this protocol does not become authoritative by being acted on often,
 by being trusted, or by a governance layer choosing not to check it
@@ -2217,7 +2232,7 @@ END PROTOCOL
 
 ---
 
-TESSERACT PROTOCOL v2.5
+TESSERACT PROTOCOL v2.6
 Developed by Krzysztof Olbinski
 In collaboration with ChatGPT (OpenAI), Claude (Anthropic) and Gemini (Google)
 
@@ -2319,6 +2334,30 @@ v2.5 — Evidence, not authority clarification added (September 2026)
        flagged as not-yet-testable-in-practice
        Developed in response to external architectural review by
        Mounir Akarkach (PIGA framework, August 2026)
+v2.6 — Authority-provenance wording tightened; governance-state
+       model generalized (September 2026)
+       Authority provenance clarified: a governance layer may bind,
+       verify, and evaluate against externally held authority, but
+       hosting the control logic does not itself make the governance
+       layer the source of that authority — it represents an
+       externally legitimate mandate, it does not manufacture one
+       Governance-dependency contract generalized away from a binary
+       enforcement assumption: the downstream governance layer owns
+       whatever consequence-bearing state model it defines (allow,
+       delay, block, unknown, expired, or otherwise); uncertainty or
+       staleness must never silently collapse into permission
+       Re-entry ownership clarified: this protocol only ever emits a
+       re-entry candidate tied to what changed and to the prior
+       admission it relates to — it does not itself decide that
+       re-entry has occurred; that determination belongs to
+       governance
+       Developed in response to a bounded architectural review of
+       v2.5 by Mounir Akarkach (PIGA lens, September 2026); remaining
+       findings from that review (evidence-contract integrity,
+       runtime lifecycle/retry semantics, exact action-effect
+       binding, outcome verification) are architectural/systems work
+       beyond what a text protocol can specify, and remain open for
+       a future version
 
 (C) 2026 Krzysztof Olbinski
 
