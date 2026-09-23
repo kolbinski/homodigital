@@ -36,6 +36,7 @@ Sprzedający oświadcza, że:
 
 1. Strony zobowiązują się zawrzeć umowę sprzedaży Lokalu (umowę przyrzeczoną) w formie aktu notarialnego w terminie do dnia **[data]**.
 2. Umowa przyrzeczona zostanie zawarta w kancelarii notarialnej **[nazwa / adres]** lub w innej kancelarii wskazanej przez Kupującego, o czym Kupujący zawiadomi Sprzedającego z co najmniej **[7]**-dniowym wyprzedzeniem.
+3. Kupujący jest uprawniony do wskazania jako nabywcy Lokalu w umowie przyrzeczonej swojego syna, [imię i nazwisko], na co Sprzedający wyraża zgodę. Wpłacona przez Kupującego zaliczka zostanie w takim przypadku zaliczona na poczet ceny płaconej przez wskazanego nabywcę, a w razie niezawarcia umowy przyrzeczonej podlega zwrotowi w gotówce Kupującemu.
 
 ## § 4. Cena
 
@@ -46,7 +47,7 @@ Sprzedający oświadcza, że:
 
 ## § 5. Zaliczka
 
-1. Kupujący wpłaca Sprzedającemu kwotę **11 000 zł** (słownie: **jedenaście tysięcy** złotych) tytułem **zaliczki** na poczet ceny, **w gotówce w dniu podpisania niniejszej umowy, co Sprzedający kwituje**.
+1. Kupujący wpłaca Sprzedającemu kwotę **11 000 zł** (słownie: **jedenaście tysięcy** złotych) tytułem **zaliczki** na poczet ceny, **w gotówce w dniu podpisania niniejszej umowy, co Sprzedający niniejszym potwierdza**.
 2. Strony zgodnie oświadczają, że wpłacona kwota **stanowi zaliczkę, a nie zadatek w rozumieniu art. 394 Kodeksu cywilnego**.
 3. W przypadku zawarcia umowy przyrzeczonej zaliczka zostanie zaliczona na poczet ceny.
 4. W przypadku niezawarcia umowy przyrzeczonej, z jakiejkolwiek przyczyny, Sprzedający zwróci Kupującemu zaliczkę w pełnej wysokości w gotówce w terminie **[14]** dni od upływu terminu wskazanego w § 3 ust. 1.
