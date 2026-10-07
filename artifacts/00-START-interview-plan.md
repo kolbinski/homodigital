@@ -2,18 +2,18 @@
 
 ## Reading order
 
-| File                                    | Purpose                                                                                                             |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `01-inherited-project.md`               | [What the app did before you touched it. Every file, one by one.]/view.html?file=artifacts/01-inherited-project.md) |
-| `02-bugs-and-fixes.md`                  | All bugs and how we fixed them, with "before" and "after" code.                                                     |
-| `03-AI_WORKFLOW-tools-used.md`          | The "Tools used" chapter - who did what.                                                                            |
-| `04-AI_WORKFLOW-what-i-asked.md`        | The "What I asked, and what I got" chapter.                                                                         |
-| `05-AI_WORKFLOW-where-i-intervened.md`  | The "Where I intervened" chapter - 10 interventions.                                                                |
-| `06-AI_WORKFLOW-moment-ai-was-wrong.md` | The chapter about the test that could not fail.                                                                     |
-| `07-AI_WORKFLOW-how-i-validated.md`     | The validation chapter: tests, regression, mutations.                                                               |
-| `08-AI_WORKFLOW-not-used-ai.md`         | The "What I deliberately did NOT use AI for" chapter.                                                               |
-| `09-AI_WORKFLOW-ownership-note.md`      | Decisions, risks, what you would do differently.                                                                    |
-| `10-code-changes.md`                    | Every code change: before and after, plus new files.                                                                |
+| File                                    | Purpose                                                                                                              |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `01-inherited-project.md`               | [What the app did before you touched it. Every file, one by one.](/view.html?file=artifacts/01-inherited-project.md) |
+| `02-bugs-and-fixes.md`                  | All bugs and how we fixed them, with "before" and "after" code.                                                      |
+| `03-AI_WORKFLOW-tools-used.md`          | The "Tools used" chapter - who did what.                                                                             |
+| `04-AI_WORKFLOW-what-i-asked.md`        | The "What I asked, and what I got" chapter.                                                                          |
+| `05-AI_WORKFLOW-where-i-intervened.md`  | The "Where I intervened" chapter - 10 interventions.                                                                 |
+| `06-AI_WORKFLOW-moment-ai-was-wrong.md` | The chapter about the test that could not fail.                                                                      |
+| `07-AI_WORKFLOW-how-i-validated.md`     | The validation chapter: tests, regression, mutations.                                                                |
+| `08-AI_WORKFLOW-not-used-ai.md`         | The "What I deliberately did NOT use AI for" chapter.                                                                |
+| `09-AI_WORKFLOW-ownership-note.md`      | Decisions, risks, what you would do differently.                                                                     |
+| `10-code-changes.md`                    | Every code change: before and after, plus new files.                                                                 |
 
 Each file from 03 to 09 ends with a **"Questions you may be asked"** section with ready answers.
 
