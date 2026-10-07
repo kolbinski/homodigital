@@ -2,18 +2,18 @@
 
 ## Reading order
 
-| File | Purpose |
-|---|---|
-| `01-inherited-project.md` | What the app did before you touched it. Every file, one by one. |
-| `02-bugs-and-fixes.md` | All bugs and how we fixed them, with "before" and "after" code. |
-| `03-AI_WORKFLOW-tools-used.md` | The "Tools used" chapter - who did what. |
-| `04-AI_WORKFLOW-what-i-asked.md` | The "What I asked, and what I got" chapter. |
-| `05-AI_WORKFLOW-where-i-intervened.md` | The "Where I intervened" chapter - 10 interventions. |
-| `06-AI_WORKFLOW-moment-ai-was-wrong.md` | The chapter about the test that could not fail. |
-| `07-AI_WORKFLOW-how-i-validated.md` | The validation chapter: tests, regression, mutations. |
-| `08-AI_WORKFLOW-not-used-ai.md` | The "What I deliberately did NOT use AI for" chapter. |
-| `09-AI_WORKFLOW-ownership-note.md` | Decisions, risks, what you would do differently. |
-| `10-code-changes.md` | Every code change: before and after, plus new files. |
+| File                                    | Purpose                                                                                                             |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `01-inherited-project.md`               | [What the app did before you touched it. Every file, one by one.]/view.html?file=artifacts/01-inherited-project.md) |
+| `02-bugs-and-fixes.md`                  | All bugs and how we fixed them, with "before" and "after" code.                                                     |
+| `03-AI_WORKFLOW-tools-used.md`          | The "Tools used" chapter - who did what.                                                                            |
+| `04-AI_WORKFLOW-what-i-asked.md`        | The "What I asked, and what I got" chapter.                                                                         |
+| `05-AI_WORKFLOW-where-i-intervened.md`  | The "Where I intervened" chapter - 10 interventions.                                                                |
+| `06-AI_WORKFLOW-moment-ai-was-wrong.md` | The chapter about the test that could not fail.                                                                     |
+| `07-AI_WORKFLOW-how-i-validated.md`     | The validation chapter: tests, regression, mutations.                                                               |
+| `08-AI_WORKFLOW-not-used-ai.md`         | The "What I deliberately did NOT use AI for" chapter.                                                               |
+| `09-AI_WORKFLOW-ownership-note.md`      | Decisions, risks, what you would do differently.                                                                    |
+| `10-code-changes.md`                    | Every code change: before and after, plus new files.                                                                |
 
 Each file from 03 to 09 ends with a **"Questions you may be asked"** section with ready answers.
 
@@ -31,15 +31,15 @@ Each file from 03 to 09 ends with a **"Questions you may be asked"** section wit
 
 ## 40-minute presentation plan
 
-| Minutes | What you show | File to open |
-|---|---|---|
-| 0-3 | The business problem (INC-702 + the second report) | `docs/incident.md` |
-| 3-8 | The contract: absent key / `null` / value, `expectedVersion`, 409 | `docs/api-contract.md` |
-| 8-15 | The three causes in the original code | `git show dc3f22e:src/client/buildSavedSearchPatch.js` |
-| 15-25 | The solution layer by layer: API, store, client | `src/app.js`, `savedSearchStore.js`, `computeSavedSearchEdits.js`, `submitSavedSearchEdit.js` |
-| 25-32 | Tests and proof: `npm test`, `npm run verify`, regression on both versions | terminal |
-| 32-38 | AI workflow: the best "caught AI failure" + 2-3 interventions | `AI_WORKFLOW.md` |
-| 38-40 | Residual risks and what comes next before production | `AI_WORKFLOW.md`, ownership note |
+| Minutes | What you show                                                              | File to open                                                                                  |
+| ------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| 0-3     | The business problem (INC-702 + the second report)                         | `docs/incident.md`                                                                            |
+| 3-8     | The contract: absent key / `null` / value, `expectedVersion`, 409          | `docs/api-contract.md`                                                                        |
+| 8-15    | The three causes in the original code                                      | `git show dc3f22e:src/client/buildSavedSearchPatch.js`                                        |
+| 15-25   | The solution layer by layer: API, store, client                            | `src/app.js`, `savedSearchStore.js`, `computeSavedSearchEdits.js`, `submitSavedSearchEdit.js` |
+| 25-32   | Tests and proof: `npm test`, `npm run verify`, regression on both versions | terminal                                                                                      |
+| 32-38   | AI workflow: the best "caught AI failure" + 2-3 interventions              | `AI_WORKFLOW.md`                                                                              |
+| 38-40   | Residual risks and what comes next before production                       | `AI_WORKFLOW.md`, ownership note                                                              |
 
 **Tip:** show the commit history (`git log --oneline`). It tells the story of your step-by-step work better than any slide.
 
@@ -61,6 +61,7 @@ The reviewer may ask for a live change to see how you work with AI. What counts 
 
 **1. "Add a new filter, e.g. `brand`."**
 Trap: the list of keys lives in **three** places:
+
 - `src/app.js` → `FILTER_KEYS` (server validation),
 - `src/client/buildSavedSearchPatch.js` → `FILTER_KEYS` (client),
 - `src/client/SavedSearchEditor.jsx` → a hard-coded list in the JSX: `['query', 'category', 'dateFrom', 'dateTo', 'priceMax'].map(...)`.
