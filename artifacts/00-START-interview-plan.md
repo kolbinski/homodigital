@@ -4,6 +4,7 @@
 
 | File                                    | Purpose                                                                                                               |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `11-interview-script.md`                | [Interview script: 40-minute walkthrough.](/view.html?file=artifacts/11-interview-script.md)                          |
 | `01-inherited-project.md`               | [What the app did before you touched it. Every file, one by one.](/view.html?file=artifacts/01-inherited-project.md)  |
 | `02-bugs-and-fixes.md`                  | [All bugs and how we fixed them, with "before" and "after" code.](view.html?file=artifacts/02-bugs-and-fixes.md)      |
 | `03-AI_WORKFLOW-tools-used.md`          | [The "Tools used" chapter - who did what.](view.html?file=artifacts/03-AI_WORKFLOW-tools-used.md)                     |
