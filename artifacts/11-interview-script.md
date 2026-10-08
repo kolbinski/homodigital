@@ -126,6 +126,28 @@ If you look at the merge logic here - `null` deletes the key, a value sets it, a
 
 So to sum up the diagnosis: the client turned "don't touch" into "delete", the editor resent fields it shouldn't have and never sent a version, and the server didn't check versions or validate anything. Three layers, three problems, and you had to fix all three.
 
+### The prior AI recommendation (`docs/ai-recommendation.md`)
+
+**[Open `docs/ai-recommendation.md`]**
+
+Before I move on to the fix, there's one more file I want to show you, because I think it was put there on purpose, as a little test. It's called `ai-recommendation.md`, and it contains advice from a "previous AI" that supposedly looked at this bug before me.
+
+The advice says, more or less: the client and server types are already aligned, so just regenerate the client types from the OpenAPI schema, and the filter-loss bug will resolve itself, because matching types guarantee the payloads agree.
+
+And I have to say, it sounds very convincing. It's confident, it uses the right vocabulary, and regenerating types from a schema is a genuinely good practice in general. But for this particular bug, it's simply wrong, and I want to explain why, because I think the reason is the most important idea in the whole task.
+
+Types check the shape of the data. They don't check its meaning. Let's think about what the generated type for the filters would look like. It would be something like: `priceMax` is optional, and it can be a number or `null`. Now look at what the broken serializer was actually sending - `priceMax: null` for a field the user never touched. Is that a valid value for that type? Yes, it is. `null` is explicitly allowed. So the type checker would look at the broken request and say "perfect, everything matches". It has no way of knowing that this `null` should actually have been a missing key.
+
+In other words, the difference between "absent" and `null` - which is the whole bug - is a difference in meaning, not in shape. Both are perfectly legal according to the type. So you could regenerate the types a hundred times, and that loop with `?? null` in the serializer would still be there, still turning "don't touch" into "delete".
+
+And on top of that, the advice doesn't say anything at all about the second report - the lost update. Concurrency isn't a typing problem. No type in the world can tell you that someone else saved a newer version a second ago. That needs a version check at runtime.
+
+There's also a practical point: generating types from OpenAPI would mean adding a code generator, and probably a build step and a new dependency, which the task explicitly says not to do.
+
+What I find interesting is that the file itself ends with a little hint: it says to evaluate this before relying on it, because type agreement is not the same as agreement on update semantics. So it's basically a test of whether you follow confident-sounding AI advice, or whether you check it against the actual problem first. And for me that was a nice preview of the whole AI part of this task - the AI can sound completely right and still be fixing the wrong thing.
+
+By the way, Claude Code reached the same conclusion in my very first prompt, where I asked it only for a diagnosis, without changing any code. I asked it explicitly to evaluate this recommendation, and it rejected it for the same reason - types guard shape, not semantics. But I didn't use this file as my main example of an AI mistake, because the template asks for a moment from my own workflow, and this one was planted in the repository on purpose. I'll show you the real one later.
+
 ---
 
 ## Part 4: The fix, layer by layer (15-25 min)
@@ -376,5 +398,7 @@ If they ask you to **add a new filter**, mention right away that the list of fil
 If they ask you to **show the other user's change on a conflict**, you can say: "The server already returns the current state in the 409 body, and `submitSavedSearchEdit` already passes it through as `result.search`. So this is only a UI change - I'd store it in the component's state and render it next to the form."
 
 If they ask you to **validate dates**, say: "The format check goes into `validatePatchBody`. But the 'start before end' check has to happen on the merged result inside the store, because a single patch might only contain one of the two dates."
+
+If they ask you **why you didn't just regenerate the types**, as `docs/ai-recommendation.md` suggests, say: "Because types check shape, not meaning. `priceMax: null` is a valid value for the type, so the broken request would pass type checking. The bug is about absent versus `null`, and both are legal according to the type. And types can't detect a concurrent edit at all - that needs a version check at runtime."
 
 If they ask you to **use an `If-Match` header** instead of a version in the body, say: "That's the standard HTTP way, and I like it. But `verify.js`, which I'm not allowed to change, sends the version in the body, so I'd support both."
