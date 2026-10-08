@@ -1,202 +1,219 @@
-# Interview script: 40-minute walkthrough
+# Interview script: the long, spoken version
 
-Read top to bottom. Each block: **Open** (file and lines), **Show** (the code on screen), **Say** (what to tell the reviewer). Line numbers refer to the submitted repo.
+This is the same walkthrough as `11-interview-script.md`, but written the way you would actually talk - as if you were explaining the whole thing to a junior developer sitting next to you. Lines in **[brackets]** are stage directions: what to open or run. Everything else is meant to be read out loud.
 
-## Before the call (2 minutes of setup)
-
-Open a terminal in the repo and have these ready:
-
-```bash
-git log --oneline                                          # the story of the work
-git show dc3f22e:src/client/buildSavedSearchPatch.js       # original serializer
-git diff dc3f22e -- src/                                   # every source change
-npm test
-npm run verify
-```
-
-Open in the editor, as tabs, in this order: `docs/incident.md`, `docs/api-contract.md`, `src/app.js`, `src/server/savedSearchStore.js`, `src/client/computeSavedSearchEdits.js`, `src/client/submitSavedSearchEdit.js`, `src/client/buildSavedSearchPatch.js`, `test/regression.test.js`, `test/client-flow.test.js`, `AI_WORKFLOW.md`.
-
-## Plan
-
-| Min | Topic | Main files |
-|---|---|---|
-| 0-3 | Business problem | `docs/incident.md` |
-| 3-8 | The contract | `docs/api-contract.md` |
-| 8-15 | Three causes in the original code | `git show dc3f22e:...` |
-| 15-25 | The fix, layer by layer | `app.js`, `savedSearchStore.js`, `computeSavedSearchEdits.js`, `submitSavedSearchEdit.js`, `buildSavedSearchPatch.js`, `SavedSearchEditor.jsx` |
-| 25-32 | Proof | terminal, `regression.test.js`, `client-flow.test.js` |
-| 32-38 | AI workflow | `AI_WORKFLOW.md` |
-| 38-40 | Residual risks | `AI_WORKFLOW.md` ownership note |
+You don't have to read every word. If the reviewer interrupts with a question, answer it, and then pick up from the next heading.
 
 ---
 
-## 0-3 min: The business problem
+## Opening (about 1 minute)
 
-**Open:** `docs/incident.md`
+So, thanks for having me. Let me give you a quick map of how I'd like to walk through this, and then you can stop me at any point.
 
-**Say:**
-> "There are two reports. INC-702: a user edits one filter of a saved search, for example the end date, saves, and the other filters disappear. The second, quieter report: two teammates edit the same saved search, and one person's change disappears without any error.
->
-> The requirement fits in one sentence from the incident: an edit changes what the user changed and nothing else. And a concurrent edit must be rejected with 409, never silently overwritten.
->
-> Also worth noting: the incident says the existing tests are green. That turned out to be the theme of the whole task - green tests that don't check what they claim."
+I'm going to start with the business problem, because I think everything else only makes sense once you see what actually went wrong for the users. Then I'll show you the API contract, which turned out to be the key to the whole task. After that I'll go into the original code and show you the three places where it broke that contract. Then I'll walk through my fix, layer by layer - server first, then the client. Then I'll prove it works, with the tests and with the regression check. And at the end I'll talk about how I worked with AI on this, including the most interesting mistake the AI made, and what risks I think are still left before this could go to production.
+
+Feel free to interrupt me at any point - I'm happy to go deeper anywhere.
 
 ---
 
-## 3-8 min: The contract
+## Part 1: The business problem (0-3 min)
 
-**Open:** `docs/api-contract.md` - the three-case table at the top.
+**[Open `docs/incident.md`]**
 
-**Show:**
+Okay, so let's start with what the users actually reported.
 
-| In the patch | Meaning |
-|---|---|
-| key with a value | set that filter |
-| key with `null` | clear only that filter |
-| key absent | leave it unchanged |
+The app is a saved-search feature. Think of an online shop with laptops. You set up a few filters - you're searching for "laptops", category "Electronics", a date range, and a maximum price of 500. And because you don't want to click all of that every day, you save that whole set of filters under a name, like "Cheap laptops". That's a saved search.
 
-**Say:**
-> "This table is the whole task. An absent key and `null` are two different instructions. Absent means 'I'm not touching this'. `null` means 'delete this'. Every bug I found is a place where those two got mixed up.
->
-> The second part is concurrency: the client sends `expectedVersion`, the version it last read. If the stored version is different, the server returns 409 and applies nothing."
+Now, the first report, INC-702, goes like this. A user opens "Cheap laptops", changes just one thing - the end date - and clicks save. Then they reload the page, and the category is gone, the price cap is gone, the start date is gone. The only thing left is the date they just changed. So editing one filter silently wiped out four others. From the user's point of view, that's really bad, because nothing told them anything went wrong. The save looked successful.
 
-**Open:** `docs/api-contract.md` line 33 (`## Request validation`) and line 68 (`## Client responsibilities`).
+The second report is quieter, but I'd argue it's just as serious. Saved searches can be shared within a team. So two people open the same saved search, both make a change, both click save - and one person's change just disappears. No error, no warning. Whoever saved last simply wins, and the other person's work is gone. In the industry we call that a "lost update".
 
-**Say:**
-> "I extended the contract with what was implicit: the version is required, unknown keys are rejected, the 409 body carries the current state, and the client never auto-retries a 409."
+And there's one sentence in this incident that I think sums up the requirement really nicely: an edit should change what the user changed, and nothing else. That's basically the whole task in one line.
+
+There's one more detail in the incident that I want you to notice, because it comes back later. It says the existing tests were green. So the tests were passing, and the product was still broken. That turned out to be the theme of the whole exercise for me - tests that look fine, but don't actually check what they claim to check.
 
 ---
 
-## 8-15 min: The three causes in the original code
+## Part 2: The contract (3-8 min)
 
-### Cause 1: the serializer turns "absent" into "delete"
+**[Open `docs/api-contract.md`, the table at the top]**
 
-**Run:** `git show dc3f22e:src/client/buildSavedSearchPatch.js`
+Before I looked at any code, I read the API contract, and honestly, this little table is the most important thing in the whole repository. Let me explain it, because everything else depends on it.
 
-**Show** (original line 16):
+When the client wants to update a saved search, it sends a PATCH request. And PATCH means "change only what I'm sending you", as opposed to PUT, which would mean "replace the whole thing". Inside that PATCH request there's an object called `filters`, and for every filter there are three possible situations.
+
+The first situation: the key is there and it has a value. For example `"dateTo": "2026-06-20"`. That means "set this filter to this value". Simple.
+
+The second situation: the key is there, but the value is `null`. For example `"priceMax": null`. That means "remove this one filter". That's what happens when the user clicks something like "Clear price cap".
+
+And the third situation, which is the tricky one: the key is simply not there at all. That means "I'm not touching this filter, leave it exactly as it is".
+
+So the thing I want to stress here is that a missing key and a `null` value are two completely different instructions. Missing means "don't touch". `null` means "delete". If you mix those two up, you get exactly the bug from INC-702 - the client meant "don't touch the category", but it sent something the server read as "delete the category". And as you'll see in a minute, every single bug I found in this project is some place where those two meanings got mixed up.
+
+The second part of the contract is about concurrency, and the mechanism is called optimistic concurrency control. Every saved search has a version number. It starts at 1, and every successful save increments it. When the client sends a PATCH, it also sends `expectedVersion`, which basically says "I'm editing version 3, that's the one I saw". The server compares that with what it currently has. If it's still version 3, great - it saves, and now it's version 4. But if somebody else already saved in the meantime and it's already version 4, then the server says "sorry, you're editing an outdated version" and returns a 409 Conflict, and it doesn't apply anything at all.
+
+It's called "optimistic" because we don't lock anybody out of editing up front. We just optimistically assume there won't be a conflict, and we check at the moment of saving.
+
+**[Scroll to `## Request validation`, around line 33, and `## Client responsibilities`, around line 68]**
+
+I also extended this document. The original contract left a few things implicit, so I made them explicit. The version is required, not optional. Only the five known filter keys are accepted. The 409 response includes the current state of the saved search, so the client can show the user what changed. And there's a new section called "Client responsibilities", where I wrote down what the client must do - send only what changed, send the version it last read, and never automatically retry after a 409. I'll explain why that last one matters when we get to the client code.
+
+---
+
+## Part 3: The three causes in the original code (8-15 min)
+
+Now let me show you the original code, the way it was shipped, and point out the three places where it broke the contract. I'm using `git show` on the very first commit, so you can see the code before I touched it.
+
+### Cause 1: the serializer
+
+**[Run `git show dc3f22e:src/client/buildSavedSearchPatch.js`]**
+
+This is the client serializer. Its job is to take what the client wants to save and turn it into the `filters` object for the PATCH request. And here's the whole problem, on one line.
+
 ```js
 for (const key of FILTER_KEYS) {
   patch[key] = form[key] ?? null;
 }
 ```
 
-**Say:**
-> "It always loops over all five keys, and `?? null` turns every missing key into `null`. So `buildSavedSearchPatch({ dateTo: '2026-06-20' })` produces `null` for the other four keys - which the contract defines as 'delete'. One date edit wipes four filters. That's INC-702."
+Let me read this slowly. `FILTER_KEYS` is a list of all five filters - query, category, dateFrom, dateTo and priceMax. So this loop always goes over all five, no matter what you give it. And for each one it does `form[key] ?? null`. The double question mark is the nullish coalescing operator - it means "if the left side is null or undefined, use the right side instead". So any key that wasn't in the input becomes `null`.
 
-### Cause 2: the editor sends the whole form, with no version
+So imagine you call this with just the one change the user made: `{ dateTo: '2026-06-20' }`. What comes out is `dateTo` with the new date, and then `null` for query, `null` for category, `null` for dateFrom, and `null` for priceMax. And remember what `null` means in the contract - "delete this filter". So one date change becomes an instruction to delete four other filters. That's INC-702, right there, in one line of code.
 
-**Run:** `git show dc3f22e:src/client/SavedSearchEditor.jsx` (line 31) and `git show dc3f22e:src/client/apiClient.js` (line 26)
+The core issue is that this function has no way to say "I don't know about this field, leave it alone". It turns "not provided" into "delete".
 
-**Show:**
+### Cause 2: the editor and the API client
+
+**[Run `git show dc3f22e:src/client/SavedSearchEditor.jsx`, line 31, and `git show dc3f22e:src/client/apiClient.js`, line 26]**
+
+The second cause is in how the editor saves. Here's the save function in the React component:
+
 ```js
-// SavedSearchEditor.jsx, line 31
 const { status: code, body } = await saveEdit(baseUrl, id, form);
-
-// apiClient.js, line 26
-body: JSON.stringify(patch),        // filters only, no expectedVersion
 ```
 
-**Say:**
-> "The editor passes the entire form snapshot. That resends old values of fields the user never touched - so if a colleague changed the category in the meantime, this save quietly reverts it. That's a lost update. And there's no version in the request at all, so the server has nothing to check."
+It passes `form`, which is the entire form - all five fields with whatever values happen to be in them. Not the change the user made, the whole snapshot.
 
-### Cause 3: the server checks nothing
+Now, interestingly, in this exact flow the serializer bug doesn't bite, because the form is full - there are no missing keys to turn into `null`. So the editor kind of hides the serializer bug by accident. But it creates a different problem. Because it resends every field, it also resends the old values of fields the user never touched. So let's say my colleague changed the category a minute ago, and I still have the old page open. I change only the price and click save. My request also carries the old category, and it silently reverts my colleague's change. That's the lost update from the second report.
 
-**Run:** `git show dc3f22e:src/app.js` (line 47)
+And then in the API client:
 
-**Show:**
+```js
+body: JSON.stringify(patch),
+```
+
+It sends just the filters. No `expectedVersion`, nothing. So the server doesn't even have the information it would need to detect a conflict.
+
+### Cause 3: the server
+
+**[Run `git show dc3f22e:src/app.js`, line 47]**
+
+And the third cause is on the server side. Here's the PATCH handler:
+
 ```js
 // As shipped: the whole body is treated as the filter patch. No version
 // check, no validation of keys or values.
 const search = store.patch(match[1], body.filters || body);
 ```
 
-**Say:**
-> "No version check, no validation. And the `body.filters || body` fallback is an active bug: a request `{ expectedVersion: 3 }` without filters would store a filter literally named `expectedVersion`.
->
-> One thing I want to point out: the store's merge logic in `savedSearchStore.js` was correct from the start - `null` deletes, a value sets, absent is skipped. The B1 and B2 bug was in what reached the store, not in the store. That's why 'make the store ignore nulls' would have been the wrong fix."
+The comment is pretty honest about it - no version check, no validation. But I want to point out this `body.filters || body` part, because it's sneakier than it looks. It means "if there's a `filters` field, use it, and if not, treat the whole request body as the filters". So imagine a client sends `{ "expectedVersion": 3 }` and forgets the filters. The server would happily save a filter literally called `expectedVersion` with the value 3. That's garbage going straight into the data.
+
+And here's one more thing I want to show you, because I think it's important for understanding the fix. Let me open the original store.
+
+**[Run `git show dc3f22e:src/server/savedSearchStore.js`]**
+
+If you look at the merge logic here - `null` deletes the key, a value sets it, and a missing key is simply skipped - that's actually correct. The store understood the three cases perfectly from day one. So the filter-loss bug was never in the store. It was in what the client was sending to the store. I mention this because a very tempting "fix" would be to change the store so that it ignores `null` values. That would make B1 pass, but then you could never clear a filter anymore, so you'd break B2. You'd be fixing the symptom in the wrong layer.
+
+So to sum up the diagnosis: the client turned "don't touch" into "delete", the editor resent fields it shouldn't have and never sent a version, and the server didn't check versions or validate anything. Three layers, three problems, and you had to fix all three.
 
 ---
 
-## 15-25 min: The fix, layer by layer
+## Part 4: The fix, layer by layer (15-25 min)
 
-**Say first:**
-> "I fixed the server first, because it is the trust boundary. It has to be safe regardless of which client talks to it. Then the client."
+I made a deliberate choice to fix the server first. The reasoning is that the server is the trust boundary. Even if I make my client perfect, there might be other clients - an older version of the app, a mobile app, a script someone writes. The server has to be safe no matter who is talking to it. So I made the server strict first, and then I fixed the client to play by the rules.
 
-### Server: validation (`src/app.js`)
+### The server: validation
 
-**Open:** `src/app.js` lines 17-45 (`FILTER_KEYS`, `isPlainObject`, `validatePatchBody`)
+**[Open `src/app.js`, lines 17-45]**
 
-**Show** (line 27):
+Let's start with validation. At the top of the file you can see a list of the allowed filter keys, and then a function called `validatePatchBody`. Its job is to look at the whole request and decide whether it's acceptable, before we change anything.
+
 ```js
 if (!Number.isInteger(body.expectedVersion)) return 'expectedVersion is required and must be an integer';
 ```
 
-**Say:**
-> "The version is required. If it were optional, any client that omits it would bypass concurrency control, and B3 would only be fixed for the test. `filters` is required too, which replaces the fallback. Only the five known keys are allowed, with types checked, and the whole patch is validated before anything is applied - no partial writes."
+This is probably the single most important line on the server side. The version is required. Now, you might ask, why not make it optional, for backwards compatibility? And the answer is that optional concurrency control is basically no concurrency control. If the version were optional, any client that just doesn't send it would skip the check entirely, and we'd be back to lost updates. The automated test would pass, because the test sends a version, but the real risk would still be there. So I wanted that to be impossible.
 
-**Open:** `src/app.js` lines 71-77
+The next rule is that `filters` is required and must be a plain object. That's what replaces the `body.filters || body` fallback - there's no fallback anymore, if you don't send filters, you get a 400. Then for each key, it checks that the key is one of the five known ones, so nothing foreign can get into the data. And it checks types - the price has to be a real number, zero or more, or `null`, and the other filters have to be strings or `null`.
 
-**Show:**
+And one important design decision here: the whole request is validated before anything is applied. So if you send four valid filters and one invalid one, nothing gets saved. You never end up with half of a change applied.
+
+**[Scroll to lines 71-77]**
+
+Then the handler itself is pretty simple now. It validates first, and if something's wrong it returns 400. Then it calls the store with the version and the filters, and it maps the result to an HTTP status. Success is 200. A conflict is 409, and the 409 response also includes the current state of the saved search, so the client can show the user what the latest version looks like. And an unknown id is 404.
+
+### The server: the atomic version check
+
+**[Open `src/server/savedSearchStore.js`, lines 50-63]**
+
+Now the store. The `patch` function now takes the expected version as a parameter.
+
 ```js
-const validationError = validatePatchBody(body);
-if (validationError) return sendJson(response, 400, { error: validationError });
-const result = store.patch(match[1], body.expectedVersion, body.filters);
-if (result.ok) return sendJson(response, 200, result.search);
-if (result.reason === 'conflict') {
-  return sendJson(response, 409, { error: 'version_conflict', search: result.search });
+if (expectedVersion !== search.version) {
+  return { ok: false, reason: 'conflict', search: structuredClone(search) };
 }
 ```
 
-**Say:**
-> "Order of checks: bad JSON 400, validation 400, unknown id 404, stale version 409, success 200. The 409 body includes the current state so the client can show it."
+So it compares the version the client saw with the version we actually have. If they're different, it returns a conflict, and it doesn't change anything. Notice it returns a copy of the current state using `structuredClone`, so nobody outside the store can accidentally modify the internal data through that reference.
 
-### Server: atomic check-and-set (`src/server/savedSearchStore.js`)
+If the versions match, it does the same merge as before - that part I didn't touch, because it was already correct - and then it increments the version.
 
-**Open:** lines 50-63
+Now here's the part I really want to explain, because it's subtle. This whole function is synchronous. There's no `await` anywhere inside it. Why does that matter? Because Node.js runs JavaScript on a single thread. When a synchronous function starts, it runs all the way to the end without being interrupted. So between the moment we check the version and the moment we write the new data, there's no way for another request to sneak in. That's what makes the check-and-write atomic.
 
-**Show:**
-```js
-patch(id, expectedVersion, filters) {
-  if (id !== search.id) return { ok: false, reason: 'not_found' };
-  if (expectedVersion !== search.version) {
-    return { ok: false, reason: 'conflict', search: structuredClone(search) };
-  }
-  // ... merge unchanged ...
-  search = { ...search, filters: nextFilters, version: search.version + 1 };
-```
+If I had put an `await` between the check and the write - for example, if I were calling a database asynchronously - then two requests could both check the version, both see version 1, both pass, and both write. And we'd have the lost update again. So in this in-memory setup, keeping it synchronous is what keeps it safe. With a real database, you'd get the same guarantee by doing a conditional update - `UPDATE ... WHERE id = ? AND version = ?` - and then checking whether any row was actually changed. I'll come back to that at the end.
 
-**Say:**
-> "The version check and the write happen in one synchronous function with no `await` between them. Node runs JavaScript on a single thread, so no other request can interleave between the check and the write - that makes it atomic. If there were an `await` in between, two requests could both pass the check. With a real database this becomes a conditional `UPDATE ... WHERE version = ?`."
+### The client: computing what actually changed
 
-### Client: the diff (`src/client/computeSavedSearchEdits.js`)
+**[Open `src/client/computeSavedSearchEdits.js`, lines 31-62]**
 
-**Open:** lines 31-62
+Now let's move to the client. This is a new file, and it does one job: it compares the form with the filters we originally loaded from the server, and it figures out what the user actually changed.
 
-**Show** (lines 55-59):
 ```js
 if (formEmpty) {
-  if (!originalEmpty) edits[key] = null;   // had a value, now empty = clear
-  continue;                                // empty and empty = no change
+  if (!originalEmpty) edits[key] = null;
+  continue;
 }
 if (originalEmpty || formValue !== originalValue) edits[key] = formValue;
 ```
 
-**Say:**
-> "The client now compares the form against the filters it last loaded and sends only what actually changed. Empty and absent are treated the same, so a cleared filter doesn't produce a pointless `null` on every save."
+Let me walk through this logic, because it's really the heart of the client fix. For each filter, we look at two things: what was there originally, and what's in the form now.
 
-**Show** (line 23):
+If the form field is empty and the original had a value, that means the user cleared it. So we send `null` - "delete this filter".
+
+If the form field is empty and the original was empty too, nothing changed, so we don't send anything for that key.
+
+If the form field has a value and it's different from the original, the user changed it, so we send the new value.
+
+And if it's the same as the original, we don't send it at all. That's the important part - untouched fields are simply absent from the request, which means "don't touch".
+
+One small detail: I treat "empty" and "missing" as the same thing. Otherwise, after you clear a filter once, every following save would keep sending an unnecessary `null` for it.
+
+**[Scroll to line 23]**
+
 ```js
 const PRICE_MAX_PATTERN = /^\d+(\.\d{1,2})?$/;
 ```
 
-**Say:**
-> "For the price, `Number()` was too permissive: `'0x1F4'` becomes 500, `'1e3'` becomes 1000, and `'   '` becomes 0. So it's an explicit whitelist, and emptiness is checked before parsing. Invalid input goes into `errors`, never into `edits`."
+The price field needed special attention. HTML inputs always give you text, so if the user types 450, we get the string "450", and we have to turn it into a number. The obvious way would be to use JavaScript's `Number()` function. But it turns out `Number()` is way too permissive for user input. If you give it "0x1F4", it reads it as hexadecimal and gives you 500. "1e3" becomes 1000. "-50" is accepted. And here's the funniest one - if you give it a string with only spaces, it gives you zero. So a user who clears the price field with the space bar would accidentally set a price cap of zero.
 
-### Client: the save decision (`src/client/submitSavedSearchEdit.js`)
+So instead, I use an explicit pattern: digits, optionally a dot and up to two decimal places. Anything else is an error. And I check whether the field is empty before I try to parse it, so spaces mean "clear", not "zero". And if the input is invalid, it goes into an `errors` object, never into the edits we send.
 
-**Open:** lines 19-29
+### The client: the save decision
 
-**Show:**
+**[Open `src/client/submitSavedSearchEdit.js`, lines 19-29]**
+
+This is the second new file, and it contains the whole logic of what happens when you click the Save button.
+
 ```js
 if (Object.keys(errors).length > 0) return { kind: 'invalid', errors };
 if (Object.keys(edits).length === 0) return { kind: 'unchanged' };
@@ -205,154 +222,159 @@ if (status === 200) return { kind: 'saved', search: body };
 if (status === 409) return { kind: 'conflict', search: body && body.search };
 ```
 
-**Say:**
-> "This is the whole Save button logic, moved out of the JSX. JSX can't run in Node without a bundler, and the brief forbids adding one, so this is how the real decision code becomes testable. Two guards: invalid input sends nothing, and an empty diff sends nothing - because the API would accept an empty patch and bump the version for no reason. On 409 there is no auto-retry. Retrying with the new version would overwrite the other person's change with a decision made on stale data - exactly the lost update we're preventing."
+First, why is this a separate file instead of being inside the React component? Because React components are written in JSX, and JSX can't run directly in Node without a bundler like Webpack or Vite. And the task explicitly says not to add a build tool. So if the logic stayed inside the component, there would be no honest way to test it. By moving it into a plain JavaScript module, I can test the real decision code with plain Node. And honestly, it's also just a cleaner design - the component is responsible for showing things, and this module is responsible for deciding things.
 
-### Client: the serializer (`src/client/buildSavedSearchPatch.js`)
+Now let's read it. There are two guards at the top. The first one says: if there are any validation errors, stop, don't send anything. Not even the valid fields. The second one says: if nothing changed, don't send anything either. You might wonder why that matters - why not just send an empty request? The reason is that the server would accept an empty patch and still bump the version. That would invalidate the version for everyone else who's editing, for no reason at all.
 
-**Open:** lines 24-35
+Only after those two guards do we actually call the network, and we send the version that the user saw when they loaded the page. Then we translate the response into one of a few simple outcomes - saved, conflict, or error - and the component just shows the right message.
 
-**Show:**
+And there's one decision here I want to call out explicitly: when we get a 409, we do not retry automatically. It's really tempting to say "oh, we got a conflict, let's just grab the new version from the response and send the request again". But think about what that actually does. It takes the user's change, which was made while looking at old data, and forces it on top of someone else's change - without the user even knowing there was a conflict. That's exactly the lost update we're trying to prevent. So instead, the user sees a message and a Reload button, and they decide what to do.
+
+### The client: the serializer
+
+**[Open `src/client/buildSavedSearchPatch.js`, lines 24-35]**
+
+And now the original serializer, fixed.
+
 ```js
 function buildSavedSearchPatch(edits) {
-  for (const key of Object.keys(edits)) {          // only the keys provided
-    if (!FILTER_KEYS.includes(key)) throw new Error(`unknown filter key "${key}"`);
-    if (value === undefined) continue;
-    if (key === 'priceMax' && value !== null && !(Number.isFinite(value) && value >= 0)) {
-      throw new Error('priceMax must be a finite number >= 0, or null');
-    }
+  for (const key of Object.keys(edits)) {
 ```
 
-**Say:**
-> "The parameter was renamed from `form` to `edits` - that one rename describes the fix. It loops over the input's keys, so absent stays absent and `null` stays `null`.
->
-> The `priceMax` guard is defense in depth: `JSON.stringify({ priceMax: NaN })` produces `{"priceMax":null}`. A typo would silently become 'delete the price cap', and the server can't tell, because it receives a valid `null`. So the client blocks it in two places."
+The first thing I'd point out is the parameter name. It used to be called `form`, now it's called `edits`. And that one rename basically describes the whole fix. The function no longer takes the entire form, it takes only the changes. And instead of looping over all five known keys, it loops over the keys that were actually given to it. So if a key isn't there, it stays not there. And if a key is `null`, it stays `null`. The two meanings don't get mixed anymore.
 
-### Client: the editor (`src/client/SavedSearchEditor.jsx`)
+It also throws an error if it gets an unknown key, because that would be a programming mistake, and I'd rather fail loudly than silently send garbage to the server.
 
-**Open:** lines 46-49 and 82-88
+```js
+if (key === 'priceMax' && value !== null && !(Number.isFinite(value) && value >= 0)) {
+  throw new Error('priceMax must be a finite number >= 0, or null');
+}
+```
 
-**Say:**
-> "The component now only maps `kind` to a message. A `saving` flag disables every control during a save - otherwise a double click sends two requests with the same version and the user gets a 409 about their own save. Load errors are handled, so it doesn't hang on 'Loading…'."
+And this guard is a bit of defense in depth, and the reason for it is a really sneaky JavaScript behaviour. If you call `JSON.stringify` on an object with `NaN` in it - so "not a number" - JSON doesn't have a way to represent NaN, so it silently turns it into `null`. And `null`, as we know, means "delete". So a typo in the price field could turn into "delete the price cap", and the server would have no way to know, because what it receives is a perfectly valid `null`. That's why I block it on the client, in more than one place.
+
+### The client: the editor
+
+**[Open `src/client/SavedSearchEditor.jsx`, lines 46-49 and 82-88]**
+
+The React component itself got much simpler. It now just calls the save module and shows a message based on the result.
+
+I added two robustness fixes here as well. The first one is a `saving` flag. While a save is in progress, all the inputs and buttons are disabled. Why? Because otherwise, if the user double-clicks Save, we'd send two requests with the same version. The first one succeeds, the second one gets a 409, and the user sees a message saying "someone else changed this" - when actually it was themselves, a millisecond ago. That would be really confusing.
+
+The second one is error handling when loading. In the original, if the first request failed, the page would just say "Loading…" forever. Now it shows a proper error message.
 
 ---
 
-## 25-32 min: Proof
+## Part 5: Proving it works (25-32 min)
 
-**Run:** `npm run verify`
+**[Run `npm run verify`]**
 
-**Say:**
-> "At the start this was 0 of 3 while `npm test` was green. Now it's 3 of 3."
+Okay, so how do I know all this actually works? Let's start with the acceptance gate that came with the task. When I started, this was 0 out of 3. Every criterion failed. And at the same time, `npm test` was completely green. I think that's the best illustration of the whole problem - green tests, broken product.
 
-**Run:** `npm test` and scroll to the regression section.
+Now it's 3 out of 3.
 
-**Show:**
-```
-against src/ (expected: check() === true)
-   PASS   one-field edit preserves untouched filters - ok
-   ...
-against test/reference_defect.js (expected: check() === false)
-   FAIL   one-field edit ... - "query" was not preserved; ...
-   FAIL   stale expectedVersion ... - B's stale save was not rejected (status 200, expected 409); ...
-```
+**[Run `npm test` and scroll through the output]**
 
-**Say:**
-> "The required regression check runs against my code and against the frozen original. It passes on mine and fails on the original - and each scenario fails for the right reason, not because the test threw. That's why `runScenarios` returns per-scenario details."
+And here's the full test suite. I built tests at every layer. At the bottom, there are fast unit tests for the pure functions - the serializer and the diff - with no network at all. Then there are API tests that go over real HTTP and check validation and concurrency. Then there's a flow test that drives the real client save logic against a real server. And at the top, the regression check. All together it's 44 tests in six files, plus the regression gate.
 
-**Open:** `test/regression.test.js` line 79 (`scenarioLostUpdate`) and line 97
+One more thing about the tests: they all use strict assertions, `node:assert/strict`. I'll explain later why that turned out to matter a lot.
 
-**Show:**
+**[Scroll to the regression section of the output]**
+
+Now this is the part I'm proudest of. The task asked for a regression test that passes on my solution and fails on the original defective code. And the original code is frozen in a file called `reference_defect.js`. So my test runner runs the exact same scenarios twice - once against my code, and once against that frozen original.
+
+Against my code, everything passes. Against the original, every scenario fails. But - and this is important - you can see why each one fails. "Query was not preserved, category was not preserved." "B's stale save was not rejected, status 200, expected 409." That matters, because a test could also fail on the original for a dumb reason, like crashing. That would technically give you "fails on the original", but it wouldn't prove anything. Here you can see that each scenario fails for exactly the right reason.
+
+**[Open `test/regression.test.js`, line 79, then line 97]**
+
+The test has three scenarios, and they mirror the incident. One: edit only the date, and check that the other four filters are still there with their original values. Two: clear only the price, and check that only the price disappeared. And three, the lost update. Both A and B read version 1. A saves a change, now it's version 2. Then B tries to save with the old version 1, and it must get a 409. And then I check that B's change didn't sneak in, and A's change is still there.
+
 ```js
 if (b.status !== 409) problems.push(`B's stale save was not rejected (status ${b.status}, expected 409)`);
 ```
 
-**Say:**
-> "Three scenarios through the real serializer and real HTTP: one-field edit, explicit clear, and the lost update reproduced sequentially - A and B read version 1, A saves, B saves with version 1 and must get 409.
->
-> I also checked with mutations that it rejects partial fixes. Serializer fixed but no version check: fails. Version check but old serializer: fails. And the classic AI suggestion, 'just filter out the nulls': fails, because then nothing can be cleared."
+I did this one sequentially, step by step, on purpose. The acceptance gate does it with two requests in parallel, which is good for testing real concurrency, but the order is up to the event loop. A sequential version is completely deterministic and describes the incident exactly.
 
-**Mention:** the test pyramid - 44 tests in six files plus the regression gate, all on `node:assert/strict`.
+And then I went one step further. I wanted to know whether this test would also catch a partial fix - because that's the kind of fix an AI tends to suggest. So I deliberately broke the code in different ways and checked whether the test noticed. If you fix the serializer but don't check versions, the test fails. If you check versions but keep the old serializer, it fails. If you make the store ignore nulls, it fails. And if you take the classic AI suggestion - "just filter out the nulls in the serializer" - it also fails, because then the user can't clear anything. So this test doesn't just catch the original bug, it catches the half-fixes too.
 
 ---
 
-## 32-38 min: AI workflow
+## Part 6: How I worked with AI (32-38 min)
 
-**Open:** `AI_WORKFLOW.md` line 3 (`## Tools used`)
+**[Open `AI_WORKFLOW.md`, the "Tools used" section]**
 
-**Say:**
-> "Claude Code implemented in the repo. A separate Claude session reviewed every plan, diff and output before I approved a commit. One step per prompt, one commit per step, nothing committed before review. And one rule I added early: show me the artifact, not a summary of it."
+So let me talk about how I used AI here, because I think that's what you're really interested in.
 
-**Open:** line 32 (`## The moment the AI was wrong`)
+I split the work into roles. Claude Code worked in the repository - it read the code, made the changes, and ran the tests. And then I used a second, separate Claude session as a reviewer. Before any commit, I pasted the plan or the diff and the test output into that second session and had it reviewed. And I made the final decision on every step.
 
-**Open:** `test/client-flow.test.js` line 64
+Why two AI sessions instead of one? Because the model that wrote the code tends to be optimistic about its own work. It's the same reason we do code review between people - the author is usually the worst person to spot their own mistakes. A fresh session, without the context of having written the code, looks at the result rather than the intention.
 
-**Show:**
+I also kept a strict rhythm: one step per prompt, one commit per step, and nothing gets committed before review. And I added one rule pretty early on: show me the artifact, not a summary of it. Because a few times Claude Code told me something like "here are the full file contents" or "confirmed, the test fails", and what was actually on the screen was just a collapsed tool call. An AI saying it checked something is not proof that it did.
+
+**[Open the "The moment the AI was wrong" section, then `test/client-flow.test.js` around line 64]**
+
+Now, the most interesting mistake. Claude Code wrote a test with a really good name: "invalid price sends no request and leaves the server unchanged". It had assertions, it looked reasonable, and it passed. But when I read the body of the test, I noticed something. It called the function that computes the diff, it checked that an error was reported, and then it checked that the server hadn't changed. But it never called anything that could actually send a request to the server. So of course the server hadn't changed - nobody had touched it. That assertion was always true. You could have deleted the protection from the editor completely, and this test would still have been green.
+
+And I think what makes this such a good example is that it's the same mechanism as the incident itself. The original test from the task was green because it sent the full form, so it could never reproduce the bug. And here the AI wrote another test that was green for the wrong reason.
+
+The root cause was actually architectural. The decision "if there are errors, don't send" lived inside the React component, and you can't run that without a bundler. So there was simply no honest way to test it. That's why I moved the logic into `submitSavedSearchEdit`.
+
 ```js
 const form = { ...original.filters, priceMax: 'abc', dateTo: '2026-06-20' };
 ```
 
-**Say:**
-> "The best catch was a test that could not fail. Claude Code wrote 'invalid priceMax sends no request and leaves the server unchanged'. It called the diff function, then asserted the server was unchanged - but it never called anything that sends a request. The assertion was always true. Removing the guard from the editor would have left it green.
->
-> That's the same mechanism as the incident itself: the supplied test was green because it sent the full form.
->
-> The root cause was architectural - the decision lived in JSX. I moved it into `submitSavedSearchEdit`, and the test now sends an invalid price together with a valid date. If the guard disappears, the date reaches the server and the test fails. I proved it by deleting the guard and watching it fail."
+And the new test sends an invalid price together with a valid date change. That's the trick. If the protection ever disappears, the valid date would actually be sent to the server, the version would go up, and the test would fail. And I didn't just trust that - I deleted the guard myself, ran the tests, watched this test fail, and put the guard back.
 
-**Open:** line 19 (`## Where I intervened`) - pick 2 or 3:
+**[Open the "Where I intervened" section]**
 
-> "**Required version:** the first plan left `expectedVersion` optional. Optional concurrency control is no concurrency control."
+There were a few other interventions I think are worth mentioning briefly.
 
-> "**Loose assertions:** every test used legacy `node:assert`, where `deepEqual({ priceMax: undefined }, { priceMax: null })` passes. In a task about null versus absent, that makes the assertions meaningless. Switched to strict in its own commit."
+The first plan from the AI didn't decide whether the version should be required. And as I said earlier, optional concurrency control is no concurrency control, so I made it required.
 
-> "**Docs promising the impossible:** the AI wrote that NaN returns 400. It can't - JSON turns NaN into null, so the server returns 200 and deletes the filter. Same bug class as the incident, appearing for the second time."
+Then the assertions. Every test the AI wrote used the old-style `node:assert`, which compares values loosely, with double equals. And it turns out that in that mode, an object with `undefined` is considered equal to an object with `null`. Think about that for a second - in a task that is entirely about the difference between "missing" and `null`, the tests couldn't tell those two apart. The AI simply copied that pattern from the existing test file. So I switched everything to strict assertions in a separate commit.
 
-> "**Green verify, live bug:** after the serializer fix alone, `verify` was 3 of 3 while the real editor still sent the whole form. I treated `verify` as necessary, not sufficient."
+Then the documentation. The AI wrote in the API contract that sending NaN for the price returns a 400. But that's impossible, because of the JSON behaviour I mentioned - NaN becomes `null` on the way, so the server actually returns 200 and deletes the price cap. That was the second time the same NaN-to-null bug showed up during this work - first in the code plan, then in the docs. So for me that's not a one-off, it's a systemic risk worth calling out.
 
-**Run (optional):** `git log --oneline`
+And finally, the green-gate trap. After fixing only the serializer, the acceptance gate was already 3 out of 3. It would have been very easy to stop there. But the real editor was still sending the whole form. So I treated the gate as necessary, but not sufficient.
 
-> "Fourteen commits, one topic each, history unsquashed."
+**[Optional: run `git log --oneline`]**
+
+And you can see all of that in the history - fourteen commits, each one about one thing, and nothing squashed.
 
 ---
 
-## 38-40 min: Residual risks
+## Part 7: What's still left (38-40 min)
 
-**Open:** `AI_WORKFLOW.md` line 219 (`## Ownership note`)
+**[Open `AI_WORKFLOW.md`, the "Ownership note" section]**
 
-**Say:**
-> "What I'd do before production:
->
-> One - atomicity relies on a single process with an in-memory store. With a database it has to be a conditional `UPDATE ... WHERE version = ?` and a check of affected rows.
->
-> Two - the JSX itself isn't executed by any test. The logic is extracted and tested, but I'd add a React Testing Library test and one Playwright test.
->
-> Three - after a 409, Reload discards what the user typed. Better UX is to show their pending edit next to the new server state. The 409 body already carries that state, so it's a UI-only change.
->
-> Four - dates are validated only as strings, with no format check and no `dateFrom <= dateTo`. The range check has to run on the merged state, because a patch can contain just one date.
->
-> And what I'd do differently: write the regression test against the frozen original first, before any fix."
+Let me finish with the things I'd still want to do before this goes to production, because I think it's important to be honest about the limits.
+
+First, the atomicity. Right now it relies on the data being in memory, in a single Node process. That's fine for this exercise, but in production, with a real database and probably several server instances, you'd do the version check inside the database itself - an `UPDATE` with `WHERE version = ?`, and then you check how many rows were affected. If it's zero, that's your 409.
+
+Second, the React component itself isn't executed by any test. All the logic is extracted and tested, but the wiring - "when the result is a conflict, show this message" - isn't. Before production I'd add a component test with React Testing Library, and at least one end-to-end test in a real browser, maybe with Playwright - two tabs, two users, one conflict.
+
+Third, the user experience after a conflict. Right now, when you click Reload, whatever you typed is gone. It would be much nicer to show your unsaved change next to the new version from the server, so you can decide what to keep. And the nice thing is, the server already sends the current state in the 409 response, so that's purely a front-end change.
+
+Fourth, dates are only validated as text. There's no format check, and no check that the start date is before the end date. And there's a small trap there: because a patch can contain only one of the dates, that range check would have to run on the merged result, not just on the incoming request.
+
+And if I could start over, the one thing I'd do differently is write the regression test first, against the frozen original, before writing any fix. Because if I had, I would have had an objective measure of progress from the very beginning, and that green-gate trap would never have been tempting.
+
+That's everything from my side. I'm happy to go deeper into any of this, or to make a change live.
 
 ---
 
-## If asked for a live change
+## If they ask for a live change
 
-**Say before touching anything:**
-> "First I'll check which files this touches. Then a narrow prompt: one change, no commit, show me the diff and the test output. I'll read the diff before believing the summary, add a test that fails before and passes after, then run `npm test` and `npm run verify`."
+Before touching anything, say this out loud:
 
-| Likely request | Where |
-|---|---|
-| Add a filter (e.g. `brand`) | `FILTER_KEYS` in `src/app.js` line 17 **and** `src/client/buildSavedSearchPatch.js` **and** the hard-coded list in `SavedSearchEditor.jsx` (`['query', 'category', ...]`), plus tests and contract |
-| Show the other person's change on 409 | `result.search` from `submitSavedSearchEdit` line 27 - store it in editor state and render it. No API change |
-| 428 instead of 400 for a missing version | `src/app.js` line 27 + `test/api-validation.test.js` + contract |
-| Version in `If-Match` header | `apiClient.saveEdit` + `app.js`; keep body support because `verify.js` must not change |
-| Validate dates | format in `validatePatchBody`; `dateFrom <= dateTo` in `store.patch` on the merged `nextFilters`; mirror in `computeSavedSearchEdits` |
-| Multiple saved searches | replace the single `search` variable in the store with a `Map` keyed by `id` |
+Okay, so before I ask the AI to do anything, let me first check which files this actually touches. Then I'll give the AI a narrow instruction - just this one change, don't commit, and show me the diff and the test output. I'll read the diff myself before I believe the summary. I'll add a test that fails before the change and passes after it. And then I'll run both `npm test` and `npm run verify`.
 
-## Quick answers
+And a few things worth knowing in advance:
 
-| Question | Answer |
-|---|---|
-| Why not ETag / If-Match? | Standard and a good direction, but the contract and `verify` put the version in the body. I kept the contract. |
-| Why not merge non-conflicting edits? | Possible, since we send only changed keys. But the contract says mismatch = 409, nothing applied. Merging is a product decision. |
-| Why two `FILTER_KEYS` lists? | The server is the trust boundary and shouldn't import client code. Trade-off: two places to update. |
-| Why didn't you add a bundler? | The brief forbids a build tool. Extracting logic from JSX is the better design anyway. |
-| What's mutation testing? | Deliberately breaking code in one place and checking a test fails. If none does, the test is worthless there. |
+If they ask you to **add a new filter**, mention right away that the list of filter names lives in three places: `FILTER_KEYS` in `src/app.js`, `FILTER_KEYS` in `src/client/buildSavedSearchPatch.js`, and a hard-coded list inside `SavedSearchEditor.jsx`. You can say: "Before I start, I want to point out that this list is duplicated in three places, so I'll make sure the AI updates all of them - and I'd actually suggest having the component import the list instead of hard-coding it."
+
+If they ask you to **show the other user's change on a conflict**, you can say: "The server already returns the current state in the 409 body, and `submitSavedSearchEdit` already passes it through as `result.search`. So this is only a UI change - I'd store it in the component's state and render it next to the form."
+
+If they ask you to **validate dates**, say: "The format check goes into `validatePatchBody`. But the 'start before end' check has to happen on the merged result inside the store, because a single patch might only contain one of the two dates."
+
+If they ask you to **use an `If-Match` header** instead of a version in the body, say: "That's the standard HTTP way, and I like it. But `verify.js`, which I'm not allowed to change, sends the version in the body, so I'd support both."
