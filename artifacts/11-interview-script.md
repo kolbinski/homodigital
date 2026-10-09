@@ -1,18 +1,10 @@
 # Interview script: the long, spoken version
 
-This is the same walkthrough as `11-interview-script.md`, but written the way you would actually talk - as if you were explaining the whole thing to a junior developer sitting next to you. Lines in **[brackets]** are stage directions: what to open or run. Everything else is meant to be read out loud.
-
-You don't have to read every word. If the reviewer interrupts with a question, answer it, and then pick up from the next heading.
-
----
-
 ## Opening (about 1 minute)
 
-So, thanks for having me. Let me give you a quick map of how I'd like to walk through this, and then you can stop me at any point.
+Let me give you a quick map of how I'd like to walk through this.
 
 I'm going to start with the business problem, because I think everything else only makes sense once you see what actually went wrong for the users. Then I'll show you the API contract, which turned out to be the key to the whole task. After that I'll go into the original code and show you the three places where it broke that contract. Then I'll walk through my fix, layer by layer - server first, then the client. Then I'll prove it works, with the tests and with the regression check. And at the end I'll talk about how I worked with AI on this, including the most interesting mistake the AI made, and what risks I think are still left before this could go to production.
-
-Feel free to interrupt me at any point - I'm happy to go deeper anywhere.
 
 ---
 
@@ -26,7 +18,7 @@ The app is a saved-search feature. Think of an online shop with laptops. You set
 
 Now, the first report, INC-702, goes like this. A user opens "Cheap laptops", changes just one thing - the end date - and clicks save. Then they reload the page, and the category is gone, the price cap is gone, the start date is gone. The only thing left is the date they just changed. So editing one filter silently wiped out four others. From the user's point of view, that's really bad, because nothing told them anything went wrong. The save looked successful.
 
-The second report is quieter, but I'd argue it's just as serious. Saved searches can be shared within a team. So two people open the same saved search, both make a change, both click save - and one person's change just disappears. No error, no warning. Whoever saved last simply wins, and the other person's work is gone. In the industry we call that a "lost update".
+The second report is quieter, but it's just as serious. Saved searches can be shared within a team. So two people open the same saved search, both make a change, both click save - and one person's change just disappears. No error, no warning. Whoever saved last simply wins, and the other person's work is gone.
 
 And there's one sentence in this incident that I think sums up the requirement really nicely: an edit should change what the user changed, and nothing else. That's basically the whole task in one line.
 
@@ -38,11 +30,11 @@ There's one more detail in the incident that I want you to notice, because it co
 
 **[Open `docs/api-contract.md`, the table at the top]**
 
-Before I looked at any code, I read the API contract, and honestly, this little table is the most important thing in the whole repository. Let me explain it, because everything else depends on it.
+Before I looked at any code, I read the API contract.
 
 When the client wants to update a saved search, it sends a PATCH request. And PATCH means "change only what I'm sending you", as opposed to PUT, which would mean "replace the whole thing". Inside that PATCH request there's an object called `filters`, and for every filter there are three possible situations.
 
-The first situation: the key is there and it has a value. For example `"dateTo": "2026-06-20"`. That means "set this filter to this value". Simple.
+The first situation: the key is there and it has a value. For example `"category": "Electronics"`. That means "set this filter to this value". Simple.
 
 The second situation: the key is there, but the value is `null`. For example `"priceMax": null`. That means "remove this one filter". That's what happens when the user clicks something like "Clear price cap".
 
@@ -62,13 +54,13 @@ I also extended this document. The original contract left a few things implicit,
 
 ## Part 3: The three causes in the original code (8-15 min)
 
-Now let me show you the original code, the way it was shipped, and point out the three places where it broke the contract. I'm using `git show` on the very first commit, so you can see the code before I touched it.
+Now let me show you the original code, the way it was shipped, and point out the three places where it broke the contract.
 
 ### Cause 1: the serializer
 
 **[Run `git show dc3f22e:src/client/buildSavedSearchPatch.js`]**
 
-This is the client serializer. Its job is to take what the client wants to save and turn it into the `filters` object for the PATCH request. And here's the whole problem, on one line.
+This is the client serializer. Its job is to take what the client wants to save and turn it into the `filters` object for the PATCH request. And here's the whole problem.
 
 ```js
 for (const key of FILTER_KEYS) {
@@ -76,9 +68,9 @@ for (const key of FILTER_KEYS) {
 }
 ```
 
-Let me read this slowly. `FILTER_KEYS` is a list of all five filters - query, category, dateFrom, dateTo and priceMax. So this loop always goes over all five, no matter what you give it. And for each one it does `form[key] ?? null`. The double question mark is the nullish coalescing operator - it means "if the left side is null or undefined, use the right side instead". So any key that wasn't in the input becomes `null`.
+`FILTER_KEYS` is a list of all five filters - query, category, dateFrom, dateTo and priceMax. So this loop always goes over all five, no matter what you give it. And for each one it does this: `form[key] ?? null`. The double question mark is the nullish coalescing operator - it means "if the left side is null or undefined, use the right side instead". So any key that wasn't in the input becomes `null`.
 
-So imagine you call this with just the one change the user made: `{ dateTo: '2026-06-20' }`. What comes out is `dateTo` with the new date, and then `null` for query, `null` for category, `null` for dateFrom, and `null` for priceMax. And remember what `null` means in the contract - "delete this filter". So one date change becomes an instruction to delete four other filters. That's INC-702, right there, in one line of code.
+So imagine you call this with just the one change the user made: `"category": "Electronics"`. What comes out is `category` with the new value, and then `null` for query, `null` for dateFrom, `null` for dateTo, and `null` for priceMax. And remember what `null` means in the contract - "delete this filter". So one date change becomes an instruction to delete four other filters. That's INC-702, right there, in one line of code.
 
 The core issue is that this function has no way to say "I don't know about this field, leave it alone". It turns "not provided" into "delete".
 
@@ -126,7 +118,7 @@ If you look at the merge logic here - `null` deletes the key, a value sets it, a
 
 So to sum up the diagnosis: the client turned "don't touch" into "delete", the editor resent fields it shouldn't have and never sent a version, and the server didn't check versions or validate anything. Three layers, three problems, and you had to fix all three.
 
-### The prior AI recommendation (`docs/ai-recommendation.md`)
+### (Optionally) The prior AI recommendation (`docs/ai-recommendation.md`)
 
 **[Open `docs/ai-recommendation.md`]**
 
@@ -152,7 +144,7 @@ By the way, Claude Code reached the same conclusion in my very first prompt, whe
 
 ## Part 4: The fix, layer by layer (15-25 min)
 
-I made a deliberate choice to fix the server first. The reasoning is that the server is the trust boundary. Even if I make my client perfect, there might be other clients - an older version of the app, a mobile app, a script someone writes. The server has to be safe no matter who is talking to it. So I made the server strict first, and then I fixed the client to play by the rules.
+Now the fix, layer by layer. I made a deliberate choice to fix the server first. The reasoning is that the server is the trust boundary. Even if I make my client perfect, there might be other clients - an older version of the app, a mobile app, a script someone writes. The server has to be safe no matter who is talking to it. So I made the server strict first, and then I fixed the client to play by the rules.
 
 ### The server: validation
 
@@ -165,7 +157,7 @@ if (!Number.isInteger(body.expectedVersion))
   return 'expectedVersion is required and must be an integer';
 ```
 
-This is probably the single most important line on the server side. The version is required. Now, you might ask, why not make it optional, for backwards compatibility? And the answer is that optional concurrency control is basically no concurrency control. If the version were optional, any client that just doesn't send it would skip the check entirely, and we'd be back to lost updates. The automated test would pass, because the test sends a version, but the real risk would still be there. So I wanted that to be impossible.
+The version is required. You might ask, why not make it optional, for backwards compatibility? And the answer is that optional concurrency control is basically no concurrency control. If the version were optional, any client that just doesn't send it would skip the check entirely, and we'd be back to lost updates. The automated test would pass, because the test sends a version, but the real risk would still be there. So I wanted that to be impossible.
 
 The next rule is that `filters` is required and must be a plain object. That's what replaces the `body.filters || body` fallback - there's no fallback anymore, if you don't send filters, you get a 400. Then for each key, it checks that the key is one of the five known ones, so nothing foreign can get into the data. And it checks types - the price has to be a real number, zero or more, or `null`, and the other filters have to be strings or `null`.
 
@@ -191,9 +183,7 @@ So it compares the version the client saw with the version we actually have. If 
 
 If the versions match, it does the same merge as before - that part I didn't touch, because it was already correct - and then it increments the version.
 
-Now here's the part I really want to explain, because it's subtle. This whole function is synchronous. There's no `await` anywhere inside it. Why does that matter? Because Node.js runs JavaScript on a single thread. When a synchronous function starts, it runs all the way to the end without being interrupted. So between the moment we check the version and the moment we write the new data, there's no way for another request to sneak in. That's what makes the check-and-write atomic.
-
-If I had put an `await` between the check and the write - for example, if I were calling a database asynchronously - then two requests could both check the version, both see version 1, both pass, and both write. And we'd have the lost update again. So in this in-memory setup, keeping it synchronous is what keeps it safe. With a real database, you'd get the same guarantee by doing a conditional update - `UPDATE ... WHERE id = ? AND version = ?` - and then checking whether any row was actually changed. I'll come back to that at the end.
+> Optionally: Now here's the part I really want to explain, because it's subtle. This whole function is synchronous. There's no `await` anywhere inside it. Why does that matter? Because Node.js runs JavaScript on a single thread. When a synchronous function starts, it runs all the way to the end without being interrupted. So between the moment we check the version and the moment we write the new data, there's no way for another request to sneak in. That's what makes the check-and-write atomic. If I had put an `await` between the check and the write - for example, if I were calling a database asynchronously - then two requests could both check the version, both see version 1, both pass, and both write. And we'd have the lost update again. So in this in-memory setup, keeping it synchronous is what keeps it safe. With a real database, you'd get the same guarantee by doing a conditional update - `UPDATE ... WHERE id = ? AND version = ?` - and then checking whether any row was actually changed. I'll come back to that at the end.
 
 ### The client: computing what actually changed
 
@@ -219,8 +209,6 @@ If the form field has a value and it's different from the original, the user cha
 
 And if it's the same as the original, we don't send it at all. That's the important part - untouched fields are simply absent from the request, which means "don't touch".
 
-One small detail: I treat "empty" and "missing" as the same thing. Otherwise, after you clear a filter once, every following save would keep sending an unnecessary `null` for it.
-
 **[Scroll to line 23]**
 
 ```js
@@ -245,13 +233,13 @@ if (status === 200) return { kind: 'saved', search: body };
 if (status === 409) return { kind: 'conflict', search: body && body.search };
 ```
 
-First, why is this a separate file instead of being inside the React component? Because React components are written in JSX, and JSX can't run directly in Node without a bundler like Webpack or Vite. And the task explicitly says not to add a build tool. So if the logic stayed inside the component, there would be no honest way to test it. By moving it into a plain JavaScript module, I can test the real decision code with plain Node. And honestly, it's also just a cleaner design - the component is responsible for showing things, and this module is responsible for deciding things.
+First, why is this a separate file instead of being inside the React component? Because React components are written in JSX, and JSX can't run directly in Node without a bundler like Webpack or Vite. And the task explicitly says not to add a build tool. So if the logic stayed inside the component, there would be no honest way to test it. By moving it into a plain JavaScript module, I can test the real decision code with plain Node. It's also just a cleaner design - the component is responsible for showing things, and this module is responsible for deciding things.
 
 Now let's read it. There are two guards at the top. The first one says: if there are any validation errors, stop, don't send anything. Not even the valid fields. The second one says: if nothing changed, don't send anything either. You might wonder why that matters - why not just send an empty request? The reason is that the server would accept an empty patch and still bump the version. That would invalidate the version for everyone else who's editing, for no reason at all.
 
 Only after those two guards do we actually call the network, and we send the version that the user saw when they loaded the page. Then we translate the response into one of a few simple outcomes - saved, conflict, or error - and the component just shows the right message.
 
-And there's one decision here I want to call out explicitly: when we get a 409, we do not retry automatically. It's really tempting to say "oh, we got a conflict, let's just grab the new version from the response and send the request again". But think about what that actually does. It takes the user's change, which was made while looking at old data, and forces it on top of someone else's change - without the user even knowing there was a conflict. That's exactly the lost update we're trying to prevent. So instead, the user sees a message and a Reload button, and they decide what to do.
+> Optionally: And there's one decision here I want to call out explicitly: when we get a 409, we do not retry automatically. It's really tempting to say "oh, we got a conflict, let's just grab the new version from the response and send the request again". But think about what that actually does. It takes the user's change, which was made while looking at old data, and forces it on top of someone else's change - without the user even knowing there was a conflict. That's exactly the lost update we're trying to prevent. So instead, the user sees a message and a Reload button, and they decide what to do.
 
 ### The client: the serializer
 
@@ -278,7 +266,7 @@ if (
 }
 ```
 
-And this guard is a bit of defense in depth, and the reason for it is a really sneaky JavaScript behaviour. If you call `JSON.stringify` on an object with `NaN` in it - so "not a number" - JSON doesn't have a way to represent NaN, so it silently turns it into `null`. And `null`, as we know, means "delete". So a typo in the price field could turn into "delete the price cap", and the server would have no way to know, because what it receives is a perfectly valid `null`. That's why I block it on the client, in more than one place.
+And this guard is a bit of defense in depth, and the reason for it is a really sneaky JavaScript behaviour. If you call `JSON.stringify` on an object with `NaN` in it - JSON doesn't have a way to represent NaN, so it silently turns it into `null`. And `null`, as we know, means "delete". So a typo in the price field could turn into "delete the price cap", and the server would have no way to know, because what it receives is a perfectly valid `null`. That's why I block it on the client, in more than one place.
 
 ### The client: the editor
 
@@ -363,7 +351,7 @@ There were a few other interventions I think are worth mentioning briefly.
 
 The first plan from the AI didn't decide whether the version should be required. And as I said earlier, optional concurrency control is no concurrency control, so I made it required.
 
-Then the assertions. Every test the AI wrote used the old-style `node:assert`, which compares values loosely, with double equals. And it turns out that in that mode, an object with `undefined` is considered equal to an object with `null`. Think about that for a second - in a task that is entirely about the difference between "missing" and `null`, the tests couldn't tell those two apart. The AI simply copied that pattern from the existing test file. So I switched everything to strict assertions in a separate commit.
+Then the assertions. Every test the AI wrote used the old-style `node:assert`, which compares values loosely, with double equals. And it turns out that in that mode, an object with `undefined` is considered equal to an object with `null`. In a task that is entirely about the difference between "missing" and `null`, the tests couldn't tell those two apart. The AI simply copied that pattern from the existing test file. So I switched everything to strict assertions in a separate commit.
 
 Then the documentation. The AI wrote in the API contract that sending NaN for the price returns a 400. But that's impossible, because of the JSON behaviour I mentioned - NaN becomes `null` on the way, so the server actually returns 200 and deletes the price cap. That was the second time the same NaN-to-null bug showed up during this work - first in the code plan, then in the docs. So for me that's not a one-off, it's a systemic risk worth calling out.
 
