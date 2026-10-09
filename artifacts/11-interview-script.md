@@ -114,7 +114,9 @@ And here's one more thing I want to show you, because I think it's important for
 
 **[Run `git show dc3f22e:src/server/savedSearchStore.js`]**
 
-If you look at the merge logic here - `null` deletes the key, a value sets it, and a missing key is simply skipped - that's actually correct. The store understood the three cases perfectly from day one. So the filter-loss bug was never in the store. It was in what the client was sending to the store. I mention this because a very tempting "fix" would be to change the store so that it ignores `null` values. That would make B1 pass, but then you could never clear a filter anymore, so you'd break B2. You'd be fixing the symptom in the wrong layer.
+If you look at the merge logic here - `null` deletes the key, a value sets it, and a missing key is simply skipped - that's actually correct. The store understood the three cases perfectly from day one. So the filter-loss bug was never in the store. It was in what the client was sending to the store.
+
+> Optional: I mention this because a very tempting "fix" would be to change the store so that it ignores `null` values. That would make B1 pass, but then you could never clear a filter anymore, so you'd break B2. You'd be fixing the symptom in the wrong layer.
 
 So to sum up the diagnosis: the client turned "don't touch" into "delete", the editor resent fields it shouldn't have and never sent a version, and the server didn't check versions or validate anything. Three layers, three problems, and you had to fix all three.
 
