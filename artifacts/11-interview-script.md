@@ -70,7 +70,7 @@ for (const key of FILTER_KEYS) {
 
 `FILTER_KEYS` is a list of all five filters - query, category, dateFrom, dateTo and priceMax. So this loop always goes over all five, no matter what you give it. And for each one it does this: `form[key] ?? null`. The double question mark is the nullish coalescing operator - it means "if the left side is null or undefined, use the right side instead". So any key that wasn't in the input becomes `null`.
 
-So imagine you call this with just the one change the user made: `"category": "Electronics"`. What comes out is `category` with the new value, and then `null` for query, `null` for dateFrom, `null` for dateTo, and `null` for priceMax. And remember what `null` means in the contract - "delete this filter". So one date change becomes an instruction to delete four other filters. That's INC-702, right there, in one line of code.
+So imagine you call this with just the one change the user made: `"category": "Electronics"`. What comes out is `category` with the new value, and then `null` for query, `null` for dateFrom, `null` for dateTo, and `null` for priceMax. And remember what `null` means in the contract - "delete this filter". So category change becomes an instruction to delete four other filters. That's INC-702, right there, in one line of code.
 
 The core issue is that this function has no way to say "I don't know about this field, leave it alone". It turns "not provided" into "delete".
 
