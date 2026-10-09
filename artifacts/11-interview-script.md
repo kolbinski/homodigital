@@ -161,7 +161,8 @@ I made a deliberate choice to fix the server first. The reasoning is that the se
 Let's start with validation. At the top of the file you can see a list of the allowed filter keys, and then a function called `validatePatchBody`. Its job is to look at the whole request and decide whether it's acceptable, before we change anything.
 
 ```js
-if (!Number.isInteger(body.expectedVersion)) return 'expectedVersion is required and must be an integer';
+if (!Number.isInteger(body.expectedVersion))
+  return 'expectedVersion is required and must be an integer';
 ```
 
 This is probably the single most important line on the server side. The version is required. Now, you might ask, why not make it optional, for backwards compatibility? And the answer is that optional concurrency control is basically no concurrency control. If the version were optional, any client that just doesn't send it would skip the check entirely, and we'd be back to lost updates. The automated test would pass, because the test sends a version, but the real risk would still be there. So I wanted that to be impossible.
@@ -268,7 +269,11 @@ The first thing I'd point out is the parameter name. It used to be called `form`
 It also throws an error if it gets an unknown key, because that would be a programming mistake, and I'd rather fail loudly than silently send garbage to the server.
 
 ```js
-if (key === 'priceMax' && value !== null && !(Number.isFinite(value) && value >= 0)) {
+if (
+  key === 'priceMax' &&
+  value !== null &&
+  !(Number.isFinite(value) && value >= 0)
+) {
   throw new Error('priceMax must be a finite number >= 0, or null');
 }
 ```
@@ -312,7 +317,10 @@ Against my code, everything passes. Against the original, every scenario fails. 
 The test has three scenarios, and they mirror the incident. One: edit only the date, and check that the other four filters are still there with their original values. Two: clear only the price, and check that only the price disappeared. And three, the lost update. Both A and B read version 1. A saves a change, now it's version 2. Then B tries to save with the old version 1, and it must get a 409. And then I check that B's change didn't sneak in, and A's change is still there.
 
 ```js
-if (b.status !== 409) problems.push(`B's stale save was not rejected (status ${b.status}, expected 409)`);
+if (b.status !== 409)
+  problems.push(
+    `B's stale save was not rejected (status ${b.status}, expected 409)`,
+  );
 ```
 
 I did this one sequentially, step by step, on purpose. The acceptance gate does it with two requests in parallel, which is good for testing real concurrency, but the order is up to the event loop. A sequential version is completely deterministic and describes the incident exactly.
@@ -332,6 +340,8 @@ I split the work into roles. Claude Code worked in the repository - it read the 
 Why two AI sessions instead of one? Because the model that wrote the code tends to be optimistic about its own work. It's the same reason we do code review between people - the author is usually the worst person to spot their own mistakes. A fresh session, without the context of having written the code, looks at the result rather than the intention.
 
 I also kept a strict rhythm: one step per prompt, one commit per step, and nothing gets committed before review. And I added one rule pretty early on: show me the artifact, not a summary of it. Because a few times Claude Code told me something like "here are the full file contents" or "confirmed, the test fails", and what was actually on the screen was just a collapsed tool call. An AI saying it checked something is not proof that it did.
+
+> Optionally: I used Sonnet 5 in Claude Code as the implementer. The changes were small and well-scoped, so I wanted a model that's strong at code and fast to iterate with, since I was doing a lot of short prompt-review-commit loops. The deeper reasoning - reviewing plans and diffs - happened in a separate session on a stronger model. But honestly, I don't think the model choice was the main safeguard. Sonnet made mistakes, like the test that couldn't fail, and a bigger model can make the same kind of plausible-looking mistake. What caught them was the workflow: review before every commit, raw output instead of summaries, and mutation testing.
 
 **[Open the "The moment the AI was wrong" section, then `test/client-flow.test.js` around line 64]**
 
