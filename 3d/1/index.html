@@ -1,1 +1,68 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML3D</title>
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<script src="x.lib.js" ></script>
+		<script src="script.js" ></script>
+	</head>
+	<body>
+		<x-floor data-ray-origin-top="50" data-perspective="400">
+			<x-flap class="flap-aside" data-edge="left" data-position="fit" data-rotate="-20">
+				<x-flap class="flap-aside" data-edge="left" data-position="fit" data-rotate="20"></x-flap>
+				<x-anchor class="divider-aside">
+					<x-flap data-position="fit" data-rotate="30">
+						<x-flap data-position="fit" data-rotate="-30"></x-flap>
+					</x-flap>
+				</x-anchor>
+				<x-anchor class="divider-aside-long">
+					<x-flap data-position="fit" data-rotate="90">
+						<x-flap data-position="fit" data-rotate="-90"></x-flap>
+					</x-flap>
+				</x-anchor>
+			</x-flap>
+			<x-flap class="flap-aside" data-edge="right" data-position="fit" data-rotate="-20">
+				<x-flap class="flap-aside" data-edge="right" data-position="fit" data-rotate="20"></x-flap>
+				<x-anchor class="divider-aside">
+					<x-flap data-position="fit" data-rotate="30">
+						<x-flap data-position="fit" data-rotate="-30"></x-flap>
+					</x-flap>
+				</x-anchor>
+				<x-anchor class="divider-aside-long">
+					<x-flap data-position="fit" data-rotate="90">
+						<x-flap data-position="fit" data-rotate="-90"></x-flap>
+					</x-flap>
+				</x-anchor>
+			</x-flap>
+			<x-anchor class="divider">
+				<x-flap data-position="fit" data-rotate="90">
+					<x-flap data-position="fit" data-rotate="-90">
+						<x-flap data-position="fit" data-rotate="-90"></x-flap>
+					</x-flap>
+				</x-flap>
+			</x-anchor>
+			<x-anchor class="divider">
+				<x-flap data-position="fit" data-rotate="90">
+					<x-flap data-position="fit" data-rotate="-90">
+						<x-flap data-position="fit" data-rotate="-90"></x-flap>
+					</x-flap>
+				</x-flap>
+			</x-anchor>
+			<x-anchor class="divider">
+				<x-flap data-position="fit" data-rotate="90">
+					<x-flap data-position="fit" data-rotate="-90">
+						<x-flap data-position="fit" data-rotate="-90"></x-flap>
+					</x-flap>
+				</x-flap>
+			</x-anchor>
+			<x-anchor class="divider divider-long">
+				<x-flap data-position="fit" data-rotate="20">
+					<x-flap data-position="fit" data-rotate="-20">
+						<x-flap data-position="fit" data-rotate="-20"></x-flap>
+					</x-flap>
+				</x-flap>
+			</x-anchor>
+		</x-floor>
+	</body>
+</html>

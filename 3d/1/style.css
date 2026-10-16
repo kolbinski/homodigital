@@ -1,0 +1,44 @@
+body{
+	margin: 0;
+	height: 2000px;
+	text-align: center;
+}
+.x-floor, .x-flap{
+	background: rgba(255, 0, 0, .5) url(kratka_.png);
+}
+.x-floor{
+	width: 800px;
+	height: 2500px;
+}
+.flap-aside{
+	width: 400px;
+}
+.x-anchor{
+	margin-top: 100px;
+	width: 100%;
+}
+.divider{
+	height: 250px;
+}
+.divider .x-flap{
+	height: 100px;
+}
+.divider-long .x-flap{
+	height: 200px;
+}
+.divider-aside{
+	height: 30px;
+}
+.divider-aside .x-flap{
+	height: 100px;
+}
+.divider-aside-long{
+	height: 950px;
+}
+.divider-aside-long > .x-flap{
+	height: 50px;
+	background: none;
+}
+.divider-aside-long > .x-flap > .x-flap{
+	height: 200px;
+}
